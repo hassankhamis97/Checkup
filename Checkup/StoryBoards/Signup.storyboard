@@ -30,6 +30,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="W5z-dp-Bms"/>
                     </view>
+                    <connections>
+                        <outlet property="myImage" destination="9Rf-Rp-eiv" id="zsb-pV-yZs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfF-Mj-qKr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

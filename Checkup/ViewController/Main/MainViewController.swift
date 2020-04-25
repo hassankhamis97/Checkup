@@ -9,7 +9,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+   @available(iOS 13.0, *)
     @IBAction func gotoSignup(_ sender: Any) {
        let signupRVC = storyboard!.instantiateViewController(identifier: "SignupRSBV") as SignupViewController
         signupRVC.name = "fdsfsdf";
