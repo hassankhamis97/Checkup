@@ -8,7 +8,6 @@ target 'Checkup' do
   use_frameworks!
 
   pod 'SwiftyJSON'
-  pod 'Alamofire'
   pod 'SDWebImage', '~> 4.0'
   pod 'Cosmos'
   pod 'ReachabilitySwift'
