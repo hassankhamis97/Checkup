@@ -1,17 +1,22 @@
 //
-//  SignupViewController.swift
+//  MainViewController.swift
 //  Checkup
 //
-//  Created by Hassan Khamis on 4/8/20.
+//  Created by Hassan Khamis on 4/24/20.
 //  Copyright © 2020 Hassan Khamis. All rights reserved.
 //
 
 import UIKit
 
-class SignupViewController: UIViewController {
-    
-    
-    
+class MainViewController: UIViewController {
+
+    @IBAction func gotoSignup(_ sender: Any) {
+       let signupRVC = storyboard!.instantiateViewController(identifier: "SignupRSBV") as SignupViewController
+        signupRVC.name = "fdsfsdf";
+    navigationController?.pushViewController(signupRVC, animated: true)
+    }
+    @IBAction func gotoLogin(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

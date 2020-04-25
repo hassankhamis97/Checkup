@@ -19,6 +19,8 @@
 		4E22F931243E70CC0090693C /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E22F930243E70CC0090693C /* Signup.storyboard */; };
 		4E22F936243E743C0090693C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22F935243E743C0090693C /* SignupViewController.swift */; };
 		4E22F938243E745F0090693C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22F937243E745F0090693C /* LoginViewController.swift */; };
+		4EE5696E2453058200688B65 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE5696D2453058200688B65 /* Login.storyboard */; };
+		4EE569732453070C00688B65 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE569722453070C00688B65 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +58,9 @@
 		4E22F923243E6E6D0090693C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E22F930243E70CC0090693C /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		4E22F935243E743C0090693C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		4E22F937243E745F0090693C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4E22F937243E745F0090693C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../New Group/LoginViewController.swift"; sourceTree = "<group>"; };
+		4EE5696D2453058200688B65 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		4EE569722453070C00688B65 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DBCCD7FDD5A7B2E6D89A74DD /* Pods-Checkup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.release.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.release.xcconfig"; sourceTree = "<group>"; };
 		DD8207D23F35EF388509225D /* Pods-Checkup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.debug.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +159,7 @@
 				4E22F902243E6E6C0090693C /* Main.storyboard */,
 				4E22F90A243E6E6D0090693C /* LaunchScreen.storyboard */,
 				4E22F930243E70CC0090693C /* Signup.storyboard */,
+				4EE5696D2453058200688B65 /* Login.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -162,10 +167,35 @@
 		4E22F932243E73A90090693C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4E22F935243E743C0090693C /* SignupViewController.swift */,
-				4E22F937243E745F0090693C /* LoginViewController.swift */,
+				4EE56971245306F600688B65 /* Main */,
+				4EE56970245306B800688B65 /* LoginView */,
+				4EE5696F2453069600688B65 /* SignupView */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4EE5696F2453069600688B65 /* SignupView */ = {
+			isa = PBXGroup;
+			children = (
+				4E22F935243E743C0090693C /* SignupViewController.swift */,
+			);
+			path = SignupView;
+			sourceTree = "<group>";
+		};
+		4EE56970245306B800688B65 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				4E22F937243E745F0090693C /* LoginViewController.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		4EE56971245306F600688B65 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4EE569722453070C00688B65 /* MainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		C125EE7BC541D58677539BDB /* Pods */ = {
@@ -286,6 +316,7 @@
 				4E22F90C243E6E6D0090693C /* LaunchScreen.storyboard in Resources */,
 				4E22F909243E6E6D0090693C /* Assets.xcassets in Resources */,
 				4E22F931243E70CC0090693C /* Signup.storyboard in Resources */,
+				4EE5696E2453058200688B65 /* Login.storyboard in Resources */,
 				4E22F904243E6E6C0090693C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +387,7 @@
 				4E22F8FD243E6E6C0090693C /* AppDelegate.swift in Sources */,
 				4E22F8FF243E6E6C0090693C /* SceneDelegate.swift in Sources */,
 				4E22F936243E743C0090693C /* SignupViewController.swift in Sources */,
+				4EE569732453070C00688B65 /* MainViewController.swift in Sources */,
 				4E22F938243E745F0090693C /* LoginViewController.swift in Sources */,
 				4E22F907243E6E6C0090693C /* Checkup.xcdatamodeld in Sources */,
 			);
@@ -534,6 +566,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TRNKZ229R6;
 				INFOPLIST_FILE = Checkup/Info.plist;
+
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

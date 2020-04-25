@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,17 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <state key="normal" title="Signup"/>
                                 <connections>
-                                    <segue destination="r52-Lw-aQo" kind="show" id="MYx-JP-cz8"/>
+                                    <action selector="gotoSignup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e3h-Yf-lh2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9k-5v-KF0">
+                                <rect key="frame" x="177" y="560" width="60" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="gotoLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRI-R3-0Ff"/>
+                                    <segue destination="E22-PH-w6d" kind="push" id="OzG-RI-Whj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -35,14 +45,22 @@
             <point key="canvasLocation" x="615.94202898550725" y="-1.3392857142857142"/>
         </scene>
         <!--SignupSBV-->
-        <scene sceneID="bty-5a-ZeM">
+        <scene sceneID="pug-22-kQV">
             <objects>
-                <viewControllerPlaceholder storyboardName="Signup" referencedIdentifier="SignupSBV" id="r52-Lw-aQo" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="kDB-Ax-hsz"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eex-3X-hTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="SignupRSBV" storyboardName="Signup" referencedIdentifier="SignupSBV" id="c2o-a3-uIl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfE-UG-XWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261.5942028985507" y="-33.482142857142854"/>
+            <point key="canvasLocation" x="1398" y="22"/>
+        </scene>
+        <!--LoginSBV-->
+        <scene sceneID="y07-M0-tIU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="LoginSBV" id="E22-PH-w6d" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zpU-DF-5bj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klf-pw-DB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="98V-nK-aX6">
