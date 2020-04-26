@@ -11,4 +11,9 @@ target 'Checkup' do
   pod 'SDWebImage', '~> 4.0'
   pod 'Cosmos'
   pod 'ReachabilitySwift'
+  pod 'TransitionButton'
+  pod 'SwiftGifOrigin', '~> 1.7.0'
+  pod 'TextFieldEffects'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'UIColor_Hex_Swift'
 end
