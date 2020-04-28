@@ -22,7 +22,13 @@
 		4EE569732453070C00688B65 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE569722453070C00688B65 /* MainViewController.swift */; };
 		CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */; };
 		CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */; };
-		CCCB1D5B24563B9A00303C22 /* microscope.gif in Resources */ = {isa = PBXBuildFile; fileRef = CCCB1D5A24563B9900303C22 /* microscope.gif */; };
+		CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCB1D5C24563FED00303C22 /* ImagePicker.swift */; };
+		CCCB1D5F245641E500303C22 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCB1D5E245641E500303C22 /* SignUpTableViewController.swift */; };
+		CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE4D2B12457064600EB8ADC /* Profile.storyboard */; };
+		CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */; };
+		CCE4D2BD24572E8E00EB8ADC /* PersonalDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2BC24572E8E00EB8ADC /* PersonalDetailsTableViewController.swift */; };
+		CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */; };
+		CCE4D2C32457526100EB8ADC /* microscope.gif in Resources */ = {isa = PBXBuildFile; fileRef = CCE4D2C22457526000EB8ADC /* microscope.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +70,13 @@
 		4EE569722453070C00688B65 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		CCCB1D5A24563B9900303C22 /* microscope.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = microscope.gif; path = "../../ui_garduation Project/microscope.gif"; sourceTree = "<group>"; };
+		CCCB1D5C24563FED00303C22 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CCCB1D5E245641E500303C22 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		CCE4D2B12457064600EB8ADC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		CCE4D2BC24572E8E00EB8ADC /* PersonalDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailsTableViewController.swift; sourceTree = "<group>"; };
+		CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		CCE4D2C22457526000EB8ADC /* microscope.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = microscope.gif; path = "../../ui_garduation Project/microscope.gif"; sourceTree = "<group>"; };
 		DBCCD7FDD5A7B2E6D89A74DD /* Pods-Checkup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.release.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.release.xcconfig"; sourceTree = "<group>"; };
 		DD8207D23F35EF388509225D /* Pods-Checkup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.debug.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,13 +140,14 @@
 		4E22F8FB243E6E6C0090693C /* Checkup */ = {
 			isa = PBXGroup;
 			children = (
+				CCE4D2B32457066800EB8ADC /* ProfileView */,
 				4E22F932243E73A90090693C /* ViewController */,
 				CC79E5AA2455B43C00C8A166 /* LoginView */,
 				4E22F92F243E6E780090693C /* StoryBoards */,
 				4E22F8FC243E6E6C0090693C /* AppDelegate.swift */,
 				4E22F8FE243E6E6C0090693C /* SceneDelegate.swift */,
 				4E22F908243E6E6D0090693C /* Assets.xcassets */,
-				CCCB1D5A24563B9900303C22 /* microscope.gif */,
+				CCE4D2C22457526000EB8ADC /* microscope.gif */,
 				4E22F90D243E6E6D0090693C /* Info.plist */,
 				4E22F905243E6E6C0090693C /* Checkup.xcdatamodeld */,
 			);
@@ -166,6 +179,7 @@
 				4E22F90A243E6E6D0090693C /* LaunchScreen.storyboard */,
 				4E22F930243E70CC0090693C /* Signup.storyboard */,
 				4EE5696D2453058200688B65 /* Login.storyboard */,
+				CCE4D2B12457064600EB8ADC /* Profile.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -183,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				4E22F935243E743C0090693C /* SignupViewController.swift */,
+				CCCB1D5C24563FED00303C22 /* ImagePicker.swift */,
+				CCCB1D5E245641E500303C22 /* SignUpTableViewController.swift */,
 			);
 			path = SignupView;
 			sourceTree = "<group>";
@@ -211,6 +227,16 @@
 				CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		CCE4D2B32457066800EB8ADC /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */,
+				CCE4D2BC24572E8E00EB8ADC /* PersonalDetailsTableViewController.swift */,
+				CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,11 +345,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE4D2C32457526100EB8ADC /* microscope.gif in Resources */,
 				4E22F90C243E6E6D0090693C /* LaunchScreen.storyboard in Resources */,
 				4E22F909243E6E6D0090693C /* Assets.xcassets in Resources */,
-				CCCB1D5B24563B9A00303C22 /* microscope.gif in Resources */,
 				4E22F931243E70CC0090693C /* Signup.storyboard in Resources */,
 				4EE5696E2453058200688B65 /* Login.storyboard in Resources */,
+				CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */,
 				4E22F904243E6E6C0090693C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +423,12 @@
 				4E22F936243E743C0090693C /* SignupViewController.swift in Sources */,
 				4EE569732453070C00688B65 /* MainViewController.swift in Sources */,
 				4E22F907243E6E6C0090693C /* Checkup.xcdatamodeld in Sources */,
+				CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */,
+				CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */,
+				CCE4D2BD24572E8E00EB8ADC /* PersonalDetailsTableViewController.swift in Sources */,
+				CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */,
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
+				CCCB1D5F245641E500303C22 /* SignUpTableViewController.swift in Sources */,
 				CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

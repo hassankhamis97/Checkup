@@ -213,7 +213,7 @@
                                                         <color key="titleColor" red="0.49633723499999999" green="0.34929829839999998" blue="0.61443126199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="Lm6-zl-uMP" kind="push" id="5YF-8D-QKl"/>
+                                                        <segue destination="qsp-bo-rm4" kind="push" id="BQ9-qE-5uG"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -268,6 +268,16 @@
             </objects>
             <point key="canvasLocation" x="2789.8550724637685" y="72.991071428571431"/>
         </scene>
+        <!--signUpSVC-->
+        <scene sceneID="ewR-Sb-EEd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Signup" referencedIdentifier="signUpSVC" id="qsp-bo-rm4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="COJ-X7-m7Z"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6s9-xX-iiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3036" y="535"/>
+        </scene>
         <!--Splash View Controller-->
         <scene sceneID="ctN-pA-u78">
             <objects>
@@ -276,7 +286,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="microscope.gif" translatesAutoresizingMaskIntoConstraints="NO" id="XjO-Nk-cZY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XjO-Nk-cZY">
                                 <rect key="frame" x="0.0" y="121" width="414" height="741"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -322,7 +332,6 @@
     </scenes>
     <resources>
         <image name="lock.fill" catalog="system" width="64" height="64"/>
-        <image name="microscope.gif" width="800" height="600"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="static_microscope" width="800" height="600"/>
     </resources>
