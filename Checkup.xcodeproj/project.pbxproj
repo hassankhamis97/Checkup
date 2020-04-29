@@ -16,10 +16,11 @@
 		4E22F90C243E6E6D0090693C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E22F90A243E6E6D0090693C /* LaunchScreen.storyboard */; };
 		4E22F917243E6E6D0090693C /* CheckupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22F916243E6E6D0090693C /* CheckupTests.swift */; };
 		4E22F922243E6E6D0090693C /* CheckupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22F921243E6E6D0090693C /* CheckupUITests.swift */; };
-		4E22F931243E70CC0090693C /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E22F930243E70CC0090693C /* Signup.storyboard */; };
 		4E22F936243E743C0090693C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22F935243E743C0090693C /* SignupViewController.swift */; };
 		4EE5696E2453058200688B65 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE5696D2453058200688B65 /* Login.storyboard */; };
 		4EE569732453070C00688B65 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE569722453070C00688B65 /* MainViewController.swift */; };
+		CC271B1D245A131A007CD1C2 /* test_request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC271B1C245A131A007CD1C2 /* test_request.storyboard */; };
+		CC7092D92458C131003E8968 /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7092D82458C131003E8968 /* signUp.storyboard */; };
 		CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */; };
 		CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */; };
 		CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCB1D5C24563FED00303C22 /* ImagePicker.swift */; };
@@ -64,10 +65,11 @@
 		4E22F91D243E6E6D0090693C /* CheckupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E22F921243E6E6D0090693C /* CheckupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckupUITests.swift; sourceTree = "<group>"; };
 		4E22F923243E6E6D0090693C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E22F930243E70CC0090693C /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		4E22F935243E743C0090693C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		4EE5696D2453058200688B65 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4EE569722453070C00688B65 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CC271B1C245A131A007CD1C2 /* test_request.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test_request.storyboard; sourceTree = "<group>"; };
+		CC7092D82458C131003E8968 /* signUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = signUp.storyboard; sourceTree = "<group>"; };
 		CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		CCCB1D5C24563FED00303C22 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -177,9 +179,10 @@
 			children = (
 				4E22F902243E6E6C0090693C /* Main.storyboard */,
 				4E22F90A243E6E6D0090693C /* LaunchScreen.storyboard */,
-				4E22F930243E70CC0090693C /* Signup.storyboard */,
 				4EE5696D2453058200688B65 /* Login.storyboard */,
 				CCE4D2B12457064600EB8ADC /* Profile.storyboard */,
+				CC7092D82458C131003E8968 /* signUp.storyboard */,
+				CC271B1C245A131A007CD1C2 /* test_request.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -348,9 +351,10 @@
 				CCE4D2C32457526100EB8ADC /* microscope.gif in Resources */,
 				4E22F90C243E6E6D0090693C /* LaunchScreen.storyboard in Resources */,
 				4E22F909243E6E6D0090693C /* Assets.xcassets in Resources */,
-				4E22F931243E70CC0090693C /* Signup.storyboard in Resources */,
 				4EE5696E2453058200688B65 /* Login.storyboard in Resources */,
 				CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */,
+				CC7092D92458C131003E8968 /* signUp.storyboard in Resources */,
+				CC271B1D245A131A007CD1C2 /* test_request.storyboard in Resources */,
 				4E22F904243E6E6C0090693C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

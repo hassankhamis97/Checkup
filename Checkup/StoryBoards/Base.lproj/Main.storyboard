@@ -45,16 +45,6 @@
             </objects>
             <point key="canvasLocation" x="614.49275362318849" y="-1.3392857142857142"/>
         </scene>
-        <!--signUpSVC-->
-        <scene sceneID="Tms-pF-h0c">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="signUpSVC" storyboardName="Signup" referencedIdentifier="signUpSVC" id="55y-5R-JUh" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="TFf-s1-gJT"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aBW-6l-IGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1297" y="-175"/>
-        </scene>
         <!--loginSVC-->
         <scene sceneID="lBT-6z-OCP">
             <objects>

@@ -171,17 +171,6 @@
                                                     <state key="normal" title="Login">
                                                         <color key="titleColor" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                            <integer key="value" value="3"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="30"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="LoginBtn:" destination="V6O-re-qlJ" eventType="touchUpInside" id="zLa-FZ-EPm"/>
                                                     </connections>
@@ -213,7 +202,7 @@
                                                         <color key="titleColor" red="0.49633723499999999" green="0.34929829839999998" blue="0.61443126199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="qsp-bo-rm4" kind="push" id="BQ9-qE-5uG"/>
+                                                        <segue destination="p1f-nV-Efa" kind="push" id="5Ax-vz-l0e"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -268,15 +257,15 @@
             </objects>
             <point key="canvasLocation" x="2789.8550724637685" y="72.991071428571431"/>
         </scene>
-        <!--signUpSVC-->
-        <scene sceneID="ewR-Sb-EEd">
+        <!--signupSVC-->
+        <scene sceneID="Fsw-zE-VaB">
             <objects>
-                <viewControllerPlaceholder storyboardName="Signup" referencedIdentifier="signUpSVC" id="qsp-bo-rm4" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="COJ-X7-m7Z"/>
+                <viewControllerPlaceholder storyboardName="signUp" referencedIdentifier="signupSVC" id="p1f-nV-Efa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="HId-cR-eUK"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6s9-xX-iiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pde-kf-UPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3036" y="535"/>
+            <point key="canvasLocation" x="2711" y="549"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="ctN-pA-u78">

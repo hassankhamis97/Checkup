@@ -15,29 +15,20 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var emailTextView: SkyFloatingLabelTextFieldWithIcon!
     
+         @IBOutlet weak var LoginBtn: TransitionButton!
     @IBOutlet weak var passWordTextView: SkyFloatingLabelTextFieldWithIcon!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        emailTextView.tintColor = UIColor.brown // the color of the blinking cursor
-//        emailTextView.textColor =  UIColor("#825BA0")
-////        emailTextView.lineColor=UIColor("#B8D7D8")
-//
-//        emailTextView.selectedTitleColor = UIColor.green
+        
+        LoginBtn.layer.cornerRadius=30
+        LoginBtn.layer.borderColor=UIColor.white.cgColor
+        LoginBtn.layer.borderWidth=2
 
-        
-        
-//        passWordTextView.tintColor = UIColor.brown // the color of the blinking cursor
-//               passWordTextView.textColor = UIColor("#825BA0")
-////        passWordTextView.lineColor=
-//
-////               passWordTextView.lineColor=UIColor("#B8D7D8")
-//
-//               passWordTextView.selectedTitleColor = UIColor.green
 }
     
 
-     @IBOutlet weak var LoginBtn: TransitionButton!
+
   
     @IBAction func LoginBtn(_ sender: Any) {
         
