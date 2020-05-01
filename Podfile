@@ -16,4 +16,9 @@ target 'Checkup' do
   pod 'TextFieldEffects'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'UIColor_Hex_Swift'
+  pod 'Fusuma'
+  pod 'OpalImagePicker'
+  pod 'SwiftCheckBox'
+  pod 'ImageSlideshow'
+
 end
