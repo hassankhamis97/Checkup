@@ -11,11 +11,27 @@ import OpalImagePicker
 import SwiftCheckBox
 import ImageSlideshow
 
-class newRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate {
-
-  
-    @IBOutlet weak var checkBoxBtn: CheckBoxButton!
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+class newRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,fillDataCells {
     
+    
+
+    @IBOutlet weak var myCell: UITableViewCell!
+    
+  
+    
+    @IBOutlet weak var collectionView:UICollectionView!
+    
+    
+    
+    @IBAction func addName(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(identifier: "testNameGroupSVC") as! TestNamingGroupViewController
+        navigationController?.pushViewController(vc, animated: true)
+        vc.delegate=self
+        
+    }
     
     
     @IBOutlet weak var slideShow: ImageSlideshow!
@@ -24,24 +40,41 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
 
     
      var TestImgs=[UIImage]()
-
+    
+    var testTexts=[String]()
+    
+    func fillData(dataObj:String) {
+        testTexts.append(dataObj)
+        collectionView.reloadData()
+        //vc.delegete=self
+        
+    }
+    
+    
     
     var input=[InputSource]()
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-     
-        
-            }
-
+  
+}
  
+//   override func tableView(_ tableView: UITableView,
+//                            heightForRowAt indexPath: IndexPath) -> CGFloat {
+//    if indexPath.row == 1 && testTexts.isEmpty{
+//            return 0
+//        }
+//
+//        return tableView.rowHeight
+//    }
+
+    
     
      override func viewWillAppear(_ animated: Bool) {
         
         
-            slideShow.slideshowInterval = 5.0
+//            slideShow.slideshowInterval = 5.0
                     slideShow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
                     slideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
 
@@ -120,7 +153,8 @@ present(imagePicker, animated: true, completion: nil)
             }
         }
 
-        extension newRequestTableViewController: ImageSlideshowDelegate {
+@available(iOS 13.0, *)
+extension newRequestTableViewController: ImageSlideshowDelegate {
             func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
                 print("current page:", page)
             }
@@ -134,49 +168,43 @@ present(imagePicker, animated: true, completion: nil)
        
 
     
-/*
 
-//extension newRequestTableViewController:UICollectionViewDelegate,UICollectionViewDataSource{
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//
-//        if (TestImgs.count>0)
-//        {
-//            return TestImgs.count
-//        }
-//
-//        else{
-//            return 1
-//        }
-//
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCell", for: indexPath) as! SliderCell
-//        if (TestImgs.count>0)
-//            {
-//               cell.image=TestImgs[indexPath.item]
-//
-//
-//        }
-////
-//
-//
-//        return cell
-//    }
+
+@available(iOS 13.0, *)
+extension newRequestTableViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // 1
+        return 1
+    }
+
+
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // 2
+        if(testTexts.isEmpty)
+        {
+            return 0
+        }
+        else{
+            return testTexts.count
+        }
+    }
     
+
+   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCell", for: indexPath) as! SliderCell
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//          return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-//      }
-//
-//
-//  override  func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//
-//        currentIndex = Int(scrollView.contentOffset.x / collectionView.frame.size.width)
-//        pageControl.currentPage = currentIndex
-//    }
+    cell.testCell.text=testTexts[indexPath.item]
+    cell.layer.borderWidth=2
+    cell.layer.cornerRadius=10
+   
+    
+        return cell
+    }
+    
 
     
-//}
-*/
+}
+
+
+
+

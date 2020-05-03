@@ -34,34 +34,34 @@ class LoginTableViewController: UITableViewController {
         
         
         LoginBtn.startAnimation()
-       
-               let qualityOfServiceClass = DispatchQoS.QoSClass.background
-               let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
-              backgroundQueue.async(execute: {
-
-                             sleep(3) // 3: Do your networking task or background work here.
-
-                             DispatchQueue.main.async(execute: { () -> Void in
-                                
-                                self.LoginBtn.stopAnimation(animationStyle: .expand, completion: {
-
-                                    
-                                    if #available(iOS 13.0, *) {
-                                        let signupRVC = self.storyboard!.instantiateViewController(identifier: "secondVC") as! SplashViewController
-
-                                self.navigationController?.pushViewController(signupRVC, animated: true)
-                                    } else {
-                                        // Fallback on earlier versions
-                                    }
-                                         
-                                    
-                                       })
-
-                             })
-                         })
-          }
         
+        let qualityOfServiceClass = DispatchQoS.QoSClass.background
+        let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
+        backgroundQueue.async(execute: {
+            
+            sleep(3) // 3: Do your networking task or background work here.
+            
+            DispatchQueue.main.async(execute: { () -> Void in
+                
+                self.LoginBtn.stopAnimation(animationStyle: .expand, completion: {
+                    
+                    
+                    if #available(iOS 13.0, *) {
+                        let signupRVC = self.storyboard!.instantiateViewController(identifier:"signupSVCStoryBoard") as! SignupTableViewController
+                        
+                        self.navigationController?.pushViewController(signupRVC, animated: true)
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                    
+                    
+                })
+                
+            })
+        })
     }
     
-  
+}
+    
+
     

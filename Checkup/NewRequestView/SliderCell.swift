@@ -10,12 +10,15 @@ import UIKit
 
 class SliderCell: UICollectionViewCell {
   
-    
-    @IBOutlet weak var testImage: UIImageView!
-    var image:UIImage!{
+  
+    @IBOutlet weak var testCell: UILabel!
+    var label:UILabel!{
         didSet{
-            testImage.image=image
-            testImage.layer.borderWidth=3
+            testCell.text=label.text
+        
+         
+            
+            
         }
     }
     

@@ -11,6 +11,23 @@ import UIKit
 class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var profileImg: UIImageView!
     
+    
+  
+    
+    @IBAction func completeBtn(_ sender: Any) {
+        
+        
+        if #available(iOS 13.0, *) {
+            let ref=self.storyboard?.instantiateViewController(identifier:"editSvc") as! EditProfileTableViewController
+            
+            navigationController?.pushViewController(ref, animated: true)
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
