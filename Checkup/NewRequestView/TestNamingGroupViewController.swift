@@ -10,6 +10,7 @@ import UIKit
 
 class TestNamingGroupViewController: UIViewController {
     
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var tableView: UITableView!
@@ -27,9 +28,7 @@ class TestNamingGroupViewController: UIViewController {
     var filteredNamesFromSearch=[String]()
     
     var searching=false
-    
-    
-     var delegate:fillDataCells?
+    var delegate:fillDataCells?
     
     @IBAction func doneBtn(_ sender: Any) {
         if(filteredNames.isEmpty){
@@ -77,7 +76,7 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
         if(searching)
         {
             return 1
-            
+
         }
         else{
             return tsetsNames.count
@@ -87,7 +86,7 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(searching)
         {
-            
+
             return filteredNames.count
         }
         else{
@@ -152,7 +151,7 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
             
         }
         
-        
+    }
         
         func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
             if(searching)
@@ -167,9 +166,6 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
         
         
     }
-    
-    
-}
 extension TestNamingGroupViewController:UISearchBarDelegate
 {
     
