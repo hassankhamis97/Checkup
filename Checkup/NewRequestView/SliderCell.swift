@@ -10,18 +10,39 @@ import UIKit
 
 class SliderCell: UICollectionViewCell {
   
-  
+    @IBOutlet weak var deleteBtn: UIButton!
+     var btnTapAction : (()->())?
+    
     @IBOutlet weak var testCell: UILabel!
     var label:UILabel!{
         didSet{
             testCell.text=label.text
-        
-         
-            
             
         }
     }
+  
+    
+    
+//    override init(frame: CGRect){
+//        super.init(frame: frame)
+//        setupViews()
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//    func setupViews(){
+//
+//deleteBtn.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
+//
+//        }
+//
+//    @objc func btnTapped() {
+//        print("Tapped!")
+//
+//        // use our "call back" action to tell the controller the button was tapped
+//        btnTapAction?()
+//    }
+    }
     
 
-    
-}

@@ -231,13 +231,20 @@ extension newRequestTableViewController:UICollectionViewDelegate,UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCell", for: indexPath) as! SliderCell
         
         cell.testCell.text=testTexts[indexPath.item]
-        cell.layer.cornerRadius=20
+        cell.layer.cornerRadius=15
         cell.layer.borderColor=UIColor.white.cgColor
-        
-        
+        cell.deleteBtn.tag=indexPath.item
+        cell.deleteBtn.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         return cell
+        
     }
     
+    @objc func buttonPressed(_ sender: UIButton)
+   {
+       print("buttonPressed ! \(sender.tag)")
+    testTexts.remove(at: sender.tag)
+    collectionView.reloadData()
+   }
     
     
 }
