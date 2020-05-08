@@ -51,6 +51,14 @@
                                     <segue destination="zUy-Bt-fAg" kind="push" id="eWr-vH-j7f"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkh-ja-SHX">
+                                <rect key="frame" x="70" y="602" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <segue destination="yEY-bu-TzL" kind="push" id="6ax-Cy-WmW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -60,6 +68,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="614.49275362318849" y="-1.3392857142857142"/>
+        </scene>
+        <!--HistorySVC-->
+        <scene sceneID="qeh-hG-3WA">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="HistorySVCStoryBoard" storyboardName="History" referencedIdentifier="HistorySVC" id="yEY-bu-TzL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="64V-hR-w6Z"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dD-96-mpg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="364"/>
         </scene>
         <!--signRef-->
         <scene sceneID="FWF-FJ-xhh">
@@ -94,10 +112,10 @@
         <!--reqStatus-->
         <scene sceneID="eZa-gn-Sbr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RAV-uI-Zyi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="RequestTStatus" referencedIdentifier="reqStatus" id="zUy-Bt-fAg" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xar-Cn-kRa"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAV-uI-Zyi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1030" y="329"/>
         </scene>
