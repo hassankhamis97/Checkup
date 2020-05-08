@@ -30,10 +30,11 @@
 		CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */; };
 		CC8A1046245E087C007856BF /* fillCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1045245E087C007856BF /* fillCollectionView.swift */; };
 		CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCB1D5C24563FED00303C22 /* ImagePicker.swift */; };
+		CCDEF4712462DCF500ECBBEB /* RequestTStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */; };
+		CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */; };
 		CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE4D2B12457064600EB8ADC /* Profile.storyboard */; };
 		CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */; };
 		CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */; };
-		CCE4D2C32457526100EB8ADC /* microscope.gif in Resources */ = {isa = PBXBuildFile; fileRef = CCE4D2C22457526000EB8ADC /* microscope.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,10 +84,11 @@
 		CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamingGroupViewController.swift; sourceTree = "<group>"; };
 		CC8A1045245E087C007856BF /* fillCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fillCollectionView.swift; sourceTree = "<group>"; };
 		CCCB1D5C24563FED00303C22 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RequestTStatus.storyboard; sourceTree = "<group>"; };
+		CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatusTableViewController.swift; sourceTree = "<group>"; };
 		CCE4D2B12457064600EB8ADC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
-		CCE4D2C22457526000EB8ADC /* microscope.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = microscope.gif; path = "../../ui_garduation Project/microscope.gif"; sourceTree = "<group>"; };
 		DBCCD7FDD5A7B2E6D89A74DD /* Pods-Checkup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.release.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.release.xcconfig"; sourceTree = "<group>"; };
 		DD8207D23F35EF388509225D /* Pods-Checkup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.debug.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 		4E22F8FB243E6E6C0090693C /* Checkup */ = {
 			isa = PBXGroup;
 			children = (
+				CCDEF4722462DE6C00ECBBEB /* Request Status */,
 				CC8A1044245E0844007856BF /* Contract */,
 				CC064E2E245B03080046E67F /* NewRequestView */,
 				CCE4D2B32457066800EB8ADC /* ProfileView */,
@@ -159,7 +162,6 @@
 				4E22F8FC243E6E6C0090693C /* AppDelegate.swift */,
 				4E22F8FE243E6E6C0090693C /* SceneDelegate.swift */,
 				4E22F908243E6E6D0090693C /* Assets.xcassets */,
-				CCE4D2C22457526000EB8ADC /* microscope.gif */,
 				4E22F90D243E6E6D0090693C /* Info.plist */,
 				4E22F905243E6E6C0090693C /* Checkup.xcdatamodeld */,
 			);
@@ -193,6 +195,7 @@
 				CCE4D2B12457064600EB8ADC /* Profile.storyboard */,
 				CC7092D82458C131003E8968 /* signUp.storyboard */,
 				CC064E2C245B02D60046E67F /* NewRequestScreen.storyboard */,
+				CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -259,6 +262,14 @@
 				CC8A1045245E087C007856BF /* fillCollectionView.swift */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		CCDEF4722462DE6C00ECBBEB /* Request Status */ = {
+			isa = PBXGroup;
+			children = (
+				CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */,
+			);
+			path = "Request Status";
 			sourceTree = "<group>";
 		};
 		CCE4D2B32457066800EB8ADC /* ProfileView */ = {
@@ -376,8 +387,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCE4D2C32457526100EB8ADC /* microscope.gif in Resources */,
 				4E22F90C243E6E6D0090693C /* LaunchScreen.storyboard in Resources */,
+				CCDEF4712462DCF500ECBBEB /* RequestTStatus.storyboard in Resources */,
 				4E22F909243E6E6D0090693C /* Assets.xcassets in Resources */,
 				4EE5696E2453058200688B65 /* Login.storyboard in Resources */,
 				CC064E2D245B02D60046E67F /* NewRequestScreen.storyboard in Resources */,
@@ -465,6 +476,7 @@
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
 				CC064E30245B03360046E67F /* newRequestTableViewController.swift in Sources */,
 				CC064E32245B05FA0046E67F /* SliderCell.swift in Sources */,
+				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
 				CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

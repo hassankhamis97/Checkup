@@ -8,7 +8,6 @@
 
 import UIKit
 import OpalImagePicker
-import SwiftCheckBox
 import ImageSlideshow
 import SkyFloatingLabelTextField
 
@@ -25,12 +24,12 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
     @IBOutlet weak var dateTextField: SkyFloatingLabelTextFieldWithIcon!
     
     @IBOutlet weak var timeTextField: SkyFloatingLabelTextFieldWithIcon!
-    var TestImgs=[UIImage]()
     var testTexts=[String]()
     var pageControl = UIPageControl()
-    var input=[InputSource]()
+    var inputImageArray=[InputSource]()
     var imagePicker: ImagePicker!
     let datePicker=UIDatePicker()
+    var ind:Int!
     
     
     override func viewDidLoad() {
@@ -40,6 +39,13 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
     createDatePicker()
     }
     
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+    
+        tableView.rowHeight = UITableView.automaticDimension
+        
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -56,7 +62,7 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
         slideShow.activityIndicator = DefaultActivityIndicator()
         slideShow.delegate = self
         
-        if (TestImgs.count==0){
+        if (inputImageArray.count==0){
             
             slideShow.setImageInputs([
                 ImageSource(image: UIImage(named: "default")!),
@@ -77,6 +83,39 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
        }
     
     
+
+    override func tableView(_ tableView: UITableView,
+                             heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+
+        if indexPath.row == 0 {
+            return 322
+        }
+
+         if indexPath.row == 1 {
+
+            if(testTexts.isEmpty)
+            {
+                return 0
+            }
+            else{
+                 return 82
+            }
+         }
+
+        if (indexPath.row == 2||indexPath.row == 3||indexPath.row==4||indexPath.row==5||indexPath.row==6){
+
+            return 70
+        }
+
+         return tableView.rowHeight
+     }
+    
+    
+    
+    
+    
+    
     
     @IBAction func addTestTextBtn(_ sender: Any) {
            
@@ -86,6 +125,7 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
                testTexts.append(text!)
                collectionView.reloadData()
                enterTestTextField.text=""
+            tableView.reloadData()
            }
            else{
                let vc = self.storyboard?.instantiateViewController(identifier: "testNameGroupSVC") as! TestNamingGroupViewController
@@ -126,20 +166,25 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
 
     }
     
+    @IBAction func dddddBtn(_ sender: Any) {
+        
+        inputImageArray.remove(at: ind)
+        slideShow.setImageInputs(inputImageArray)
+        tableView.reloadData()
+        
+    }
     
     func imagePicker(_ picker: OpalImagePickerController, didFinishPickingImages images: [UIImage]){
         for img in images{
             
             
-            TestImgs.append(img)
-            
             var x=ImageSource(image: img)
                        
-            input.append(x)
+            inputImageArray.append(x)
             
         }
         
-        slideShow.setImageInputs(input)
+        slideShow.setImageInputs(inputImageArray)
         
         
         presentedViewController?.dismiss(animated: true, completion: nil)
@@ -181,7 +226,9 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
 
 @available(iOS 13.0, *)
 extension newRequestTableViewController: ImageSlideshowDelegate {
-    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
+    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int){
+        
+        ind=page
         print("current page:", page)
     }
 }
@@ -192,17 +239,13 @@ extension newRequestTableViewController: ImageSlideshowDelegate {
 extension newRequestTableViewController: ImagePickerDelegate {
 
   func didSelect(image: UIImage?) {
-    TestImgs.append(image!)
+
     var x=ImageSource(image:image!)
-    input.append(x)
-     slideShow.setImageInputs(input)
+    inputImageArray.append(x)
+     slideShow.setImageInputs(inputImageArray)
     
   }
 }
-
-
-
-
 
 
 
@@ -231,7 +274,7 @@ extension newRequestTableViewController:UICollectionViewDelegate,UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCell", for: indexPath) as! SliderCell
         
         cell.testCell.text=testTexts[indexPath.item]
-        cell.layer.cornerRadius=15
+        cell.layer.cornerRadius=8
         cell.layer.borderColor=UIColor.white.cgColor
         cell.deleteBtn.tag=indexPath.item
         cell.deleteBtn.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
@@ -245,7 +288,7 @@ extension newRequestTableViewController:UICollectionViewDelegate,UICollectionVie
     testTexts.remove(at: sender.tag)
     collectionView.reloadData()
    }
-    
+ 
     
 }
 

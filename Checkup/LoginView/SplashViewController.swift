@@ -7,21 +7,19 @@
 //
 
 import UIKit
-import SwiftGifOrigin
 
 import TransitionButton
 
 class SplashViewController: CustomTransitionViewController {
 
     @IBOutlet weak var newImage: UIImageView!
-    
-    let img=UIImage.gif(name: "microscope")
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        newImage.loadGif(name: "microscope")
+    
        
 
     

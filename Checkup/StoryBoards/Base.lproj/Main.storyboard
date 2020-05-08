@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9k-5v-KF0">
-                                <rect key="frame" x="177" y="560" width="60" height="42"/>
+                                <rect key="frame" x="177" y="216" width="60" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Login"/>
@@ -27,12 +27,28 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-1t-UJt">
-                                <rect key="frame" x="160" y="365" width="94" height="48"/>
+                                <rect key="frame" x="160" y="115" width="94" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <state key="normal" title="Signup"/>
                                 <connections>
                                     <action selector="gotoSignup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e3h-Yf-lh2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7y-Eh-mYT">
+                                <rect key="frame" x="105" y="308" width="204" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Hxf-gf-RkN" kind="push" id="zqK-Cf-03h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hk-VA-iiX">
+                                <rect key="frame" x="200" y="379" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reuest status"/>
+                                <connections>
+                                    <segue destination="zUy-Bt-fAg" kind="push" id="eWr-vH-j7f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,6 +81,26 @@
             </objects>
             <point key="canvasLocation" x="1206" y="88"/>
         </scene>
+        <!--profileSVC-->
+        <scene sceneID="fit-af-yjK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="profileSVC" id="Hxf-gf-RkN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="t9g-Bx-GO5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjS-4s-8Q8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085" y="213"/>
+        </scene>
+        <!--reqStatus-->
+        <scene sceneID="eZa-gn-Sbr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAV-uI-Zyi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="RequestTStatus" referencedIdentifier="reqStatus" id="zUy-Bt-fAg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xar-Cn-kRa"/>
+                </viewControllerPlaceholder>
+            </objects>
+            <point key="canvasLocation" x="1030" y="329"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="98V-nK-aX6">
             <objects>
@@ -73,6 +109,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ugY-ze-ejA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.20976515487547381" green="0.22238408956170899" blue="0.39813792238527901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

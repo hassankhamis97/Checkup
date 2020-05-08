@@ -131,6 +131,7 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
                if (filteredNamesFromSection[i]==x)
                {
                 filteredNamesFromSection.remove(at: i)
+                break;
             }
             }
         }
