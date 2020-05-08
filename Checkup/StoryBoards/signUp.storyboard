@@ -30,9 +30,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oAA-LI-8FT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection id="lbf-On-iDf">
                                 <cells>
@@ -46,7 +46,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="static_microscope" translatesAutoresizingMaskIntoConstraints="NO" id="64O-bB-01V">
                                                     <rect key="frame" x="20" y="-34" width="375" height="253"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="5"/>
@@ -54,9 +54,9 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.63137254899999995" alpha="0.1816941353" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="0.1816941353" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="aSq-Uz-rXe">
                                         <rect key="frame" x="0.0" y="213" width="414" height="80"/>
@@ -65,45 +65,45 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="yy2-fA-Ii5" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="20" y="13" width="374" height="55"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="hQf-ON-fsU" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                    <rect key="frame" x="20" y="12" width="374" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="person.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                             <integer key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                                            <color key="value" red="0.57348090409999997" green="0.67483735079999996" blue="0.67954903840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
-                                                            <color key="value" red="0.57348090409999997" green="0.67483735079999996" blue="0.67954903840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="0.1816941353" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="0.1816941353" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="WtP-9T-g3A">
                                         <rect key="frame" x="0.0" y="293" width="414" height="80"/>
@@ -112,44 +112,45 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="1yf-M9-bj5" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="20" y="13" width="374" height="55"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Cqp-Xd-ZLO" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                    <rect key="frame" x="20" y="12" width="374" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="envelope.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                             <integer key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="envelope.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                                            <color key="value" red="0.57348090409999997" green="0.67483735079999996" blue="0.67954903840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
-                                                            <color key="value" red="0.57348090409999997" green="0.67483735079999996" blue="0.67954903840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="nic-WA-GV0">
                                         <rect key="frame" x="0.0" y="373" width="414" height="80"/>
@@ -158,44 +159,44 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="8Lp-yr-9GC" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="20" y="13" width="374" height="55"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-KL-Vkb" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                    <rect key="frame" x="20" y="12" width="374" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                             <integer key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="lock.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                                            <color key="value" red="0.57348090409999997" green="0.67483735079999996" blue="0.67954903840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
-                                                            <color key="value" red="0.57348090409999997" green="0.67483735079999996" blue="0.67954903840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="aAR-l1-Jk0">
                                         <rect key="frame" x="0.0" y="453" width="414" height="80"/>
@@ -204,44 +205,44 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="confirm password" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ovi-E0-U9C" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="20" y="13" width="374" height="55"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Confirm password" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="aeX-cc-qms" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                    <rect key="frame" x="20" y="12" width="374" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                             <integer key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="lock.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
-                                                            <color key="value" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                                            <color key="value" red="0.57348090409999997" green="0.67483735079999996" blue="0.67954903840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
-                                                            <color key="value" red="0.57348090409999997" green="0.67483735079999996" blue="0.67954903840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Doj-Qv-5Ve">
                                         <rect key="frame" x="0.0" y="533" width="414" height="100"/>
@@ -253,19 +254,20 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkf-Xa-nM5" customClass="TransitionButton" customModule="TransitionButton">
                                                     <rect key="frame" x="40" y="33" width="334" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.72191399339999995" green="0.84354746339999997" blue="0.84837049249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                                     <state key="normal" title="Sign up">
-                                                        <color key="titleColor" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="signUpBtn:" destination="BHA-3j-n3e" eventType="touchUpInside" id="Q6m-yq-P5M"/>
+                                                        <segue destination="CRq-ac-3Ve" kind="push" id="NaV-8k-tNQ"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.63137254899999995" alpha="0.1816941353" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="0.1816941353" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -284,13 +286,15 @@
             </objects>
             <point key="canvasLocation" x="-1014" y="65"/>
         </scene>
-        <!--newReqSVC-->
-        <scene sceneID="tMx-DJ-Wo8">
+        <!--profileSVC-->
+        <scene sceneID="Bwc-Lg-r0r">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="newReqSVCStoryBoard" storyboardName="NewRequestScreen" referencedIdentifier="newReqSVC" id="YlD-SC-32f" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jgg-xy-ZI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="profileSVC" id="CRq-ac-3Ve" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zlr-yC-VuE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Foz-Vz-Yzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-477" y="184"/>
+            <point key="canvasLocation" x="-357" y="-4"/>
         </scene>
     </scenes>
     <resources>

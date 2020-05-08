@@ -10,7 +10,7 @@ import UIKit
 import TransitionButton
 import SkyFloatingLabelTextField
 import UIColor_Hex_Swift
-class LoginTableViewController: UITableViewController {
+class LoginTableViewController: UITableViewController,UITextFieldDelegate {
 
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var emailTextView: SkyFloatingLabelTextFieldWithIcon!
@@ -25,9 +25,16 @@ class LoginTableViewController: UITableViewController {
         LoginBtn.layer.borderColor=UIColor.white.cgColor
         LoginBtn.layer.borderWidth=2
 
+        // to enable return key
+        emailTextView.delegate=self
 }
     
-
+    
+    // one function to enable dimiss key board
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
 
   
     @IBAction func LoginBtn(_ sender: Any) {

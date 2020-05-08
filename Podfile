@@ -6,19 +6,13 @@ platform :ios, '9.0'
 target 'Checkup' do
   
   use_frameworks!
-
-  pod 'SwiftyJSON'
   pod 'SDWebImage', '~> 4.0'
   pod 'Cosmos'
   pod 'ReachabilitySwift'
   pod 'TransitionButton'
-  pod 'SwiftGifOrigin', '~> 1.7.0'
-  pod 'TextFieldEffects'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'UIColor_Hex_Swift'
-  pod 'Fusuma'
   pod 'OpalImagePicker'
-  pod 'SwiftCheckBox'
   pod 'ImageSlideshow'
-
+  pod 'StepIndicator', '~> 1.0.8'
 end
