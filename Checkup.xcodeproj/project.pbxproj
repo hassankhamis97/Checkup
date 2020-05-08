@@ -33,7 +33,6 @@
 		CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE4D2B12457064600EB8ADC /* Profile.storyboard */; };
 		CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */; };
 		CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */; };
-		CCE4D2C32457526100EB8ADC /* microscope.gif in Resources */ = {isa = PBXBuildFile; fileRef = CCE4D2C22457526000EB8ADC /* microscope.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +85,6 @@
 		CCE4D2B12457064600EB8ADC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
-		CCE4D2C22457526000EB8ADC /* microscope.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = microscope.gif; path = "../../ui_garduation Project/microscope.gif"; sourceTree = "<group>"; };
 		DBCCD7FDD5A7B2E6D89A74DD /* Pods-Checkup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.release.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.release.xcconfig"; sourceTree = "<group>"; };
 		DD8207D23F35EF388509225D /* Pods-Checkup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.debug.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,7 +157,6 @@
 				4E22F8FC243E6E6C0090693C /* AppDelegate.swift */,
 				4E22F8FE243E6E6C0090693C /* SceneDelegate.swift */,
 				4E22F908243E6E6D0090693C /* Assets.xcassets */,
-				CCE4D2C22457526000EB8ADC /* microscope.gif */,
 				4E22F90D243E6E6D0090693C /* Info.plist */,
 				4E22F905243E6E6C0090693C /* Checkup.xcdatamodeld */,
 			);
@@ -376,7 +373,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCE4D2C32457526100EB8ADC /* microscope.gif in Resources */,
 				4E22F90C243E6E6D0090693C /* LaunchScreen.storyboard in Resources */,
 				4E22F909243E6E6D0090693C /* Assets.xcassets in Resources */,
 				4EE5696E2453058200688B65 /* Login.storyboard in Resources */,
