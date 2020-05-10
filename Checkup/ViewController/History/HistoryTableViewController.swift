@@ -13,15 +13,26 @@ class HistoryTableViewController: UITableViewController {
     
     var labNames = ["El-Mokhtabar" , "Alpha" , "El-Borg"]
     var labImages = ["mokhtabar" , "alpha" , "borg"]
-    var labDate = ["21/2/2020" , "1/11/2019" , "5/9/2008"]
+    var labDate = ["21/2/2005" , "1/11/2019" , "5/9/2008"]
     
     var pdfHistory : PdfResultViewController!
-    var searchPageObj : SearchViewController!
-    var filterPage : FilterViewController!
+    var filterPage : FilterTableViewController!
+    var dateDescingly : [String]!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(addTapped))
-
+       navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(addTapped))
+        
+        dateDescingly = formatDate(myArr: labDate)
+     //   print(dateDescingly)
+        
+    /*           let rightBarButton = UIButton(type: .custom)
+               rightBarButton.setImage(UIImage(named:"tool"), for:.normal)
+        rightBarButton.frame = CGRect(x : 0.0 , y : 0.0 , width: 10.0 , height: 10.0)
+        rightBarButton.sizeToFit()
+    
+               let barButtonItem  = UIBarButtonItem(customView: rightBarButton)
+               self.navigationItem.rightBarButtonItems = [barButtonItem]
+*/
     }
    
 
@@ -58,14 +69,10 @@ class HistoryTableViewController: UITableViewController {
        cell.labImageOutlet.layer.cornerRadius = cell.labImageOutlet.frame.height/2
         
         cell.labNameOutlet.text = self.labNames[indexPath.row]
-    cell.labDateOutlet.text = labDate[indexPath.row]
+    cell.labDateOutlet.text = dateDescingly[indexPath.row]
         return cell
     }
     
-    
-
-    
-   
     
    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if #available(iOS 13.0, *) {
@@ -92,7 +99,7 @@ class HistoryTableViewController: UITableViewController {
     
     @objc func addTapped(){
         if #available(iOS 13.0, *) {
-          filterPage = storyboard?.instantiateViewController(identifier: "filter") as! FilterViewController
+          filterPage = storyboard?.instantiateViewController(identifier: "filter") as! FilterTableViewController
         } else {
             
         }
@@ -100,6 +107,28 @@ class HistoryTableViewController: UITableViewController {
            
        }
     
+    func formatDate(myArr : [String]) -> [String] {
+        var convertedArray : [String] = []
+        var dateForrmatter = DateFormatter()
+        dateForrmatter.dateFormat = "dd/MM/yyy"
+        
+        for myDate in myArr{
+            let date = dateForrmatter.date(from: myDate)
+            if let date = date{
+                var newDate = dateForrmatter.string(from: date)
+                convertedArray.append(newDate)
+            }
+        }
+        print(convertedArray)
+        
+        var dateDescindingly = convertedArray.sorted(by : {$0.compare($1) == .orderedDescending})
+        print("desc")
+        print(dateDescindingly)
+        
+
+        return dateDescindingly
+    }
+      
     
     
     /*

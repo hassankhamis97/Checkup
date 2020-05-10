@@ -7,15 +7,21 @@
 //
 
 import UIKit
-
+import TransitionButton
 class FilterViewController: UIViewController {
 
-   
+    @IBOutlet weak var filterBtn: TransitionButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        filterBtn.layer.cornerRadius=30
+        filterBtn.layer.borderColor=UIColor.white.cgColor
+        filterBtn.layer.borderWidth=2
          navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(closeTapped))
 
-        // Do any additional setup after loading the view.
+        
     }
     @objc func closeTapped(){
         navigationController?.popViewController(animated: true)
