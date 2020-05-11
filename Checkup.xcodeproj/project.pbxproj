@@ -36,10 +36,10 @@
 		CC7092D92458C131003E8968 /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7092D82458C131003E8968 /* signUp.storyboard */; };
 		CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */; };
 		CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */; };
-		CC840A14245F840700C12076 /* NormalRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC840A13245F840700C12076 /* NormalRequestTableViewController.swift */; };
 		CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */; };
 		CC8A1046245E087C007856BF /* fillCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1045245E087C007856BF /* fillCollectionView.swift */; };
 		CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCB1D5C24563FED00303C22 /* ImagePicker.swift */; };
+		CCD0BAD52469F357007CF3EE /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD0BAD42469F357007CF3EE /* LocationTableViewController.swift */; };
 		CCDEF4712462DCF500ECBBEB /* RequestTStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */; };
 		CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */; };
 		CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE4D2B12457064600EB8ADC /* Profile.storyboard */; };
@@ -100,10 +100,10 @@
 		CC7092D82458C131003E8968 /* signUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = signUp.storyboard; sourceTree = "<group>"; };
 		CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		CC840A13245F840700C12076 /* NormalRequestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalRequestTableViewController.swift; sourceTree = "<group>"; };
 		CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamingGroupViewController.swift; sourceTree = "<group>"; };
 		CC8A1045245E087C007856BF /* fillCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fillCollectionView.swift; sourceTree = "<group>"; };
 		CCCB1D5C24563FED00303C22 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CCD0BAD42469F357007CF3EE /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RequestTStatus.storyboard; sourceTree = "<group>"; };
 		CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatusTableViewController.swift; sourceTree = "<group>"; };
 		CCE4D2B12457064600EB8ADC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -277,7 +277,6 @@
 				CC064E2F245B03360046E67F /* newRequestTableViewController.swift */,
 				CC064E31245B05FA0046E67F /* SliderCell.swift */,
 				CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */,
-				CC840A13245F840700C12076 /* NormalRequestTableViewController.swift */,
 			);
 			path = NewRequestView;
 			sourceTree = "<group>";
@@ -315,6 +314,7 @@
 			children = (
 				CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */,
 				CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */,
+				CCD0BAD42469F357007CF3EE /* LocationTableViewController.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -515,7 +515,6 @@
 				CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */,
 				CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */,
 				CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */,
-				CC840A14245F840700C12076 /* NormalRequestTableViewController.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
 				CC8A1046245E087C007856BF /* fillCollectionView.swift in Sources */,
 				4E432F122464F6EF00D1CACA /* FilterViewController.swift in Sources */,
@@ -525,6 +524,7 @@
 				CC064E32245B05FA0046E67F /* SliderCell.swift in Sources */,
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
 				CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */,
+				CCD0BAD52469F357007CF3EE /* LocationTableViewController.swift in Sources */,
 				CC5DFD0C2468C22F003B9F18 /* PopUpTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
