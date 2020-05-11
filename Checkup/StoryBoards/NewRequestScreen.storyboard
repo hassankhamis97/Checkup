@@ -512,10 +512,10 @@
             </objects>
             <point key="canvasLocation" x="1325" y="20"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Location Table View Controller-->
         <scene sceneID="sFA-DT-D5a">
             <objects>
-                <tableViewController id="8bz-sq-D9y" sceneMemberID="viewController">
+                <tableViewController id="8bz-sq-D9y" customClass="LocationTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wAg-nf-r3f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

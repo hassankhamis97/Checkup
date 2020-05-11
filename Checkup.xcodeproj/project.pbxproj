@@ -48,7 +48,7 @@
 		CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */; };
 		CC8A1046245E087C007856BF /* fillCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1045245E087C007856BF /* fillCollectionView.swift */; };
 		CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCB1D5C24563FED00303C22 /* ImagePicker.swift */; };
-		CCD0BAD52469F357007CF3EE /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD0BAD42469F357007CF3EE /* LocationTableViewController.swift */; };
+		CCD0BAD7246A035C007CF3EE /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD0BAD6246A035C007CF3EE /* LocationTableViewController.swift */; };
 		CCDEF4712462DCF500ECBBEB /* RequestTStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */; };
 		CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */; };
 		CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE4D2B12457064600EB8ADC /* Profile.storyboard */; };
@@ -121,7 +121,7 @@
 		CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamingGroupViewController.swift; sourceTree = "<group>"; };
 		CC8A1045245E087C007856BF /* fillCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fillCollectionView.swift; sourceTree = "<group>"; };
 		CCCB1D5C24563FED00303C22 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		CCD0BAD42469F357007CF3EE /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
+		CCD0BAD6246A035C007CF3EE /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RequestTStatus.storyboard; sourceTree = "<group>"; };
 		CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatusTableViewController.swift; sourceTree = "<group>"; };
 		CCE4D2B12457064600EB8ADC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -397,7 +397,7 @@
 			children = (
 				CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */,
 				CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */,
-				CCD0BAD42469F357007CF3EE /* LocationTableViewController.swift */,
+				CCD0BAD6246A035C007CF3EE /* LocationTableViewController.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -603,6 +603,7 @@
 				4EE9F9452469A47F00BB4A39 /* RecieverCellTableViewCell.swift in Sources */,
 				CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */,
 				CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */,
+				CCD0BAD7246A035C007CF3EE /* LocationTableViewController.swift in Sources */,
 				CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */,
 				CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
@@ -615,7 +616,6 @@
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
 				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
 				CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */,
-				CCD0BAD52469F357007CF3EE /* LocationTableViewController.swift in Sources */,
 				4EE9F93624697D9100BB4A39 /* MessagingChatTableViewController.swift in Sources */,
 				CC5DFD0C2468C22F003B9F18 /* PopUpTableViewController.swift in Sources */,
 			);
