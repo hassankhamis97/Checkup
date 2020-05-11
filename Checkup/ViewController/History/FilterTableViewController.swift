@@ -122,7 +122,7 @@ class FilterTableViewController: UITableViewController {
         
        
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(closeTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Apply", style: .plain, target: self, action: #selector(closeTapped))
          
  
  
