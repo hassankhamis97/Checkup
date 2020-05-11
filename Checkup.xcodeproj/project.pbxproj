@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0358339E246953FD008DD8C2 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358339D246953FD008DD8C2 /* UIButtonExtension.swift */; };
+		03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F8346E2468990B000155A4 /* FilterTableViewController.swift */; };
+		03F834712468D8D9000155A4 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F834702468D8D9000155A4 /* RadioButton.swift */; };
 		0F69C382A23AE66CCD5E2C01 /* Pods_Checkup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FF798CDDF112788FABCBE4 /* Pods_Checkup.framework */; };
 		4E22F8FD243E6E6C0090693C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22F8FC243E6E6C0090693C /* AppDelegate.swift */; };
 		4E22F8FF243E6E6C0090693C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22F8FE243E6E6C0090693C /* SceneDelegate.swift */; };
@@ -18,13 +21,10 @@
 		4E22F922243E6E6D0090693C /* CheckupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22F921243E6E6D0090693C /* CheckupUITests.swift */; };
 		4E22F936243E743C0090693C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22F935243E743C0090693C /* SignupViewController.swift */; };
 		4E432F092464F6E100D1CACA /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E432F082464F6E000D1CACA /* History.storyboard */; };
-		4E432F122464F6EF00D1CACA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E432F0B2464F6EF00D1CACA /* FilterViewController.swift */; };
 		4E432F132464F6EF00D1CACA /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E432F0C2464F6EF00D1CACA /* HistoryTableViewCell.swift */; };
 		4E432F142464F6EF00D1CACA /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E432F0D2464F6EF00D1CACA /* HistoryTableViewController.swift */; };
 		4E432F152464F6EF00D1CACA /* pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4E432F0E2464F6EF00D1CACA /* pdf.pdf */; };
 		4E432F162464F6EF00D1CACA /* PdfResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E432F0F2464F6EF00D1CACA /* PdfResultViewController.swift */; };
-		4E432F172464F6EF00D1CACA /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E432F102464F6EF00D1CACA /* SearchTableViewCell.swift */; };
-		4E432F182464F6EF00D1CACA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E432F112464F6EF00D1CACA /* SearchViewController.swift */; };
 		4EE5696E2453058200688B65 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE5696D2453058200688B65 /* Login.storyboard */; };
 		4EE569732453070C00688B65 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE569722453070C00688B65 /* MainViewController.swift */; };
 		4EE9F931246971E400BB4A39 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE9F930246971E400BB4A39 /* Chat.storyboard */; };
@@ -74,6 +74,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0358339D246953FD008DD8C2 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		03F8346E2468990B000155A4 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		03F834702468D8D9000155A4 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		09FF798CDDF112788FABCBE4 /* Pods_Checkup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checkup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E22F8F9243E6E6C0090693C /* Checkup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checkup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E22F8FC243E6E6C0090693C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,13 +94,10 @@
 		4E22F923243E6E6D0090693C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E22F935243E743C0090693C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		4E432F082464F6E000D1CACA /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
-		4E432F0B2464F6EF00D1CACA /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		4E432F0C2464F6EF00D1CACA /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		4E432F0D2464F6EF00D1CACA /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		4E432F0E2464F6EF00D1CACA /* pdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf.pdf; sourceTree = "<group>"; };
 		4E432F0F2464F6EF00D1CACA /* PdfResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfResultViewController.swift; sourceTree = "<group>"; };
-		4E432F102464F6EF00D1CACA /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		4E432F112464F6EF00D1CACA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4EE5696D2453058200688B65 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4EE569722453070C00688B65 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4EE9F930246971E400BB4A39 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
@@ -255,13 +255,13 @@
 		4E432F0A2464F6EF00D1CACA /* History */ = {
 			isa = PBXGroup;
 			children = (
-				4E432F0B2464F6EF00D1CACA /* FilterViewController.swift */,
 				4E432F0C2464F6EF00D1CACA /* HistoryTableViewCell.swift */,
 				4E432F0D2464F6EF00D1CACA /* HistoryTableViewController.swift */,
 				4E432F0E2464F6EF00D1CACA /* pdf.pdf */,
 				4E432F0F2464F6EF00D1CACA /* PdfResultViewController.swift */,
-				4E432F102464F6EF00D1CACA /* SearchTableViewCell.swift */,
-				4E432F112464F6EF00D1CACA /* SearchViewController.swift */,
+				03F8346E2468990B000155A4 /* FilterTableViewController.swift */,
+				03F834702468D8D9000155A4 /* RadioButton.swift */,
+				0358339D246953FD008DD8C2 /* UIButtonExtension.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -606,15 +606,15 @@
 				CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */,
 				CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */,
 				CC840A14245F840700C12076 /* NormalRequestTableViewController.swift in Sources */,
-				4E432F182464F6EF00D1CACA /* SearchViewController.swift in Sources */,
+				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
 				CC8A1046245E087C007856BF /* fillCollectionView.swift in Sources */,
-				4E432F122464F6EF00D1CACA /* FilterViewController.swift in Sources */,
-				4E432F172464F6EF00D1CACA /* SearchTableViewCell.swift in Sources */,
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
 				CC064E30245B03360046E67F /* newRequestTableViewController.swift in Sources */,
 				4E432F132464F6EF00D1CACA /* HistoryTableViewCell.swift in Sources */,
 				CC064E32245B05FA0046E67F /* SliderCell.swift in Sources */,
+				0358339E246953FD008DD8C2 /* UIButtonExtension.swift in Sources */,
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
+				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
 				CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */,
 				4EE9F93624697D9100BB4A39 /* MessagingChatTableViewController.swift in Sources */,
 				CC5DFD0C2468C22F003B9F18 /* PopUpTableViewController.swift in Sources */,
