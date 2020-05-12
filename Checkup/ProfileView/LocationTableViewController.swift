@@ -12,10 +12,13 @@ class LocationTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+  
+   let vc = (
+       storyboard?.instantiateViewController(
+       withIdentifier: "locPopUpSVC"))!
+   present(vc, animated: true, completion: nil)
+    }
 
    
     }
 
-   
-   
-}

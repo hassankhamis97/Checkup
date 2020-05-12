@@ -13,15 +13,16 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     
     
 
+    @IBOutlet weak var genderTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var birthDateTextField: SkyFloatingLabelTextFieldWithIcon!
     
     
-    @IBOutlet weak var genderTextField: SkyFloatingLabelTextFieldWithIcon!
+ 
     
       var imagePicker: ImagePicker!
       let datePicker=UIDatePicker()
-      let genderPickerView=UIPickerView()
+      var genderPickerView=UIPickerView()
     
     
     let genderArray=["Male","Female"]

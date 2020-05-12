@@ -119,6 +119,8 @@ class FilterTableViewController: UITableViewController {
         
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
+        datePickerView.datePickerMode = .date
+        datePickerView2.datePickerMode = .date
         
        
         

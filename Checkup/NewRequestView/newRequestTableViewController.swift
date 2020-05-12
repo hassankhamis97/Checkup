@@ -38,6 +38,7 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
     let timePicker=UIDatePicker()
     var ind:Int!
     var x=1
+    var y=1
     
     
     override func viewDidLoad() {
@@ -64,23 +65,24 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
     override func viewDidAppear(_ animated: Bool) {
         
         
-        //            slideShow.slideshowInterval = 5.0
+              
         slideShow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
-        slideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
+//        slideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
         
        
-        pageControl.currentPageIndicatorTintColor = UIColor.lightGray
-        pageControl.pageIndicatorTintColor = UIColor.black
+        pageControl.currentPageIndicatorTintColor = UIColor.black
+        pageControl.pageIndicatorTintColor = UIColor.gray
         slideShow.pageIndicator = pageControl
         
         slideShow.activityIndicator = DefaultActivityIndicator()
         slideShow.delegate = self
+        slideShow.contentScaleMode = .scaleToFill
         
         if (inputImageArray.count==0){
             
             slideShow.setImageInputs([
                 ImageSource(image: UIImage(named: "rosheta")!),
-                ImageSource(image: UIImage(named: "default")!),
+                ImageSource(image: UIImage(named: "new rosheta")!),
             ])
             
         }
@@ -104,24 +106,33 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
 
         
         
-        if (x%2==0){
+        if (x%2==0){ // for normal request
                        
                        if (indexPath.row==2 || indexPath.row==3 || indexPath.row==4  ){
                                         return 70
                                     }
                              
-                             
                              if indexPath.row==0{
                                  return 322
                              }
                              
-                             if indexPath.row==1{
-                                        return 82
-                                    }
-                             if indexPath.row==5{
+            if indexPath.row == 1 {
+
+                       if(testTexts.isEmpty)
+                       {
+                           return 0
+                       }
+                       else{
+                            return 82
+                       }
+                    }
+            
+            
+                             
+                             if (indexPath.row==5||indexPath.row==6){
                                         return 0
                                     }
-                         if indexPath.row==6{
+                         if indexPath.row==7{
                            return 90
                                }
                             
@@ -142,13 +153,34 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
             }
          }
 
-        if (indexPath.row == 2||indexPath.row == 3||indexPath.row==4||indexPath.row==5||indexPath.row==6){
+        if (indexPath.row == 2||indexPath.row == 3||indexPath.row==4){
 
             return 70
         }
-
         
+       
+      if indexPath.row == 7{
+            return 90
+        }
+        if indexPath.row == 5{// FILLED ADRESS
+            if(y==1)
+            {
+              return 0
+            }
+            else{
+               return 70
+            }
+        }
         
+        if indexPath.row==6{// FILLED ADRESS
+                          if(y==1)
+                          {
+                            return 70
+                          }
+                          else{
+                             return 0
+                          }
+        }
          return tableView.rowHeight
      }
     
@@ -179,20 +211,20 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
        }
     
     
-//    @IBAction func deleteImageBtn(_ sender: Any) {
-//
-//          inputImageArray.remove(at: ind)
-//                slideShow.setImageInputs(inputImageArray)
-//                tableView.reloadData()
-//
-//
-//    }
+
     
     @IBAction func deleteImageBtn(_ sender: Any) {
         
-        inputImageArray.remove(at: ind)
-                        slideShow.setImageInputs(inputImageArray)
-                        tableView.reloadData()
+        
+        if(inputImageArray.isEmpty){
+            print("no data")
+        }
+        else{
+            inputImageArray.remove(at: ind)
+                                   slideShow.setImageInputs(inputImageArray)
+                                   tableView.reloadData()
+        }
+       
         
     }
     
@@ -223,17 +255,7 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
                      print("completion block")
                  })
     }
-    
-    
-    
 
-    
-    
-        
-        
-        
-    
-    
     
     
     
@@ -307,6 +329,54 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
              timeTextField.text=formatter.string(from: timePicker.date)
               self.view.endEditing(true)
           }
+    
+    
+    
+    
+    
+    @IBAction func enterLocationBtn(_ sender: Any) {
+        
+        
+        
+        let alert = UIAlertController(title: "Location", message: "Please Select an Option", preferredStyle: .actionSheet)
+
+                        alert.addAction(UIAlertAction(title: "Use your saved location", style: .default , handler:{ (UIAlertAction)in
+                            print("User click Approve button")
+                         
+                            self.y=2
+                            self.tableView.reloadData()
+
+                        }))
+
+                        alert.addAction(UIAlertAction(title: "Add new location  ", style: .default , handler:{ (UIAlertAction)in
+                            
+                            let vc = self.storyboard!.instantiateViewController(identifier:"ReqlocationSVC") as! ReqLocationTableViewController
+                        
+                        self.navigationController?.pushViewController(vc, animated: true)
+                            
+                       
+                        }))
+
+                        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:{ (UIAlertAction)in
+                            print("User click Dismiss button")
+                        }))
+
+                                  
+        self.tableView.reloadData()
+        
+                        self.present(alert, animated: true, completion: {
+                            print("completion block")
+                        })
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
     
     
 }

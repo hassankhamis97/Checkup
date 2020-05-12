@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +20,7 @@
                         <sections>
                             <tableViewSection footerTitle="" id="Kvi-l2-ToF">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="207" id="HaU-Yk-rsh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="207" id="HaU-Yk-rsh">
                                         <rect key="frame" x="0.0" y="28" width="414" height="207"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HaU-Yk-rsh" id="zxI-v8-xqR">
@@ -50,7 +49,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.84313725490196079" blue="0.63137254901960782" alpha="0.1816941352739726" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="34" id="nTF-Wk-cql">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="34" id="nTF-Wk-cql">
                                         <rect key="frame" x="0.0" y="235" width="414" height="34"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nTF-Wk-cql" id="bAI-C7-fIP">
@@ -75,7 +74,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="person.fill" catalog="system"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="icons8-gender-64 (1)"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                             <integer key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
@@ -107,7 +106,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="RZl-Ke-Idi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="RZl-Ke-Idi">
                                         <rect key="frame" x="0.0" y="349" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RZl-Ke-Idi" id="W7K-eh-wfb">
@@ -124,7 +123,7 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                             <integer key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="lock.fill" catalog="system"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="square.and.arrow.up.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
@@ -153,7 +152,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="zYH-H6-qfP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="zYH-H6-qfP">
                                         <rect key="frame" x="0.0" y="429" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zYH-H6-qfP" id="jN7-RZ-ASN">
@@ -206,7 +205,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43" id="HB0-q3-T9y">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="43" id="HB0-q3-T9y">
                                         <rect key="frame" x="0.0" y="572" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HB0-q3-T9y" id="UWC-JP-MBf">
@@ -228,7 +227,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="137" id="7ZV-14-CPO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="137" id="7ZV-14-CPO">
                                         <rect key="frame" x="0.0" y="615" width="414" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7ZV-14-CPO" id="7b7-gr-qoE">
@@ -245,7 +244,14 @@
                             <outlet property="delegate" destination="V6O-re-qlJ" id="v77-kC-2mm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="g5C-I9-ozj"/>
+                    <navigationItem key="navigationItem" id="g5C-I9-ozj">
+                        <barButtonItem key="rightBarButtonItem" title="Requests" id="wrK-4d-Kqc">
+                            <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="rg8-EQ-Yvb" kind="push" id="m5d-Oh-pvn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="LoginBtn" destination="Weh-RQ-OYI" id="13H-vy-Taa"/>
                         <outlet property="emailTextView" destination="r1n-W2-QV3" id="oSG-zz-Pti"/>
@@ -256,6 +262,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eob-tU-b2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2789.8550724637685" y="72.991071428571431"/>
+        </scene>
+        <!--reqSVC-->
+        <scene sceneID="kKU-ai-mcT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RequestTStatus" referencedIdentifier="reqSVC" id="rg8-EQ-Yvb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="J8p-6v-JIN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9M-QS-tSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457" y="162"/>
         </scene>
         <!--testySVC-->
         <scene sceneID="gqA-AS-SmG">
@@ -287,31 +303,6 @@
             </objects>
             <point key="canvasLocation" x="2711" y="549"/>
         </scene>
-        <!--Splash View Controller-->
-        <scene sceneID="ctN-pA-u78">
-            <objects>
-                <viewController storyboardIdentifier="secondVC" id="Lm6-zl-uMP" customClass="SplashViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TAm-nw-uGp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XjO-Nk-cZY">
-                                <rect key="frame" x="0.0" y="121" width="414" height="741"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.82108211519999996" green="0.90617746109999997" blue="0.91076314449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Pzv-Yz-uHc"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="v9w-z7-wlO"/>
-                    <connections>
-                        <outlet property="newImage" destination="XjO-Nk-cZY" id="xF3-Fc-6aU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lLq-RP-uev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3700.0000000000005" y="72.991071428571431"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="xbw-PG-oww">
             <objects>
@@ -342,8 +333,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lock.fill" catalog="system" width="64" height="64"/>
+        <image name="icons8-gender-64 (1)" width="64" height="64"/>
         <image name="newmicroscope (1)" width="800" height="600"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="56" height="64"/>
     </resources>
 </document>

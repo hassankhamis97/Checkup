@@ -25,7 +25,7 @@ class RequstDetailsTableViewController: UITableViewController {
         super.viewDidLoad()
 
        slideShow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
-             slideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
+              slideShow.contentScaleMode = .scaleToFill
              
             
              pageControl.currentPageIndicatorTintColor = UIColor.black
