@@ -241,7 +241,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="fHb-kV-e4E">
                             <connections>
                                 <action selector="DoneBtn:" destination="biU-dX-9FY" id="VsS-GC-VA0"/>
-                                <segue destination="WbR-Yj-jDM" kind="push" id="EKg-76-8E0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -293,7 +292,4 @@
         <image name="lock.fill" catalog="system" width="64" height="64"/>
         <image name="questionmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="EKg-76-8E0"/>
-    </inferredMetricsTieBreakers>
 </document>

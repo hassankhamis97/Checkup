@@ -11,21 +11,20 @@ import UIKit
 class HistoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labImageOutlet: UIImageView!
-    
-    @IBOutlet weak var labNameOutlet: UITextView!
-    
-    @IBOutlet weak var labDateOutlet: UITextView!
-    
-    
-  
+    @IBOutlet weak var labDateOutlet: UILabel!
+    @IBOutlet weak var labNameOutlet: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // Initialization
+        
+
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
 
     }
 

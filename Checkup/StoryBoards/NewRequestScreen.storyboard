@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Request Table View Controller-->
+        <!--New Request-->
         <scene sceneID="eci-gt-32W">
             <objects>
                 <tableViewController storyboardIdentifier="newReqSVC" id="26o-WZ-09i" customClass="newRequestTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -477,13 +477,7 @@
                             <outlet property="delegate" destination="26o-WZ-09i" id="mcV-T0-g8d"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BnS-6m-rmy">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="hEG-cI-s2x">
-                            <connections>
-                                <action selector="dddddBtn:" destination="26o-WZ-09i" id="bdg-P7-F2F"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="New Request" id="BnS-6m-rmy"/>
                     <connections>
                         <outlet property="collectionView" destination="CnN-7h-CpX" id="cfc-cy-sii"/>
                         <outlet property="dateTextField" destination="d33-vj-3mb" id="APO-Q1-gcw"/>
@@ -499,17 +493,7 @@
             </objects>
             <point key="canvasLocation" x="671.01449275362324" y="20.380434782608699"/>
         </scene>
-        <!--reqSCV-->
-        <scene sceneID="l7l-zo-oaE">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RequestTStatus" referencedIdentifier="reqSCV" id="K4l-eg-ian" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="EuG-Ho-d5R"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jT6-8h-hh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2547" y="899"/>
-        </scene>
-        <!--Test Naming Group View Controller-->
+        <!--Tests Name-->
         <scene sceneID="2bd-bM-K2W">
             <objects>
                 <viewController storyboardIdentifier="testNameGroupSVC" id="svR-c2-8P6" customClass="TestNamingGroupViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -518,7 +502,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LKr-UP-Pa5">
-                                <rect key="frame" x="0.0" y="56" width="414" height="680"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="636"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="fBf-5Z-ytj">
@@ -537,7 +521,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" barStyle="black" placeholder="Enter Test Name " showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2HA-IP-4aR">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <color key="backgroundColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.28235294119999998" green="0.29411764709999999" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -568,7 +552,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fFT-sQ-Mby"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ro2-CU-DtV">
+                    <navigationItem key="navigationItem" title="Tests Name" id="Ro2-CU-DtV">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="NGU-pS-DcE">
                             <connections>
                                 <action selector="doneBtn:" destination="svR-c2-8P6" id="fgJ-7I-Y9u"/>
@@ -582,7 +566,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RH3-kn-hef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1325" y="20"/>
+            <point key="canvasLocation" x="2231.8840579710145" y="19.565217391304348"/>
         </scene>
         <!--Req Location Table View Controller-->
         <scene sceneID="sFA-DT-D5a">
@@ -607,7 +591,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="person.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -653,7 +637,7 @@
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="person.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -699,7 +683,7 @@
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="person.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -734,7 +718,7 @@
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="person.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -842,7 +826,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4L-Mr-fVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000.0000000000002" y="37.5"/>
+            <point key="canvasLocation" x="2907.2463768115945" y="37.5"/>
         </scene>
         <!--Req Pop Up Location View Controller-->
         <scene sceneID="HyS-oF-bvH">
@@ -910,7 +894,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7m5-MY-Tcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2789.8550724637685" y="20.380434782608699"/>
+            <point key="canvasLocation" x="3697.1014492753625" y="20.380434782608699"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zx6-DF-Su8">
@@ -929,6 +913,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udh-ds-Nn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-236.23188405797103" y="20.380434782608699"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bm9-Zr-wFh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vEn-Ax-4LE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nHI-pT-bDE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="svR-c2-8P6" kind="relationship" relationship="rootViewController" id="eIW-4p-DLY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJC-oS-Ap3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324.6376811594205" y="19.565217391304348"/>
         </scene>
     </scenes>
     <resources>

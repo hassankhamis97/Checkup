@@ -27,7 +27,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newmicroscope (1)" translatesAutoresizingMaskIntoConstraints="NO" id="cDZ-H7-5zN">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="micrscopBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="cDZ-H7-5zN">
                                                     <rect key="frame" x="20" y="-34" width="374" height="239"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -339,6 +339,6 @@
     <resources>
         <image name="envelope.fill" catalog="system" width="64" height="46"/>
         <image name="lock.fill" catalog="system" width="64" height="64"/>
-        <image name="newmicroscope (1)" width="800" height="600"/>
+        <image name="micrscopBackGround" width="800" height="600"/>
     </resources>
 </document>
