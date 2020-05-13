@@ -67,6 +67,14 @@
                                     <segue destination="QC9-dE-dGj" kind="push" id="QCm-yi-PJJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6J8-2L-Re9">
+                                <rect key="frame" x="317" y="602" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="goToHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZEb-Wo-UWx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -116,6 +124,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqg-LW-qU3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1206" y="88"/>
+        </scene>
+        <!--homeSVC-->
+        <scene sceneID="5gD-23-1mm">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="homeSVCStoryBoard" storyboardName="Home" referencedIdentifier="homeSVC" id="acZ-OR-F1Q" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sef-aE-tPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="135"/>
         </scene>
         <!--profileSVC-->
         <scene sceneID="fit-af-yjK">

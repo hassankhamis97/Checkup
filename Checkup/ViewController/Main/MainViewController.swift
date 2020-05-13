@@ -17,6 +17,17 @@ class MainViewController: UIViewController {
    
 
     }
+    
+    
+     @available(iOS 13.0, *)
+    @IBAction func goToHome(_ sender: Any) {
+        let homeSVC = storyboard!.instantiateViewController(identifier: "homeSVCStoryBoard") as! HomeTableViewController
+        navigationController?.pushViewController(homeSVC, animated: true)
+        
+    }
+    
+    
+    
     @IBAction func gotoLogin(_ sender: Any) {
         
         
