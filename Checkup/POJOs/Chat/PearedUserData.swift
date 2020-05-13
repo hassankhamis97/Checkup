@@ -14,4 +14,5 @@ struct PearedUserData {
     var imgUrl : String?
     var lastMessage : String?
     var lastMessageTime : String?
+    var noOfUnReadMessages : String?
 }

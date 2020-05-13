@@ -1,15 +1,15 @@
 //
-//  MessageLabel.swift
+//  MessageNotificationLabel.swift
 //  Checkup
 //
-//  Created by Hassan Khamis on 5/11/20.
+//  Created by Hassan Khamis on 5/13/20.
 //  Copyright © 2020 Hassan Khamis. All rights reserved.
 //
 
+import Foundation
 import UIKit
-
-class MessageLabel: UILabel {
-    let padding = UIEdgeInsets(top: 15, left: 20, bottom: 15, right: 20)
+class MessageNotificationLabel: UILabel {
+    let padding = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     //    override func drawText(in rect: CGRect) {
     //        super.drawText(in: rect.inset(by: padding))
     //    }
@@ -23,7 +23,7 @@ class MessageLabel: UILabel {
         override func drawText(in rect: CGRect) {
             let context = UIGraphicsGetCurrentContext()!
 //            context.stroke(self.bounds.insetBy(dx: 00.0, dy: 0.0))
-            super.drawText(in: rect.insetBy(dx: 20.0, dy: 0.0))
+            super.drawText(in: rect.insetBy(dx: 5.0, dy: 0.0))
         }
     /*
     // Only override draw() if you perform custom drawing.

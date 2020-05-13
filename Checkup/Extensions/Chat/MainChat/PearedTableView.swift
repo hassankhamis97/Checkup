@@ -21,10 +21,12 @@ extension MainChatViewController : UITableViewDataSource,UITableViewDelegate {
         cell.pearedUserImg.sd_setImage(with: URL(string: pearedUsers[indexPath.row].imgUrl!), placeholderImage:UIImage(named: "placeholder.png"))
         cell.lastMessage.text = pearedUsers[indexPath.row].lastMessage!
         cell.lastMessageTime.text = getDateFromTimeStamp(timeStamp: Int64(pearedUsers[indexPath.row].lastMessageTime!) as! Int64)
+        cell.noOfUnReadMessages.text = pearedUsers[indexPath.row].noOfUnReadMessages!
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let messagingSB = storyboard?.instantiateViewController(withIdentifier: "messagingChatSVC") else { return }
+        guard let messagingSB = storyboard?.instantiateViewController(withIdentifier: "messagingChatSVC") as? MessagingChatViewController else { return }
+        messagingSB.currentPearedUser = pearedUsers[indexPath.row]
         self.navigationController?.pushViewController(messagingSB, animated: true)
     
     }
