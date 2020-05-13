@@ -9,7 +9,7 @@
 import UIKit
 
 class PopUpLocationViewController: UIViewController {
-
+    
     @IBAction func autoLocateBtn(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
@@ -20,12 +20,12 @@ class PopUpLocationViewController: UIViewController {
     
     @IBAction func setManuallyBtn(_ sender: Any) {
         
-         dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
+    
 }

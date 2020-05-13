@@ -18,7 +18,7 @@ class PassWordDetailsTableViewController: UITableViewController {
     }
 
    @IBAction func DoneBtn(_ sender: Any) {
-    navigationController?.popToRootViewController(animated: true)
+    navigationController?.popViewController(animated: true)
    }
 
 }

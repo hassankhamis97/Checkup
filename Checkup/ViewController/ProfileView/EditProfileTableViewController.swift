@@ -11,18 +11,15 @@ import SkyFloatingLabelTextField
 
 class EditProfileTableViewController: UITableViewController, UIPickerViewDelegate,UIPickerViewDataSource {
     
-    
-
     @IBOutlet weak var genderTextField: SkyFloatingLabelTextFieldWithIcon!
-    @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var birthDateTextField: SkyFloatingLabelTextFieldWithIcon!
+    @IBOutlet weak var profileImg: UIImageView!
     
     
- 
     
-      var imagePicker: ImagePicker!
-      let datePicker=UIDatePicker()
-      var genderPickerView=UIPickerView()
+    var imagePicker: ImagePicker!
+    var datePicker=UIDatePicker()
+    var genderPickerView=UIPickerView()
     
     
     let genderArray=["Male","Female"]
@@ -33,49 +30,48 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         profileImg.layer.cornerRadius=profileImg.frame.width / 2
         profileImg.clipsToBounds = true
         
-         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        imagePicker = ImagePicker(presentationController: self, delegate: self)
         
         genderPickerView.delegate=self
         genderPickerView.dataSource=self
-        
         genderTextField.inputView=genderPickerView
         
         createDatePicker()
     }
-
+    
     @IBAction func changeImgBtn(_ sender: Any) {
         self.imagePicker.present(from: sender as! UIView)
-      
+        
     }
     
     
-       func createDatePicker(){
-           
-           let toolbar=UIToolbar()
-           toolbar.sizeToFit()
-           let doneBtn=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action:#selector(donePressed))
-           toolbar.setItems(([doneBtn]), animated: true)
-           birthDateTextField.inputAccessoryView=toolbar
-           birthDateTextField.inputView=datePicker
-           datePicker.datePickerMode = .date
-           
-       }
-       
-       @objc func donePressed(){
-           
-           
-           let formatter=DateFormatter()
-//        formatter.dateStyle =
-           formatter.timeStyle = .none
+    func createDatePicker(){
+        
+        let toolbar=UIToolbar()
+        toolbar.sizeToFit()
+        let doneBtn=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action:#selector(donePressed))
+        toolbar.setItems(([doneBtn]), animated: true)
+        birthDateTextField.inputAccessoryView=toolbar
+        birthDateTextField.inputView=datePicker
+        datePicker.datePickerMode = .date
+        
+    }
+    
+    @objc func donePressed(){
+        
+        
+        let formatter=DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
         birthDateTextField.text=formatter.string(from: datePicker.date)
-           self.view.endEditing(true)
-       }
-
+        self.view.endEditing(true)
+    }
     
     
+    // for gender picker view :
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-     return 1
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -84,22 +80,22 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-          return genderArray[row]
-      }
-      
-      func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-          
-          genderTextField.text=genderArray[row]
-          genderTextField.resignFirstResponder()
-      }
-      
+        return genderArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        genderTextField.text=genderArray[row]
+        genderTextField.resignFirstResponder()
+    }
+    
     
     
     
 }
 extension EditProfileTableViewController: ImagePickerDelegate {
-
-  func didSelect(image: UIImage?) {
-      self.profileImg.image = image
-  }
+    
+    func didSelect(image: UIImage?) {
+        self.profileImg.image = image
+    }
 }

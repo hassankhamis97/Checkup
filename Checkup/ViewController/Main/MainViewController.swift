@@ -11,7 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
    @available(iOS 13.0, *)
     @IBAction func gotoSignup(_ sender: Any) {
-       let signUpSVC = storyboard!.instantiateViewController(identifier: "signRefstoryBoard") as! SignupViewController
+       let signUpSVC = storyboard!.instantiateViewController(withIdentifier: "signRefstoryBoard") as! SignupViewController
     navigationController?.pushViewController(signUpSVC, animated: true)
 
    

@@ -10,8 +10,6 @@ import UIKit
 
 class PopUpCollectionViewCell: UICollectionViewCell {
     
-    
-    
     @IBOutlet weak var phoneLabel: UILabel!
     
     

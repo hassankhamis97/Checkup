@@ -24,14 +24,16 @@ class RequestStatusTableViewController: UITableViewController {
     var pageControl = UIPageControl()
     var imageArray:[UIImage]!
     var testTextArray=["TSH","CBC","HbA1-c"]
-    var x=0;
+    var savedImageArray=[UIImage]() // coming from data base
+    var slidShowImageArray=[InputSource]()// converted savedImage
+    var x=0; // will be deleted just for testing confirmation and refusing state
     
     
     
     @IBOutlet weak var progressBarView: StepIndicatorView!
     
     
-    
+     // those two button will be deleted
     @IBAction func confirmBtn(_ sender: Any) {
         
         x=3
@@ -57,7 +59,7 @@ class RequestStatusTableViewController: UITableViewController {
         
         precautionsTextArea.layer.borderWidth=2
         precautionsTextArea.layer.cornerRadius=10
-        precautionsTextArea.layer.borderColor=UIColor.darkGray.cgColor
+    precautionsTextArea.layer.borderColor=UIColor.darkGray.cgColor
         
         slideShow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
           slideShow.contentScaleMode = .scaleToFill
@@ -70,7 +72,16 @@ class RequestStatusTableViewController: UITableViewController {
         slideShow.activityIndicator = DefaultActivityIndicator()
         slideShow.delegate = self
         
+       /* when dealing with Database
+        for img in savedImageArray{
+            
+            var i=ImageSource(image:img)
+            slidShowImageArray.append(i)
+        }
         
+        slideShow.setImageInputs(slidShowImageArray)
+        
+        */
         slideShow.setImageInputs([
             ImageSource(image: UIImage(named: "rosheta")!),ImageSource(image: UIImage(named: "new rosheta")!)]
      )
@@ -98,6 +109,8 @@ class RequestStatusTableViewController: UITableViewController {
                fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
            }
     
+    
+    // to hide cell
     
     override func tableView(_ tableView: UITableView,
                                   heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -147,7 +160,7 @@ class RequestStatusTableViewController: UITableViewController {
             
         }
         
-        if (x==3){
+        if (x==3){ //in case of confirmed
             
             if (indexPath.row==4 || indexPath.row==5 || indexPath.row==6 || indexPath.row==7 || indexPath.row==8 || indexPath.row==9 || indexPath.row==10 || indexPath.row==11 || indexPath.row==12 ){
                              return 0
@@ -165,7 +178,7 @@ class RequestStatusTableViewController: UITableViewController {
         }
         
         
-        if (x==5){
+        if (x==5){ // in case of refusing
                    
             if (indexPath.row==2 || indexPath.row==3 || indexPath.row==6 || indexPath.row==7 || indexPath.row==8 || indexPath.row==9 || indexPath.row==10 || indexPath.row==11 || indexPath.row==12 || indexPath.row==13){
                                     return 0
@@ -229,7 +242,6 @@ class RequestStatusTableViewController: UITableViewController {
                 return testTextArray.count
        
 
-     
     }
 
     }
