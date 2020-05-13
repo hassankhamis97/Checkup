@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031046AE246C8F77000372BD /* FilterLabTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031046AD246C8F77000372BD /* FilterLabTableView.swift */; };
+		0335FAF8246A08C600CE0863 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0335FAF7246A08C600CE0863 /* Home.storyboard */; };
+		0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */; };
 		0358339E246953FD008DD8C2 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358339D246953FD008DD8C2 /* UIButtonExtension.swift */; };
+		03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */; };
+		03F6C7F9246B891800E89178 /* LabDescTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */; };
 		03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F8346E2468990B000155A4 /* FilterTableViewController.swift */; };
 		03F834712468D8D9000155A4 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F834702468D8D9000155A4 /* RadioButton.swift */; };
 		0F69C382A23AE66CCD5E2C01 /* Pods_Checkup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FF798CDDF112788FABCBE4 /* Pods_Checkup.framework */; };
@@ -97,7 +102,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031046AD246C8F77000372BD /* FilterLabTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLabTableView.swift; sourceTree = "<group>"; };
+		0335FAF7246A08C600CE0863 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		0358339D246953FD008DD8C2 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsCollectionViewCell.swift; sourceTree = "<group>"; };
+		03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescTableViewController.swift; sourceTree = "<group>"; };
 		03F8346E2468990B000155A4 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		03F834702468D8D9000155A4 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		09FF798CDDF112788FABCBE4 /* Pods_Checkup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checkup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +213,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0335FAF9246A0B1A00CE0863 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */,
+				03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		03F6C7F7246B884200E89178 /* LabDescription */ = {
+			isa = PBXGroup;
+			children = (
+				03F6C7FE246B89E200E89178 /* Cells */,
+				03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */,
+				031046AD246C8F77000372BD /* FilterLabTableView.swift */,
+			);
+			name = LabDescription;
+			path = Home/LabDescription;
+			sourceTree = "<group>";
+		};
+		03F6C7FE246B89E200E89178 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				03F6C7FF246B89F300E89178 /* LabBranch */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		03F6C7FF246B89F300E89178 /* LabBranch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LabBranch;
+			sourceTree = "<group>";
+		};
 		4742970CC3632E7C0FF88AFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +352,7 @@
 				CC064E2C245B02D60046E67F /* NewRequestScreen.storyboard */,
 				CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */,
 				4EE9F930246971E400BB4A39 /* Chat.storyboard */,
+				0335FAF7246A08C600CE0863 /* Home.storyboard */,
 				CCCDA04A246ACA70005549EA /* Setting.storyboard */,
 			);
 			path = StoryBoards;
@@ -315,6 +361,8 @@
 		4E22F932243E73A90090693C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				03F6C7F7246B884200E89178 /* LabDescription */,
+				0335FAF9246A0B1A00CE0863 /* Home */,
 				4EE9F93224697C7200BB4A39 /* Chat */,
 				4E432F0A2464F6EF00D1CACA /* History */,
 				4EE56971245306F600688B65 /* Main */,
@@ -723,6 +771,7 @@
 				4EE7EA30246AF2B800BF434F /* DateTableViewCell.xib in Resources */,
 				CC064E2D245B02D60046E67F /* NewRequestScreen.storyboard in Resources */,
 				CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */,
+				0335FAF8246A08C600CE0863 /* Home.storyboard in Resources */,
 				CC7092D92458C131003E8968 /* signUp.storyboard in Resources */,
 				4EAA2AD8246CABC70050B0AB /* GoogleService-Info.plist in Resources */,
 				4EE9F9462469A47F00BB4A39 /* RecieverCellTableViewCell.xib in Resources */,
@@ -809,6 +858,7 @@
 				4EE569732453070C00688B65 /* MainViewController.swift in Sources */,
 				4E432F142464F6EF00D1CACA /* HistoryTableViewController.swift in Sources */,
 				4E432F162464F6EF00D1CACA /* PdfResultViewController.swift in Sources */,
+				0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */,
 				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
 				4EE9F93424697CF300BB4A39 /* MessagingChatViewController.swift in Sources */,
 				4E0E3505246BB88400814696 /* MessageNotificationLabel.swift in Sources */,
@@ -841,6 +891,9 @@
 				0358339E246953FD008DD8C2 /* UIButtonExtension.swift in Sources */,
 				CCCDA047246A95B5005549EA /* ReqPopUpLocationViewController.swift in Sources */,
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
+				03F6C7F9246B891800E89178 /* LabDescTableViewController.swift in Sources */,
+				03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */,
+				031046AE246C8F77000372BD /* FilterLabTableView.swift in Sources */,
 				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
 				CCABFAEF246B4B1900CF7518 /* DateStruct.swift in Sources */,
 				4E0E3502246BA11B00814696 /* ConvertTimeStampToDate.swift in Sources */,
