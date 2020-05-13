@@ -59,6 +59,14 @@
                                     <segue destination="yEY-bu-TzL" kind="push" id="6ax-Cy-WmW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fum-vb-TlX">
+                                <rect key="frame" x="184" y="698" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chat"/>
+                                <connections>
+                                    <segue destination="QC9-dE-dGj" kind="push" id="QCm-yi-PJJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -68,6 +76,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="614.49275362318849" y="-1.3392857142857142"/>
+        </scene>
+        <!--mainChatSVC-->
+        <scene sceneID="44O-38-qlO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="mainChatSVC" id="QC9-dE-dGj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="P7K-h2-6x9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7O-fP-j4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145" y="194"/>
         </scene>
         <!--HistorySVC-->
         <scene sceneID="qeh-hG-3WA">
@@ -129,6 +147,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.20976515487547381" green="0.22238408956170899" blue="0.39813792238527901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

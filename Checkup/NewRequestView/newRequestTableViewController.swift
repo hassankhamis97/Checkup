@@ -16,10 +16,16 @@ import SkyFloatingLabelTextField
 class newRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,fillDataCells {
     
     @IBOutlet weak var myCell: UITableViewCell!
-    @IBOutlet weak var uploadImag: UIButton!
+//    @IBOutlet weak var uploadImag: UIButton!
     @IBOutlet weak var collectionView:UICollectionView!
     @IBOutlet weak var enterTestTextField: SkyFloatingLabelTextFieldWithIcon!
+    
     @IBOutlet weak var slideShow: ImageSlideshow!
+    
+    @IBOutlet weak var deleteImageBtn: UIButton!
+    @IBOutlet weak var uploadImage: UIButton!
+    
+   
     
     @IBOutlet weak var dateTextField: SkyFloatingLabelTextFieldWithIcon!
     
@@ -29,7 +35,10 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
     var inputImageArray=[InputSource]()
     var imagePicker: ImagePicker!
     let datePicker=UIDatePicker()
+    let timePicker=UIDatePicker()
     var ind:Int!
+    var x=1
+    var y=1
     
     
     override func viewDidLoad() {
@@ -37,6 +46,12 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
     self.imagePicker = ImagePicker(presentationController: self, delegate: self)
     
     createDatePicker()
+    createTimePicker()
+    
+        
+        uploadImage.layer.cornerRadius=uploadImage.frame.width/2
+        
+        deleteImageBtn.layer.cornerRadius=deleteImageBtn.frame.width/2
     }
     
     
@@ -50,23 +65,24 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
     override func viewDidAppear(_ animated: Bool) {
         
         
-        //            slideShow.slideshowInterval = 5.0
+              
         slideShow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
-        slideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
+//        slideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
         
        
-        pageControl.currentPageIndicatorTintColor = UIColor.lightGray
-        pageControl.pageIndicatorTintColor = UIColor.black
+        pageControl.currentPageIndicatorTintColor = UIColor.black
+        pageControl.pageIndicatorTintColor = UIColor.gray
         slideShow.pageIndicator = pageControl
         
         slideShow.activityIndicator = DefaultActivityIndicator()
         slideShow.delegate = self
+        slideShow.contentScaleMode = .scaleToFill
         
         if (inputImageArray.count==0){
             
             slideShow.setImageInputs([
-                ImageSource(image: UIImage(named: "default")!),
-                ImageSource(image: UIImage(named: "default")!),
+                ImageSource(image: UIImage(named: "rosheta")!),
+                ImageSource(image: UIImage(named: "new rosheta")!),
             ])
             
         }
@@ -88,7 +104,41 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
                              heightForRowAt indexPath: IndexPath) -> CGFloat {
 
 
-        if indexPath.row == 0 {
+        
+        
+        if (x%2==0){ // for normal request
+                       
+                       if (indexPath.row==2 || indexPath.row==3 || indexPath.row==4  ){
+                                        return 70
+                                    }
+                             
+                             if indexPath.row==0{
+                                 return 322
+                             }
+                             
+            if indexPath.row == 1 {
+
+                       if(testTexts.isEmpty)
+                       {
+                           return 0
+                       }
+                       else{
+                            return 82
+                       }
+                    }
+            
+            
+                             
+                             if (indexPath.row==5||indexPath.row==6){
+                                        return 0
+                                    }
+                         if indexPath.row==7{
+                           return 90
+                               }
+                            
+               }
+             
+        else if indexPath.row == 0 {
             return 322
         }
 
@@ -103,11 +153,34 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
             }
          }
 
-        if (indexPath.row == 2||indexPath.row == 3||indexPath.row==4||indexPath.row==5||indexPath.row==6){
+        if (indexPath.row == 2||indexPath.row == 3||indexPath.row==4){
 
             return 70
         }
-
+        
+       
+      if indexPath.row == 7{
+            return 90
+        }
+        if indexPath.row == 5{// FILLED ADRESS
+            if(y==1)
+            {
+              return 0
+            }
+            else{
+               return 70
+            }
+        }
+        
+        if indexPath.row==6{// FILLED ADRESS
+                          if(y==1)
+                          {
+                            return 70
+                          }
+                          else{
+                             return 0
+                          }
+        }
          return tableView.rowHeight
      }
     
@@ -137,42 +210,54 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
            
        }
     
-    @IBAction func addImageBtn(_ sender: Any) {
+    
+
+    
+    @IBAction func deleteImageBtn(_ sender: Any) {
         
         
+        if(inputImageArray.isEmpty){
+            print("no data")
+        }
+        else{
+            inputImageArray.remove(at: ind)
+                                   slideShow.setImageInputs(inputImageArray)
+                                   tableView.reloadData()
+        }
+       
+        
+    }
+    
+    
+    
+    @IBAction func uploadImageBtn(_ sender: Any) {
         
         let alert = UIAlertController(title: "Title", message: "Please Select an Option", preferredStyle: .actionSheet)
 
-           alert.addAction(UIAlertAction(title: "Take Photo", style: .default , handler:{ (UIAlertAction)in
-               print("User click Approve button")
-            
-            self.imagePicker.present(from: sender as! UIView)
-                   
-           }))
+                 alert.addAction(UIAlertAction(title: "Take Photo", style: .default , handler:{ (UIAlertAction)in
+                     print("User click Approve button")
+                  
+                  self.imagePicker.present(from: sender as! UIView)
+                         
+                 }))
 
-           alert.addAction(UIAlertAction(title: "Choose Multiple Images ", style: .default , handler:{ (UIAlertAction)in
-            let imagePicker = OpalImagePickerController()
-            imagePicker.imagePickerDelegate = self
-            self.present(imagePicker, animated: true, completion: nil)
-           }))
+                 alert.addAction(UIAlertAction(title: "Choose Multiple Images ", style: .default , handler:{ (UIAlertAction)in
+                  let imagePicker = OpalImagePickerController()
+                  imagePicker.imagePickerDelegate = self
+                  self.present(imagePicker, animated: true, completion: nil)
+                 }))
 
-           alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:{ (UIAlertAction)in
-               print("User click Dismiss button")
-           }))
+                 alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:{ (UIAlertAction)in
+                     print("User click Dismiss button")
+                 }))
 
-           self.present(alert, animated: true, completion: {
-               print("completion block")
-           })
-
+                 self.present(alert, animated: true, completion: {
+                     print("completion block")
+                 })
     }
+
     
-    @IBAction func dddddBtn(_ sender: Any) {
-        
-        inputImageArray.remove(at: ind)
-        slideShow.setImageInputs(inputImageArray)
-        tableView.reloadData()
-        
-    }
+    
     
     func imagePicker(_ picker: OpalImagePickerController, didFinishPickingImages images: [UIImage]){
         for img in images{
@@ -181,6 +266,7 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
             var x=ImageSource(image: img)
                        
             inputImageArray.append(x)
+            ind=0
             
         }
         
@@ -213,13 +299,86 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
     @objc func donePressed(){
            
            
-           let formatter=DateFormatter()
-           formatter.dateStyle = .medium
+         let formatter=DateFormatter()
+        formatter.dateStyle = .medium
            formatter.timeStyle = .none
            dateTextField.text=formatter.string(from: datePicker.date)
            self.view.endEditing(true)
        }
 
+    
+    
+    func createTimePicker(){
+         
+         let toolbar=UIToolbar()
+         toolbar.sizeToFit()
+         let doneBtn=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action:#selector(doneTimePressed))
+         toolbar.setItems(([doneBtn]), animated: true)
+         timeTextField.inputAccessoryView=toolbar
+         timeTextField.inputView=timePicker
+         timePicker.datePickerMode = .time
+         
+     }
+    
+    @objc func doneTimePressed(){
+              
+              
+              let formatter=DateFormatter()
+              formatter.dateStyle = .none
+              formatter.timeStyle = .short
+             timeTextField.text=formatter.string(from: timePicker.date)
+              self.view.endEditing(true)
+          }
+    
+    
+    
+    
+    
+    @IBAction func enterLocationBtn(_ sender: Any) {
+        
+        
+        
+        let alert = UIAlertController(title: "Location", message: "Please Select an Option", preferredStyle: .actionSheet)
+
+                        alert.addAction(UIAlertAction(title: "Use your saved location", style: .default , handler:{ (UIAlertAction)in
+                            print("User click Approve button")
+                         
+                            self.y=2
+                            self.tableView.reloadData()
+
+                        }))
+
+                        alert.addAction(UIAlertAction(title: "Add new location  ", style: .default , handler:{ (UIAlertAction)in
+                            
+                            let vc = self.storyboard!.instantiateViewController(identifier:"ReqlocationSVC") as! ReqLocationTableViewController
+                        
+                        self.navigationController?.pushViewController(vc, animated: true)
+                            
+                       
+                        }))
+
+                        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:{ (UIAlertAction)in
+                            print("User click Dismiss button")
+                        }))
+
+                                  
+        self.tableView.reloadData()
+        
+                        self.present(alert, animated: true, completion: {
+                            print("completion block")
+                        })
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
 }
 
 
