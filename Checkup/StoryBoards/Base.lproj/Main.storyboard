@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="614.49275362318849" y="-1.3392857142857142"/>
         </scene>
-        <!--messagingChatSVC-->
+        <!--mainChatSVC-->
         <scene sceneID="44O-38-qlO">
             <objects>
-                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="messagingChatSVC" id="QC9-dE-dGj" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="mainChatSVC" id="QC9-dE-dGj" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="P7K-h2-6x9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7O-fP-j4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

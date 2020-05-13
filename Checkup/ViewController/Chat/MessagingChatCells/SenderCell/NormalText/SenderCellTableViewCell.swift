@@ -16,6 +16,13 @@ class SenderCellTableViewCell: UITableViewCell {
         // Initialization code
         myLabel.layer.cornerRadius=10
         myLabel.layer.borderWidth=2
+//        myLabel.textContainerInset = UIEdgeInsetsMake(10, 0, 10, 0);
+        
+        if #available(iOS 13.0, *) {
+            myLabel.layer.borderColor = CGColor.init(srgbRed: 58, green: 61, blue: 107, alpha: 255)
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
