@@ -60,7 +60,7 @@ class RequestStatusTableViewController: UITableViewController {
         precautionsTextArea.layer.borderColor=UIColor.darkGray.cgColor
         
         slideShow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
-        slideShow.contentScaleMode = UIViewContentMode.scaleAspectFill
+          slideShow.contentScaleMode = .scaleToFill
         
         
         pageControl.currentPageIndicatorTintColor = UIColor.black

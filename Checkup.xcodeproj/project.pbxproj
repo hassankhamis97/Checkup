@@ -58,10 +58,17 @@
 		CC7092D92458C131003E8968 /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7092D82458C131003E8968 /* signUp.storyboard */; };
 		CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */; };
 		CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */; };
-		CC840A14245F840700C12076 /* NormalRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC840A13245F840700C12076 /* NormalRequestTableViewController.swift */; };
 		CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */; };
 		CC8A1046245E087C007856BF /* fillCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1045245E087C007856BF /* fillCollectionView.swift */; };
 		CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCB1D5C24563FED00303C22 /* ImagePicker.swift */; };
+		CCCDA045246A94F5005549EA /* ReqLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCDA044246A94F5005549EA /* ReqLocationTableViewController.swift */; };
+		CCCDA047246A95B5005549EA /* ReqPopUpLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCDA046246A95B5005549EA /* ReqPopUpLocationViewController.swift */; };
+		CCCDA049246A95D9005549EA /* PopUpLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCDA048246A95D9005549EA /* PopUpLocationViewController.swift */; };
+		CCCDA04B246ACA70005549EA /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCDA04A246ACA70005549EA /* Setting.storyboard */; };
+		CCCDA04E246AD130005549EA /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCDA04D246AD130005549EA /* SettingTableViewController.swift */; };
+		CCCDA050246AE5D5005549EA /* PassWordDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCDA04F246AE5D5005549EA /* PassWordDetailsTableViewController.swift */; };
+		CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCDA051246AF81F005549EA /* RequestsTableViewController.swift */; };
+		CCD0BAD7246A035C007CF3EE /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD0BAD6246A035C007CF3EE /* LocationTableViewController.swift */; };
 		CCDEF4712462DCF500ECBBEB /* RequestTStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */; };
 		CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */; };
 		CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE4D2B12457064600EB8ADC /* Profile.storyboard */; };
@@ -144,10 +151,17 @@
 		CC7092D82458C131003E8968 /* signUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = signUp.storyboard; sourceTree = "<group>"; };
 		CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		CC840A13245F840700C12076 /* NormalRequestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalRequestTableViewController.swift; sourceTree = "<group>"; };
 		CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamingGroupViewController.swift; sourceTree = "<group>"; };
 		CC8A1045245E087C007856BF /* fillCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fillCollectionView.swift; sourceTree = "<group>"; };
 		CCCB1D5C24563FED00303C22 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CCCDA044246A94F5005549EA /* ReqLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqLocationTableViewController.swift; sourceTree = "<group>"; };
+		CCCDA046246A95B5005549EA /* ReqPopUpLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqPopUpLocationViewController.swift; sourceTree = "<group>"; };
+		CCCDA048246A95D9005549EA /* PopUpLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpLocationViewController.swift; sourceTree = "<group>"; };
+		CCCDA04A246ACA70005549EA /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		CCCDA04D246AD130005549EA /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		CCCDA04F246AE5D5005549EA /* PassWordDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassWordDetailsTableViewController.swift; sourceTree = "<group>"; };
+		CCCDA051246AF81F005549EA /* RequestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTableViewController.swift; sourceTree = "<group>"; };
+		CCD0BAD6246A035C007CF3EE /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RequestTStatus.storyboard; sourceTree = "<group>"; };
 		CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatusTableViewController.swift; sourceTree = "<group>"; };
 		CCE4D2B12457064600EB8ADC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -234,6 +248,7 @@
 			children = (
 				4EBBC944246B5C9500C7978D /* POJOs */,
 				4EE7EA31246B01EC00BF434F /* Keyboard */,
+				CCCDA04C246AD107005549EA /* SettingView */,
 				4EE9F93724699B7700BB4A39 /* Extensions */,
 				CCDEF4722462DE6C00ECBBEB /* Request Status */,
 				CC8A1044245E0844007856BF /* Contract */,
@@ -281,6 +296,7 @@
 				CC064E2C245B02D60046E67F /* NewRequestScreen.storyboard */,
 				CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */,
 				4EE9F930246971E400BB4A39 /* Chat.storyboard */,
+				CCCDA04A246ACA70005549EA /* Setting.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -511,7 +527,8 @@
 				CC064E2F245B03360046E67F /* newRequestTableViewController.swift */,
 				CC064E31245B05FA0046E67F /* SliderCell.swift */,
 				CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */,
-				CC840A13245F840700C12076 /* NormalRequestTableViewController.swift */,
+				CCCDA044246A94F5005549EA /* ReqLocationTableViewController.swift */,
+				CCCDA046246A95B5005549EA /* ReqPopUpLocationViewController.swift */,
 			);
 			path = NewRequestView;
 			sourceTree = "<group>";
@@ -533,6 +550,15 @@
 			path = Contract;
 			sourceTree = "<group>";
 		};
+		CCCDA04C246AD107005549EA /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				CCCDA04D246AD130005549EA /* SettingTableViewController.swift */,
+				CCCDA04F246AE5D5005549EA /* PassWordDetailsTableViewController.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
 		CCDEF4722462DE6C00ECBBEB /* Request Status */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +566,7 @@
 				CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */,
 				CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */,
 				CC5DFD0D2468C242003B9F18 /* PopUpCollectionViewCell.swift */,
+				CCCDA051246AF81F005549EA /* RequestsTableViewController.swift */,
 			);
 			path = "Request Status";
 			sourceTree = "<group>";
@@ -549,6 +576,8 @@
 			children = (
 				CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */,
 				CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */,
+				CCD0BAD6246A035C007CF3EE /* LocationTableViewController.swift */,
+				CCCDA048246A95D9005549EA /* PopUpLocationViewController.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -671,6 +700,7 @@
 				CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */,
 				CC7092D92458C131003E8968 /* signUp.storyboard in Resources */,
 				4EE9F9462469A47F00BB4A39 /* RecieverCellTableViewCell.xib in Resources */,
+				CCCDA04B246ACA70005549EA /* Setting.storyboard in Resources */,
 				4EE9F94124699E3200BB4A39 /* SenderCellTableViewCell.xib in Resources */,
 				4E432F152464F6EF00D1CACA /* pdf.pdf in Resources */,
 				4E22F904243E6E6C0090693C /* Main.storyboard in Resources */,
@@ -748,10 +778,12 @@
 				CC5DFD0E2468C242003B9F18 /* PopUpCollectionViewCell.swift in Sources */,
 				4E22F8FF243E6E6C0090693C /* SceneDelegate.swift in Sources */,
 				4EE7EA34246B023000BF434F /* KeyboardLayoutConstraint.swift in Sources */,
+				CCCDA045246A94F5005549EA /* ReqLocationTableViewController.swift in Sources */,
 				4E22F936243E743C0090693C /* SignupViewController.swift in Sources */,
 				4EE569732453070C00688B65 /* MainViewController.swift in Sources */,
 				4E432F142464F6EF00D1CACA /* HistoryTableViewController.swift in Sources */,
 				4E432F162464F6EF00D1CACA /* PdfResultViewController.swift in Sources */,
+				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
 				4EE9F93424697CF300BB4A39 /* MessagingChatViewController.swift in Sources */,
 				CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */,
 				CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */,
@@ -759,16 +791,20 @@
 				4EBBC940246B595000C7978D /* MainChatViewController.swift in Sources */,
 				4EE7EA2A246AD3B900BF434F /* SenderImageTableViewCell.swift in Sources */,
 				4EE9F94024699E3200BB4A39 /* SenderCellTableViewCell.swift in Sources */,
+				CCCDA04E246AD130005549EA /* SettingTableViewController.swift in Sources */,
 				4EE9F9452469A47F00BB4A39 /* RecieverCellTableViewCell.swift in Sources */,
 				CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */,
+				CCCDA049246A95D9005549EA /* PopUpLocationViewController.swift in Sources */,
 				CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */,
 				4EDADEC9246A1FF20069B0E5 /* RecievedImageTableViewCell.swift in Sources */,
+				CCD0BAD7246A035C007CF3EE /* LocationTableViewController.swift in Sources */,
 				CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */,
 				4EE7EA2F246AF2B800BF434F /* DateTableViewCell.swift in Sources */,
 				CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */,
 				4EE9F9492469B70A00BB4A39 /* MessageLabel.swift in Sources */,
 				CC840A14245F840700C12076 /* NormalRequestTableViewController.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
+				CCCDA050246AE5D5005549EA /* PassWordDetailsTableViewController.swift in Sources */,
 				CC8A1046245E087C007856BF /* fillCollectionView.swift in Sources */,
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
 				CC064E30245B03360046E67F /* newRequestTableViewController.swift in Sources */,
@@ -777,6 +813,7 @@
 				4EBBC946246B5D3900C7978D /* PearedUserData.swift in Sources */,
 				CC064E32245B05FA0046E67F /* SliderCell.swift in Sources */,
 				0358339E246953FD008DD8C2 /* UIButtonExtension.swift in Sources */,
+				CCCDA047246A95B5005549EA /* ReqPopUpLocationViewController.swift in Sources */,
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
 				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
 				4E0E3502246BA11B00814696 /* ConvertTimeStampToDate.swift in Sources */,
@@ -956,7 +993,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TRNKZ229R6;
+				DEVELOPMENT_TEAM = F4R4G95VGA;
 				INFOPLIST_FILE = Checkup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -976,7 +1013,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TRNKZ229R6;
+				DEVELOPMENT_TEAM = F4R4G95VGA;
 				INFOPLIST_FILE = Checkup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
