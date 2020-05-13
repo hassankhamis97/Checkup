@@ -11,64 +11,58 @@ import TransitionButton
 import SkyFloatingLabelTextField
 import UIColor_Hex_Swift
 class LoginTableViewController: UITableViewController,UITextFieldDelegate {
-
+    
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var emailTextView: SkyFloatingLabelTextFieldWithIcon!
     
-         @IBOutlet weak var LoginBtn: TransitionButton!
     @IBOutlet weak var passWordTextView: SkyFloatingLabelTextFieldWithIcon!
     
+    @IBOutlet weak var loginBtnOutlet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        LoginBtn.layer.cornerRadius=30
-        LoginBtn.layer.borderColor=UIColor.white.cgColor
-        LoginBtn.layer.borderWidth=2
-
+        
+        loginBtnOutlet.layer.cornerRadius=30
+        loginBtnOutlet.layer.borderColor=UIColor.white.cgColor
+        loginBtnOutlet.layer.borderWidth=2
+        
+        
         // to enable return key
         emailTextView.delegate=self
-}
-    
-    
-    // one function to enable dimiss key board
+        passWordTextView.delegate=self
+        //
+        
+        // to enable hide key board when touching any where
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
+        
+    }
+    //  function to enable dimiss key board(Return key)
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
     }
-
-  
-    @IBAction func LoginBtn(_ sender: Any) {
-        
-        
-        LoginBtn.startAnimation()
-        
-        let qualityOfServiceClass = DispatchQoS.QoSClass.background
-        let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
-        backgroundQueue.async(execute: {
-            
-            sleep(3) // 3: Do your networking task or background work here.
-            
-            DispatchQueue.main.async(execute: { () -> Void in
-                
-                self.LoginBtn.stopAnimation(animationStyle: .expand, completion: {
-                    
-                    
-                    if #available(iOS 13.0, *) {
-                        let signupRVC = self.storyboard!.instantiateViewController(identifier:"signupSVCStoryBoard") as! SignupTableViewController
-                        
-                        self.navigationController?.pushViewController(signupRVC, animated: true)
-                    } else {
-                        // Fallback on earlier versions
-                    }
-                    
-                    
-                })
-                
-            })
-        })
+    
+    
+    // function to enable dimiss key board(touch any where )
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
+    
+    
+    @IBAction func loginBtn(_ sender: Any) {
+        
+        //  Login code
+        
+    }
+    
+    
+    
+    
+    
+    
 }
-    
 
-    
+

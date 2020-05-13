@@ -12,8 +12,8 @@ class RequestsTableViewController: UITableViewController {
     
     var labNames = ["El-Mokhtabar" , "Alpha","Alpha" ]
     var labImages = ["mokhtabar" , "alpha","alpha" ]
-    var labDate = ["Apr 5,2020","june 1,2020","May 14,2020"]
-    var dateDescingly : [String]!
+    var labDate = ["Apr 5, 2020","jun 1, 2020","May 14, 2020"]
+    var dateDescingly : [HistoryObject]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ class RequestsTableViewController: UITableViewController {
              cell.labImageOutlet.layer.cornerRadius = cell.labImageOutlet.frame.height/2
               
               cell.labNameOutlet.text = self.labNames[indexPath.row]
-          cell.labDateOutlet.text = dateDescingly[indexPath.row]
+        cell.labDateOutlet.text = dateDescingly[indexPath.row].dateString
       
         return cell
     }
@@ -59,36 +59,43 @@ class RequestsTableViewController: UITableViewController {
           return 100
         
       }
-      func formatDate(myArr : [String]) -> [String] {
+      func formatDate(myArr : [String]) -> [HistoryObject] {
              var convertedArray : [String] = []
-             var dateForrmatter = DateFormatter()
-             dateForrmatter.dateFormat = "MMMM d,yyyy"
-             
-             for myDate in myArr{
-                 let date = dateForrmatter.date(from: myDate)
-                 if let date = date{
-                     var newDate = dateForrmatter.string(from: date)
-                     convertedArray.append(newDate)
-                 }
-             }
-             print(convertedArray)
-             
-             var dateDescindingly = convertedArray.sorted(by : {$0.compare($1) == .orderedDescending})
-             print("desc")
-             print(dateDescindingly)
-             
+             var dateFormatter = DateFormatter()
+                  dateFormatter.dateFormat = "MM dd, yyyy"// yyyy-MM-dd"
+        
+        
+        let historyArray: [HistoryObject] = myArr.map {
+            let value = Int(arc4random_uniform(1000))
+            return HistoryObject(dateString: $0, value: value)
+        }
 
-             return dateDescindingly
+        print("\n-----> Before sorting <-----")
+        historyArray.forEach { print($0) }
+
+        //Create an array of the `Dates` for each HistoryObject
+        let historyDates: [Date] = historyArray.map { dateFormatter.date(from: $0.dateString)!
+        }
+
+        //Combine the array of `Dates` and the array of `HistoryObjects` into an array of tuples
+        let historyTuples = zip(historyArray, historyDates)
+
+        //Sort the array of tuples and then map back to an array of type [HistoryObject]
+        let sortedHistoryObjects = historyTuples.sorted { $0.1 > $1.1}
+            .map {$0.0}
+
+        print("\n-----> After sorting <-----")
+        sortedHistoryObjects.forEach { print($0) }
+        
+    return sortedHistoryObjects
+
          }
            
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
          return 10
      }
 
-    
-    
-    
-    
+ 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        if #available(iOS 13.0, *) {
          let vc = storyboard?.instantiateViewController(identifier: "reqStatus") as! RequestStatusTableViewController
@@ -98,45 +105,7 @@ class RequestsTableViewController: UITableViewController {
        }
            
        }
-    
-    
-    
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+

@@ -10,11 +10,18 @@ import UIKit
 
 class RecieverCellTableViewCell: UITableViewCell {
 
+    @IBOutlet var recievedPersonImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        layer.cornerRadius=10
-        layer.borderWidth=2
+        recievedPersonImage.layer.cornerRadius=recievedPersonImage.frame.width / 2
+        recieverLabel.layer.cornerRadius=10
+        recieverLabel.layer.borderWidth=2
+        if #available(iOS 13.0, *) {
+            recieverLabel.layer.borderColor = CGColor.init(srgbRed: 58, green: 61, blue: 107, alpha: 255)
+        } else {
+            // Fallback on earlier versions
+        }
 //        layer.borderColor=Uicolor.white.cgcolor
     }
 

@@ -65,9 +65,9 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
            
            
            let formatter=DateFormatter()
-           formatter.dateStyle = .medium
+//        formatter.dateStyle =
            formatter.timeStyle = .none
-           birthDateTextField.text=formatter.string(from: datePicker.date)
+        birthDateTextField.text=formatter.string(from: datePicker.date)
            self.view.endEditing(true)
        }
 
