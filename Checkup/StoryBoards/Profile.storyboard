@@ -50,7 +50,6 @@
                                                     <state key="normal" backgroundImage="pencil" catalog="system"/>
                                                     <connections>
                                                         <action selector="editProfileBtn:" destination="pMs-hI-F8d" eventType="touchUpInside" id="JUz-UK-m0I"/>
-                                                        <segue destination="xfM-Jr-M9W" kind="push" id="i3Z-X2-pm0"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgP-rk-zD5">
@@ -1021,7 +1020,7 @@
             <objects>
                 <tableViewController id="Bv0-vd-sN4" customClass="LocationTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aqV-WP-rcs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
