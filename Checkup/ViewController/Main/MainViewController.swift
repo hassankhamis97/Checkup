@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class MainViewController: UIViewController {
    @available(iOS 13.0, *)
     @IBAction func gotoSignup(_ sender: Any) {
@@ -36,7 +36,20 @@ class MainViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        var ref: DatabaseReference!
+//        ref = Database.database().reference()
+//
+//        ref.child("Tests").child("0G9djW7SzMXGTiXKdGkiYuiTY3g1").observeSingleEvent(of: .value, with: { (snapshot) in
+//          // Get user value
+//          let value = snapshot.value as? NSDictionary
+//
+//          let username = value?["-M5j2KV4Wz74yZfJY1Dr"] as? NSDictionary
+//          let id = username?["description"] as? String ?? ""
+//print(id)
+          // ...
+//          }) { (error) in
+//            print(error.localizedDescription)
+//        }
         // Do any additional setup after loading the view.
     }
     
