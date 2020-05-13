@@ -72,6 +72,7 @@ class FilterTableViewController: UITableViewController {
             sender.setImage(UIImage(named: "checked"), for: .normal)
             sender.imageView?.contentMode = .scaleToFill
             checkedThree = true
+            
             self.tableView.reloadData()
             }else{
             
@@ -178,3 +179,4 @@ class FilterTableViewController: UITableViewController {
       }
 
 }
+
