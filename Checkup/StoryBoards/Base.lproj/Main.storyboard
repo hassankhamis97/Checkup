@@ -67,14 +67,7 @@
                                     <segue destination="QC9-dE-dGj" kind="push" id="QCm-yi-PJJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etS-ef-BB1">
-                                <rect key="frame" x="157" y="484" width="127" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Employee"/>
-                                <connections>
-                                    <action selector="moveToUsers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHh-Ok-Vrl"/>
-                                    <segue destination="5hs-Bx-fyr" kind="push" id="D6V-hD-xP9"/>
+                            
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6J8-2L-Re9">
                                 <rect key="frame" x="317" y="602" width="41" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
