@@ -67,6 +67,16 @@
                                     <segue destination="QC9-dE-dGj" kind="push" id="QCm-yi-PJJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etS-ef-BB1">
+                                <rect key="frame" x="157" y="484" width="127" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Employee"/>
+                                <connections>
+                                    <action selector="moveToUsers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHh-Ok-Vrl"/>
+                                    <segue destination="5hs-Bx-fyr" kind="push" id="D6V-hD-xP9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -106,6 +116,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDd-Cs-cM4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="405" y="380"/>
+        </scene>
+        <!--userTVSB-->
+        <scene sceneID="9YF-K3-xv0">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="userRSB" storyboardName="Employee" referencedIdentifier="userTVSB" id="5hs-Bx-fyr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Jsi-L7-JVz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTQ-Fv-gUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149" y="-141"/>
         </scene>
         <!--loginSVC-->
         <scene sceneID="lBT-6z-OCP">

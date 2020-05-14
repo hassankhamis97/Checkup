@@ -1274,7 +1274,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIA-7X-1Ca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2388" y="25"/>
+            <point key="canvasLocation" x="2381" y="20"/>
         </scene>
         <!--Pop Up Location View Controller-->
         <scene sceneID="SfL-hu-8Ja">
