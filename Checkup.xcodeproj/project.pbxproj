@@ -58,6 +58,8 @@
 		CC064E2D245B02D60046E67F /* NewRequestScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC064E2C245B02D60046E67F /* NewRequestScreen.storyboard */; };
 		CC064E30245B03360046E67F /* newRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC064E2F245B03360046E67F /* newRequestTableViewController.swift */; };
 		CC064E32245B05FA0046E67F /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC064E31245B05FA0046E67F /* SliderCell.swift */; };
+		CC1A8770246D60810020C403 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1A876F246D60810020C403 /* More.storyboard */; };
+		CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A8772246D61020020C403 /* MoreTableViewController.swift */; };
 		CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */; };
 		CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */; };
 		CC5DFD0C2468C22F003B9F18 /* PopUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */; };
@@ -159,6 +161,8 @@
 		CC064E2C245B02D60046E67F /* NewRequestScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewRequestScreen.storyboard; sourceTree = "<group>"; };
 		CC064E2F245B03360046E67F /* newRequestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newRequestTableViewController.swift; sourceTree = "<group>"; };
 		CC064E31245B05FA0046E67F /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		CC1A876F246D60810020C403 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		CC1A8772246D61020020C403 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
 		CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequstDetailsTableViewController.swift; sourceTree = "<group>"; };
 		CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpTableViewController.swift; sourceTree = "<group>"; };
@@ -354,6 +358,7 @@
 				4EE9F930246971E400BB4A39 /* Chat.storyboard */,
 				0335FAF7246A08C600CE0863 /* Home.storyboard */,
 				CCCDA04A246ACA70005549EA /* Setting.storyboard */,
+				CC1A876F246D60810020C403 /* More.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 		4E22F932243E73A90090693C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CC1A8771246D60DE0020C403 /* MoreView */,
 				03F6C7F7246B884200E89178 /* LabDescription */,
 				0335FAF9246A0B1A00CE0863 /* Home */,
 				4EE9F93224697C7200BB4A39 /* Chat */,
@@ -598,6 +604,14 @@
 			path = NewRequestView;
 			sourceTree = "<group>";
 		};
+		CC1A8771246D60DE0020C403 /* MoreView */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A8772246D61020020C403 /* MoreTableViewController.swift */,
+			);
+			path = MoreView;
+			sourceTree = "<group>";
+		};
 		CC79E5AA2455B43C00C8A166 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
@@ -777,6 +791,7 @@
 				4EE9F9462469A47F00BB4A39 /* RecieverCellTableViewCell.xib in Resources */,
 				CCCDA04B246ACA70005549EA /* Setting.storyboard in Resources */,
 				4EE9F94124699E3200BB4A39 /* SenderCellTableViewCell.xib in Resources */,
+				CC1A8770246D60810020C403 /* More.storyboard in Resources */,
 				4E432F152464F6EF00D1CACA /* pdf.pdf in Resources */,
 				4E22F904243E6E6C0090693C /* Main.storyboard in Resources */,
 				4E432F092464F6E100D1CACA /* History.storyboard in Resources */,
@@ -877,6 +892,7 @@
 				CCD0BAD7246A035C007CF3EE /* LocationTableViewController.swift in Sources */,
 				CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */,
 				4EE7EA2F246AF2B800BF434F /* DateTableViewCell.swift in Sources */,
+				CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */,
 				CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */,
 				4EE9F9492469B70A00BB4A39 /* MessageLabel.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
