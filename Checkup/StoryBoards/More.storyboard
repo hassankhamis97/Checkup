@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--More-->
+        <!--More Table View Controller-->
         <scene sceneID="ROD-hY-fsk">
             <objects>
                 <tableViewController storyboardIdentifier="moreSVC" id="0Ra-8F-6DQ" customClass="MoreTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,16 +126,14 @@
                             <outlet property="delegate" destination="0Ra-8F-6DQ" id="Lfl-6N-5NJ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="More" image="More_50px" selectedImage="More_50px" id="l78-xW-2cg">
-                        <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="VpU-6N-bK7"/>
                     <connections>
                         <outlet property="profileImg" destination="m1b-mO-Ttk" id="0C9-cB-ly9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DsB-MD-acC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000.0000000000001" y="-48.913043478260875"/>
+            <point key="canvasLocation" x="2814.4927536231885" y="-48.913043478260875"/>
         </scene>
         <!--profileSVC-->
         <scene sceneID="aOH-U6-oNu">
@@ -145,7 +143,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZD6-8v-pkR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478.985507246377" y="-79.076086956521749"/>
+            <point key="canvasLocation" x="3292.0289855072465" y="-79.076086956521749"/>
         </scene>
         <!--settingSVC-->
         <scene sceneID="bqa-7W-344">
@@ -153,30 +151,10 @@
                 <viewControllerPlaceholder storyboardIdentifier="settingSVCRef" storyboardName="Setting" referencedIdentifier="settingSVC" id="9YA-Ue-O12" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHh-DR-JmW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1484.057971014493" y="-4.0760869565217392"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="oYQ-kJ-mfH">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vxY-qE-ZEY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cld-aF-oe2">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="0Ra-8F-6DQ" kind="relationship" relationship="viewControllers" id="KzY-Zd-OO8"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OHp-SR-8hE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="-48.913043478260875"/>
+            <point key="canvasLocation" x="3298.5507246376815" y="-4.0760869565217392"/>
         </scene>
     </scenes>
     <resources>
-        <image name="More_50px" width="50" height="50"/>
         <image name="Settings_100px" width="100" height="100"/>
         <image name="Statistics_100px" width="100" height="100"/>
         <image name="handsome-young-businessman-shirt-eyeglasses_85574-6228" width="626" height="583"/>
