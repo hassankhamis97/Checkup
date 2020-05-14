@@ -6,13 +6,24 @@
 //  Copyright © 2020 Hassan Khamis. All rights reserved.
 //
 
+/*
+ Notes :
+ outlet from sign up button only , no action
+ 
+ */
+
+
 import UIKit
-import TransitionButton
 
 @available(iOS 13.0, *)
 @available(iOS 13.0, *)
 class SignupTableViewController: UITableViewController {
-    @IBOutlet weak var signUpBtn: TransitionButton!
+
+    
+    
+    
+    
+    @IBOutlet weak var signUpBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

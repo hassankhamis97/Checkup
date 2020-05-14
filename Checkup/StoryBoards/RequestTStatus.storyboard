@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Request Status Table View Controller-->
+        <!--Request Status-->
         <scene sceneID="dRe-6V-riW">
             <objects>
                 <tableViewController storyboardIdentifier="reqStatus" id="4Tf-z7-0ay" customClass="RequestStatusTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -818,7 +818,7 @@
                             <outlet property="delegate" destination="4Tf-z7-0ay" id="3NJ-l2-YKj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="We4-ts-Esx">
+                    <navigationItem key="navigationItem" title="Request Status" id="We4-ts-Esx">
                         <rightBarButtonItems>
                             <barButtonItem title="refuse" id="Tv6-sy-b54">
                                 <connections>
@@ -841,7 +841,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AeG-XP-Ntc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644.92753623188412" y="56.919642857142854"/>
+            <point key="canvasLocation" x="5195.652173913044" y="56.919642857142854"/>
         </scene>
         <!--Pop Up Table View Controller-->
         <scene sceneID="2r9-Wa-ytb">
@@ -1003,7 +1003,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEo-Q8-T9d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428.985507246377" y="56.919642857142854"/>
+            <point key="canvasLocation" x="5979.7101449275369" y="56.919642857142854"/>
         </scene>
         <!--Requst Details Table View Controller-->
         <scene sceneID="aHH-x2-XST">
@@ -1303,7 +1303,7 @@
             </objects>
             <point key="canvasLocation" x="1145" y="531"/>
         </scene>
-        <!--Requests Table View Controller-->
+        <!--Requests-->
         <scene sceneID="UE0-kw-JFg">
             <objects>
                 <tableViewController storyboardIdentifier="reqSVC" id="8cp-jf-iIo" customClass="RequestsTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -1312,42 +1312,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="165" id="OZH-Cu-KDn" customClass="HistoryTableViewCell" customModule="Checkup" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="165" id="dzn-vI-yUb" customClass="HistoryTableViewCell" customModule="Checkup" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="165"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OZH-Cu-KDn" id="Mom-Yv-Dak">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dzn-vI-yUb" id="HRV-Da-vUf">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zED-5e-REh">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wiP-Gf-Wwq">
                                             <rect key="frame" x="12" y="17" width="62" height="62"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="text" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHi-QE-zMH">
-                                            <rect key="frame" x="82" y="16" width="143" height="33"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-bU-HFM">
+                                            <rect key="frame" x="82" y="27" width="60" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="textColor" red="0.22352941179999999" green="0.25098039220000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="text" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmj-TH-0Oe">
-                                            <rect key="frame" x="82" y="49" width="198" height="39"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <color key="textColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JN8-kL-Zkh">
+                                            <rect key="frame" x="82" y="56" width="60" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartInsertDeleteType="no"/>
-                                        </textView>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="tintColor" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="labDateOutlet" destination="pHi-QE-zMH" id="eFM-Pp-TBZ"/>
-                                    <outlet property="labImageOutlet" destination="zED-5e-REh" id="fOV-j2-l08"/>
-                                    <outlet property="labNameOutlet" destination="vmj-TH-0Oe" id="L9E-YE-4Zm"/>
+                                    <outlet property="labDateOutlet" destination="NbB-bU-HFM" id="kSR-bo-C41"/>
+                                    <outlet property="labImageOutlet" destination="wiP-Gf-Wwq" id="QAA-w3-YVl"/>
+                                    <outlet property="labNameOutlet" destination="JN8-kL-Zkh" id="mYR-yO-YfH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1356,11 +1354,27 @@
                             <outlet property="delegate" destination="8cp-jf-iIo" id="ddI-Fe-hVv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jcs-eR-8Lb"/>
+                    <navigationItem key="navigationItem" title="Requests" id="jcs-eR-8Lb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="w99-uY-lXi">
+                            <connections>
+                                <segue destination="LKo-rI-l1U" kind="push" id="bV6-Xl-fl6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FV0-cx-kES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1242.0289855072465" y="10.714285714285714"/>
+            <point key="canvasLocation" x="3308.6956521739135" y="10.714285714285714"/>
+        </scene>
+        <!--newReqSVC-->
+        <scene sceneID="h6S-Mf-l9v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewRequestScreen" referencedIdentifier="newReqSVC" id="LKo-rI-l1U" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eVZ-JQ-Oj9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BEi-xC-OvN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="-393"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m9c-3s-Tc8">
@@ -1378,7 +1392,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8Y-7U-CYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-265.21739130434787" y="56.919642857142854"/>
+            <point key="canvasLocation" x="4285.507246376812" y="56.919642857142854"/>
         </scene>
     </scenes>
     <resources>

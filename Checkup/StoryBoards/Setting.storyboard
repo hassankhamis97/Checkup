@@ -87,26 +87,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="63" id="nT7-Yl-hRT">
-                                        <rect key="frame" x="0.0" y="217" width="414" height="63"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nT7-Yl-hRT" id="RdQ-BN-mdz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2V-bS-ea6">
-                                                    <rect key="frame" x="65" y="19" width="285" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="446" id="XGv-c5-yeV">
-                                        <rect key="frame" x="0.0" y="280" width="414" height="446"/>
+                                        <rect key="frame" x="0.0" y="217" width="414" height="446"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XGv-c5-yeV" id="vyw-0v-gXW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="446"/>
@@ -241,7 +223,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="fHb-kV-e4E">
                             <connections>
                                 <action selector="DoneBtn:" destination="biU-dX-9FY" id="VsS-GC-VA0"/>
-                                <segue destination="WbR-Yj-jDM" kind="push" id="EKg-76-8E0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -293,7 +274,4 @@
         <image name="lock.fill" catalog="system" width="64" height="64"/>
         <image name="questionmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="EKg-76-8E0"/>
-    </inferredMetricsTieBreakers>
 </document>

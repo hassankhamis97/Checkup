@@ -14,10 +14,12 @@ class MainChatTableViewCell: UITableViewCell {
     @IBOutlet var pearedUserName: UILabel!
     @IBOutlet var lastMessage: UILabel!
     @IBOutlet var lastMessageTime: UILabel!
+    @IBOutlet var noOfUnReadMessages: MessageNotificationLabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         pearedUserImg.layer.cornerRadius=pearedUserImg.frame.width / 2
-
+//        noOfUnReadMessages.layer.cornerRadius=noOfUnReadMessages.frame.width / 2
+        noOfUnReadMessages.layer.cornerRadius = 10
         // Initialization code
     }
 

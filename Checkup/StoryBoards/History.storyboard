@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--History Table View Controller-->
+        <!--Results-->
         <scene sceneID="AtX-2w-vTO">
             <objects>
                 <tableViewController storyboardIdentifier="HistorySVC" id="avz-MO-jAU" customClass="HistoryTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,31 +31,29 @@
                                             <rect key="frame" x="12" y="17" width="62" height="62"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="text" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaL-L9-gl4">
-                                            <rect key="frame" x="82" y="16" width="143" height="32"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73o-t6-HlG">
+                                            <rect key="frame" x="82" y="27" width="60" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="textColor" red="0.22352941179999999" green="0.25098039220000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="text" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6By-d1-Toe">
-                                            <rect key="frame" x="82" y="43" width="198" height="45"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <color key="textColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnK-Nn-lRu">
+                                            <rect key="frame" x="82" y="56" width="60" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartInsertDeleteType="no"/>
-                                        </textView>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="tintColor" red="0.50817459819999999" green="0.35702115299999998" blue="0.62628692389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="labDateOutlet" destination="QaL-L9-gl4" id="4z2-YA-rfC"/>
+                                    <outlet property="labDateOutlet" destination="73o-t6-HlG" id="UZ5-Gt-fkM"/>
                                     <outlet property="labImageOutlet" destination="SwB-1K-Jqn" id="25n-ms-IM3"/>
-                                    <outlet property="labNameOutlet" destination="6By-d1-Toe" id="LMF-zk-AyR"/>
+                                    <outlet property="labNameOutlet" destination="RnK-Nn-lRu" id="VMu-Uq-6oN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -64,13 +62,16 @@
                             <outlet property="delegate" destination="avz-MO-jAU" id="Anz-oe-qOa"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Result" image="result_usselect_50px" selectedImage="result_usselect_50px" id="7PQ-xn-nf7">
+                        <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="4Ir-G8-mnt"/>
+                    <navigationItem key="navigationItem" title="Results" id="4Ir-G8-mnt"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhe-d9-hYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.92753623188412" y="22.098214285714285"/>
+            <point key="canvasLocation" x="1855.072463768116" y="22.098214285714285"/>
         </scene>
         <!--Filter Table View Controller-->
         <scene sceneID="fr5-mU-IUd">
@@ -307,7 +308,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aeh-fl-GuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763.7681159420292" y="20.758928571428569"/>
+            <point key="canvasLocation" x="2673.913043478261" y="20.758928571428569"/>
         </scene>
         <!--Pdf Result View Controller-->
         <scene sceneID="Bgw-eV-Fqx">
@@ -332,28 +333,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZM-59-kAM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2528.985507246377" y="11.383928571428571"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nVU-9U-O9q">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jb2-Xh-R9O" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jZJ-Nu-CX4">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="avz-MO-jAU" kind="relationship" relationship="rootViewController" id="489-OE-M09"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hxx-kQ-HIv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="22.098214285714285"/>
+            <point key="canvasLocation" x="3439.130434782609" y="11.383928571428571"/>
         </scene>
     </scenes>
     <resources>
+        <image name="result_usselect_50px" width="50" height="50"/>
         <image name="unchecked" width="512" height="512"/>
     </resources>
 </document>

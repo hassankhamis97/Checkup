@@ -15,4 +15,9 @@ target 'Checkup' do
   pod 'OpalImagePicker'
   pod 'ImageSlideshow'
   pod 'StepIndicator', '~> 1.0.8'
+  pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
 end

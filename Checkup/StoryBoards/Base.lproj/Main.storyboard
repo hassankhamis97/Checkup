@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XgM-gB-wN3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -75,6 +75,12 @@
                                 <connections>
                                     <action selector="moveToUsers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHh-Ok-Vrl"/>
                                     <segue destination="5hs-Bx-fyr" kind="push" id="D6V-hD-xP9"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6J8-2L-Re9">
+                                <rect key="frame" x="317" y="602" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="goToHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZEb-Wo-UWx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,6 +143,14 @@
             </objects>
             <point key="canvasLocation" x="1206" y="88"/>
         </scene>
+        <!--homeSVC-->
+        <scene sceneID="5gD-23-1mm">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="homeSVCStoryBoard" storyboardName="Home" referencedIdentifier="homeSVC" id="acZ-OR-F1Q" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sef-aE-tPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="135"/>
+        </scene>
         <!--profileSVC-->
         <scene sceneID="fit-af-yjK">
             <objects>
@@ -167,6 +181,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.20976515487547381" green="0.22238408956170899" blue="0.39813792238527901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

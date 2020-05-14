@@ -9,12 +9,14 @@
 import UIKit
 
 class MessagingChatViewController: UIViewController {
-    @IBOutlet var msgTextField: UITextField!
+//    @IBOutlet var msgTextField: UITextField!
 
+    @IBOutlet var msgTextField: UITextView!
     @IBOutlet var msgTableView: UITableView!
     var isTop = false
     var allMessagesList : [String] = []
     var allMessagesListReversed : [String] = []
+    var currentPearedUser : PearedUserData!
     override func viewDidLoad() {
         super.viewDidLoad()
         msgTextField.layer.cornerRadius = 15.0

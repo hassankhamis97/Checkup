@@ -9,7 +9,7 @@
 import UIKit
 
 class MessageLabel: UILabel {
-    let padding = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 20)
+    let padding = UIEdgeInsets(top: 15, left: 20, bottom: 15, right: 20)
     //    override func drawText(in rect: CGRect) {
     //        super.drawText(in: rect.inset(by: padding))
     //    }
