@@ -9,12 +9,16 @@
 import UIKit
 
 class LabDescTableViewController: UITableViewController {
-
+    @IBOutlet weak var labBrachCollection: UICollectionView!
+    
+    var labBranches : [String] = ["Alexandria branch" , "Cairo branch" , "Mansoura branch"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
+        labBrachCollection.register(UINib(nibName: "BranchesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "branchCell")
     }
 
 
 }
+
