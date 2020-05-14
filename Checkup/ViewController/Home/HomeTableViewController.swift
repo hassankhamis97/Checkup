@@ -11,9 +11,9 @@ import ImageSlideshow
 class HomeTableViewController: UITableViewController   {
     
     var labFilter : FilterLabTableView!
-    var labNames = ["El-Mokhtabar" , "Alpha" , "El-Borg"]
-    var labImages = ["mokhtabar" , "alpha" , "borg"]
-    var labDate = ["21/2/2005" , "1/11/2019" , "5/9/2008"]
+    var labNames = ["El-Mokhtabar" , "Alpha" , "El-Borg" , "El-Mokhtabar"]
+    var labImages = ["mokhtabar" , "alpha" , "borg" ,"mokhtabar" ]
+    var labDate = ["21/2/2005" , "1/11/2019" , "5/9/2008" , "8/6/2016"]
     
     
     @IBOutlet weak var labCollection: UICollectionView!
@@ -30,14 +30,14 @@ class HomeTableViewController: UITableViewController   {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
         
         labSlideShow.setImageInputs([
-                                     ImageSource(image: UIImage(named: "lab1")!),
-                                     ImageSource(image: UIImage(named: "lab2")!),
-                                     ImageSource(image: UIImage(named: "lab3")!),
-                                     ImageSource(image: UIImage(named: "lab4")!)
+                                     ImageSource(image: UIImage(named: "borg")!),
+                                     ImageSource(image: UIImage(named: "alpha")!),
+                                     ImageSource(image: UIImage(named: "mokhtabar")!),
+                                     ImageSource(image: UIImage(named: "borg")!)
         ])
         
         labSlideShow.slideshowInterval = 3
-        labSlideShow.contentScaleMode = .scaleAspectFill
+        labSlideShow.contentScaleMode = .scaleToFill
         
         labSlideShow.delegate = self
         
