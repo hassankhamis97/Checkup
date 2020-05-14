@@ -305,7 +305,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aeh-fl-GuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763.7681159420292" y="20.758928571428569"/>
+            <point key="canvasLocation" x="1772" y="7"/>
         </scene>
         <!--Pdf Result View Controller-->
         <scene sceneID="Bgw-eV-Fqx">
