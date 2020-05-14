@@ -16,7 +16,6 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
   let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "branchCell", for: indexPath) as! BranchesCollectionViewCell
-        
         return cell
         
     }

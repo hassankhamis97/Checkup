@@ -9,7 +9,8 @@
 import UIKit
 
 class BranchesCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet var myLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
