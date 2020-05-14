@@ -30,10 +30,17 @@ class MainViewController: UIViewController {
     
     @IBAction func gotoLogin(_ sender: Any) {
         
-        
-        
-        
     }
+    
+    
+    @IBAction func moveToUsers(_ sender: Any) {
+        
+        let userTVC = storyboard?.instantiateViewController(withIdentifier: "userRSB") as!
+        UsersTableViewController
+        
+        navigationController?.pushViewController(userTVC, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        var ref: DatabaseReference!

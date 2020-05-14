@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Result-->
+        <!--Results-->
         <scene sceneID="AtX-2w-vTO">
             <objects>
                 <tableViewController storyboardIdentifier="HistorySVC" id="avz-MO-jAU" customClass="HistoryTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +66,7 @@
                         <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="4Ir-G8-mnt"/>
+                    <navigationItem key="navigationItem" title="Results" id="4Ir-G8-mnt"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhe-d9-hYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -334,44 +334,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZM-59-kAM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3439.130434782609" y="11.383928571428571"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nVU-9U-O9q">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jb2-Xh-R9O" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jZJ-Nu-CX4">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fui-h8-0QV" kind="relationship" relationship="rootViewController" id="489-OE-M09"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hxx-kQ-HIv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="22.098214285714285"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="F78-Lf-P50">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fui-h8-0QV" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="bbY-fy-BLD"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3VQ-NP-CPg">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="avz-MO-jAU" kind="relationship" relationship="viewControllers" id="PcL-4b-jEJ"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3YZ-Y0-Iwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="944.92753623188412" y="22.098214285714285"/>
         </scene>
     </scenes>
     <resources>

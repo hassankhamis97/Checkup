@@ -1,82 +1,64 @@
 //
-//  FilterLabTableView.swift
+//  UsersTableViewController.swift
 //  Checkup
 //
-//  Created by Aya on 5/13/20.
+//  Created by azab on 5/14/20.
 //  Copyright © 2020 Hassan Khamis. All rights reserved.
 //
 
 import UIKit
 
-class FilterLabTableView: UITableViewController {
-
-        var sectionTitle : [String] = ["Governerates" , "Nearest Location"]
-        var sectionGovernerates : [String] = ["Alexandria" , "Cairo" , "Mansoura"]
-        var sectionLocation : [String] = ["Somouha" , "Kafr Abdo" , "Abu Kir"]
-
-
-    /*struct SectionObjects {
-          var governerates : String!
-          var location : String!
-        
-    }
- */
-//    var secArr = [SectionObjects(governerates: "ALexandria", location: "Somouha"
+class UsersTableViewController: UITableViewController {
+    
+    var users : [UserNeedToTakeSample] = [UserNeedToTakeSample]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let user : UserNeedToTakeSample = UserNeedToTakeSample(name: "Ali", imageURL: "https://mobresults.almokhtabar.com:88/UploadedImages/aacd8efc-6096-4230-ab87-5140e90c5e45.jpg", age: 12, address: "Cairo", phones: ["5166515", "5115545"], date: "jun 01 4895", time: "12:45 PM")
+        
+        tableView.register(UINib(nibName: "UserCustomTableViewCell", bundle: nil), forCellReuseIdentifier: "userCustomCell")
+        
+        users.append(user)
+        users.append(user)
+        users.append(user)
+        users.append(user)
 
-     
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return sectionTitle.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        if section == 0 {
-            return sectionGovernerates.count
-        }else
-        {
-            return sectionLocation.count
-
-        }
+        // #warning Incomplete implementation, return the number of rows
+        return users.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "filterLabCell", for: indexPath)
-
-        if indexPath.section == 0 {
-            cell.textLabel?.text = sectionGovernerates[indexPath.row]
-               
-        }else{
-            cell.textLabel?.text = sectionLocation[indexPath.row]
-
-        }
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCustomCell", for: indexPath) as! UserCustomTableViewCell
         
+        cell.userImg.sd_setImage(with: URL(string: users[indexPath.row].imageURL), placeholderImage:UIImage(named: "placeholder.png"))
+        cell.userName.text = users[indexPath.row].name
+        cell.userAddress.text = users[indexPath.row].address
+        
+        // Configure the cell...
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitle[section]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let userDataSB = storyboard?.instantiateViewController(withIdentifier: "userDataSB") as? UserDataTableViewController else { return }
+        
+        userDataSB.patientData = users[indexPath.row]
+        navigationController?.pushViewController(userDataSB, animated: true)
     }
     
-    
- override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         
-        if tableView.cellForRow(at: indexPath)?.accessoryType==UITableViewCell.AccessoryType.checkmark{
-            
-            
-            
-        }
-    }
 
     /*
     // Override to support conditional editing of the table view.
