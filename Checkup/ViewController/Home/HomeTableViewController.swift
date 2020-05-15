@@ -47,6 +47,17 @@ class HomeTableViewController: UITableViewController   {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
         
+        
+        
+        
+        let layout = UICollectionViewFlowLayout()
+               layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+               layout.itemSize = CGSize(width: 200, height: 240)  //233
+        layout.minimumInteritemSpacing = 0.05
+        
+              self.labCollection?.collectionViewLayout = layout
+           
+        
         labSlideShow.setImageInputs([
                                      ImageSource(image: UIImage(named: "borg")!),
                                      ImageSource(image: UIImage(named: "alpha")!),
@@ -88,7 +99,7 @@ extension HomeTableViewController: ImageSlideshowDelegate {
         print("current page:", page)
     }
 }
-extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource {
+extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return labNames.count
     }
