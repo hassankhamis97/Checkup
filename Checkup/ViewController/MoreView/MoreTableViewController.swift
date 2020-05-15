@@ -7,13 +7,20 @@
 //
 
 import UIKit
-
+import Firebase
 @available(iOS 13.0, *)
 class MoreTableViewController: UITableViewController {
 
     
     @IBOutlet weak var profileImg: UIImageView!
-     
+    override func viewWillAppear(_ animated: Bool) {
+        if(Auth.auth().currentUser?.uid == nil)
+        {
+            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true, completion: nil)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +57,13 @@ class MoreTableViewController: UITableViewController {
         
         
         if indexPath.row==3{
-            
+            do{
+               try Auth.auth().signOut()
+
+            }
+            catch{
+                
+            }
        print("logout")
             
         }

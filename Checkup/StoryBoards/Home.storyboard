@@ -138,7 +138,7 @@
         <scene sceneID="iHk-f0-GyV">
             <objects>
                 <tableViewController id="fm3-e1-75I" customClass="LabDescTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XZf-dj-t7e">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XZf-dj-t7e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -195,7 +195,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NQT-Ad-KkZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="482"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="352"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <inset key="scrollIndicatorInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jtx-JV-CmA">
@@ -224,7 +224,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NQT-Ad-KkZ" firstAttribute="top" secondItem="6Vq-SI-96d" secondAttribute="top" id="0W2-lx-RF0"/>
-                                                <constraint firstAttribute="bottom" secondItem="NQT-Ad-KkZ" secondAttribute="bottom" id="3Y5-UF-EXH"/>
+                                                <constraint firstAttribute="bottom" secondItem="NQT-Ad-KkZ" secondAttribute="bottom" constant="130" id="3Y5-UF-EXH"/>
                                                 <constraint firstItem="NQT-Ad-KkZ" firstAttribute="leading" secondItem="6Vq-SI-96d" secondAttribute="leading" id="Kbk-aU-k5g"/>
                                                 <constraint firstAttribute="trailing" secondItem="NQT-Ad-KkZ" secondAttribute="trailing" id="WAZ-Zz-KA8"/>
                                             </constraints>
@@ -385,6 +385,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FqF-bg-wtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4378.2608695652179" y="73.660714285714278"/>
+        </scene>
+        <!--newReqSVC-->
+        <scene sceneID="Cwm-Q7-1Th">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="newReqSVC" storyboardName="NewRequestScreen" referencedIdentifier="newReqSVC" id="Zph-AN-XuW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AHS-xh-awr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5067" y="341"/>
         </scene>
         <!--Item-->
         <scene sceneID="P8r-Q0-61d">
@@ -580,6 +588,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUk-Vo-sga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-197" y="63"/>
+        </scene>
+        <!--loginSVC-->
+        <scene sceneID="wfS-Ip-BMY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="loginSVC" storyboardName="Login" referencedIdentifier="loginSVC" id="p1o-r6-fTk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hcv-LJ-2LQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4379" y="439"/>
         </scene>
     </scenes>
     <resources>

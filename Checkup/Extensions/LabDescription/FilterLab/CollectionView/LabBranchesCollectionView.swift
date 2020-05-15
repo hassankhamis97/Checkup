@@ -19,10 +19,17 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
   let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "branchCell", for: indexPath) as! BranchesCollectionViewCell
+        cell.requestBtnOutlet.tag = indexPath.item
+        cell.requestBtnOutlet.addTarget(self, action: #selector(newRequestAction), for: .touchUpInside)
         return cell
         
     }
-   
+    @objc func newRequestAction(_ sender : UIButton){
+//        var newRequestVC = storyboard!.instantiateViewController(withIdentifier: "newReqSVC") as! NewRequestTableViewController
+        var newRequestVC = storyboard!.instantiateViewController(withIdentifier: "newReqSVC") as! NewRequestTableViewController
+        newRequestVC.branchId = labBranches[sender.tag]
+        self.navigationController?.pushViewController(newRequestVC, animated: true)
+    }
 
  
 /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

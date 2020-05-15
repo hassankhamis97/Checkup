@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class HistoryTableViewController: UITableViewController {
 
     
@@ -18,6 +18,15 @@ class HistoryTableViewController: UITableViewController {
         
     var pdfHistory : PdfResultViewController!
     var filterPage : FilterTableViewController!
+    override func viewWillAppear(_ animated: Bool) {
+        if(Auth.auth().currentUser?.uid == nil)
+        {
+            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true, completion: nil)
+
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(addTapped))

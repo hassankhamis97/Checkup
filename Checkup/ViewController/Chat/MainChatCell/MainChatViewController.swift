@@ -7,12 +7,20 @@
 //
 
 import UIKit
-
+import Firebase
 class MainChatViewController: UIViewController {
     @IBOutlet var pearedTableView: UITableView!
 //    var pearedUsers = [PearedUserData]()
     var pearedUsers : [PearedUserData] = [PearedUserData]()
+    override func viewWillAppear(_ animated: Bool) {
+        if(Auth.auth().currentUser?.uid == nil)
+        {
+            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true, completion: nil)
 
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         pearedTableView.register(UINib(nibName: "MainChatTableViewCell", bundle: nil), forCellReuseIdentifier: "mainChatCell")

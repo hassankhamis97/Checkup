@@ -12,7 +12,7 @@
         <!--New Request-->
         <scene sceneID="eci-gt-32W">
             <objects>
-                <tableViewController storyboardIdentifier="newReqSVC" id="26o-WZ-09i" customClass="newRequestTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="newReqSVC" id="26o-WZ-09i" customClass="NewRequestTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TnQ-YE-YvZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -931,6 +931,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJC-oS-Ap3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1324.6376811594205" y="19.565217391304348"/>
+        </scene>
+        <!--loginSVC-->
+        <scene sceneID="jfk-Rg-sOD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="loginSVC" storyboardName="Login" referencedIdentifier="loginSVC" id="GIM-Es-5KE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqn-My-xx6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="240"/>
         </scene>
     </scenes>
     <resources>

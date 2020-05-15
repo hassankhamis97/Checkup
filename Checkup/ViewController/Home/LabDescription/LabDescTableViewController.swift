@@ -11,7 +11,7 @@ import UIKit
 class LabDescTableViewController: UITableViewController {
     @IBOutlet weak var labBrachCollection: UICollectionView!
    // let interItemSpacing : CGFloat! = 0.0
-    var labBranches : [String] = ["Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch"]
+    var labBranches : [String] = ["Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

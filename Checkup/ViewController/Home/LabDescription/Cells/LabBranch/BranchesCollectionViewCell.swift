@@ -12,6 +12,7 @@ class BranchesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var branchDescOutlet: UILabel!
     
     @IBOutlet weak var requestBtnOutlet: UIButton!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
