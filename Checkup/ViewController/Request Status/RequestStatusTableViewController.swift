@@ -29,7 +29,6 @@ class RequestStatusTableViewController: UITableViewController {
     var x=0; // will be deleted just for testing confirmation and refusing state
     
     
-    
     @IBOutlet weak var progressBarView: StepIndicatorView!
     
     
@@ -48,11 +47,6 @@ class RequestStatusTableViewController: UITableViewController {
         progressBarView.lineTintColor=UIColor.red
         tableView.reloadData()
     }
-    
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

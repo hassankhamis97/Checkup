@@ -10,10 +10,9 @@ import UIKit
 import OpalImagePicker
 import ImageSlideshow
 import SkyFloatingLabelTextField
+import Firebase
 
-@available(iOS 13.0, *)
-@available(iOS 13.0, *)
-class newRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,fillDataCells {
+class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,fillDataCells {
     
     @IBOutlet weak var myCell: UITableViewCell!
     @IBOutlet weak var collectionView:UICollectionView!
@@ -37,8 +36,8 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
     var ind:Int!
     var x=1
     var y=1
-    
-    
+    var branchId : String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +56,13 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
     
     override func viewWillAppear(_ animated: Bool) {
         
-        
+        if(Auth.auth().currentUser?.uid == nil)
+        {
+            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true, completion: nil)
+
+        }
         tableView.rowHeight = UITableView.automaticDimension
         slideShow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
         
@@ -81,7 +86,7 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
             deleteImageBtn.alpha=0
         }
         
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(newRequestTableViewController.didTap))
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(NewRequestTableViewController.didTap))
         slideShow.addGestureRecognizer(recognizer)
         tableView.reloadData()
     }
@@ -379,8 +384,7 @@ class newRequestTableViewController: UITableViewController,OpalImagePickerContro
 
 
 
-@available(iOS 13.0, *)
-extension newRequestTableViewController: ImageSlideshowDelegate {
+extension NewRequestTableViewController: ImageSlideshowDelegate {
     func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int){
         
         ind=page
@@ -390,8 +394,8 @@ extension newRequestTableViewController: ImageSlideshowDelegate {
 
 
 // to save one image
-@available(iOS 13.0, *)
-extension newRequestTableViewController: ImagePickerDelegate {
+
+extension NewRequestTableViewController: ImagePickerDelegate {
     
     func didSelect(image: UIImage?) {
         
@@ -408,8 +412,8 @@ extension newRequestTableViewController: ImagePickerDelegate {
 
 
 
-@available(iOS 13.0, *)
-extension newRequestTableViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+
+extension NewRequestTableViewController:UICollectionViewDelegate,UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // 1
         return 1

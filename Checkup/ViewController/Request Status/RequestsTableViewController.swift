@@ -7,18 +7,28 @@
 //
 
 import UIKit
-
+import Firebase
 class RequestsTableViewController: UITableViewController {
     
     var labNames = ["El-Mokhtabar" , "Alpha","Alpha" ]
     var labImages = ["mokhtabar" , "alpha","alpha" ]
     var labDate = ["Apr 5, 2020","jun 1, 2020","May 14, 2020"]
     var dateDescingly : [HistoryObject]!
-    
+    override func viewWillAppear(_ animated: Bool) {
+        if(Auth.auth().currentUser?.uid == nil)
+        {
+            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true, completion: nil)
+
+        }
+        dateDescingly = formatDate(myArr: labDate)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateDescingly = formatDate(myArr: labDate)
+        
         //        dateDescingly=labDate
+        
     }
     
     // MARK: - Table view data source

@@ -12,6 +12,7 @@ import SkyFloatingLabelTextField
 import UIColor_Hex_Swift
 class LoginTableViewController: UITableViewController,UITextFieldDelegate {
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var emailTextView: SkyFloatingLabelTextFieldWithIcon!
     
@@ -36,7 +37,8 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         
         view.addGestureRecognizer(tap)
-        
+        activityIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+       activityIndicator.hide()
     }
     //  function to enable dimiss key board(Return key)
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
@@ -53,9 +55,14 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate {
     
     
     @IBAction func loginBtn(_ sender: Any) {
-        
+        if (emailTextView.text! != nil || emailTextView.text! != nil){
+            var loginPresenter : LoginPresenter = LoginPresenter(loginViewRef: self)
+            loginPresenter.checkUser(email: emailTextView.text!, password: passWordTextView.text!)
         //  Login code
-        
+        }
+        else{
+            
+        }
     }
     
     

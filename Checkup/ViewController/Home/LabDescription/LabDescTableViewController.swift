@@ -10,19 +10,29 @@ import UIKit
 
 class LabDescTableViewController: UITableViewController {
     @IBOutlet weak var labBrachCollection: UICollectionView!
-    
-    var labBranches : [String] = ["Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch"]
+   // let interItemSpacing : CGFloat! = 0.0
+    var labBranches : [String] = ["Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         labBrachCollection.register(UINib(nibName: "BranchesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "branchCell")
-            //let layout = UICollectionViewFlowLayout()
-      //  layout.sectionInset = UIEdgeInsets(top: 50.0, left: 50.0, bottom: 50.0, right: 50.0)
-
-    //    layout.minimumLineSpacing = 0.0
-      //  layout.minimumInteritemSpacing = 0.0
-       //self.labBrachCollection?.collectionViewLayout = layout
+            let layout = UICollectionViewFlowLayout()
+      
+        let screenSIze = UIScreen.main.bounds
+        let width = screenSIze.width
+        let height = screenSIze.height-200
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+     //   layout.itemSize = CGSize(width: width/2 , height: height/2)
+           //layout.itemSize = CGSize(width: 200/2, height: 200/2)
+        layout.itemSize = CGSize(width: 191, height: 213)
+       layout.minimumInteritemSpacing = 1.0
+       self.labBrachCollection?.collectionViewLayout = layout
+    
+        
+  
+        //self.labBrachCollection.bounds.
+        
     }
 
 

@@ -233,6 +233,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="CXi-RG-R0s"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c7T-hH-num">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -245,6 +246,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3m-fu-jx5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1834.7826086956522" y="75"/>
+        </scene>
+        <!--loginSVC-->
+        <scene sceneID="UWM-C5-CtM">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="loginSVC" storyboardName="Login" referencedIdentifier="loginSVC" id="Nds-my-gGa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ra-J9-c1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2746" y="449"/>
         </scene>
     </scenes>
     <resources>
