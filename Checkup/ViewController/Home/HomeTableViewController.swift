@@ -8,6 +8,7 @@
 
 import UIKit
 import ImageSlideshow
+import Firebase
 class HomeTableViewController: UITableViewController   {
     
     var labFilter : FilterLabTableView!
@@ -27,6 +28,23 @@ class HomeTableViewController: UITableViewController   {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+//        
+//        var labObj = Laboratory(id: "", name: "El Mokhtabar", formalReferencePathId: "", specialTests: "", image: "", branches: ["",""])
+//        
+//        var ref: DatabaseReference!
+//
+//        ref = Database.database().reference()
+//        var id = ref.childByAutoId()
+//        labObj.id = id.key! as! String
+//        ref.child("Lab").child(labObj.id!).setValue(labObj.toDictionary())
+//        
+//        
+        
+        var reatTime = RealTime()
+        reatTime.addLab(name: "lab10", image:  "")
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
         
         labSlideShow.setImageInputs([
