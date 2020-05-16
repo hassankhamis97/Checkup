@@ -26,15 +26,17 @@ class TestNamingGroupViewController: UIViewController {
     var filteredNames=[String]()
     var filteredNamesFromSection=[String]()
     var filteredNamesFromSearch=[String]()
-    var arrSelectedindePath = NSMutableArray()
+    var selectedTests = NSMutableArray()
     var searching=false
     var delegate:IFillDataCells?
     
     @IBAction func doneBtn(_ sender: Any) {
 //        arrSelectedindePath
-        for i in arrSelectedindePath{
-            delegate?.fillData(dataObj: i as! String)
-        }
+        delegate?.fillData(testsNames: selectedTests)
+//        for i in selectedTests{
+//
+//            delegate?.fillData(dataObj: i as! String)
+//        }
 //        if(filteredNames.isEmpty){
 //
 //
@@ -102,7 +104,7 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
                     let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         var x = searching ? filteredNames[indexPath.row] : tsetsNames[indexPath.section].names[indexPath.row]
 
-                    if arrSelectedindePath .contains(x) {
+                    if selectedTests .contains(x) {
                        cell.accessoryType = .checkmark
                         if(searching)
                                 {
@@ -140,32 +142,46 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var x=tsetsNames[indexPath.section].names[indexPath.row]
+        var x = searching ? filteredNames[indexPath.row] : tsetsNames[indexPath.section].names[indexPath.row]
 
-        if arrSelectedindePath .contains(x) {
+        if selectedTests .contains(x) {
 
 //            arrSelectedindePath .remove(indexPath)
             
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
-            if(searching){
-
-                 var x=filteredNames[indexPath.row]
-                           for i in 0..<filteredNamesFromSearch.count{
-                               if (filteredNamesFromSearch[i]==x)
-                               {
-                                filteredNamesFromSearch.remove(at: i)
-                                arrSelectedindePath .remove(i)
-                            }
-                            }
-             }
-
-             var x=tsetsNames[indexPath.section].names[indexPath.row]
-            for i in 0..<filteredNamesFromSection.count{
-                if (filteredNamesFromSection[i]==x)
-                {
-                 filteredNamesFromSection.remove(at: i)
-                 break;
-             }
+            for i in 0..<selectedTests.count{
+               if (selectedTests[i] as! String == x)
+               {
+//                filteredNamesFromSearch.remove(at: i)
+                selectedTests.removeObject(at: i)
+            }
+//                for item in selectedTests{
+//                               if (item as! String == x)
+//                               {
+//                //                filteredNamesFromSearch.remove(at: i)
+//                                selectedTests .removeObject(at: item)
+//                                print(selectedTests)
+//                            }
+//            if(searching){
+//
+//                 var x=filteredNames[indexPath.row]
+//                           for i in 0..<selectedTests.count{
+//                               if (selectedTests[i] as! String == x)
+//                               {
+//                                filteredNamesFromSearch.remove(at: i)
+//                                selectedTests .remove(i)
+//                            }
+//                            }
+//             }
+//
+//             var x=tsetsNames[indexPath.section].names[indexPath.row]
+//            for i in 0..<filteredNamesFromSection.count{
+//                if (selectedTests[i] as! String == x)
+//                {
+//                 filteredNamesFromSection.remove(at: i)
+//                    selectedTests .remove(i)
+//                 break;
+//             }
              }
         }
         else
@@ -176,12 +192,12 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
             {
                 var x=filteredNames[indexPath.row]
                 filteredNamesFromSearch.append(x)
-                arrSelectedindePath .add(x)
+                selectedTests .add(x)
             }
             else{
                 var x=tsetsNames[indexPath.section].names[indexPath.row]
                            filteredNamesFromSection.append(x)
-                arrSelectedindePath .add(x)
+                selectedTests .add(x)
             }
         }
 

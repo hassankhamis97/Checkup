@@ -27,7 +27,7 @@ class RealTime {
              var userObj = User(id: id, email: email, password: password, birthdate: birthdate, gender: gender, phone: phone, insurance: insurance, address: address, imagePath: imagePath)
 
                 var id = ref.childByAutoId()
-//                userObj.id = id.key! as! String
+                userObj.id = id.key! as! String
     //            let res = try! JSONEncoder().encode(labObj)
                 let userDic = try! DictionaryEncoder.encode(userObj)
     //            print(res.prettyPrintedJSONString!)
