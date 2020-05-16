@@ -36,12 +36,14 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
     }
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
-    }
+    }*/
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var details = storyboard!.instantiateViewController(withIdentifier: "branchCell") as! DetailsViewController
+        print("cell is selected")
+        var details = storyboard!.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
         self.navigationController?.pushViewController(details, animated: true)
     }
-*/
+
 
      
     

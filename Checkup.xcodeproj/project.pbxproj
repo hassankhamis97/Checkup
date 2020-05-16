@@ -19,6 +19,7 @@
 		03F6C7F9246B891800E89178 /* LabDescTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */; };
 		03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F8346E2468990B000155A4 /* FilterTableViewController.swift */; };
 		03F834712468D8D9000155A4 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F834702468D8D9000155A4 /* RadioButton.swift */; };
+		03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA18A247035F20084C4AA /* PdfDescViewController.swift */; };
 		0F69C382A23AE66CCD5E2C01 /* Pods_Checkup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FF798CDDF112788FABCBE4 /* Pods_Checkup.framework */; };
 		4E0E3502246BA11B00814696 /* ConvertTimeStampToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E3501246BA11B00814696 /* ConvertTimeStampToDate.swift */; };
 		4E0E3505246BB88400814696 /* MessageNotificationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E3504246BB88400814696 /* MessageNotificationLabel.swift */; };
@@ -157,6 +158,7 @@
 		03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescTableViewController.swift; sourceTree = "<group>"; };
 		03F8346E2468990B000155A4 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		03F834702468D8D9000155A4 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		03FDA18A247035F20084C4AA /* PdfDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfDescViewController.swift; sourceTree = "<group>"; };
 		09FF798CDDF112788FABCBE4 /* Pods_Checkup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checkup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0E3501246BA11B00814696 /* ConvertTimeStampToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTimeStampToDate.swift; sourceTree = "<group>"; };
 		4E0E3504246BB88400814696 /* MessageNotificationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNotificationLabel.swift; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 				03F8346E2468990B000155A4 /* FilterTableViewController.swift */,
 				03F834702468D8D9000155A4 /* RadioButton.swift */,
 				0358339D246953FD008DD8C2 /* UIButtonExtension.swift */,
+				03FDA18A247035F20084C4AA /* PdfDescViewController.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -1253,6 +1256,7 @@
 				4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */,
 				4E2C9DFD24706B6D007C6109 /* Alert.swift in Sources */,
 				CC5DFD0E2468C242003B9F18 /* PopUpCollectionViewCell.swift in Sources */,
+				03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */,
 				4E22F8FF243E6E6C0090693C /* SceneDelegate.swift in Sources */,
 				4EE7EA34246B023000BF434F /* KeyboardLayoutConstraint.swift in Sources */,
 				CCCDA045246A94F5005549EA /* ReqLocationTableViewController.swift in Sources */,
