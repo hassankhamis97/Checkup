@@ -14,6 +14,7 @@
 		03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD2246CC39700C0BF33 /* BranchesCollectionViewCell.swift */; };
 		03789BD5246CC39700C0BF33 /* BranchesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */; };
 		03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */; };
+		03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44499246F149D00036549 /* DetailsViewController.swift */; };
 		03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */; };
 		03F6C7F9246B891800E89178 /* LabDescTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */; };
 		03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F8346E2468990B000155A4 /* FilterTableViewController.swift */; };
@@ -131,6 +132,7 @@
 		03789BD2246CC39700C0BF33 /* BranchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesCollectionViewCell.swift; sourceTree = "<group>"; };
 		03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BranchesCollectionViewCell.xib; sourceTree = "<group>"; };
 		03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabBranchesCollectionView.swift; sourceTree = "<group>"; };
+		03F44499246F149D00036549 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsCollectionViewCell.swift; sourceTree = "<group>"; };
 		03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescTableViewController.swift; sourceTree = "<group>"; };
 		03F8346E2468990B000155A4 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			children = (
 				0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */,
 				03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */,
+				03F44499246F149D00036549 /* DetailsViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1119,6 +1122,7 @@
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
 				CC064E30245B03360046E67F /* NewRequestTableViewController.swift in Sources */,
 				4EBBC943246B5ABF00C7978D /* PearedTableView.swift in Sources */,
+				03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */,
 				A33CA62B246D3F610014CF6B /* UserCustomTableViewCell.swift in Sources */,
 				4E432F132464F6EF00D1CACA /* HistoryTableViewCell.swift in Sources */,
 				A39BF96D246D96A1003500A8 /* UserDataTableViewController.swift in Sources */,

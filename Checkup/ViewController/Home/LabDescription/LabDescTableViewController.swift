@@ -10,7 +10,6 @@ import UIKit
 
 class LabDescTableViewController: UITableViewController {
     @IBOutlet weak var labBrachCollection: UICollectionView!
-   // let interItemSpacing : CGFloat! = 0.0
     var labBranches : [String] = ["Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch"]
     
     override func viewDidLoad() {
@@ -19,9 +18,9 @@ class LabDescTableViewController: UITableViewController {
         labBrachCollection.register(UINib(nibName: "BranchesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "branchCell")
             let layout = UICollectionViewFlowLayout()
       
-        let screenSIze = UIScreen.main.bounds
-        let width = screenSIze.width
-        let height = screenSIze.height-200
+   //     let screenSIze = UIScreen.main.bounds
+     //   let width = screenSIze.width
+       // let height = screenSIze.height-200
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
      //   layout.itemSize = CGSize(width: width/2 , height: height/2)
            //layout.itemSize = CGSize(width: 200/2, height: 200/2)
@@ -31,7 +30,7 @@ class LabDescTableViewController: UITableViewController {
     
         
   
-        //self.labBrachCollection.bounds.
+       
         
     }
 

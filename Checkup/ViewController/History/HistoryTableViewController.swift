@@ -10,14 +10,17 @@ import UIKit
 import Firebase
 class HistoryTableViewController: UITableViewController {
 
+    var indx : Int!
+    var myAlpha : Int!
     
     var labNames = ["El-Mokhtabar" , "Alpha","Alpha" ]
     var labImages = ["mokhtabar" , "alpha","alpha" ]
     var labDate = ["Apr 5, 2020","jun 1, 2020","May 14, 2020"]
     var dateDescingly : [HistoryObject]!
-        
     var pdfHistory : PdfResultViewController!
     var filterPage : FilterTableViewController!
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         if(Auth.auth().currentUser?.uid == nil)
         {
@@ -25,7 +28,10 @@ class HistoryTableViewController: UITableViewController {
             loginVC.modalPresentationStyle = .fullScreen
             self.present(loginVC, animated: true, completion: nil)
 
+        }else{
+            self.tableView.reloadData()
         }
+    
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +44,16 @@ class HistoryTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    
+   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.alpha = 0
+            UIView.animate(withDuration : 0.5, delay: 0.05 * Double(indexPath.row), animations: {
+                cell.alpha = 1
+            })
+    }
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -55,14 +71,19 @@ class HistoryTableViewController: UITableViewController {
   
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
+    
+        
+
         
         cell.layer.cornerRadius = 12
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.white.cgColor
         cell.translatesAutoresizingMaskIntoConstraints = false
-      
+        
+        
+        
         
         
        cell.labImageOutlet.image = UIImage(named: labImages[indexPath.row])
@@ -74,6 +95,10 @@ class HistoryTableViewController: UITableViewController {
         cell.labNameOutlet.sizeToFit()
         return cell
     }
+    
+    
+    
+    
     
     
    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
