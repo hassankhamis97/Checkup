@@ -14,7 +14,7 @@ class LabDescTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+  
         labBrachCollection.register(UINib(nibName: "BranchesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "branchCell")
             let layout = UICollectionViewFlowLayout()
       
@@ -34,6 +34,7 @@ class LabDescTableViewController: UITableViewController {
         
     }
 
-
+    
+    
 }
 
