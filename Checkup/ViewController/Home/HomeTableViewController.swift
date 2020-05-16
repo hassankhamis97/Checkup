@@ -17,6 +17,7 @@ class HomeTableViewController: UITableViewController   {
     var labDate = ["21/2/2005" , "1/11/2019" , "5/9/2008" , "8/6/2016"]
     
     
+    
     @IBOutlet weak var labCollection: UICollectionView!
     
 
@@ -125,6 +126,9 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      var labDesc = storyboard?.instantiateViewController(withIdentifier: "labDescSCV")as! LabDescTableViewController
+        navigationController?.pushViewController(labDesc, animated: true)
+    }
     
 }
