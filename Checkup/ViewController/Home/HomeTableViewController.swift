@@ -8,12 +8,14 @@
 
 import UIKit
 import ImageSlideshow
+import Firebase
 class HomeTableViewController: UITableViewController   {
     
     var labFilter : FilterLabTableView!
     var labNames = ["El-Mokhtabar" , "Alpha" , "El-Borg" , "El-Mokhtabar"]
     var labImages = ["mokhtabar" , "alpha" , "borg" ,"mokhtabar" ]
     var labDate = ["21/2/2005" , "1/11/2019" , "5/9/2008" , "8/6/2016"]
+    
     
     
     @IBOutlet weak var labCollection: UICollectionView!
@@ -27,6 +29,30 @@ class HomeTableViewController: UITableViewController   {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+//        
+//        var labObj = Laboratory(id: "", name: "El Mokhtabar", formalReferencePathId: "", specialTests: "", image: "", branches: ["",""])
+//        
+//        var ref: DatabaseReference!
+//
+//        ref = Database.database().reference()
+//        var id = ref.childByAutoId()
+//        labObj.id = id.key! as! String
+//        ref.child("Lab").child(labObj.id!).setValue(labObj.toDictionary())
+//        
+//        
+        
+        var reatTime = RealTime()
+//        reatTime.addLab(name: "lab10", image:  "")
+        var p1 = Phone(number: "03482584", isLand: true)
+        var p2 = Phone(number: "01111111", isLand: false)
+        var phoneArr = [Phone]()
+        phoneArr.append(p1)
+        phoneArr.append(p2)
+        var addressObj = Address(address: "dsadsa", buildingNo: "2", floorNo: "5", apartmentNo: "5", longitude: "54818", latitude: "41548")
+//        var addressObj = Address()
+        reatTime.addUser(id: "gLcrV5nCzhREMdrgH57eDfRanr22", email: "asd@asd.com", password: "123456789Iti", birthdate: "", gender: "", phone:phoneArr , insurance: "", address: addressObj, imagePath: "https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/images%2FgLcrV5nCzhREMdrgH57eDfRanr22%2FScreenshot_1585998573.png?alt=media&token=173f3e89-878b-4950-bd3b-40eefb2e5b8f")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
         
         
@@ -100,6 +126,9 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      var labDesc = storyboard?.instantiateViewController(withIdentifier: "labDescSCV")as! LabDescTableViewController
+        navigationController?.pushViewController(labDesc, animated: true)
+    }
     
 }

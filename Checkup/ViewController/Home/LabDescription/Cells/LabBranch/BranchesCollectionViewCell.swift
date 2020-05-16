@@ -17,9 +17,14 @@ class BranchesCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
    //    branchDescOutlet.sizeToFit()
-        requestBtnOutlet.layer.cornerRadius = 15
+        requestBtnOutlet.layer.cornerRadius = 6
         requestBtnOutlet.layer.borderWidth = 2
         requestBtnOutlet.layer.borderColor = UIColor.white.cgColor
-    }
+    
+ 
+ 
+ }
 
+
+    
 }

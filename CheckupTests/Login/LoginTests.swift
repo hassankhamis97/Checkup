@@ -12,13 +12,13 @@ import XCTest
 class LoginTests: XCTestCase {
     var loginModel : LoginModel!
     override func setUp() {
-        loginModel = LoginModel()
+//        loginModel = LoginModel(loginPresenterRef: self)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        loginModel = nil
+//        loginModel = nil
     }
     
 

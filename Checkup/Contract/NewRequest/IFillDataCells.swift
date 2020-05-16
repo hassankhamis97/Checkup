@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol fillDataCells {
+protocol IFillDataCells {
     func fillData(dataObj:String)
 }

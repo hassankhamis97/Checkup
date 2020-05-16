@@ -21,6 +21,8 @@ class RequestsTableViewController: UITableViewController {
             loginVC.modalPresentationStyle = .fullScreen
             self.present(loginVC, animated: true, completion: nil)
 
+        }else{
+            self.tableView.reloadData()
         }
         dateDescingly = formatDate(myArr: labDate)
     }
@@ -32,6 +34,15 @@ class RequestsTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
+
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+         
+         cell.alpha = 0
+             UIView.animate(withDuration : 0.3, delay: 0.05 * Double(indexPath.row), animations: {
+                 cell.alpha = 1
+             })
+     }
+     
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
