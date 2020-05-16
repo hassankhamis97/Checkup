@@ -26,23 +26,27 @@ class TestNamingGroupViewController: UIViewController {
     var filteredNames=[String]()
     var filteredNamesFromSection=[String]()
     var filteredNamesFromSearch=[String]()
-    
+    var arrSelectedindePath = NSMutableArray()
     var searching=false
-    var delegate:fillDataCells?
+    var delegate:IFillDataCells?
     
     @IBAction func doneBtn(_ sender: Any) {
-        if(filteredNames.isEmpty){
-            
-            
-            for i in filteredNamesFromSection{
-                delegate?.fillData(dataObj: i)
-            }
+//        arrSelectedindePath
+        for i in arrSelectedindePath{
+            delegate?.fillData(dataObj: i as! String)
         }
-        else{
-            for i in filteredNamesFromSearch{
-                delegate?.fillData(dataObj: i)
-            }
-        }
+//        if(filteredNames.isEmpty){
+//
+//
+//            for i in filteredNamesFromSection{
+//                delegate?.fillData(dataObj: i)
+//            }
+//        }
+//        else{
+//            for i in filteredNamesFromSearch{
+//                delegate?.fillData(dataObj: i)
+//            }
+//        }
         
         navigationController?.popViewController(animated: true)
     }
@@ -95,63 +99,132 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        
-        if(searching)
-        {
-            cell.textLabel?.text=filteredNames[indexPath.row]
-        }
-            
-        else{
-            cell.textLabel?.text=tsetsNames[indexPath.section].names[indexPath.row]
-        }
-        
-        return cell
+                    let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        var x = searching ? filteredNames[indexPath.row] : tsetsNames[indexPath.section].names[indexPath.row]
+
+                    if arrSelectedindePath .contains(x) {
+                       cell.accessoryType = .checkmark
+                        if(searching)
+                                {
+                                    cell.textLabel?.text=filteredNames[indexPath.row]
+                                }
+                        else{
+                                    cell.textLabel?.text=tsetsNames[indexPath.section].names[indexPath.row]
+                                }
+                    }
+                    else
+                    {
+                      cell.accessoryType = .none
+                        if(searching)
+                                {
+                                    cell.textLabel?.text=filteredNames[indexPath.row]
+                                }
+                        else{
+                                    cell.textLabel?.text=tsetsNames[indexPath.section].names[indexPath.row]
+                                }
+                    }
+                    return cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//
+//
+//        if(searching)
+//        {
+//            cell.textLabel?.text=filteredNames[indexPath.row]
+//        }
+//
+//        else{
+//            cell.textLabel?.text=tsetsNames[indexPath.section].names[indexPath.row]
+//        }
+//
+//        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if tableView.cellForRow(at: indexPath)?.accessoryType==UITableViewCell.AccessoryType.checkmark{
-            tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCell.AccessoryType.none
+        var x=tsetsNames[indexPath.section].names[indexPath.row]
+
+        if arrSelectedindePath .contains(x) {
+
+//            arrSelectedindePath .remove(indexPath)
             
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
             if(searching){
-                
-                var x=filteredNames[indexPath.row]
-                          for i in 0..<filteredNamesFromSearch.count{
-                              if (filteredNamesFromSearch[i]==x)
-                              {
-                               filteredNamesFromSearch.remove(at: i)
-                           }
-                           }
-            }
-            
-            var x=tsetsNames[indexPath.section].names[indexPath.row]
-           for i in 0..<filteredNamesFromSection.count{
-               if (filteredNamesFromSection[i]==x)
-               {
-                filteredNamesFromSection.remove(at: i)
-                break;
-            }
-            }
+
+                 var x=filteredNames[indexPath.row]
+                           for i in 0..<filteredNamesFromSearch.count{
+                               if (filteredNamesFromSearch[i]==x)
+                               {
+                                filteredNamesFromSearch.remove(at: i)
+                                arrSelectedindePath .remove(i)
+                            }
+                            }
+             }
+
+             var x=tsetsNames[indexPath.section].names[indexPath.row]
+            for i in 0..<filteredNamesFromSection.count{
+                if (filteredNamesFromSection[i]==x)
+                {
+                 filteredNamesFromSection.remove(at: i)
+                 break;
+             }
+             }
         }
-            
-        else{
-            tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCell.AccessoryType.checkmark
-            
+        else
+        {
+//          arrSelectedindePath .add(indexPath)
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
             if(searching)
             {
                 var x=filteredNames[indexPath.row]
                 filteredNamesFromSearch.append(x)
+                arrSelectedindePath .add(x)
             }
             else{
                 var x=tsetsNames[indexPath.section].names[indexPath.row]
                            filteredNamesFromSection.append(x)
+                arrSelectedindePath .add(x)
             }
-           
-            
         }
-        
+
+//        if tableView.cellForRow(at: indexPath)?.accessoryType==UITableViewCell.AccessoryType.checkmark{
+//            tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCell.AccessoryType.none
+//
+//            if(searching){
+//
+//                var x=filteredNames[indexPath.row]
+//                          for i in 0..<filteredNamesFromSearch.count{
+//                              if (filteredNamesFromSearch[i]==x)
+//                              {
+//                               filteredNamesFromSearch.remove(at: i)
+//                           }
+//                           }
+//            }
+//
+//            var x=tsetsNames[indexPath.section].names[indexPath.row]
+//           for i in 0..<filteredNamesFromSection.count{
+//               if (filteredNamesFromSection[i]==x)
+//               {
+//                filteredNamesFromSection.remove(at: i)
+//                break;
+//            }
+//            }
+//        }
+//
+//        else{
+//            tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCell.AccessoryType.checkmark
+//
+//            if(searching)
+//            {
+//                var x=filteredNames[indexPath.row]
+//                filteredNamesFromSearch.append(x)
+//            }
+//            else{
+//                var x=tsetsNames[indexPath.section].names[indexPath.row]
+//                           filteredNamesFromSection.append(x)
+//            }
+//
+//
+//        }
+
     }
         
         func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -166,6 +239,33 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
         }
         
         
+//        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+//        {
+//            if arrSelectedindePath .contains(indexPath) {
+//
+//                arrSelectedindePath .remove(indexPath)
+//                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+//            }
+//            else
+//            {
+//              arrSelectedindePath .add(indexPath)
+//                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+//            }
+//
+//        }
+//        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+//        {
+//
+//            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+//            if arrSelectedindePath .contains(indexPath) {
+//               cell.accessoryType = .checkmark
+//            }
+//            else
+//            {
+//              cell.accessoryType = .none
+//            }
+//            return cell
+//        }
     }
 extension TestNamingGroupViewController:UISearchBarDelegate
 {
