@@ -26,20 +26,8 @@ extension DetailsViewController : UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let y : CGFloat = scrollView.contentOffset.y
         let newHeaderHeight : CGFloat = headingHeight.constant-y
-        
-    /*    var lastContentOffset : CGFloat = 0
-        if(lastContentOffset > scrollView.contentOffset.y){
-            print("move up")
-        }else if (lastContentOffset<scrollView.contentOffset.y){
-            print("move down")
-        }
-        lastContentOffset = scrollView.contentOffset.y
-        
-      */
-        
-        
-        
-     if newHeaderHeight > imageViewMaxHeight{
+    
+    if newHeaderHeight > imageViewMaxHeight{
             headingHeight.constant = imageViewMaxHeight
         }else if newHeaderHeight < imageViewMinHeight{
             headingHeight.constant = imageViewMinHeight

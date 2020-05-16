@@ -545,7 +545,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fjq-CM-mvH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Yc4-IB-saP"/>
+                    <navigationItem key="navigationItem" id="Yc4-IB-saP">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Oyl-1j-QVe">
+                            <connections>
+                                <segue destination="voY-Tu-5Yq" kind="presentation" modalPresentationStyle="fullScreen" id="qhZ-SE-NUM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="headingHeight" destination="IzE-Yf-vz0" id="htt-J0-eSu"/>
@@ -555,6 +561,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05P-iX-JyO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1976.8115942028987" y="825.66964285714278"/>
+        </scene>
+        <!--Branch Description View Controller-->
+        <scene sceneID="UbX-Yp-eV1">
+            <objects>
+                <viewController id="voY-Tu-5Yq" customClass="BranchDescriptionViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GD6-Rc-OnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oq6-Y0-NHf">
+                                <rect key="frame" x="0.0" y="250" width="414" height="646"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-n6-YCi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="borg" translatesAutoresizingMaskIntoConstraints="NO" id="oIk-be-L4x">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnX-55-AGo">
+                                        <rect key="frame" x="22" y="57" width="30" height="26.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="W6b-PI-9uO"/>
+                                            <constraint firstAttribute="height" constant="30" id="qfe-x1-Pz2"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="chevron.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backBtn:" destination="voY-Tu-5Yq" eventType="touchUpInside" id="fXx-YC-teH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2274509804" green="0.23921568630000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qnX-55-AGo" firstAttribute="top" secondItem="fbk-n6-YCi" secondAttribute="top" constant="55" id="3PZ-9l-ER1"/>
+                                    <constraint firstItem="oIk-be-L4x" firstAttribute="top" secondItem="fbk-n6-YCi" secondAttribute="top" id="AAX-tG-EZb"/>
+                                    <constraint firstAttribute="bottom" secondItem="oIk-be-L4x" secondAttribute="bottom" id="BKI-EA-2Yt"/>
+                                    <constraint firstAttribute="height" constant="250" id="QNd-x2-NIy"/>
+                                    <constraint firstAttribute="trailing" secondItem="oIk-be-L4x" secondAttribute="trailing" id="Xha-C6-gKW"/>
+                                    <constraint firstItem="qnX-55-AGo" firstAttribute="leading" secondItem="fbk-n6-YCi" secondAttribute="leading" constant="22" id="eNn-WV-b8l"/>
+                                    <constraint firstItem="oIk-be-L4x" firstAttribute="leading" secondItem="fbk-n6-YCi" secondAttribute="leading" id="eVP-t6-LGC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fbk-n6-YCi" firstAttribute="top" secondItem="GD6-Rc-OnQ" secondAttribute="top" id="0Rc-Vj-T7S"/>
+                            <constraint firstItem="fbk-n6-YCi" firstAttribute="leading" secondItem="GD6-Rc-OnQ" secondAttribute="leading" id="Ezn-2b-MVe"/>
+                            <constraint firstAttribute="trailing" secondItem="Oq6-Y0-NHf" secondAttribute="trailing" id="Lmx-I6-TZT"/>
+                            <constraint firstAttribute="bottom" secondItem="Oq6-Y0-NHf" secondAttribute="bottom" id="Xlv-W6-l6I"/>
+                            <constraint firstAttribute="trailing" secondItem="fbk-n6-YCi" secondAttribute="trailing" id="nDx-mB-NUD"/>
+                            <constraint firstItem="Oq6-Y0-NHf" firstAttribute="top" secondItem="fbk-n6-YCi" secondAttribute="bottom" id="or6-bQ-B68"/>
+                            <constraint firstItem="Oq6-Y0-NHf" firstAttribute="leading" secondItem="GD6-Rc-OnQ" secondAttribute="leading" id="uaX-zD-n3F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wVT-RG-zRH"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cir-V1-5w3"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="branchDescriptionTableView" destination="Oq6-Y0-NHf" id="AcF-E4-0db"/>
+                        <outlet property="headerViewHeight" destination="QNd-x2-NIy" id="lbX-4N-Zob"/>
+                        <outlet property="labImageView" destination="oIk-be-L4x" id="x3Z-QW-mn6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRh-3Z-ibC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3525" y="800"/>
         </scene>
         <!--Result-->
         <scene sceneID="rTC-7D-WQj">
@@ -618,6 +692,7 @@
         <image name="More_50px" width="50" height="50"/>
         <image name="Request_usselect_50px" width="50" height="50"/>
         <image name="borg" width="960" height="960"/>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="result_usselect_50px" width="50" height="50"/>
     </resources>
 </document>
