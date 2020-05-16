@@ -23,21 +23,16 @@ class RealTime {
 //            print(res.prettyPrintedJSONString!)
             ref.child("Lab").child(labObj.id!).setValue(labDic)
     }
-    func addLab(name: String, image: String) {
-             var labObj = Laboratory(id: "", name: name, formalReferencePathId: "", specialTests: "", image: image, branches: ["",""])
+    func addUser(id: String, email: String,password: String,birthdate: String, gender: String,phone: [Phone],insurance: String, address: Address,imagePath: String) {
+             var userObj = User(id: id, email: email, password: password, birthdate: birthdate, gender: gender, phone: phone, insurance: insurance, address: address, imagePath: imagePath)
 
                 var id = ref.childByAutoId()
-                labObj.id = id.key! as! String
+//                userObj.id = id.key! as! String
     //            let res = try! JSONEncoder().encode(labObj)
-                let labDic = try! DictionaryEncoder.encode(labObj)
+                let userDic = try! DictionaryEncoder.encode(userObj)
     //            print(res.prettyPrintedJSONString!)
-                ref.child("Lab").child(labObj.id!).setValue(labDic)
+                ref.child("Users").child(userObj.id!).setValue(userDic)
         }
     
 }
-struct DictionaryEncoder {
-    static func encode<T>(_ value: T) throws -> [String: Any] where T: Encodable {
-        let jsonData = try JSONEncoder().encode(value)
-        return try JSONSerialization.jsonObject(with: jsonData) as? [String: Any] ?? [:]
-    }
-}
+

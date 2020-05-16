@@ -12,7 +12,7 @@ import ImageSlideshow
 import SkyFloatingLabelTextField
 import Firebase
 
-class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,fillDataCells {
+class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,IFillDataCells {
     
     @IBOutlet weak var myCell: UITableViewCell!
     @IBOutlet weak var collectionView:UICollectionView!
@@ -29,7 +29,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var pageControl = UIPageControl()
     var inputImageArray=[InputSource]()
     var DatabaseImageArray=[UIImage]()
-    var defaultImageArray=[InputSource]()
+    var defaultImage=[InputSource]()
     var imagePicker: ImagePicker!
     let datePicker=UIDatePicker()
     let timePicker=UIDatePicker()
@@ -37,7 +37,8 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var x=1
     var y=1
     var branchId : String?
-
+    var labId: String?
+    var isFromHome: Bool?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,13 +77,12 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         slideShow.delegate = self
         slideShow.contentScaleMode = .scaleToFill
         
-        defaultImageArray=[
-            ImageSource(image: UIImage(named: "default")!),
-            ImageSource(image: UIImage(named: "rosheta")!),]
+        defaultImage=[
+            ImageSource(image: UIImage(named: "default")!)]
         
         if (inputImageArray.isEmpty){
             
-            slideShow.setImageInputs(defaultImageArray)
+            slideShow.setImageInputs(defaultImage)
             deleteImageBtn.alpha=0
         }
         

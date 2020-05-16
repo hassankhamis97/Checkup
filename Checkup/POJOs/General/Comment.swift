@@ -8,8 +8,8 @@
 
 import Foundation
 struct Comment {
-    var id: String?
     var comment: String?
-    var userId: String??
-    func toDictionary() -> Any {     return ["id": id, "comment": comment, "userId": userId] as Any }
+    var rateNumber: String?
+    var userId: String?
+//    func toDictionary() -> Any {     return ["id": id, "comment": comment, "userId": userId] as Any }
 }

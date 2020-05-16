@@ -9,7 +9,6 @@
 import Foundation
 struct Review {
     var id: String?
-    var rateNumber: String?
     var comments: [Comment]?
 //    func toDictionary() -> Any {     return ["id": id, "rateNumber": rateNumber, "comments": comments.toDictionary()] as Any }
 }
