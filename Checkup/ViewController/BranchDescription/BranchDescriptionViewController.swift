@@ -28,7 +28,6 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate {
         super.viewDidLoad()
         self.branchDescriptionTableView.delegate = self
         self.branchDescriptionTableView.dataSource = self
-
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

@@ -15,17 +15,20 @@ class NewRequestPresenter: INewRequestPresenter {
     }
 
     func saveRequest(testObj: Test, roushettaImages: [UIImage]) {
+        newRequestViewRef.showIndicator()
         var newRequestModel = NewRequestModel(newRequestPresenterRef: self)
         newRequestModel.saveRequest(testObj: testObj, roushettaImages: roushettaImages)
     }
     
         
     func onSuccess() {
-        
+        newRequestViewRef.hideIndicator()
+        newRequestViewRef.updateView()
     }
     
     func onFail(message: String) {
-        
+        newRequestViewRef.hideIndicator()
+        newRequestViewRef.errorMessage(msg: message)
     }
     
 

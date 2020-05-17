@@ -33,6 +33,8 @@ class RealTime {
     //            print(res.prettyPrintedJSONString!)
                 ref.child("Users").child(userObj.id!).setValue(userDic)
         }
-    
+    func initGeneratedCode() {
+                ref.child("GeneratedCode").setValue(["code": 1])
+        }
 }
 
