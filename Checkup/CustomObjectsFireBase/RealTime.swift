@@ -27,12 +27,14 @@ class RealTime {
         var userObj = User(id: id, name:name, email: email,  birthdate: birthdate, gender: gender, phone: phone, insurance: insurance, address: address, imagePath: imagePath)
 
                 var id = ref.childByAutoId()
-//                userObj.id = id.key! as! String
+                userObj.id = id.key! as! String
     //            let res = try! JSONEncoder().encode(labObj)
                 let userDic = try! DictionaryEncoder.encode(userObj)
     //            print(res.prettyPrintedJSONString!)
                 ref.child("Users").child(userObj.id!).setValue(userDic)
         }
-    
+    func initGeneratedCode() {
+                ref.child("GeneratedCode").setValue(["code": 1])
+        }
 }
 

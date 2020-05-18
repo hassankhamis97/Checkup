@@ -20,14 +20,17 @@ class RequestsTableViewController: UITableViewController {
             let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
             loginVC.modalPresentationStyle = .fullScreen
             self.present(loginVC, animated: true, completion: nil)
-
+            
         }else{
+            var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
+            getRequestsPresenter.getRequests()
             self.tableView.reloadData()
         }
         dateDescingly = formatDate(myArr: labDate)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         //        dateDescingly=labDate
         

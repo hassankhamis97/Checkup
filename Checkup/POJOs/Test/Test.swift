@@ -14,7 +14,7 @@ struct Test : Encodable{
     var resultFilespaths: [String]?
     var roushettaPaths: [String]?
     var description: String?
-    var isFromHome: String?
+    var isFromHome: Bool?
     var dateRequest: String?
     var timeRequest: String?
     var dateForTakingSample: String?

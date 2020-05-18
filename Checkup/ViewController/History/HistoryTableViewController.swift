@@ -101,7 +101,7 @@ class HistoryTableViewController: UITableViewController {
     
     
     
-   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if #available(iOS 13.0, *) {
       pdfHistory = storyboard?.instantiateViewController(identifier: "pdfHistory") as! PdfResultViewController
     } else {
@@ -109,6 +109,16 @@ class HistoryTableViewController: UITableViewController {
     }
         navigationController?.pushViewController(pdfHistory, animated: true)
     }
+    */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pdfDesc = storyboard?.instantiateViewController(withIdentifier: "pdfDesc") as! PdfDescViewController
+        navigationController?.pushViewController(pdfDesc, animated: true)
+    }
+    
+    
+    
+    
+    
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10

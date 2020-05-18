@@ -39,6 +39,32 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var branchId : String?
     var labId: String?
     var isFromHome: Bool?
+    @IBAction func saveNewRequestBtn(_ sender: UIButton) {
+        if(checkValidation()){
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM dd, yyyy"
+            let currentDate = dateFormatter.string(from: date)
+            dateFormatter.dateFormat = "H:mm a"
+            let currentTime = dateFormatter.string(from: date)
+            
+            var address = Address(address: "eleslam Street", buildingNo: "22", floorNo: "5", apartmentNo: "6", longitude: "", latitude: "")
+            var testObj = Test()
+            testObj.testName = testTexts
+            testObj.branchId = branchId
+            testObj.labId = labId
+            testObj.dateForTakingSample = dateTextField.text
+            testObj.timeForTakingSample = timeTextField.text
+            testObj.address = address
+            testObj.userId = Auth.auth().currentUser?.uid
+            testObj.status = "PendingForLabConfirmation"
+            testObj.dateRequest = currentDate
+            testObj.timeRequest = currentTime
+            testObj.isFromHome = isFromHome
+            var newRequestPresenter = NewRequestPresenter(newRequestViewRef: self)
+            newRequestPresenter.saveRequest(testObj: testObj, roushettaImages: DatabaseImageArray)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -93,8 +119,12 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     
     
     // Delegate Metoda For Navigation from table testNames
-    func fillData(dataObj:String) {
-        testTexts.append(dataObj)
+    func fillData(testsNames:NSMutableArray) {
+        testTexts.removeAll()
+        for i in testsNames{
+            testTexts.append(i as! String)
+        }
+//        testTexts.append(dataObj)
         collectionView.reloadData()
     }
     
@@ -174,7 +204,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         }
         
         if indexPath.row==6{// FILLED ADRESS
-            if(y==1)
+            if(isFromHome! && y==1)
             {
                 return 70
             }
@@ -202,9 +232,15 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             tableView.reloadData()
         }
         else{
+            var selectedTests = NSMutableArray()
+            for i in testTexts{
+                selectedTests.add(i)
+            }
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "testNameGroupSVC") as! TestNamingGroupViewController
-            navigationController?.pushViewController(vc, animated: true)
+            vc.selectedTests = selectedTests
             vc.delegate=self
+            navigationController?.pushViewController(vc, animated: true)
+            
             
         }
         
@@ -217,16 +253,23 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     @IBAction func deleteImageBtn(_ sender: Any) {
         
         
-        if(inputImageArray.isEmpty){
-            print("no data")
-            tableView.reloadData()
-        }
-        else{
+//        if(inputImageArray.isEmpty){
+//            print("no data")
+//            slideShow.setImageInputs(defaultImage)
+//            tableView.reloadData()
+//        }
+//        else{
             inputImageArray.remove(at: ind)//remove from slideshoe
             DatabaseImageArray.remove(at: ind)//remove from database
-            slideShow.setImageInputs(inputImageArray)
-            tableView.reloadData()
+        if inputImageArray.count == 0 {
+            slideShow.setImageInputs(defaultImage)
+            deleteImageBtn.alpha=0
         }
+        else{
+            slideShow.setImageInputs(inputImageArray)
+        }
+            tableView.reloadData()
+//        }
         
         
     }
