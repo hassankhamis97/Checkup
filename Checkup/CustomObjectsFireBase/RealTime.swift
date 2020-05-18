@@ -23,8 +23,8 @@ class RealTime {
 //            print(res.prettyPrintedJSONString!)
             ref.child("Lab").child(labObj.id!).setValue(labDic)
     }
-    func addUser(id: String, email: String,password: String,birthdate: String, gender: String,phone: [Phone],insurance: String, address: Address,imagePath: String) {
-             var userObj = User(id: id, email: email, password: password, birthdate: birthdate, gender: gender, phone: phone, insurance: insurance, address: address, imagePath: imagePath)
+    func addUser(id: String, email: String,birthdate: String, gender: String,phone: [Phone],insurance: String, address: Address,imagePath: String, name:String) {
+        var userObj = User(id: id, name:name, email: email,  birthdate: birthdate, gender: gender, phone: phone, insurance: insurance, address: address, imagePath: imagePath)
 
                 var id = ref.childByAutoId()
                 userObj.id = id.key! as! String

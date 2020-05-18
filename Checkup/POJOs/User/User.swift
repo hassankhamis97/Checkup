@@ -10,8 +10,8 @@ import Foundation
 
 struct User : Encodable{
     var id: String?
+    var name:String?
     var email: String?
-    var password: String?
     var birthdate: String?
     var gender: String?
     var phone: [Phone]?
