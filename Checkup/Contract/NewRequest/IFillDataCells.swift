@@ -9,5 +9,5 @@
 import Foundation
 
 protocol IFillDataCells {
-    func fillData(dataObj:String)
+    func fillData(testsNames:NSMutableArray)
 }

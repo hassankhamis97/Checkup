@@ -44,15 +44,18 @@ class HomeTableViewController: UITableViewController   {
 //        
         
         var reatTime = RealTime()
+//        reatTime.initGeneratedCode()
 //        reatTime.addLab(name: "lab10", image:  "")
         var p1 = Phone(number: "03482584", isLand: true)
-        var p2 = Phone(number: "01111111", isLand: false)
+        var p2 = Phone(number: "0129300", isLand: false)
         var phoneArr = [Phone]()
         phoneArr.append(p1)
-        phoneArr.append(p2)
-        var addressObj = Address(address: "dsadsa", buildingNo: "2", floorNo: "5", apartmentNo: "5", longitude: "54818", latitude: "41548")
+        //phoneArr.append(p2)
+        var addressObj = Address(address: "Toreel,Mansoura", buildingNo: "2", floorNo: "", apartmentNo: "", longitude: "31.4913", latitude: "31.1656")
 //        var addressObj = Address()
-        reatTime.addUser(id: "gLcrV5nCzhREMdrgH57eDfRanr22", email: "asd@asd.com", password: "123456789Iti", birthdate: "", gender: "", phone:phoneArr , insurance: "", address: addressObj, imagePath: "https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/images%2FgLcrV5nCzhREMdrgH57eDfRanr22%2FScreenshot_1585998573.png?alt=media&token=173f3e89-878b-4950-bd3b-40eefb2e5b8f")
+        
+//        var addressObj = Address()
+        reatTime.addUser(id: "gLcrV5nCzhREMdrgH57eDfRanr22",  email: "asd@asd.com", birthdate: "", gender: "", phone:phoneArr , insurance: "", address: addressObj, imagePath: "", name:"ahmed ali")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
         
         
