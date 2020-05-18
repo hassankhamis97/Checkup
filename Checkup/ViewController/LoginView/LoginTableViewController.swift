@@ -10,6 +10,7 @@ import UIKit
 import TransitionButton
 import SkyFloatingLabelTextField
 import UIColor_Hex_Swift
+
 class LoginTableViewController: UITableViewController,UITextFieldDelegate {
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
@@ -67,7 +68,23 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate {
     
     
     
+    @IBAction func resetPassword(_ sender: Any) {
+        
+        let resetPassPopup = (
+            storyboard?.instantiateViewController(
+            withIdentifier: "resetPopUpSVC"))!
+        present(resetPassPopup, animated: true, completion: nil)
+    }
     
+    @IBAction func goToSignupSB(_ sender: Any) {
+        
+        let signup = (
+        storyboard?.instantiateViewController(
+        withIdentifier: "signupSVC"))!
+        
+        present(signup, animated: true, completion: nil)
+        
+    }
     
     
 }

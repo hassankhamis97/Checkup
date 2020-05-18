@@ -8,15 +8,15 @@
 
 import Foundation
 import Firebase
-//import FirebaseFirestore
+import FirebaseFirestore
 class NewRequestModel: INewRequestModel {
     var newRequestPresenterRef : INewRequestPresenter
     var ref: DatabaseReference!
-//    let db :
+    let db : Firestore?
     init(newRequestPresenterRef : INewRequestPresenter) {
         self.newRequestPresenterRef = newRequestPresenterRef
         ref = Database.database().reference()
-//        let db = Firestore.firestore()
+        db = Firestore.firestore()
     }
     func saveRequest(testObj: Test, roushettaImages: [UIImage]) {
         var imgPathsArr = [String]()
@@ -79,13 +79,13 @@ class NewRequestModel: INewRequestModel {
             
             testFinObj.generatedCode = String(code)
             let testFinDic = try! DictionaryEncoder.encode(testFinObj)
-//            db.collection("data").document("one").setData(docData) { err in
-//                if let err = err {
-//                    print("Error writing document: \(err)")
-//                } else {
-//                    print("Document successfully written!")
-//                }
-//            }
+            self.db?.collection("TestsHassan").document(testFinObj.id!).setData(testFinDic) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
             self.ref.child("TestsHassan").child(testFinObj.branchId!).child(testFinObj.id!).setValue(testFinDic)
             self.newRequestPresenterRef.onSuccess()
             // ...

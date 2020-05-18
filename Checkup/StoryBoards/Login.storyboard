@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -213,7 +214,7 @@
                                                         <color key="titleColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="p1f-nV-Efa" kind="push" id="5Ax-vz-l0e"/>
+                                                        <action selector="goToSignupSB:" destination="V6O-re-qlJ" eventType="touchUpInside" id="phd-eL-fis"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -235,7 +236,7 @@
                                                         <color key="titleColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="7AK-XR-SP2" kind="push" id="gsX-Ny-onK"/>
+                                                        <action selector="resetPassword:" destination="V6O-re-qlJ" eventType="touchUpInside" id="7bu-fI-y8h"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -279,6 +280,59 @@
             </objects>
             <point key="canvasLocation" x="2789.8550724637685" y="72.991071428571431"/>
         </scene>
+        <!--Reset Password View Controller-->
+        <scene sceneID="Sfg-xl-9fg">
+            <objects>
+                <viewController storyboardIdentifier="resetPopUpSVC" id="e6c-EV-5CE" customClass="ResetPasswordViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dLu-qN-1B1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-D6-QVr">
+                                <rect key="frame" x="66" y="338" width="283" height="221"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your Email " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp6-27-wi0">
+                                        <rect key="frame" x="55" y="37" width="173" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54r-UU-CDx" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="31" y="93" width="221" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-yF-IiQ">
+                                        <rect key="frame" x="122" y="165" width="39" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetPasswordBtn:" destination="e6c-EV-5CE" eventType="touchUpInside" id="y3P-N5-LeX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99769268134715028" green="0.99769268134715028" blue="0.99769268134715028" alpha="0.25966109154929579" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Ul-D6-QVr" firstAttribute="top" secondItem="5lG-3h-FlN" secondAttribute="top" constant="294" id="9h5-mC-ekG"/>
+                            <constraint firstItem="5lG-3h-FlN" firstAttribute="trailing" secondItem="6Ul-D6-QVr" secondAttribute="trailing" constant="65" id="UI9-QZ-4eq"/>
+                            <constraint firstItem="6Ul-D6-QVr" firstAttribute="leading" secondItem="5lG-3h-FlN" secondAttribute="leading" constant="66" id="hG9-qX-FHi"/>
+                            <constraint firstItem="5lG-3h-FlN" firstAttribute="bottom" secondItem="6Ul-D6-QVr" secondAttribute="bottom" constant="303" id="nYW-S6-Owf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5lG-3h-FlN"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTxtFeild" destination="54r-UU-CDx" id="K2h-5p-CBi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="voD-4h-kbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3943.4782608695655" y="72.991071428571431"/>
+        </scene>
         <!--reqSVC-->
         <scene sceneID="kKU-ai-mcT">
             <objects>
@@ -312,7 +366,7 @@
         <!--signupSVC-->
         <scene sceneID="Fsw-zE-VaB">
             <objects>
-                <viewControllerPlaceholder storyboardName="signUp" referencedIdentifier="signupSVC" id="p1f-nV-Efa" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="signupSVC" storyboardName="signUp" referencedIdentifier="signupSVC" id="p1f-nV-Efa" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="HId-cR-eUK"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pde-kf-UPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
