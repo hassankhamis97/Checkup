@@ -10,6 +10,10 @@ import UIKit
 import Firebase
 class RequestsTableViewController: UITableViewController {
     
+    @IBAction func filterDataBtn(_ sender: UIBarButtonItem) {
+        let filterVC = storyboard?.instantiateViewController(withIdentifier: "filterSVC") as! FilterTestViewController
+        self.navigationController?.pushViewController(filterVC, animated: true)
+    }
     var labNames = ["El-Mokhtabar" , "Alpha","Alpha" ]
     var labImages = ["mokhtabar" , "alpha","alpha" ]
     var labDate = ["Apr 5, 2020","jun 1, 2020","May 14, 2020"]

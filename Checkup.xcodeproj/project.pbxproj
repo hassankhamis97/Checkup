@@ -69,6 +69,11 @@
 		4EC1626D246F5C1D0053F581 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1626C246F5C1D0053F581 /* User.swift */; };
 		4EC1626F246F5EEA0053F581 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1626E246F5EEA0053F581 /* Address.swift */; };
 		4EC16272246F6A580053F581 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC16271246F6A580053F581 /* Test.swift */; };
+		4EC1FD2D2472AA2A0029C499 /* AddressLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1FD2C2472AA2A0029C499 /* AddressLocationView.swift */; };
+		4EC1FD302472DDD70029C499 /* FilterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1FD2F2472DDD70029C499 /* FilterTestViewController.swift */; };
+		4EC1FD332472DDFF0029C499 /* LabsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1FD322472DDFF0029C499 /* LabsTable.swift */; };
+		4EC1FD3A2472E2530029C499 /* SmallDescLabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1FD392472E2530029C499 /* SmallDescLabTableViewCell.swift */; };
+		4EC1FD3C2472E6D90029C499 /* FilterLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1FD3B2472E6D90029C499 /* FilterLab.swift */; };
 		4EC8240A246FDADA0075C894 /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC82409246FDADA0075C894 /* DictionaryEncoder.swift */; };
 		4EC8240C246FDD0A0075C894 /* ReqPopUpFromHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8240B246FDD0A0075C894 /* ReqPopUpFromHomeViewController.swift */; };
 		4ECE5C4B246E898D00932947 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE5C4A246E898D00932947 /* LoginPresenter.swift */; };
@@ -232,6 +237,11 @@
 		4EC1626C246F5C1D0053F581 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4EC1626E246F5EEA0053F581 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		4EC16271246F6A580053F581 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		4EC1FD2C2472AA2A0029C499 /* AddressLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressLocationView.swift; sourceTree = "<group>"; };
+		4EC1FD2F2472DDD70029C499 /* FilterTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTestViewController.swift; sourceTree = "<group>"; };
+		4EC1FD322472DDFF0029C499 /* LabsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsTable.swift; sourceTree = "<group>"; };
+		4EC1FD392472E2530029C499 /* SmallDescLabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallDescLabTableViewCell.swift; sourceTree = "<group>"; };
+		4EC1FD3B2472E6D90029C499 /* FilterLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLab.swift; sourceTree = "<group>"; };
 		4EC82409246FDADA0075C894 /* DictionaryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoder.swift; sourceTree = "<group>"; };
 		4EC8240B246FDD0A0075C894 /* ReqPopUpFromHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqPopUpFromHomeViewController.swift; sourceTree = "<group>"; };
 		4ECE5C4A246E898D00932947 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -502,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				4E206DED246EE702007C401D /* Laboratory.swift */,
+				4EC1FD3B2472E6D90029C499 /* FilterLab.swift */,
 			);
 			path = Laboratory;
 			sourceTree = "<group>";
@@ -620,6 +631,7 @@
 		4E22F932243E73A90090693C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4EC1FD2E2472DD7A0029C499 /* FilterTests */,
 				4E2C9E0024708CB1007C6109 /* BranchDescription */,
 				A33CA625246D3D490014CF6B /* Employee */,
 				CC1A8771246D60DE0020C403 /* MoreView */,
@@ -660,7 +672,6 @@
 				4E432F0D2464F6EF00D1CACA /* HistoryTableViewController.swift */,
 				4E432F0E2464F6EF00D1CACA /* pdf.pdf */,
 				4E432F0F2464F6EF00D1CACA /* PdfResultViewController.swift */,
-				03F8346E2468990B000155A4 /* FilterTableViewController.swift */,
 				03F834702468D8D9000155A4 /* RadioButton.swift */,
 				0358339D246953FD008DD8C2 /* UIButtonExtension.swift */,
 				03FDA18A247035F20084C4AA /* PdfDescViewController.swift */,
@@ -758,9 +769,45 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		4EC1FD2B2472A9EC0029C499 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1FD2C2472AA2A0029C499 /* AddressLocationView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4EC1FD2E2472DD7A0029C499 /* FilterTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1FD342472E1D50029C499 /* TableViewCell */,
+				4EC1FD312472DDE40029C499 /* Extension */,
+				03F8346E2468990B000155A4 /* FilterTableViewController.swift */,
+				4EC1FD2F2472DDD70029C499 /* FilterTestViewController.swift */,
+			);
+			path = FilterTests;
+			sourceTree = "<group>";
+		};
+		4EC1FD312472DDE40029C499 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1FD322472DDFF0029C499 /* LabsTable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4EC1FD342472E1D50029C499 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1FD392472E2530029C499 /* SmallDescLabTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		4EC82407246FDAB60075C894 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				CCDF8BBE24713DF900F56B2D /* Annotation.swift */,
 				4EC82409246FDADA0075C894 /* DictionaryEncoder.swift */,
 				4E2C9DFC24706B6D007C6109 /* Alert.swift */,
 				4E15ACDF2471571D004418B1 /* Toast.swift */,
@@ -1075,6 +1122,7 @@
 		CC064E2E245B03080046E67F /* NewRequestView */ = {
 			isa = PBXGroup;
 			children = (
+				4EC1FD2B2472A9EC0029C499 /* Extension */,
 				4E2C9E032470BF8C007C6109 /* PopUp */,
 				CC064E2F245B03360046E67F /* NewRequestTableViewController.swift */,
 				CC064E31245B05FA0046E67F /* SliderCell.swift */,
@@ -1191,10 +1239,9 @@
 		CCDF8BBB24713DA400F56B2D /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				CCDF8BBC24713DE200F56B2D /* ExtensionLocationView.swift */,
 				CCD0BAD6246A035C007CF3EE /* LocationTableViewController.swift */,
 				CCCDA048246A95D9005549EA /* PopUpLocationViewController.swift */,
-				CCDF8BBC24713DE200F56B2D /* ExtensionLocationView.swift */,
-				CCDF8BBE24713DF900F56B2D /* Annotation.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -1436,6 +1483,7 @@
 				A39BF975246DA047003500A8 /* ImgTableViewCell.swift in Sources */,
 				4EE9F93424697CF300BB4A39 /* MessagingChatViewController.swift in Sources */,
 				4E0E3505246BB88400814696 /* MessageNotificationLabel.swift in Sources */,
+				4EC1FD2D2472AA2A0029C499 /* AddressLocationView.swift in Sources */,
 				CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */,
 				CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */,
 				4E206DFC246F076F007C401D /* Comment.swift in Sources */,
@@ -1452,6 +1500,7 @@
 				CCDF8BBF24713DF900F56B2D /* Annotation.swift in Sources */,
 				4EE9F94024699E3200BB4A39 /* SenderCellTableViewCell.swift in Sources */,
 				CCCDA04E246AD130005549EA /* SettingTableViewController.swift in Sources */,
+				4EC1FD3C2472E6D90029C499 /* FilterLab.swift in Sources */,
 				4EE9F9452469A47F00BB4A39 /* RecieverCellTableViewCell.swift in Sources */,
 				4E2C9E0224708D77007C6109 /* BranchDescriptionViewController.swift in Sources */,
 				03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */,
@@ -1469,11 +1518,13 @@
 				CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */,
 				4EE7EA2F246AF2B800BF434F /* DateTableViewCell.swift in Sources */,
 				CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */,
+				4EC1FD332472DDFF0029C499 /* LabsTable.swift in Sources */,
 				CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */,
 				4E206DF5246F0257007C401D /* LabBranch.swift in Sources */,
 				4EE9F9492469B70A00BB4A39 /* MessageLabel.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
 				4E2C9DFF24706E3E007C6109 /* IView.swift in Sources */,
+				4EC1FD302472DDD70029C499 /* FilterTestViewController.swift in Sources */,
 				CCCDA050246AE5D5005549EA /* PassWordDetailsTableViewController.swift in Sources */,
 				CC8A1046245E087C007856BF /* IFillDataCells.swift in Sources */,
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
@@ -1482,6 +1533,7 @@
 				4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */,
 				03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */,
 				A33CA62B246D3F610014CF6B /* UserCustomTableViewCell.swift in Sources */,
+				4EC1FD3A2472E2530029C499 /* SmallDescLabTableViewCell.swift in Sources */,
 				4E4EA640247015F000309CAF /* NewRequestResponseExtension.swift in Sources */,
 				4E432F132464F6EF00D1CACA /* HistoryTableViewCell.swift in Sources */,
 				4E206DF8246F066A007C401D /* Phone.swift in Sources */,

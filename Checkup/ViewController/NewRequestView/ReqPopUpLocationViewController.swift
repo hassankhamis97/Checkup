@@ -10,7 +10,7 @@ import UIKit
 
 class ReqPopUpLocationViewController: UIViewController {
 
- 
+// let locationManager = CLLocationManager()
     
     @IBAction func autoLocateBtn(_ sender: Any) {
         

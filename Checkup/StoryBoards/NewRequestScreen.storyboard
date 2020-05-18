@@ -782,6 +782,9 @@
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-e4-gBS">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="8bz-sq-D9y" id="NAK-p6-X9I"/>
+                                                    </connections>
                                                 </mapView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -826,6 +829,13 @@
                             <outlet property="delegate" destination="8bz-sq-D9y" id="4J5-wu-FfJ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="ApartmentNoTxt" destination="NhD-Tq-lfL" id="Lwn-Fa-Z93"/>
+                        <outlet property="address" destination="uas-Ll-9DO" id="xsO-62-cL7"/>
+                        <outlet property="buildingNo" destination="aLX-Ww-4Wa" id="yEE-Iu-BBW"/>
+                        <outlet property="floorNoTxt" destination="LG1-eJ-JeJ" id="eA6-fb-T8b"/>
+                        <outlet property="mapView" destination="LGK-e4-gBS" id="mDz-Op-HK4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4L-Mr-fVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,9 +7,17 @@
 //
 
 import UIKit
-
+import SkyFloatingLabelTextField
+import MapKit
 class ReqLocationTableViewController: UITableViewController {
 
+    @IBOutlet var addressTxt: SkyFloatingLabelTextField!
+    @IBOutlet var buildingNoTxt: SkyFloatingLabelTextField!
+   
+    @IBOutlet var floorNoTxt: SkyFloatingLabelTextField!
+    @IBOutlet var ApartmentNoTxt: SkyFloatingLabelTextField!
+    @IBOutlet var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
