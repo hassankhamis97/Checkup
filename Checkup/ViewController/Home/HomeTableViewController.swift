@@ -44,7 +44,7 @@ class HomeTableViewController: UITableViewController   {
 //        
         
         var reatTime = RealTime()
-        reatTime.initGeneratedCode()
+//        reatTime.initGeneratedCode()
 //        reatTime.addLab(name: "lab10", image:  "")
         var p1 = Phone(number: "03482584", isLand: true)
         var p2 = Phone(number: "01111111", isLand: false)

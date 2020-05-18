@@ -33,4 +33,6 @@ struct Test : Encodable{
     var radioReason: String?
     var refuseReason: String?
     var generatedCode: String?
+    var timeStampRequest: Int64?
+    
 }
