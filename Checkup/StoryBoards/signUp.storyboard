@@ -260,7 +260,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="signUpBtn:" destination="BHA-3j-n3e" eventType="touchUpInside" id="Q6m-yq-P5M"/>
+                                                        <action selector="saveDataSignupBtn:" destination="BHA-3j-n3e" eventType="touchUpInside" id="jA7-QC-UyE"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -284,7 +284,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="signUpBtn" destination="Qkf-Xa-nM5" id="bYf-5T-OTU"/>
+                        <outlet property="confirmPassword" destination="aeX-cc-qms" id="y5y-pn-kDD"/>
+                        <outlet property="email" destination="Cqp-Xd-ZLO" id="E4V-0E-d2W"/>
+                        <outlet property="password" destination="uo1-KL-Vkb" id="HhP-Ec-uDs"/>
+                        <outlet property="signUpBtn" destination="Qkf-Xa-nM5" id="DY7-jJ-91P"/>
+                        <outlet property="userNAme" destination="hQf-ON-fsU" id="dTD-NC-qAT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifg-z5-cwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
