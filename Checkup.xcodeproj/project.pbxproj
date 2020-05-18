@@ -121,6 +121,9 @@
 		CC5DFD0C2468C22F003B9F18 /* PopUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */; };
 		CC5DFD0E2468C242003B9F18 /* PopUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD0D2468C242003B9F18 /* PopUpCollectionViewCell.swift */; };
 		CC7092D92458C131003E8968 /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7092D82458C131003E8968 /* signUp.storyboard */; };
+		CC7617212472D51F0084CC6E /* ExtensionEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7617202472D51F0084CC6E /* ExtensionEditProfile.swift */; };
+		CC761723247305B40084CC6E /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761722247305B40084CC6E /* EditProfileModel.swift */; };
+		CC76172524730BF80084CC6E /* ExtensionEditProfileMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76172424730BF80084CC6E /* ExtensionEditProfileMVP.swift */; };
 		CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */; };
 		CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */; };
 		CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */; };
@@ -284,6 +287,9 @@
 		CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpTableViewController.swift; sourceTree = "<group>"; };
 		CC5DFD0D2468C242003B9F18 /* PopUpCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC7092D82458C131003E8968 /* signUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = signUp.storyboard; sourceTree = "<group>"; };
+		CC7617202472D51F0084CC6E /* ExtensionEditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionEditProfile.swift; sourceTree = "<group>"; };
+		CC761722247305B40084CC6E /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
+		CC76172424730BF80084CC6E /* ExtensionEditProfileMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionEditProfileMVP.swift; sourceTree = "<group>"; };
 		CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamingGroupViewController.swift; sourceTree = "<group>"; };
@@ -794,9 +800,10 @@
 			children = (
 				4EC82407246FDAB60075C894 /* Custom */,
 				4ECE5C4D246E89C200932947 /* LoginModel.swift */,
-				CC157CA224700F2B001AE122 /* ProfileModel.swift */,
 				4E4EA637247010DE00309CAF /* NewRequestModel.swift */,
 				4E15ACE3247180E5004418B1 /* GetRequestsModel.swift */,
+				CC157CA224700F2B001AE122 /* ProfileModel.swift */,
+				CC761722247305B40084CC6E /* EditProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1146,6 +1153,8 @@
 			isa = PBXGroup;
 			children = (
 				CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */,
+				CC7617202472D51F0084CC6E /* ExtensionEditProfile.swift */,
+				CC76172424730BF80084CC6E /* ExtensionEditProfileMVP.swift */,
 			);
 			path = "Edit Profile View";
 			sourceTree = "<group>";
@@ -1417,6 +1426,7 @@
 				4E15ACE72471818B004418B1 /* GetRequestsPresenter.swift in Sources */,
 				03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */,
 				4E22F8FF243E6E6C0090693C /* SceneDelegate.swift in Sources */,
+				CC76172524730BF80084CC6E /* ExtensionEditProfileMVP.swift in Sources */,
 				4EE7EA34246B023000BF434F /* KeyboardLayoutConstraint.swift in Sources */,
 				4E15ACDB24712F6E004418B1 /* ShowNewRequest.swift in Sources */,
 				CCCDA045246A94F5005549EA /* ReqLocationTableViewController.swift in Sources */,
@@ -1444,6 +1454,7 @@
 				4E15ACE4247180E5004418B1 /* GetRequestsModel.swift in Sources */,
 				4E15ACEA24718279004418B1 /* GetRequestsContract.swift in Sources */,
 				4E22F907243E6E6C0090693C /* Checkup.xcdatamodeld in Sources */,
+				CC761723247305B40084CC6E /* EditProfileModel.swift in Sources */,
 				4EBBC940246B595000C7978D /* MainChatViewController.swift in Sources */,
 				4ECE5C4E246E89C200932947 /* LoginModel.swift in Sources */,
 				A33CA62F246D4DA00014CF6B /* UserNeedToTakeSample.swift in Sources */,
@@ -1458,6 +1469,7 @@
 				CCDF8BBD24713DE200F56B2D /* ExtensionLocationView.swift in Sources */,
 				4E206DF2246EF241007C401D /* RealTime.swift in Sources */,
 				CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */,
+				CC7617212472D51F0084CC6E /* ExtensionEditProfile.swift in Sources */,
 				CCCDA049246A95D9005549EA /* PopUpLocationViewController.swift in Sources */,
 				CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */,
 				4ECE5C5C246EA85300932947 /* LoginResponseExtension.swift in Sources */,

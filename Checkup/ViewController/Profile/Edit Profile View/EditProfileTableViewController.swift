@@ -8,6 +8,7 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import Firebase
 
 class EditProfileTableViewController: UITableViewController, UIPickerViewDelegate,UIPickerViewDataSource {
     
@@ -15,15 +16,29 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     @IBOutlet weak var birthDateTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var profileImg: UIImageView!
     
+    @IBOutlet weak var nameTextField: SkyFloatingLabelTextFieldWithIcon!
+
+    @IBOutlet weak var emailTextField: SkyFloatingLabelTextFieldWithIcon!
+    
+    @IBOutlet weak var mobileNumTextField: SkyFloatingLabelTextFieldWithIcon!
+    
+    @IBOutlet weak var landPhonNumTextField: SkyFloatingLabelTextFieldWithIcon!
+    @IBOutlet weak var insuranceTextField: SkyFloatingLabelTextFieldWithIcon!
+
+    @IBOutlet weak var addressTextField: SkyFloatingLabelTextFieldWithIcon!
+    
+    
     
     
     var imagePicker: ImagePicker!
     var datePicker=UIDatePicker()
     var genderPickerView=UIPickerView()
     
-    
     let genderArray=["Male","Female"]
+    var imageUrl:String!
+    var addressObj:Address!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImg.layer.masksToBounds = false
@@ -37,6 +52,8 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         genderTextField.inputView=genderPickerView
         
         createDatePicker()
+        
+    
     }
     
     @IBAction func changeImgBtn(_ sender: Any) {
@@ -45,27 +62,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     }
     
     
-    func createDatePicker(){
-        
-        let toolbar=UIToolbar()
-        toolbar.sizeToFit()
-        let doneBtn=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action:#selector(donePressed))
-        toolbar.setItems(([doneBtn]), animated: true)
-        birthDateTextField.inputAccessoryView=toolbar
-        birthDateTextField.inputView=datePicker
-        datePicker.datePickerMode = .date
-        
-    }
-    
-    @objc func donePressed(){
-        
-        
-        let formatter=DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        birthDateTextField.text=formatter.string(from: datePicker.date)
-        self.view.endEditing(true)
-    }
+   
     
     
     // for gender picker view :
@@ -92,10 +89,46 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     
     
     
-}
-extension EditProfileTableViewController: ImagePickerDelegate {
     
-    func didSelect(image: UIImage?) {
-        self.profileImg.image = image
+    
+ 
+    
+    
+    
+    @IBAction func editAddressBtn(_ sender: Any) {
     }
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func saveDataBtn(_ sender: Any) {
+        
+        let id=Auth.auth().currentUser?.uid
+        let name=nameTextField.text
+        let email = emailTextField.text
+        let birthdate=birthDateTextField.text
+        let gender=genderTextField.text
+        let mobileNum=mobileNumTextField.text
+        let landNum=landPhonNumTextField.text
+        let insurance=insuranceTextField.text
+        var address=addressObj
+        
+        var phoneArray=[Phone]()
+        var mob=Phone(number: mobileNum, isLand: false)
+        var land=Phone(number: landNum, isLand: true)
+        phoneArray.append(mob)
+        phoneArray.append(land)
+        
+        var user=User(id: id, name: name, email: email, birthdate: birthdate, gender: gender, phone: phoneArray, insurance: insurance, address: addressObj, imagePath:"")
+        
+        var editProfilePresenterRef = EditProfilePresenter(editProfileView: self)
+        
+        editProfilePresenterRef.editUser(user: user)
+        
+    }
+    
 }
+

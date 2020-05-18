@@ -43,20 +43,23 @@ class HomeTableViewController: UITableViewController   {
 //        
 //        
         
-        var reatTime = RealTime()
-        reatTime.initGeneratedCode()
-//        reatTime.addLab(name: "lab10", image:  "")
-        var p1 = Phone(number: "03482584", isLand: true)
-        var p2 = Phone(number: "0129300", isLand: false)
-        var phoneArr = [Phone]()
-        phoneArr.append(p1)
-        //phoneArr.append(p2)
-        var addressObj = Address(address: "Toreel,Mansoura", buildingNo: "2", floorNo: "", apartmentNo: "", longitude: "31.4913", latitude: "31.1656")
+//        var reatTime = RealTime()
+//        reatTime.initGeneratedCode()
+////        reatTime.addLab(name: "lab10", image:  "")
+//        var p1 = Phone(number: "03482584", isLand: true)
+//        var p2 = Phone(number: "0129300", isLand: false)
+//        var phoneArr = [Phone]()
+//        phoneArr.append(p1)
+//        //phoneArr.append(p2)
+//        var addressObj = Address(address: "Toreel,Mansoura", buildingNo: "2", floorNo: "", apartmentNo: "", longitude: "31.4913", latitude: "31.1656")
 //        var addressObj = Address()
         
 //        var addressObj = Address()
-        reatTime.addUser(id: "gLcrV5nCzhREMdrgH57eDfRanr22",  email: "asd@asd.com", birthdate: "", gender: "", phone:phoneArr , insurance: "", address: addressObj, imagePath: "", name:"ahmed ali")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
+        /*
+        reatTime.addUser(id: "gLcrV5nCzhREMdrgH57eDfRanr22",  email: "asd@asd.com", birthdate: "", gender: "", phone:phoneArr , insurance: "eng", address: addressObj, imagePath: "", name:"ahmed ali")
+ 
+ */
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
         
         
         

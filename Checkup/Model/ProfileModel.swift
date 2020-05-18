@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class ProfileModel{
+class ProfileModel:IProfileModel{
     
     var phoNArray=[Phone]()
     var profilePresenterRef:IProfilePresenter!
