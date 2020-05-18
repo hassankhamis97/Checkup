@@ -7,14 +7,14 @@
 //
 
 import Foundation
-protocol IEditProfileView {
-    func renderEditProfileView ()
+protocol IEditProfileView :IBase {
+    func updatedUser ()
 }
 protocol IEditProfilePresenter {
-    func EditUser(user:User)
+    func editUser(user:User)
     func onSuccess()
     func onFail(message: String)
 }
 protocol IEditProfileModel {
-    func getUser(user:User)
+    func editUser(user:User)
 }

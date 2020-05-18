@@ -27,8 +27,14 @@ class ProfileTableViewController: UITableViewController {
     
      var user=User()
     var counter=0;
+    
+    var profilePresenterRef:ProfilePresenter!
     override func viewWillAppear(_ animated: Bool) {
     
+        profilePresenterRef = ProfilePresenter(profileView: self)
+               let userId = Auth.auth().currentUser?.uid
+               profilePresenterRef.getUser(userId: userId!)
+        
     }
     
     
@@ -78,9 +84,7 @@ class ProfileTableViewController: UITableViewController {
         profileImg.clipsToBounds = true
         
         
-        var profilePresenterRef = ProfilePresenter(profileView: self)
-        let userId = Auth.auth().currentUser?.uid
-        profilePresenterRef.getUser(userId: userId!)
+   
     }
     
     
