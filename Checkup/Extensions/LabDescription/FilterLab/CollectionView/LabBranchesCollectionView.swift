@@ -24,11 +24,17 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
         
     }
     @objc func newRequestAction(_ sender : UIButton){
-        var newRequestVC = storyboard!.instantiateViewController(withIdentifier: "newReqSVC") as! NewRequestTableViewController
-        newRequestVC.branchId = labBranches[sender.tag]
-        self.navigationController?.pushViewController(newRequestVC, animated: true)
-    }
+        if(true) { //check if branch has from home feature or not
+            let reqLocPopUpVC = storyboard!.instantiateViewController(withIdentifier: "ReqPopUpFromHomeSVC") as! ReqPopUpFromHomeViewController
+            reqLocPopUpVC.showNewRequestRef = self
+            present(reqLocPopUpVC, animated: true, completion: nil)
+        }
+        else{
+            transferToNewReq(isFromHome: false)
+        }
+
     
+    }
     /*
     override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         print("called")
@@ -39,14 +45,14 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
     }*/
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("cell is selected")
-        var details = storyboard!.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
-        self.navigationController?.pushViewController(details, animated: true)
+//        print("cell is selected")
+//        var details = storyboard!.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
+//        self.navigationController?.pushViewController(details, animated: true)
     }
 
-
+}
      
     
  
  
-}
+

@@ -154,6 +154,7 @@ extension TestNamingGroupViewController:UITableViewDelegate,UITableViewDataSourc
                {
 //                filteredNamesFromSearch.remove(at: i)
                 selectedTests.removeObject(at: i)
+                break
             }
 //                for item in selectedTests{
 //                               if (item as! String == x)

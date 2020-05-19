@@ -11,6 +11,11 @@ import UIKit
 @available(iOS 13.0, *)
 class SettingTableViewController: UITableViewController {
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

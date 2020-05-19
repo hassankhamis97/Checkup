@@ -8,6 +8,7 @@
 
 import Foundation
 class LoginPresenter: ILoginPresenter {
+    
     var loginViewRef : ILoginView!
     init(loginViewRef : ILoginView) {
         self.loginViewRef = loginViewRef

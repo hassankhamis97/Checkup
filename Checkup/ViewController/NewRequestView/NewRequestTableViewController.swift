@@ -41,7 +41,13 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var isFromHome: Bool?
     @IBAction func saveNewRequestBtn(_ sender: UIButton) {
         if(checkValidation()){
-            branchId = "0G9djW7SzMXGTiXKdGkiYuiTY3g1"
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM dd, yyyy"
+            let currentDate = dateFormatter.string(from: date)
+            dateFormatter.dateFormat = "H:mm a"
+            let currentTime = dateFormatter.string(from: date)
+            
             var address = Address(address: "eleslam Street", buildingNo: "22", floorNo: "5", apartmentNo: "6", longitude: "", latitude: "")
             var testObj = Test()
             testObj.testName = testTexts
@@ -52,7 +58,10 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             testObj.address = address
             testObj.userId = Auth.auth().currentUser?.uid
             testObj.status = "PendingForLabConfirmation"
-
+            testObj.dateRequest = currentDate
+            testObj.timeRequest = currentTime
+            testObj.timeStampRequest = Date().toMillis()
+            testObj.isFromHome = isFromHome
             var newRequestPresenter = NewRequestPresenter(newRequestViewRef: self)
             newRequestPresenter.saveRequest(testObj: testObj, roushettaImages: DatabaseImageArray)
         }
@@ -196,7 +205,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         }
         
         if indexPath.row==6{// FILLED ADRESS
-            if(y==1)
+            if(isFromHome! && y==1)
             {
                 return 70
             }

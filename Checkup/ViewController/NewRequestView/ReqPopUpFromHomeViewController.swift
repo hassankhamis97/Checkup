@@ -8,27 +8,23 @@
 
 import UIKit
 
-class ReqPopUpFromHomeViewController: UIViewController {
-    var branchId: String?
-    var labId: String?
+class ReqPopUpFromHomeViewController: UIViewController  {
+//    var branchId: String?
+//    var labId: String?
+    var showNewRequestRef : IShowNewRequest?
     @IBAction func fromHomeBtn(_ sender: UIButton) {
-        transferToNewReq(isFromHome: true)
+        dismiss(animated: true, completion: nil)
+        showNewRequestRef!.transferToNewReq(isFromHome: true)
     }
     @IBAction func fromLabBtn(_ sender: UIButton) {
-        transferToNewReq(isFromHome: false)
+        dismiss(animated: true, completion: nil)
+        showNewRequestRef!.transferToNewReq(isFromHome: false)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-    func transferToNewReq(isFromHome: Bool) {
-        var newRequestVC = storyboard!.instantiateViewController(withIdentifier: "newReqSVC") as! NewRequestTableViewController
-         newRequestVC.branchId = branchId
-        newRequestVC.labId = labId
-        newRequestVC.isFromHome = isFromHome
-         self.navigationController?.pushViewController(newRequestVC, animated: true)
-    }
+    
     
 
     /*

@@ -1,0 +1,136 @@
+//
+//  GetRequests.swift
+//  Checkup
+//
+//  Created by Hassan Khamis on 5/17/20.
+//  Copyright © 2020 Hassan Khamis. All rights reserved.
+//
+
+import Foundation
+
+import Firebase
+import FirebaseFirestore
+
+class GetRequestsModel: IGetRequestsModel {
+    
+    var ref: DatabaseReference!
+    var getRequestsPresenterRef : IGetRequestsPresenter
+    let db : Firestore?
+
+    init(getRequestsPresenterRef : IGetRequestsPresenter) {
+        self.getRequestsPresenterRef = getRequestsPresenterRef
+        ref = Database.database().reference()
+        db = Firestore.firestore()
+
+    }
+    func getRequests() {
+//        .orderByChild("status").startAt("PendingForLabConfirmation").endAt("Done")
+        var requests = [Request]()
+        
+//        .whereField("userId", isEqualTo: "gLcrV5nCzhREMdrgH57eDfRanr22").order(by: "userId")
+//        let docRef = db!.collection("TestsHassan").document("IaTcOwrdXhVBa7qx40FOkW5b94J3").collection("IaTcOwrdXhVBa7qx40FOkW5b94J3").whereField("userId", isEqualTo: "gLcrV5nCzhREMdrgH57eDfRanr22").whereField("status", in: ["PendingForLabConfirmation" , "Done"]).order(by: "generatedCode").limit(to: 1).getDocuments() { (querySnapshot, err) in
+        let docRef = db!.collection("TestsHassan").whereField("userId", isEqualTo: "gLcrV5nCzhREMdrgH57eDfRanr22").whereField("status", in: ["PendingForLabConfirmation" , "Done"]).getDocuments() { (querySnapshot, err) in
+//        let docRef = db!.collection("TestsHassan").whereField("timeStampRequest", isGreaterThanOrEqualTo: 1589789967999).whereField("timeStampRequest", isLessThanOrEqualTo: 1589790079595).order(by: "timeStampRequest").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                        print(document.data())
+                        
+                    }
+                    guard let lastSnapshot = querySnapshot!.documents.last else {
+                        // The collection is empty.
+                        return
+                    }
+                    let docRef2 = self.db!.collection("TestsHassan").document("IaTcOwrdXhVBa7qx40FOkW5b94J3").collection("IaTcOwrdXhVBa7qx40FOkW5b94J3").whereField("userId", isEqualTo: "gLcrV5nCzhREMdrgH57eDfRanr22").whereField("status", in: ["PendingForLabConfirmation" , "Done"]).order(by: "generatedCode", descending: true).limit(to: 1).start(afterDocument: lastSnapshot).getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            print("\(document.documentID) => \(document.data())")
+                            print(document.data())
+                            
+                        }
+                    }
+                }
+        }
+
+        // Force the SDK to fetch the document from the cache. Could also specify
+        // FirestoreSource.server or FirestoreSource.default.
+//        docRef.getDocuments(source: <#T##FirestoreSource#>, completion: <#T##FIRQuerySnapshotBlock##FIRQuerySnapshotBlock##(QuerySnapshot?, Error?) -> Void#>)
+//        docRef.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+//                print("Document data: \(dataDescription)")
+//
+//                let data = document.data()
+//
+//                let q1 = data!["q1"]! as? Bool ?? true
+//
+//                if q1 == false {
+//                 //false code
+//                } else {
+//                //true code
+//                }
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
+//        docRef.getDocuments(source: .cache, completion: nil) { (document, error) in
+//          if let document = document {
+//            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+//            print("Cached document data: \(dataDescription)")
+//          } else {
+//            print("Document does not exist in cache")
+//          }
+//        }
+
+        
+        
+        
+
+
+//        ref.child("TestsHassan").observeSingleEvent(of: .value, with: { (snapshot) in
+//            // Get user value
+//            for data in snapshot.children {
+//                let snap = data as! DataSnapshot
+//
+//                print(snap)
+//                self.ref.child("TestsHassan").child(snap.key).observeSingleEvent(of: .value, with: { (snapshot) in
+//                    for dataChild in snapshot.children {
+//                        let snapChild = dataChild as! DataSnapshot
+//                        let dataDic = snapChild.value as? NSDictionary
+//                        let status = dataDic!["status"] as! String
+//                        if (status == "PendingForLabConfirmation") {
+//                            self.ref.child("Lab").child(snap.key).observeSingleEvent(of: .value, with: { (snapshotLab) in
+//                                let labDic = snapshotLab.value as? NSDictionary
+//                                var request = Request()
+//                                request.id = dataDic!["id"] as! String
+//                                request.dateRequest = dataDic!["dateRequest"] as! String
+//                                request.status = dataDic!["status"] as! String
+//                                request.labName = labDic!["name"] as! String
+//                                request.labPhoto = dataDic!["image"] as! String
+//                                requests.append(request)
+//                            });
+//                        }
+//                        print(snapChild)
+////                        .queryOrdered(byChild: "status").queryEqual(toValue: "PendingForLabConfirmation")
+//                       print(snapChild)
+//                        self.ref.child("TestsHassan").child(snap.key).child(snapChild.key).observeSingleEvent(of: .value, with: { (snapshot) in
+////                            print(snapshot)
+//                        });
+//                    }
+//                    self.getRequestsPresenterRef.onSuccess(requests: requests)
+//                });
+//            };
+//            let value = snapshot.value as? NSDictionary
+//            var code = value?["code"] as? Int ?? 0
+//            code += 1
+            // ...
+//        }) { (error) in
+//            print(error.localizedDescription)
+//        }
+    }
+}
+}
