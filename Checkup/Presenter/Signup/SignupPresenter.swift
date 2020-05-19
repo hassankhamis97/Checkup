@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import Firebase
 
 class SignupPresenter: ISignupPresenter {
+    
+    
+    var userName:String!
+    var email:String!
     
     var signupViewRef : ISignupView!
     init(signupViewRef : ISignupView) {
@@ -23,6 +28,8 @@ class SignupPresenter: ISignupPresenter {
     
     func onSuccess() {
          signupViewRef.hideIndicator()
+        
+       
     }
     
     func onFail(message: String) {

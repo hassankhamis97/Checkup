@@ -110,7 +110,7 @@ class HomeTableViewController: UITableViewController   {
 extension HomeTableViewController: ImageSlideshowDelegate {
   
     func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int){
-        print("current page:", page)
+//        print("current page:", page)
     }
 }
 extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
