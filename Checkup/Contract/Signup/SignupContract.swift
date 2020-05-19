@@ -11,10 +11,10 @@ import Foundation
 protocol ISignupView : IBase {
 }
 protocol ISignupPresenter {
-    func saveAuthDate(username: String, email: String,password: String)
+    func saveAuthDate(username: String, email: String,password: String, confirmPassword: String) -> Bool
     func onSuccess()
     func onFail(message: String)
 }
 protocol ISignupModel {
-    func saveAuthDate(username: String, email: String,password: String)
+    func saveAuthDate(username: String, email: String,password: String, confirmPassword: String) -> Bool
 }

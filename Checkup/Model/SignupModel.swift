@@ -16,32 +16,51 @@ class SignupModel: ISignupModel {
     init(singupPresenterRef : ISignupPresenter) {
         self.singupPresenterRef = singupPresenterRef
     }
-    func saveAuthDate(username: String, email: String, password: String) {
+    func saveAuthDate(username: String, email: String, password: String, confirmPassword: String) -> Bool {
         
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+         var check: Bool = false
+        
+        if username.count > 0 && email.count > 0 && password.count >= 6 && password == confirmPassword {
             
-            if authResult != nil {
+           check = true
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 
-                
-                var id = authResult?.user.uid
-                var phoneArray=[Phone]()
-                var addressObj=Address()
-                let realTime=RealTime()
-                realTime.addUser(id: id ?? "", email: email, birthdate: "", gender: "", phone: phoneArray, insurance: "", address: addressObj, imagePath: "", name: username)
-                
-                self.singupPresenterRef.onSuccess()
+                if let x = error {
+                    let err = x as NSError
+                    switch err.code {
+                    case AuthErrorCode.wrongPassword.rawValue:
+                        print("wrong password")
+                    case AuthErrorCode.invalidEmail.rawValue:
+                        print("invalid email")
+                    case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
+                        print("accountExistsWithDifferentCredential")
+                    case AuthErrorCode.emailAlreadyInUse.rawValue: //<- Your Error
+                        print("email is alreay in use")
+                    default:
+                        print("unknown error: \(err.localizedDescription)")
+                    }
+                    check = false
+                }
+                if authResult != nil {
+                    
+                    let id = authResult?.user.uid
+                    let phoneArray=[Phone]()
+                    let addressObj=Address()
+                    let realTime=RealTime()
+                    realTime.addUser(id: id ?? "", email: email, birthdate: "", gender: "", phone: phoneArray, insurance: "", address: addressObj, imagePath: "", name: username)
+                    
+                    self.singupPresenterRef.onSuccess()
+                    check = true
+                }
+                else {
+                    self.singupPresenterRef.onFail(message: "Email is already exist")
+                    check = false
+                }
             }
-            else {
-                self.singupPresenterRef.onFail(message: error as! String)
-            }
+            return check
+        } else {
+            self.singupPresenterRef.onFail(message: "Enter Vaild Data")
+            return check
         }
-        
-        //        writeUserData(username: username, password: password)
     }
-    
-    
-    //        func writeUserData(username: String, password: String) {
-    //            Database.database().reference(withPath: "checkup-23ffe").child("Users").child(Auth.auth().currentUser!.uid).updateChildValues(["username": username, "password": password])
-    //          }
-    
 }

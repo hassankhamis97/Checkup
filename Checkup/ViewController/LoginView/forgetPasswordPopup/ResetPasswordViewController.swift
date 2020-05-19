@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class ResetPasswordViewController: UIViewController {
 
+    @IBOutlet weak var errorLbl: UILabel!
     
     @IBOutlet weak var emailTxtFeild: UITextField!
     
@@ -18,14 +19,23 @@ class ResetPasswordViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        errorLbl.isHidden = true
     }
     
     @IBAction func resetPasswordBtn(_ sender: Any) {
         
             //reset password
         if emailTxtFeild.text!.count > 0 {
-            Auth.auth().sendPasswordReset(withEmail:emailTxtFeild.text!) { error in}
+        Auth.auth().sendPasswordReset(withEmail:emailTxtFeild.text!) { error in}
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            errorLbl.isHidden = false
         }
+    }
+    
+    @IBAction func cancelReset(_ sender: Any) {
+        
         self.dismiss(animated: true, completion: nil)
     }
+    
 }

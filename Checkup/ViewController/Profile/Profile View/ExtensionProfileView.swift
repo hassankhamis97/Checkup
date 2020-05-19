@@ -26,11 +26,10 @@ extension ProfileTableViewController:IProfileView{
 
     func errorMessage(msg: String) {
 
+       let alert = UIAlertController(title: "Internet Connection", message:msg, preferredStyle: .alert)
 
-               let alert = UIAlertController(title: "Internet Connection", message:msg, preferredStyle: .alert)
-
-                      alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                      alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+              alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
     }
 
 

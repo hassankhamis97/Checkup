@@ -20,16 +20,14 @@ class SignupPresenter: ISignupPresenter {
         self.signupViewRef = signupViewRef
     }
     
-    func saveAuthDate(username: String, email: String, password: String) {
+    func saveAuthDate(username: String, email: String, password: String, confirmPassword: String) -> Bool {
         signupViewRef.showIndicator()
         let signupModel = SignupModel(singupPresenterRef: self)
-        signupModel.saveAuthDate(username: username, email: email, password: password)
+        return signupModel.saveAuthDate(username: username, email: email, password: password, confirmPassword: confirmPassword)
     }
     
     func onSuccess() {
          signupViewRef.hideIndicator()
-        
-       
     }
     
     func onFail(message: String) {
