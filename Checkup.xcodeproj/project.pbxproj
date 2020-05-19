@@ -20,6 +20,16 @@
 		03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F8346E2468990B000155A4 /* FilterTableViewController.swift */; };
 		03F834712468D8D9000155A4 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F834702468D8D9000155A4 /* RadioButton.swift */; };
 		03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA18A247035F20084C4AA /* PdfDescViewController.swift */; };
+		03FDA1902470B4440084C4AA /* BranchDescriptionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA18F2470B4440084C4AA /* BranchDescriptionTableView.swift */; };
+		03FDA1932470BC8F0084C4AA /* FirstStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA1922470BC8F0084C4AA /* FirstStaticTableViewCell.swift */; };
+		03FDA1952470C9FD0084C4AA /* SecStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA1942470C9FD0084C4AA /* SecStaticTableViewCell.swift */; };
+		03FDA1972470CA3A0084C4AA /* ThirdStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA1962470CA3A0084C4AA /* ThirdStaticTableViewCell.swift */; };
+		03FDA1992470CA4F0084C4AA /* FourthStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA1982470CA4F0084C4AA /* FourthStaticTableViewCell.swift */; };
+		03FDA19B2470CA650084C4AA /* FifthStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA19A2470CA650084C4AA /* FifthStaticTableViewCell.swift */; };
+		03FDA19D2470CA760084C4AA /* SisxthStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA19C2470CA760084C4AA /* SisxthStaticTableViewCell.swift */; };
+		03FDA19F2470CA8D0084C4AA /* SeventhStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA19E2470CA8D0084C4AA /* SeventhStaticTableViewCell.swift */; };
+		03FDA1A12470CAB10084C4AA /* EighthStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA1A02470CAB10084C4AA /* EighthStaticTableViewCell.swift */; };
+		03FDA1A32470CAC50084C4AA /* NinthStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA1A22470CAC50084C4AA /* NinthStaticTableViewCell.swift */; };
 		0F69C382A23AE66CCD5E2C01 /* Pods_Checkup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FF798CDDF112788FABCBE4 /* Pods_Checkup.framework */; };
 		4E0E3502246BA11B00814696 /* ConvertTimeStampToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E3501246BA11B00814696 /* ConvertTimeStampToDate.swift */; };
 		4E0E3505246BB88400814696 /* MessageNotificationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E3504246BB88400814696 /* MessageNotificationLabel.swift */; };
@@ -160,6 +170,16 @@
 		03F8346E2468990B000155A4 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		03F834702468D8D9000155A4 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		03FDA18A247035F20084C4AA /* PdfDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfDescViewController.swift; sourceTree = "<group>"; };
+		03FDA18F2470B4440084C4AA /* BranchDescriptionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescriptionTableView.swift; sourceTree = "<group>"; };
+		03FDA1922470BC8F0084C4AA /* FirstStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStaticTableViewCell.swift; sourceTree = "<group>"; };
+		03FDA1942470C9FD0084C4AA /* SecStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecStaticTableViewCell.swift; sourceTree = "<group>"; };
+		03FDA1962470CA3A0084C4AA /* ThirdStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdStaticTableViewCell.swift; sourceTree = "<group>"; };
+		03FDA1982470CA4F0084C4AA /* FourthStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthStaticTableViewCell.swift; sourceTree = "<group>"; };
+		03FDA19A2470CA650084C4AA /* FifthStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthStaticTableViewCell.swift; sourceTree = "<group>"; };
+		03FDA19C2470CA760084C4AA /* SisxthStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SisxthStaticTableViewCell.swift; sourceTree = "<group>"; };
+		03FDA19E2470CA8D0084C4AA /* SeventhStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhStaticTableViewCell.swift; sourceTree = "<group>"; };
+		03FDA1A02470CAB10084C4AA /* EighthStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EighthStaticTableViewCell.swift; sourceTree = "<group>"; };
+		03FDA1A22470CAC50084C4AA /* NinthStaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinthStaticTableViewCell.swift; sourceTree = "<group>"; };
 		09FF798CDDF112788FABCBE4 /* Pods_Checkup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checkup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0E3501246BA11B00814696 /* ConvertTimeStampToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTimeStampToDate.swift; sourceTree = "<group>"; };
 		4E0E3504246BB88400814696 /* MessageNotificationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNotificationLabel.swift; sourceTree = "<group>"; };
@@ -365,6 +385,30 @@
 			path = LabBranch;
 			sourceTree = "<group>";
 		};
+		03FDA18E2470B38F0084C4AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				03FDA18F2470B4440084C4AA /* BranchDescriptionTableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		03FDA1912470BC570084C4AA /* StaticCells */ = {
+			isa = PBXGroup;
+			children = (
+				03FDA1922470BC8F0084C4AA /* FirstStaticTableViewCell.swift */,
+				03FDA1942470C9FD0084C4AA /* SecStaticTableViewCell.swift */,
+				03FDA1962470CA3A0084C4AA /* ThirdStaticTableViewCell.swift */,
+				03FDA1982470CA4F0084C4AA /* FourthStaticTableViewCell.swift */,
+				03FDA19A2470CA650084C4AA /* FifthStaticTableViewCell.swift */,
+				03FDA19C2470CA760084C4AA /* SisxthStaticTableViewCell.swift */,
+				03FDA19E2470CA8D0084C4AA /* SeventhStaticTableViewCell.swift */,
+				03FDA1A02470CAB10084C4AA /* EighthStaticTableViewCell.swift */,
+				03FDA1A22470CAC50084C4AA /* NinthStaticTableViewCell.swift */,
+			);
+			path = StaticCells;
+			sourceTree = "<group>";
+		};
 		4742970CC3632E7C0FF88AFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +609,8 @@
 		4E2C9E0024708CB1007C6109 /* BranchDescription */ = {
 			isa = PBXGroup;
 			children = (
+				03FDA1912470BC570084C4AA /* StaticCells */,
+				03FDA18E2470B38F0084C4AA /* Extensions */,
 				4E2C9E0124708D77007C6109 /* BranchDescriptionViewController.swift */,
 			);
 			path = BranchDescription;
@@ -1262,12 +1308,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FDA19D2470CA760084C4AA /* SisxthStaticTableViewCell.swift in Sources */,
 				4E22F8FD243E6E6C0090693C /* AppDelegate.swift in Sources */,
 				4EE9F93B24699BC800BB4A39 /* MessagingTableView.swift in Sources */,
 				4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */,
 				4E2C9DFD24706B6D007C6109 /* Alert.swift in Sources */,
 				CC5DFD0E2468C242003B9F18 /* PopUpCollectionViewCell.swift in Sources */,
 				03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */,
+				03FDA1932470BC8F0084C4AA /* FirstStaticTableViewCell.swift in Sources */,
 				4E22F8FF243E6E6C0090693C /* SceneDelegate.swift in Sources */,
 				4EE7EA34246B023000BF434F /* KeyboardLayoutConstraint.swift in Sources */,
 				CCCDA045246A94F5005549EA /* ReqLocationTableViewController.swift in Sources */,
@@ -1292,6 +1340,7 @@
 				4ECE5C4E246E89C200932947 /* LoginModel.swift in Sources */,
 				A33CA62F246D4DA00014CF6B /* UserNeedToTakeSample.swift in Sources */,
 				4EE7EA2A246AD3B900BF434F /* SenderImageTableViewCell.swift in Sources */,
+				03FDA1992470CA4F0084C4AA /* FourthStaticTableViewCell.swift in Sources */,
 				4EE9F94024699E3200BB4A39 /* SenderCellTableViewCell.swift in Sources */,
 				CCCDA04E246AD130005549EA /* SettingTableViewController.swift in Sources */,
 				4EE9F9452469A47F00BB4A39 /* RecieverCellTableViewCell.swift in Sources */,
@@ -1300,10 +1349,12 @@
 				4E206DF2246EF241007C401D /* RealTime.swift in Sources */,
 				CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */,
 				CCCDA049246A95D9005549EA /* PopUpLocationViewController.swift in Sources */,
+				03FDA1972470CA3A0084C4AA /* ThirdStaticTableViewCell.swift in Sources */,
 				CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */,
 				4ECE5C5C246EA85300932947 /* LoginResponseExtension.swift in Sources */,
 				4ECE5C4B246E898D00932947 /* LoginPresenter.swift in Sources */,
 				4EC1626A246F36930053F581 /* ConvertToDictionary.swift in Sources */,
+				03FDA1A12470CAB10084C4AA /* EighthStaticTableViewCell.swift in Sources */,
 				4EDADEC9246A1FF20069B0E5 /* RecievedImageTableViewCell.swift in Sources */,
 				4EC8240C246FDD0A0075C894 /* ReqPopUpFromHomeViewController.swift in Sources */,
 				CCD0BAD7246A035C007CF3EE /* LocationTableViewController.swift in Sources */,
@@ -1314,6 +1365,7 @@
 				4E206DF5246F0257007C401D /* LabBranch.swift in Sources */,
 				4EE9F9492469B70A00BB4A39 /* MessageLabel.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
+				03FDA19B2470CA650084C4AA /* FifthStaticTableViewCell.swift in Sources */,
 				4E2C9DFF24706E3E007C6109 /* IView.swift in Sources */,
 				CCCDA050246AE5D5005549EA /* PassWordDetailsTableViewController.swift in Sources */,
 				CC8A1046245E087C007856BF /* IFillDataCells.swift in Sources */,
@@ -1327,8 +1379,10 @@
 				4E432F132464F6EF00D1CACA /* HistoryTableViewCell.swift in Sources */,
 				4E206DF8246F066A007C401D /* Phone.swift in Sources */,
 				A39BF96D246D96A1003500A8 /* UserDataTableViewController.swift in Sources */,
+				03FDA19F2470CA8D0084C4AA /* SeventhStaticTableViewCell.swift in Sources */,
 				4EC1626D246F5C1D0053F581 /* User.swift in Sources */,
 				4EBBC946246B5D3900C7978D /* PearedUserData.swift in Sources */,
+				03FDA1952470C9FD0084C4AA /* SecStaticTableViewCell.swift in Sources */,
 				CC064E32245B05FA0046E67F /* SliderCell.swift in Sources */,
 				0358339E246953FD008DD8C2 /* UIButtonExtension.swift in Sources */,
 				CCCDA047246A95B5005549EA /* ReqPopUpLocationViewController.swift in Sources */,
@@ -1341,9 +1395,11 @@
 				03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */,
 				031046AE246C8F77000372BD /* FilterLabTableView.swift in Sources */,
 				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
+				03FDA1902470B4440084C4AA /* BranchDescriptionTableView.swift in Sources */,
 				4E206DFA246F06E6007C401D /* Review.swift in Sources */,
 				4EC16272246F6A580053F581 /* Test.swift in Sources */,
 				CCABFAEF246B4B1900CF7518 /* DateStruct.swift in Sources */,
+				03FDA1A32470CAC50084C4AA /* NinthStaticTableViewCell.swift in Sources */,
 				4E0E3502246BA11B00814696 /* ConvertTimeStampToDate.swift in Sources */,
 				CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */,
 				CC5DFD0C2468C22F003B9F18 /* PopUpTableViewController.swift in Sources */,

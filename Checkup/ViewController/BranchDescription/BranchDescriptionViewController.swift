@@ -9,7 +9,9 @@
 import UIKit
 
 class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate {
-
+ 
+    @IBOutlet weak var myLabel: UILabel!
+    //  let eighthCell : EighthStaticTableViewCell! = nil
     @IBAction func backBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -28,6 +30,12 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate {
         super.viewDidLoad()
         self.branchDescriptionTableView.delegate = self
         self.branchDescriptionTableView.dataSource = self
+        myLabel.alpha = 0
+        myLabel.text = "EL-Borg"
+
+        
+        
+        
 
     }
     
@@ -38,14 +46,14 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate {
           if newHeaderHeight >= imageViewMaxHeight{
                   headerViewHeight.constant = imageViewMaxHeight
             labImageView.contentMode = .scaleToFill
+            myLabel.alpha = 0
               }else if newHeaderHeight < imageViewMinHeight{
             labImageView.alpha = 0.1
                   headerViewHeight.constant = imageViewMinHeight
-                
+                myLabel.alpha = 1
+
               }else{
-//            if(imageViewMaxHeight - newHeaderHeight) < 0){
 //
-//            }
             labImageView.alpha = 1 - (((imageViewMaxHeight - newHeaderHeight)*(0.9)) / (imageViewMaxHeight - imageViewMinHeight))
             labImageView.contentMode = .scaleAspectFill
                   headerViewHeight.constant = newHeaderHeight
@@ -54,20 +62,5 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate {
     }
 
 }
-extension BranchDescriptionViewController: UITableViewDataSource, UITableViewDelegate {
-  
-    
- func numberOfSectionsInTableView(tableView: UITableView) -> Int {
- return 1
- }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
- return 40
- }
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = UITableViewCell()
-      cell.textLabel!.text = "Cell \(indexPath.row)"
-      return cell
-  }
-}
-
+/**/
