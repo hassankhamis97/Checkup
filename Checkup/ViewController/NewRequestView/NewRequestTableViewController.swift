@@ -410,7 +410,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             
             let vc = self.storyboard!.instantiateViewController(withIdentifier:"ReqlocationSVC") as! ReqLocationTableViewController
             vc.parentRef = self
-            
+            vc.isEditable=true;
             self.navigationController?.pushViewController(vc, animated: true)
             
             
@@ -507,6 +507,7 @@ extension NewRequestTableViewController:UICollectionViewDelegate,UICollectionVie
     func getAddress(addressObj: Address) {
         self.addressObj = addressObj
     }
+    
 }
 
 

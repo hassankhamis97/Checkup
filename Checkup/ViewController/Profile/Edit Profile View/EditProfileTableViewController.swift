@@ -11,7 +11,7 @@ import SkyFloatingLabelTextField
 import Firebase
 import SDWebImage
 
-class EditProfileTableViewController: UITableViewController, UIPickerViewDelegate,UIPickerViewDataSource {
+class EditProfileTableViewController: UITableViewController, UIPickerViewDelegate,UIPickerViewDataSource , IGetAddress {
     
     @IBOutlet weak var genderTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var birthDateTextField: SkyFloatingLabelTextFieldWithIcon!
@@ -146,20 +146,31 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     @IBAction func editAddressBtn(_ sender: Any) {
         
         
-              let vc = storyboard?.instantiateViewController(withIdentifier: "locationSVC") as! LocationTableViewController
-              
-        vc.flag=1;
+//              let vc = storyboard?.instantiateViewController(withIdentifier: "locationSVC") as! LocationTableViewController
+//
+//        vc.flag=1;
+//
+//              if let obj=user.address {
+//                   vc.addressObj = obj
+//              }
+//
+//
+//              navigationController?.pushViewController(vc, animated: true)
+//        goToSetAddress(isEdit: true)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ReqlocationSVC") as! ReqLocationTableViewController
         
-              if let obj=user.address {
-                   vc.addressObj = obj
-              }
-             
-              
-              navigationController?.pushViewController(vc, animated: true)
+                vc.isEditable=true;
+        vc.parentRef = self
+        if user.address?.address! != "" {
+                           vc.addressObj = user.address
+                      }
+        
+        
+                      navigationController?.pushViewController(vc, animated: true)
 
        
     }
-    
+
     
     
     
@@ -191,6 +202,9 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         editProfilePresenterRef.editUser(user: user,img: profileImg.image!)
         
     }
-    
+    func getAddress(addressObj: Address) {
+        self.addressObj = addressObj
+        addressTextField.text = addressObj.address
+    }
 }
 
