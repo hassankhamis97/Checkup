@@ -9,22 +9,18 @@
 import UIKit
 import SkyFloatingLabelTextField
 import Firebase
+import SDWebImage
 
 class EditProfileTableViewController: UITableViewController, UIPickerViewDelegate,UIPickerViewDataSource {
     
     @IBOutlet weak var genderTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var birthDateTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var profileImg: UIImageView!
-    
     @IBOutlet weak var nameTextField: SkyFloatingLabelTextFieldWithIcon!
-
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextFieldWithIcon!
-    
     @IBOutlet weak var mobileNumTextField: SkyFloatingLabelTextFieldWithIcon!
-    
     @IBOutlet weak var landPhonNumTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var insuranceTextField: SkyFloatingLabelTextFieldWithIcon!
-
     @IBOutlet weak var addressTextField: SkyFloatingLabelTextFieldWithIcon!
     
     
@@ -37,8 +33,55 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     let genderArray=["Male","Female"]
     var imageUrl:String!
     var addressObj:Address!
+    var user=User()
     
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        reloadData()
+        let profilePresenterRef = ProfilePresenter(profileView: self)
+        let userId = Auth.auth().currentUser?.uid
+        profilePresenterRef.getUser(userId: userId!)
+    }
+    
+    func reloadData() {
+        
+        nameTextField.text=user.name
+        emailTextField.text=user.email
+        birthDateTextField.text=user.birthdate
+        birthDateTextField.text=user.birthdate
+        genderTextField.text=user.gender
+        insuranceTextField.text=user.insurance
+        addressTextField.text=user.address?.address
+        let x = user.phone
+        profileImg.sd_setImage(with: URL(string: user.imagePath ?? "users"), placeholderImage: UIImage(named: "users"))
+        
+        if (x != nil)
+        {
+            for phone in x!
+            {
+                
+                
+                if phone.isLand==true{
+                    landPhonNumTextField.text=phone.number
+                }
+                else{
+                    mobileNumTextField.text=phone.number
+                }
+                
+                
+            }
+            
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImg.layer.masksToBounds = false
@@ -53,7 +96,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         
         createDatePicker()
         
-    
+        
     }
     
     @IBAction func changeImgBtn(_ sender: Any) {
@@ -62,7 +105,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     }
     
     
-   
+    
     
     
     // for gender picker view :
@@ -91,11 +134,25 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     
     
     
- 
+    
     
     
     
     @IBAction func editAddressBtn(_ sender: Any) {
+        
+        
+              let vc = storyboard?.instantiateViewController(withIdentifier: "locationSVC") as! LocationTableViewController
+              
+        vc.flag=1;
+        
+              if let obj=user.address {
+                   vc.addressObj = obj
+              }
+             
+              
+              navigationController?.pushViewController(vc, animated: true)
+
+       
     }
     
     
@@ -122,11 +179,11 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         phoneArray.append(mob)
         phoneArray.append(land)
         
-        var user=User(id: id, name: name, email: email, birthdate: birthdate, gender: gender, phone: phoneArray, insurance: insurance, address: addressObj, imagePath:"")
+        var user=User(id: id, name: name, email: email, birthdate: birthdate, gender: gender, phone: phoneArray, insurance: insurance, address: addressObj, imagePath:imageUrl)
         
         var editProfilePresenterRef = EditProfilePresenter(editProfileView: self)
         
-        editProfilePresenterRef.editUser(user: user)
+        editProfilePresenterRef.editUser(user: user,img: profileImg.image!)
         
     }
     

@@ -886,7 +886,6 @@
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                     <state key="normal" title="Edit Address"/>
                                                     <connections>
-                                                        <action selector="EditAddress:" destination="xfM-Jr-M9W" eventType="touchUpInside" id="IEG-M8-Tqg"/>
                                                         <action selector="editAddressBtn:" destination="xfM-Jr-M9W" eventType="touchUpInside" id="byt-US-Wnz"/>
                                                     </connections>
                                                 </button>
