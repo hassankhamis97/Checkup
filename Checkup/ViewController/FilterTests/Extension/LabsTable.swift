@@ -16,16 +16,20 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "labCell", for: indexPath) as! SmallDescLabTableViewCell
         cell.labName.text = labsList[indexPath.row].name
+        cell.checkedIcon.imageView?.contentMode = .scaleToFill
+
         if (labsList[indexPath.row].isChecked!) {
             cell.checkedIcon.setImage(UIImage(named: "checked"), for: .normal)
-            cell.checkedIcon.imageView?.contentMode = .scaleToFill
         }
         else{
             cell.checkedIcon.setImage(UIImage(named: "unchecked"), for: .normal)
-            cell.checkedIcon.imageView?.contentMode = .scaleToFill
         }
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        labsList[indexPath.row].isChecked = !labsList[indexPath.row].isChecked!
+        tableView.reloadData()
+    }
     
 }

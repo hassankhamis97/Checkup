@@ -9,7 +9,7 @@
 import UIKit
 import SkyFloatingLabelTextField
 class FilterTestViewController: UIViewController {
-    var filterType : String?
+    var filterType : Int?
     var datePickerView : UIDatePicker = UIDatePicker()
     var datePickerView2 : UIDatePicker = UIDatePicker()
     
@@ -21,6 +21,7 @@ class FilterTestViewController: UIViewController {
     var inputDateTwo : String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        filterType = FilterStatus.noFilter.rawValue
         firstDateField.inputView = datePickerView
          datepickerToolBar()
          
@@ -33,6 +34,10 @@ class FilterTestViewController: UIViewController {
          datePickerView2.datePickerMode = .date
          
         
+        var labObj1 = FilterLab(id: "1", name: "mokhtabar", isChecked: false)
+        var labObj2 = FilterLab(id: "2", name: "mokhtabar", isChecked: true)
+        labsList.append(labObj1)
+        labsList.append(labObj2)
          
          navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Apply", style: .plain, target: self, action: #selector(closeTapped))
         // Do any additional setup after loading the view.

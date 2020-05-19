@@ -87,22 +87,34 @@ class NewRequestModel: INewRequestModel {
                     print("Document successfully written!")
                 }
             }
-           
-//            let urlString = "https://httpbin.org/get"
+//            let json : String
+//            do{
+//               let jsonEncoder = JSONEncoder()
+//               let jsonData = try jsonEncoder.encode(testFinObj)
+////               let json = String(data: jsonData, encoding: String.Encoding.utf16)
 //
-//            Alamofire.request(urlString, method: .post, parameters: ["foo": "bar"],encoding: JSONEncoding.default, headers: nil).responseJSON {
-//            response in
-//              switch response.result {
-//                            case .success:
-//                                print(response)
-//
-//                                break
-//                            case .failure(let error):
-//
-//                                print(error)
-//                            }
 //            }
+//            catch{
+//                
+//            }
+            let urlString = "http://192.168.1.2:2200/api/AnalysisService/AddNewAnalysis"
+
+            let parameters = [
+                   "testName": "foo",
+                   "description": "123456"
+               ]
+                        Alamofire.request(urlString, method: .post, parameters: testFinDic,encoding: JSONEncoding.default, headers: nil).responseString {
+                        response in
+                          switch response.result {
+                                        case .success:
+                                            print(response)
             
+                                            break
+                                        case .failure(let error):
+            
+                                            print(error)
+                                        }
+                        }
             self.ref.child("TestsHassan").child(testFinObj.branchId!).child(testFinObj.id!).setValue(testFinDic)
             self.newRequestPresenterRef.onSuccess()
             // ...
