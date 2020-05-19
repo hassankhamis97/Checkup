@@ -11,7 +11,7 @@ import OpalImagePicker
 import ImageSlideshow
 import SkyFloatingLabelTextField
 import Firebase
-
+import Alamofire
 class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,IFillDataCells {
     
     @IBOutlet weak var myCell: UITableViewCell!
@@ -50,6 +50,8 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             
             var address = Address(address: "eleslam Street", buildingNo: "22", floorNo: "5", apartmentNo: "6", longitude: "", latitude: "")
             var testObj = Test()
+            testObj.roushettaPaths = [String]()
+            testObj.resultFilespaths = [String]()
             testObj.testName = testTexts
             testObj.branchId = branchId
             testObj.labId = labId
@@ -83,7 +85,11 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     
     
     override func viewWillAppear(_ animated: Bool) {
-        
+         
+//        Alamofire.request("http://192.168.1.2:2200/api/AnalysisService/ClientAnalysisRequests").validate().responseJSON { response in
+//        print(response)
+//
+//        }
         if(Auth.auth().currentUser?.uid == nil)
         {
             let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
@@ -432,7 +438,6 @@ extension NewRequestTableViewController: ImageSlideshowDelegate {
     func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int){
         
         ind=page
-        print("current page:", page)
     }
 }
 
