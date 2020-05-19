@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct RequestConfigration {
+struct RequestConfigration : Codable{
     var userId: String?
     var status: [String]?
     var take: Int?

@@ -17,11 +17,13 @@ extension RequestsTableViewController : IGetRequestsView{
     }
     
     func errorMessage(msg: String) {
-    
+        
     }
     
     func updateView(requests: [Request]) {
-        
+        self.requests = requests
+        skip += requests.count
+        tableView.reloadData()
     }
     
     

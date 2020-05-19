@@ -85,10 +85,11 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     
     
     override func viewWillAppear(_ animated: Bool) {
-        Alamofire.request("http://192.168.1.2:2200/api/AnalysisService/GetName").validate().responseJSON { response in
-        print(response)
-            
-        }
+         
+//        Alamofire.request("http://192.168.1.2:2200/api/AnalysisService/ClientAnalysisRequests").validate().responseJSON { response in
+//        print(response)
+//
+//        }
         if(Auth.auth().currentUser?.uid == nil)
         {
             let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
@@ -437,7 +438,6 @@ extension NewRequestTableViewController: ImageSlideshowDelegate {
     func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int){
         
         ind=page
-        print("current page:", page)
     }
 }
 

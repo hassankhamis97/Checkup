@@ -8,8 +8,13 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 class RequestsTableViewController: UITableViewController {
-    
+    var testFilter : TestFilter?
+    var take = 2
+    var skip = 0
+    var isFiltered = false
+    var requests : [Request]?
     @IBAction func filterDataBtn(_ sender: UIBarButtonItem) {
         let filterVC = storyboard?.instantiateViewController(withIdentifier: "filterSVC") as! FilterTestViewController
         self.navigationController?.pushViewController(filterVC, animated: true)
@@ -25,16 +30,26 @@ class RequestsTableViewController: UITableViewController {
             loginVC.modalPresentationStyle = .fullScreen
             self.present(loginVC, animated: true, completion: nil)
             
-        }else{
+        }else if !isFiltered{
             var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
-            getRequestsPresenter.getRequests()
-            self.tableView.reloadData()
+            getRequestsPresenter.getRequests(testFilter: testFilter!)
+            
+//            self.tableView.reloadData()
         }
         dateDescingly = formatDate(myArr: labDate)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        requests = [Request]()
+        if(Auth.auth().currentUser?.uid != nil)
+        {
+            var testFilterOriginal = TestFilter(dateTimeStampFrom: nil, dateTimeStampTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
+            
+            testFilter = testFilterOriginal
+            var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
+            getRequestsPresenter.getRequests(testFilter: testFilter!)
+//            self.tableView.reloadData()
+        }
         
         //        dateDescingly=labDate
         
@@ -58,7 +73,7 @@ class RequestsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return labNames.count
+        return requests!.count
     }
     
     
@@ -73,18 +88,33 @@ class RequestsTableViewController: UITableViewController {
         
         
         
-        cell.labImageOutlet.image = UIImage(named: labImages[indexPath.row])
+        cell.labImageOutlet.sd_setImage(with: URL(string: requests![indexPath.row].labPhoto ?? "users"), placeholderImage: UIImage(named: "users"))
         cell.labImageOutlet.layer.cornerRadius = cell.labImageOutlet.frame.height/2
         
-        cell.labNameOutlet.text = self.labNames[indexPath.row]
-        cell.labDateOutlet.text = dateDescingly[indexPath.row].dateString
-        
+        cell.labNameOutlet.text = requests![indexPath.row].labName
+        cell.labDateOutlet.text = requests![indexPath.row].dateRequest
+        switch requests![indexPath.row].status! {
+        case TestType.PendingForLabConfirmation.rawValue:
+            cell.requestStatus.text = "🔵 Wait Response"
+            break
+        case TestType.PendingForTakingTheSample.rawValue:
+            cell.requestStatus.text = "💉 Wait Sample"
+            break
+        case TestType.PendingForResult.rawValue:
+            cell.requestStatus.text = "🔸 Wait Result"
+            break
+        default:
+            break
+        }
+        if requests![indexPath.row].status! == "" {
+            
+        }
         cell.labDateOutlet.sizeToFit()
         cell.labNameOutlet.sizeToFit()
         
         return cell
+        
     }
-    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

@@ -1380,6 +1380,7 @@
                                     <outlet property="labDateOutlet" destination="NbB-bU-HFM" id="kSR-bo-C41"/>
                                     <outlet property="labImageOutlet" destination="wiP-Gf-Wwq" id="QAA-w3-YVl"/>
                                     <outlet property="labNameOutlet" destination="JN8-kL-Zkh" id="mYR-yO-YfH"/>
+                                    <outlet property="requestStatus" destination="mdv-ks-mic" id="wAH-hh-kca"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

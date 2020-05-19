@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct TestFilter {
+struct TestFilter : Encodable{
     var dateTimeStampFrom: Int64?
     var dateTimeStampTo: Int64?
     var labIds: [String]?
