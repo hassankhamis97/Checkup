@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
-@available(iOS 13.0, *)
 class SettingTableViewController: UITableViewController {
 
     
+  
     override func viewWillAppear(_ animated: Bool) {
-        
+      
     }
     
     override func viewDidLoad() {
@@ -34,7 +35,7 @@ class SettingTableViewController: UITableViewController {
    
         if indexPath.row==0
         {
-         let vc = storyboard!.instantiateViewController(identifier: "passWordSVC") as! PassWordDetailsTableViewController
+         let vc = storyboard!.instantiateViewController(withIdentifier: "passWordSVC") as! PassWordDetailsTableViewController
             navigationController?.pushViewController(vc, animated: true)
 
            

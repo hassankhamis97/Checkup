@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileView{
     func renderProfileView(user: User) {
         self.user=user
@@ -22,15 +23,20 @@ extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileV
     }
     
     func showIndicator() {
-        print("")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+         saveBtnOutlet.alpha = 0
+        activityIndicator.alpha=1
+        activityIndicator.show()
+                
     }
     
     func hideIndicator() {
-         print("")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        activityIndicator.hide()
     }
     
     func errorMessage(msg: String) {
-         print("")
+        print("")
     }
     
     

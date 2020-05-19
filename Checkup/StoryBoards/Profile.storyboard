@@ -893,26 +893,29 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="20" id="QTm-tx-Kve">
-                                        <rect key="frame" x="0.0" y="959" width="414" height="20"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="8" id="QTm-tx-Kve">
+                                        <rect key="frame" x="0.0" y="959" width="414" height="8"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QTm-tx-Kve" id="dTW-tm-iEH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="8"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="ckF-h7-nHH">
-                                        <rect key="frame" x="0.0" y="979" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="967" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ckF-h7-nHH" id="KOH-c0-qYd">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9f9-mV-Imn" customClass="TransitionButton" customModule="TransitionButton">
-                                                    <rect key="frame" x="40" y="0.0" width="334" height="56"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9f9-mV-Imn" customClass="TransitionButton" customModule="TransitionButton">
+                                                    <rect key="frame" x="40" y="11" width="334" height="56"/>
                                                     <color key="backgroundColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="56" id="b3h-So-KUf"/>
+                                                        <constraint firstAttribute="width" constant="334" id="jTK-Hg-mJB"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                                     <state key="normal" title="Save">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -932,7 +935,19 @@
                                                         <action selector="saveDataBtn:" destination="xfM-Jr-M9W" eventType="touchUpInside" id="dNY-Jp-AV3"/>
                                                     </connections>
                                                 </button>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="GeN-l2-nry">
+                                                    <rect key="frame" x="185" y="40" width="44" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GeN-l2-nry" secondAttribute="bottom" constant="9" id="8fU-yk-pOf"/>
+                                                <constraint firstItem="GeN-l2-nry" firstAttribute="leading" secondItem="KOH-c0-qYd" secondAttribute="leadingMargin" constant="177" id="PHB-MJ-pmG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GeN-l2-nry" secondAttribute="trailing" constant="177" id="SKS-fT-mS5"/>
+                                                <constraint firstItem="9f9-mV-Imn" firstAttribute="centerY" secondItem="KOH-c0-qYd" secondAttribute="centerY" constant="-1" id="StT-Ib-6UY"/>
+                                                <constraint firstItem="9f9-mV-Imn" firstAttribute="centerX" secondItem="KOH-c0-qYd" secondAttribute="centerX" id="ToU-in-aZR"/>
+                                                <constraint firstItem="9f9-mV-Imn" firstAttribute="centerY" secondItem="KOH-c0-qYd" secondAttribute="centerY" constant="-1" id="aC6-0m-MOc"/>
+                                                <constraint firstItem="GeN-l2-nry" firstAttribute="top" secondItem="KOH-c0-qYd" secondAttribute="topMargin" constant="29" id="pN7-sa-gK0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
@@ -946,6 +961,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="8YI-hN-7G6"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="GeN-l2-nry" id="FmP-FR-TaG"/>
                         <outlet property="addressTextField" destination="Ua2-9b-yK4" id="lNb-t0-CbD"/>
                         <outlet property="birthDateTextField" destination="NDJ-sd-WyA" id="1eV-88-OpJ"/>
                         <outlet property="emailTextField" destination="P3L-TN-MNL" id="D1b-mM-797"/>
@@ -955,6 +971,7 @@
                         <outlet property="mobileNumTextField" destination="7QX-vt-fPe" id="Zcf-HA-zFa"/>
                         <outlet property="nameTextField" destination="JDV-L7-FSG" id="U0V-c0-1Gy"/>
                         <outlet property="profileImg" destination="z97-ja-nNA" id="Im4-PJ-AJT"/>
+                        <outlet property="saveBtnOutlet" destination="9f9-mV-Imn" id="nr2-dP-7RW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUK-gg-inx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
