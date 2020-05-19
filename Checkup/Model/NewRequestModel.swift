@@ -99,10 +99,6 @@ class NewRequestModel: INewRequestModel {
 //            }
             let urlString = "http://192.168.1.2:2200/api/AnalysisService/AddNewAnalysis"
 
-            let parameters = [
-                   "testName": "foo",
-                   "description": "123456"
-               ]
                         Alamofire.request(urlString, method: .post, parameters: testFinDic,encoding: JSONEncoding.default, headers: nil).responseString {
                         response in
                           switch response.result {

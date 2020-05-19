@@ -40,33 +40,37 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var labId: String?
     var isFromHome: Bool?
     @IBAction func saveNewRequestBtn(_ sender: UIButton) {
-        if(checkValidation()){
-            let date = Date()
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MMM dd, yyyy"
-            let currentDate = dateFormatter.string(from: date)
-            dateFormatter.dateFormat = "H:mm a"
-            let currentTime = dateFormatter.string(from: date)
-            
-            var address = Address(address: "eleslam Street", buildingNo: "22", floorNo: "5", apartmentNo: "6", longitude: "", latitude: "")
-            var testObj = Test()
-            testObj.roushettaPaths = [String]()
-            testObj.resultFilespaths = [String]()
-            testObj.testName = testTexts
-            testObj.branchId = branchId
-            testObj.labId = labId
-            testObj.dateForTakingSample = dateTextField.text
-            testObj.timeForTakingSample = timeTextField.text
-            testObj.address = address
-            testObj.userId = Auth.auth().currentUser?.uid
-            testObj.status = "PendingForLabConfirmation"
-            testObj.dateRequest = currentDate
-            testObj.timeRequest = currentTime
-            testObj.timeStampRequest = Date().toMillis()
-            testObj.isFromHome = isFromHome
-            var newRequestPresenter = NewRequestPresenter(newRequestViewRef: self)
-            newRequestPresenter.saveRequest(testObj: testObj, roushettaImages: DatabaseImageArray)
-        }
+        let vc = self.storyboard!.instantiateViewController(withIdentifier:"ReqlocationSVC") as! ReqLocationTableViewController
+        
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+//        if(checkValidation()){
+//            let date = Date()
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "MMM dd, yyyy"
+//            let currentDate = dateFormatter.string(from: date)
+//            dateFormatter.dateFormat = "H:mm a"
+//            let currentTime = dateFormatter.string(from: date)
+//
+//            var address = Address(address: "eleslam Street", buildingNo: "22", floorNo: "5", apartmentNo: "6", longitude: "", latitude: "")
+//            var testObj = Test()
+//            testObj.roushettaPaths = [String]()
+//            testObj.resultFilespaths = [String]()
+//            testObj.testName = testTexts
+//            testObj.branchId = branchId
+//            testObj.labId = labId
+//            testObj.dateForTakingSample = dateTextField.text
+//            testObj.timeForTakingSample = timeTextField.text
+//            testObj.address = address
+//            testObj.userId = Auth.auth().currentUser?.uid
+//            testObj.status = "PendingForLabConfirmation"
+//            testObj.dateRequest = currentDate
+//            testObj.timeRequest = currentTime
+//            testObj.timeStampRequest = Date().toMillis()
+//            testObj.isFromHome = isFromHome
+//            var newRequestPresenter = NewRequestPresenter(newRequestViewRef: self)
+//            newRequestPresenter.saveRequest(testObj: testObj, roushettaImages: DatabaseImageArray)
+//        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

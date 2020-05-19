@@ -831,8 +831,6 @@
                     </tableView>
                     <connections>
                         <outlet property="ApartmentNoTxt" destination="NhD-Tq-lfL" id="Lwn-Fa-Z93"/>
-                        <outlet property="address" destination="uas-Ll-9DO" id="xsO-62-cL7"/>
-                        <outlet property="buildingNo" destination="aLX-Ww-4Wa" id="yEE-Iu-BBW"/>
                         <outlet property="floorNoTxt" destination="LG1-eJ-JeJ" id="eA6-fb-T8b"/>
                         <outlet property="mapView" destination="LGK-e4-gBS" id="mDz-Op-HK4"/>
                     </connections>

@@ -10,11 +10,13 @@ import UIKit
 import Firebase
 import SDWebImage
 class RequestsTableViewController: UITableViewController {
+    var testFilterOriginal : TestFilter?
     var testFilter : TestFilter?
-    var take = 2
+    var take = 5
     var skip = 0
     var isFiltered = false
     var requests : [Request]?
+    var isBottom = true
     @IBAction func filterDataBtn(_ sender: UIBarButtonItem) {
         let filterVC = storyboard?.instantiateViewController(withIdentifier: "filterSVC") as! FilterTestViewController
         self.navigationController?.pushViewController(filterVC, animated: true)
@@ -31,8 +33,9 @@ class RequestsTableViewController: UITableViewController {
             self.present(loginVC, animated: true, completion: nil)
             
         }else if !isFiltered{
-            var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
-            getRequestsPresenter.getRequests(testFilter: testFilter!)
+//            var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
+//            getRequestsPresenter.getRequests(testFilter: testFilter!)
+            sendRequest()
             
 //            self.tableView.reloadData()
         }
@@ -43,11 +46,12 @@ class RequestsTableViewController: UITableViewController {
         requests = [Request]()
         if(Auth.auth().currentUser?.uid != nil)
         {
-            var testFilterOriginal = TestFilter(dateTimeStampFrom: nil, dateTimeStampTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
+//            testFilterOriginal = TestFilter(dateTimeStampFrom: nil, dateTimeStampTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
             
-            testFilter = testFilterOriginal
-            var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
-            getRequestsPresenter.getRequests(testFilter: testFilter!)
+//            testFilter = testFilterOriginal
+//            sendRequest()
+//            var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
+//            getRequestsPresenter.getRequests(testFilter: testFilter!)
 //            self.tableView.reloadData()
         }
         
@@ -165,6 +169,26 @@ class RequestsTableViewController: UITableViewController {
             
         }
         
+    }
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            let height = scrollView.frame.size.height
+            let contentYoffset = scrollView.contentOffset.y
+            let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+            if isBottom == false && distanceFromBottom < height {
+                isBottom = true
+                sendRequest()
+            }
+            else if distanceFromBottom > height{
+                isBottom = false
+            }
+
+        }
+    func sendRequest() {
+        var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
+        if !isFiltered {
+            testFilter = TestFilter(dateTimeStampFrom: nil, dateTimeStampTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
+        }
+        getRequestsPresenter.getRequests(testFilter: testFilter!)
     }
     
 }
