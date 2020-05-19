@@ -24,8 +24,11 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     @IBOutlet weak var addressTextField: SkyFloatingLabelTextFieldWithIcon!
     
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
+    
+    @IBOutlet weak var saveBtnOutlet: UIButton!
     var imagePicker: ImagePicker!
     var datePicker=UIDatePicker()
     var genderPickerView=UIPickerView()
@@ -87,6 +90,8 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         profileImg.layer.masksToBounds = false
         profileImg.layer.cornerRadius=profileImg.frame.width / 2
         profileImg.clipsToBounds = true
+        activityIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+             activityIndicator.alpha=0
         
         imagePicker = ImagePicker(presentationController: self, delegate: self)
         
