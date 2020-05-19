@@ -26,15 +26,17 @@ class ProfileTableViewController: UITableViewController {
 
     
      var user=User()
-    var counter=0;
+    var counter:Int!
     
     var profilePresenterRef:ProfilePresenter!
     override func viewWillAppear(_ animated: Bool) {
-    
+        counter=0;
         profilePresenterRef = ProfilePresenter(profileView: self)
                let userId = Auth.auth().currentUser?.uid
+        
                profilePresenterRef.getUser(userId: userId!)
         
+                
     }
     
     
@@ -91,13 +93,15 @@ class ProfileTableViewController: UITableViewController {
     
     @IBAction func editProfileBtn(_ sender: Any) {
         
-        if #available(iOS 13.0, *) {
+       
             let ref=self.storyboard?.instantiateViewController(withIdentifier:"editSvc") as! EditProfileTableViewController
-            navigationController?.pushViewController(ref, animated: true)
-        } else {
-            // Fallback on earlier versions
-        }
         
+//        ref.user=user
+        
+            navigationController?.pushViewController(ref, animated: true)
+            
+            
+         
         
     }
     

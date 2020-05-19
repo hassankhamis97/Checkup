@@ -41,43 +41,43 @@ extension ProfileTableViewController:IProfileView{
         
         if ( userName.text != ""){
             
-            self.counter += 1
+           counter += 1
             
         }
         
         if( emailTextField.text != ""){
             
-            self.counter += 1
+            counter += 1
         }
         
         if( birthDateTextField.text != ""){
                    
-                   self.counter += 1
+                   counter += 1
                }
         
         if( genderTextField.text != ""){
             
-            self.counter += 1
+            counter += 1
         }
         
         if( insuranceTextField.text != ""){
             
-            self.counter += 1
+            counter += 1
         }
         
         if(  addressTextField.text != ""){
                    
-                   self.counter += 1
+                   counter += 1
                }
         
         if(mobileTextField.text != ""){
             
-            self.counter += 1
+            counter += 1
         }
         
         if(landPhoneTextField.text != ""){
             
-            self.counter += 1
+            counter += 1
         }
         
     }

@@ -7,9 +7,15 @@
 //
 
 import Foundation
-extension EditProfileTableViewController:IEditProfileView{
+extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileView{
+    func renderProfileView(user: User) {
+        self.user=user
+        reloadData()
+    }
     
-   
+    func renderImage(url: String) {
+        self.imageUrl=url
+    }
     
     func updatedUser() {
         navigationController?.popViewController(animated: true)

@@ -149,6 +149,9 @@
 		CC7617212472D51F0084CC6E /* ExtensionEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7617202472D51F0084CC6E /* ExtensionEditProfile.swift */; };
 		CC761723247305B40084CC6E /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761722247305B40084CC6E /* EditProfileModel.swift */; };
 		CC76172524730BF80084CC6E /* ExtensionEditProfileMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76172424730BF80084CC6E /* ExtensionEditProfileMVP.swift */; };
+		CC76172B247329030084CC6E /* ImageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76172A247329030084CC6E /* ImageContract.swift */; };
+		CC76172D24732A050084CC6E /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76172C24732A050084CC6E /* ImageModel.swift */; };
+		CC76172F24732A610084CC6E /* ImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76172E24732A610084CC6E /* ImagePresenter.swift */; };
 		CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */; };
 		CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */; };
 		CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */; };
@@ -340,6 +343,9 @@
 		CC7617202472D51F0084CC6E /* ExtensionEditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionEditProfile.swift; sourceTree = "<group>"; };
 		CC761722247305B40084CC6E /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		CC76172424730BF80084CC6E /* ExtensionEditProfileMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionEditProfileMVP.swift; sourceTree = "<group>"; };
+		CC76172A247329030084CC6E /* ImageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContract.swift; sourceTree = "<group>"; };
+		CC76172C24732A050084CC6E /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		CC76172E24732A610084CC6E /* ImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresenter.swift; sourceTree = "<group>"; };
 		CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamingGroupViewController.swift; sourceTree = "<group>"; };
@@ -923,6 +929,7 @@
 				4E15ACE3247180E5004418B1 /* GetRequestsModel.swift */,
 				CC157CA224700F2B001AE122 /* ProfileModel.swift */,
 				CC761722247305B40084CC6E /* EditProfileModel.swift */,
+				CC76172C24732A050084CC6E /* ImageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1268,6 +1275,7 @@
 			children = (
 				CC157CA524700F6C001AE122 /* ProfilePresenter.swift */,
 				CC157CA724700F83001AE122 /* EditProfilePresenter.swift */,
+				CC76172E24732A610084CC6E /* ImagePresenter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1277,6 +1285,7 @@
 			children = (
 				CC157CAA247010B6001AE122 /* ProfileContract.swift */,
 				CC157CAC24701160001AE122 /* EditProfileContract.swift */,
+				CC76172A247329030084CC6E /* ImageContract.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1666,6 +1675,7 @@
 				4EC1FD332472DDFF0029C499 /* LabsTable.swift in Sources */,
 				CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */,
 				4E206DF5246F0257007C401D /* LabBranch.swift in Sources */,
+				CC76172B247329030084CC6E /* ImageContract.swift in Sources */,
 				4EE9F9492469B70A00BB4A39 /* MessageLabel.swift in Sources */,
 				A38CCEFF247214D900BC684A /* ResetPasswordViewController.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
@@ -1678,10 +1688,12 @@
 				CC064E30245B03360046E67F /* NewRequestTableViewController.swift in Sources */,
 				4EBBC943246B5ABF00C7978D /* PearedTableView.swift in Sources */,
 				4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */,
+				CC76172F24732A610084CC6E /* ImagePresenter.swift in Sources */,
 				03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */,
 				A33CA62B246D3F610014CF6B /* UserCustomTableViewCell.swift in Sources */,
 				4EC1FD3A2472E2530029C499 /* SmallDescLabTableViewCell.swift in Sources */,
 				4E4EA640247015F000309CAF /* NewRequestResponseExtension.swift in Sources */,
+				CC76172D24732A050084CC6E /* ImageModel.swift in Sources */,
 				4E432F132464F6EF00D1CACA /* HistoryTableViewCell.swift in Sources */,
 				4E206DF8246F066A007C401D /* Phone.swift in Sources */,
 				A3C5F0322472BE8C0069413F /* SignupContract.swift in Sources */,

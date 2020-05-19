@@ -7,14 +7,15 @@
 //
 
 import Foundation
+import UIKit
 protocol IEditProfileView :IBase {
     func updatedUser ()
 }
 protocol IEditProfilePresenter {
-    func editUser(user:User)
+    func editUser(user:User,img:UIImage?)
     func onSuccess()
     func onFail(message: String)
 }
 protocol IEditProfileModel {
-    func editUser(user:User)
+    func editUser(user:User,img:UIImage?)
 }
