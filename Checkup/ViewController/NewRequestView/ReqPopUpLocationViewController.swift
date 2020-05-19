@@ -7,20 +7,23 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class ReqPopUpLocationViewController: UIViewController {
 
 // let locationManager = CLLocationManager()
-    
+    var reqLocationRef: ICheckLocation!
     @IBAction func autoLocateBtn(_ sender: Any) {
         
-        
+        reqLocationRef.checkLocationMethod(isAuto: true)
         dismiss(animated: true, completion: nil)
     }
     
     
     @IBAction func setManuallyBtn(_ sender: Any) {
-        
+        reqLocationRef.checkLocationMethod(isAuto: false)
+
                dismiss(animated: true, completion: nil)
     }
     
@@ -33,7 +36,4 @@ class ReqPopUpLocationViewController: UIViewController {
        
     }
     
-
- 
-
 }

@@ -42,10 +42,10 @@ class LocationTableViewController: UITableViewController {
         buildingNumberTextField.text=addressObj.buildingNo
         floorNumTextField.text=addressObj.floorNo
         apartmentNumTextField.text=addressObj.apartmentNo
-        if let longi = Double(addressObj.longitude!){
+        if let longi = addressObj.longitude{
                  longitude=longi
               }
-        if let latit = Double(addressObj.latitude!){
+        if let latit = addressObj.latitude{
                        lat=latit
                     }
         

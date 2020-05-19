@@ -13,6 +13,6 @@ struct Address : Encodable{
     var buildingNo: String?
     var floorNo: String?
     var apartmentNo: String?
-    var longitude: String?
-    var latitude: String?
+    var longitude: Double?
+    var latitude: Double?
 }

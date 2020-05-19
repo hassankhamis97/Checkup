@@ -18,8 +18,8 @@ struct LabBranch {
     var timeFrom : String?
     var timeTo : String?
     var holidays : [String]?
-    var longitude : String?
-    var latitude : String?
+    var longitude : Double?
+    var latitude : Double?
     var review : [Review]?
 //    func toDictionary() -> Any {     return ["id": id, "email": email, "password": password, "govern": govern, "image": image, "phone": phone.toDictionary(),"isAvailableFromHome": isAvailableFromHome, "timeFrom": timeFrom, "timeTo": timeTo, "holidays": holidays, "longitude": longitude, "latitude": latitude,"review": review.toDictionary() ] as Any }
 }

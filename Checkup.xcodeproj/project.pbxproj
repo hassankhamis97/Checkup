@@ -113,6 +113,8 @@
 		4EF2BA6A24734E8F00602123 /* TestFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2BA6924734E8F00602123 /* TestFilter.swift */; };
 		4EF2BA6D247357AE00602123 /* RequestConfigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2BA6C247357AE00602123 /* RequestConfigration.swift */; };
 		4EFA6ECF2473D58100D83F32 /* TestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFA6ECE2473D58100D83F32 /* TestType.swift */; };
+		4EFA6ED32474195400D83F32 /* FilterTestContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFA6ED22474195400D83F32 /* FilterTestContract.swift */; };
+		4EFA6ED6247429FD00D83F32 /* CheckLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFA6ED5247429FC00D83F32 /* CheckLocation.swift */; };
 		A302CC282471A11300C6323F /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302CC272471A11300C6323F /* ToastView.swift */; };
 		A33CA624246D3AEE0014CF6B /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33CA623246D3AEE0014CF6B /* Employee.storyboard */; };
 		A33CA627246D3E0D0014CF6B /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33CA626246D3E0D0014CF6B /* UsersTableViewController.swift */; };
@@ -307,6 +309,8 @@
 		4EF2BA6924734E8F00602123 /* TestFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFilter.swift; sourceTree = "<group>"; };
 		4EF2BA6C247357AE00602123 /* RequestConfigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfigration.swift; sourceTree = "<group>"; };
 		4EFA6ECE2473D58100D83F32 /* TestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestType.swift; sourceTree = "<group>"; };
+		4EFA6ED22474195400D83F32 /* FilterTestContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTestContract.swift; sourceTree = "<group>"; };
+		4EFA6ED5247429FC00D83F32 /* CheckLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLocation.swift; sourceTree = "<group>"; };
 		A302CC272471A11300C6323F /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		A33CA623246D3AEE0014CF6B /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
 		A33CA626246D3E0D0014CF6B /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
@@ -1133,6 +1137,22 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		4EFA6ED12474106400D83F32 /* FilterTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EFA6ED22474195400D83F32 /* FilterTestContract.swift */,
+			);
+			path = FilterTests;
+			sourceTree = "<group>";
+		};
+		4EFA6ED4247429EA00D83F32 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4EFA6ED5247429FC00D83F32 /* CheckLocation.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		A302CC262471A07B00C6323F /* ToastView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1311,6 +1331,8 @@
 		CC8A1044245E0844007856BF /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				4EFA6ED4247429EA00D83F32 /* Map */,
+				4EFA6ED12474106400D83F32 /* FilterTests */,
 				A3C5F0302472BE640069413F /* Signup */,
 				CC157CA92470107D001AE122 /* Profile */,
 				4E15ACE824718263004418B1 /* GetRequests */,
@@ -1604,6 +1626,7 @@
 				4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */,
 				4E2C9DFD24706B6D007C6109 /* Alert.swift in Sources */,
 				CC5DFD0E2468C242003B9F18 /* PopUpCollectionViewCell.swift in Sources */,
+				4EFA6ED6247429FD00D83F32 /* CheckLocation.swift in Sources */,
 				4E15ACE72471818B004418B1 /* GetRequestsPresenter.swift in Sources */,
 				03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */,
 				03FDA1932470BC8F0084C4AA /* FirstStaticTableViewCell.swift in Sources */,
@@ -1709,6 +1732,7 @@
 				CC157CA324700F2B001AE122 /* ProfileModel.swift in Sources */,
 				03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */,
 				4EFA6ECF2473D58100D83F32 /* TestType.swift in Sources */,
+				4EFA6ED32474195400D83F32 /* FilterTestContract.swift in Sources */,
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
 				4ECE5C59246EA5C200932947 /* IBase.swift in Sources */,
 				4ECE5C51246E89F200932947 /* LoginContract.swift in Sources */,
