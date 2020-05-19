@@ -12,7 +12,7 @@ import ImageSlideshow
 import SkyFloatingLabelTextField
 import Firebase
 import Alamofire
-class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,IFillDataCells {
+class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,IFillDataCells , IGetAddress {
     
     @IBOutlet weak var myCell: UITableViewCell!
     @IBOutlet weak var collectionView:UICollectionView!
@@ -39,38 +39,36 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var branchId : String?
     var labId: String?
     var isFromHome: Bool?
+    var addressObj : Address!
     @IBAction func saveNewRequestBtn(_ sender: UIButton) {
-        let vc = self.storyboard!.instantiateViewController(withIdentifier:"ReqlocationSVC") as! ReqLocationTableViewController
-        
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-//        if(checkValidation()){
-//            let date = Date()
-//            let dateFormatter = DateFormatter()
-//            dateFormatter.dateFormat = "MMM dd, yyyy"
-//            let currentDate = dateFormatter.string(from: date)
-//            dateFormatter.dateFormat = "H:mm a"
-//            let currentTime = dateFormatter.string(from: date)
-//
-//            var address = Address(address: "eleslam Street", buildingNo: "22", floorNo: "5", apartmentNo: "6", longitude: "", latitude: "")
-//            var testObj = Test()
-//            testObj.roushettaPaths = [String]()
-//            testObj.resultFilespaths = [String]()
-//            testObj.testName = testTexts
-//            testObj.branchId = branchId
-//            testObj.labId = labId
-//            testObj.dateForTakingSample = dateTextField.text
-//            testObj.timeForTakingSample = timeTextField.text
-//            testObj.address = address
-//            testObj.userId = Auth.auth().currentUser?.uid
-//            testObj.status = "PendingForLabConfirmation"
-//            testObj.dateRequest = currentDate
-//            testObj.timeRequest = currentTime
-//            testObj.timeStampRequest = Date().toMillis()
-//            testObj.isFromHome = isFromHome
-//            var newRequestPresenter = NewRequestPresenter(newRequestViewRef: self)
-//            newRequestPresenter.saveRequest(testObj: testObj, roushettaImages: DatabaseImageArray)
-//        }
+        if(checkValidation()){
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM dd, yyyy"
+            let currentDate = dateFormatter.string(from: date)
+            dateFormatter.dateFormat = "H:mm a"
+            let currentTime = dateFormatter.string(from: date)
+
+            
+            var testObj = Test()
+            testObj.roushettaPaths = [String]()
+            testObj.resultFilespaths = [String]()
+            testObj.testName = testTexts
+            testObj.branchId = branchId
+            testObj.labId = labId
+            testObj.dateForTakingSample = dateTextField.text
+            testObj.timeForTakingSample = timeTextField.text
+            testObj.address = addressObj
+            testObj.userId = Auth.auth().currentUser?.uid
+            testObj.status = "PendingForLabConfirmation"
+            testObj.dateRequest = currentDate
+            testObj.timeRequest = currentTime
+            testObj.timeStampRequest = Date().toMillis()
+            
+            testObj.isFromHome = isFromHome
+            var newRequestPresenter = NewRequestPresenter(newRequestViewRef: self)
+            newRequestPresenter.saveRequest(testObj: testObj, roushettaImages: DatabaseImageArray)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -360,6 +358,8 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         let formatter=DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
+//        formatter.times
+        var x = datePicker
         dateTextField.text=formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
@@ -409,7 +409,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         alert.addAction(UIAlertAction(title: "Add new location  ", style: .default , handler:{ (UIAlertAction)in
             
             let vc = self.storyboard!.instantiateViewController(withIdentifier:"ReqlocationSVC") as! ReqLocationTableViewController
-            
+            vc.parentRef = self
             
             self.navigationController?.pushViewController(vc, animated: true)
             
@@ -504,7 +504,9 @@ extension NewRequestTableViewController:UICollectionViewDelegate,UICollectionVie
         collectionView.reloadData()
     }
     
-    
+    func getAddress(addressObj: Address) {
+        self.addressObj = addressObj
+    }
 }
 
 

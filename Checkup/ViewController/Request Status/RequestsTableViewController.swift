@@ -12,7 +12,7 @@ import SDWebImage
 class RequestsTableViewController: UITableViewController {
     var testFilterOriginal : TestFilter?
     var testFilter : TestFilter?
-    var take = 5
+    var take = 2
     var skip = 0
     var isFiltered = false
     var requests : [Request]?

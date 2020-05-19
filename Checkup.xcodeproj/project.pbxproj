@@ -33,6 +33,7 @@
 		0F69C382A23AE66CCD5E2C01 /* Pods_Checkup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FF798CDDF112788FABCBE4 /* Pods_Checkup.framework */; };
 		4E0E3502246BA11B00814696 /* ConvertTimeStampToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E3501246BA11B00814696 /* ConvertTimeStampToDate.swift */; };
 		4E0E3505246BB88400814696 /* MessageNotificationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E3504246BB88400814696 /* MessageNotificationLabel.swift */; };
+		4E128757247474AA00A57F25 /* GetAddressContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E128756247474AA00A57F25 /* GetAddressContract.swift */; };
 		4E15ACDB24712F6E004418B1 /* ShowNewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACDA24712F6E004418B1 /* ShowNewRequest.swift */; };
 		4E15ACDE2471302C004418B1 /* ShowNewRequestFromPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACDD2471302C004418B1 /* ShowNewRequestFromPopup.swift */; };
 		4E15ACE02471571D004418B1 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACDF2471571D004418B1 /* Toast.swift */; };
@@ -223,6 +224,7 @@
 		09FF798CDDF112788FABCBE4 /* Pods_Checkup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checkup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0E3501246BA11B00814696 /* ConvertTimeStampToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTimeStampToDate.swift; sourceTree = "<group>"; };
 		4E0E3504246BB88400814696 /* MessageNotificationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNotificationLabel.swift; sourceTree = "<group>"; };
+		4E128756247474AA00A57F25 /* GetAddressContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAddressContract.swift; sourceTree = "<group>"; };
 		4E15ACDA24712F6E004418B1 /* ShowNewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNewRequest.swift; sourceTree = "<group>"; };
 		4E15ACDD2471302C004418B1 /* ShowNewRequestFromPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNewRequestFromPopup.swift; sourceTree = "<group>"; };
 		4E15ACDF2471571D004418B1 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
@@ -1149,6 +1151,7 @@
 			isa = PBXGroup;
 			children = (
 				4EFA6ED5247429FC00D83F32 /* CheckLocation.swift */,
+				4E128756247474AA00A57F25 /* GetAddressContract.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -1745,6 +1748,7 @@
 				A302CC282471A11300C6323F /* ToastView.swift in Sources */,
 				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
 				4EF2BA6724733C9F00602123 /* FilterStatus.swift in Sources */,
+				4E128757247474AA00A57F25 /* GetAddressContract.swift in Sources */,
 				03FDA1902470B4440084C4AA /* BranchDescriptionTableView.swift in Sources */,
 				4E206DFA246F06E6007C401D /* Review.swift in Sources */,
 				CC157CAD24701160001AE122 /* EditProfileContract.swift in Sources */,

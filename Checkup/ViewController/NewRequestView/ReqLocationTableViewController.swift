@@ -11,6 +11,17 @@ import SkyFloatingLabelTextField
 import MapKit
 class ReqLocationTableViewController: UITableViewController , ICheckLocation {
     
+    var parentRef : IGetAddress?
+    
+    @IBAction func saveLocationBtn(_ sender: Any) {
+        addressObj.address = addressTxt.text
+        addressObj.apartmentNo = ApartmentNoTxt.text
+        addressObj.buildingNo = buildingNoTxt.text
+        addressObj.floorNo = floorNoTxt.text
+        
+        parentRef?.getAddress(addressObj: addressObj)
+    }
+    
     @IBOutlet var addressTxt: SkyFloatingLabelTextField!
     @IBOutlet var buildingNoTxt: SkyFloatingLabelTextField!
     
@@ -19,16 +30,27 @@ class ReqLocationTableViewController: UITableViewController , ICheckLocation {
     @IBOutlet var mapView: MKMapView!
     var locationManager:CLLocationManager!
     var currentLocationStr = "Current location"
-    var addressObj = Address()
+    var addressObj : Address!
     var isAuto : Bool?
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc = (
-            storyboard?.instantiateViewController(
-                withIdentifier: "ReqLocPopUpSVC"))! as! ReqPopUpLocationViewController
-        vc.reqLocationRef = self
-        present(vc, animated: true, completion: nil)
+        if addressObj == nil {
+            addressObj = Address()
+            let vc = (
+                storyboard?.instantiateViewController(
+                    withIdentifier: "ReqLocPopUpSVC"))! as! ReqPopUpLocationViewController
+            vc.reqLocationRef = self
+            present(vc, animated: true, completion: nil)
+        }
+        else{
+            addressTxt.text = addressObj.address
+            ApartmentNoTxt.text = addressObj.apartmentNo
+            buildingNoTxt.text = addressObj.buildingNo
+            floorNoTxt.text = addressObj.floorNo
+            setUsersClosestLocation(mLattitude: addressObj.latitude!, mLongitude: addressObj.longitude!)
+        }
+        
     }
     
     func checkLocationMethod(isAuto: Bool) {
