@@ -28,7 +28,7 @@ class GetRequestsModel: IGetRequestsModel {
         //        var x = RequestConfigration(userId: Auth.auth().currentUser?.uid, status: ["PendingForLabConfirmation" , "Done"], take: 3, skip: 0)
         var requests = [Request]()
         let testFilterDic = try! DictionaryEncoder.encode(testFilter)
-        let urlString = "http://192.168.1.2:2200/api/AnalysisService/ClientAnalysisRequests"
+        let urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests"
         
         Alamofire.request(urlString, method: .post, parameters: testFilterDic,encoding: JSONEncoding.default, headers: nil).responseString {
             response in
@@ -64,7 +64,46 @@ class GetRequestsModel: IGetRequestsModel {
                 print(error)
             }
         }
+        func getFilterLabs() {
+        //        var x = RequestConfigration(userId: Auth.auth().currentUser?.uid, status: ["PendingForLabConfirmation" , "Done"], take: 3, skip: 0)
+        var requests = [Request]()
+        let testFilterDic = try! DictionaryEncoder.encode(testFilter)
+        let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetLaboratories"
         
+        Alamofire.request(urlString, method: .post, parameters: testFilterDic,encoding: JSONEncoding.default, headers: nil).responseString {
+            response in
+            switch response.result {
+                //                                    case .success:
+            //                                        print(response)
+            case .success(let value):
+                let json = JSON(value)
+                //        let requests = Request.booksFromJSONArray(json.arrayValue)
+                //        let requests = json.object as! [Request]
+                if let data = value.data(using: .utf8) {
+                    if let jsonObject = try? JSON(data: data) {
+                        for item in jsonObject.arrayValue {
+                            var requestObj = Request()
+                            requestObj.id = item["id"].stringValue
+                            requestObj.dateRequest = item["dateRequest"].stringValue
+                            requestObj.labName = item["labName"].stringValue
+                            requestObj.labPhoto = item["labPhoto"].stringValue
+                            requestObj.status = item["status"].stringValue
+                            requests.append(requestObj)
+                            print(item["dateRequest"].stringValue)
+                        }
+                        self.getRequestsPresenterRef.onSuccess(requests: requests)
+                        print(jsonObject)
+                        // 'jsonObject' contains Json version of 'strJson'
+                    }
+                }
+                print("JSON: \(json)")
+                
+                break
+            case .failure(let error):
+                self.getRequestsPresenterRef.onFail(message: error.localizedDescription)
+                print(error)
+            }
+        }
         //
         ////        .orderByChild("status").startAt("PendingForLabConfirmation").endAt("Done")
         //        var requests = [Request]()
@@ -175,4 +214,5 @@ class GetRequestsModel: IGetRequestsModel {
         ////        }
         //    }
     }
+}
 }
