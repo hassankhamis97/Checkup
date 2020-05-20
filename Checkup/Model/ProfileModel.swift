@@ -47,10 +47,10 @@ class ProfileModel:IProfileModel{
                 ?? ""
             let floorNo = addressMain?["floorNo"] as? String
                 ?? ""
-            let latitude = addressMain?["latitude"] as? String
-                ?? ""
-            let longitude = addressMain?["longitude"] as? String
-                ?? ""
+            let latitude = addressMain?["latitude"] as? Double ?? 0
+              
+            let longitude = addressMain?["longitude"] as? Double ?? 0
+                
             
             let adressObj=Address(address: address, buildingNo: buildingNo, floorNo: floorNo, apartmentNo: apartmentNo, longitude: longitude, latitude: latitude)
             let phone = value?["phone"] as? NSArray

@@ -621,6 +621,9 @@
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                             <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
+                                                            <color key="value" red="0.22352941179999999" green="0.25098039220000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
@@ -666,6 +669,9 @@
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                             <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
+                                                            <color key="value" red="0.22352941179999999" green="0.25098039220000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
@@ -713,6 +719,9 @@
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                             <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
+                                                            <color key="value" red="0.22352941179999999" green="0.25098039220000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Floor No" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LG1-eJ-JeJ" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
@@ -748,6 +757,9 @@
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                             <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
+                                                            <color key="value" red="0.22352941179999999" green="0.25098039220000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
@@ -782,6 +794,11 @@
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-e4-gBS">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="8bz-sq-D9y" id="NAK-p6-X9I"/>
+                                                        <outletCollection property="gestureRecognizers" destination="b42-Ov-eu6" appends="YES" id="Cqi-O9-k2a"/>
+                                                    </connections>
                                                 </mapView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -813,6 +830,9 @@
                                                             <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="saveLocationBtn:" destination="8bz-sq-D9y" eventType="touchUpInside" id="pCs-LQ-vPc"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -826,8 +846,21 @@
                             <outlet property="delegate" destination="8bz-sq-D9y" id="4J5-wu-FfJ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="ApartmentNoTxt" destination="NhD-Tq-lfL" id="Lwn-Fa-Z93"/>
+                        <outlet property="addressTxt" destination="uas-Ll-9DO" id="R1n-CD-TaV"/>
+                        <outlet property="buildingNoTxt" destination="aLX-Ww-4Wa" id="Hok-cN-gGK"/>
+                        <outlet property="floorNoTxt" destination="LG1-eJ-JeJ" id="eA6-fb-T8b"/>
+                        <outlet property="gestureOutlet" destination="b42-Ov-eu6" id="wRk-5R-Tr2"/>
+                        <outlet property="mapView" destination="LGK-e4-gBS" id="mDz-Op-HK4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4L-Mr-fVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="b42-Ov-eu6">
+                    <connections>
+                        <action selector="addAnnotaionTabGestureRecognizer:" destination="8bz-sq-D9y" id="fHR-1K-dnP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2907.2463768115945" y="37.5"/>
         </scene>

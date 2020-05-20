@@ -7,24 +7,36 @@
 //
 
 import Foundation
-extension EditProfileTableViewController:IEditProfileView{
+import UIKit
+extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileView{
+    func renderProfileView(user: User) {
+        self.user=user
+        reloadData()
+    }
     
-   
+    func renderImage(url: String) {
+        self.imageUrl=url
+    }
     
     func updatedUser() {
         navigationController?.popViewController(animated: true)
     }
     
     func showIndicator() {
-        print("")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+         saveBtnOutlet.alpha = 0
+        activityIndicator.alpha=1
+        activityIndicator.show()
+                
     }
     
     func hideIndicator() {
-         print("")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        activityIndicator.hide()
     }
     
     func errorMessage(msg: String) {
-         print("")
+        print("")
     }
     
     

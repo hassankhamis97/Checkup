@@ -8,19 +8,49 @@
 
 import UIKit
 import Firebase
-@available(iOS 13.0, *)
+import SDWebImage
 class MoreTableViewController: UITableViewController {
 
     
     @IBOutlet weak var profileImg: UIImageView!
+    
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    var user=User()
+    var profilePresenterRef:ProfilePresenter!
+      
     override func viewWillAppear(_ animated: Bool) {
         if(Auth.auth().currentUser?.uid == nil)
         {
             let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
             loginVC.modalPresentationStyle = .fullScreen
             self.present(loginVC, animated: true, completion: nil)
+
+            
+        }
+        else{
+            
+            
+            profilePresenterRef = ProfilePresenter(profileView: self)
+                               let userId = Auth.auth().currentUser?.uid
+                        
+                               profilePresenterRef.getUser(userId: userId!)
         }
     }
+    
+    
+    func reloadData()
+    {
+     
+        nameLabel.text=user.name
+        
+        profileImg.sd_setImage(with: URL(string: user.imagePath ?? "users"), placeholderImage: UIImage(named: "users"))
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

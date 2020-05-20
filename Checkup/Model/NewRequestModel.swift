@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 import FirebaseFirestore
+import Alamofire
 class NewRequestModel: INewRequestModel {
     var newRequestPresenterRef : INewRequestPresenter
     var ref: DatabaseReference!
@@ -86,6 +87,30 @@ class NewRequestModel: INewRequestModel {
                     print("Document successfully written!")
                 }
             }
+//            let json : String
+//            do{
+//               let jsonEncoder = JSONEncoder()
+//               let jsonData = try jsonEncoder.encode(testFinObj)
+////               let json = String(data: jsonData, encoding: String.Encoding.utf16)
+//
+//            }
+//            catch{
+//                
+//            }
+            let urlString = "http://192.168.1.2:2200/api/AnalysisService/AddNewAnalysis"
+
+                        Alamofire.request(urlString, method: .post, parameters: testFinDic,encoding: JSONEncoding.default, headers: nil).responseString {
+                        response in
+                          switch response.result {
+                                        case .success:
+                                            print(response)
+            
+                                            break
+                                        case .failure(let error):
+            
+                                            print(error)
+                                        }
+                        }
             self.ref.child("TestsHassan").child(testFinObj.branchId!).child(testFinObj.id!).setValue(testFinDic)
             self.newRequestPresenterRef.onSuccess()
             // ...

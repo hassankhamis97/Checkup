@@ -7,18 +7,23 @@
 //
 
 import Foundation
+import Firebase
 
 class SignupPresenter: ISignupPresenter {
+    
+    
+    var userName:String!
+    var email:String!
     
     var signupViewRef : ISignupView!
     init(signupViewRef : ISignupView) {
         self.signupViewRef = signupViewRef
     }
     
-    func saveAuthDate(username: String, email: String, password: String) {
+    func saveAuthDate(username: String, email: String, password: String, confirmPassword: String) -> Bool {
         signupViewRef.showIndicator()
         let signupModel = SignupModel(singupPresenterRef: self)
-        signupModel.saveAuthDate(username: username, email: email, password: password)
+        return signupModel.saveAuthDate(username: username, email: email, password: password, confirmPassword: confirmPassword)
     }
     
     func onSuccess() {

@@ -17,17 +17,23 @@ class EditProfilePresenter :IEditProfilePresenter{
            self.editProfileView=editProfileView
        }
     
-    func editUser(user: User) {
+    func editUser(user: User,img:UIImage?) {
+        
+        editProfileView.showIndicator()
         let editProfileModelRef = EditProfileModel(editProfilePresenterRef: self)
-        editProfileModelRef.editUser(user: user)
+        editProfileModelRef.editUser(user: user,img: img)
+        
+    
     }
     
     func onSuccess() {
         editProfileView.updatedUser()
+        editProfileView.hideIndicator()
     }
     
     func onFail(message: String) {
         editProfileView.errorMessage(msg: message)
+         editProfileView.hideIndicator()
     }
     
     

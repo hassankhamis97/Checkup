@@ -11,8 +11,8 @@ import OpalImagePicker
 import ImageSlideshow
 import SkyFloatingLabelTextField
 import Firebase
-
-class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,IFillDataCells {
+import Alamofire
+class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,IFillDataCells , IGetAddress {
     
     @IBOutlet weak var myCell: UITableViewCell!
     @IBOutlet weak var collectionView:UICollectionView!
@@ -39,6 +39,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var branchId : String?
     var labId: String?
     var isFromHome: Bool?
+    var addressObj : Address!
     @IBAction func saveNewRequestBtn(_ sender: UIButton) {
         if(checkValidation()){
             let date = Date()
@@ -47,20 +48,23 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             let currentDate = dateFormatter.string(from: date)
             dateFormatter.dateFormat = "H:mm a"
             let currentTime = dateFormatter.string(from: date)
+
             
-            var address = Address(address: "eleslam Street", buildingNo: "22", floorNo: "5", apartmentNo: "6", longitude: "", latitude: "")
             var testObj = Test()
+            testObj.roushettaPaths = [String]()
+            testObj.resultFilespaths = [String]()
             testObj.testName = testTexts
             testObj.branchId = branchId
             testObj.labId = labId
             testObj.dateForTakingSample = dateTextField.text
             testObj.timeForTakingSample = timeTextField.text
-            testObj.address = address
+            testObj.address = addressObj
             testObj.userId = Auth.auth().currentUser?.uid
             testObj.status = "PendingForLabConfirmation"
             testObj.dateRequest = currentDate
             testObj.timeRequest = currentTime
             testObj.timeStampRequest = Date().toMillis()
+            
             testObj.isFromHome = isFromHome
             var newRequestPresenter = NewRequestPresenter(newRequestViewRef: self)
             newRequestPresenter.saveRequest(testObj: testObj, roushettaImages: DatabaseImageArray)
@@ -83,7 +87,11 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     
     
     override func viewWillAppear(_ animated: Bool) {
-        
+         
+//        Alamofire.request("http://192.168.1.2:2200/api/AnalysisService/ClientAnalysisRequests").validate().responseJSON { response in
+//        print(response)
+//
+//        }
         if(Auth.auth().currentUser?.uid == nil)
         {
             let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
@@ -350,6 +358,8 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         let formatter=DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
+//        formatter.times
+        var x = datePicker
         dateTextField.text=formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
@@ -399,8 +409,8 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         alert.addAction(UIAlertAction(title: "Add new location  ", style: .default , handler:{ (UIAlertAction)in
             
             let vc = self.storyboard!.instantiateViewController(withIdentifier:"ReqlocationSVC") as! ReqLocationTableViewController
-            
-            
+            vc.parentRef = self
+            vc.isEditable=true;
             self.navigationController?.pushViewController(vc, animated: true)
             
             
@@ -432,7 +442,6 @@ extension NewRequestTableViewController: ImageSlideshowDelegate {
     func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int){
         
         ind=page
-        print("current page:", page)
     }
 }
 
@@ -495,6 +504,9 @@ extension NewRequestTableViewController:UICollectionViewDelegate,UICollectionVie
         collectionView.reloadData()
     }
     
+    func getAddress(addressObj: Address) {
+        self.addressObj = addressObj
+    }
     
 }
 

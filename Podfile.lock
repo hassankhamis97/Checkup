@@ -212,6 +212,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - Alamofire (4.9.1)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
@@ -363,10 +364,12 @@ PODS:
   - SDWebImage/Core (4.4.8)
   - SkyFloatingLabelTextField (3.8.0)
   - StepIndicator (1.0.8)
+  - SwiftyJSON (5.0.0)
   - TransitionButton (0.5.2)
   - UIColor_Hex_Swift (5.1.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Cosmos
   - Firebase
   - Firebase/Auth
@@ -380,12 +383,14 @@ DEPENDENCIES:
   - SDWebImage (~> 4.0)
   - SkyFloatingLabelTextField (~> 3.0)
   - StepIndicator (~> 1.0.8)
+  - SwiftyJSON
   - TransitionButton
   - UIColor_Hex_Swift
 
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
     - BoringSSL-GRPC
     - Cosmos
     - Firebase
@@ -415,11 +420,13 @@ SPEC REPOS:
     - SDWebImage
     - SkyFloatingLabelTextField
     - StepIndicator
+    - SwiftyJSON
     - TransitionButton
     - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
   Firebase: b28e55c60efd98963cd9011fe2fac5a10c2ba124
@@ -449,9 +456,10 @@ SPEC CHECKSUMS:
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   StepIndicator: 748b293f671355b021253f82031ac002f153dc81
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: 38063c2bc7f235c38fabacd944e0f42764a3fda3
+PODFILE CHECKSUM: f6fc79e82514226f73ecddbfcd5507e4365b0e49
 
 COCOAPODS: 1.8.4

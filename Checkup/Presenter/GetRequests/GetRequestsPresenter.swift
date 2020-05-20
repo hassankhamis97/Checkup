@@ -15,10 +15,10 @@ class GetRequestsPresenter: IGetRequestsPresenter {
         self.getRequestsViewRef = getRequestsViewRef
     }
 
-    func getRequests() {
+    func getRequests(testFilter: TestFilter) {
         getRequestsViewRef.showIndicator()
         var newRequestModel = GetRequestsModel(getRequestsPresenterRef: self)
-        newRequestModel.getRequests()
+        newRequestModel.getRequests(testFilter: testFilter)
         
     }
     

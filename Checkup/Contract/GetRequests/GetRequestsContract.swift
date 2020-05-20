@@ -11,10 +11,10 @@ protocol IGetRequestsView : IBase {
     func updateView (requests: [Request])
 }
 protocol IGetRequestsPresenter {
-    func getRequests()
+    func getRequests(testFilter: TestFilter)
     func onSuccess(requests: [Request])
     func onFail(message: String)
 }
 protocol IGetRequestsModel {
-    func getRequests()
+    func getRequests(testFilter: TestFilter)
 }

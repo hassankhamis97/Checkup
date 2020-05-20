@@ -21,7 +21,7 @@ import Firebase
 @available(iOS 13.0, *)
 
 class SignupTableViewController: UITableViewController {
-
+    
     
     @IBOutlet weak var userNAme: SkyFloatingLabelTextFieldWithIcon!
     
@@ -38,23 +38,17 @@ class SignupTableViewController: UITableViewController {
         signUpBtn.layer.cornerRadius=30
         signUpBtn.layer.borderColor=UIColor.white.cgColor
         signUpBtn.layer.borderWidth=2
-
     }
-
+    
     @IBAction func saveDataSignupBtn(_ sender: Any) {
-        if userNAme.text!.count > 0 && email.text!.count > 0 && password.text!.count >= 6 && password.text == confirmPassword.text {
-            
-            var signPresenter : SignupPresenter = SignupPresenter(signupViewRef: self)
-            signPresenter.saveAuthDate(username: userNAme.text!, email: email.text!, password: password.text!)
+        
+        let signPresenter : SignupPresenter = SignupPresenter(signupViewRef: self)
+        if signPresenter.saveAuthDate(username: userNAme.text!, email: email.text!, password: password.text!, confirmPassword: confirmPassword.text! ) {
             self.dismiss(animated: true, completion: nil)
-            
-        } else {
         }
     }
-
-    
 }
-    
-    
+
+
 
 

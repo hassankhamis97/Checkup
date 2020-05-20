@@ -26,11 +26,10 @@ extension ProfileTableViewController:IProfileView{
 
     func errorMessage(msg: String) {
 
+       let alert = UIAlertController(title: "Internet Connection", message:msg, preferredStyle: .alert)
 
-               let alert = UIAlertController(title: "Internet Connection", message:msg, preferredStyle: .alert)
-
-                      alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                      alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+              alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
     }
 
 
@@ -41,43 +40,43 @@ extension ProfileTableViewController:IProfileView{
         
         if ( userName.text != ""){
             
-            self.counter += 1
+           counter += 1
             
         }
         
         if( emailTextField.text != ""){
             
-            self.counter += 1
+            counter += 1
         }
         
         if( birthDateTextField.text != ""){
                    
-                   self.counter += 1
+                   counter += 1
                }
         
         if( genderTextField.text != ""){
             
-            self.counter += 1
+            counter += 1
         }
         
         if( insuranceTextField.text != ""){
             
-            self.counter += 1
+            counter += 1
         }
         
         if(  addressTextField.text != ""){
                    
-                   self.counter += 1
+                   counter += 1
                }
         
         if(mobileTextField.text != ""){
             
-            self.counter += 1
+            counter += 1
         }
         
         if(landPhoneTextField.text != ""){
             
-            self.counter += 1
+            counter += 1
         }
         
     }
