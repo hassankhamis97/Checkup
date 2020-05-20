@@ -18,11 +18,12 @@ class SignupModel: ISignupModel {
     }
     func saveAuthDate(username: String, email: String, password: String, confirmPassword: String) -> Bool {
         
-         var check: Bool = false
+        var check: Bool = false
+        var myMsg: String = "Enter Vaild Data"
         
         if username.count > 0 && email.count > 0 && password.count >= 6 && password == confirmPassword {
             
-           check = true
+            check = false
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 
                 if let x = error {
@@ -53,14 +54,19 @@ class SignupModel: ISignupModel {
                     check = true
                 }
                 else {
-                    self.singupPresenterRef.onFail(message: "Email is already exist")
+                    //                    self.singupPresenterRef.onFail(message: "Email is already exist")
+                    myMsg = "email is alreay in use"
                     check = false
                 }
             }
+            if !check {
+                self.singupPresenterRef.onFail(message: "email is alreay in use")
+            }
             return check
         } else {
-            self.singupPresenterRef.onFail(message: "Enter Vaild Data")
+            self.singupPresenterRef.onFail(message: myMsg)
             return check
         }
     }
+    
 }
