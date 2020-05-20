@@ -16,7 +16,11 @@ class ReqLocationTableViewController: UITableViewController , ICheckLocation , U
     var mkAnnotation: MKPointAnnotation!
 //    var gestureRecognizer : UITapGestureRecognizer?
     @IBOutlet var gestureOutlet: UITapGestureRecognizer!
+
+    
+    
     @IBAction func saveLocationBtn(_ sender: Any) {
+        
         if(checkValidation()){
         addressObj.address = addressTxt.text
         addressObj.apartmentNo = ApartmentNoTxt.text
@@ -25,8 +29,11 @@ class ReqLocationTableViewController: UITableViewController , ICheckLocation , U
         
         parentRef?.getAddress(addressObj: addressObj)
         self.navigationController?.popViewController(animated: true)
-        }
     }
+    
+    }
+    
+    
     
     @IBOutlet var addressTxt: SkyFloatingLabelTextField!
     @IBOutlet var buildingNoTxt: SkyFloatingLabelTextField!
@@ -146,15 +153,20 @@ class ReqLocationTableViewController: UITableViewController , ICheckLocation , U
                    return 80
                }
                
-               if(indexPath.row==3||indexPath.row==5){
+               if(indexPath.row==3){
                    
                    return 0
                    
                }
+            if(indexPath.row==5){
+                             
+                             return 40
+                             
+                         }
                
                if(indexPath.row==4){
                    
-                   return 370
+                   return 350
                    
                }
            }
@@ -178,13 +190,13 @@ class ReqLocationTableViewController: UITableViewController , ICheckLocation , U
                
                if(indexPath.row==4){
                    
-                   return 295
+                   return 300
                    
                }
                
                if(indexPath.row==5){
                    
-                   return 85
+                   return 40
                    
                }
                

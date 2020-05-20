@@ -791,9 +791,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="295"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-e4-gBS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-e4-gBS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="295"/>
                                                     <gestureRecognizers/>
                                                     <connections>
                                                         <outlet property="delegate" destination="8bz-sq-D9y" id="NAK-p6-X9I"/>
@@ -801,6 +800,12 @@
                                                     </connections>
                                                 </mapView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="LGK-e4-gBS" secondAttribute="bottom" id="3PD-qU-ZFF"/>
+                                                <constraint firstItem="LGK-e4-gBS" firstAttribute="top" secondItem="qIr-2o-72i" secondAttribute="top" id="Zcw-Gp-VPD"/>
+                                                <constraint firstItem="LGK-e4-gBS" firstAttribute="leading" secondItem="qIr-2o-72i" secondAttribute="leading" id="pRk-hr-LMk"/>
+                                                <constraint firstAttribute="trailing" secondItem="LGK-e4-gBS" secondAttribute="trailing" id="zgc-cC-3Vl"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
@@ -810,31 +815,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RWk-Fa-f4h" id="QlW-ff-tJA">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOg-eM-bf8" customClass="TransitionButton" customModule="TransitionButton">
-                                                    <rect key="frame" x="40" y="14" width="334" height="56"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                                    <state key="normal" title="Save Location">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                            <integer key="value" value="3"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="30"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="saveLocationBtn:" destination="8bz-sq-D9y" eventType="touchUpInside" id="pCs-LQ-vPc"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
@@ -846,6 +826,13 @@
                             <outlet property="delegate" destination="8bz-sq-D9y" id="4J5-wu-FfJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Mu7-NL-MSl">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="LFP-am-qYD">
+                            <connections>
+                                <action selector="saveLocationBtn:" destination="8bz-sq-D9y" id="9IV-uE-Onh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ApartmentNoTxt" destination="NhD-Tq-lfL" id="Lwn-Fa-Z93"/>
                         <outlet property="addressTxt" destination="uas-Ll-9DO" id="R1n-CD-TaV"/>
@@ -862,7 +849,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2907.2463768115945" y="37.5"/>
+            <point key="canvasLocation" x="3814.4927536231885" y="37.5"/>
         </scene>
         <!--Req Pop Up Location View Controller-->
         <scene sceneID="HyS-oF-bvH">
@@ -930,7 +917,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7m5-MY-Tcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3697.1014492753625" y="20.380434782608699"/>
+            <point key="canvasLocation" x="4604.347826086957" y="20.380434782608699"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zx6-DF-Su8">
@@ -1037,7 +1024,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJ2-hy-iKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4433" y="20"/>
+            <point key="canvasLocation" x="5339.130434782609" y="19.565217391304348"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="o2k-bI-5u2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="54o-K7-aPt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KTF-XY-HF2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8bz-sq-D9y" kind="relationship" relationship="rootViewController" id="NRD-CO-xkv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grK-OV-xb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2907.2463768115945" y="37.5"/>
         </scene>
     </scenes>
     <resources>
