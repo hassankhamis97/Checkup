@@ -59,9 +59,9 @@ class SignupModel: ISignupModel {
                     check = false
                 }
             }
-            if !check {
-                self.singupPresenterRef.onFail(message: "email is alreay in use")
-            }
+//            if !check {
+//                self.singupPresenterRef.onFail(message: "Email is alreay in use")
+//            }
             return check
         } else {
             self.singupPresenterRef.onFail(message: myMsg)
