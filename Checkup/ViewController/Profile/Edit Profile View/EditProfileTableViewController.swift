@@ -37,13 +37,24 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     var imageUrl:String!
     var addressObj:Address!
     var user=User()
+    var presenterFlag=true
     
     
     override func viewWillAppear(_ animated: Bool) {
-        reloadData()
-        let profilePresenterRef = ProfilePresenter(profileView: self)
-        let userId = Auth.auth().currentUser?.uid
-        profilePresenterRef.getUser(userId: userId!)
+
+        
+        if(presenterFlag==true)
+        {
+            let profilePresenterRef = ProfilePresenter(profileView: self)
+                  let userId = Auth.auth().currentUser?.uid
+                  profilePresenterRef.getUser(userId: userId!)
+        }
+      
+        else{
+            
+            addressTextField.text=addressObj.address
+        }
+        
     }
     
     func reloadData() {
@@ -204,7 +215,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     }
     func getAddress(addressObj: Address) {
         self.addressObj = addressObj
-        addressTextField.text = addressObj.address
+        presenterFlag=false
     }
 }
 
