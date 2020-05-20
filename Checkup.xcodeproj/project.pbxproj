@@ -17,6 +17,9 @@
 		03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44499246F149D00036549 /* DetailsViewController.swift */; };
 		03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */; };
 		03F6C7F9246B891800E89178 /* LabDescTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */; };
+		03F7D96A2473E68800E92A73 /* MainChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F7D9692473E68800E92A73 /* MainChatModel.swift */; };
+		03F7D96E247409CF00E92A73 /* MainChatContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F7D96D247409CF00E92A73 /* MainChatContract.swift */; };
+		03F7D97024740D1700E92A73 /* MainChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F7D96F24740D1700E92A73 /* MainChatPresenter.swift */; };
 		03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F8346E2468990B000155A4 /* FilterTableViewController.swift */; };
 		03F834712468D8D9000155A4 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F834702468D8D9000155A4 /* RadioButton.swift */; };
 		03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA18A247035F20084C4AA /* PdfDescViewController.swift */; };
@@ -193,6 +196,9 @@
 		03F44499246F149D00036549 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsCollectionViewCell.swift; sourceTree = "<group>"; };
 		03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescTableViewController.swift; sourceTree = "<group>"; };
+		03F7D9692473E68800E92A73 /* MainChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatModel.swift; sourceTree = "<group>"; };
+		03F7D96D247409CF00E92A73 /* MainChatContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatContract.swift; sourceTree = "<group>"; };
+		03F7D96F24740D1700E92A73 /* MainChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatPresenter.swift; sourceTree = "<group>"; };
 		03F8346E2468990B000155A4 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		03F834702468D8D9000155A4 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		03FDA18A247035F20084C4AA /* PdfDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfDescViewController.swift; sourceTree = "<group>"; };
@@ -436,6 +442,22 @@
 				03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */,
 			);
 			path = LabBranch;
+			sourceTree = "<group>";
+		};
+		03F7D96B2474089C00E92A73 /* MainChat */ = {
+			isa = PBXGroup;
+			children = (
+				03F7D96F24740D1700E92A73 /* MainChatPresenter.swift */,
+			);
+			path = MainChat;
+			sourceTree = "<group>";
+		};
+		03F7D96C247408AC00E92A73 /* MainChat */ = {
+			isa = PBXGroup;
+			children = (
+				03F7D96D247409CF00E92A73 /* MainChatContract.swift */,
+			);
+			path = MainChat;
 			sourceTree = "<group>";
 		};
 		03FDA18E2470B38F0084C4AA /* Extensions */ = {
@@ -846,6 +868,7 @@
 		4ECE5C48246E893D00932947 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				03F7D96B2474089C00E92A73 /* MainChat */,
 				A3C5F0332472C2B20069413F /* Signup */,
 				CC157CA424700F37001AE122 /* Profile */,
 				4E15ACE524718164004418B1 /* GetRequests */,
@@ -861,11 +884,11 @@
 				4EC82407246FDAB60075C894 /* Custom */,
 				4ECE5C4D246E89C200932947 /* LoginModel.swift */,
 				A3C5F02E2472BDA80069413F /* SignupModel.swift */,
-				CC157CA224700F2B001AE122 /* ProfileModel.swift */,
 				4E4EA637247010DE00309CAF /* NewRequestModel.swift */,
 				4E15ACE3247180E5004418B1 /* GetRequestsModel.swift */,
 				CC157CA224700F2B001AE122 /* ProfileModel.swift */,
 				CC761722247305B40084CC6E /* EditProfileModel.swift */,
+				03F7D9692473E68800E92A73 /* MainChatModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1235,6 +1258,7 @@
 		CC8A1044245E0844007856BF /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				03F7D96C247408AC00E92A73 /* MainChat */,
 				A3C5F0302472BE640069413F /* Signup */,
 				CC157CA92470107D001AE122 /* Profile */,
 				4E15ACE824718263004418B1 /* GetRequests */,
@@ -1554,6 +1578,7 @@
 				4EE9F93424697CF300BB4A39 /* MessagingChatViewController.swift in Sources */,
 				A3C5F0352472C2D60069413F /* SignupPresenter.swift in Sources */,
 				4E0E3505246BB88400814696 /* MessageNotificationLabel.swift in Sources */,
+				03F7D96E247409CF00E92A73 /* MainChatContract.swift in Sources */,
 				CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */,
 				CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */,
 				4E206DFC246F076F007C401D /* Comment.swift in Sources */,
@@ -1599,10 +1624,12 @@
 				A38CCEFF247214D900BC684A /* ResetPasswordViewController.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
 				03FDA19B2470CA650084C4AA /* FifthStaticTableViewCell.swift in Sources */,
+				03F7D97024740D1700E92A73 /* MainChatPresenter.swift in Sources */,
 				4E2C9DFF24706E3E007C6109 /* IView.swift in Sources */,
 				CCCDA050246AE5D5005549EA /* PassWordDetailsTableViewController.swift in Sources */,
 				CC8A1046245E087C007856BF /* IFillDataCells.swift in Sources */,
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
+				03F7D96A2473E68800E92A73 /* MainChatModel.swift in Sources */,
 				CC064E30245B03360046E67F /* NewRequestTableViewController.swift in Sources */,
 				4EBBC943246B5ABF00C7978D /* PearedTableView.swift in Sources */,
 				4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */,
