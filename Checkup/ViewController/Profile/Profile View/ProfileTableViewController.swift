@@ -111,15 +111,23 @@ class ProfileTableViewController: UITableViewController {
     @IBAction func previewAddressBtn(_ sender: Any) {
         
         
-        let vc = storyboard?.instantiateViewController(withIdentifier: "locationSVC") as! LocationTableViewController
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "locationSVC") as! LocationTableViewController
+//        
+//        
+//        if let obj=user.address {
+//             vc.addressObj = obj
+//        }
+//       
+//        
+//        navigationController?.pushViewController(vc, animated: true)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ReqlocationSVC") as! ReqLocationTableViewController
+        
+                vc.isEditable=false;
+        if user.address?.address! != "" {
+                           vc.addressObj = user.address
+                      }
         
         
-        if let obj=user.address {
-             vc.addressObj = obj
-        }
-       
-        
-        navigationController?.pushViewController(vc, animated: true)
-
+                      navigationController?.pushViewController(vc, animated: true)
 }
 }
