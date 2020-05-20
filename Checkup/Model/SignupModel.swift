@@ -18,11 +18,14 @@ class SignupModel: ISignupModel {
     }
     func saveAuthDate(username: String, email: String, password: String, confirmPassword: String) -> Bool {
         
-         var check: Bool = false
+        var check: Bool = false
         
-        if username.count > 0 && email.count > 0 && password.count >= 6 && password == confirmPassword {
+        if username.count == 0 && email.count == 0 && (password.count < 6 || password != confirmPassword ) {
             
-           check = true
+            self.singupPresenterRef.onFail(message: "Invalid Data")
+            return check
+        } else {
+            
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 
                 if let x = error {
@@ -30,18 +33,25 @@ class SignupModel: ISignupModel {
                     switch err.code {
                     case AuthErrorCode.wrongPassword.rawValue:
                         print("wrong password")
+                        self.singupPresenterRef.onFail(message: "wrong password")
                     case AuthErrorCode.invalidEmail.rawValue:
                         print("invalid email")
+                        self.singupPresenterRef.onFail(message: "invalid email")
                     case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
                         print("accountExistsWithDifferentCredential")
-                    case AuthErrorCode.emailAlreadyInUse.rawValue: //<- Your Error
+                        self.singupPresenterRef.onFail(message: "accountExistsWithDifferentCredential")
+                    case AuthErrorCode.emailAlreadyInUse.rawValue:
                         print("email is alreay in use")
+                        self.singupPresenterRef.onFail(message: "email is alreay in use")
                     default:
                         print("unknown error: \(err.localizedDescription)")
+                        self.singupPresenterRef.onFail(message: "Invalid Data")
                     }
-                    check = false
+                    
+                    self.singupPresenterRef.onFail(message: "Email is already exist")
+                    //                    check = false
                 }
-                if authResult != nil {
+                else if authResult != nil {
                     
                     let id = authResult?.user.uid
                     let phoneArray=[Phone]()
@@ -51,16 +61,12 @@ class SignupModel: ISignupModel {
                     
                     self.singupPresenterRef.onSuccess()
                     check = true
-                }
-                else {
-                    self.singupPresenterRef.onFail(message: "Email is already exist")
-                    check = false
+                    self.singupPresenterRef.onFail(message: "user created successfully")
                 }
             }
-            return check
-        } else {
-            self.singupPresenterRef.onFail(message: "Enter Vaild Data")
-            return check
         }
+        
+        return check
     }
+    
 }
