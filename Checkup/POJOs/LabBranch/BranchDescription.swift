@@ -1,5 +1,5 @@
 //
-//  LabBranch.swift
+//  BranchDescription.swift
 //  Checkup
 //
 //  Created by Hassan Khamis on 5/15/20.
@@ -7,11 +7,11 @@
 //
 
 import Foundation
-struct LabBranch {
+struct BranchDescription {
     var id : String?
     var email : String?
-    var password : String?
     var govern : String?
+    var address : Address?
     var image : String?
     var phone : [Phone]?
     var isAvailableFromHome : Bool
