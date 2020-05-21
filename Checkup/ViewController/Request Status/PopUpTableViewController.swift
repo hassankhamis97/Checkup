@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class PopUpTableViewController: UITableViewController {
 
     @IBOutlet weak var employeeImg: UIImageView!
@@ -18,8 +18,8 @@ class PopUpTableViewController: UITableViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
-    var phoneNumberArray=["0100234599","0115695430","01287590765"]
+    var employeeID : String?
+    var phoneNumberArray=["No Phone Available"]
     
     
     
@@ -30,11 +30,24 @@ class PopUpTableViewController: UITableViewController {
         
     }
     
+   override func viewWillAppear(_ animated: Bool) {
+          var employeeDetailsPresenter : EmployeeDetailsPresenter = EmployeeDetailsPresenter(empViewRef : self)
+    
+    guard let eID = employeeID else{
+        return
+    }
+    
+    employeeDetailsPresenter.getEmployee(empId:eID )
+     
+    
+           }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
-         employeeImg.layer.masksToBounds = false
+                    // 8ZIq9b06ILYYpodM0pFGLkdD24c2
+        employeeImg.layer.masksToBounds = false
         employeeImg.layer.cornerRadius=employeeImg.frame.width/2
         employeeImg.clipsToBounds = true
         employeeImg.layer.borderWidth=2
@@ -66,13 +79,55 @@ extension PopUpTableViewController :UICollectionViewDelegate,UICollectionViewDat
         return cell
     }
     
+      
+}
+
+extension PopUpTableViewController : IEmployeeDetailsView {
+    
+ 
+
+    
+    func onReceiveEmployeeDetails(employee: Employee) {
+        
+        if let imgPath = employee.imagePath  {
+            if employee.imagePath != "" {
+                self.employeeImg.sd_setImage(with: URL(string: imgPath), placeholderImage: UIImage(named: "placeholder.png"))
+                
+//                employeeImg = UIImageView(image: UIImage(named: imgPath))
+            }}
+        employeeName.text = employee.userName
+            
+        guard let phoneArr = employee.phones else {
+            print("no Phone")
+            return
+        }
+        phoneNumberArray = phoneArr
+        collectionView.reloadData()
+    }
     
     
-  
-    
-    
-    
-    
+//     func loadImage(url:String) {
+//
+//
+//
+//    let downloader = SDWebImageManager()
+//
+//
+//
+//     downloader.imageDownloader?.downloadImage(with: URL(string: url), options: .highPriority, progress: {
+//             (receivedSize, expectedSize, url) in
+//             // image is being downloading and you can monitor progress here
+//                 }, completed: { (downloadedImage, data, error, success) in
+//                     print(downloadedImage, data, success)
+//                     //image is downloaded and ready to use
+//                    self.employeeImg = UIImageView(image: downloadedImage)
+//
+//                    self.tableView.reloadData()
+//                 })
+//
+//
+//
+//        }
     
     
 }
