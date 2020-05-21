@@ -80,11 +80,11 @@ class RequstDetailsTableViewController: UITableViewController {
 
 extension RequstDetailsTableViewController: ImageSlideshowDelegate {
     func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int){
-        print("current page:", page)
     }
 }
 
-extension RequstDetailsTableViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+extension  RequstDetailsTableViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCell", for: indexPath) as! SliderCell
         
@@ -116,3 +116,6 @@ extension RequstDetailsTableViewController:UICollectionViewDelegate,UICollection
 }
 
 
+extension RequstDetailsTableViewController {
+    
+}
