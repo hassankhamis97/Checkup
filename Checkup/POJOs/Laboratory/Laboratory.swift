@@ -14,6 +14,6 @@ struct Laboratory : Encodable {
     var specialTests : String?
     var image : String?
     var branches : [String]?
-    func toDictionary() -> Any {     return ["id": id, "name": name, "formalReferencePathId": formalReferencePathId, "specialTests": specialTests, "image": image, "branches": branches] as Any }
+//    func toDictionary() -> Any {     return ["id": id, "name": name, "formalReferencePathId": formalReferencePathId, "specialTests": specialTests, "image": image, "branches": branches] as Any }
 }
 

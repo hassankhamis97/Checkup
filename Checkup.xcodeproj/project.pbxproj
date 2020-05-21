@@ -61,6 +61,7 @@
 		4E2C9DFD24706B6D007C6109 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C9DFC24706B6D007C6109 /* Alert.swift */; };
 		4E2C9DFF24706E3E007C6109 /* IView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C9DFE24706E3E007C6109 /* IView.swift */; };
 		4E2C9E0224708D77007C6109 /* BranchDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C9E0124708D77007C6109 /* BranchDescriptionViewController.swift */; };
+		4E3190282475EFD50074C6DF /* HomeLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3190272475EFD50074C6DF /* HomeLab.swift */; };
 		4E432F092464F6E100D1CACA /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E432F082464F6E000D1CACA /* History.storyboard */; };
 		4E432F132464F6EF00D1CACA /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E432F0C2464F6EF00D1CACA /* HistoryTableViewCell.swift */; };
 		4E432F142464F6EF00D1CACA /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E432F0D2464F6EF00D1CACA /* HistoryTableViewController.swift */; };
@@ -259,6 +260,7 @@
 		4E2C9DFC24706B6D007C6109 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		4E2C9DFE24706E3E007C6109 /* IView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IView.swift; sourceTree = "<group>"; };
 		4E2C9E0124708D77007C6109 /* BranchDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescriptionViewController.swift; sourceTree = "<group>"; };
+		4E3190272475EFD50074C6DF /* HomeLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLab.swift; sourceTree = "<group>"; };
 		4E432F082464F6E000D1CACA /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		4E432F0C2464F6EF00D1CACA /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		4E432F0D2464F6EF00D1CACA /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
@@ -597,6 +599,7 @@
 			children = (
 				4E206DED246EE702007C401D /* Laboratory.swift */,
 				4EC1FD3B2472E6D90029C499 /* FilterLab.swift */,
+				4E3190272475EFD50074C6DF /* HomeLab.swift */,
 			);
 			path = Laboratory;
 			sourceTree = "<group>";
@@ -1670,6 +1673,7 @@
 				4E22F907243E6E6C0090693C /* Checkup.xcdatamodeld in Sources */,
 				CC761723247305B40084CC6E /* EditProfileModel.swift in Sources */,
 				4EBBC940246B595000C7978D /* MainChatViewController.swift in Sources */,
+				4E3190282475EFD50074C6DF /* HomeLab.swift in Sources */,
 				4ECE5C4E246E89C200932947 /* LoginModel.swift in Sources */,
 				A33CA62F246D4DA00014CF6B /* UserNeedToTakeSample.swift in Sources */,
 				CC157CAB247010B6001AE122 /* ProfileContract.swift in Sources */,
