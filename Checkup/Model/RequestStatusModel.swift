@@ -42,7 +42,7 @@ class RequestStatusModel : IRequestStatusModel {
            self.testStatusObj.employeeId = values["employeeId"]as?String
            self.testStatusObj.generatedCode = values["generatedCode"]as?String
            self.testStatusObj.id = values["id"]as?String
-           self.testStatusObj.isFromHome = values["isFromHome"]as?String
+           self.testStatusObj.isFromHome = values["isFromHome"]as?Bool
            self.testStatusObj.precautions = values["precautions"]as?String
            self.testStatusObj.roushettaPaths = values["roushettaPaths"] as? [String]
            self.testStatusObj.testName = values["testName"]as? [String]
@@ -69,7 +69,7 @@ class RequestStatusModel : IRequestStatusModel {
          return
         }
             print(address["buildingNo"])
-        self.testStatusObj.address = Address(address: addr!["address"]!, buildingNo: addr!["buildingNo"]!, floorNo: addr!["floorNo"]!, apartmentNo: addr!["apartmentNo"]!, longitude: addr!["longitude"]!, latitude: addr!["latitude"]!)
+        self.testStatusObj.address = Address(address: addr!["address"]!, buildingNo: addr!["buildingNo"]!, floorNo: addr!["floorNo"]!, apartmentNo: addr!["apartmentNo"]!, longitude: Double(addr!["longitude"]!), latitude: Double(addr!["latitude"]!))
     
        
 
