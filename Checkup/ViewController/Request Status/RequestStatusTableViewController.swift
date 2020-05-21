@@ -68,34 +68,35 @@ class RequestStatusTableViewController: UITableViewController {
     @IBAction func cancelRequestBtn(_ sender: Any) {
         print("cancel taped ")
         
-        let alert = UIAlertController(title: "Confirmation Message", message: "Do you want to cancel this request ?", preferredStyle: .alert)
-
-      
-
-        self.present(alert, animated: true)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-            print("You choosed Yes !")
-            
-            var fullDateTimeString = ("\(self.testStatusObj.dateForTakingSample) \(self.testStatusObj.timeForTakingSample)")
-           if self.canCancelRequest(requestDateTime:fullDateTimeString)
-           {
-            
-           }else {
-            
-            
-                  let alert = UIAlertController(title: "Confirmation Message", message: "Sorry You can't cancel this request we are about to take your ssample now if you insest please call the laboratory ?", preferredStyle: .alert)
-
-                
-
-                  self.present(alert, animated: true)
-            
-            
-            }
-            
-        }))
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
-                  print("You choosed NOoOo !")
-              }))
+        Alert.showAdvancedAlert(title: "Confirmation Message", message: "Do you want to cancel this request ?", viewAdvancedAlertRef: self)
+//        let alert = UIAlertController(title: "Confirmation Message", message: "Do you want to cancel this request ?", preferredStyle: .alert)
+//
+//
+//
+//        self.present(alert, animated: true)
+//        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+//            print("You choosed Yes !")
+//
+//            var fullDateTimeString = ("\(self.testStatusObj.dateForTakingSample) \(self.testStatusObj.timeForTakingSample)")
+//           if self.canCancelRequest(requestDateTime:fullDateTimeString)
+//           {
+//
+//           }else {
+//
+//
+//                  let alert = UIAlertController(title: "Confirmation Message", message: "Sorry You can't cancel this request we are about to take your ssample now if you insest please call the laboratory ?", preferredStyle: .alert)
+//
+//
+//
+//                  self.present(alert, animated: true)
+//
+//
+//            }
+//
+//        }))
+//        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
+//                  print("You choosed NOoOo !")
+//              }))
         
     }
     
@@ -164,7 +165,7 @@ class RequestStatusTableViewController: UITableViewController {
         testStatusObj = Test();
                
                var requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
-               requesStatusPresenter.getRequest(labId: "-M7PRbF7mxbUJ0mdP4vH", branchId: "0G9djW7SzMXGTiXKdGkiYuiTY3g1", id: "-M7T0YuvqO4XbT-iAkOZ")
+               requesStatusPresenter.getRequest(labId: "-M7PRbF7mxbUJ0mdP4vH", branchId: "0G9djW7SzMXGTiXKdGkiYuiTY3g1", id: "-M7T-mc9zrSii2vWJ9zE")
         //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
         // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
          progressBarView.currentStep=0
@@ -466,8 +467,33 @@ class RequestStatusTableViewController: UITableViewController {
     
     
 
-extension RequestStatusTableViewController : IRequestStatusView
+extension RequestStatusTableViewController : IRequestStatusView , IViewAdvancedAlert
 {
+    func pressOk() {
+        print("You choosed Yes !")
+         
+         var fullDateTimeString = ("\(self.testStatusObj.dateForTakingSample) \(self.testStatusObj.timeForTakingSample)")
+        if self.canCancelRequest(requestDateTime:fullDateTimeString)
+        {
+         
+        }else {
+         
+         
+               let alert = UIAlertController(title: "Confirmation Message", message: "Sorry You can't cancel this request we are about to take your ssample now if you insest please call the laboratory ?", preferredStyle: .alert)
+
+             
+
+               self.present(alert, animated: true)
+         
+         
+         }
+    }
+    
+    func pressCancel() {
+                          print("You choosed NOoOo !")
+
+    }
+    
     
       
     func canCancelRequest(requestDateTime : String )->Bool
