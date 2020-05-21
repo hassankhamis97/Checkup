@@ -17,10 +17,12 @@ class MainChatTableViewCell: UITableViewCell {
     @IBOutlet var noOfUnReadMessages: MessageNotificationLabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        pearedUserImg.layer.cornerRadius=pearedUserImg.frame.width / 2
-//        noOfUnReadMessages.layer.cornerRadius=noOfUnReadMessages.frame.width / 2
-        noOfUnReadMessages.layer.cornerRadius = 10
-        // Initialization code
+       pearedUserImg.layer.cornerRadius=pearedUserImg.frame.width / 2
+        
+//        noOfUnReadMessages.layer.cornerRadius=noOfUnReadMessages.frame.width / 2  no
+
+                noOfUnReadMessages.layer.cornerRadius = 10
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

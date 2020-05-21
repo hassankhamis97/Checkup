@@ -10,26 +10,44 @@ import Foundation
 import UIKit
 import SDWebImage
 extension MainChatViewController : UITableViewDataSource,UITableViewDelegate {
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pearedUsers.count
+        return viewPearedArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainChatCell", for: indexPath) as! MainChatTableViewCell
-        cell.pearedUserName.text = pearedUsers[indexPath.row].name!
-        cell.pearedUserImg.sd_setImage(with: URL(string: pearedUsers[indexPath.row].imgUrl!), placeholderImage:UIImage(named: "placeholder.png"))
-        cell.lastMessage.text = pearedUsers[indexPath.row].lastMessage!
-        cell.lastMessageTime.text = getDateFromTimeStamp(timeStamp: Int64(pearedUsers[indexPath.row].lastMessageTime!) as! Int64)
-        cell.noOfUnReadMessages.text = pearedUsers[indexPath.row].noOfUnReadMessages!
+       cell.pearedUserName.text = viewPearedArr[indexPath.row].name!
+        
+        
+        cell.pearedUserImg.sd_setImage(with: URL(string: viewPearedArr[indexPath.row].imgUrl!), placeholderImage:UIImage(named: "placeholder.png"))
+        
+        cell.lastMessage.text = viewPearedArr[indexPath.row].lastMessage!
+     
+        cell.lastMessageTime.text = getDateFromTimeStamp(timeStamp: Int64(viewPearedArr[indexPath.row].lastMessageTime!) as! Int64)
+        
+        
+        /*if(viewPearedArr[indexPath.row].noOfUnReadMessages == "0")
+        {
+            cell.noOfUnReadMessages.alpha = 0
+        }else
+        {
+            cell.noOfUnReadMessages.text = viewPearedArr[indexPath.row].noOfUnReadMessages!
+
+        }*/
+        
         return cell
     }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let messagingSB = storyboard?.instantiateViewController(withIdentifier: "messagingChatSVC") as? MessagingChatViewController else { return }
-        messagingSB.currentPearedUser = pearedUsers[indexPath.row]
+        messagingSB.currentPearedUser = viewPearedArr[indexPath.row]
         self.navigationController?.pushViewController(messagingSB, animated: true)
     
     }
+    
     func getDateFromTimeStamp(timeStamp : Int64) -> String {
         
         var date1 = Date(milliseconds: Int64(timeStamp)) // "Dec 31, 1969, 4:00 PM" (PDT variant of
