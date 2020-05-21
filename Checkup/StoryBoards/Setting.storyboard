@@ -226,6 +226,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmNewPasswordLbl" destination="ZVg-cQ-u2F" id="Ixr-Pj-ec2"/>
+                        <outlet property="newPasswordLbl" destination="oOJ-yh-eJZ" id="cH9-UA-HwV"/>
+                        <outlet property="oldPasswordLbl" destination="tBb-Vw-GXj" id="Sdz-q8-5Tc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTB-LP-Aft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,7 @@ class HistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var labDateOutlet: UILabel!
     @IBOutlet weak var labNameOutlet: UILabel!
     
+    @IBOutlet var requestStatus: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization
