@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03067A232477724F000F1424 /* LabDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03067A222477724F000F1424 /* LabDescriptionModel.swift */; };
+		03067A26247772B2000F1424 /* LabDescPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03067A25247772B2000F1424 /* LabDescPresenter.swift */; };
+		03067A292477733D000F1424 /* LabDescContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03067A282477733D000F1424 /* LabDescContract.swift */; };
 		031046AE246C8F77000372BD /* FilterLabTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031046AD246C8F77000372BD /* FilterLabTableView.swift */; };
 		0335FAF8246A08C600CE0863 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0335FAF7246A08C600CE0863 /* Home.storyboard */; };
 		0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */; };
@@ -214,6 +217,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03067A222477724F000F1424 /* LabDescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescriptionModel.swift; sourceTree = "<group>"; };
+		03067A25247772B2000F1424 /* LabDescPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescPresenter.swift; sourceTree = "<group>"; };
+		03067A282477733D000F1424 /* LabDescContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescContract.swift; sourceTree = "<group>"; };
 		031046AD246C8F77000372BD /* FilterLabTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLabTableView.swift; sourceTree = "<group>"; };
 		0335FAF7246A08C600CE0863 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -437,6 +443,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03067A242477725D000F1424 /* LabDescription */ = {
+			isa = PBXGroup;
+			children = (
+				03067A25247772B2000F1424 /* LabDescPresenter.swift */,
+			);
+			path = LabDescription;
+			sourceTree = "<group>";
+		};
+		03067A2724777312000F1424 /* LabDescription */ = {
+			isa = PBXGroup;
+			children = (
+				03067A282477733D000F1424 /* LabDescContract.swift */,
+			);
+			path = LabDescription;
+			sourceTree = "<group>";
+		};
 		0335FAF9246A0B1A00CE0863 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -982,6 +1004,7 @@
 		4ECE5C48246E893D00932947 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				03067A242477725D000F1424 /* LabDescription */,
 				4EF1A1DC2476B05A00597A15 /* EmployeeDetails */,
 				4EF1A1D92476B03700597A15 /* ReqestStatus */,
 				4E3C1F41247693B800D9761D /* Labs */,
@@ -1010,6 +1033,7 @@
 				03F7D9692473E68800E92A73 /* MainChatModel.swift */,
 				CC76172C24732A050084CC6E /* ImageModel.swift */,
 				4E3C1F3F247693A700D9761D /* GetLabsModel.swift */,
+				03067A222477724F000F1424 /* LabDescriptionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1435,6 +1459,7 @@
 		CC8A1044245E0844007856BF /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				03067A2724777312000F1424 /* LabDescription */,
 				4EF1A1E32476B0E800597A15 /* IRequestStatus */,
 				4E3C1F442476A3F900D9761D /* Labs */,
 				03F7D96C247408AC00E92A73 /* MainChat */,
@@ -1734,6 +1759,7 @@
 				4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */,
 				4E3C1F3E2476919800D9761D /* MainBranch.swift in Sources */,
 				4E2C9DFD24706B6D007C6109 /* Alert.swift in Sources */,
+				03067A26247772B2000F1424 /* LabDescPresenter.swift in Sources */,
 				CC5DFD0E2468C242003B9F18 /* PopUpCollectionViewCell.swift in Sources */,
 				4EF1A1E22476B08300597A15 /* EmployeeDetailsModel.swift in Sources */,
 				4EFA6ED6247429FD00D83F32 /* CheckLocation.swift in Sources */,
@@ -1741,6 +1767,7 @@
 				03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */,
 				4E3C1F462476A41900D9761D /* GetLabsContract.swift in Sources */,
 				4EF1A1E02476B07000597A15 /* RequestStatusModel.swift in Sources */,
+				03067A232477724F000F1424 /* LabDescriptionModel.swift in Sources */,
 				03FDA1932470BC8F0084C4AA /* FirstStaticTableViewCell.swift in Sources */,
 				4EF1A1E72476B0E800597A15 /* IRequestStatus.swift in Sources */,
 				4E22F8FF243E6E6C0090693C /* SceneDelegate.swift in Sources */,
@@ -1853,6 +1880,7 @@
 				CC157CA324700F2B001AE122 /* ProfileModel.swift in Sources */,
 				03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */,
 				4EFA6ECF2473D58100D83F32 /* TestType.swift in Sources */,
+				03067A292477733D000F1424 /* LabDescContract.swift in Sources */,
 				4EFA6ED32474195400D83F32 /* FilterTestContract.swift in Sources */,
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
 				4ECE5C59246EA5C200932947 /* IBase.swift in Sources */,

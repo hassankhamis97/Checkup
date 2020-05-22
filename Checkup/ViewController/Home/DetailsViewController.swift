@@ -19,9 +19,8 @@ class DetailsViewController: UIViewController {
         //myScrollView.bounces = false
 
     }
-    
-
 }
+
 extension DetailsViewController : UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let y : CGFloat = scrollView.contentOffset.y

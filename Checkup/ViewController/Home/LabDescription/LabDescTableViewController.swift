@@ -12,6 +12,7 @@ class LabDescTableViewController: UITableViewController {
     @IBOutlet weak var labBrachCollection: UICollectionView!
     var labBranches : [String] = ["Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch"]
     
+    var labDesc :  ILabDescModel = LabaDescriptionModel()
     override func viewDidLoad() {
         super.viewDidLoad()
   
@@ -27,7 +28,10 @@ class LabDescTableViewController: UITableViewController {
         layout.itemSize = CGSize(width: 191, height: 213)
        layout.minimumInteritemSpacing = 1.0
        self.labBrachCollection?.collectionViewLayout = layout
-    
+        
+
+        labDesc.fetchLabDes()
+        
         
   
        
