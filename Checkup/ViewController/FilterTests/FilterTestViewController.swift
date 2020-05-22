@@ -9,10 +9,11 @@
 import UIKit
 import SkyFloatingLabelTextField
 class FilterTestViewController: UIViewController {
+    @IBOutlet var tableViewOutlet: UITableView!
     var testFilter : TestFilter?
     var datePickerView : UIDatePicker = UIDatePicker()
     var datePickerView2 : UIDatePicker = UIDatePicker()
-    
+    var parentRef : IFilterTest?
     var dateFormatter = DateFormatter()
     var labsList = [FilterLab]()
     @IBOutlet weak var firstDateField: SkyFloatingLabelTextField!
@@ -21,6 +22,9 @@ class FilterTestViewController: UIViewController {
     var inputDateTwo : String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        var getFilteredLabsPresenter = GetFilteredLabsPresenter(getFilteredLabsViewRef: self)
+        getFilteredLabsPresenter.getFilteredLabs()
+        testFilter?.labIds = [String]()
 //        filterType = FilterStatus.noFilter.rawValue
         firstDateField.inputView = datePickerView
          datepickerToolBar()
@@ -33,19 +37,11 @@ class FilterTestViewController: UIViewController {
          datePickerView.datePickerMode = .date
          datePickerView2.datePickerMode = .date
          
-        
-        var labObj1 = FilterLab(id: "1", name: "mokhtabar", isChecked: false)
-        var labObj2 = FilterLab(id: "2", name: "mokhtabar", isChecked: true)
-        labsList.append(labObj1)
-        labsList.append(labObj2)
-         
-         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Apply", style: .plain, target: self, action: #selector(closeTapped))
+         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Apply", style: .plain, target: self, action: #selector(applyFilter))
         // Do any additional setup after loading the view.
     }
     
-    @objc func closeTapped(){
-          navigationController?.popViewController(animated: true)
-      }
+    
 
     
     func datepickerToolBar(){
@@ -63,6 +59,7 @@ class FilterTestViewController: UIViewController {
      @objc func done(){
         inputDateOne = dateFormatter.string(from: datePickerView.date)
              firstDateField.text = inputDateOne
+        testFilter?.dateFrom = inputDateOne
              datePickerView.removeFromSuperview()
         self.view.endEditing(true)
     
@@ -86,6 +83,8 @@ class FilterTestViewController: UIViewController {
        @objc func done2(){
           inputDateTwo = dateFormatter.string(from: datePickerView2.date)
           secDateField.text = inputDateTwo
+        testFilter?.dateTo = inputDateTwo
+
           datePickerView2.removeFromSuperview()
         self.view.endEditing(true)
 
@@ -99,5 +98,11 @@ class FilterTestViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @objc func applyFilter(){
+        testFilter?.skip = 0
+        testFilter?.take = 200
+        testFilter?.isFilter = true
+        parentRef!.getTestFilter(testFilter: testFilter!)
+        navigationController?.popViewController(animated: true)
+    }
 }

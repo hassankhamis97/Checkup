@@ -97,8 +97,8 @@ class NewRequestModel: INewRequestModel {
 //            catch{
 //                
 //            }
-            let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewAnalysis"
-
+//            let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewAnalysis"
+let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewAnalysis"
                         Alamofire.request(urlString, method: .post, parameters: testFinDic,encoding: JSONEncoding.default, headers: nil).responseString {
                         response in
                           switch response.result {

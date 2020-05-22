@@ -63,8 +63,8 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             testObj.status = "PendingForLabConfirmation"
             testObj.dateRequest = currentDate
             testObj.timeRequest = currentTime
-            testObj.timeStampRequest = Date().toMillis()
-            
+//            testObj.timeStampRequest = Date().toMillis()
+//            testObj.dateRequestFormat = Date()
             testObj.isFromHome = isFromHome
             var newRequestPresenter = NewRequestPresenter(newRequestViewRef: self)
             newRequestPresenter.saveRequest(testObj: testObj, roushettaImages: DatabaseImageArray)

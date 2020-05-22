@@ -15,15 +15,30 @@ class GetLabsModel: IGetLabsModel {
         // for Azab
     }
     
-    var getLabsPresenterRef : IGetLabsPresenter
+    var getLabsPresenterRef : IGetLabsPresenter?
+    var getFilteredLabsPresenter : IGetFilteredLabsPresenter?
     init(getLabsPresenterRef : IGetLabsPresenter) {
         self.getLabsPresenterRef = getLabsPresenterRef
+    }
+    init(getFilteredLabsPresenter : IGetFilteredLabsPresenter) {
+        self.getFilteredLabsPresenter = getFilteredLabsPresenter
     }
     func getFilteredLabs() {
         var filterLabList = [FilterLab]()
         let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetLaboratories"
             Alamofire.request(urlString).validate().responseJSON { response in
                         debugPrint(response)
+                let json = JSON(response.data)
+                            print(json)
+                            
+                                for item in json.arrayValue {
+                                    var filterLab = FilterLab()
+                                    filterLab.id = item["id"].stringValue
+                                    filterLab.name = item["name"].stringValue
+                                    filterLab.isChecked = item["isChecked"].boolValue
+                                    filterLabList.append(filterLab)
+                                }
+                self.getFilteredLabsPresenter!.onSuccess(filterLabs: filterLabList)
 //                switch response.result {
 //                    case .success(let value):
 //
@@ -52,16 +67,16 @@ class GetLabsModel: IGetLabsModel {
 //                                            print(error)
 //
 //                                        }
-                let json = JSON(response.data)
-                            print(json)
-                            
-                                for item in json["results"].arrayValue {
-                                    var filterLab = FilterLab()
-                                    filterLab.id = item["id"].stringValue
-                                    filterLab.name = item["name"].stringValue
-                                    filterLab.isChecked = item["isChecked"].boolValue
-                                    filterLabList.append(filterLab)
-                                }
+//                let json = JSON(response.data)
+//                            print(json)
+//
+//                                for item in json["results"].arrayValue {
+//                                    var filterLab = FilterLab()
+//                                    filterLab.id = item["id"].stringValue
+//                                    filterLab.name = item["name"].stringValue
+//                                    filterLab.isChecked = item["isChecked"].boolValue
+//                                    filterLabList.append(filterLab)
+//                                }
 
     
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 struct Comment {
-    var comment: String?
+    var description: String?
     var rateNumber: String?
     var userId: String?
 //    func toDictionary() -> Any {     return ["id": id, "comment": comment, "userId": userId] as Any }

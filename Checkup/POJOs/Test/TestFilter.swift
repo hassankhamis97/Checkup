@@ -8,8 +8,9 @@
 
 import Foundation
 struct TestFilter : Encodable{
-    var dateTimeStampFrom: Int64?
-    var dateTimeStampTo: Int64?
+    var isFilter: Bool?
+    var dateFrom: String?
+    var dateTo: String?
     var labIds: [String]?
     var userId: String?
     var status: [String]?

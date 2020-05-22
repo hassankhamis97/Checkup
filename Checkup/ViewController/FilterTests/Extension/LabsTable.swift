@@ -14,7 +14,7 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "labCell", for: indexPath) as! SmallDescLabTableViewCell
+        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "labCell", for: indexPath) as! SmallDescLabTableViewCell
         cell.labName.text = labsList[indexPath.row].name
         cell.checkedIcon.imageView?.contentMode = .scaleToFill
 
@@ -29,7 +29,13 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         labsList[indexPath.row].isChecked = !labsList[indexPath.row].isChecked!
-        tableView.reloadData()
+        if labsList[indexPath.row].isChecked! {
+            testFilter?.labIds?.append(labsList[indexPath.row].id!)
+        }
+        else {
+            testFilter?.labIds?.remove(at: indexPath.row)
+        }
+        tableViewOutlet.reloadData()
     }
     
 }

@@ -28,8 +28,10 @@ class MainChatViewController: UIViewController , IMainChatView {
             self.present(loginVC, animated: true, completion: nil)
             
         }
-        presenter = MainChatPresenter(view: self)
-        presenter.getDataFromModel()
+        else{
+            presenter = MainChatPresenter(view: self)
+            presenter.getDataFromModel()
+        }
         
     }
     
