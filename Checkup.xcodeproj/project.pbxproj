@@ -140,6 +140,8 @@
 		A33CA62F246D4DA00014CF6B /* UserNeedToTakeSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33CA62E246D4DA00014CF6B /* UserNeedToTakeSample.swift */; };
 		A33E799C246DC2D5000897A6 /* MapViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33E799A246DC2D5000897A6 /* MapViewTableViewCell.swift */; };
 		A33E799D246DC2D5000897A6 /* MapViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33E799B246DC2D5000897A6 /* MapViewTableViewCell.xib */; };
+		A372090D24770574009ADC95 /* HomeLabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372090C24770574009ADC95 /* HomeLabPresenter.swift */; };
+		A372091024770DD4009ADC95 /* HomeExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372090F24770DD4009ADC95 /* HomeExtention.swift */; };
 		A38CCEFF247214D900BC684A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CCEFE247214D900BC684A /* ResetPasswordViewController.swift */; };
 		A39BF96D246D96A1003500A8 /* UserDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BF96C246D96A1003500A8 /* UserDataTableViewController.swift */; };
 		A39BF975246DA047003500A8 /* ImgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BF973246DA047003500A8 /* ImgTableViewCell.swift */; };
@@ -354,6 +356,8 @@
 		A33CA62E246D4DA00014CF6B /* UserNeedToTakeSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNeedToTakeSample.swift; sourceTree = "<group>"; };
 		A33E799A246DC2D5000897A6 /* MapViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewTableViewCell.swift; sourceTree = "<group>"; };
 		A33E799B246DC2D5000897A6 /* MapViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewTableViewCell.xib; sourceTree = "<group>"; };
+		A372090C24770574009ADC95 /* HomeLabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLabPresenter.swift; sourceTree = "<group>"; };
+		A372090F24770DD4009ADC95 /* HomeExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExtention.swift; sourceTree = "<group>"; };
 		A38CCEFE247214D900BC684A /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		A39BF96C246D96A1003500A8 /* UserDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataTableViewController.swift; sourceTree = "<group>"; };
 		A39BF973246DA047003500A8 /* ImgTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgTableViewCell.swift; sourceTree = "<group>"; };
@@ -442,6 +446,7 @@
 		0335FAF9246A0B1A00CE0863 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A372090E24770DAF009ADC95 /* Home Extension */,
 				0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */,
 				03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */,
 				03F44499246F149D00036549 /* DetailsViewController.swift */,
@@ -807,6 +812,7 @@
 			isa = PBXGroup;
 			children = (
 				4E3C1F422476941A00D9761D /* GetLabsPresenter.swift */,
+				A372090C24770574009ADC95 /* HomeLabPresenter.swift */,
 			);
 			path = Labs;
 			sourceTree = "<group>";
@@ -1303,6 +1309,14 @@
 			path = MapViewCustomCell;
 			sourceTree = "<group>";
 		};
+		A372090E24770DAF009ADC95 /* Home Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A372090F24770DD4009ADC95 /* HomeExtention.swift */,
+			);
+			path = "Home Extension";
+			sourceTree = "<group>";
+		};
 		A38CCEFD2472149400BC684A /* forgetPasswordPopup */ = {
 			isa = PBXGroup;
 			children = (
@@ -1747,6 +1761,7 @@
 				03FDA1932470BC8F0084C4AA /* FirstStaticTableViewCell.swift in Sources */,
 				4EF1A1E72476B0E800597A15 /* IRequestStatus.swift in Sources */,
 				4E22F8FF243E6E6C0090693C /* SceneDelegate.swift in Sources */,
+				A372090D24770574009ADC95 /* HomeLabPresenter.swift in Sources */,
 				CC76172524730BF80084CC6E /* ExtensionEditProfileMVP.swift in Sources */,
 				4EF1A1E62476B0E800597A15 /* IEmployeeDetails.swift in Sources */,
 				4EE7EA34246B023000BF434F /* KeyboardLayoutConstraint.swift in Sources */,
@@ -1787,6 +1802,7 @@
 				4ECE5C4E246E89C200932947 /* LoginModel.swift in Sources */,
 				A33CA62F246D4DA00014CF6B /* UserNeedToTakeSample.swift in Sources */,
 				CC157CAB247010B6001AE122 /* ProfileContract.swift in Sources */,
+				A372091024770DD4009ADC95 /* HomeExtention.swift in Sources */,
 				4EE7EA2A246AD3B900BF434F /* SenderImageTableViewCell.swift in Sources */,
 				03FDA1992470CA4F0084C4AA /* FourthStaticTableViewCell.swift in Sources */,
 				CCDF8BBF24713DF900F56B2D /* Annotation.swift in Sources */,
