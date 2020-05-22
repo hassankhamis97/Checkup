@@ -45,6 +45,8 @@ class RequestsTableViewController: UITableViewController , IFilterTest{
             sendRequest()
             
 //            self.tableView.reloadData()
+        }else {
+            isFiltered = false
         }
         dateDescingly = formatDate(myArr: labDate)
     }

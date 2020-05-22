@@ -22,6 +22,8 @@ class FilterTestViewController: UIViewController {
     var inputDateTwo : String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        testFilter?.dateFrom = nil
+        testFilter?.dateTo = nil
         var getFilteredLabsPresenter = GetFilteredLabsPresenter(getFilteredLabsViewRef: self)
         getFilteredLabsPresenter.getFilteredLabs()
         testFilter?.labIds = [String]()
@@ -99,6 +101,7 @@ class FilterTestViewController: UIViewController {
     }
     */
     @objc func applyFilter(){
+//        if(testFilter?.dateFrom ==)
         testFilter?.skip = 0
         testFilter?.take = 200
         testFilter?.isFilter = true
