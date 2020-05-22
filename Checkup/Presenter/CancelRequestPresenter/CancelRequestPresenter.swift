@@ -17,6 +17,7 @@ class CancelRequestPresenter: ICancelRequestPresenter {
     
     func cancelRequest(testObj:Test) {
         var cancelRequestModel = CancelRequestModel(cancelRequestRef : self )
+        cancelRequestModel.cancelTestRequest(testObj: testObj)
     }
     
     func onSuccess() {

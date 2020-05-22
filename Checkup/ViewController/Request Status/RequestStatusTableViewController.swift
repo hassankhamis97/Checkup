@@ -557,7 +557,7 @@ extension RequestStatusTableViewController : IRequestStatusView
       formatter.timeStyle = .medium
       
       formatter.dateFormat = "MMM dd, yyyy hh:mm a"
-      let requestDateTime = formatter.date(from:requestDateTime)
+      let formatedRequestDateTime = formatter.date(from:requestDateTime)
       
       let now = Date()
       print(now)
@@ -567,10 +567,10 @@ extension RequestStatusTableViewController : IRequestStatusView
       
       print(datePlus3Hours)
 
-      if requestDateTime! >= datePlus3Hours
+      if formatedRequestDateTime! >= datePlus3Hours
       {
         isOk = true;
-          print(" hello  \(requestDateTime!) ")
+          print(" hello  \(formatedRequestDateTime!) ")
       }
       
       
@@ -723,13 +723,27 @@ extension RequestStatusTableViewController : IRequestStatusView
 extension RequestStatusTableViewController : ICancelRequestView
 {
     func onCancelDone() {
-           
-        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
-                alert.present(alert, animated: true, completion: nil)
-        //************ back **************/
+        
+        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: .alert)
+        
+        
+        
+                self.present(alert, animated: true)
+                alert.addAction(UIAlertAction(title: "ok", style: .default, handler: { action in
+                    print("You choosed Yes !")
+            //************ back **************/
 
-          self.navigationController?.popViewController(animated: true)
+              self.navigationController?.popViewController(animated: true)
+        
+                }))
+              
+        
+//        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
+//                alert.present(alert, animated: true, completion: nil)
+//        //************ back **************/
+//
+//          self.navigationController?.popViewController(animated: true)
     }
     
     
