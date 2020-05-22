@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Address : Encodable{
+struct Address :Codable{
     var address: String? // do you mean full street name and Govern !!
     var buildingNo: String?
     var floorNo: String?

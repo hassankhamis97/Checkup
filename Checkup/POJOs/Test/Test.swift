@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Test : Encodable{
+struct Test : Codable{
     var id : String?
     var userId: String?
     var testName: [String]?
