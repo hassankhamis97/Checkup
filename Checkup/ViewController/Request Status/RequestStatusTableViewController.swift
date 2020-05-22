@@ -527,8 +527,7 @@ extension RequestStatusTableViewController : IRequestStatusView
       // let dateAsString = "02/12/15, 16:48"
 //      let  datee = "May 20, 2020"
 //      let time = "05:30 PM"
-//      let requestDateTimeStr = "\(datee) \(time)"
-      
+
       let formatter = DateFormatter()
       formatter.dateStyle = .medium
       formatter.timeStyle = .medium
@@ -538,11 +537,12 @@ extension RequestStatusTableViewController : IRequestStatusView
       
       let now = Date()
       print(now)
+        
       let datePlus3Hours = Calendar.current.date(byAdding: .hour, value: 3, to: now)!
       
       
       print(datePlus3Hours)
-      print(requestDateTime!)
+
       if requestDateTime! >= datePlus3Hours
       {
         isOk = true;
