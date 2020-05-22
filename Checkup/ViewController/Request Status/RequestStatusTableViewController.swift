@@ -14,12 +14,14 @@ import SkyFloatingLabelTextField
 class RequestStatusTableViewController: UITableViewController , IViewAdvancedAlert {
     var stepIndecatorShow : CGFloat = 100;
     @IBOutlet weak var precautionsText: UITextView!
+     var testID :String!
     var testStatusObj :Test!
     var imgSlider : CGFloat = 0
     var testArrTite :CGFloat = 0
     var testArrContent : CGFloat = 0
     var showCancel : CGFloat = 0
     var showDetailsPage = false ;
+   
     @IBOutlet weak var costText: UILabel!
    
 
@@ -90,7 +92,7 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
                   self.present(alert, animated: true)
             
             
-            }
+        }
        }
        
        func pressCancel() {
@@ -205,7 +207,7 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
         testStatusObj = Test();
                
         let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
-               requesStatusPresenter.getRequest(testId:"10036")
+               requesStatusPresenter.getRequest(testId:"10038")
         //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
         // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
          progressBarView.currentStep=0
@@ -562,11 +564,11 @@ extension RequestStatusTableViewController : IRequestStatusView
             
        
         
-        if let imgArr = myObj.roushettaPaths {
-            if imgArr[0] != nil && imgArr[0] != "" {
+       
+            if myObj.roushettaPaths.count != nil && imgArr[0] != "" {
              loadImage(imageArray: imgArr)
                 imgSlider = 220}
-        }
+        
            
         if let testArr = myObj.testName {
               if testArr[0] != nil && testArr[0] != "" {
