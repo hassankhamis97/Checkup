@@ -32,7 +32,7 @@ class GetRequestsModel: IGetRequestsModel {
         if(testFilter.isFilter!)
         {
 //            let urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisFilterRequests"
-            urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisFilterRequests"
+            urlString = "http://192.168.1.2:3000/api/AnalysisService/ClientAnalysisFilterRequests"
         }else{
             
             urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests"
