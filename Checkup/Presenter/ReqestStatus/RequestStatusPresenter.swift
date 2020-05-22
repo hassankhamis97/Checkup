@@ -8,6 +8,7 @@
 
 import Foundation
 class RequestStatusPresenter : IRequestStatusPresenter{
+   
 
       
       
@@ -16,10 +17,10 @@ class RequestStatusPresenter : IRequestStatusPresenter{
           self.requestViewRef = requestViewRef
       }
 
-    func getRequest(labId: String, branchId: String ,id : String ) {
+    func getRequest(testId:String) {
         
            var requestStatusModel = RequestStatusModel(requestPresenterRef : self)
-        requestStatusModel.onRequestStatusRevieved(labId: labId, branchId: branchId, id: id)
+        requestStatusModel.onRequestStatusRevieved(testId:testId)
         
     }
     

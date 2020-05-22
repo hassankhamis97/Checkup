@@ -20,8 +20,23 @@
                         <sections>
                             <tableViewSection id="oC5-xe-ksi">
                                 <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="XSp-WQ-819">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XSp-WQ-819" id="Qdx-zx-Je3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOV-Tm-DrO">
+                                                    <rect key="frame" x="0.0" y="13" width="414" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </searchBar>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" editingAccessoryType="checkmark" rowHeight="192" id="OcP-ef-xPN">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="192"/>
+                                        <rect key="frame" x="0.0" y="98" width="414" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OcP-ef-xPN" id="x3O-aM-Otk">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
@@ -41,7 +56,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="479" id="nB0-tN-9IA">
-                                        <rect key="frame" x="0.0" y="220" width="414" height="479"/>
+                                        <rect key="frame" x="0.0" y="290" width="414" height="479"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nB0-tN-9IA" id="LI7-4y-1GQ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
@@ -95,6 +110,7 @@
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <size key="customSize" width="191" height="233"/>
                                                             <connections>
+                                                                <outlet property="labHotLine" destination="GRe-wA-45U" id="9Ji-ET-vS8"/>
                                                                 <outlet property="labImageVIew" destination="fDG-dR-wyh" id="I4B-5L-c4N"/>
                                                                 <outlet property="labRating" destination="3sV-R1-n4w" id="f61-tQ-CC4"/>
                                                             </connections>
@@ -118,7 +134,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Kpc-fj-ZBo">
                         <rightBarButtonItems>
-                            <barButtonItem title="Filter" id="euC-eQ-Yz6"/>
+                            <barButtonItem title="Filter" id="euC-eQ-Yz6">
+                                <connections>
+                                    <action selector="searchFilter:" destination="8ET-JG-5tI" id="eCt-6S-irK"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Item" id="OZq-ef-xza">
                                 <connections>
                                     <segue destination="fm3-e1-75I" kind="push" id="o8A-wc-FSZ"/>
@@ -129,6 +149,7 @@
                     <connections>
                         <outlet property="labCollection" destination="GUX-I2-JLc" id="rSR-Iq-qem"/>
                         <outlet property="labSlideShow" destination="4ei-gy-2Ti" id="kFg-Sr-TgX"/>
+                        <outlet property="searchTVCell" destination="XSp-WQ-819" id="skw-0K-nGC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ax-6u-f8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
