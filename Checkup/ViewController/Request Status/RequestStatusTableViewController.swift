@@ -565,18 +565,20 @@ extension RequestStatusTableViewController : IRequestStatusView
        
         
        
-            if myObj.roushettaPaths.count != nil && imgArr[0] != "" {
-             loadImage(imageArray: imgArr)
-                imgSlider = 220}
+        if myObj.roushettaPaths!.count > 0  {
+          
+            loadImage(imageArray: myObj.roushettaPaths!)
+                imgSlider = 220
+        }
         
            
-        if let testArr = myObj.testName {
-              if testArr[0] != nil && testArr[0] != "" {
+        if  myObj.testName!.count > 0 {
+       
            testTextArray = myObj.testName!
 
             testArrTite = 50
             testArrContent = 80
-            }
+            
     
         }
            
