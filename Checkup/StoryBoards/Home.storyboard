@@ -353,10 +353,10 @@
             </objects>
             <point key="canvasLocation" x="-654" y="315"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Home Tab Bar View Controller-->
         <scene sceneID="Fgl-UN-hSU">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a7m-TO-BCx" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a7m-TO-BCx" customClass="HomeTabBarViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bAa-Ju-IV3">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -869,7 +869,7 @@
         <scene sceneID="rTC-7D-WQj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hOE-Pc-j3u" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Result" image="result_usselect_50px" selectedImage="result_usselect_50px" id="OLn-00-SMx">
+                    <tabBarItem key="tabBarItem" title="Result" image="result_usselect_50px" selectedImage="result_usselect_50px" id="OLn-00-SMx" customClass="ResultUITabBarItem" customModule="Checkup" customModuleProvider="target">
                         <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                     </tabBarItem>
                     <toolbarItems/>

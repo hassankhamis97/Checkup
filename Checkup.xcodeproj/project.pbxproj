@@ -80,12 +80,14 @@
 		4E4EA640247015F000309CAF /* NewRequestResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA63F247015F000309CAF /* NewRequestResponseExtension.swift */; };
 		4E77B4C2247757E3000B3118 /* GetFilteredLabsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77B4C1247757E3000B3118 /* GetFilteredLabsPresenter.swift */; };
 		4E77B4C42477597F000B3118 /* GetFilteredLabsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77B4C32477597F000B3118 /* GetFilteredLabsResponse.swift */; };
+		4E936328247845430004FEDC /* ResultUITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E936327247845430004FEDC /* ResultUITabBar.swift */; };
 		4EAA2AD8246CABC70050B0AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */; };
 		4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */; };
 		4EBBC93D246B47F200C7978D /* MainChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBC93B246B47F200C7978D /* MainChatTableViewCell.xib */; };
 		4EBBC940246B595000C7978D /* MainChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93F246B595000C7978D /* MainChatViewController.swift */; };
 		4EBBC943246B5ABF00C7978D /* PearedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC942246B5ABF00C7978D /* PearedTableView.swift */; };
 		4EBBC946246B5D3900C7978D /* PearedUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC945246B5D3900C7978D /* PearedUserData.swift */; };
+		4EBFBB0024786009008326C0 /* ResultUITabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFBAFF24786009008326C0 /* ResultUITabBarItem.swift */; };
 		4EC1626A246F36930053F581 /* ConvertToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC16269246F36930053F581 /* ConvertToDictionary.swift */; };
 		4EC1626D246F5C1D0053F581 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1626C246F5C1D0053F581 /* User.swift */; };
 		4EC1626F246F5EEA0053F581 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1626E246F5EEA0053F581 /* Address.swift */; };
@@ -300,12 +302,14 @@
 		4E4EA63F247015F000309CAF /* NewRequestResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestResponseExtension.swift; sourceTree = "<group>"; };
 		4E77B4C1247757E3000B3118 /* GetFilteredLabsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredLabsPresenter.swift; sourceTree = "<group>"; };
 		4E77B4C32477597F000B3118 /* GetFilteredLabsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredLabsResponse.swift; sourceTree = "<group>"; };
+		4E936327247845430004FEDC /* ResultUITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultUITabBar.swift; sourceTree = "<group>"; };
 		4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatTableViewCell.swift; sourceTree = "<group>"; };
 		4EBBC93B246B47F200C7978D /* MainChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChatTableViewCell.xib; sourceTree = "<group>"; };
 		4EBBC93F246B595000C7978D /* MainChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatViewController.swift; sourceTree = "<group>"; };
 		4EBBC942246B5ABF00C7978D /* PearedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PearedTableView.swift; sourceTree = "<group>"; };
 		4EBBC945246B5D3900C7978D /* PearedUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PearedUserData.swift; sourceTree = "<group>"; };
+		4EBFBAFF24786009008326C0 /* ResultUITabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultUITabBarItem.swift; sourceTree = "<group>"; };
 		4EC16269246F36930053F581 /* ConvertToDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToDictionary.swift; sourceTree = "<group>"; };
 		4EC1626C246F5C1D0053F581 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4EC1626E246F5EEA0053F581 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -454,6 +458,7 @@
 		0335FAF9246A0B1A00CE0863 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4E936326247844FF0004FEDC /* TabBar */,
 				0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */,
 				03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */,
 				03F44499246F149D00036549 /* DetailsViewController.swift */,
@@ -861,6 +866,15 @@
 				4E4EA63F247015F000309CAF /* NewRequestResponseExtension.swift */,
 			);
 			path = NewRequest;
+			sourceTree = "<group>";
+		};
+		4E936326247844FF0004FEDC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4E936327247845430004FEDC /* ResultUITabBar.swift */,
+				4EBFBAFF24786009008326C0 /* ResultUITabBarItem.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		4EBBC939246B476F00C7978D /* MainChatCell */ = {
@@ -1806,6 +1820,7 @@
 				4E0E3505246BB88400814696 /* MessageNotificationLabel.swift in Sources */,
 				03F7D96E247409CF00E92A73 /* MainChatContract.swift in Sources */,
 				4EC1FD2D2472AA2A0029C499 /* AddressLocationView.swift in Sources */,
+				4E936328247845430004FEDC /* ResultUITabBar.swift in Sources */,
 				CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */,
 				CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */,
 				4E206DFC246F076F007C401D /* Comment.swift in Sources */,
@@ -1838,6 +1853,7 @@
 				CCCDA049246A95D9005549EA /* PopUpLocationViewController.swift in Sources */,
 				03FDA1972470CA3A0084C4AA /* ThirdStaticTableViewCell.swift in Sources */,
 				CCCB1D5D24563FED00303C22 /* ImagePicker.swift in Sources */,
+				4EBFBB0024786009008326C0 /* ResultUITabBarItem.swift in Sources */,
 				4EF2BA6A24734E8F00602123 /* TestFilter.swift in Sources */,
 				A3C5F02F2472BDA80069413F /* SignupModel.swift in Sources */,
 				4ECE5C5C246EA85300932947 /* LoginResponseExtension.swift in Sources */,
