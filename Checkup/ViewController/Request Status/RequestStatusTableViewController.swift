@@ -207,7 +207,7 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
         testStatusObj = Test();
                
         let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
-               requesStatusPresenter.getRequest(testId:"10038")
+               requesStatusPresenter.getRequest(testId: testID)
         //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
         // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
          progressBarView.currentStep=0

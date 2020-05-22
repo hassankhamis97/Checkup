@@ -176,6 +176,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if #available(iOS 13.0, *) {
             let vc = storyboard?.instantiateViewController(identifier: "reqStatus") as! RequestStatusTableViewController
+            vc.testID = requests![indexPath.row].id
             navigationController?.pushViewController(vc, animated: true)
         } else {
             
