@@ -9,5 +9,5 @@
 import Foundation
 import UIKit
 protocol IView : UIViewController {
-    
+
 }

@@ -21,7 +21,7 @@ class LoginModel: ILoginModel {
                 self.loginPresenterRef.onSuccess()
             }
             else {
-                self.loginPresenterRef.onFail(message: error as! String)
+                self.loginPresenterRef.onFail(message: error!.localizedDescription)
             }
         }
     }

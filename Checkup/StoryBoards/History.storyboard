@@ -440,6 +440,7 @@
                     <connections>
                         <outlet property="firstDateField" destination="Jb2-u2-TjV" id="5Xv-dW-W35"/>
                         <outlet property="secDateField" destination="DNp-Rb-oNz" id="iqW-2X-DUh"/>
+                        <outlet property="tableViewOutlet" destination="Aya-af-ebZ" id="k7v-Fe-OrT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7V-US-2f1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
