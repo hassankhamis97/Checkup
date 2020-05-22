@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//DELETED
 class DetailsViewController: UIViewController {
     let imageViewMaxHeight : CGFloat = 250
     let imageViewMinHeight : CGFloat = 44 + UIApplication.shared.statusBarFrame.height
