@@ -23,10 +23,12 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var addressTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var profileStrengthProgressBar: UIProgressView!
     
-
+    @IBOutlet weak var profileStrengthLabel: UILabel!
+    
     
      var user=User()
     var counter:Int!
+    var netConnection=true
     
     var profilePresenterRef:ProfilePresenter!
     override func viewWillAppear(_ animated: Bool) {
@@ -86,6 +88,7 @@ class ProfileTableViewController: UITableViewController {
         profileImg.clipsToBounds = true
         
         
+        profileStrengthLabel.sizeToFit()
    
     }
     

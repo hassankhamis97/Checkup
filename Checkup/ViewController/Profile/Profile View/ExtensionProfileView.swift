@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension ProfileTableViewController:IProfileView{
+extension ProfileTableViewController:IProfileView,IView{
     func renderProfileView(user: User) {
         self.user=user
          reloadData()
@@ -26,10 +26,7 @@ extension ProfileTableViewController:IProfileView{
 
     func errorMessage(msg: String) {
 
-       let alert = UIAlertController(title: "Internet Connection", message:msg, preferredStyle: .alert)
-
-              alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        Alert.showValidationAlert(message: msg, viewRef: self)
     }
 
 

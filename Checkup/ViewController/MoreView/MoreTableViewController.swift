@@ -35,7 +35,7 @@ class MoreTableViewController: UITableViewController {
             
             profilePresenterRef = ProfilePresenter(profileView: self)
                                let userId = Auth.auth().currentUser?.uid
-                        
+
                                profilePresenterRef.getUser(userId: userId!)
         }
     }
@@ -69,6 +69,12 @@ class MoreTableViewController: UITableViewController {
         }
         
         if indexPath.row==1{
+          //statistcsSVC
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "statistcsSVC") as! StatisticsTableViewController
+                       
+                       navigationController?.pushViewController(vc, animated: true)
+            
             
             
             print("statistics")
