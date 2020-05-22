@@ -7,7 +7,9 @@
 //
 
 import Foundation
-struct Branches {
+struct Branches : Codable {
+    
+    
     var branches : [MainBranch]?
     var labHotline : String?
     var labPhoto : String?

@@ -193,7 +193,31 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
     
     @IBOutlet weak var refuseDescriptionText: UITextView!
     
+    
+    
+    //********** Delete Request Button *************** ///
+   // ************                       ****************
+    
+    
     @IBAction func deleteRefusedRequestBtn(_ sender: Any) {
+        
+        
+
+                let alert = UIAlertController(title: "Confirmation", message: "Do You Want To Delete This Request ?!", preferredStyle: .alert)
+        
+        
+        
+                self.present(alert, animated: true)
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                    print("You choosed Yes !")
+        
+                   let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
+        
+                }))
+                alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
+                          print("You choosed NOoOo !")
+                      }))
+              
         
     }
     
@@ -716,6 +740,29 @@ extension RequestStatusTableViewController : ICancelRequestView
                     alert.present(alert, animated: true, completion: nil)
       
     }
+    
+    
+    
+}
+
+
+
+extension RequestStatusTableViewController : IDeleteRequestView
+{  
+    func onRequetDeleted() {
+     let alert = UIAlertController(title: "Confirmation", message: "Your Request has been Deleted Successfully", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
+                    alert.present(alert, animated: true, completion: nil)
+    }
+    
+    func onRequetFailed() {
+   
+        let alert = UIAlertController(title: "Sorry", message: "Faild to Delete this Request", preferredStyle: UIAlertController.Style.alert)
+                   alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
+                       alert.present(alert, animated: true, completion: nil)
+    }
+    
+    
     
     
     

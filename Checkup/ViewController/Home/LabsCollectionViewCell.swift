@@ -15,4 +15,7 @@ class LabsCollectionViewCell: UICollectionViewCell {
     }
     @IBOutlet weak var labImageVIew: UIImageView!
     @IBOutlet weak var labRating: CosmosView!
+    
+    @IBOutlet weak var labHotLine: UILabel!
+    
 }

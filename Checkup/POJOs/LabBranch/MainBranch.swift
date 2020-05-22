@@ -7,10 +7,11 @@
 //
 
 import Foundation
-struct MainBranch {
+struct MainBranch : Codable {
     var idFB : String?
     var govern : String?
     var address : Address?
     var rating : Double?
     var distance : Double?
 }
+

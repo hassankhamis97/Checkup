@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Statistics Table View Controller-->
+        <scene sceneID="F2M-bq-fH9">
+            <objects>
+                <tableViewController storyboardIdentifier="statistcsSVC" id="9sZ-sU-a5a" customClass="StatisticsTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ULU-aq-ugc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection id="3HP-oc-G3Q">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="LpY-rA-OX4">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LpY-rA-OX4" id="g2b-tm-X4d">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Year To Show Graph" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbk-T7-Nw8">
+                                                    <rect key="frame" x="28" y="12" width="261" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="261" id="K2g-Hq-373"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="261" id="U4o-DM-fk3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB4-zv-CJa">
+                                                    <rect key="frame" x="297" y="11" width="100" height="30"/>
+                                                    <state key="normal" title="Done"/>
+                                                    <connections>
+                                                        <action selector="doneBtn:" destination="9sZ-sU-a5a" eventType="touchUpInside" id="uCg-XH-za6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Mbk-T7-Nw8" firstAttribute="top" secondItem="g2b-tm-X4d" secondAttribute="topMargin" constant="1" id="JpT-2A-F5a"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Mbk-T7-Nw8" secondAttribute="bottom" constant="1" id="LRd-0j-4HW"/>
+                                                <constraint firstItem="Mbk-T7-Nw8" firstAttribute="leading" secondItem="g2b-tm-X4d" secondAttribute="leadingMargin" constant="8" id="ULG-Fl-Pze"/>
+                                                <constraint firstItem="Mbk-T7-Nw8" firstAttribute="centerY" secondItem="g2b-tm-X4d" secondAttribute="centerY" id="Zux-zs-SJp"/>
+                                                <constraint firstAttribute="trailing" secondItem="hB4-zv-CJa" secondAttribute="trailing" constant="17" id="bnE-Nm-RDi"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Mbk-T7-Nw8" secondAttribute="bottom" constant="1" id="d2e-SX-XJi"/>
+                                                <constraint firstItem="hB4-zv-CJa" firstAttribute="leading" secondItem="Mbk-T7-Nw8" secondAttribute="trailing" constant="8" id="gvu-E4-p2y"/>
+                                                <constraint firstAttribute="bottom" secondItem="hB4-zv-CJa" secondAttribute="bottom" constant="17" id="hjS-nV-Xr1"/>
+                                                <constraint firstItem="Mbk-T7-Nw8" firstAttribute="top" secondItem="g2b-tm-X4d" secondAttribute="topMargin" constant="1" id="wk4-tU-oHx"/>
+                                                <constraint firstItem="hB4-zv-CJa" firstAttribute="top" secondItem="g2b-tm-X4d" secondAttribute="top" constant="11" id="xds-Ed-rri"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="556" id="oTx-rP-4uD">
+                                        <rect key="frame" x="0.0" y="86" width="414" height="556"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oTx-rP-4uD" id="5FL-12-1O3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="556"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKo-v5-LdR" customClass="BarChartView" customModule="Charts">
+                                                    <rect key="frame" x="20" y="80" width="374" height="396"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This graph show the percentage of H1Ab1c during 2019" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4L-gc-pfz">
+                                                    <rect key="frame" x="18" y="494" width="378" height="51"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.17769028888181049" green="0.39203552609816755" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="gKo-v5-LdR" firstAttribute="centerX" secondItem="5FL-12-1O3" secondAttribute="centerX" id="38j-7c-fAj"/>
+                                                <constraint firstItem="B4L-gc-pfz" firstAttribute="top" secondItem="gKo-v5-LdR" secondAttribute="bottom" constant="18" id="3oC-D8-x2d"/>
+                                                <constraint firstItem="gKo-v5-LdR" firstAttribute="top" secondItem="5FL-12-1O3" secondAttribute="topMargin" constant="69" id="9LH-iV-OiQ"/>
+                                                <constraint firstItem="gKo-v5-LdR" firstAttribute="centerY" secondItem="5FL-12-1O3" secondAttribute="centerY" id="LLw-R1-r4X"/>
+                                                <constraint firstItem="B4L-gc-pfz" firstAttribute="leading" secondItem="5FL-12-1O3" secondAttribute="leading" constant="18" id="RPE-He-iB0"/>
+                                                <constraint firstAttribute="trailing" secondItem="B4L-gc-pfz" secondAttribute="trailing" constant="18" id="Vz1-Qx-wvH"/>
+                                                <constraint firstItem="gKo-v5-LdR" firstAttribute="leading" secondItem="5FL-12-1O3" secondAttribute="leadingMargin" id="W97-MI-lrK"/>
+                                                <constraint firstItem="B4L-gc-pfz" firstAttribute="bottom" secondItem="5FL-12-1O3" secondAttribute="bottomMargin" id="d0i-UC-aQq"/>
+                                                <constraint firstItem="B4L-gc-pfz" firstAttribute="centerX" secondItem="5FL-12-1O3" secondAttribute="centerX" id="dxN-tr-oGS"/>
+                                                <constraint firstItem="gKo-v5-LdR" firstAttribute="centerY" secondItem="5FL-12-1O3" secondAttribute="centerY" id="ywV-9a-anP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9sZ-sU-a5a" id="WOj-dW-d3c"/>
+                            <outlet property="delegate" destination="9sZ-sU-a5a" id="UhQ-qC-X67"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="barChartView" destination="gKo-v5-LdR" id="xhM-FO-o2M"/>
+                        <outlet property="graphDescribtionLabel" destination="B4L-gc-pfz" id="uqt-tb-TN3"/>
+                        <outlet property="yearTextField" destination="Mbk-T7-Nw8" id="82n-LU-Iex"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lk1-Qy-Klf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.82608695652175" y="125.54347826086958"/>
+        </scene>
+    </scenes>
+</document>
