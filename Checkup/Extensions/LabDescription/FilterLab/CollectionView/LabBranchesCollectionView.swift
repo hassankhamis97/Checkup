@@ -12,7 +12,11 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
 
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return labBranches.count
+        if (labDescriptionObj.branches == nil){
+            return 0
+        }else{
+        return labDescriptionObj.branches!.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -20,6 +24,12 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
         cell.requestBtnOutlet.tag = indexPath.item
         cell.requestBtnOutlet.addTarget(self, action: #selector(newRequestAction), for: .touchUpInside)
         cell.isSelected = true
+        let convertedDiestance = String(labDescriptionObj.branches![indexPath.item].distance!)
+        
+        cell.governNameOutlet.text = labDescriptionObj.branches![indexPath.item].govern
+        cell.ratingOutlet.rating = labDescriptionObj.branches![indexPath.item].rating!
+        cell.distanceOutlet.text = convertedDiestance
+       // cell.branchDescOutlet.text = labDescriptionObj.branches![indexPath.item].address?.address as! String
         return cell
         
     }
