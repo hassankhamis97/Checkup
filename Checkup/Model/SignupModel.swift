@@ -49,7 +49,6 @@ class SignupModel: ISignupModel {
                     }
                     
                     self.singupPresenterRef.onFail(message: "Email is already exist")
-                    //                    check = false
                 }
                 else if authResult != nil {
                     
