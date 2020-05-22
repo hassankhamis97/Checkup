@@ -8,14 +8,18 @@
 
 import Foundation
 import UIKit
+import ImageSlideshow
 
-extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, IGetLabsView {
+extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ImageSlideshowDelegate, IGetLabsView {
     
     
     
     func getLabsForRender(homeLabs: [HomeLab]) {
-        homeLabArr = homeLabs
-        labCollection.reloadData()
+        DispatchQueue.main.async {
+            self.homeLabArr = homeLabs
+            self.showSlider()
+            self.labCollection.reloadData()
+        }
     }
     
     func showIndicator() {
@@ -65,6 +69,37 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             
             reach = false
         }
+    }
+    
+    func showSlider() {
+       
+        var slideShowImgs: [InputSource] = [InputSource]()
+        if homeLabArr?.count ?? 0 > 0{
+            for i in homeLabArr! {
+                slideShowImgs.append(ImageSource(image: UIImage(named: i.labPhoto ?? "")!))
+            }
+        }
+        
+        labSlideShow.setImageInputs(
+            slideShowImgs
+            //            [
+            //            ImageSource(image: UIImage(named: "borg")!),
+            //            ImageSource(image: UIImage(named: "alpha")!),
+            //            ImageSource(image: UIImage(named: "mokhtabar")!),
+            //            ImageSource(image: UIImage(named: "borg")!)
+            //        ]
+        )
+        
+        labSlideShow.slideshowInterval = 3
+        labSlideShow.contentScaleMode = .scaleToFill
+        
+        labSlideShow.delegate = self
+        
+        
+        pageIndicator.currentPageIndicatorTintColor = UIColor.black
+        pageIndicator.pageIndicatorTintColor = UIColor.black
+        labSlideShow.pageIndicator = pageIndicator
+        labSlideShow.activityIndicator = DefaultActivityIndicator()
     }
     
 }

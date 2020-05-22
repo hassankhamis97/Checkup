@@ -51,6 +51,13 @@ class HomeTableViewController: UITableViewController   {
         
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
         homeLabPresenter.getLabs()
+        
+        let layout = UICollectionViewFlowLayout()
+               layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+               layout.itemSize = CGSize(width: 200, height: 240)  //233
+               layout.minimumInteritemSpacing = 0.05
+               
+               self.labCollection?.collectionViewLayout = layout
         //
         //        var labObj = Laboratory(id: "", name: "El Mokhtabar", formalReferencePathId: "", specialTests: "", image: "", branches: ["",""])
         //
@@ -80,45 +87,6 @@ class HomeTableViewController: UITableViewController   {
          
          */
         //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
-        
-        
-        
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        layout.itemSize = CGSize(width: 200, height: 240)  //233
-        layout.minimumInteritemSpacing = 0.05
-        
-        self.labCollection?.collectionViewLayout = layout
-        
-        var slideShowImgs: [InputSource] = [InputSource]()
-        if homeLabArr?.count ?? 0 > 0{
-            for i in homeLabArr! {
-                slideShowImgs.append(ImageSource(image: UIImage(named: i.labPhoto ?? "")!))
-            }
-        }
-        labSlideShow.setImageInputs(
-            slideShowImgs
-            //            [
-            //            ImageSource(image: UIImage(named: "borg")!),
-            //            ImageSource(image: UIImage(named: "alpha")!),
-            //            ImageSource(image: UIImage(named: "mokhtabar")!),
-            //            ImageSource(image: UIImage(named: "borg")!)
-            //        ]
-        )
-        
-        labSlideShow.slideshowInterval = 3
-        labSlideShow.contentScaleMode = .scaleToFill
-        
-        labSlideShow.delegate = self
-        
-        
-        pageIndicator.currentPageIndicatorTintColor = UIColor.black
-        pageIndicator.pageIndicatorTintColor = UIColor.black
-        labSlideShow.pageIndicator = pageIndicator
-        labSlideShow.activityIndicator = DefaultActivityIndicator()
-        
-        
     }
     
     @IBAction func searchFilter(_ sender: Any) {
@@ -141,39 +109,3 @@ class HomeTableViewController: UITableViewController   {
         navigationController?.pushViewController(labFilter, animated: true)
     }
 }
-
-
-
-
-extension HomeTableViewController: ImageSlideshowDelegate {
-    
-    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int){
-        //        print("current page:", page)
-    }
-}
-
-//extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return labNames.count
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "labCell", for: indexPath) as! LabsCollectionViewCell
-//        
-//        cell.labImageVIew.image = UIImage(named: labImages[indexPath.row])
-//        //cell.labImageVIew.layer.cornerRadius = cell.labImageVIew.frame.height/2
-//        cell.labImageVIew.layer.cornerRadius = 15
-//        cell.labRating.rating = 3
-//        
-//        cell.contentView.layer.cornerRadius = 15
-//        cell.contentView.layer.borderWidth = 5.0
-//        cell.contentView.layer.borderColor = UIColor.white.cgColor
-//        
-//        return cell
-//    }
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//      var labDesc = storyboard?.instantiateViewController(withIdentifier: "labDescSCV")as! LabDescTableViewController
-//        navigationController?.pushViewController(labDesc, animated: true)
-//    }
-//    
-//}
