@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Test : Encodable{
+struct Test : Codable{
     var id : String?
     var userId: String?
     var testName: [String]?
@@ -33,6 +33,6 @@ struct Test : Encodable{
     var radioReason: String?
     var refuseReason: String?
     var generatedCode: String?
-    var timeStampRequest: Int64?
+//    var dateRequestFormat: Date?
     
 }

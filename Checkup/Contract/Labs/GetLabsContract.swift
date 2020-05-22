@@ -9,6 +9,7 @@
 import Foundation
 protocol IGetLabsView : IBase {
     // for Azab
+    func getLabsForRender(homeLabs: [HomeLab])
 }
 protocol IGetLabsPresenter {                // for Azab
     func getLabs() // edit here as you want

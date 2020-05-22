@@ -27,11 +27,6 @@ class LabDescTableViewController: UITableViewController {
         layout.itemSize = CGSize(width: 191, height: 213)
        layout.minimumInteritemSpacing = 1.0
        self.labBrachCollection?.collectionViewLayout = layout
-    
-        
-  
-       
-        
     }
 
     
