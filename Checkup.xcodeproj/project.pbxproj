@@ -156,6 +156,9 @@
 		BBBB1B502477C9B30013D06F /* CancelRquestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */; };
 		BBBB1B522477CA1A0013D06F /* ICancelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B512477CA1A0013D06F /* ICancelRequest.swift */; };
 		BBBB1B562477CAB90013D06F /* CancelRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B552477CAB90013D06F /* CancelRequestPresenter.swift */; };
+		BBBB1B5A247829E10013D06F /* IDeleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B59247829E10013D06F /* IDeleteRequest.swift */; };
+		BBBB1B5C24782B970013D06F /* DeleteRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B5B24782B970013D06F /* DeleteRequestPresenter.swift */; };
+		BBBB1B6024782D3B0013D06F /* DeleteRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B5F24782D3B0013D06F /* DeleteRequestModel.swift */; };
 		CC064E2D245B02D60046E67F /* NewRequestScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC064E2C245B02D60046E67F /* NewRequestScreen.storyboard */; };
 		CC064E30245B03360046E67F /* NewRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC064E2F245B03360046E67F /* NewRequestTableViewController.swift */; };
 		CC064E32245B05FA0046E67F /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC064E31245B05FA0046E67F /* SliderCell.swift */; };
@@ -376,6 +379,9 @@
 		BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelRquestModel.swift; sourceTree = "<group>"; };
 		BBBB1B512477CA1A0013D06F /* ICancelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICancelRequest.swift; sourceTree = "<group>"; };
 		BBBB1B552477CAB90013D06F /* CancelRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelRequestPresenter.swift; sourceTree = "<group>"; };
+		BBBB1B59247829E10013D06F /* IDeleteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDeleteRequest.swift; sourceTree = "<group>"; };
+		BBBB1B5B24782B970013D06F /* DeleteRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteRequestPresenter.swift; sourceTree = "<group>"; };
+		BBBB1B5F24782D3B0013D06F /* DeleteRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteRequestModel.swift; sourceTree = "<group>"; };
 		CC064E2C245B02D60046E67F /* NewRequestScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewRequestScreen.storyboard; sourceTree = "<group>"; };
 		CC064E2F245B03360046E67F /* NewRequestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestTableViewController.swift; sourceTree = "<group>"; };
 		CC064E31245B05FA0046E67F /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
@@ -999,6 +1005,7 @@
 		4ECE5C48246E893D00932947 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				BBBB1B5E24782BAC0013D06F /* DeleteRequestPresenter */,
 				BBBB1B542477CA7E0013D06F /* CancelRequestPresenter */,
 				4EF1A1DC2476B05A00597A15 /* EmployeeDetails */,
 				4EF1A1D92476B03700597A15 /* ReqestStatus */,
@@ -1029,6 +1036,7 @@
 				03F7D9692473E68800E92A73 /* MainChatModel.swift */,
 				CC76172C24732A050084CC6E /* ImageModel.swift */,
 				4E3C1F3F247693A700D9761D /* GetLabsModel.swift */,
+				BBBB1B5F24782D3B0013D06F /* DeleteRequestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1405,6 +1413,29 @@
 			path = CancelRequestPresenter;
 			sourceTree = "<group>";
 		};
+		BBBB1B572478299A0013D06F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BBBB1B58247829A40013D06F /* DeleteRequest */ = {
+			isa = PBXGroup;
+			children = (
+				BBBB1B59247829E10013D06F /* IDeleteRequest.swift */,
+			);
+			path = DeleteRequest;
+			sourceTree = "<group>";
+		};
+		BBBB1B5E24782BAC0013D06F /* DeleteRequestPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				BBBB1B5B24782B970013D06F /* DeleteRequestPresenter.swift */,
+			);
+			path = DeleteRequestPresenter;
+			sourceTree = "<group>";
+		};
 		C125EE7BC541D58677539BDB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1471,6 +1502,8 @@
 		CC8A1044245E0844007856BF /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				BBBB1B58247829A40013D06F /* DeleteRequest */,
+				BBBB1B572478299A0013D06F /* New Group */,
 				4EF1A1E32476B0E800597A15 /* IRequestStatus */,
 				BBBB1B532477CA480013D06F /* CancelRequest */,
 				4E3C1F442476A3F900D9761D /* Labs */,
@@ -1804,6 +1837,7 @@
 				4EE9F93424697CF300BB4A39 /* MessagingChatViewController.swift in Sources */,
 				A3C5F0352472C2D60069413F /* SignupPresenter.swift in Sources */,
 				4E0E3505246BB88400814696 /* MessageNotificationLabel.swift in Sources */,
+				BBBB1B5A247829E10013D06F /* IDeleteRequest.swift in Sources */,
 				03F7D96E247409CF00E92A73 /* MainChatContract.swift in Sources */,
 				4EC1FD2D2472AA2A0029C499 /* AddressLocationView.swift in Sources */,
 				CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */,
@@ -1849,6 +1883,7 @@
 				CCD0BAD7246A035C007CF3EE /* LocationTableViewController.swift in Sources */,
 				CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */,
 				4EE7EA2F246AF2B800BF434F /* DateTableViewCell.swift in Sources */,
+				BBBB1B5C24782B970013D06F /* DeleteRequestPresenter.swift in Sources */,
 				CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */,
 				4EC1FD332472DDFF0029C499 /* LabsTable.swift in Sources */,
 				CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */,
@@ -1906,6 +1941,7 @@
 				03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */,
 				031046AE246C8F77000372BD /* FilterLabTableView.swift in Sources */,
 				BBBB1B562477CAB90013D06F /* CancelRequestPresenter.swift in Sources */,
+				BBBB1B6024782D3B0013D06F /* DeleteRequestModel.swift in Sources */,
 				BBBB1B502477C9B30013D06F /* CancelRquestModel.swift in Sources */,
 				A302CC282471A11300C6323F /* ToastView.swift in Sources */,
 				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
