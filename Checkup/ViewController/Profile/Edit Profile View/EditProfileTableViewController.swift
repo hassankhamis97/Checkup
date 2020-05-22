@@ -17,7 +17,6 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     @IBOutlet weak var birthDateTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var nameTextField: SkyFloatingLabelTextFieldWithIcon!
-    @IBOutlet weak var emailTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var mobileNumTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var landPhonNumTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var insuranceTextField: SkyFloatingLabelTextFieldWithIcon!
@@ -38,7 +37,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     var addressObj:Address!
     var user=User()
     var presenterFlag=true
-    
+    var email:String!
     
     override func viewWillAppear(_ animated: Bool) {
 
@@ -60,7 +59,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     func reloadData() {
         
         nameTextField.text=user.name
-        emailTextField.text=user.email
+        email=user.email
         birthDateTextField.text=user.birthdate
         birthDateTextField.text=user.birthdate
         genderTextField.text=user.gender
@@ -192,7 +191,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         
         let id=Auth.auth().currentUser?.uid
         let name=nameTextField.text
-        let email = emailTextField.text
+        let email = self.email
         let birthdate=birthDateTextField.text
         let gender=genderTextField.text
         let mobileNum=mobileNumTextField.text

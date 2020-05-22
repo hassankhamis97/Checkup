@@ -162,6 +162,14 @@
             </objects>
             <point key="canvasLocation" x="2815" y="327"/>
         </scene>
+        <!--statistcsSVC-->
+        <scene sceneID="mrj-sb-W0V">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="statistcsSVC" storyboardName="Statistics" referencedIdentifier="statistcsSVC" id="XNQ-Ya-QOV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4l-1r-AZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3220" y="297"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Settings_100px" width="100" height="100"/>

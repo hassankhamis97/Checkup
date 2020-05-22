@@ -219,6 +219,9 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
   - Cosmos (21.0.0)
   - Firebase (6.24.0):
     - Firebase/Core (= 6.24.0)
@@ -370,6 +373,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Charts
   - Cosmos
   - Firebase
   - Firebase/Auth
@@ -392,6 +396,7 @@ SPEC REPOS:
     - abseil
     - Alamofire
     - BoringSSL-GRPC
+    - Charts
     - Cosmos
     - Firebase
     - FirebaseAnalytics
@@ -428,6 +433,7 @@ SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
   Firebase: b28e55c60efd98963cd9011fe2fac5a10c2ba124
   FirebaseAnalytics: 7386fc2176e3f93ad8ef34b5b1f2b33a891e4962
@@ -460,6 +466,6 @@ SPEC CHECKSUMS:
   TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: f6fc79e82514226f73ecddbfcd5507e4365b0e49
+PODFILE CHECKSUM: acd2fc5ede43e6a7b385975815c2e99d27496162
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

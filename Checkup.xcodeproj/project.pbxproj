@@ -185,6 +185,14 @@
 		CC76172F24732A610084CC6E /* ImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76172E24732A610084CC6E /* ImagePresenter.swift */; };
 		CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */; };
 		CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */; };
+		CC80B9D624771CAD00521508 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC80B9D524771CAD00521508 /* Statistics.storyboard */; };
+		CC80B9D924771F5300521508 /* StatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80B9D824771F5300521508 /* StatisticsTableViewController.swift */; };
+		CC80B9DB247727E800521508 /* ExtensionStatisticsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80B9DA247727E800521508 /* ExtensionStatisticsPicker.swift */; };
+		CC80B9DE2477350C00521508 /* StatisticsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80B9DD2477350C00521508 /* StatisticsContract.swift */; };
+		CC80B9E12477360000521508 /* HbA1cSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80B9E02477360000521508 /* HbA1cSample.swift */; };
+		CC80B9E4247737FA00521508 /* StatisticPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80B9E3247737FA00521508 /* StatisticPresenter.swift */; };
+		CC80B9E6247738CC00521508 /*  StatisticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80B9E5247738CC00521508 /*  StatisticsModel.swift */; };
+		CC80B9E8247739FC00521508 /* ExtensionStatisticsMvp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80B9E7247739FC00521508 /* ExtensionStatisticsMvp.swift */; };
 		CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */; };
 		CC8A1046245E087C007856BF /* IFillDataCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A1045245E087C007856BF /* IFillDataCells.swift */; };
 		CC8F5697247077CB002073F6 /* ExtensionProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F5696247077CB002073F6 /* ExtensionProfileView.swift */; };
@@ -410,6 +418,14 @@
 		CC76172E24732A610084CC6E /* ImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresenter.swift; sourceTree = "<group>"; };
 		CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		CC80B9D524771CAD00521508 /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
+		CC80B9D824771F5300521508 /* StatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewController.swift; sourceTree = "<group>"; };
+		CC80B9DA247727E800521508 /* ExtensionStatisticsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionStatisticsPicker.swift; sourceTree = "<group>"; };
+		CC80B9DD2477350C00521508 /* StatisticsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsContract.swift; sourceTree = "<group>"; };
+		CC80B9E02477360000521508 /* HbA1cSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HbA1cSample.swift; sourceTree = "<group>"; };
+		CC80B9E3247737FA00521508 /* StatisticPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticPresenter.swift; sourceTree = "<group>"; };
+		CC80B9E5247738CC00521508 /*  StatisticsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " StatisticsModel.swift"; sourceTree = "<group>"; };
+		CC80B9E7247739FC00521508 /* ExtensionStatisticsMvp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionStatisticsMvp.swift; sourceTree = "<group>"; };
 		CC8A1042245DC450007856BF /* TestNamingGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamingGroupViewController.swift; sourceTree = "<group>"; };
 		CC8A1045245E087C007856BF /* IFillDataCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFillDataCells.swift; sourceTree = "<group>"; };
 		CC8F5696247077CB002073F6 /* ExtensionProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionProfileView.swift; sourceTree = "<group>"; };
@@ -784,6 +800,7 @@
 				CCCDA04A246ACA70005549EA /* Setting.storyboard */,
 				A33CA623246D3AEE0014CF6B /* Employee.storyboard */,
 				CC1A876F246D60810020C403 /* More.storyboard */,
+				CC80B9D524771CAD00521508 /* Statistics.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -791,6 +808,7 @@
 		4E22F932243E73A90090693C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CC80B9D724771F1C00521508 /* Statistics */,
 				4EC1FD2E2472DD7A0029C499 /* FilterTests */,
 				4E2C9E0024708CB1007C6109 /* BranchDescription */,
 				A33CA625246D3D490014CF6B /* Employee */,
@@ -905,6 +923,7 @@
 		4EBBC944246B5C9500C7978D /* POJOs */ = {
 			isa = PBXGroup;
 			children = (
+				CC80B9DF2477354D00521508 /* Statistic */,
 				4EC16270246F6A400053F581 /* Test */,
 				4EC1626B246F5BEC0053F581 /* User */,
 				4E206DF6246F0656007C401D /* General */,
@@ -1011,6 +1030,7 @@
 		4ECE5C48246E893D00932947 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CC80B9E2247737C900521508 /* Statistics */,
 				BBBB1B5E24782BAC0013D06F /* DeleteRequestPresenter */,
 				BBBB1B542477CA7E0013D06F /* CancelRequestPresenter */,
 				4EF1A1DC2476B05A00597A15 /* EmployeeDetails */,
@@ -1042,6 +1062,7 @@
 				03F7D9692473E68800E92A73 /* MainChatModel.swift */,
 				CC76172C24732A050084CC6E /* ImageModel.swift */,
 				4E3C1F3F247693A700D9761D /* GetLabsModel.swift */,
+				CC80B9E5247738CC00521508 /*  StatisticsModel.swift */,
 				BBBB1B5F24782D3B0013D06F /* DeleteRequestModel.swift */,
 			);
 			path = Model;
@@ -1513,9 +1534,44 @@
 			path = LoginView;
 			sourceTree = "<group>";
 		};
+		CC80B9D724771F1C00521508 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				CC80B9D824771F5300521508 /* StatisticsTableViewController.swift */,
+				CC80B9DA247727E800521508 /* ExtensionStatisticsPicker.swift */,
+				CC80B9E7247739FC00521508 /* ExtensionStatisticsMvp.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		CC80B9DC247734BD00521508 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				CC80B9DD2477350C00521508 /* StatisticsContract.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		CC80B9DF2477354D00521508 /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				CC80B9E02477360000521508 /* HbA1cSample.swift */,
+			);
+			path = Statistic;
+			sourceTree = "<group>";
+		};
+		CC80B9E2247737C900521508 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				CC80B9E3247737FA00521508 /* StatisticPresenter.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
 		CC8A1044245E0844007856BF /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				CC80B9DC247734BD00521508 /* Statistics */,
 				BBBB1B58247829A40013D06F /* DeleteRequest */,
 				BBBB1B572478299A0013D06F /* New Group */,
 				4EF1A1E32476B0E800597A15 /* IRequestStatus */,
@@ -1737,6 +1793,7 @@
 				4EE9F9462469A47F00BB4A39 /* RecieverCellTableViewCell.xib in Resources */,
 				4ECE5C62246ED94200932947 /* Login.storyboard in Resources */,
 				CCCDA04B246ACA70005549EA /* Setting.storyboard in Resources */,
+				CC80B9D624771CAD00521508 /* Statistics.storyboard in Resources */,
 				4EE9F94124699E3200BB4A39 /* SenderCellTableViewCell.xib in Resources */,
 				CC1A8770246D60810020C403 /* More.storyboard in Resources */,
 				4E432F152464F6EF00D1CACA /* pdf.pdf in Resources */,
@@ -1811,6 +1868,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC80B9E8247739FC00521508 /* ExtensionStatisticsMvp.swift in Sources */,
 				03FDA19D2470CA760084C4AA /* SisxthStaticTableViewCell.swift in Sources */,
 				4E22F8FD243E6E6C0090693C /* AppDelegate.swift in Sources */,
 				4EE9F93B24699BC800BB4A39 /* MessagingTableView.swift in Sources */,
@@ -1823,6 +1881,7 @@
 				4EFA6ED6247429FD00D83F32 /* CheckLocation.swift in Sources */,
 				4E15ACE72471818B004418B1 /* GetRequestsPresenter.swift in Sources */,
 				03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */,
+				CC80B9DE2477350C00521508 /* StatisticsContract.swift in Sources */,
 				4E3C1F462476A41900D9761D /* GetLabsContract.swift in Sources */,
 				4EF1A1E02476B07000597A15 /* RequestStatusModel.swift in Sources */,
 				03FDA1932470BC8F0084C4AA /* FirstStaticTableViewCell.swift in Sources */,
@@ -1833,6 +1892,7 @@
 				4EF1A1E62476B0E800597A15 /* IEmployeeDetails.swift in Sources */,
 				4EE7EA34246B023000BF434F /* KeyboardLayoutConstraint.swift in Sources */,
 				4E15ACDB24712F6E004418B1 /* ShowNewRequest.swift in Sources */,
+				CC80B9DB247727E800521508 /* ExtensionStatisticsPicker.swift in Sources */,
 				CCCDA045246A94F5005549EA /* ReqLocationTableViewController.swift in Sources */,
 				4E3C1F40247693A700D9761D /* GetLabsModel.swift in Sources */,
 				4E15ACDE2471302C004418B1 /* ShowNewRequestFromPopup.swift in Sources */,
@@ -1913,14 +1973,17 @@
 				4E2C9DFF24706E3E007C6109 /* IView.swift in Sources */,
 				4E3C1F432476941A00D9761D /* GetLabsPresenter.swift in Sources */,
 				4EC1FD302472DDD70029C499 /* FilterTestViewController.swift in Sources */,
+				CC80B9E4247737FA00521508 /* StatisticPresenter.swift in Sources */,
 				CCCDA050246AE5D5005549EA /* PassWordDetailsTableViewController.swift in Sources */,
 				CC8A1046245E087C007856BF /* IFillDataCells.swift in Sources */,
+				CC80B9E12477360000521508 /* HbA1cSample.swift in Sources */,
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
 				03F7D96A2473E68800E92A73 /* MainChatModel.swift in Sources */,
 				CC064E30245B03360046E67F /* NewRequestTableViewController.swift in Sources */,
 				BBBB1B522477CA1A0013D06F /* ICancelRequest.swift in Sources */,
 				4EBBC943246B5ABF00C7978D /* PearedTableView.swift in Sources */,
 				4EF1A1EB2476CF5400597A15 /* IViewAdvancedAlert.swift in Sources */,
+				CC80B9D924771F5300521508 /* StatisticsTableViewController.swift in Sources */,
 				4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */,
 				CC76172F24732A610084CC6E /* ImagePresenter.swift in Sources */,
 				03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */,
@@ -1945,6 +2008,7 @@
 				CC157CA324700F2B001AE122 /* ProfileModel.swift in Sources */,
 				03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */,
 				4EFA6ECF2473D58100D83F32 /* TestType.swift in Sources */,
+				CC80B9E6247738CC00521508 /*  StatisticsModel.swift in Sources */,
 				4EFA6ED32474195400D83F32 /* FilterTestContract.swift in Sources */,
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
 				4ECE5C59246EA5C200932947 /* IBase.swift in Sources */,
