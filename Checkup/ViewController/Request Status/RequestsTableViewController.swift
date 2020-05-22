@@ -9,16 +9,21 @@
 import UIKit
 import Firebase
 import SDWebImage
-class RequestsTableViewController: UITableViewController {
+class RequestsTableViewController: UITableViewController , IFilterTest{
+
+    
     var testFilterOriginal : TestFilter?
     var testFilter : TestFilter?
-    var take = 2
+    var take = 10
     var skip = 0
     var isFiltered = false
     var requests : [Request]?
     var isBottom = true
+    var isOld = false
     @IBAction func filterDataBtn(_ sender: UIBarButtonItem) {
         let filterVC = storyboard?.instantiateViewController(withIdentifier: "filterSVC") as! FilterTestViewController
+        filterVC.parentRef = self
+        filterVC.testFilter = testFilter
         self.navigationController?.pushViewController(filterVC, animated: true)
     }
     var labNames = ["El-Mokhtabar" , "Alpha","Alpha" ]
@@ -33,6 +38,8 @@ class RequestsTableViewController: UITableViewController {
             self.present(loginVC, animated: true, completion: nil)
             
         }else if !isFiltered{
+            isOld = false
+            skip = 0
 //            var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
 //            getRequestsPresenter.getRequests(testFilter: testFilter!)
             sendRequest()
@@ -46,6 +53,7 @@ class RequestsTableViewController: UITableViewController {
         requests = [Request]()
         if(Auth.auth().currentUser?.uid != nil)
         {
+            
 //            testFilterOriginal = TestFilter(dateTimeStampFrom: nil, dateTimeStampTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
             
 //            testFilter = testFilterOriginal
@@ -62,11 +70,13 @@ class RequestsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-         
+        if(!isOld){
+            isOld = true
          cell.alpha = 0
              UIView.animate(withDuration : 0.3, delay: 0.05 * Double(indexPath.row), animations: {
                  cell.alpha = 1
              })
+        }
      }
      
     
@@ -186,9 +196,15 @@ class RequestsTableViewController: UITableViewController {
     func sendRequest() {
         var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
         if !isFiltered {
-            testFilter = TestFilter(dateTimeStampFrom: nil, dateTimeStampTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
+            testFilter = TestFilter(isFilter: false,dateFrom: nil, dateTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
         }
         getRequestsPresenter.getRequests(testFilter: testFilter!)
+    }
+    func getTestFilter(testFilter: TestFilter) {
+        isFiltered = true
+        self.testFilter = testFilter
+        skip = 0
+        sendRequest()
     }
     
 }

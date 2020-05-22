@@ -33,6 +33,6 @@ struct Test : Codable{
     var radioReason: String?
     var refuseReason: String?
     var generatedCode: String?
-    var timeStampRequest: Int64?
+//    var dateRequestFormat: Date?
     
 }
