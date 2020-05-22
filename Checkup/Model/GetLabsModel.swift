@@ -17,7 +17,9 @@ class GetLabsModel: IGetLabsModel {
     init(getLabsPresenterRef : IGetLabsPresenter) {
         self.getLabsPresenterRef = getLabsPresenterRef
     }
-    
+    init(getFilteredLabsPresenter : IGetFilteredLabsPresenter) {
+        self.getFilteredLabsPresenter = getFilteredLabsPresenter
+    }
     /*
      var labNames = ["El-Mokhtabar" , "Alpha" , "El-Borg" , "El-Mokhtabar"]
      var labImages = ["mokhtabar" , "alpha" , "borg" ,"mokhtabar" ]
@@ -37,7 +39,7 @@ class GetLabsModel: IGetLabsModel {
         labs.append(lab3)
         labs.append(lab4)
     
-        getLabsPresenterRef.onSuccess(homeLabs: labs)
+        getLabsPresenterRef?.onSuccess(homeLabs: labs)
       }
     
     func getFilteredLabs() {
@@ -84,9 +86,7 @@ class GetLabsModel: IGetLabsModel {
                 filterLabList.append(filterLab)
             }
         }
-    init(getFilteredLabsPresenter : IGetFilteredLabsPresenter) {
-        self.getFilteredLabsPresenter = getFilteredLabsPresenter
-    }
+    
     func getFilteredLabs() {
         var filterLabList = [FilterLab]()
         let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetLaboratories"
@@ -144,4 +144,6 @@ class GetLabsModel: IGetLabsModel {
 
     
     }
+}
+}
 }
