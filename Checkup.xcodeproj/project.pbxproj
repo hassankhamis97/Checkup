@@ -150,6 +150,9 @@
 		A3C5F0322472BE8C0069413F /* SignupContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0312472BE8C0069413F /* SignupContract.swift */; };
 		A3C5F0352472C2D60069413F /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0342472C2D60069413F /* SignupPresenter.swift */; };
 		A3C5F0382472C7850069413F /* SignupResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0372472C7850069413F /* SignupResponseExtension.swift */; };
+		BBBB1B502477C9B30013D06F /* CancelRquestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */; };
+		BBBB1B522477CA1A0013D06F /* ICancelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B512477CA1A0013D06F /* ICancelRequest.swift */; };
+		BBBB1B562477CAB90013D06F /* CancelRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B552477CAB90013D06F /* CancelRequestPresenter.swift */; };
 		CC064E2D245B02D60046E67F /* NewRequestScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC064E2C245B02D60046E67F /* NewRequestScreen.storyboard */; };
 		CC064E30245B03360046E67F /* NewRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC064E2F245B03360046E67F /* NewRequestTableViewController.swift */; };
 		CC064E32245B05FA0046E67F /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC064E31245B05FA0046E67F /* SliderCell.swift */; };
@@ -364,6 +367,9 @@
 		A3C5F0312472BE8C0069413F /* SignupContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupContract.swift; sourceTree = "<group>"; };
 		A3C5F0342472C2D60069413F /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		A3C5F0372472C7850069413F /* SignupResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseExtension.swift; sourceTree = "<group>"; };
+		BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelRquestModel.swift; sourceTree = "<group>"; };
+		BBBB1B512477CA1A0013D06F /* ICancelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICancelRequest.swift; sourceTree = "<group>"; };
+		BBBB1B552477CAB90013D06F /* CancelRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelRequestPresenter.swift; sourceTree = "<group>"; };
 		CC064E2C245B02D60046E67F /* NewRequestScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewRequestScreen.storyboard; sourceTree = "<group>"; };
 		CC064E2F245B03360046E67F /* NewRequestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestTableViewController.swift; sourceTree = "<group>"; };
 		CC064E31245B05FA0046E67F /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
@@ -984,6 +990,7 @@
 		4ECE5C48246E893D00932947 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				BBBB1B542477CA7E0013D06F /* CancelRequestPresenter */,
 				4EF1A1DC2476B05A00597A15 /* EmployeeDetails */,
 				4EF1A1D92476B03700597A15 /* ReqestStatus */,
 				4E3C1F41247693B800D9761D /* Labs */,
@@ -1003,6 +1010,7 @@
 				4EC82407246FDAB60075C894 /* Custom */,
 				4EF1A1E12476B08300597A15 /* EmployeeDetailsModel.swift */,
 				4EF1A1DF2476B07000597A15 /* RequestStatusModel.swift */,
+				BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */,
 				4ECE5C4D246E89C200932947 /* LoginModel.swift */,
 				A3C5F02E2472BDA80069413F /* SignupModel.swift */,
 				4E4EA637247010DE00309CAF /* NewRequestModel.swift */,
@@ -1372,6 +1380,22 @@
 			path = Signup;
 			sourceTree = "<group>";
 		};
+		BBBB1B532477CA480013D06F /* CancelRequest */ = {
+			isa = PBXGroup;
+			children = (
+				BBBB1B512477CA1A0013D06F /* ICancelRequest.swift */,
+			);
+			path = CancelRequest;
+			sourceTree = "<group>";
+		};
+		BBBB1B542477CA7E0013D06F /* CancelRequestPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				BBBB1B552477CAB90013D06F /* CancelRequestPresenter.swift */,
+			);
+			path = CancelRequestPresenter;
+			sourceTree = "<group>";
+		};
 		C125EE7BC541D58677539BDB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1439,6 +1463,7 @@
 			isa = PBXGroup;
 			children = (
 				4EF1A1E32476B0E800597A15 /* IRequestStatus */,
+				BBBB1B532477CA480013D06F /* CancelRequest */,
 				4E3C1F442476A3F900D9761D /* Labs */,
 				03F7D96C247408AC00E92A73 /* MainChat */,
 				4EFA6ED4247429EA00D83F32 /* Map */,
@@ -1832,6 +1857,7 @@
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
 				03F7D96A2473E68800E92A73 /* MainChatModel.swift in Sources */,
 				CC064E30245B03360046E67F /* NewRequestTableViewController.swift in Sources */,
+				BBBB1B522477CA1A0013D06F /* ICancelRequest.swift in Sources */,
 				4EBBC943246B5ABF00C7978D /* PearedTableView.swift in Sources */,
 				4EF1A1EB2476CF5400597A15 /* IViewAdvancedAlert.swift in Sources */,
 				4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */,
@@ -1867,6 +1893,8 @@
 				4E15ACEE24718EDF004418B1 /* GetRequestResponseExtension.swift in Sources */,
 				03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */,
 				031046AE246C8F77000372BD /* FilterLabTableView.swift in Sources */,
+				BBBB1B562477CAB90013D06F /* CancelRequestPresenter.swift in Sources */,
+				BBBB1B502477C9B30013D06F /* CancelRquestModel.swift in Sources */,
 				A302CC282471A11300C6323F /* ToastView.swift in Sources */,
 				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
 				4EF2BA6724733C9F00602123 /* FilterStatus.swift in Sources */,
@@ -2069,7 +2097,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup;
+				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup.kasper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2089,7 +2117,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup;
+				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup.kasper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -11,10 +11,10 @@ protocol IRequestStatusView  {
     func onReceiveRequestStatus(myObj:Test)
 }
 protocol IRequestStatusPresenter {
-    func getRequest(labId: String,branchId: String,id : String )
+    func getRequest(testId:String )
     func onRequestReceived(myObj:Test)
     func onFail(message: String)
 }
 protocol IRequestStatusModel {
-    func onRequestStatusRevieved(labId: String,branchId: String,id : String )
+    func onRequestStatusRevieved(testId:String)
 }
