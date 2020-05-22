@@ -23,4 +23,5 @@ target 'Checkup' do
   pod 'Firebase/Firestore'
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Charts'
 end
