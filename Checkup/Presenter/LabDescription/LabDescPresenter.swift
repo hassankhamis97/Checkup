@@ -8,16 +8,33 @@
 
 import Foundation
 class LabDescPresenter : ILabDescPresenter{
-    func onSuccess() {
-        
+   
+    
+    
+    var newView : ILabDescView!
+    var newLabDescModel : ILabDescModel!
+    
+    init(view : ILabDescView) {
+        newView = view
+    }
+    
+    func onSuccess(descObj: Branches) {
+        newView.showingDataOnView(labDescObj: descObj)
         
     }
+    
+    
     
     func onFail() {
         
     }
     
-    
+    func getDataFromLabDescModel() {
+        newLabDescModel = LabaDescriptionModel(descPreseneter: self)
+        newLabDescModel.fetchLabDes()
+       
+    }
+       
     
     
     

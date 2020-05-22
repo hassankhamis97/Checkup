@@ -17,6 +17,8 @@
 		03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD2246CC39700C0BF33 /* BranchesCollectionViewCell.swift */; };
 		03789BD5246CC39700C0BF33 /* BranchesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */; };
 		03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */; };
+		03C1DD2A2478581900D2A008 /* BranchDescModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DD292478581900D2A008 /* BranchDescModel.swift */; };
+		03C1DD2C247858B800D2A008 /* BranchDescContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DD2B247858B800D2A008 /* BranchDescContract.swift */; };
 		03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44499246F149D00036549 /* DetailsViewController.swift */; };
 		03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */; };
 		03F6C7F9246B891800E89178 /* LabDescTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */; };
@@ -231,6 +233,8 @@
 		03789BD2246CC39700C0BF33 /* BranchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesCollectionViewCell.swift; sourceTree = "<group>"; };
 		03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BranchesCollectionViewCell.xib; sourceTree = "<group>"; };
 		03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabBranchesCollectionView.swift; sourceTree = "<group>"; };
+		03C1DD292478581900D2A008 /* BranchDescModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescModel.swift; sourceTree = "<group>"; };
+		03C1DD2B247858B800D2A008 /* BranchDescContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescContract.swift; sourceTree = "<group>"; };
 		03F44499246F149D00036549 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsCollectionViewCell.swift; sourceTree = "<group>"; };
 		03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescTableViewController.swift; sourceTree = "<group>"; };
@@ -500,6 +504,14 @@
 				03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		03C1DD282478579B00D2A008 /* BranchDescription */ = {
+			isa = PBXGroup;
+			children = (
+				03C1DD2B247858B800D2A008 /* BranchDescContract.swift */,
+			);
+			path = BranchDescription;
 			sourceTree = "<group>";
 		};
 		03F6C7F7246B884200E89178 /* LabDescription */ = {
@@ -1045,6 +1057,7 @@
 				CC76172C24732A050084CC6E /* ImageModel.swift */,
 				4E3C1F3F247693A700D9761D /* GetLabsModel.swift */,
 				03067A222477724F000F1424 /* LabDescriptionModel.swift */,
+				03C1DD292478581900D2A008 /* BranchDescModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1471,6 +1484,7 @@
 		CC8A1044245E0844007856BF /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				03C1DD282478579B00D2A008 /* BranchDescription */,
 				03067A2724777312000F1424 /* LabDescription */,
 				4EF1A1E32476B0E800597A15 /* IRequestStatus */,
 				4E3C1F442476A3F900D9761D /* Labs */,
@@ -1776,6 +1790,7 @@
 				4EF1A1E22476B08300597A15 /* EmployeeDetailsModel.swift in Sources */,
 				4EFA6ED6247429FD00D83F32 /* CheckLocation.swift in Sources */,
 				4E15ACE72471818B004418B1 /* GetRequestsPresenter.swift in Sources */,
+				03C1DD2C247858B800D2A008 /* BranchDescContract.swift in Sources */,
 				03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */,
 				4E3C1F462476A41900D9761D /* GetLabsContract.swift in Sources */,
 				4EF1A1E02476B07000597A15 /* RequestStatusModel.swift in Sources */,
@@ -1872,6 +1887,7 @@
 				4EBBC943246B5ABF00C7978D /* PearedTableView.swift in Sources */,
 				4EF1A1EB2476CF5400597A15 /* IViewAdvancedAlert.swift in Sources */,
 				4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */,
+				03C1DD2A2478581900D2A008 /* BranchDescModel.swift in Sources */,
 				CC76172F24732A610084CC6E /* ImagePresenter.swift in Sources */,
 				03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */,
 				4E77B4C2247757E3000B3118 /* GetFilteredLabsPresenter.swift in Sources */,

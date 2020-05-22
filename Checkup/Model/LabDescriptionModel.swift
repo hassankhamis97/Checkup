@@ -10,7 +10,10 @@ import Foundation
 import Alamofire
 
 class LabaDescriptionModel: ILabDescModel {
-
+    var newDescPresenter : ILabDescPresenter
+    init(descPreseneter : ILabDescPresenter) {
+        newDescPresenter = descPreseneter
+    }
 
     func fetchLabDes() {
   
@@ -19,11 +22,19 @@ class LabaDescriptionModel: ILabDescModel {
                 print("lab description ")
 
                 
-                
-                
                 print(JSON)
-         //       print(JSON["branches"])
-            }
+                do{
+                let labDescObj = try JSONDecoder().decode(Branches.self, from: respone.data!)
+                    print(labDescObj)
+                    self.newDescPresenter.onSuccess(descObj: labDescObj)
+                }
+                catch{
+                    
+                }
+                
+                
+                
+                }
         }
     }
     

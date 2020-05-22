@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import SDWebImage
+class LabDescTableViewController: UITableViewController , ILabDescView {
+    
+    @IBOutlet weak var labHotlineOutlet: UILabel!
+    @IBOutlet weak var labImageViewOutlet: UIImageView!
+    var labDescPresenter : ILabDescPresenter!
+    var labDescriptionObj : Branches = Branches()
+   
 
-class LabDescTableViewController: UITableViewController {
+
     @IBOutlet weak var labBrachCollection: UICollectionView!
     var labBranches : [String] = ["Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch"]
     
-    var labDesc :  ILabDescModel = LabaDescriptionModel()
     override func viewDidLoad() {
         super.viewDidLoad()
   
@@ -29,16 +36,20 @@ class LabDescTableViewController: UITableViewController {
        layout.minimumInteritemSpacing = 1.0
        self.labBrachCollection?.collectionViewLayout = layout
         
-
-        labDesc.fetchLabDes()
-        
-        
-  
-       
+        labDescPresenter =  LabDescPresenter(view: self)
+        labDescPresenter.getDataFromLabDescModel()
         
     }
 
+    func showingDataOnView(labDescObj: Branches) {
+        labDescriptionObj = labDescObj
+        print("inside the view : \(labDescriptionObj)")
+        print(labDescriptionObj.branches!.count)
+        labImageViewOutlet.sd_setImage(with: URL(string: labDescriptionObj.labPhoto!), placeholderImage:UIImage(named: "placeholder.png"))
+        
+        labBrachCollection.reloadData()
+    }
+    
     
     
 }
-
