@@ -8,11 +8,9 @@
 
 import Foundation
 struct MainBranch {
-var idFB : String?
-var govern : String?
-var address : Address?
-var rating : String?
-var distance : Int?
-var labHotline : String?
-var labPhoto : String?
+    var idFB : String?
+    var govern : String?
+    var address : Address?
+    var rating : Double?
+    var distance : Double?
 }

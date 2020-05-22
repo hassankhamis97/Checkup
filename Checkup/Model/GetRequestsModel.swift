@@ -28,7 +28,17 @@ class GetRequestsModel: IGetRequestsModel {
         //        var x = RequestConfigration(userId: Auth.auth().currentUser?.uid, status: ["PendingForLabConfirmation" , "Done"], take: 3, skip: 0)
         var requests = [Request]()
         let testFilterDic = try! DictionaryEncoder.encode(testFilter)
-        let urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests"
+        let urlString : String
+        if(testFilter.isFilter!)
+        {
+//            let urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisFilterRequests"
+            urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisFilterRequests"
+        }else{
+            
+            urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests"
+//            let urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests"
+        }
+
         
         Alamofire.request(urlString, method: .post, parameters: testFilterDic,encoding: JSONEncoding.default, headers: nil).responseString {
             response in
