@@ -51,7 +51,7 @@ class ProfileTableViewController: UITableViewController {
         birthDateTextField.text=user.birthdate
         genderTextField.text=user.gender
         insuranceTextField.text=user.insurance
-        addressTextField.text=user.address?.address
+        addressTextField.text=user.address?.address1
         let x = user.phone
         profileImg.sd_setImage(with: URL(string: user.imagePath ?? "users"), placeholderImage: UIImage(named: "users"))
         
@@ -126,7 +126,7 @@ class ProfileTableViewController: UITableViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ReqlocationSVC") as! ReqLocationTableViewController
         
                 vc.isEditable=false;
-        if user.address?.address! != "" {
+        if user.address?.address1! != "" {
                            vc.addressObj = user.address
                       }
         

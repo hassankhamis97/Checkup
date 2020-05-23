@@ -32,15 +32,17 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     var requests : [Request]?
     var isBottom = true
     var isOld = false
+    var isWaitingData = false
+    var errorMsg = ""
     @IBAction func filterDataBtn(_ sender: UIBarButtonItem) {
         let filterVC = storyboard?.instantiateViewController(withIdentifier: "filterSVC") as! FilterTestViewController
         filterVC.parentRef = self
         filterVC.testFilter = testFilter
         self.navigationController?.pushViewController(filterVC, animated: true)
     }
-    var labNames = ["El-Mokhtabar" , "Alpha","Alpha" ]
-    var labImages = ["mokhtabar" , "alpha","alpha" ]
-    var labDate = ["Apr 5, 2020","jun 1, 2020","May 14, 2020"]
+//    var labNames = ["El-Mokhtabar" , "Alpha","Alpha" ]
+//    var labImages = ["mokhtabar" , "alpha","alpha" ]
+//    var labDate = ["Apr 5, 2020","jun 1, 2020","May 14, 2020"]
     var dateDescingly : [HistoryObject]!
     override func viewWillAppear(_ animated: Bool) {
         if(Auth.auth().currentUser?.uid == nil)
@@ -60,11 +62,11 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
         }else {
             isFiltered = false
         }
-        dateDescingly = formatDate(myArr: labDate)
+//        dateDescingly = formatDate(myArr: labDate)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.delegate = self
+//        self.delegate = self
         requests = [Request]()
         if(Auth.auth().currentUser?.uid != nil)
         {
@@ -97,12 +99,45 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        var numOfSections: Int = 0
+        if(isWaitingData){
+//            let activityView = UIActivityIndicatorView(style: .whiteLarge)
+//            activityView.center = self.view.center
+//            activityView.startAnimating()
+//
+//            self.view.addSubview(activityView)
+            var activityView = UIActivityIndicatorView(style: .whiteLarge)
+            activityView.center = self.view.center
+            tableView.addSubview(activityView)
+            activityView.startAnimating()
+            numOfSections = 0
+        }
+        else{
+                if requests!.count > 0
+                {
+                    tableView.separatorStyle = .singleLine
+                    numOfSections = 1
+                    tableView.backgroundView = nil
+                }
+                else
+                {
+                    numOfSections = 0
+                    let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+                    noDataLabel.text          = errorMsg
+        //            noDataLabel.textColor     = UIColor.black
+                    noDataLabel.textAlignment = .center
+                    tableView.backgroundView  = noDataLabel
+                    tableView.separatorStyle  = .none
+                    
+                }
+        }
+                return numOfSections
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return requests!.count
+        
     }
     
     
@@ -187,13 +222,11 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if #available(iOS 13.0, *) {
-            let vc = storyboard?.instantiateViewController(identifier: "reqStatus") as! RequestStatusTableViewController
+//            let vc = storyboard?.instantiateViewController(identifier: "reqStatus") as! RequestStatusTableViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "reqStatus") as! RequestStatusTableViewController
             vc.testID = requests![indexPath.row].id
             navigationController?.pushViewController(vc, animated: true)
-        } else {
-            
-        }
+        
         
     }
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -210,16 +243,11 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
 
         }
     func sendRequest() {
-        if(isResult == nil){
-            
-        }
-        else{
         var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
         if !isFiltered {
             testFilter = TestFilter(isFilter: false,dateFrom: nil, dateTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
         }
         getRequestsPresenter.getRequests(testFilter: testFilter!)
-        }
     }
     func getTestFilter(testFilter: TestFilter) {
         isFiltered = true
@@ -227,36 +255,37 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
         skip = 0
         sendRequest()
     }
+//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool
+//    {
+//        let index = tabBarController.selectedIndex
+//        if index == 1 {
+//            isResult = false
+//            // load data appropriate for coming from the 2nd tab
+//        } else if index == 3 {
+//            // load data appropriate for coming from the 3rd tab
+//            isResult = true
+//        }
+//
+//        return true
+//    }
     
 }
 
-
-extension RequestsTableViewController : UITabBarControllerDelegate {
-//    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-//        if item == (self.tabBar.items as! [UITabBarItem])[1]{
-//            let requsestSV = self.tabBarController
-//           //Do something if index is 0
-//        }
-//        else if item == (self.tabBar.items as! [UITabBarItem])[3]{
-//           //Do something if index is 1
-//        }
-//    }
-
-   func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool
-    {
-        let index = tabBarController.selectedIndex
-        if index == 1 {
-            isResult = false
-            // load data appropriate for coming from the 2nd tab
-        } else if index == 3 {
-            // load data appropriate for coming from the 3rd tab
-            isResult = true
-        }
-
-        return true
-    }
-//    func selectItemWithIndex(value: Int) {
-//        self.tabBarControllertabBarController.selectedIndex = value;
-//        self.tabBar(self.tabBar, didSelectItem: (self.tabBar.items as! [UITabBarItem])[value]);
-//    }
-}
+//
+//extension RequestsTableViewController : UITabBarControllerDelegate {
+////    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+////        if item == (self.tabBar.items as! [UITabBarItem])[1]{
+////            let requsestSV = self.tabBarController
+////           //Do something if index is 0
+////        }
+////        else if item == (self.tabBar.items as! [UITabBarItem])[3]{
+////           //Do something if index is 1
+////        }
+////    }
+//
+//
+////    func selectItemWithIndex(value: Int) {
+////        self.tabBarControllertabBarController.selectedIndex = value;
+////        self.tabBar(self.tabBar, didSelectItem: (self.tabBar.items as! [UITabBarItem])[value]);
+////    }
+//}
