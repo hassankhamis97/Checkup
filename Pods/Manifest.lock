@@ -362,6 +362,11 @@ PODS:
   - OpalImagePicker (2.1.2)
   - PromisesObjC (1.2.8)
   - ReachabilitySwift (5.0.0)
+  - Realm (5.0.0):
+    - Realm/Headers (= 5.0.0)
+  - Realm/Headers (5.0.0)
+  - RealmSwift (5.0.0):
+    - Realm (= 5.0.0)
   - SDWebImage (4.4.8):
     - SDWebImage/Core (= 4.4.8)
   - SDWebImage/Core (4.4.8)
@@ -384,6 +389,7 @@ DEPENDENCIES:
   - ImageSlideshow
   - OpalImagePicker
   - ReachabilitySwift
+  - RealmSwift
   - SDWebImage (~> 4.0)
   - SkyFloatingLabelTextField (~> 3.0)
   - StepIndicator (~> 1.0.8)
@@ -422,6 +428,8 @@ SPEC REPOS:
     - OpalImagePicker
     - PromisesObjC
     - ReachabilitySwift
+    - Realm
+    - RealmSwift
     - SDWebImage
     - SkyFloatingLabelTextField
     - StepIndicator
@@ -459,6 +467,8 @@ SPEC CHECKSUMS:
   OpalImagePicker: 51cbf714f337a93c2631219f1a90389ba936077f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Realm: 76066d333de26f97e9caedaa85ee3ff4a62ca265
+  RealmSwift: c1bdff09b422569dc6881410d9ccf712bcdb79b0
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   StepIndicator: 748b293f671355b021253f82031ac002f153dc81
@@ -466,6 +476,6 @@ SPEC CHECKSUMS:
   TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: acd2fc5ede43e6a7b385975815c2e99d27496162
+PODFILE CHECKSUM: a79c379e4dbd76cf385ed326709a1067a0afcecf
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.4

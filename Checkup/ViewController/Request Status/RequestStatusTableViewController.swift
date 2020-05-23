@@ -161,7 +161,10 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
                
                self.dateTextArea.text = self.testStatusObj.dateRequest
                                 self.timeTextArea.text = self.testStatusObj.timeRequest
-                                let location = "\( self.testStatusObj.address!.buildingNo!)  \(self.testStatusObj.address!.apartmentNo!)     \(self.testStatusObj.address!.floorNo!)"
+        guard let locAddress = self.testStatusObj?.address! else{
+            return
+        }
+                                let location = "\( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
                                    
                                 self.locationTextArea.text = location
                
@@ -217,15 +220,15 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
     
     override func viewWillAppear(_ animated: Bool) {
         
-        ///*********************////
-        testStatusObj = Test();
-               
-        let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
-               requesStatusPresenter.getRequest(testId: testID)
-        //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
-        // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
-         progressBarView.currentStep=0
-         x=0
+       ///*********************////
+//              testStatusObj = Test();
+//
+//              let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
+//                     requesStatusPresenter.getRequest(testId: testID)
+//              //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
+//              // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
+//               progressBarView.currentStep=0
+//               x=0
     }
     
     //************** Back Buttom *****************//
@@ -253,6 +256,20 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
         
         self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
         
+        ///*********************////
+               testStatusObj = Test();
+                      
+               let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
+                      requesStatusPresenter.getRequest(testId: testID)
+               //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
+               // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
+                progressBarView.currentStep=0
+                x=0
+        
+        
+        
+        
+        
         x=0
         
         
@@ -270,27 +287,13 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
         
         slideShow.activityIndicator = DefaultActivityIndicator()
         slideShow.delegate = self
-        
-       /* when dealing with Database
-        for img in savedImageArray{
-            
-            var i=ImageSource(image:img)
-            slidShowImageArray.append(i)
-        }
-          */
-        
-       // slideShow.setImageInputs(slidShowImageArray)
-        
-      
-       // slideShow.setImageInputs([ImageSource(image: UIImage(named: "rosheta")!),ImageSource(image: UIImage(named: "new rosheta")!)])
-        
-        
+    
         if #available(iOS 13.0, *) {
             let recognizer = UITapGestureRecognizer(target: self, action: #selector(RequstDetailsTableViewController.didTap))
             
             slideShow.addGestureRecognizer(recognizer)
-            slidShowImageArray = []
-            tableView.reloadData()
+//            slidShowImageArray = []
+//            tableView.reloadData()
         } else {
             // Fallback on earlier versions
         }

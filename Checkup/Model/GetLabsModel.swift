@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import Network
 import SwiftyJSON
+import RealmSwift
 
 class GetLabsModel: IGetLabsModel {
     
@@ -29,39 +30,32 @@ class GetLabsModel: IGetLabsModel {
     
     func getLabs() {
         
-        //check internet Connection
-        let monitor = NWPathMonitor()
-        let queue = DispatchQueue(label: "InternetConnectionMonitor")
+        //URL for Labs
+        let homeLabsURL = "http://www.checkup.somee.com/api/AnalysisService/GetLabMenus?take=5&skip=0"
         
         // for Azab
         var labs = [HomeLab]()
-        let lab1 = HomeLab(idFB: "sa54", hotline: "457891264", labPhoto: "mokhtabar", labName: "El-Mokhtabar", rating: "3.6")
-        let lab2 = HomeLab(idFB: "sa54", hotline: "4564", labPhoto: "alpha", labName: "Alpha", rating: "2.6")
-        let lab3 = HomeLab(idFB: "sa54", hotline: "456d84", labPhoto: "borg", labName: "borg", rating: "1.6")
-        let lab4 = HomeLab(idFB: "sa54", hotline: "45d654", labPhoto: "mokhtabar", labName: "mokhtabar", rating: "3")
-        labs.append(lab1)
-        labs.append(lab2)
-        labs.append(lab3)
-        labs.append(lab4)
-        
-        
-        //check internet Connection
-        monitor.pathUpdateHandler = { pathUpdateHandler in
-            if pathUpdateHandler.status == .satisfied {
-                
-                print("Internet connection is on.")
-                self.getLabsPresenterRef?.onSuccess(homeLabs: labs)
-
-            } else {
-                print("There's no internet connection.")
-                
-                //fetch from Core Date
+        Alamofire.request(homeLabsURL).responseJSON { (responseData) -> Void in
+            //        Alamofire.request(homeLabsURL).validate().responseJSON { response in
+            
+            let json = JSON(responseData.data)
+            
+            for item in json.arrayValue {
+                var homeLab = HomeLab()
+                homeLab.labName = item["FireBaseId"].stringValue
             }
         }
         
-        monitor.start(queue: queue)
+        //        let lab1 = HomeLab(idFB: "sa504", hotline: "457891264", labPhoto: "mokhtabar", labName: "El-Mokhtabar", rating: "3.6")
+        //        let lab2 = HomeLab(idFB: "sa514", hotline: "4564", labPhoto: "alpha", labName: "Alpha", rating: "2.6")
+        //        let lab3 = HomeLab(idFB: "sa542", hotline: "456d84", labPhoto: "borg", labName: "borg", rating: "1.6")
+        //        let lab4 = HomeLab(idFB: "sa543", hotline: "45d654", labPhoto: "mokhtabar", labName: "mokhtabar", rating: "3")
+        //        labs.append(lab1)
+        //        labs.append(lab2)
+        //        labs.append(lab3)
+        //        labs.append(lab4)
         
-       
+        self.getLabsPresenterRef?.onSuccess(homeLabs: labs)
     }
     
 //    func getFilteredLabs() {

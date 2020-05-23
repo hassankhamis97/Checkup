@@ -12,6 +12,7 @@ import Firebase
 import FirebaseFirestore
 import Alamofire
 import SwiftyJSON
+
 class GetRequestsModel: IGetRequestsModel {
     
     var ref: DatabaseReference!
