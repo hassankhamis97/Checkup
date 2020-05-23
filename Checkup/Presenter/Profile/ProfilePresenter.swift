@@ -1,63 +1,44 @@
-//
-//  ProfilePresenter.swift
-//  Checkup
-//
-//  Created by yasmin mohsen on 5/16/20.
-//  Copyright © 2020 Hassan Khamis. All rights reserved.
-//
 
 import Foundation
 import Network
 
-class ProfilePresenter:IProfilePresenter{
+class ProfilePresenter:IProfilePresenter,ICheckConnection{
+    
+    
+    var userId:String!
+    func onSucessfullyConnected() {
+          
+             let profileModel=ProfileModel(profilePresenterRef: self)
+                                          self.profileView.showIndicator()
+                  
+                               
+                  
+                                       profileModel.getUser(userId: userId)
+                  
+    }
+    
+    func onFailConnected() {
+        print("There's no internet connection.")
+        self.profileView.errorMessage(msg: "No internet connection")
+    }
+    
   
     var profileView:IProfileView
+    
     
     init(profileView:IProfileView) {
         self.profileView=profileView
     }
     
     func getUser(userId: String)  {
+        self.userId=userId
         
-         let profileModel=ProfileModel(profilePresenterRef: self)
-        let monitor = NWPathMonitor()
-        
-        monitor.pathUpdateHandler = { pathUpdateHandler in
-                   if pathUpdateHandler.status == .satisfied {
-                       print("Internet connection is on.")
-                       
-                       DispatchQueue.main.async {
-                           
-                        self.profileView.showIndicator()
-                       
-                           
-                       }
-                    
-                     profileModel.getUser(userId: userId)
-                      
-                    
-            }
-                   else{
-                    DispatchQueue.main.async {
-                                              
-                                           print("There's no internet connection.")
-                                                              self.profileView.errorMessage(msg: "No internet connection")
-                                          
-                                              
-                                          }
-                    
-                      
-            }
-        
-    
-    }
-        let queue = DispatchQueue(label: "InternetConnectionMonitor")
-                    monitor.start(queue: queue)
 
+        
+        var check = InternetConnection.checkInternetConnection(iCheckConnection: self)
+    
+    
     }
-    
-    
-    
     
     func onSuccess(user:User) {
         profileView.hideIndicator()
@@ -71,4 +52,5 @@ class ProfilePresenter:IProfilePresenter{
     }
     
  
+
 }

@@ -178,6 +178,8 @@
 		CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A8772246D61020020C403 /* MoreTableViewController.swift */; };
 		CC298B1424740A04001DEAE5 /* ExtesnionMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */; };
 		CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */; };
+		CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65C92479ACED00BA1062 /* InternetConnection.swift */; };
+		CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */; };
 		CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */; };
 		CC5DFD0C2468C22F003B9F18 /* PopUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */; };
 		CC5DFD0E2468C242003B9F18 /* PopUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD0D2468C242003B9F18 /* PopUpCollectionViewCell.swift */; };
@@ -416,6 +418,8 @@
 		CC1A8772246D61020020C403 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtesnionMoreView.swift; sourceTree = "<group>"; };
 		CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
+		CC4B65C92479ACED00BA1062 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
+		CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICheckConnection.swift; sourceTree = "<group>"; };
 		CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequstDetailsTableViewController.swift; sourceTree = "<group>"; };
 		CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpTableViewController.swift; sourceTree = "<group>"; };
 		CC5DFD0D2468C242003B9F18 /* PopUpCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1047,6 +1051,7 @@
 				4EC82409246FDADA0075C894 /* DictionaryEncoder.swift */,
 				4E2C9DFC24706B6D007C6109 /* Alert.swift */,
 				4E15ACDF2471571D004418B1 /* Toast.swift */,
+				CC4B65C92479ACED00BA1062 /* InternetConnection.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -1135,6 +1140,7 @@
 				4ECE5C58246EA5C200932947 /* IBase.swift */,
 				4E2C9DFE24706E3E007C6109 /* IView.swift */,
 				4EF1A1EA2476CF5400597A15 /* IViewAdvancedAlert.swift */,
+				CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1485,13 +1491,6 @@
 			path = CancelRequestPresenter;
 			sourceTree = "<group>";
 		};
-		BBBB1B572478299A0013D06F /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		BBBB1B58247829A40013D06F /* DeleteRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1612,7 +1611,6 @@
 				03067A2724777312000F1424 /* LabDescription */,
 				CC80B9DC247734BD00521508 /* Statistics */,
 				BBBB1B58247829A40013D06F /* DeleteRequest */,
-				BBBB1B572478299A0013D06F /* New Group */,
 				4EF1A1E32476B0E800597A15 /* IRequestStatus */,
 				BBBB1B532477CA480013D06F /* CancelRequest */,
 				4E3C1F442476A3F900D9761D /* Labs */,
@@ -1935,6 +1933,7 @@
 				4EE7EA34246B023000BF434F /* KeyboardLayoutConstraint.swift in Sources */,
 				4E15ACDB24712F6E004418B1 /* ShowNewRequest.swift in Sources */,
 				CC80B9DB247727E800521508 /* ExtensionStatisticsPicker.swift in Sources */,
+				CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */,
 				CCCDA045246A94F5005549EA /* ReqLocationTableViewController.swift in Sources */,
 				4E3C1F40247693A700D9761D /* GetLabsModel.swift in Sources */,
 				4E15ACDE2471302C004418B1 /* ShowNewRequestFromPopup.swift in Sources */,
@@ -1947,6 +1946,7 @@
 				4E432F142464F6EF00D1CACA /* HistoryTableViewController.swift in Sources */,
 				4E432F162464F6EF00D1CACA /* PdfResultViewController.swift in Sources */,
 				0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */,
+				CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */,
 				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
 				CC157CA624700F6C001AE122 /* ProfilePresenter.swift in Sources */,
 				4E4EA63A2470117F00309CAF /* NewRequestContract.swift in Sources */,
