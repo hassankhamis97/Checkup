@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
+import Cosmos
 class BranchesCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var distanceOutlet: UILabel!
     @IBOutlet weak var branchDescOutlet: UILabel!
+    @IBOutlet weak var governNameOutlet: UILabel!
+    @IBOutlet weak var ratingOutlet: CosmosView!
     
     @IBOutlet weak var requestBtnOutlet: UIButton!
 

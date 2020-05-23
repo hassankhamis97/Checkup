@@ -18,11 +18,7 @@ class CancelRequestModel: ICancelRequestModel{
      func cancelTestRequest(testObj:Test)
      {
         
-      
-        
-        
-        
-        let params : [String : Any] = [ "id" : testObj.id , "status" : testObj.status ]
+      let params : [String : Any] = [ "testId" : testObj.id , "status" : testObj.status ]
         
         let urlString = "http://checkup.somee.com/api/AnalysisService/UpdateAnalysis"
           

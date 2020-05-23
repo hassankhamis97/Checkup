@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//DELETED
 class DetailsViewController: UIViewController {
     let imageViewMaxHeight : CGFloat = 250
     let imageViewMinHeight : CGFloat = 44 + UIApplication.shared.statusBarFrame.height
@@ -22,6 +22,7 @@ class DetailsViewController: UIViewController {
     
     
 }
+
 extension DetailsViewController : UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let y : CGFloat = scrollView.contentOffset.y

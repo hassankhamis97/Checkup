@@ -9,9 +9,21 @@
 import UIKit
 import Firebase
 import SDWebImage
-class RequestsTableViewController: UITableViewController , IFilterTest{
-
-    
+@IBDesignable
+class RequestsTableViewController: UITableViewController , IFilterTest {
+//let isResult = valueForKey("isResult")
+//    @IBInspectable
+//    var isResult: Bool {
+//        get {
+//            return self.isResult
+//        }
+//        set {
+//            self.isResult = newValue
+//
+//        }
+//    }
+   
+    var isResult : Bool?
     var testFilterOriginal : TestFilter?
     var testFilter : TestFilter?
     var take = 10
@@ -52,6 +64,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.delegate = self
         requests = [Request]()
         if(Auth.auth().currentUser?.uid != nil)
         {
@@ -197,11 +210,16 @@ class RequestsTableViewController: UITableViewController , IFilterTest{
 
         }
     func sendRequest() {
+        if(isResult == nil){
+            
+        }
+        else{
         var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
         if !isFiltered {
             testFilter = TestFilter(isFilter: false,dateFrom: nil, dateTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
         }
         getRequestsPresenter.getRequests(testFilter: testFilter!)
+        }
     }
     func getTestFilter(testFilter: TestFilter) {
         isFiltered = true
@@ -213,3 +231,32 @@ class RequestsTableViewController: UITableViewController , IFilterTest{
 }
 
 
+extension RequestsTableViewController : UITabBarControllerDelegate {
+//    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//        if item == (self.tabBar.items as! [UITabBarItem])[1]{
+//            let requsestSV = self.tabBarController
+//           //Do something if index is 0
+//        }
+//        else if item == (self.tabBar.items as! [UITabBarItem])[3]{
+//           //Do something if index is 1
+//        }
+//    }
+
+   func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool
+    {
+        let index = tabBarController.selectedIndex
+        if index == 1 {
+            isResult = false
+            // load data appropriate for coming from the 2nd tab
+        } else if index == 3 {
+            // load data appropriate for coming from the 3rd tab
+            isResult = true
+        }
+
+        return true
+    }
+//    func selectItemWithIndex(value: Int) {
+//        self.tabBarControllertabBarController.selectedIndex = value;
+//        self.tabBar(self.tabBar, didSelectItem: (self.tabBar.items as! [UITabBarItem])[value]);
+//    }
+}
