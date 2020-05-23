@@ -37,17 +37,7 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
         
     }
     
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        var empDetails =  self.storyboard?.instantiateViewController(withIdentifier: "EMPDETAILS") as! PopUpTableViewController
-//                guard let empID = self.testStatusObj.employeeId else {
-//                    return
-//                }
-//                empDetails.employeeID = empID
-//        
-//    
-//    }
-    
+
     
     @IBOutlet weak var sampleTime: UILabel!
     @IBOutlet weak var sampleDate: UILabel!
@@ -171,7 +161,10 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
                
                self.dateTextArea.text = self.testStatusObj.dateRequest
                                 self.timeTextArea.text = self.testStatusObj.timeRequest
-                                let location = "\( self.testStatusObj.address!.buildingNo!)  \(self.testStatusObj.address!.apartmentNo!)     \(self.testStatusObj.address!.floorNo!)"
+        guard let locAddress = self.testStatusObj?.address! else{
+            return
+        }
+                                let location = "\( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
                                    
                                 self.locationTextArea.text = location
                
@@ -227,15 +220,15 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
     
     override func viewWillAppear(_ animated: Bool) {
         
-        ///*********************////
-        testStatusObj = Test();
-               
-        let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
-               requesStatusPresenter.getRequest(testId: testID)
-        //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
-        // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
-         progressBarView.currentStep=0
-         x=0
+       ///*********************////
+//              testStatusObj = Test();
+//
+//              let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
+//                     requesStatusPresenter.getRequest(testId: testID)
+//              //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
+//              // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
+//               progressBarView.currentStep=0
+//               x=0
     }
     
     //************** Back Buttom *****************//
@@ -263,6 +256,20 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
         
         self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
         
+        ///*********************////
+               testStatusObj = Test();
+                      
+               let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
+                      requesStatusPresenter.getRequest(testId: testID)
+               //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
+               // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
+                progressBarView.currentStep=0
+                x=0
+        
+        
+        
+        
+        
         x=0
         
         
@@ -280,27 +287,13 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
         
         slideShow.activityIndicator = DefaultActivityIndicator()
         slideShow.delegate = self
-        
-       /* when dealing with Database
-        for img in savedImageArray{
-            
-            var i=ImageSource(image:img)
-            slidShowImageArray.append(i)
-        }
-          */
-        
-       // slideShow.setImageInputs(slidShowImageArray)
-        
-      
-       // slideShow.setImageInputs([ImageSource(image: UIImage(named: "rosheta")!),ImageSource(image: UIImage(named: "new rosheta")!)])
-        
-        
+    
         if #available(iOS 13.0, *) {
             let recognizer = UITapGestureRecognizer(target: self, action: #selector(RequstDetailsTableViewController.didTap))
             
             slideShow.addGestureRecognizer(recognizer)
-            slidShowImageArray = []
-            tableView.reloadData()
+//            slidShowImageArray = []
+//            tableView.reloadData()
         } else {
             // Fallback on earlier versions
         }
@@ -557,7 +550,7 @@ extension RequestStatusTableViewController : IRequestStatusView
       formatter.timeStyle = .medium
       
       formatter.dateFormat = "MMM dd, yyyy hh:mm a"
-      let requestDateTime = formatter.date(from:requestDateTime)
+      let formatedRequestDateTime = formatter.date(from:requestDateTime)
       
       let now = Date()
       print(now)
@@ -567,10 +560,10 @@ extension RequestStatusTableViewController : IRequestStatusView
       
       print(datePlus3Hours)
 
-      if requestDateTime! >= datePlus3Hours
+      if formatedRequestDateTime! >= datePlus3Hours
       {
         isOk = true;
-          print(" hello  \(requestDateTime!) ")
+          print(" hello  \(formatedRequestDateTime!) ")
       }
       
       
@@ -723,13 +716,27 @@ extension RequestStatusTableViewController : IRequestStatusView
 extension RequestStatusTableViewController : ICancelRequestView
 {
     func onCancelDone() {
-           
-        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
-                alert.present(alert, animated: true, completion: nil)
-        //************ back **************/
+        
+        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: .alert)
+        
+        
+        
+                self.present(alert, animated: true)
+                alert.addAction(UIAlertAction(title: "ok", style: .default, handler: { action in
+                    print("You choosed Yes !")
+            //************ back **************/
 
-          self.navigationController?.popViewController(animated: true)
+              self.navigationController?.popViewController(animated: true)
+        
+                }))
+              
+        
+//        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
+//                alert.present(alert, animated: true, completion: nil)
+//        //************ back **************/
+//
+//          self.navigationController?.popViewController(animated: true)
     }
     
     

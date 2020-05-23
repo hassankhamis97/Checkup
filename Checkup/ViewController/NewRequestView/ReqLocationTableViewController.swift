@@ -22,7 +22,7 @@ class ReqLocationTableViewController: UITableViewController , ICheckLocation , U
     @IBAction func saveLocationBtn(_ sender: Any) {
         
         if(checkValidation()){
-        addressObj.address = addressTxt.text
+        addressObj.address1 = addressTxt.text
         addressObj.apartmentNo = ApartmentNoTxt.text
         addressObj.buildingNo = buildingNoTxt.text
         addressObj.floorNo = floorNoTxt.text
@@ -66,13 +66,13 @@ class ReqLocationTableViewController: UITableViewController , ICheckLocation , U
             addressObj = Address()
         }
         else{
-            addressTxt.text = addressObj.address!
+            addressTxt.text = addressObj.address1!
 //            addressTxt?.text = "fdsfds"
             ApartmentNoTxt.text = addressObj.apartmentNo!
             buildingNoTxt.text = addressObj.buildingNo!
             floorNoTxt.text = addressObj.floorNo!
             setUsersClosestLocation(mLattitude: addressObj.latitude!, mLongitude: addressObj.longitude!)
-            currentLocationStr = addressObj.address!
+            currentLocationStr = addressObj.address1!
         }
         
     }

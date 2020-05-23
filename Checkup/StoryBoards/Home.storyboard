@@ -857,7 +857,7 @@
         <scene sceneID="rTC-7D-WQj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hOE-Pc-j3u" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Result" image="result_usselect_50px" selectedImage="result_usselect_50px" id="OLn-00-SMx">
+                    <tabBarItem key="tabBarItem" title="Result" image="result_usselect_50px" selectedImage="result_usselect_50px" id="OLn-00-SMx" customClass="ResultUITabBarItem" customModule="Checkup" customModuleProvider="target">
                         <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                     </tabBarItem>
                     <toolbarItems/>
