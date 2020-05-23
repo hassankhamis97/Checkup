@@ -26,7 +26,7 @@ extension ProfileTableViewController:IProfileView,IView{
 
     func errorMessage(msg: String) {
 
-        Alert.showValidationAlert(message: msg, viewRef: self)
+        Alert.showSimpleAlert(title: "sorry",message: msg, viewRef: self)
     }
 
 

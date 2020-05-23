@@ -47,7 +47,7 @@ class StatisticsTableViewController: UITableViewController ,IView{
         
         if yearTextField.text == ""{
             
-            Alert.showValidationAlert(message: "Enter Year First", viewRef: self)
+            Alert.showSimpleAlert(title: "sorry",message: "Enter Year First", viewRef: self)
             
             
             
