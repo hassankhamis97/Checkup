@@ -90,7 +90,7 @@ extension PopUpTableViewController : IEmployeeDetailsView {
     func onReceiveEmployeeDetails(employee: Employee) {
         
         if let imgPath = employee.imagePath  {
-            if employee.imagePath != "" {
+            if employee.imagePath != nil && employee.imagePath != "" {
                 self.employeeImg.sd_setImage(with: URL(string: imgPath), placeholderImage: UIImage(named: "placeholder.png"))
                 
 //                employeeImg = UIImageView(image: UIImage(named: imgPath))
