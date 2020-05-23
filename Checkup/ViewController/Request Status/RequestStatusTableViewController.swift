@@ -37,17 +37,7 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
         
     }
     
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        var empDetails =  self.storyboard?.instantiateViewController(withIdentifier: "EMPDETAILS") as! PopUpTableViewController
-//                guard let empID = self.testStatusObj.employeeId else {
-//                    return
-//                }
-//                empDetails.employeeID = empID
-//        
-//    
-//    }
-    
+
     
     @IBOutlet weak var sampleTime: UILabel!
     @IBOutlet weak var sampleDate: UILabel!
