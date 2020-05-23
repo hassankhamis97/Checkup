@@ -52,7 +52,7 @@ class ProfileModel:IProfileModel{
             let longitude = addressMain?["longitude"] as? Double ?? 0
                 
             
-            let adressObj=Address(address: address, buildingNo: buildingNo, floorNo: floorNo, apartmentNo: apartmentNo, longitude: longitude, latitude: latitude)
+            let adressObj=Address(address1: address, buildingNo: buildingNo, floorNo: floorNo, apartmentNo: apartmentNo, longitude: longitude, latitude: latitude)
             let phone = value?["phone"] as? NSArray
             
             
