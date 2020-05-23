@@ -30,75 +30,32 @@ class GetLabsModel: IGetLabsModel {
     
     func getLabs() {
         
-        //check internet Connection
-        let monitor = NWPathMonitor()
-        let queue = DispatchQueue(label: "InternetConnectionMonitor")
-        let realm = try! Realm()
+        //URL for Labs
+        let homeLabsURL = "http://www.checkup.somee.com/api/AnalysisService/GetLabMenus?take=5&skip=0"
         
         // for Azab
         var labs = [HomeLab]()
-        let lab1 = HomeLab(idFB: "sa504", hotline: "457891264", labPhoto: "mokhtabar", labName: "El-Mokhtabar", rating: "3.6")
-        let lab2 = HomeLab(idFB: "sa514", hotline: "4564", labPhoto: "alpha", labName: "Alpha", rating: "2.6")
-        let lab3 = HomeLab(idFB: "sa542", hotline: "456d84", labPhoto: "borg", labName: "borg", rating: "1.6")
-        let lab4 = HomeLab(idFB: "sa543", hotline: "45d654", labPhoto: "mokhtabar", labName: "mokhtabar", rating: "3")
-        labs.append(lab1)
-        labs.append(lab2)
-        labs.append(lab3)
-        labs.append(lab4)
-        
-        // delete all objects from realm
-        try! realm.write {
-            realm.deleteAll()
-        }
-        
-        // write all objects to realm
-        realm.beginWrite()
-        
-        for lab in labs
-        {
-            let labR = HomeLabRealm()
-            labR.idFB = lab.idFB ?? "1"
-            labR.labName = lab.labName ?? ""
-            labR.labPhoto = lab.labPhoto ?? ""
-            labR.hotline = lab.hotline ?? ""
-            labR.rating = lab.rating ?? "0"
-            realm.add(labR)
-        }
-        
-        try! realm.commitWrite()
-        
-        // fetch data from realm
-        var savedLabs = [HomeLab]()
-        //fetch from Realm
-        let realmHomeLabs = realm.objects(HomeLabRealm.self)
-        for rLab in realmHomeLabs
-        {
-            var hLab = HomeLab()
-            hLab.idFB = rLab.idFB
-            hLab.labName = rLab.labName
-            hLab.labPhoto = rLab.labPhoto
-            hLab.hotline = rLab.hotline
-            hLab.rating = rLab.rating
-            savedLabs.append(hLab)
-        }
-        
-        //check internet Connection
-        monitor.pathUpdateHandler = { pathUpdateHandler in
-            if pathUpdateHandler.status == .satisfied {
-                
-                print("Internet connection is on.")
-                self.getLabsPresenterRef?.onSuccess(homeLabs: labs)
-                
-            } else {
-                print("There's no internet connection.")
-                
-                self.getLabsPresenterRef?.onSuccess(homeLabs: savedLabs)
+        Alamofire.request(homeLabsURL).responseJSON { (responseData) -> Void in
+            //        Alamofire.request(homeLabsURL).validate().responseJSON { response in
+            
+            let json = JSON(responseData.data)
+            
+            for item in json.arrayValue {
+                var homeLab = HomeLab()
+                homeLab.labName = item["FireBaseId"].stringValue
             }
         }
         
-        monitor.start(queue: queue)
+        //        let lab1 = HomeLab(idFB: "sa504", hotline: "457891264", labPhoto: "mokhtabar", labName: "El-Mokhtabar", rating: "3.6")
+        //        let lab2 = HomeLab(idFB: "sa514", hotline: "4564", labPhoto: "alpha", labName: "Alpha", rating: "2.6")
+        //        let lab3 = HomeLab(idFB: "sa542", hotline: "456d84", labPhoto: "borg", labName: "borg", rating: "1.6")
+        //        let lab4 = HomeLab(idFB: "sa543", hotline: "45d654", labPhoto: "mokhtabar", labName: "mokhtabar", rating: "3")
+        //        labs.append(lab1)
+        //        labs.append(lab2)
+        //        labs.append(lab3)
+        //        labs.append(lab4)
         
-        
+        self.getLabsPresenterRef?.onSuccess(homeLabs: labs)
     }
     
     func getFilteredLabs() {
