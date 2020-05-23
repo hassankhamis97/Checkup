@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Comment {
+struct Comment : Codable{
     var description: String?
     var rateNumber: String?
     var userId: String?

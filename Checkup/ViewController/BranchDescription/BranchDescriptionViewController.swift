@@ -10,6 +10,8 @@ import UIKit
 
 class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate {
  
+    var branchDesc : IBranchDescModel!
+    
     @IBOutlet weak var myLabel: UILabel!
     //  let eighthCell : EighthStaticTableViewCell! = nil
     @IBAction func backBtn(_ sender: UIButton) {
@@ -25,6 +27,8 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         self.headerViewHeight.constant = self.imageViewMaxHeight
+      
+            
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +36,10 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate {
         self.branchDescriptionTableView.dataSource = self
         myLabel.alpha = 0
         myLabel.text = "EL-Borg"
-
-        
-        
-        
+        branchDesc = BranchDescModel()
+              branchDesc.fetchBranchDesc()
+                  
+    
 
     }
     

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Review {
+struct Review : Codable{
     var id: String?
     var comments: [Comment]?
 //    func toDictionary() -> Any {     return ["id": id, "rateNumber": rateNumber, "comments": comments.toDictionary()] as Any }

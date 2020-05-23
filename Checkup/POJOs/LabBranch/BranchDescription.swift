@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct BranchDescription {
+struct BranchDescription : Codable{
     var labId : String?
     var branchId : String?
     var labName : String?
