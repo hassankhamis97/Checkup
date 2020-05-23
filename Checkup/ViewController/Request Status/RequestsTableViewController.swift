@@ -100,6 +100,19 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         var numOfSections: Int = 0
+        if(isWaitingData){
+//            let activityView = UIActivityIndicatorView(style: .whiteLarge)
+//            activityView.center = self.view.center
+//            activityView.startAnimating()
+//
+//            self.view.addSubview(activityView)
+            var activityView = UIActivityIndicatorView(style: .whiteLarge)
+            activityView.center = self.view.center
+            tableView.addSubview(activityView)
+            activityView.startAnimating()
+            numOfSections = 0
+        }
+        else{
                 if requests!.count > 0
                 {
                     tableView.separatorStyle = .singleLine
@@ -108,18 +121,16 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
                 }
                 else
                 {
-                    if(isWaitingData){
-                        
-                    }
-                    else{
+                    numOfSections = 0
                     let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-                    noDataLabel.text          = "There is no data found"
+                    noDataLabel.text          = errorMsg
         //            noDataLabel.textColor     = UIColor.black
                     noDataLabel.textAlignment = .center
                     tableView.backgroundView  = noDataLabel
                     tableView.separatorStyle  = .none
-                    }
+                    
                 }
+        }
                 return numOfSections
     }
     

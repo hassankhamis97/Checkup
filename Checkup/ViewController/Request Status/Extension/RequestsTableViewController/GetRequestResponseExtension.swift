@@ -9,12 +9,13 @@
 import Foundation
 extension RequestsTableViewController : IGetRequestsView{
     func showIndicator() {
-        var isWaitingData = true
+        isWaitingData = true
         tableView.reloadData()
     }
     
     func hideIndicator() {
-        var isWaitingData = false
+        isWaitingData = false
+//        tableView.reloadData()
     }
     
     func errorMessage(msg: String) {

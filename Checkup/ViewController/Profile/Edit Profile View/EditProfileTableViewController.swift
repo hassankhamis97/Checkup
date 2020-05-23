@@ -51,7 +51,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
       
         else{
             
-            addressTextField.text=addressObj.address
+            addressTextField.text=addressObj.address1
         }
         
     }
@@ -64,7 +64,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         birthDateTextField.text=user.birthdate
         genderTextField.text=user.gender
         insuranceTextField.text=user.insurance
-        addressTextField.text=user.address?.address
+        addressTextField.text=user.address?.address1
         let x = user.phone
         profileImg.sd_setImage(with: URL(string: user.imagePath ?? "users"), placeholderImage: UIImage(named: "users"))
         
@@ -171,7 +171,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         
                 vc.isEditable=true;
         vc.parentRef = self
-        if user.address?.address! != "" {
+        if user.address?.address1! != "" {
                            vc.addressObj = user.address
                       }
         
