@@ -67,6 +67,9 @@
                                                 <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="5Ht-eN-Ctz">
                                                     <rect key="frame" x="78" y="333" width="258" height="2"/>
                                                     <color key="tintColor" red="0.52121115893824421" green="0.6210421998989184" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="Umn-0h-thE"/>
+                                                    </constraints>
                                                 </progressView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmed Ali" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aog-6W-f6c">
                                                     <rect key="frame" x="28" y="226" width="145" height="36"/>

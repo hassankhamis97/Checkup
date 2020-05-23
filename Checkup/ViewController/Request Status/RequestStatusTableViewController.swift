@@ -618,6 +618,7 @@ extension RequestStatusTableViewController : IRequestStatusView
 //                             testArrTite = 50
 //
 //                             imgSlider = 220
+             self.codeText.text = myObj.generatedCode
             self.dateTextArea.text = myObj.dateRequest
                   self.timeTextArea.text = myObj.timeRequest
             if let location = myObj.address {

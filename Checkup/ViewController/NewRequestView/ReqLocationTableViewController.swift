@@ -94,7 +94,7 @@ class ReqLocationTableViewController: UITableViewController , ICheckLocation , U
             message = "please drop pin on map"
         }
             if !message.isEmpty {
-                Alert.showValidationAlert(message: message, viewRef: self)
+                Alert.showSimpleAlert(title: "sorry",message: message, viewRef: self)
                 return false
             }
             return true

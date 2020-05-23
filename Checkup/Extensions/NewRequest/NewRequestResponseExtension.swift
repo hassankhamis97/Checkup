@@ -26,7 +26,7 @@ extension NewRequestTableViewController : INewRequestView ,IView {
     }
     
     func errorMessage(msg: String) {
-        Alert.showValidationAlert(message: msg, viewRef: self)
+        Alert.showSimpleAlert(title: "sorry".localized,message: msg, viewRef: self)
     }
     
     func checkValidation() -> Bool {
@@ -35,7 +35,8 @@ extension NewRequestTableViewController : INewRequestView ,IView {
             message = "please insert at least photo or test Name"
         }
         else if dateTextField.text!.isEmpty{
-            message = "date is required"
+//            message = NSLocalizedString("alertDateMessageError", comment: "")
+            message = "alertDateMessageError"
         }
         else if timeTextField.text!.isEmpty{
             message = "time is required"
@@ -44,7 +45,7 @@ extension NewRequestTableViewController : INewRequestView ,IView {
 //            message = "address is required"
 //        }
         if !message.isEmpty {
-            Alert.showValidationAlert(message: message, viewRef: self)
+            Alert.showSimpleAlert(title: "sorry", message: message, viewRef: self)
             return false
         }
         return true
