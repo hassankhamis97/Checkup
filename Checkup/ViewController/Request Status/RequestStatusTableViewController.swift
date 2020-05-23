@@ -287,21 +287,7 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
         
         slideShow.activityIndicator = DefaultActivityIndicator()
         slideShow.delegate = self
-        
-       /* when dealing with Database
-        for img in savedImageArray{
-            
-            var i=ImageSource(image:img)
-            slidShowImageArray.append(i)
-        }
-          */
-        
-       // slideShow.setImageInputs(slidShowImageArray)
-        
-      
-       // slideShow.setImageInputs([ImageSource(image: UIImage(named: "rosheta")!),ImageSource(image: UIImage(named: "new rosheta")!)])
-        
-        
+    
         if #available(iOS 13.0, *) {
             let recognizer = UITapGestureRecognizer(target: self, action: #selector(RequstDetailsTableViewController.didTap))
             
