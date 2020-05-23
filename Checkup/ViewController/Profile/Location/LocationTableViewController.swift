@@ -38,7 +38,7 @@ class LocationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addressTextField?.text=addressObj.address
+        addressTextField?.text=addressObj.address1
         buildingNumberTextField.text=addressObj.buildingNo
         floorNumTextField.text=addressObj.floorNo
         apartmentNumTextField.text=addressObj.apartmentNo
@@ -64,7 +64,7 @@ class LocationTableViewController: UITableViewController {
             mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
             let coordinates = CLLocationCoordinate2D(latitude: lat, longitude: longitude)
             
-            let locAnnotation=Annotation(coordinate: coordinates, title: addressObj.address, subtitle: "")
+            let locAnnotation=Annotation(coordinate: coordinates, title: addressObj.address1, subtitle: "")
             mapView.addAnnotation(locAnnotation)
             
             

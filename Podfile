@@ -24,4 +24,5 @@ target 'Checkup' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'Charts'
+  pod 'RealmSwift'
 end

@@ -9,15 +9,21 @@
 import Foundation
 extension RequestsTableViewController : IGetRequestsView{
     func showIndicator() {
-        
+        isWaitingData = true
+        tableView.reloadData()
     }
     
     func hideIndicator() {
-        
+        isWaitingData = false
+//        tableView.reloadData()
     }
     
     func errorMessage(msg: String) {
-        
+        self.requests = []
+        errorMsg = msg
+        skip = 0
+        tableView.reloadData()
+
     }
     
     func updateView(requests: [Request]) {
