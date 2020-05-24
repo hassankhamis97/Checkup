@@ -48,7 +48,7 @@ class HomeTableViewController: UITableViewController   {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        tabBarItem.badgeValue = "1"
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
         homeLabPresenter.getLabs()
         

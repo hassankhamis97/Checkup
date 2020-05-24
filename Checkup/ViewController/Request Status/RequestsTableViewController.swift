@@ -34,6 +34,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     var isOld = false
     var isWaitingData = false
     var errorMsg = ""
+    var viewName : String?
     @IBAction func filterDataBtn(_ sender: UIBarButtonItem) {
         let filterVC = storyboard?.instantiateViewController(withIdentifier: "filterSVC") as! FilterTestViewController
         filterVC.parentRef = self
@@ -47,21 +48,40 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     override func viewWillAppear(_ animated: Bool) {
         if(Auth.auth().currentUser?.uid == nil)
         {
+
             let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
             loginVC.modalPresentationStyle = .fullScreen
             self.present(loginVC, animated: true, completion: nil)
             
         }else if !isFiltered{
+            if tabBarController?.getSelectedTabIndex() == 1{
+                isResult = false
+                self.navigationItem.title = "Requests"
+                
+            }
+            else{
+                isResult = true
+                self.navigationItem.title = "Results"
+            }
+            
             isOld = false
             skip = 0
 //            var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
 //            getRequestsPresenter.getRequests(testFilter: testFilter!)
             sendRequest()
-            
+            viewName = self.navigationItem.title
+
 //            self.tableView.reloadData()
         }else {
             isFiltered = false
+            self.navigationItem.title = viewName! + " (Filtered)"
+//            self.navigationItem.title = viewName
         }
+        
+
+        tabBarController?.tabBar.items?[1].badgeValue = "1"
+//        tabBarController?.tabBar.items?[1].se
+
 //        dateDescingly = formatDate(myArr: labDate)
     }
     override func viewDidLoad() {
@@ -106,16 +126,19 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
 //            activityView.startAnimating()
 //
 //            self.view.addSubview(activityView)
-            var activityView = UIActivityIndicatorView(style: .whiteLarge)
-            activityView.center = self.view.center
-            tableView.addSubview(activityView)
-            activityView.startAnimating()
+//            var activityView = UIActivityIndicatorView(style: .whiteLarge)
+//            activityView.center = self.view.center
+//            tableView.addSubview(activityView)
+//            activityView.startAnimating()
+//            numOfSections = 0
             numOfSections = 0
+//            tableView.separatorStyle  = .none
+            tableView.showActivityIndicator()
         }
         else{
                 if requests!.count > 0
                 {
-                    tableView.separatorStyle = .singleLine
+//                    tableView.separatorStyle = .singleLine
                     numOfSections = 1
                     tableView.backgroundView = nil
                 }
@@ -127,7 +150,6 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
         //            noDataLabel.textColor     = UIColor.black
                     noDataLabel.textAlignment = .center
                     tableView.backgroundView  = noDataLabel
-                    tableView.separatorStyle  = .none
                     
                 }
         }
@@ -157,6 +179,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
         
         cell.labNameOutlet.text = requests![indexPath.row].labName
         cell.labDateOutlet.text = requests![indexPath.row].dateRequest
+        
         switch requests![indexPath.row].status! {
         case TestType.PendingForLabConfirmation.rawValue:
             cell.requestStatus.text = "🔵 Wait Response"
@@ -166,6 +189,12 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
             break
         case TestType.PendingForResult.rawValue:
             cell.requestStatus.text = "🔸 Wait Result"
+            break
+            case TestType.Refused.rawValue:
+            cell.requestStatus.text = "🔴 Refused"
+            break
+        case TestType.Done.rawValue:
+            cell.requestStatus.text = "✅ Done"
             break
         default:
             break
@@ -245,12 +274,18 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     func sendRequest() {
         var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
         if !isFiltered {
-            testFilter = TestFilter(isFilter: false,dateFrom: nil, dateTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
+            if !isResult! {
+                testFilter = TestFilter(isFilter: false,dateFrom: nil, dateTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
+            }
+            else{
+                testFilter = TestFilter(isFilter: false,dateFrom: nil, dateTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.Done.rawValue], take: take, skip: skip)
+            }
         }
         getRequestsPresenter.getRequests(testFilter: testFilter!)
     }
     func getTestFilter(testFilter: TestFilter) {
         isFiltered = true
+//        self.navigationItem.title = viewName! + "(Filtered)"
         self.testFilter = testFilter
         skip = 0
         sendRequest()
@@ -289,3 +324,12 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
 ////        self.tabBar(self.tabBar, didSelectItem: (self.tabBar.items as! [UITabBarItem])[value]);
 ////    }
 //}
+
+extension UITabBarController {
+    func getSelectedTabIndex() -> Int? {
+        if let selectedItem = self.tabBar.selectedItem {
+            return self.tabBar.items?.firstIndex(of: selectedItem)
+        }
+        return nil
+    }
+}

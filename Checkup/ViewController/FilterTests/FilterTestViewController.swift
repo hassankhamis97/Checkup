@@ -8,7 +8,7 @@
 
 import UIKit
 import SkyFloatingLabelTextField
-class FilterTestViewController: UIViewController {
+class FilterTestViewController: UIViewController,IView {
     @IBOutlet var tableViewOutlet: UITableView!
     var testFilter : TestFilter?
     var datePickerView : UIDatePicker = UIDatePicker()
@@ -38,7 +38,8 @@ class FilterTestViewController: UIViewController {
          dateFormatter.timeStyle = .none
          datePickerView.datePickerMode = .date
          datePickerView2.datePickerMode = .date
-         
+//                 datePickerView2.alpha = 0
+        datePickerView2.isEnabled = false
          navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Apply", style: .plain, target: self, action: #selector(applyFilter))
         // Do any additional setup after loading the view.
     }
@@ -62,7 +63,10 @@ class FilterTestViewController: UIViewController {
         inputDateOne = dateFormatter.string(from: datePickerView.date)
              firstDateField.text = inputDateOne
         testFilter?.dateFrom = inputDateOne
-             datePickerView.removeFromSuperview()
+        datePickerView2.minimumDate = datePickerView.date
+//                 datePickerView2.alpha = 1
+        datePickerView2.isEnabled = true
+        datePickerView.removeFromSuperview()
         self.view.endEditing(true)
     
 
@@ -101,11 +105,25 @@ class FilterTestViewController: UIViewController {
     }
     */
     @objc func applyFilter(){
+        if(testFilter?.dateFrom == nil && testFilter?.dateTo == nil && testFilter?.labIds?.count == 0)
+        {
+            Alert.showSimpleAlert(title: "sorry", message: "please enter at least date range or lab to filter data", viewRef: self)
+        }
+        else if((testFilter?.dateFrom != nil && testFilter?.dateTo == nil) || (testFilter?.dateFrom == nil && testFilter?.dateTo != nil))
+        {
+            Alert.showSimpleAlert(title: "sorry", message: "please insert another date", viewRef: self)
+        }
+//        else if testFilter?.labIds?.count == 0
+//        {
+//            Alert.showSimpleAlert(title: "sorry", message: "please insert another date", viewRef: self)
+//        }
+        else {
 //        if(testFilter?.dateFrom ==)
         testFilter?.skip = 0
         testFilter?.take = 200
         testFilter?.isFilter = true
         parentRef!.getTestFilter(testFilter: testFilter!)
         navigationController?.popViewController(animated: true)
+        }
     }
 }

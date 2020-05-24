@@ -83,6 +83,7 @@
 		4E45420F2479C7F000955FD8 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4542112479C7F000955FD8 /* Setting.storyboard */; };
 		4E4542192479C9FE00955FD8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E45421B2479C9FE00955FD8 /* Localizable.strings */; };
 		4E4542202479CEC800955FD8 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45421F2479CEC800955FD8 /* LocalizedString.swift */; };
+		4E4542232479FAF700955FD8 /* AddViewIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4542222479FAF700955FD8 /* AddViewIndicator.swift */; };
 		4E4EA638247010DE00309CAF /* NewRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA637247010DE00309CAF /* NewRequestModel.swift */; };
 		4E4EA63A2470117F00309CAF /* NewRequestContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA6392470117F00309CAF /* NewRequestContract.swift */; };
 		4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA63C247011F000309CAF /* NewRequestPresenter.swift */; };
@@ -333,6 +334,7 @@
 		4E45421A2479C9FE00955FD8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E45421D2479CA1400955FD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E45421F2479CEC800955FD8 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		4E4542222479FAF700955FD8 /* AddViewIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewIndicator.swift; sourceTree = "<group>"; };
 		4E4EA637247010DE00309CAF /* NewRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestModel.swift; sourceTree = "<group>"; };
 		4E4EA6392470117F00309CAF /* NewRequestContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestContract.swift; sourceTree = "<group>"; };
 		4E4EA63C247011F000309CAF /* NewRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestPresenter.swift; sourceTree = "<group>"; };
@@ -949,6 +951,14 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		4E4542212479FAD300955FD8 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				4E4542222479FAF700955FD8 /* AddViewIndicator.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		4E4EA63B247011DF00309CAF /* NewRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1279,6 +1289,7 @@
 		4EE9F93724699B7700BB4A39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4E4542212479FAD300955FD8 /* TableView */,
 				4E45421E2479CEA700955FD8 /* String */,
 				A3C5F0362472C75A0069413F /* Signup */,
 				4E4EA63E247015CF00309CAF /* NewRequest */,
@@ -1979,6 +1990,7 @@
 				4EE7EA34246B023000BF434F /* KeyboardLayoutConstraint.swift in Sources */,
 				4E15ACDB24712F6E004418B1 /* ShowNewRequest.swift in Sources */,
 				CC80B9DB247727E800521508 /* ExtensionStatisticsPicker.swift in Sources */,
+				4E4542232479FAF700955FD8 /* AddViewIndicator.swift in Sources */,
 				CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */,
 				CCCDA045246A94F5005549EA /* ReqLocationTableViewController.swift in Sources */,
 				4E3C1F40247693A700D9761D /* GetLabsModel.swift in Sources */,

@@ -7,13 +7,16 @@
 //
 
 import Foundation
+import UIKit
 extension RequestsTableViewController : IGetRequestsView{
     func showIndicator() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         isWaitingData = true
         tableView.reloadData()
     }
     
     func hideIndicator() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
         isWaitingData = false
 //        tableView.reloadData()
     }

@@ -11,3 +11,5 @@
 "Ok" = "Ok";
 "Yes" = "Yes";
 "No" = "No";
+"please enter at least date range or lab to filter data" = "please enter at least date range or lab to filter data";
+"please insert another date" = "please insert another date";

@@ -33,7 +33,13 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
             testFilter?.labIds?.append(labsList[indexPath.row].id!)
         }
         else {
-            testFilter?.labIds?.remove(at: indexPath.row)
+            for i in 0..<testFilter!.labIds!.count {
+                if labsList[indexPath.row].id! == testFilter!.labIds![i]{
+                testFilter?.labIds?.remove(at: i)
+                    break
+                }
+//                testFilter?.labIds?.remove(i)
+            }
         }
         tableViewOutlet.reloadData()
     }

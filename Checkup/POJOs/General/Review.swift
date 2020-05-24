@@ -8,7 +8,10 @@
 
 import Foundation
 struct Review {
-    var id: String?
-    var comments: [Comment]?
+    var id: Int64?
+//    var comments: [Comment]?
+    var description: String?
+    var rateNumber: Int?
+    var userId: String?
 //    func toDictionary() -> Any {     return ["id": id, "rateNumber": rateNumber, "comments": comments.toDictionary()] as Any }
 }
