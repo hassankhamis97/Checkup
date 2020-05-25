@@ -1885,7 +1885,7 @@
 				A33CA624246D3AEE0014CF6B /* Employee.storyboard in Resources */,
 				4EE7EA30246AF2B800BF434F /* DateTableViewCell.xib in Resources */,
 				4E11EE2B247C56C800B3BDBA /* NewRequestScreen.storyboard in Resources */,
-				CCE4D2B22457064600EB8ADC /* Profile.storyboard in Resources */,
+				CC799DEB247BC1D200F6BAAD /* Profile.storyboard in Resources */,
 				0335FAF8246A08C600CE0863 /* Home.storyboard in Resources */,
 				CC7092D92458C131003E8968 /* signUp.storyboard in Resources */,
 				03789BD5246CC39700C0BF33 /* BranchesCollectionViewCell.xib in Resources */,
