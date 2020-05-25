@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+
+protocol IBranchDescView{
+    func showDataToView(barnchDescObjInView : BranchDescription)
+}
+
+
+protocol IBranchDescPresenter{
+    func getDataFromModel()
+    func onSuccess(branchDescObj : BranchDescription)
+    func onFail()
+}
+
+
+protocol IBranchDescModel{
+    func fetchBranchDesc()
+}

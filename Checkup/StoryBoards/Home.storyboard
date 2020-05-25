@@ -31,6 +31,9 @@
                                                     <rect key="frame" x="0.0" y="13" width="414" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="8ET-JG-5tI" id="Qcb-DY-zMg"/>
+                                                    </connections>
                                                 </searchBar>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -62,9 +65,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GUX-I2-JLc">
-                                                    <rect key="frame" x="0.0" y="11" width="414" height="468"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GUX-I2-JLc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="cXX-cv-Kdt">
                                                         <size key="itemSize" width="191" height="213"/>
@@ -122,6 +124,12 @@
                                                     </connections>
                                                 </collectionView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="GUX-I2-JLc" secondAttribute="bottom" id="H4w-Od-kwg"/>
+                                                <constraint firstItem="GUX-I2-JLc" firstAttribute="leading" secondItem="LI7-4y-1GQ" secondAttribute="leading" id="NuZ-ZX-f4s"/>
+                                                <constraint firstAttribute="trailing" secondItem="GUX-I2-JLc" secondAttribute="trailing" id="RNt-ZN-AzT"/>
+                                                <constraint firstItem="GUX-I2-JLc" firstAttribute="top" secondItem="LI7-4y-1GQ" secondAttribute="top" id="sJx-Ue-2eI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -149,6 +157,7 @@
                     <connections>
                         <outlet property="labCollection" destination="GUX-I2-JLc" id="rSR-Iq-qem"/>
                         <outlet property="labSlideShow" destination="4ei-gy-2Ti" id="kFg-Sr-TgX"/>
+                        <outlet property="searchBar" destination="DOV-Tm-DrO" id="wER-3Z-glZ"/>
                         <outlet property="searchTVCell" destination="XSp-WQ-819" id="skw-0K-nGC"/>
                     </connections>
                 </tableViewController>
@@ -561,7 +570,7 @@
         <!--Branch Description View Controller-->
         <scene sceneID="UbX-Yp-eV1">
             <objects>
-                <viewController id="voY-Tu-5Yq" customClass="BranchDescriptionViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="branchDesc" id="voY-Tu-5Yq" customClass="BranchDescriptionViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GD6-Rc-OnQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -620,6 +629,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labGovernOutlet" destination="Fd2-ch-P1T" id="c8g-IB-YIB"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="thirdCell" rowHeight="41" id="Hz8-ry-pPE" customClass="ThirdStaticTableViewCell" customModule="Checkup" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="124" width="414" height="41"/>
@@ -644,6 +656,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labAddressOutlet" destination="waR-Jr-SMo" id="2Bb-CK-Yyn"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="fourthCell" rowHeight="40" id="veI-bA-7An" customClass="FourthStaticTableViewCell" customModule="Checkup" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="165" width="414" height="40"/>
@@ -668,6 +683,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labPhoneOutlet" destination="SVF-5T-V4V" id="ZCR-bx-rin"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="fifthCell" rowHeight="46" id="Pdp-eP-NWM" customClass="FifthStaticTableViewCell" customModule="Checkup" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="205" width="414" height="46"/>
@@ -692,6 +710,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labHolidayOutlet" destination="c7Y-4Z-49O" id="k2z-i8-sec"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="sixthCell" rowHeight="52" id="N3h-DR-QTS" customClass="SisxthStaticTableViewCell" customModule="Checkup" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="251" width="414" height="52"/>
@@ -707,8 +728,8 @@
                                                     <color key="textColor" red="0.19215686269999999" green="0.20392156859999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Am to 9 Pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-h8-v21">
-                                                    <rect key="frame" x="277" y="31" width="112" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Am to 9 Pm" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-h8-v21">
+                                                    <rect key="frame" x="250" y="31" width="160" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.19215686269999999" green="0.20392156859999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -716,6 +737,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labWorkOutlet" destination="VOg-h8-v21" id="JDc-R3-n2H"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="seventhCell" rowHeight="60" id="Mzw-Wq-jPY" customClass="SeventhStaticTableViewCell" customModule="Checkup" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="303" width="414" height="60"/>
@@ -732,7 +756,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDN-YT-Vqd">
-                                                    <rect key="frame" x="312" y="29" width="32" height="21"/>
+                                                    <rect key="frame" x="306" y="22" width="44" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                                     <color key="textColor" red="0.19215686269999999" green="0.20392156859999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -740,6 +764,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labAvailableOutelt" destination="tDN-YT-Vqd" id="YoD-fm-VwY"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="eighthCell" rowHeight="100" id="ro9-TY-xDg" customClass="EighthStaticTableViewCell" customModule="Checkup" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="363" width="414" height="100"/>
@@ -792,7 +819,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-n6-YCi">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="borg" translatesAutoresizingMaskIntoConstraints="NO" id="oIk-be-L4x">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oIk-be-L4x">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnX-55-AGo">
@@ -851,7 +878,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRh-3Z-ibC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3523" y="773"/>
+            <point key="canvasLocation" x="3521.739130434783" y="772.76785714285711"/>
         </scene>
         <!--Result-->
         <scene sceneID="rTC-7D-WQj">

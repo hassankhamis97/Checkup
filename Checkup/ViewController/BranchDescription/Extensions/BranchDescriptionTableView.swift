@@ -10,10 +10,12 @@ import Foundation
 import UIKit
 import MapKit
 extension BranchDescriptionViewController: UITableViewDataSource, UITableViewDelegate {
+  
    
     
  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
- return 1
+    
+        return 1
  }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,84 +54,63 @@ extension BranchDescriptionViewController: UITableViewDataSource, UITableViewDel
     }
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = UITableViewCell()
-   //   cell.textLabel!.text = "Cell \(indexPath.row)"
     var myTag = cell.tag
     myTag = indexPath.row
     print(myTag)
+    
+   if(branchDescriptionView != nil){
+    
     if(myTag == 0){
         let firstCell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath) as! FirstStaticTableViewCell
-        firstCell.firstLabNameOutlet.text = "El-Mokhtbar"
+        firstCell.firstLabNameOutlet.text = branchDescriptionView.labName!
         return firstCell
         
     }else if(myTag==1){
         let secCell = tableView.dequeueReusableCell(withIdentifier: "secCell", for: indexPath) as! SecStaticTableViewCell
+        secCell.labGovernOutlet.text = branchDescriptionView.govern!
         return secCell
         
     }else if(myTag==2){
       let thirdCell = tableView.dequeueReusableCell(withIdentifier: "thirdCell", for: indexPath) as! ThirdStaticTableViewCell
+        thirdCell.labAddressOutlet.text = branchDescriptionView.address?.address1!
       return thirdCell
         
     }else if(myTag==3){
       let fourthCell = tableView.dequeueReusableCell(withIdentifier: "fourthCell", for: indexPath) as! FourthStaticTableViewCell
+        fourthCell.labPhoneOutlet.text = branchDescriptionView.phone!
       return fourthCell
     }
     else if(myTag==4){
     let fifthCell = tableView.dequeueReusableCell(withIdentifier: "fifthCell", for: indexPath) as! FifthStaticTableViewCell
+      //  fifthCell.labHolidayOutlet.text = branchDescriptionView.holidays!      NOT IN API
     return fifthCell
     }else if(myTag==5){
     let sixthCell = tableView.dequeueReusableCell(withIdentifier: "sixthCell", for: indexPath) as! SisxthStaticTableViewCell
+        var workTime = branchDescriptionView.timeFrom! + branchDescriptionView.timeTo!
+           sixthCell.labWorkOutlet.text = workTime
     return sixthCell
     }
     else if(myTag==6){
     let seventhCell = tableView.dequeueReusableCell(withIdentifier: "seventhCell", for: indexPath) as! SeventhStaticTableViewCell
+        seventhCell.labAvailableOutelt.text = String(branchDescriptionView.isAvailableFromHome)
     return seventhCell
         
     } else if(myTag==7){
         let eighthCell = tableView.dequeueReusableCell(withIdentifier: "eighthCell", for: indexPath) as! EighthStaticTableViewCell
             let annotation = MKPointAnnotation()
-            annotation.title = "Your Lab"
-            annotation.coordinate = CLLocationCoordinate2D(latitude: 26.820553, longitude: 30.802498)
-            
+            annotation.title = branchDescriptionView.labName!
+    //    annotation.coordinate = CLLocationCoordinate2D(latitude: (branchDescriptionView.address?.latitude)!, longitude: (branchDescriptionView.address?.longitude)!)
+    //    annotation.coordinate = CLLocationCoordinate2D(latitude: branchDescriptionView.address!.latitude!, longitude: branchDescriptionView.address!.longitude!)
         eighthCell.LabMapOutlet.addAnnotation(annotation)
-     
-        
        return eighthCell
         
     } else if(myTag==8){
           let ningthCell = tableView.dequeueReusableCell(withIdentifier: "ningthCell", for: indexPath) as! NinthStaticTableViewCell
           return ningthCell
        }
-       
-    
-    
-    
-    
+   }
       return cell
   }
+    
+
 }
-
-/*
-
-override func viewWillAppear(_ animated: Bool) {
-
-     //  let myLocation = CLLocationCoordinate2D(latitude: 26.820553, longitude: 30.802498)
-   
-    /*   let placeMark = MKPlacemark(coordinate: myLocation)
-       let mapItem = MKMapItem(placemark: placeMark)
-       mapItem.name = "Your Lab"
-   */
-   
-       let annotation = MKPointAnnotation()
-       annotation.title = "Your Lab"
-       annotation.coordinate = CLLocationCoordinate2D(latitude: 26.820553, longitude: 30.802498)
-       
-       myMap.addAnnotation(annotation)
-   
-       
-       
-       
-       //myMap.setCenter(myLocation, animated: true)
-   }
-
-
-*/

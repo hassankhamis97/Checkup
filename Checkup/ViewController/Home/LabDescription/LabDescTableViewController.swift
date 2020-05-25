@@ -26,6 +26,8 @@ class LabDescTableViewController: UITableViewController , ILabDescView {
         labBrachCollection.register(UINib(nibName: "BranchesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "branchCell")
             let layout = UICollectionViewFlowLayout()
       
+       navigationItem.leftBarButtonItem = UIBarButtonItem(title: "description", style: .plain, target: self, action: #selector(navigateToDesc))
+        
    //     let screenSIze = UIScreen.main.bounds
      //   let width = screenSIze.width
        // let height = screenSIze.height-200
@@ -38,6 +40,12 @@ class LabDescTableViewController: UITableViewController , ILabDescView {
         
         labDescPresenter =  LabDescPresenter(view: self)
         labDescPresenter.getDataFromLabDescModel()
+        
+    }
+    @objc func navigateToDesc() {
+        let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
+        branchDesc.modalPresentationStyle = .fullScreen
+        self.present(branchDesc , animated: true , completion: nil)
         
     }
 
@@ -53,3 +61,4 @@ class LabDescTableViewController: UITableViewController , ILabDescView {
     
     
 }
+

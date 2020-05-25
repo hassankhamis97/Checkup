@@ -10,6 +10,7 @@ import UIKit
 
 class FourthStaticTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labPhoneOutlet: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
