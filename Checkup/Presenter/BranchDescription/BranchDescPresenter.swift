@@ -7,6 +7,36 @@
 //
 
 import Foundation
-class BranchDescPresenter {
+class BranchDescPresenter : IBranchDescPresenter {
+    
+    
+    
+    var branchDescModel : IBranchDescModel!
+    var branchDescView : IBranchDescView!
+    
+    init(view : IBranchDescView) {
+        branchDescView = view
+    }
+    
+    
+    func getDataFromModel() {
+        branchDescModel = BranchDescModel(presenter: self)
+        branchDescModel.fetchBranchDesc()
+        
+    }
+    
+    func onSuccess(branchDescObj: BranchDescription) {
+        branchDescView.showDataToView(barnchDescObjInView: branchDescObj)
+    
+    }
+    
+    
+    func onFail() {
+        
+    }
+    
+    
+    
+    
     
 }

@@ -7,13 +7,12 @@
 //
 
 import UIKit
-
-class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate {
+import SDWebImage
+class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate , IBranchDescView{
  
-    var branchDesc : IBranchDescModel!
-    
+     var branchDescriptionView : BranchDescription!
+    var branchDescPresenter : IBranchDescPresenter!
     @IBOutlet weak var myLabel: UILabel!
-    //  let eighthCell : EighthStaticTableViewCell! = nil
     @IBAction func backBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -35,13 +34,24 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate {
         self.branchDescriptionTableView.delegate = self
         self.branchDescriptionTableView.dataSource = self
         myLabel.alpha = 0
-        myLabel.text = "EL-Borg"
-        branchDesc = BranchDescModel()
-              branchDesc.fetchBranchDesc()
+        branchDescPresenter = BranchDescPresenter(view: self)
+        branchDescPresenter.getDataFromModel()
                   
     
 
     }
+ func showDataToView(barnchDescObjInView: BranchDescription) {
+      branchDescriptionView =  barnchDescObjInView
+    print("in branch description view \(branchDescriptionView )")
+    print("view")
+    myLabel.text = branchDescriptionView.labName!
+    labImageView.sd_setImage(with: URL(string: branchDescriptionView.branchPhoto!), placeholderImage:UIImage(named: "placeholder.png"))
+    print(branchDescriptionView.address?.longitude)
+    branchDescriptionTableView.reloadData()
+
+    
+  }
+  
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
           let y : CGFloat = scrollView.contentOffset.y

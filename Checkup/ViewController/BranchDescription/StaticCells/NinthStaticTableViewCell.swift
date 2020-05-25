@@ -26,6 +26,7 @@ class NinthStaticTableViewCell: UITableViewCell {
         let placeMark = MKPlacemark(coordinate: coordinates)
         let mapItem = MKMapItem(placemark: placeMark)
         mapItem.name = "El-Mokhtabar"
+        
         mapItem.openInMaps(launchOptions: options)
     }
         

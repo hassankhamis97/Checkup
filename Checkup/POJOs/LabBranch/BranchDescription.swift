@@ -11,7 +11,7 @@ struct BranchDescription : Codable{
     var labId : String?
     var branchId : String?
     var labName : String?
-    var labPhoto : String?
+    var branchPhoto : String?
     var govern : String?
     var address : Address?
     var phone : String?

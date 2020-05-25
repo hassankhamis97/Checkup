@@ -10,12 +10,13 @@ import Foundation
 
 
 protocol IBranchDescView{
-    func showDataToView()
+    func showDataToView(barnchDescObjInView : BranchDescription)
 }
 
 
 protocol IBranchDescPresenter{
-    func onSuccess()
+    func getDataFromModel()
+    func onSuccess(branchDescObj : BranchDescription)
     func onFail()
 }
 
