@@ -9,17 +9,16 @@
 import Foundation
 import UIKit
 import ImageSlideshow
+import SDWebImage
 
 extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ImageSlideshowDelegate, IGetLabsView {
     
     
     
     func getLabsForRender(homeLabs: [HomeLab]) {
-        DispatchQueue.main.async {
             self.homeLabArr = homeLabs
             self.showSlider()
             self.labCollection.reloadData()
-        }
     }
     
     func showIndicator() {
@@ -36,15 +35,17 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeLabArr?.count ?? 0
+        return homeLabArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "labCell", for: indexPath) as! LabsCollectionViewCell
         
-        cell.labImageVIew.image = UIImage(named: homeLabArr?[indexPath.row].labPhoto ?? "")
-        cell.labRating.rating =  (homeLabArr?[indexPath.row].rating as! NSString).doubleValue
-        cell.labHotLine.text = homeLabArr?[indexPath.row].hotline
+        cell.labImageVIew.sd_setImage(with: URL(string: homeLabArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
+        
+//        cell.labImageVIew.image = UIImage(named: homeLabArr[indexPath.row].labPhoto ?? "")
+        cell.labRating.rating =  (homeLabArr[indexPath.row].rating as! NSString).doubleValue
+        cell.labHotLine.text = homeLabArr[indexPath.row].hotline
         //cell.labImageVIew.layer.cornerRadius = cell.labImageVIew.frame.height/2
         cell.labImageVIew.layer.cornerRadius = 15
         //        cell.labRating.rating = 3
@@ -74,21 +75,14 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     func showSlider() {
        
         var slideShowImgs: [InputSource] = [InputSource]()
-        if homeLabArr?.count ?? 0 > 0{
-            for i in homeLabArr! {
-                slideShowImgs.append(ImageSource(image: UIImage(named: i.labPhoto ?? "")!))
+        if homeLabArr.count > 0{
+            for i in homeLabArr {
+                
+//                slideShowImgs.append(AlamofireSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080"))
             }
         }
         
-        labSlideShow.setImageInputs(
-            slideShowImgs
-            //            [
-            //            ImageSource(image: UIImage(named: "borg")!),
-            //            ImageSource(image: UIImage(named: "alpha")!),
-            //            ImageSource(image: UIImage(named: "mokhtabar")!),
-            //            ImageSource(image: UIImage(named: "borg")!)
-            //        ]
-        )
+        labSlideShow.setImageInputs(slideShowImgs)
         
         labSlideShow.slideshowInterval = 3
         labSlideShow.contentScaleMode = .scaleToFill
