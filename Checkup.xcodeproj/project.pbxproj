@@ -1146,6 +1146,7 @@
 				4EF1A1E12476B08300597A15 /* EmployeeDetailsModel.swift */,
 				4EF1A1DF2476B07000597A15 /* RequestStatusModel.swift */,
 				BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */,
+				BBBB1B5F24782D3B0013D06F /* DeleteRequestModel.swift */,
 				4ECE5C4D246E89C200932947 /* LoginModel.swift */,
 				A3C5F02E2472BDA80069413F /* SignupModel.swift */,
 				4E4EA637247010DE00309CAF /* NewRequestModel.swift */,
@@ -1158,7 +1159,6 @@
 				03067A222477724F000F1424 /* LabDescriptionModel.swift */,
 				03C1DD292478581900D2A008 /* BranchDescModel.swift */,
 				CC80B9E5247738CC00521508 /*  StatisticsModel.swift */,
-				BBBB1B5F24782D3B0013D06F /* DeleteRequestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
