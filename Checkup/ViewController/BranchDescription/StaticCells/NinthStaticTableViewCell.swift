@@ -9,23 +9,24 @@
 import UIKit
 import MapKit
 class NinthStaticTableViewCell: UITableViewCell {
-
+    var latitude : CLLocationDegrees?
+    var longitude : CLLocationDegrees?
     
     
     @IBAction func showDirection(_ sender: UIButton) {
         sender.pulsate()
         
     
-        let latitude : CLLocationDegrees = 26.820553
-        let longitude : CLLocationDegrees = 30.802498
+        
         
         let regionDistance : CLLocationDistance = 1000
-        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let coordinates = CLLocationCoordinate2DMake(latitude!, longitude!)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         let options = [MKLaunchOptionsMapCenterKey : NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey : NSValue(mkCoordinateSpan: regionSpan.span)]
         let placeMark = MKPlacemark(coordinate: coordinates)
         let mapItem = MKMapItem(placemark: placeMark)
         mapItem.name = "El-Mokhtabar"
+        
         mapItem.openInMaps(launchOptions: options)
     }
         

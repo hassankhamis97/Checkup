@@ -10,6 +10,7 @@ import UIKit
 
 class SisxthStaticTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labWorkOutlet: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,6 +10,7 @@ import UIKit
 
 class FifthStaticTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labHolidayOutlet: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

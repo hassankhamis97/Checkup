@@ -10,6 +10,7 @@ import UIKit
 
 class SecStaticTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labGovernOutlet: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

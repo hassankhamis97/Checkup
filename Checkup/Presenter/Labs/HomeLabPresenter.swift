@@ -10,19 +10,31 @@ import Foundation
 
 class HomeLabPresenter: IGetLabsPresenter {
     
+    func getSearchedLabs(name: String) {
+        let labModel = GetLabsModel(getLabsPresenterRef: self)
+        labModel.getSearchedLabs(name: name)
+        getLabsViewRef.showIndicator()
+    }
+    
+    
     var getLabsViewRef : IGetLabsView
     init(getLabsViewRef : IGetLabsView) {
         self.getLabsViewRef = getLabsViewRef
     }
     
-    func getLabs() {
+    func getLabs(take: Int, skip: Int) {
         let labModel = GetLabsModel(getLabsPresenterRef: self)
-        labModel.getLabs()
+        labModel.getLabs(take: take, skip: skip)
         getLabsViewRef.showIndicator()
     }
     
-    func onSuccess(homeLabs: [HomeLab]) {
-        getLabsViewRef.getLabsForRender(homeLabs: homeLabs)
+    func onSuccess(homeLabs: [HomeLab], str: String) {
+        if str == "filtered" {
+             getLabsViewRef.getLabsForRender(homeLabs: homeLabs)
+        } else if str == "search" {
+            getLabsViewRef.getSearchedLabs(seachedHomeLabs: homeLabs)
+        }
+       
         getLabsViewRef.hideIndicator()
     }
     
