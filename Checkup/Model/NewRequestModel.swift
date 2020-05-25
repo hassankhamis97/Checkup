@@ -68,7 +68,7 @@ class NewRequestModel: INewRequestModel {
         if imgPathsArr != nil {
             testFinObj.roushettaPaths = imgPathsArr
         }
-        testFinObj.id = id
+//        testFinObj.id = id
         
         //        ref.child("Tests").child(testFinObj.labId!).child(testFinObj.branchId!).setValue(testFinDic)
         ref.child("GeneratedCode").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -80,13 +80,13 @@ class NewRequestModel: INewRequestModel {
             
             testFinObj.generatedCode = String(code)
             let testFinDic = try! DictionaryEncoder.encode(testFinObj)
-            self.db?.collection("TestsHassan").document(testFinObj.id!).setData(testFinDic) { err in
-                if let err = err {
-                    print("Error writing document: \(err)")
-                } else {
-                    print("Document successfully written!")
-                }
-            }
+//            self.db?.collection("TestsHassan").document(testFinObj.id!).setData(testFinDic) { err in
+//                if let err = err {
+//                    print("Error writing document: \(err)")
+//                } else {
+//                    print("Document successfully written!")
+//                }
+//            }
 //            let json : String
 //            do{
 //               let jsonEncoder = JSONEncoder()
@@ -111,7 +111,7 @@ let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewAnalysis
                                             print(error)
                                         }
                         }
-            self.ref.child("TestsHassan").child(testFinObj.branchId!).child(testFinObj.id!).setValue(testFinDic)
+//            self.ref.child("TestsHassan").child(testFinObj.branchId!).child(testFinObj.id!).setValue(testFinDic)
             self.newRequestPresenterRef.onSuccess()
             // ...
         }) { (error) in
