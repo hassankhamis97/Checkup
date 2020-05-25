@@ -162,7 +162,7 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
                
                self.dateTextArea.text = self.testStatusObj.dateRequest
                                 self.timeTextArea.text = self.testStatusObj.timeRequest
-        guard let locAddress = self.testStatusObj?.address! else{
+        guard let locAddress = self.testStatusObj?.address else{
             return
         }
                                 let location = "\( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
@@ -195,22 +195,47 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
     
     @IBAction func deleteRefusedRequestBtn(_ sender: Any) {
         
-        
-
+              
                 let alert = UIAlertController(title: "Confirmation", message: "Do You Want To Delete This Request ?!", preferredStyle: .alert)
         
         
         
                 self.present(alert, animated: true)
+        
                 alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-                    print("You choosed Yes !")
+                                   print("You choosed Yes !")
+                       
+                                  let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
+                                  
+                                   deleteRequestPresenter.deleteRequest(reqId: self.testStatusObj.id!)
+                               }))
         
-                   let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
         
+               alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
+                    print("You choosed NOoOo !")
                 }))
-                alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
-                          print("You choosed NOoOo !")
-                      }))
+        
+        
+        
+        
+        
+        
+
+//                let alert = UIAlertController(title: "Confirmation", message: "Do You Want To Delete This Request ?!", preferredStyle: .alert)
+//
+//
+//
+//                self.present(alert, animated: true)
+//                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+//                    print("You choosed Yes !")
+//
+//                   let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
+//
+//                    deleteRequestPresenter.deleteRequest(reqId: self.testStatusObj.id!)
+//                }))
+//                alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
+//                          print("You choosed NOoOo !")
+//                      }))
               
         
     }
