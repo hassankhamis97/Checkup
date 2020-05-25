@@ -99,13 +99,15 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         let eighthCell = tableView.dequeueReusableCell(withIdentifier: "eighthCell", for: indexPath) as! EighthStaticTableViewCell
             let annotation = MKPointAnnotation()
             annotation.title = branchDescriptionView.labName!
-    //    annotation.coordinate = CLLocationCoordinate2D(latitude: (branchDescriptionView.address?.latitude)!, longitude: (branchDescriptionView.address?.longitude)!)
-    //    annotation.coordinate = CLLocationCoordinate2D(latitude: branchDescriptionView.address!.latitude!, longitude: branchDescriptionView.address!.longitude!)
+//        annotation.coordinate = CLLocationCoordinate2D(latitude: (branchDescriptionView.address?.latitude)!, longitude: (branchDescriptionView.address?.longitude)!)
+        annotation.coordinate = CLLocationCoordinate2D(latitude: branchDescriptionView.address!.latitude!, longitude: branchDescriptionView.address!.longitude!)
         eighthCell.LabMapOutlet.addAnnotation(annotation)
        return eighthCell
         
     } else if(myTag==8){
           let ningthCell = tableView.dequeueReusableCell(withIdentifier: "ningthCell", for: indexPath) as! NinthStaticTableViewCell
+        ningthCell.latitude = branchDescriptionView.address!.latitude
+        ningthCell.longitude = branchDescriptionView.address!.longitude
           return ningthCell
        }
    }

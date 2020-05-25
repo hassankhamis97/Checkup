@@ -21,6 +21,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     @IBOutlet weak var deleteImageBtn: UIButton!
     @IBOutlet weak var uploadImage: UIButton!
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     
     @IBOutlet weak var dateTextField: SkyFloatingLabelTextFieldWithIcon!
@@ -40,13 +41,15 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var labId: String?
     var isFromHome: Bool?
     var addressObj : Address!
+    
+    @IBOutlet var saveRequestBtn: UIButton!
     @IBAction func saveNewRequestBtn(_ sender: UIButton) {
         if(checkValidation()){
             let date = Date()
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMM dd, yyyy"
             let currentDate = dateFormatter.string(from: date)
-            dateFormatter.dateFormat = "H:mm a"
+            dateFormatter.dateFormat = "h:mm a"
             let currentTime = dateFormatter.string(from: date)
 
             
@@ -80,11 +83,21 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         
         createDatePicker()
-        createTimePicker()
-        
+//        createTimePicker()
+        timeTextField.isEnabled = false
+        activityIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        activityIndicator.hide()
+        activityIndicator.alpha = 0
+        dateTextField.addTarget(self, action: #selector(NewRequestTableViewController.textFieldDidChange(_:)), for: .editingChanged)
+
     }
     
-    
+    @objc func textFieldDidChange(_ textField: SkyFloatingLabelTextFieldWithIcon) {
+        if textField.text!.isEmpty {
+            timeTextField.isEnabled = false
+            timeTextField.text = ""
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
          
@@ -340,6 +353,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         toolbar.sizeToFit()
         let doneBtn=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action:#selector(donePressed))
         toolbar.setItems(([doneBtn]), animated: true)
+        datePicker.minimumDate = Date()
         dateTextField.inputAccessoryView=toolbar
         dateTextField.inputView=datePicker
         datePicker.datePickerMode = .date
@@ -360,8 +374,19 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         formatter.timeStyle = .none
 //        formatter.times
         var x = datePicker
+        var order = Calendar.current.compare(Date(), to: datePicker.date, toGranularity: .day)
+
+        if order == .orderedSame{
+            timePicker.minimumDate = Date()
+        }
+        else {
+            timePicker.minimumDate = nil
+        }
+        
         dateTextField.text=formatter.string(from: datePicker.date)
+        timeTextField.isEnabled = true
         self.view.endEditing(true)
+        createTimePicker()
     }
     
     
@@ -372,6 +397,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         toolbar.sizeToFit()
         let doneBtn=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action:#selector(doneTimePressed))
         toolbar.setItems(([doneBtn]), animated: true)
+//        if
         timeTextField.inputAccessoryView=toolbar
         timeTextField.inputView=timePicker
         timePicker.datePickerMode = .time

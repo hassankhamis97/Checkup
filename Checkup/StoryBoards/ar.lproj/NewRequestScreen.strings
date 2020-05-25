@@ -1,0 +1,78 @@
+
+/* Class = "UISearchBar"; placeholder = "Enter Test Name "; ObjectID = "2HA-IP-4aR"; */
+"2HA-IP-4aR.placeholder" = "ادخل اسم التحليل ";
+
+/* Class = "UILabel"; text = "Do you want to auto locate your address?"; ObjectID = "3sL-d6-buQ"; */
+"3sL-d6-buQ.text" = "هل تريد ان يتم تحديد موقعك آلياً؟";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "6pK-Ma-HUc"; */
+"6pK-Ma-HUc.placeholder" = "العنوان";
+
+/* Class = "UINavigationItem"; title = "New Request"; ObjectID = "BnS-6m-rmy"; */
+"BnS-6m-rmy.title" = "طلب جديد";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "EzP-E2-tc8"; */
+"EzP-E2-tc8.normalTitle" = "حسناً";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IMf-xd-A3E"; */
+"IMf-xd-A3E.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "LFP-am-qYD"; */
+"LFP-am-qYD.title" = "حفظ";
+
+/* Class = "UITextField"; placeholder = "Floor No"; ObjectID = "LG1-eJ-JeJ"; */
+"LG1-eJ-JeJ.placeholder" = "Floor No";
+
+/* Class = "UIButton"; normalTitle = "Set Manually"; ObjectID = "LVP-TZ-E8r"; */
+"LVP-TZ-E8r.normalTitle" = "Set Manually";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "MiB-Bk-eJV"; */
+"MiB-Bk-eJV.normalTitle" = "Send";
+
+/* Class = "UITextField"; placeholder = "Apartment No"; ObjectID = "NhD-Tq-lfL"; */
+"NhD-Tq-lfL.placeholder" = "Apartment No";
+
+/* Class = "UITextField"; placeholder = "Time"; ObjectID = "QHs-em-mXN"; */
+"QHs-em-mXN.placeholder" = "Time";
+
+/* Class = "UINavigationItem"; title = "Tests Name"; ObjectID = "Ro2-CU-DtV"; */
+"Ro2-CU-DtV.title" = "Tests Name";
+
+/* Class = "UILabel"; text = "this lab support to take sample from home do you need it?"; ObjectID = "Tvb-cG-Djw"; */
+"Tvb-cG-Djw.text" = "this lab support to take sample from home do you need it?";
+
+/* Class = "UILabel"; text = " Please Pin Your Address On The Map"; ObjectID = "Xta-Dm-U3p"; */
+"Xta-Dm-U3p.text" = " Please Pin Your Address On The Map";
+
+/* Class = "UIButton"; normalTitle = "Preview Address"; ObjectID = "YyR-fJ-Cah"; */
+"YyR-fJ-Cah.normalTitle" = "Preview Address";
+
+/* Class = "UITextField"; placeholder = "Buliding/ Vila No"; ObjectID = "aLX-Ww-4Wa"; */
+"aLX-Ww-4Wa.placeholder" = "Buliding/ Vila No";
+
+/* Class = "UILabel"; text = "Auto Locate "; ObjectID = "aSb-Xs-0wr"; */
+"aSb-Xs-0wr.text" = "Auto Locate ";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "bxM-vS-LHv"; */
+"bxM-vS-LHv.placeholder" = "Name";
+
+/* Class = "UITextField"; placeholder = "Date"; ObjectID = "d33-vj-3mb"; */
+"d33-vj-3mb.placeholder" = "Date";
+
+/* Class = "UILabel"; text = "From Home"; ObjectID = "eqY-93-v8e"; */
+"eqY-93-v8e.text" = "From Home";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "f1k-dN-gzH"; */
+"f1k-dN-gzH.placeholder" = "Address";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "l0A-z1-MdV"; */
+"l0A-z1-MdV.normalTitle" = "No";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "uas-Ll-9DO"; */
+"uas-Ll-9DO.placeholder" = "Address";
+
+/* Class = "UIButton"; normalTitle = "Auto Locate"; ObjectID = "wdF-mD-AD2"; */
+"wdF-mD-AD2.normalTitle" = "Auto Locate";
+
+/* Class = "UIButton"; normalTitle = "Tap To Add  Address"; ObjectID = "yTS-CU-hks"; */
+"yTS-CU-hks.normalTitle" = "Tap To Add  Address";

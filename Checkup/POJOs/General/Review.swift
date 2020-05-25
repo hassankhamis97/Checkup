@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Review {
+struct Review : Codable{
     var id: Int64?
 //    var comments: [Comment]?
     var description: String?
