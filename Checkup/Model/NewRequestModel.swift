@@ -50,7 +50,7 @@ class NewRequestModel: INewRequestModel {
                         count += 1
                         if(count == roushettaImages.count){
                             //                    testObj.roushettaPaths = imgPathsArr
-                            self.saveCompleteObj(testObj: testObj, imgPathsArr: imgPathsArr, id: id.key)
+                            self.saveCompleteObj(testObj: testObj, imgPathsArr: imgPathsArr)
                             self.newRequestPresenterRef.onSuccess()
                         }
                     }
@@ -59,16 +59,16 @@ class NewRequestModel: INewRequestModel {
             
         }
         else{
-            saveCompleteObj(testObj: testObj, imgPathsArr: nil, id: id.key)
+            saveCompleteObj(testObj: testObj, imgPathsArr: nil)
         }
     }
-    func saveCompleteObj(testObj: Test, imgPathsArr: [String]?, id: String?) {
+    func saveCompleteObj(testObj: Test, imgPathsArr: [String]?) {
         var testFinObj = testObj
         
         if imgPathsArr != nil {
             testFinObj.roushettaPaths = imgPathsArr
         }
-//        testFinObj.id = id
+        //        testFinObj.id = id
         
         //        ref.child("Tests").child(testFinObj.labId!).child(testFinObj.branchId!).setValue(testFinDic)
         ref.child("GeneratedCode").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -80,41 +80,25 @@ class NewRequestModel: INewRequestModel {
             
             testFinObj.generatedCode = String(code)
             let testFinDic = try! DictionaryEncoder.encode(testFinObj)
-//            self.db?.collection("TestsHassan").document(testFinObj.id!).setData(testFinDic) { err in
-//                if let err = err {
-//                    print("Error writing document: \(err)")
-//                } else {
-//                    print("Document successfully written!")
-//                }
-//            }
-//            let json : String
-//            do{
-//               let jsonEncoder = JSONEncoder()
-//               let jsonData = try jsonEncoder.encode(testFinObj)
-////               let json = String(data: jsonData, encoding: String.Encoding.utf16)
-//
-//            }
-//            catch{
-//                
-//            }
-//            let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewAnalysis"
-let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewAnalysis"
-                        Alamofire.request(urlString, method: .post, parameters: testFinDic,encoding: JSONEncoding.default, headers: nil).responseString {
-                        response in
-                          switch response.result {
-                                        case .success:
-                                            print(response)
-            
-                                            break
-                                        case .failure(let error):
-            
-                                            print(error)
-                                        }
-                        }
-//            self.ref.child("TestsHassan").child(testFinObj.branchId!).child(testFinObj.id!).setValue(testFinDic)
-            self.newRequestPresenterRef.onSuccess()
+            let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewAnalysis"
+            Alamofire.request(urlString, method: .post, parameters: testFinDic,encoding: JSONEncoding.default, headers: nil).responseString {
+                response in
+                switch response.result {
+                case .success:
+                    print(response)
+                    self.newRequestPresenterRef.onSuccess()
+                    
+                    break
+                case .failure(let error):
+                    self.newRequestPresenterRef.onFail(message: error.localizedDescription)
+                    
+                    print(error)
+                }
+            }
+            //            self.ref.child("TestsHassan").child(testFinObj.branchId!).child(testFinObj.id!).setValue(testFinDic)
             // ...
         }) { (error) in
+            self.newRequestPresenterRef.onFail(message: error.localizedDescription)
             print(error.localizedDescription)
         }
     }

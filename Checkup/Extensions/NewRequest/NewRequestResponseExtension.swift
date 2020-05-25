@@ -11,22 +11,29 @@ import UIKit
 extension NewRequestTableViewController : INewRequestView ,IView {
     func updateView() {
 //        Toast.show(message: "request send Successfully", controller: self)
-        showToast(message: "request sent") // change it to view controller success 
+        showToast(message: "request sent") // change it to view controller success
+        Alert.showSimpleAlert(title: "Alert", message: "your request sent successfully", viewRef: self)
         navigationController?.popViewController(animated: true)
     }
     
     func showIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        activityIndicator.show()
+        activityIndicator.alpha = 1
+        saveRequestBtn.alpha = 0
 
     }
     
     func hideIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        activityIndicator.hide()
+        activityIndicator.alpha = 0
+        saveRequestBtn.alpha = 1
 
     }
     
     func errorMessage(msg: String) {
-        Alert.showSimpleAlert(title: "sorry".localized,message: msg, viewRef: self)
+        Alert.showSimpleAlert(title: "sorry",message: msg, viewRef: self)
     }
     
     func checkValidation() -> Bool {
