@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 protocol IEditProfileView :IBase {
     func updatedUser ()
+    func showBtnIndicator()
 }
 protocol IEditProfilePresenter {
     func editUser(user:User,img:UIImage?)
