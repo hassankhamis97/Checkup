@@ -35,15 +35,21 @@ class GetLabsModel: IGetLabsModel {
         
         // for Azab
         var labs = [HomeLab]()
-        Alamofire.request(homeLabsURL).responseJSON { (responseData) -> Void in
-            //        Alamofire.request(homeLabsURL).validate().responseJSON { response in
+//        Alamofire.request(homeLabsURL).responseJSON { (responseData) -> Void in
+          Alamofire.request(homeLabsURL).validate().responseJSON { response in
             
-            let json = JSON(responseData.data)
+            let json = JSON(response.data)
             
             for item in json.arrayValue {
                 var homeLab = HomeLab()
-                homeLab.labName = item["FireBaseId"].stringValue
+                homeLab.idFB = item["idFB"].stringValue
+                homeLab.labPhoto = item["labPhoto"].stringValue
+                homeLab.labName = item["labName"].stringValue
+                homeLab.hotline = item["hotline"].stringValue
+                homeLab.rating = item["rating"].stringValue
+                labs.append(homeLab)
             }
+              self.getLabsPresenterRef?.onSuccess(homeLabs: labs)
         }
         
         //        let lab1 = HomeLab(idFB: "sa504", hotline: "457891264", labPhoto: "mokhtabar", labName: "El-Mokhtabar", rating: "3.6")
@@ -55,7 +61,6 @@ class GetLabsModel: IGetLabsModel {
         //        labs.append(lab3)
         //        labs.append(lab4)
         
-        self.getLabsPresenterRef?.onSuccess(homeLabs: labs)
     }
     
 //    func getFilteredLabs() {

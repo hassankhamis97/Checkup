@@ -20,8 +20,7 @@ class HomeTableViewController: UITableViewController   {
     var labImages = ["mokhtabar" , "alpha" , "borg" ,"mokhtabar" ]
     var labDate = ["21/2/2005" , "1/11/2019" , "5/9/2008" , "8/6/2016"]
     
-    var homeLabArr: [HomeLab]?
-    
+    var homeLabArr = [HomeLab]()
     
     @IBOutlet weak var labCollection: UICollectionView!
     
@@ -49,6 +48,7 @@ class HomeTableViewController: UITableViewController   {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        tabBarItem.badgeValue = "1"
+        
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
         homeLabPresenter.getLabs()
         
