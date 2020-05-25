@@ -167,6 +167,7 @@
 		A3C5F0322472BE8C0069413F /* SignupContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0312472BE8C0069413F /* SignupContract.swift */; };
 		A3C5F0352472C2D60069413F /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0342472C2D60069413F /* SignupPresenter.swift */; };
 		A3C5F0382472C7850069413F /* SignupResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0372472C7850069413F /* SignupResponseExtension.swift */; };
+		BB13259B247BC43000997EF3 /* RequestTStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB13259D247BC43000997EF3 /* RequestTStatus.storyboard */; };
 		BBBB1B502477C9B30013D06F /* CancelRquestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */; };
 		BBBB1B522477CA1A0013D06F /* ICancelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B512477CA1A0013D06F /* ICancelRequest.swift */; };
 		BBBB1B562477CAB90013D06F /* CancelRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B552477CAB90013D06F /* CancelRequestPresenter.swift */; };
@@ -220,7 +221,6 @@
 		CCCDA050246AE5D5005549EA /* PassWordDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCDA04F246AE5D5005549EA /* PassWordDetailsTableViewController.swift */; };
 		CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCDA051246AF81F005549EA /* RequestsTableViewController.swift */; };
 		CCD0BAD7246A035C007CF3EE /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD0BAD6246A035C007CF3EE /* LocationTableViewController.swift */; };
-		CCDEF4712462DCF500ECBBEB /* RequestTStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */; };
 		CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */; };
 		CCDF8BBD24713DE200F56B2D /* ExtensionLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF8BBC24713DE200F56B2D /* ExtensionLocationView.swift */; };
 		CCDF8BBF24713DF900F56B2D /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF8BBE24713DF900F56B2D /* Annotation.swift */; };
@@ -418,6 +418,9 @@
 		A3C5F0312472BE8C0069413F /* SignupContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupContract.swift; sourceTree = "<group>"; };
 		A3C5F0342472C2D60069413F /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		A3C5F0372472C7850069413F /* SignupResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseExtension.swift; sourceTree = "<group>"; };
+		BB13259C247BC43000997EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RequestTStatus.storyboard; sourceTree = "<group>"; };
+		BB13259F247BC44E00997EF3 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RequestTStatus.strings; sourceTree = "<group>"; };
+		BB1325A1247BC46A00997EF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RequestTStatus.strings; sourceTree = "<group>"; };
 		BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelRquestModel.swift; sourceTree = "<group>"; };
 		BBBB1B512477CA1A0013D06F /* ICancelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICancelRequest.swift; sourceTree = "<group>"; };
 		BBBB1B552477CAB90013D06F /* CancelRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelRequestPresenter.swift; sourceTree = "<group>"; };
@@ -471,7 +474,6 @@
 		CCCDA04F246AE5D5005549EA /* PassWordDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassWordDetailsTableViewController.swift; sourceTree = "<group>"; };
 		CCCDA051246AF81F005549EA /* RequestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTableViewController.swift; sourceTree = "<group>"; };
 		CCD0BAD6246A035C007CF3EE /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
-		CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RequestTStatus.storyboard; sourceTree = "<group>"; };
 		CCDEF4732462DE9200ECBBEB /* RequestStatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatusTableViewController.swift; sourceTree = "<group>"; };
 		CCDF8BBC24713DE200F56B2D /* ExtensionLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLocationView.swift; sourceTree = "<group>"; };
 		CCDF8BBE24713DF900F56B2D /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
@@ -852,7 +854,7 @@
 				CCE4D2B12457064600EB8ADC /* Profile.storyboard */,
 				CC7092D82458C131003E8968 /* signUp.storyboard */,
 				CC064E2C245B02D60046E67F /* NewRequestScreen.storyboard */,
-				CCDEF4702462DCF500ECBBEB /* RequestTStatus.storyboard */,
+				BB13259D247BC43000997EF3 /* RequestTStatus.storyboard */,
 				4E45420C2479C54800955FD8 /* Chat.storyboard */,
 				0335FAF7246A08C600CE0863 /* Home.storyboard */,
 				4E4542112479C7F000955FD8 /* Setting.storyboard */,
@@ -1871,7 +1873,7 @@
 				4EDADECA246A1FF20069B0E5 /* RecievedImageTableViewCell.xib in Resources */,
 				4E22F90C243E6E6D0090693C /* LaunchScreen.storyboard in Resources */,
 				4E45420A2479C54800955FD8 /* Chat.storyboard in Resources */,
-				CCDEF4712462DCF500ECBBEB /* RequestTStatus.storyboard in Resources */,
+				BB13259B247BC43000997EF3 /* RequestTStatus.storyboard in Resources */,
 				A33E799D246DC2D5000897A6 /* MapViewTableViewCell.xib in Resources */,
 				A39BF976246DA047003500A8 /* ImgTableViewCell.xib in Resources */,
 				4E22F909243E6E6D0090693C /* Assets.xcassets in Resources */,
@@ -2228,6 +2230,16 @@
 				4E45421D2479CA1400955FD8 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		BB13259D247BC43000997EF3 /* RequestTStatus.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB13259C247BC43000997EF3 /* Base */,
+				BB13259F247BC44E00997EF3 /* ar */,
+				BB1325A1247BC46A00997EF3 /* en */,
+			);
+			name = RequestTStatus.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
