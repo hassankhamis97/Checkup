@@ -28,14 +28,15 @@ class RequestStatusModel : IRequestStatusModel {
     func onRequestStatusRevieved(testId:String ) {
 //        testStatusObj = Test()
     
-                           var testObj = Test()
+                           //var testObj = Test()
                            let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetSpecificTest?testId=\(testId)"
                 //   let params: [String: String] = ["Id": testId]
              
                Alamofire.request(urlString, method: .get,encoding: JSONEncoding.default, headers: nil).responseString {
                                response in
                    
-                   guard let testResponse = response.value else { return }
+                   guard let testResponse = response.value
+                    else { return }
                     print(response)
                    do {
                        let test =  try JSONDecoder().decode(Test.self, from: response.data!)
