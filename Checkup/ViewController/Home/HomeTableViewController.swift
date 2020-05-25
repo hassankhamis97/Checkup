@@ -53,7 +53,7 @@ class HomeTableViewController: UITableViewController   {
 //        tabBarItem.badgeValue = "1"
         
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-        homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
+        homeLabPresenter.getLabs(take: 2, skip: homeLabArr.count)
         
         let layout = UICollectionViewFlowLayout()
                layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
@@ -99,6 +99,9 @@ class HomeTableViewController: UITableViewController   {
         } else {
             searchCellHeight = 70.0
         }
+         searchBar.text = ""
+        searchedHomeLabsArr = []
+        labCollection.reloadData()
         tableView.reloadData()
     }
     
@@ -110,5 +113,6 @@ class HomeTableViewController: UITableViewController   {
             
         }
         navigationController?.pushViewController(labFilter, animated: true)
+       
     }
 }

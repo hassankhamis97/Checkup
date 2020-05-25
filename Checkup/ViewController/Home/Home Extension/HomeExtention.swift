@@ -45,8 +45,11 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         for i in homeLabs{
             self.homeLabArr.append(i)
         }
-        self.showSlider()
-        self.labCollection.reloadData()
+        if homeLabs.count > 0 {
+            self.showSlider()
+            self.labCollection.reloadData()
+        }
+        
     }
     
     func showIndicator() {
@@ -101,6 +104,30 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         navigationController?.pushViewController(labDesc, animated: true)
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)  {
+        
+        if self.homeLabArr.count > 3 {
+            if indexPath.row != 1 {
+                if indexPath.row % 3 == 1 {
+                    print("indexpath: \(indexPath.row)")
+                    
+                }
+            }
+        }
+        
+        
+        
+    }
+    
+    /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+     if indexPath.row == homeLabArr.count - 1 {  //numberofitem count
+     print("reached")
+     let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+     homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
+     }
+     }*/
+    
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
      if collectionView.bounds.maxY >= collectionView.contentSize.height && reach == false {
      
@@ -108,6 +135,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
      let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
      homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
      reach = true
+     
      } else if collectionView.bounds.maxY >= collectionView.contentSize.height && reach == true {
      
      reach = false
@@ -115,16 +143,19 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
      }*/
     
     func showSlider() {
+        var slideShowImgs: [InputSource] = [InputSource]()
+        if homeLabArr.count > 0{
+            for i in homeLabArr {
+                var x = SDWebImageSource(url: URL(string: i.labPhoto ?? "")!)
+                slideShowImgs.append(x)
+//                let ea = [SDWebImageSource(url: URL(string: i.labPhoto ?? "" )!)]
+
+            }
+        }
+        if slideShowImgs.count > 0 {
+            labSlideShow.setImageInputs(slideShowImgs)
+        }
         
-        //        var slideShowImgs: [InputSource] = [InputSource]()
-        //        if homeLabArr.count > 0{
-        //            for i in homeLabArr {
-        //                var im = AlamofireSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")
-        //                slideShowImgs.append(contentsOf: )
-        //            }
-        //        }
-        
-        //        labSlideShow.setImageInputs(slideShowImgs)
         
         labSlideShow.slideshowInterval = 3
         labSlideShow.contentScaleMode = .scaleToFill
