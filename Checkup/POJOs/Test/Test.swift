@@ -8,7 +8,7 @@
 
 import Foundation
 struct Test : Codable{
-    var id : String?
+    var id : Int64?
     var userId: String?
     var testName: [String]?
     var resultFilespaths: [String]?
@@ -26,7 +26,7 @@ struct Test : Codable{
     var address: Address?
     var hba1c: String?
     var status: String?
-    var isNotified: String?
+    var isNotified: Bool?
     var totalCost: String?
     var precautions: String?
     var employeeId: String?

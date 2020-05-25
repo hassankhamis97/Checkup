@@ -53,6 +53,8 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "labCell", for: indexPath) as! SmallDescLabTableViewCell
+        cell.checkedIcon.tag = indexPath.item
+        cell.checkedIcon.addTarget(self, action: #selector(changeSelectorBtn), for: .touchUpInside)
         cell.labName.text = labsList[indexPath.row].name
         cell.checkedIcon.imageView?.contentMode = .scaleToFill
 
@@ -65,21 +67,42 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        labsList[indexPath.row].isChecked = !labsList[indexPath.row].isChecked!
-        if labsList[indexPath.row].isChecked! {
-            testFilter?.labIds?.append(labsList[indexPath.row].id!)
-        }
-        else {
-            for i in 0..<testFilter!.labIds!.count {
-                if labsList[indexPath.row].id! == testFilter!.labIds![i]{
-                testFilter?.labIds?.remove(at: i)
-                    break
-                }
-//                testFilter?.labIds?.remove(i)
-            }
-        }
-        tableViewOutlet.reloadData()
-    }
     
+        changeSelectedLab(index: indexPath.row)
+//        labsList[indexPath.row].isChecked = !labsList[indexPath.row].isChecked!
+//        if labsList[indexPath.row].isChecked! {
+//            testFilter?.labIds?.append(labsList[indexPath.row].id!)
+//        }
+//        else {
+//            for i in 0..<testFilter!.labIds!.count {
+//                if labsList[indexPath.row].id! == testFilter!.labIds![i]{
+//                testFilter?.labIds?.remove(at: i)
+//                    break
+//                }
+////                testFilter?.labIds?.remove(i)
+//            }
+//        }
+//        tableViewOutlet.reloadData()
+    }
+    @objc func changeSelectorBtn(_ sender : UIButton){
+        changeSelectedLab(index: sender.tag)
+
+    
+    }
+    func changeSelectedLab(index: Int) {
+        labsList[index].isChecked = !labsList[index].isChecked!
+                if labsList[index].isChecked! {
+                    testFilter?.labIds?.append(labsList[index].id!)
+                }
+                else {
+                    for i in 0..<testFilter!.labIds!.count {
+                        if labsList[index].id! == testFilter!.labIds![i]{
+                        testFilter?.labIds?.remove(at: i)
+                            break
+                        }
+        //                testFilter?.labIds?.remove(i)
+                    }
+                }
+                tableViewOutlet.reloadData()
+    }
 }
