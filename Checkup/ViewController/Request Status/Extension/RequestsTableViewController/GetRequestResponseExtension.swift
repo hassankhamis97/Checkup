@@ -11,8 +11,12 @@ import UIKit
 extension RequestsTableViewController : IGetRequestsView{
     func showIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        if(requests!.count == 0 || !isBottom)
+        {
+//            isBottom = false
         isWaitingData = true
         tableView.reloadData()
+        }
     }
     
     func hideIndicator() {
@@ -22,14 +26,21 @@ extension RequestsTableViewController : IGetRequestsView{
     }
     
     func errorMessage(msg: String) {
+        if(requests!.count == 0 || !isBottom)
+        {
+            isBottom = false
         self.requests = []
         errorMsg = msg
         skip = 0
-        tableView.reloadData()
+            tableView.reloadData()
+
+        }
+
 
     }
     
     func updateView(requests: [Request]) {
+        isBottom = false
         if skip == 0 {
             self.requests = requests
         }

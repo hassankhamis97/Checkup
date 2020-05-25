@@ -16,6 +16,8 @@ class FilterTestViewController: UIViewController,IView {
     var parentRef : IFilterTest?
     var dateFormatter = DateFormatter()
     var labsList = [FilterLab]()
+    var isWaitingData = false
+    var errorMsg = ""
     @IBOutlet weak var firstDateField: SkyFloatingLabelTextField!
     @IBOutlet weak var secDateField: SkyFloatingLabelTextField!
     var inputDateOne : String!
@@ -41,6 +43,10 @@ class FilterTestViewController: UIViewController,IView {
 //                 datePickerView2.alpha = 0
         datePickerView2.isEnabled = false
          navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Apply", style: .plain, target: self, action: #selector(applyFilter))
+        
+        let backButton = UIBarButtonItem()
+        backButton.title = "cancel filter"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         // Do any additional setup after loading the view.
     }
     

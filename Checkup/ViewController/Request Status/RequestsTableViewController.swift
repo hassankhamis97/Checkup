@@ -26,7 +26,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     var isResult : Bool?
     var testFilterOriginal : TestFilter?
     var testFilter : TestFilter?
-    var take = 10
+    var take = 9
     var skip = 0
     var isFiltered = false
     var requests : [Request]?
@@ -35,6 +35,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     var isWaitingData = false
     var errorMsg = ""
     var viewName : String?
+    
     @IBAction func filterDataBtn(_ sender: UIBarButtonItem) {
         let filterVC = storyboard?.instantiateViewController(withIdentifier: "filterSVC") as! FilterTestViewController
         filterVC.parentRef = self
@@ -63,7 +64,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
                 isResult = true
                 self.navigationItem.title = "Results"
             }
-            
+//                        isFiltered = false
             isOld = false
             skip = 0
 //            var getRequestsPresenter = GetRequestsPresenter(getRequestsViewRef: self)
@@ -80,6 +81,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
         
 
         tabBarController?.tabBar.items?[1].badgeValue = "1"
+//        tabBarController?.repositionBadges(tab: 1)
 //        tabBarController?.tabBar.items?[1].se
 
 //        dateDescingly = formatDate(myArr: labDate)
@@ -90,6 +92,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
         requests = [Request]()
         if(Auth.auth().currentUser?.uid != nil)
         {
+            
             
 //            testFilterOriginal = TestFilter(dateTimeStampFrom: nil, dateTimeStampTo: nil, labIds: nil, userId: Auth.auth().currentUser?.uid, status: [TestType.PendingForLabConfirmation.rawValue,TestType.PendingForTakingTheSample.rawValue,TestType.PendingForResult.rawValue,TestType.Refused.rawValue], take: take, skip: skip)
             
@@ -262,12 +265,12 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
             let height = scrollView.frame.size.height
             let contentYoffset = scrollView.contentOffset.y
             let distanceFromBottom = scrollView.contentSize.height - contentYoffset
-            if isBottom == false && distanceFromBottom < height {
+            if isBottom == false && self.navigationItem.title == viewName && distanceFromBottom < height {
                 isBottom = true
                 sendRequest()
             }
             else if distanceFromBottom > height{
-                isBottom = false
+//                isBottom = false
             }
 
         }
@@ -288,6 +291,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
 //        self.navigationItem.title = viewName! + "(Filtered)"
         self.testFilter = testFilter
         skip = 0
+        requests?.removeAll()
         sendRequest()
     }
 //    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool
@@ -332,4 +336,25 @@ extension UITabBarController {
         }
         return nil
     }
+//
+//    func repositionBadgeLayer(_ badgeView: UIView) {
+//        if NSStringFromClass(badgeView.classForCoder) == "_UIBadgeView" {
+//            badgeView.layer.transform = CATransform3DIdentity
+//            badgeView.layer.transform = CATransform3DMakeTranslation(-17.0, 1.0, 1.0)
+//        }
+//    }
+//
+//    func repositionBadges(tab: Int? = nil) {
+//        if let tabIndex = tab {
+//            for badgeView in self.tabBar.subviews[tabIndex].subviews {
+//                repositionBadgeLayer(badgeView)
+//            }
+//        } else {
+//            for tabBarSubviews in self.tabBar.subviews {
+//                for badgeView in tabBarSubviews.subviews {
+//                    repositionBadgeLayer(badgeView)
+//                }
+//            }
+//        }
+//    }
 }

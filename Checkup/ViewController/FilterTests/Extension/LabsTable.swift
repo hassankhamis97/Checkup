@@ -9,7 +9,45 @@
 import Foundation
 import UIKit
 extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        var numOfSections: Int = 0
+                if(isWaitingData){
+        //            let activityView = UIActivityIndicatorView(style: .whiteLarge)
+        //            activityView.center = self.view.center
+        //            activityView.startAnimating()
+        //
+        //            self.view.addSubview(activityView)
+        //            var activityView = UIActivityIndicatorView(style: .whiteLarge)
+        //            activityView.center = self.view.center
+        //            tableView.addSubview(activityView)
+        //            activityView.startAnimating()
+        //            numOfSections = 0
+                    numOfSections = 0
+        //            tableView.separatorStyle  = .none
+                    tableView.showActivityIndicator()
+                }
+                else{
+                        if labsList.count > 0
+                        {
+        //                    tableView.separatorStyle = .singleLine
+                            numOfSections = 1
+                            tableView.backgroundView = nil
+                        }
+                        else
+                        {
+                            numOfSections = 0
+                            let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+                            noDataLabel.text          = errorMsg
+                //            noDataLabel.textColor     = UIColor.black
+                            noDataLabel.textAlignment = .center
+                            tableView.backgroundView  = noDataLabel
+                            
+                        }
+                }
+                        return numOfSections
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return labsList.count
     }
     
