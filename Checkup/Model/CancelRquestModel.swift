@@ -17,13 +17,19 @@ class CancelRequestModel: ICancelRequestModel{
     
      func cancelTestRequest(testObj:Test)
      {
-        
-      let params : [String : Any] = [ "testId" : testObj.id , "status" : testObj.status ]
+             
+             var test = Test()
+             test = testObj
+             test.status = "Canceled"
+         let testDic = try! DictionaryEncoder.encode(test)
+            
+
+     // let params : [String : Any] = [ "Id" : testObj.id , "status" : "Canceled" ]
         
         let urlString = "http://checkup.somee.com/api/AnalysisService/UpdateAnalysis"
           
         
-        Alamofire.request(urlString, method: .post , parameters: params , encoding: JSONEncoding.default, headers: nil).responseJSON {
+        Alamofire.request(urlString, method: .post , parameters: testDic , encoding: JSONEncoding.default, headers: nil).responseJSON {
                           response in
               switch response.result {
                                  case .success:

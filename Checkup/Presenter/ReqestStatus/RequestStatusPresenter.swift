@@ -26,10 +26,11 @@ class RequestStatusPresenter : IRequestStatusPresenter{
     
     func onRequestReceived(myObj:Test) {
         requestViewRef.onReceiveRequestStatus(myObj: myObj)
+             print("success ......")
     }
     
     func onFail(message: String) {
-        
+        print("faild ......")
     }
     
     

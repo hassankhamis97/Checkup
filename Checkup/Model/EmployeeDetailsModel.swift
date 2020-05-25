@@ -21,18 +21,22 @@ class EmployeeDetailsModel : IEmployeeDetailsModel{
         
         ref.child(EmpId).observe(.value){
                          mahmoudSnapShoot in
-        let values = mahmoudSnapShoot.value as! [String : Any]
+            if let values = mahmoudSnapShoot.value as! [String : Any]?{
             
             var emp = Employee()
-            emp.userName = values["userName"] as! String
-            emp.imagePath = values["imagePath"] as! String
-            emp.phones = values["phones"] as! [String]
+                
+                if let imgPath = values["imagePath"] as! String? , let empPhones = values["phones"] as! [String]? , let empUserName = values["userName"] as! String?{
+                    emp.userName = empUserName
+                     emp.imagePath = imgPath
+                    emp.phones = empPhones
+                }
+           
+            
             self.emplPresenterRef.onEmployeeReceived(employee:emp )
+        }
         }
         
         
-        
     }
-    
     
 }

@@ -11,3 +11,5 @@
 "Ok" = "حسناً";
 "Yes" = "نعم";
 "No" = "لا";
+"please enter at least date range or lab to filter data" = "من فضلك ادخل على الاقل فترة زمنية او اختر معمل"; 
+"please insert another date" = "من فضلك ادخل التاريخ الاخر";

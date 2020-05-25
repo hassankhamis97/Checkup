@@ -49,7 +49,6 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
     
     @IBOutlet weak var precautionsTextArea: UITextView!
     
-    
     @IBOutlet weak var slideShow: ImageSlideshow!
     
     
@@ -65,12 +64,12 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
            {
             let cancelrequestPresenter = CancelRequestPresenter(cancelRequestRef : self)
             
-            var test = Test()
-            test.id = testStatusObj.id
+            //var test = Test()
+           // test.id = testStatusObj.id
        
-            test.status = "Canceled"
+          //  test.status = "Canceled"
             
-            cancelrequestPresenter.cancelRequest(testObj: test)
+            cancelrequestPresenter.cancelRequest(testObj: testStatusObj)
             
            }else {
             
@@ -78,7 +77,9 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
                   let alert = UIAlertController(title: "Confirmation Message", message: "Sorry You can't cancel this request we are about to take your sample now if you insest please call the laboratory ?", preferredStyle: .alert)
 
                 
-
+             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                              print("You choosed NOoOo !")
+                         }))
                   self.present(alert, animated: true)
             
             
@@ -161,7 +162,7 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
                
                self.dateTextArea.text = self.testStatusObj.dateRequest
                                 self.timeTextArea.text = self.testStatusObj.timeRequest
-        guard let locAddress = self.testStatusObj?.address! else{
+        guard let locAddress = self.testStatusObj?.address else{
             return
         }
                                 let location = "\( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
@@ -194,22 +195,47 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
     
     @IBAction func deleteRefusedRequestBtn(_ sender: Any) {
         
-        
-
+              
                 let alert = UIAlertController(title: "Confirmation", message: "Do You Want To Delete This Request ?!", preferredStyle: .alert)
         
         
         
                 self.present(alert, animated: true)
+        
                 alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-                    print("You choosed Yes !")
+                                   print("You choosed Yes !")
+                       
+                                  let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
+                                  
+                                   deleteRequestPresenter.deleteRequest(reqId: self.testStatusObj.id!)
+                               }))
         
-                   let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
         
+               alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
+                    print("You choosed NOoOo !")
                 }))
-                alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
-                          print("You choosed NOoOo !")
-                      }))
+        
+        
+        
+        
+        
+        
+
+//                let alert = UIAlertController(title: "Confirmation", message: "Do You Want To Delete This Request ?!", preferredStyle: .alert)
+//
+//
+//
+//                self.present(alert, animated: true)
+//                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+//                    print("You choosed Yes !")
+//
+//                   let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
+//
+//                    deleteRequestPresenter.deleteRequest(reqId: self.testStatusObj.id!)
+//                }))
+//                alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
+//                          print("You choosed NOoOo !")
+//                      }))
               
         
     }
@@ -248,7 +274,11 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
     
     /************** VIew Did Load  ***********************/
  
+    override func didReceiveMemoryWarning() {
+        print(" *************  Mamory Warning ****** ......")
+    }
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
    
@@ -259,6 +289,7 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
         ///*********************////
                testStatusObj = Test();
                       
+              print( testID!)
                let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
                       requesStatusPresenter.getRequest(testId: testID)
                //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
@@ -574,29 +605,31 @@ extension RequestStatusTableViewController : IRequestStatusView
     
     
     
-    
+    //MARK: OnReiveRequest
     
     func onReceiveRequestStatus(myObj:Test) {
-                print("*************************")
-            
-       
+        print("*************************")
         
-       
-        if myObj.roushettaPaths!.count > 0  {
-          
-            loadImage(imageArray: myObj.roushettaPaths!)
-                imgSlider = 220
+        
+        
+        
+        if let roushetas = myObj.roushettaPaths  {
+            
+            
+            loadImage(imageArray: roushetas)
+            imgSlider = 220
+            
         }
         
-           
-        if  myObj.testName!.count > 0 {
-       
-           testTextArray = myObj.testName!
-
+        
+        if let testNames = myObj.testName {
+            
+            testTextArray = testNames
+            
             testArrTite = 50
             testArrContent = 80
             
-    
+            
         }
            
         
@@ -614,21 +647,16 @@ extension RequestStatusTableViewController : IRequestStatusView
             
                         showCancel = 50
 
-
-//                             testArrTite = 50
-//
-//                             imgSlider = 220
-             self.codeText.text = myObj.generatedCode
-            self.dateTextArea.text = myObj.dateRequest
-                  self.timeTextArea.text = myObj.timeRequest
+             self.codeText.text = myObj.generatedCode!
+            self.dateTextArea.text = myObj.dateRequest!
+                  self.timeTextArea.text = myObj.timeRequest!
             if let location = myObj.address {
                   let location = "\( myObj.address!.buildingNo!)  \(myObj.address!.apartmentNo!)     \(myObj.address!.floorNo!)"
                      
                   self.locationTextArea.text = location
-            }else{
-                print("address not set ....")
-                return
             }
+       
+            
         }
          else
         if myObj.status == "PendingForTakingTheSample"
@@ -642,7 +670,7 @@ extension RequestStatusTableViewController : IRequestStatusView
             self.sampleDate.text = myObj.dateForTakingSample
             self.sampleTime.text = myObj.timeForTakingSample
             self.precautionsText.text = myObj.precautions
-            self.costText.text = "Const : \(myObj.totalCost) L.E"
+            self.costText.text = "Const : \(myObj.totalCost!) L.E"
             
             
         }else if myObj.status == "PendingForResult"
@@ -669,7 +697,7 @@ extension RequestStatusTableViewController : IRequestStatusView
         }
         
         self.tableView.reloadData()
-                      self.collectionView.reloadData()
+        self.collectionView.reloadData()
     }
     
      func loadImage(imageArray:[String]) {

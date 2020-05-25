@@ -20,11 +20,13 @@ class HomeTableViewController: UITableViewController   {
     var labImages = ["mokhtabar" , "alpha" , "borg" ,"mokhtabar" ]
     var labDate = ["21/2/2005" , "1/11/2019" , "5/9/2008" , "8/6/2016"]
     
-    var homeLabArr: [HomeLab]?
+    var homeLabArr = [HomeLab]()
     
+    var searchedHomeLabsArr = [HomeLab]()
     
     @IBOutlet weak var labCollection: UICollectionView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var labSlideShow: ImageSlideshow!
     
@@ -48,9 +50,10 @@ class HomeTableViewController: UITableViewController   {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        tabBarItem.badgeValue = "1"
         
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-        homeLabPresenter.getLabs()
+        homeLabPresenter.getLabs(take: 2, skip: homeLabArr.count)
         
         let layout = UICollectionViewFlowLayout()
                layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
@@ -96,6 +99,9 @@ class HomeTableViewController: UITableViewController   {
         } else {
             searchCellHeight = 70.0
         }
+         searchBar.text = ""
+        searchedHomeLabsArr = []
+        labCollection.reloadData()
         tableView.reloadData()
     }
     
@@ -107,5 +113,6 @@ class HomeTableViewController: UITableViewController   {
             
         }
         navigationController?.pushViewController(labFilter, animated: true)
+       
     }
 }

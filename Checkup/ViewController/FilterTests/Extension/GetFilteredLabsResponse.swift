@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 extension FilterTestViewController : IGetFilteredLabsView{
     func updateView(filterLabs: [FilterLab]) {
         self.labsList = filterLabs
@@ -14,15 +15,19 @@ extension FilterTestViewController : IGetFilteredLabsView{
     }
     
     func showIndicator() {
-        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        isWaitingData = true
+        self.tableViewOutlet.reloadData()
     }
     
     func hideIndicator() {
-        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        isWaitingData = false
     }
     
     func errorMessage(msg: String) {
-        
+        errorMsg = msg
+        self.tableViewOutlet.reloadData()
     }
     
     

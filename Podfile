@@ -25,4 +25,5 @@ target 'Checkup' do
   pod 'SwiftyJSON'
   pod 'Charts'
   pod 'RealmSwift'
+  pod 'ImageSlideshow/SDWebImage'
 end

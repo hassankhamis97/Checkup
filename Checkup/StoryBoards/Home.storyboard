@@ -31,6 +31,9 @@
                                                     <rect key="frame" x="0.0" y="13" width="414" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="8ET-JG-5tI" id="Qcb-DY-zMg"/>
+                                                    </connections>
                                                 </searchBar>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -62,9 +65,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GUX-I2-JLc">
-                                                    <rect key="frame" x="0.0" y="11" width="414" height="468"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GUX-I2-JLc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="cXX-cv-Kdt">
                                                         <size key="itemSize" width="191" height="213"/>
@@ -122,6 +124,12 @@
                                                     </connections>
                                                 </collectionView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="GUX-I2-JLc" secondAttribute="bottom" id="H4w-Od-kwg"/>
+                                                <constraint firstItem="GUX-I2-JLc" firstAttribute="leading" secondItem="LI7-4y-1GQ" secondAttribute="leading" id="NuZ-ZX-f4s"/>
+                                                <constraint firstAttribute="trailing" secondItem="GUX-I2-JLc" secondAttribute="trailing" id="RNt-ZN-AzT"/>
+                                                <constraint firstItem="GUX-I2-JLc" firstAttribute="top" secondItem="LI7-4y-1GQ" secondAttribute="top" id="sJx-Ue-2eI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -149,6 +157,7 @@
                     <connections>
                         <outlet property="labCollection" destination="GUX-I2-JLc" id="rSR-Iq-qem"/>
                         <outlet property="labSlideShow" destination="4ei-gy-2Ti" id="kFg-Sr-TgX"/>
+                        <outlet property="searchBar" destination="DOV-Tm-DrO" id="wER-3Z-glZ"/>
                         <outlet property="searchTVCell" destination="XSp-WQ-819" id="skw-0K-nGC"/>
                     </connections>
                 </tableViewController>
@@ -325,10 +334,10 @@
             </objects>
             <point key="canvasLocation" x="1684.057971014493" y="62.946428571428569"/>
         </scene>
-        <!--HistorySVC-->
+        <!--reqSVC-->
         <scene sceneID="nUZ-j4-POV">
             <objects>
-                <viewControllerPlaceholder storyboardName="History" referencedIdentifier="HistorySVC" id="nxi-HS-LQJ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="RequestTStatus" referencedIdentifier="reqSVC" id="nxi-HS-LQJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Va2-vz-I3j"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDE-03-IkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
