@@ -14,7 +14,6 @@ import Firebase
 class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var emailTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var birthDateTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var genderTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var mobileTextField: SkyFloatingLabelTextFieldWithIcon!
@@ -38,7 +37,8 @@ class ProfileTableViewController: UITableViewController {
         
                profilePresenterRef.getUser(userId: userId!)
         
-                
+        userName.sizeToFit()
+        
     }
     
     
@@ -46,7 +46,6 @@ class ProfileTableViewController: UITableViewController {
         
         
         userName.text=user.name
-        emailTextField.text=user.email
         birthDateTextField.text=user.birthdate
         birthDateTextField.text=user.birthdate
         genderTextField.text=user.gender

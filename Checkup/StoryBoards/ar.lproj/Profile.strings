@@ -1,0 +1,90 @@
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "1go-CU-LlM"; */
+"1go-CU-LlM.placeholder" = "العنوان";
+
+/* Class = "UITextField"; placeholder = "Insurance"; ObjectID = "5NW-nF-FX8"; */
+"5NW-nF-FX8.placeholder" = "التأمين/النقابه";
+
+/* Class = "UITextField"; placeholder = "Mobile phone"; ObjectID = "7QX-vt-fPe"; */
+"7QX-vt-fPe.placeholder" = "رقم الهاتف الجوال";
+
+/* Class = "UIButton"; normalTitle = "Preview Address"; ObjectID = "7i7-Fg-kAR"; */
+"7i7-Fg-kAR.normalTitle" = "عرض العنوان";
+
+/* Class = "UILabel"; text = "Auto Locate "; ObjectID = "8eb-Xy-bYt"; */
+"8eb-Xy-bYt.text" = "Auto Locate ";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "9f9-mV-Imn"; */
+"9f9-mV-Imn.normalTitle" = "حفظ";
+
+/* Class = "UIButton"; normalTitle = "Edit Address"; ObjectID = "AQi-je-7g7"; */
+"AQi-je-7g7.normalTitle" = "تعديل العنوان";
+
+/* Class = "UITextField"; placeholder = "Apartment No"; ObjectID = "BwL-im-a4F"; */
+"BwL-im-a4F.placeholder" = "رقم الشقة";
+
+/* Class = "UITextField"; placeholder = "Gender"; ObjectID = "G2N-AE-I6y"; */
+"G2N-AE-I6y.placeholder" = "ذكر/انثى";
+
+/* Class = "UITextField"; placeholder = "Birth date"; ObjectID = "JBZ-5C-0og"; */
+"JBZ-5C-0og.placeholder" = "تاريخ الميلاد";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "JDV-L7-FSG"; */
+"JDV-L7-FSG.placeholder" = "الأسم";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "MMg-LN-gLO"; */
+"MMg-LN-gLO.placeholder" = "العنوان";
+
+/* Class = "UITextField"; placeholder = "Birth date"; ObjectID = "NDJ-sd-WyA"; */
+"NDJ-sd-WyA.placeholder" = "تاريخ الميلاد";
+
+/* Class = "UITextField"; placeholder = "Floor No"; ObjectID = "PeN-gz-Eo7"; */
+"PeN-gz-Eo7.placeholder" = "رقم الطابق";
+
+/* Class = "UIButton"; normalTitle = "Save Location"; ObjectID = "Rlq-49-Zsp"; */
+"Rlq-49-Zsp.normalTitle" = "Save Location";
+
+/* Class = "UIButton"; normalTitle = "Change picture"; ObjectID = "RuA-xX-u8C"; */
+"RuA-xX-u8C.normalTitle" = "تغيير الصورة الشخصية";
+
+/* Class = "UITextField"; placeholder = "Mobile phone"; ObjectID = "UDR-Pd-3bH"; */
+"UDR-Pd-3bH.placeholder" = "رقم الهاتف الجوال";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "Ua2-9b-yK4"; */
+"Ua2-9b-yK4.placeholder" = "العنوان";
+
+/* Class = "UITextField"; placeholder = "Land phone"; ObjectID = "Xxp-lU-BCl"; */
+"Xxp-lU-BCl.placeholder" = "رقم التليفون الأرضي";
+
+/* Class = "UILabel"; text = "Ahmed Ali"; ObjectID = "aog-6W-f6c"; */
+"aog-6W-f6c.text" = "Ahmed Ali";
+
+/* Class = "UILabel"; text = "Do you want to auto locate your address?"; ObjectID = "cfQ-HQ-O1O"; */
+"cfQ-HQ-O1O.text" = "Do you want to auto locate your address?";
+
+/* Class = "UIButton"; normalTitle = "Set Manually"; ObjectID = "f1q-zY-NP2"; */
+"f1q-zY-NP2.normalTitle" = "Set Manually";
+
+/* Class = "UITextField"; placeholder = "Gender"; ObjectID = "hSz-Po-d3R"; */
+"hSz-Po-d3R.placeholder" = "ذكر/انثى";
+
+/* Class = "UITextField"; placeholder = "Insurance"; ObjectID = "i5L-me-qD1"; */
+"i5L-me-qD1.placeholder" = "التأمين/النقابه";
+
+/* Class = "UILabel"; text = " Please Pin Your Address On The Map"; ObjectID = "jnj-YR-DMQ"; */
+"jnj-YR-DMQ.text" = " Please Pin Your Address On The Map";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "kCl-qh-Ni2"; */
+"kCl-qh-Ni2.title" = "الصفحة الشخصيه";
+
+/* Class = "UITextField"; placeholder = "Land phone"; ObjectID = "mvy-vg-JjG"; */
+"mvy-vg-JjG.placeholder" = "رقم الهاتف الارضي";
+
+/* Class = "UITextField"; placeholder = "Buliding/ Vila No"; ObjectID = "oQo-lU-xV3"; */
+"oQo-lU-xV3.placeholder" = "Buliding/ Vila No";
+
+/* Class = "UILabel"; text = "Profile Strength"; ObjectID = "vgP-rk-zD5"; */
+"vgP-rk-zD5.text" = "قوة الصفحة الشخصية";
+
+/* Class = "UIButton"; normalTitle = "Auto Locate"; ObjectID = "zrC-2H-1NK"; */
+"zrC-2H-1NK.normalTitle" = "Auto Locate";

@@ -41,10 +41,7 @@ extension ProfileTableViewController:IProfileView,IView{
             
         }
         
-        if( emailTextField.text != ""){
-            
-            counter += 1
-        }
+     
         
         if( birthDateTextField.text != ""){
                    
@@ -96,13 +93,13 @@ extension ProfileTableViewController:IProfileView,IView{
         
       
         
-        if (counter>5 && counter<8){
+        if (counter>5 && counter<7){
             
-            profileStrengthProgressBar.progress=0.8
+            profileStrengthProgressBar.progress=0.9
             profileStrengthProgressBar.tintColor=UIColor.systemGreen
         }
         
-        if (counter==8){
+        if (counter==7){
             
             profileStrengthProgressBar.progress = 1.0
             profileStrengthProgressBar.tintColor=UIColor.systemGreen

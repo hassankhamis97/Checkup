@@ -8,7 +8,13 @@
 
 import Foundation
 import UIKit
-extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileView{
+extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileView,IView{
+    func showBtnIndicator() {
+          saveBtnOutlet.alpha = 0
+           activityIndicator.alpha=1
+           activityIndicator.show()
+    }
+    
     func renderProfileView(user: User) {
         self.user=user
         reloadData()
@@ -24,10 +30,7 @@ extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileV
     
     func showIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-         saveBtnOutlet.alpha = 0
-        activityIndicator.alpha=1
-        activityIndicator.show()
-                
+       
     }
     
     func hideIndicator() {
@@ -36,7 +39,7 @@ extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileV
     }
     
     func errorMessage(msg: String) {
-        print("")
+           Alert.showSimpleAlert(title: "sorry",message: msg, viewRef: self)
     }
     
     
