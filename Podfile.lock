@@ -353,6 +353,9 @@ PODS:
   - ImageSlideshow (1.8.3):
     - ImageSlideshow/Core (= 1.8.3)
   - ImageSlideshow/Core (1.8.3)
+  - ImageSlideshow/SDWebImage (1.8.3):
+    - ImageSlideshow/Core
+    - SDWebImage (>= 3.7)
   - leveldb-library (1.22)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
@@ -387,6 +390,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - ImageSlideshow
+  - ImageSlideshow/SDWebImage
   - OpalImagePicker
   - ReachabilitySwift
   - RealmSwift
@@ -476,6 +480,6 @@ SPEC CHECKSUMS:
   TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: a79c379e4dbd76cf385ed326709a1067a0afcecf
+PODFILE CHECKSUM: 9795f6a816fbcef215dd0e22b2c7e332960544fb
 
 COCOAPODS: 1.8.4

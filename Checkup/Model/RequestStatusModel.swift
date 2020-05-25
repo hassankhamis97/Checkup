@@ -42,8 +42,9 @@ class RequestStatusModel : IRequestStatusModel {
                        let test =  try JSONDecoder().decode(Test.self, from: response.data!)
                        print(test)
                      self.requestStatusPresenter.onRequestReceived(myObj:test)
-                   }catch{
+                   }catch let error{
                        
+                    print(error)
                    }
                    
                    

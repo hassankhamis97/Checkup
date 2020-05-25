@@ -10,6 +10,7 @@ import UIKit
 
 class SeventhStaticTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labAvailableOutelt: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

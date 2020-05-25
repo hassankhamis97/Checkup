@@ -66,7 +66,7 @@ open class FullScreenSlideshowViewController: UIViewController {
         slideshow.backgroundColor = backgroundColor
 
         if let inputs = inputs {
-            slideshow.setImageInputs(inputs as! [UIImage] as! [InputSource])
+            slideshow.setImageInputs(inputs)
         }
 
         view.addSubview(slideshow)
