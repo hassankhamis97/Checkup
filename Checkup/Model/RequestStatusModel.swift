@@ -44,6 +44,7 @@ class RequestStatusModel : IRequestStatusModel {
                      self.requestStatusPresenter.onRequestReceived(myObj:test)
                    }catch{
                        
+                    print(error)
                    }
                    
                    

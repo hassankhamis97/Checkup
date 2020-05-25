@@ -580,30 +580,31 @@ extension RequestStatusTableViewController : IRequestStatusView
     
     
     
-    
+    //MARK: OnReiveRequest
     
     func onReceiveRequestStatus(myObj:Test) {
-                print("*************************")
-            
-       
+        print("*************************")
         
-       
+        
+        
+        
         if let roushetas = myObj.roushettaPaths  {
-          
+            
             
             loadImage(imageArray: roushetas)
-                imgSlider = 220
+            imgSlider = 220
+            
         }
         
-           
+        
         if let testNames = myObj.testName {
-       
-           testTextArray = testNames
-
+            
+            testTextArray = testNames
+            
             testArrTite = 50
             testArrContent = 80
-         
-    
+            
+            
         }
            
         
