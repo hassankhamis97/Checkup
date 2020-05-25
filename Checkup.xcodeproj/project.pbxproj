@@ -146,7 +146,6 @@
 		4EFA6ECF2473D58100D83F32 /* TestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFA6ECE2473D58100D83F32 /* TestType.swift */; };
 		4EFA6ED32474195400D83F32 /* FilterTestContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFA6ED22474195400D83F32 /* FilterTestContract.swift */; };
 		4EFA6ED6247429FD00D83F32 /* CheckLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFA6ED5247429FC00D83F32 /* CheckLocation.swift */; };
-		A302CC282471A11300C6323F /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302CC272471A11300C6323F /* ToastView.swift */; };
 		A33CA624246D3AEE0014CF6B /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33CA623246D3AEE0014CF6B /* Employee.storyboard */; };
 		A33CA627246D3E0D0014CF6B /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33CA626246D3E0D0014CF6B /* UsersTableViewController.swift */; };
 		A33CA62B246D3F610014CF6B /* UserCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33CA629246D3F610014CF6B /* UserCustomTableViewCell.swift */; };
@@ -397,7 +396,6 @@
 		4EFA6ECE2473D58100D83F32 /* TestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestType.swift; sourceTree = "<group>"; };
 		4EFA6ED22474195400D83F32 /* FilterTestContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTestContract.swift; sourceTree = "<group>"; };
 		4EFA6ED5247429FC00D83F32 /* CheckLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLocation.swift; sourceTree = "<group>"; };
-		A302CC272471A11300C6323F /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		A33CA623246D3AEE0014CF6B /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
 		A33CA626246D3E0D0014CF6B /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		A33CA629246D3F610014CF6B /* UserCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -802,7 +800,6 @@
 			children = (
 				4E4542152479C98500955FD8 /* Languages */,
 				4EF2BA6424733C7E00602123 /* Enum */,
-				A302CC262471A07B00C6323F /* ToastView */,
 				4E206DEF246EF1D7007C401D /* CustomObjectsFireBase */,
 				4ECE5C49246E894E00932947 /* Model */,
 				4ECE5C48246E893D00932947 /* Presenter */,
@@ -1406,14 +1403,6 @@
 				4E128756247474AA00A57F25 /* GetAddressContract.swift */,
 			);
 			path = Map;
-			sourceTree = "<group>";
-		};
-		A302CC262471A07B00C6323F /* ToastView */ = {
-			isa = PBXGroup;
-			children = (
-				A302CC272471A11300C6323F /* ToastView.swift */,
-			);
-			path = ToastView;
 			sourceTree = "<group>";
 		};
 		A33CA625246D3D490014CF6B /* Employee */ = {
@@ -2129,7 +2118,6 @@
 				BBBB1B562477CAB90013D06F /* CancelRequestPresenter.swift in Sources */,
 				BBBB1B6024782D3B0013D06F /* DeleteRequestModel.swift in Sources */,
 				BBBB1B502477C9B30013D06F /* CancelRquestModel.swift in Sources */,
-				A302CC282471A11300C6323F /* ToastView.swift in Sources */,
 				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
 				4EF2BA6724733C9F00602123 /* FilterStatus.swift in Sources */,
 				4E128757247474AA00A57F25 /* GetAddressContract.swift in Sources */,

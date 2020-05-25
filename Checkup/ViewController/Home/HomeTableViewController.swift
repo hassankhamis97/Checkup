@@ -22,8 +22,11 @@ class HomeTableViewController: UITableViewController   {
     
     var homeLabArr = [HomeLab]()
     
+    var searchedHomeLabsArr = [HomeLab]()
+    
     @IBOutlet weak var labCollection: UICollectionView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var labSlideShow: ImageSlideshow!
     
@@ -50,7 +53,7 @@ class HomeTableViewController: UITableViewController   {
 //        tabBarItem.badgeValue = "1"
         
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-        homeLabPresenter.getLabs()
+        homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
         
         let layout = UICollectionViewFlowLayout()
                layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
