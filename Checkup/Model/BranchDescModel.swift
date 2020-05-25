@@ -31,8 +31,8 @@ class BranchDescModel : IBranchDescModel {
                     print(brachDescObj)
                     print("aya")
                     self.newBranchPresenter.onSuccess(branchDescObj: brachDescObj)
-                }catch{
-                    
+                }catch let error{
+                    print(error)
                 }
             }
           
