@@ -11,7 +11,7 @@ import MapKit
 class NinthStaticTableViewCell: UITableViewCell {
     var latitude : CLLocationDegrees?
     var longitude : CLLocationDegrees?
-    
+    var name : String?
     
     @IBAction func showDirection(_ sender: UIButton) {
         sender.pulsate()
@@ -25,7 +25,7 @@ class NinthStaticTableViewCell: UITableViewCell {
         let options = [MKLaunchOptionsMapCenterKey : NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey : NSValue(mkCoordinateSpan: regionSpan.span)]
         let placeMark = MKPlacemark(coordinate: coordinates)
         let mapItem = MKMapItem(placemark: placeMark)
-        mapItem.name = "El-Mokhtabar"
+        mapItem.name = name
         
         mapItem.openInMaps(launchOptions: options)
     }
