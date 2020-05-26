@@ -166,6 +166,7 @@ class RequestStatusTableViewController: UITableViewController  {
         self.dateTextArea.text = self.testStatusObj.dateRequest
         self.timeTextArea.text = self.testStatusObj.timeRequest
         guard let locAddress = self.testStatusObj?.address else{
+              tableView.reloadData()
             return
         }
         let location = "\( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
@@ -309,8 +310,7 @@ class RequestStatusTableViewController: UITableViewController  {
         locationTextArea.title = "STATUS_LOCATION".localized
         timeTextArea.title = "STATUS_TIME".localized
         dateTextArea.title = "STATUS_DATE".localized
-        
-        precautionsTextArea.layer.borderWidth=2
+         precautionsTextArea.layer.borderWidth=2
         precautionsTextArea.layer.cornerRadius=10
         precautionsTextArea.layer.borderColor=UIColor.darkGray.cgColor
         
