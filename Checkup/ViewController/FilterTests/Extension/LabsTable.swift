@@ -87,6 +87,7 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
         //        tableViewOutlet.reloadData()
     }
     @objc func changeSelectorBtn(_ sender : UIButton){
+        sender.pulsate()
         changeSelectedLab(index: sender.tag)
         
         

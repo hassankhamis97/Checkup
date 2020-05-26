@@ -518,9 +518,8 @@
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ldJ-Qp-CB5">
                                                     <rect key="frame" x="197" y="22" width="20" height="20"/>
                                                 </activityIndicatorView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="process may take some times depend on your internet due to images you upload " textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KH5-Lg-Dnn">
-                                                    <rect key="frame" x="57" y="68" width="620" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="process may take some time due to image" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KH5-Lg-Dnn">
+                                                    <rect key="frame" x="46" y="63" width="322" height="26"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -528,10 +527,13 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="KH5-Lg-Dnn" firstAttribute="bottom" secondItem="gY9-vu-jrF" secondAttribute="bottomMargin" id="8cE-EH-u54"/>
                                                 <constraint firstItem="MiB-Bk-eJV" firstAttribute="top" secondItem="gY9-vu-jrF" secondAttribute="topMargin" id="BDz-hw-BkE"/>
                                                 <constraint firstItem="MiB-Bk-eJV" firstAttribute="centerX" secondItem="gY9-vu-jrF" secondAttribute="centerX" id="Czj-aZ-qNO"/>
                                                 <constraint firstItem="ldJ-Qp-CB5" firstAttribute="top" secondItem="gY9-vu-jrF" secondAttribute="topMargin" constant="11" id="GFN-ir-ugf"/>
+                                                <constraint firstItem="KH5-Lg-Dnn" firstAttribute="centerX" secondItem="gY9-vu-jrF" secondAttribute="centerX" id="Iq4-kR-31t"/>
                                                 <constraint firstItem="ldJ-Qp-CB5" firstAttribute="centerX" secondItem="gY9-vu-jrF" secondAttribute="centerX" id="iK1-h5-KsJ"/>
+                                                <constraint firstItem="KH5-Lg-Dnn" firstAttribute="top" secondItem="MiB-Bk-eJV" secondAttribute="bottom" constant="10" id="tuE-vt-NUZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -550,6 +552,7 @@
                         <outlet property="dateTextField" destination="d33-vj-3mb" id="APO-Q1-gcw"/>
                         <outlet property="deleteImageBtn" destination="Eh2-Lb-Neq" id="vaK-34-90J"/>
                         <outlet property="enterTestTextField" destination="bxM-vS-LHv" id="Iky-ic-XVd"/>
+                        <outlet property="loadingImagesMessages" destination="KH5-Lg-Dnn" id="wow-Dl-mp5"/>
                         <outlet property="myCell" destination="LGb-ZR-TNx" id="A48-RP-QAx"/>
                         <outlet property="saveRequestBtn" destination="MiB-Bk-eJV" id="Ho9-Wt-QfO"/>
                         <outlet property="slideShow" destination="Gfu-cd-HvS" id="zIN-rd-MW5"/>
