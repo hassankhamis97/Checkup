@@ -23,6 +23,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet var loadingImagesMessages: UILabel!
     
     @IBOutlet weak var dateTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var timeTextField: SkyFloatingLabelTextFieldWithIcon!

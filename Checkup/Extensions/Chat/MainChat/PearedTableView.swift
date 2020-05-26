@@ -28,14 +28,14 @@ extension MainChatViewController : UITableViewDataSource,UITableViewDelegate {
         cell.lastMessageTime.text = getDateFromTimeStamp(timeStamp: Int64(viewPearedArr[indexPath.row].lastMessageTime!) as! Int64)
         
         
-        /*if(viewPearedArr[indexPath.row].noOfUnReadMessages == "0")
+        if(viewPearedArr[indexPath.row].noOfUnReadMessages == "0")
         {
             cell.noOfUnReadMessages.alpha = 0
         }else
         {
             cell.noOfUnReadMessages.text = viewPearedArr[indexPath.row].noOfUnReadMessages!
 
-        }*/
+        }
         
         return cell
     }

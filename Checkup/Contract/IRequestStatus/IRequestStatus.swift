@@ -9,6 +9,7 @@
 import Foundation
 protocol IRequestStatusView  {
     func onReceiveRequestStatus(myObj:Test)
+    func onConnectionFaile()
 }
 protocol IRequestStatusPresenter {
     func getRequest(testId:String )
