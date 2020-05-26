@@ -53,7 +53,7 @@ class HomeTableViewController: UITableViewController   {
 //        tabBarItem.badgeValue = "1"
         
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-        homeLabPresenter.getLabs(take: 2, skip: homeLabArr.count)
+        homeLabPresenter.getLabs(take: 4, skip: homeLabArr.count)
         
         let layout = UICollectionViewFlowLayout()
                layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)

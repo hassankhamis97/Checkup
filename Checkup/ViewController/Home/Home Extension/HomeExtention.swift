@@ -33,13 +33,6 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         //        self.tableView.reloadData()
     }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text=""
-        //        searching = false
-        //        tableView.reloadData()
-        
-    }
-    
     
     func getLabsForRender(homeLabs: [HomeLab]) {
         for i in homeLabs{
@@ -105,42 +98,53 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)  {
-        
-        if self.homeLabArr.count > 3 {
-            if indexPath.row != 1 {
-                if indexPath.row % 3 == 1 {
-                    print("indexpath: \(indexPath.row)")
-                    
-                }
-            }
+   
+
+    /*override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetY = scrollView.contentOffset.y
+        if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20 /* Needed offset */ {
+            guard !self.reach else { return }
+            self.reach = true
+            // load more data
+            // than set self.isLoading to false when new data is loaded
+            print("reached")
+//            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+//            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
+
         }
-        
-        
-        
+    }*/
+    
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == homeLabArr.count - 1 {  //numberofitem count
+            print("reached")
+            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
+        }
     }
     
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-     if indexPath.row == homeLabArr.count - 1 {  //numberofitem count
-     print("reached")
-     let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-     homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
-     }
-     }*/
+         if (indexPath.row == homeLabArr.count - 1 ) { //it's your last cell
+           //Load more data & reload your collection view
+            print("reached")
+            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+            homeLabPresenter.getLabs(take: 3, skip: homeLabArr.count)
+         }
+    }*/
     
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-     if collectionView.bounds.maxY >= collectionView.contentSize.height && reach == false {
-     
-     print("reached")
-     let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-     homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
-     reach = true
-     
-     } else if collectionView.bounds.maxY >= collectionView.contentSize.height && reach == true {
-     
-     reach = false
-     }
-     }*/
+        if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == false {
+            
+            print("reached")
+            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
+            reach = true
+            
+        } else if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == true {
+            
+            reach = false
+        }
+    }*/
     
     func showSlider() {
         var slideShowImgs: [InputSource] = [InputSource]()
@@ -148,8 +152,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             for i in homeLabArr {
                 var x = SDWebImageSource(url: URL(string: i.labPhoto ?? "")!)
                 slideShowImgs.append(x)
-//                let ea = [SDWebImageSource(url: URL(string: i.labPhoto ?? "" )!)]
-
+                
             }
         }
         if slideShowImgs.count > 0 {
