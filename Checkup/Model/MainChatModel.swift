@@ -33,7 +33,7 @@ class MainChatModel : IMainChatModel{
                         print(doc.data())
                     print(doc.data()["lastMessage"]!)
                     self.pearedObj.lastMessage = doc.data()["lastMessage"] as? String
-                    self.pearedObj.noOfUnReadMessages = doc.data()["noOfUnReadMessage"] as? String
+                    self.pearedObj.noOfUnReadMessages = String(doc.data()["noOfUnReadMessage"] as! Int)
                     self.pearedObj.lastMessageTime = doc.data()["lastMsgTimeStamp"] as? String
                     self.pearedObj.idPearedUser = doc.data()["senderId"] as? String
                 
