@@ -115,13 +115,13 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     }*/
     
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row == homeLabArr.count - 1 {  //numberofitem count
             print("reached")
             let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
             homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
         }
-    }
+    }*/
     
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
          if (indexPath.row == homeLabArr.count - 1 ) { //it's your last cell
@@ -132,7 +132,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
          }
     }*/
     
-    /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == false {
             
             print("reached")
@@ -144,7 +144,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             
             reach = false
         }
-    }*/
+    }
     
     func showSlider() {
         var slideShowImgs: [InputSource] = [InputSource]()
