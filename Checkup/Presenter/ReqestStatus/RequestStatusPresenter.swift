@@ -7,7 +7,18 @@
 //
 
 import Foundation
-class RequestStatusPresenter : IRequestStatusPresenter{
+class RequestStatusPresenter : IRequestStatusPresenter , ICheckConnection{
+    
+    var id : String?
+    func onSucessfullyConnected() {
+      var requestStatusModel = RequestStatusModel(requestPresenterRef : self)
+            requestStatusModel.onRequestStatusRevieved(testId:id!)
+    }
+    
+    func onFailConnected() {
+      
+    }
+    
    
 
       
@@ -18,10 +29,8 @@ class RequestStatusPresenter : IRequestStatusPresenter{
       }
 
     func getRequest(testId:String) {
-        
-           var requestStatusModel = RequestStatusModel(requestPresenterRef : self)
-        requestStatusModel.onRequestStatusRevieved(testId:testId)
-        
+        self.id = testId
+          var check = InternetConnection.checkInternetConnection(iCheckConnection: self)
     }
     
     func onRequestReceived(myObj:Test) {

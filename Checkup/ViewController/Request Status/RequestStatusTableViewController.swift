@@ -359,20 +359,24 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
                }
         
         if indexPath.row==14{
+
+                        return 0
+                    }
+        if indexPath.row==15{
             return 30
         }
         
        //
         if (x==0){
             
-            if (indexPath.row==0 || indexPath.row == 1 || indexPath.row==2 || indexPath.row==3 || indexPath.row==4 || indexPath.row==5 || indexPath.row==6 ||    indexPath.row==7  || indexPath.row==8  || indexPath.row==9  || indexPath.row==10  || indexPath.row==11 ||  indexPath.row==12  || indexPath.row==13 || indexPath.row==14){
+            if (indexPath.row==0 || indexPath.row == 1 || indexPath.row==2 || indexPath.row==3 || indexPath.row==4 || indexPath.row==5 || indexPath.row==6 ||    indexPath.row==7  || indexPath.row==8  || indexPath.row==9  || indexPath.row==10  || indexPath.row==11 ||  indexPath.row==12  || indexPath.row==13 || indexPath.row==15){
                              return 0
                          }
                   
                   
-//                  if indexPath.row==6{
-//                      return 220
-//                  }
+                  if indexPath.row==14{
+                      return 200
+                  }
 //
 //                  if indexPath.row==7{
 //                             return 50
@@ -603,7 +607,11 @@ extension RequestStatusTableViewController : IRequestStatusView
     }
     
     
-    
+    //MARK: onConnctionFails
+    func onConnectionFaile()
+    {
+        self.x = 0
+    }
     
     //MARK: OnReiveRequest
     
@@ -613,7 +621,7 @@ extension RequestStatusTableViewController : IRequestStatusView
         
         
         
-        if let roushetas = myObj.roushettaPaths  {
+        if let roushetas = myObj.roushettaPaths , myObj.roushettaPaths!.count>0 {
             
             
             loadImage(imageArray: roushetas)
@@ -622,7 +630,7 @@ extension RequestStatusTableViewController : IRequestStatusView
         }
         
         
-        if let testNames = myObj.testName {
+        if let testNames = myObj.testName ,  myObj.testName!.count>0  {
             
             testTextArray = testNames
             
