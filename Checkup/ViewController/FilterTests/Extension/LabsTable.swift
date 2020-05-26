@@ -69,8 +69,9 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentCell = tableView.cellForRow(at: indexPath) as! SmallDescLabTableViewCell
         
-        changeSelectedLab(index: indexPath.row)
+        changeSelectedLab(index: indexPath.row, sender: currentCell.checkedIcon)
         //        labsList[indexPath.row].isChecked = !labsList[indexPath.row].isChecked!
         //        if labsList[indexPath.row].isChecked! {
         //            testFilter?.labIds?.append(labsList[indexPath.row].id!)
@@ -87,25 +88,31 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
         //        tableViewOutlet.reloadData()
     }
     @objc func changeSelectorBtn(_ sender : UIButton){
-        sender.pulsate()
-        changeSelectedLab(index: sender.tag)
+        
+        changeSelectedLab(index: sender.tag,sender: sender)
+        
+        
+//        labsList[sender.tag].isChecked = !labsList[sender.tag].isChecked!
         
         
     }
-    func changeSelectedLab(index: Int) {
+    func changeSelectedLab(index: Int, sender: UIButton) {
+        sender.pulsate()
         labsList[index].isChecked = !labsList[index].isChecked!
         if labsList[index].isChecked! {
             testFilter?.labIds?.append(labsList[index].id!)
+            sender.setImage(UIImage(named: "checked"), for: .normal)
         }
         else {
             for i in 0..<testFilter!.labIds!.count {
                 if labsList[index].id! == testFilter!.labIds![i]{
                     testFilter?.labIds?.remove(at: i)
+                    sender.setImage(UIImage(named: "unchecked"), for: .normal)
                     break
                 }
                 //                testFilter?.labIds?.remove(i)
             }
         }
-        tableViewOutlet.reloadData()
+//        tableViewOutlet.reloadData()
     }
 }
