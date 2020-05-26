@@ -108,6 +108,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
           let ningthCell = tableView.dequeueReusableCell(withIdentifier: "ningthCell", for: indexPath) as! NinthStaticTableViewCell
         ningthCell.latitude = branchDescriptionView.address!.latitude
         ningthCell.longitude = branchDescriptionView.address!.longitude
+        ningthCell.name = branchDescriptionView.labName!
           return ningthCell
        }
    }
