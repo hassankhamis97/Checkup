@@ -11,7 +11,7 @@ import  ImageSlideshow
 import StepIndicator
 import SDWebImage
 import SkyFloatingLabelTextField
-class RequestStatusTableViewController: UITableViewController , IViewAdvancedAlert {
+class RequestStatusTableViewController: UITableViewController  {
     var stepIndecatorShow : CGFloat = 100;
     @IBOutlet weak var precautionsText: UITextView!
      var testID :String!
@@ -21,6 +21,7 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
     var testArrContent : CGFloat = 0
     var showCancel : CGFloat = 0
     var showDetailsPage = false ;
+    var alertStatus : Int8 = 0 ;
    
     @IBOutlet weak var costText: UILabel!
    
@@ -55,45 +56,47 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    /// ***********   Cancel Request Btn ********* //
-    func pressOk() {
-           print("You choosed Yes !")
-            
-            var fullDateTimeString = ("\(self.testStatusObj.dateForTakingSample!) \(self.testStatusObj.timeForTakingSample!)")
-           if self.canCancelRequest(requestDateTime:fullDateTimeString)
-           {
-            let cancelrequestPresenter = CancelRequestPresenter(cancelRequestRef : self)
-            
-            //var test = Test()
-           // test.id = testStatusObj.id
-       
-          //  test.status = "Canceled"
-            
-            cancelrequestPresenter.cancelRequest(testObj: testStatusObj)
-            
-           }else {
-            
-            
-                  let alert = UIAlertController(title: "Confirmation Message", message: "Sorry You can't cancel this request we are about to take your sample now if you insest please call the laboratory ?", preferredStyle: .alert)
-
-                
-             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
-                              print("You choosed NOoOo !")
-                         }))
-                  self.present(alert, animated: true)
-            
-            
-        }
-       }
-       
-       func pressCancel() {
-                      
-        print("You choosed NOoOo !")
-
-       }
+//    /// ***********   Cancel Request Btn ********* //
+//    func pressOk() {
+//           print("You choosed Yes !")
+//
+//            var fullDateTimeString = ("\(self.testStatusObj.dateForTakingSample!) \(self.testStatusObj.timeForTakingSample!)")
+//           if self.canCancelRequest(requestDateTime:fullDateTimeString)
+//           {
+//            let cancelrequestPresenter = CancelRequestPresenter(cancelRequestRef : self)
+//
+//            //var test = Test()
+//           // test.id = testStatusObj.id
+//
+//          //  test.status = "Canceled"
+//
+//            cancelrequestPresenter.cancelRequest(testObj: testStatusObj)
+//            //************ back **************/
+//
+//                    self.navigationController?.popViewController(animated: true)
+//           }else {
+//
+//
+//                  let alert = UIAlertController(title: "Confirmation Message", message: "Sorry You can't cancel this request we are about to take your sample now if you insest please call the laboratory ?", preferredStyle: .alert)
+//
+//
+//             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+//                              print("You choosed NOoOo !")
+//                         }))
+//                  self.present(alert, animated: true)
+//
+//
+//        }
+//       }
+//
+//       func pressCancel() {
+//
+//        print("You choosed NOoOo !")
+//
+//       }
     @IBAction func cancelRequestBtn(_ sender: Any) {
         print("cancel taped ")
-        
+         alertStatus = 0
         Alert.showAdvancedAlert(title: "Confirmation Message", message: "Do you want to cancel this request ?", viewAdvancedAlertRef: self)
         
 //        let alert = UIAlertController(title: "Confirmation Message", message: "Do you want to cancel this request ?", preferredStyle: .alert)
@@ -195,25 +198,28 @@ class RequestStatusTableViewController: UITableViewController , IViewAdvancedAle
     
     @IBAction func deleteRefusedRequestBtn(_ sender: Any) {
         
-              
-                let alert = UIAlertController(title: "Confirmation", message: "Do You Want To Delete This Request ?!", preferredStyle: .alert)
+               alertStatus = 1
+         Alert.showAdvancedAlert(title: "Confirmation Message", message: "Do You Want To Delete This Request ?!", viewAdvancedAlertRef: self)
         
         
-        
-                self.present(alert, animated: true)
-        
-                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-                                   print("You choosed Yes !")
-                       
-                                  let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
-                                  
-                                   deleteRequestPresenter.deleteRequest(reqId: self.testStatusObj.id!)
-                               }))
-        
-        
-               alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
-                    print("You choosed NOoOo !")
-                }))
+//                let alert = UIAlertController(title: "Confirmation", message: "Do You Want To Delete This Request ?!", preferredStyle: .alert)
+//
+//
+//
+//                self.present(alert, animated: true)
+//
+//                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+//                                   print("You choosed Yes !")
+//
+//                                  let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
+//
+//                                   deleteRequestPresenter.deleteRequest(reqId: self.testStatusObj.id!)
+//                               }))
+//
+//
+//               alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
+//                    print("You choosed NOoOo !")
+//                }))
         
         
         
@@ -754,18 +760,21 @@ extension RequestStatusTableViewController : ICancelRequestView
 {
     func onCancelDone() {
         
-        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: .alert)
-        
-        
-        
-                self.present(alert, animated: true)
-                alert.addAction(UIAlertAction(title: "ok", style: .default, handler: { action in
-                    print("You choosed Yes !")
-            //************ back **************/
+          Alert.showSimpleAlert(title: "Confirmation",message: "Your Request has been canceled Successfully ... ", viewRef: self)
+        //************ back **************/
 
               self.navigationController?.popViewController(animated: true)
         
-                }))
+//        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: .alert)
+//
+//
+//
+//                self.present(alert, animated: true)
+//                alert.addAction(UIAlertAction(title: "ok", style: .default, handler: { action in
+//                    print("You choosed Yes !")
+    
+        
+              //  }))
               
         
 //        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: UIAlertController.Style.alert)
@@ -779,9 +788,14 @@ extension RequestStatusTableViewController : ICancelRequestView
     
     
     func oncancelFailed(error : String) {
-        let alert = UIAlertController(title: "Sorry", message: error, preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
-                    alert.present(alert, animated: true, completion: nil)
+        
+        
+              Alert.showSimpleAlert(title: "Sorry",message: "Something Went Wrong !.", viewRef: self)
+        
+        
+//        let alert = UIAlertController(title: "Sorry", message: error, preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
+//                    alert.present(alert, animated: true, completion: nil)
       
     }
     
@@ -794,20 +808,88 @@ extension RequestStatusTableViewController : ICancelRequestView
 extension RequestStatusTableViewController : IDeleteRequestView
 {  
     func onRequetDeleted() {
-     let alert = UIAlertController(title: "Confirmation", message: "Your Request has been Deleted Successfully", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
-                    alert.present(alert, animated: true, completion: nil)
+        
+        Alert.showSimpleAlert(title: "information",message: "Your Request has been Deleted Successfully", viewRef: self)
+        //************ back **************/
+        
+        self.navigationController?.popViewController(animated: true)
+        
+        //     let alert = UIAlertController(title: "Confirmation", message: "Your Request has been Deleted Successfully", preferredStyle: UIAlertController.Style.alert)
+        //                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
+        //                    alert.present(alert, animated: true, completion: nil)
     }
     
     func onRequetFailed() {
-   
-        let alert = UIAlertController(title: "Sorry", message: "Faild to Delete this Request", preferredStyle: UIAlertController.Style.alert)
-                   alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
-                       alert.present(alert, animated: true, completion: nil)
+        Alert.showSimpleAlert(title: "sorry",message: "Faild to Delete this Request", viewRef: self)
+        
+        //        let alert = UIAlertController(title: "Sorry", message: "Faild to Delete this Request", preferredStyle: UIAlertController.Style.alert)
+        //                   alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
+        //                       alert.present(alert, animated: true, completion: nil)
     }
     
     
     
     
     
+}
+
+
+
+extension RequestStatusTableViewController : IViewAdvancedAlert,IView{
+    /// ***********   Cancel Request Btn ********* //
+       func pressOk() {
+        
+        
+       
+       if alertStatus == 0
+       {
+              print("Cancel request .... !")
+               
+               var fullDateTimeString = ("\(self.testStatusObj.dateForTakingSample!) \(self.testStatusObj.timeForTakingSample!)")
+              if self.canCancelRequest(requestDateTime:fullDateTimeString)
+              {
+               let cancelrequestPresenter = CancelRequestPresenter(cancelRequestRef : self)
+               
+               //var test = Test()
+              // test.id = testStatusObj.id
+          
+             //  test.status = "Canceled"
+               
+               cancelrequestPresenter.cancelRequest(testObj: testStatusObj)
+             
+              }else {
+               
+               
+           Alert.showSimpleAlert(title: "sorry",message: "Sorry You can't cancel this request we are about to take your sample now if you insest please call the laboratory ?", viewRef: self)
+                
+//                     let alert = UIAlertController(title: "Confirmation Message", message: "Sorry You can't cancel this request we are about to take your sample now if you insest please call the laboratory ?", preferredStyle: .alert)
+//
+//
+//                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+//                                 print("You choosed NOoOo !")
+//                            }))
+//                     self.present(alert, animated: true)
+               
+               
+           }
+        
+        } // alertStatue = 0 Cancel
+         else if alertStatus == 1
+        {
+          let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
+                                       
+            deleteRequestPresenter.deleteRequest(reqId: self.testStatusObj.id!)
+        
+        }
+        
+        
+        }// alertStatus == 1 Delete
+          
+          func pressCancel() {
+                         
+           print("Cancel Pressed !")
+
+          }
+    
+  //  showAdvancedAlert(title: String ,message: String, viewAdvancedAlertRef: IViewAdvancedAlert)
 }
