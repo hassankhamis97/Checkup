@@ -28,6 +28,12 @@
 "STATUS_LOCATION"="العنوان";
 "STATUS_TIME"="الوقت ";
 "STATUS_DATE"="التارخ";
+"please wait for loading data" = "من فضلك انتظر حتى يتم تحميل البيانات";
+"Complete your profile" = "أكمل بياناتك الشخصية";
+"make sure that you entered your phone, birthdate and gender" = "من فضلك تاكد من ملئ بعض البيانات مثل ال رقم الهاتف وتاريخ الميلاد والنوع";
+"time is required" = "الميعاد مطلوب";
+"address is required" = "العنوان مطلوب";
+"please insert at least photo or test Name" = "من فضلك ادخل على الاقل صورة الروشتة او اكتب اسم التحليل";
 "Enter Year First"="إختر سنة أولاً";
 "address is required"="العنوان مطلوب";
 "floor number is required"="رقم الطابق مطلوب";

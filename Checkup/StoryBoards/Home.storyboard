@@ -198,7 +198,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NQT-Ad-KkZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="352"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="476"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <inset key="scrollIndicatorInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -222,7 +222,7 @@
                                                     </cells>
                                                     <connections>
                                                         <outlet property="dataSource" destination="fm3-e1-75I" id="9tR-Jq-ORq"/>
-                                                        <outlet property="delegate" destination="qKj-Pp-iBe" id="tw4-tq-YVZ"/>
+                                                        <outlet property="delegate" destination="fm3-e1-75I" id="cE1-zs-1kw"/>
                                                     </connections>
                                                 </collectionView>
                                             </subviews>
@@ -354,10 +354,10 @@
             </objects>
             <point key="canvasLocation" x="-654" y="315"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--ResultUI Tab Bar-->
         <scene sceneID="Fgl-UN-hSU">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a7m-TO-BCx" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a7m-TO-BCx" customClass="ResultUITabBar" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bAa-Ju-IV3">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

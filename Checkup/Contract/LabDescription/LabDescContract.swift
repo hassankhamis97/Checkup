@@ -14,13 +14,13 @@ protocol ILabDescView {
 
 
 protocol ILabDescPresenter {
-    func getDataFromLabDescModel()
+    func getDataFromLabDescModel(params : LabDescriptionParams)
     func onSuccess(descObj : Branches)
     func onFail()
 }
 
 
 protocol ILabDescModel {
-    func fetchLabDes()
+    func fetchLabDes(modelParams : LabDescriptionParams)
     
 }

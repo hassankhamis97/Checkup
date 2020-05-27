@@ -46,7 +46,33 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
 
     
     }
-    /*
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scrolled")
+     //   labDescPresenter.getDataFromLabDescModel()
+       
+        
+        //abDescProtocolObj!.paginatingData()
+    }
+    
+       func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//            print("cell is selected")
+//            var details = storyboard!.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
+//            self.navigationController?.pushViewController(details, animated: true)
+        let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
+        branchDesc.modalPresentationStyle = .fullScreen
+        self.present(branchDesc , animated: true , completion: nil)
+        }
+}
+
+
+
+
+
+
+
+
+
+ /*
     override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         print("called")
         return true
@@ -55,13 +81,11 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
         return true
     }*/
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+ /*   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        print("cell is selected")
 //        var details = storyboard!.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
 //        self.navigationController?.pushViewController(details, animated: true)
-    }
-
-}
+    }*/
      
     
  

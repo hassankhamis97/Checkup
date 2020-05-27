@@ -24,7 +24,7 @@ struct Alert {
 //    //Your Code
 //}
     static func showAdvancedAlert(title: String ,message: String, viewAdvancedAlertRef: IViewAdvancedAlert){
-let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title.localized, message: message.localized, preferredStyle: .alert)
 
             
 

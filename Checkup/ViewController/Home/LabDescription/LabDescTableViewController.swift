@@ -8,46 +8,63 @@
 
 import UIKit
 import SDWebImage
-class LabDescTableViewController: UITableViewController , ILabDescView {
+class LabDescTableViewController: UITableViewController , ILabDescView{
+   
     
+    @IBOutlet weak var labBrachCollection: UICollectionView!
     @IBOutlet weak var labHotlineOutlet: UILabel!
     @IBOutlet weak var labImageViewOutlet: UIImageView!
+    
+    
     var labDescPresenter : ILabDescPresenter!
     var labDescriptionObj : Branches = Branches()
-   
-
-
-    @IBOutlet weak var labBrachCollection: UICollectionView!
-    var labBranches : [String] = ["Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch"]
+    var labParamsInView : LabDescriptionParams = LabDescriptionParams()
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
   
         labBrachCollection.register(UINib(nibName: "BranchesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "branchCell")
-            let layout = UICollectionViewFlowLayout()
-      
-       navigationItem.leftBarButtonItem = UIBarButtonItem(title: "description", style: .plain, target: self, action: #selector(navigateToDesc))
+       
+       
+        labBrachCollection.delegate = self
         
-   //     let screenSIze = UIScreen.main.bounds
-     //   let width = screenSIze.width
-       // let height = screenSIze.height-200
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-     //   layout.itemSize = CGSize(width: width/2 , height: height/2)
-           //layout.itemSize = CGSize(width: 200/2, height: 200/2)
-        layout.itemSize = CGSize(width: 191, height: 213)
+        
+      
+//       navigationItem.leftBarButtonItem = UIBarButtonItem(title: "description", style: .plain, target: self, action: #selector(navigateToDesc))
+       
+        
+        
+       let layout = UICollectionViewFlowLayout()
+       layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+       layout.itemSize = CGSize(width: 191, height: 213)
        layout.minimumInteritemSpacing = 1.0
        self.labBrachCollection?.collectionViewLayout = layout
+    
+        
+        
+        
+        labParamsInView.governId = 1
+        labParamsInView.labId = "-M7O-IStoBsiYrQFpwo_"
+        labParamsInView.take = 5
+        labParamsInView.skip = 0
+        labParamsInView.longitude = 29.9137701
+        labParamsInView.latitude = 31.1803167
+        
         
         labDescPresenter =  LabDescPresenter(view: self)
-        labDescPresenter.getDataFromLabDescModel()
+        labDescPresenter.getDataFromLabDescModel(params: labParamsInView)
         
     }
-    @objc func navigateToDesc() {
-        let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
-        branchDesc.modalPresentationStyle = .fullScreen
-        self.present(branchDesc , animated: true , completion: nil)
-        
-    }
+    
+    
+//    @objc func navigateToDesc() {
+//        let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
+//        branchDesc.modalPresentationStyle = .fullScreen
+//        self.present(branchDesc , animated: true , completion: nil)
+//        
+//    }
+    
 
     func showingDataOnView(labDescObj: Branches) {
         labDescriptionObj = labDescObj
@@ -58,7 +75,34 @@ class LabDescTableViewController: UITableViewController , ILabDescView {
         labBrachCollection.reloadData()
     }
     
-    
+   /* func paginatingData() {
+        print("inside paging data")
+        if(labDescriptionObj.branches != nil){
+            for branch in labDescriptionObj.branches! {
+                labDescriptionObj.branches!.append(branch)
+                print("branch\(branch)")
+                labBrachCollection.reloadData()
+
+            }
+            labBrachCollection.reloadData()
+
+            print(labDescriptionObj.branches!.count)
+
+        }
+
+       }*/
     
 }
 
+
+//var labBranches : [String] = ["Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch","Alexandria branch" , "Cairo branch" , "Mansoura branch" , "branch"]
+  
+
+
+
+
+
+
+//     let screenSIze = UIScreen.main.bounds
+//   let width = screenSIze.width
+  // let height = screenSIze.height-200

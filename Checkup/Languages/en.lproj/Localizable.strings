@@ -28,6 +28,12 @@
 "STATUS_LOCATION"="Location";
 "STATUS_TIME"="Time";
 "STATUS_DATE"="Date";
+"please wait for loading data" = "please wait for loading data";
+"Complete your profile" = "Complete your profile";
+"make sure that you entered your phone, birthdate and gender" = "make sure that you entered your phone, birthdate and gender";
+"time is required" = "time is required";
+"address is required" = "address is required";
+"please insert at least photo or test Name" = "please insert at least photo or test Name";
 "Enter Year First"="Enter Year First";
 "address is required"="address is required";
 "floor number is required"="floor number is required";
