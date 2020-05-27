@@ -42,7 +42,7 @@
 "Tvb-cG-Djw.text" = "هذا المعمل يتيح فرصة أخذ عينة التحاليل الخاصة بك من المنزل ,هل تحتاج ذلك؟";
 
 /* Class = "UILabel"; text = " Please Pin Your Address On The Map"; ObjectID = "Xta-Dm-U3p"; */
-"Xta-Dm-U3p.text" = " من فضلك ضع عنوانك على الخريطة";
+"Xta-Dm-U3p.text" = " من فضلك حدد موقعك على الخريطة";
 
 /* Class = "UIButton"; normalTitle = "Preview Address"; ObjectID = "YyR-fJ-Cah"; */
 "YyR-fJ-Cah.normalTitle" = "عرض العنوان";

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class StatisticsModel:IStatisticModel{
     
@@ -20,17 +21,31 @@ class StatisticsModel:IStatisticModel{
     
     func getSample(userId: String, year: String) {
         
-        var sampleObj=HbA1cSample()
-      let  year = ["Jan 12,2009", "Feb 12,2009", "Mar 12,2009", "Apr 12,2009"]
-       let sample = [20.0, 4.0,5.0,7.0]
-        
-        
+  Alamofire.request("http://checkup.somee.com/api/AnalysisService/GetHbA1cSampleStatistics?userId="+userId+"&year="+year).responseJSON { (response) in
+                  if let JSON = response.result.value{
+                      print("ha1bc")
+                      print(JSON)
+                      
+                      do{
+                          let sampleObj = try JSONDecoder().decode(HbA1cSample.self , from: response.data!)
+                      
+                          print(sampleObj)
+                        
+                        self.statisticPresenterRef.onSuccess(sampleObj: sampleObj)
+                      }catch let error{
+                        self.statisticPresenterRef.onFail(message: "error")
+                          print(error)
+                      }
+                  }
+                
+                  
+              }
         /* api & almofire*/
+//        
+//        sampleObj.year=year
+//        sampleObj.sample=sample
         
-        sampleObj.year=year
-        sampleObj.sample=sample
-        
-        statisticPresenterRef.onSuccess(sampleObj: sampleObj)
+     
         
         
     }
