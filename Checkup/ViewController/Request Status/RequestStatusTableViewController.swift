@@ -22,7 +22,7 @@ class RequestStatusTableViewController: UITableViewController  {
     var showCancel : CGFloat = 0
     var showDetailsPage = false ;
     var alertStatus : Int8 = 0 ;
-    
+    static var page: Int?
     @IBOutlet weak var costText: UILabel!
     
     
@@ -158,7 +158,7 @@ class RequestStatusTableViewController: UITableViewController  {
     @IBAction func showRequestDetailsBtn(_ sender: Any) {
         //         let backBarButtonItem = UIBarButtonItem(title: "BackMe!", style: .plain, target: nil, action: nil)
         //                      navigationItem.backBarButtonItem = backBarButtonItem
-        
+        RequestStatusTableViewController.page = x;
         showDetailsPage = true
         
         x = 1
@@ -267,16 +267,17 @@ class RequestStatusTableViewController: UITableViewController  {
     }
     
     //************** Back Buttom *****************//
-    @objc func addTapped() {
+    @objc func backTapped() {
         print("Button tapped")
         
         if showDetailsPage == true {
             stepIndecatorShow = 100
-            x = 7
+           // x = 7
+            x = RequestStatusTableViewController.page!
             tableView.reloadData()
             showDetailsPage = false
         }else{
-            self.navigationController?.popViewController(animated: true)
+    self.navigationController?.popViewController(animated: true)
         }
         showDetailsPage=false
         
@@ -294,9 +295,9 @@ class RequestStatusTableViewController: UITableViewController  {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        let backBtn = UIBarButtonItem(title: "STATUS_BACK".localized, style: .plain, target: self, action: #selector(addTapped))
+        let backBtn = UIBarButtonItem(title: "STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
         
-        self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
+    self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
         
         
         
