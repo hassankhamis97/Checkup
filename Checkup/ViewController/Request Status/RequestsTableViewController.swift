@@ -255,10 +255,15 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //            let vc = storyboard?.instantiateViewController(identifier: "reqStatus") as! RequestStatusTableViewController
+        if isResult == false {
         let vc = storyboard?.instantiateViewController(withIdentifier: "reqStatus") as! RequestStatusTableViewController
             vc.testID = requests![indexPath.row].id
             navigationController?.pushViewController(vc, animated: true)
-        
+        }
+        else{
+        let pdfDesc = storyboard?.instantiateViewController(withIdentifier: "pdfDesc") as! PdfDescViewController
+        navigationController?.pushViewController(pdfDesc, animated: true)
+        }
         
     }
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {

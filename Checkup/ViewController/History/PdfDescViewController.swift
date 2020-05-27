@@ -36,7 +36,10 @@ extension PdfDescViewController : UITableViewDelegate , UITableViewDataSource{
         return 90
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let pdfHistory = storyboard?.instantiateViewController(withIdentifier: "pdfHistory") as! PdfResultViewController
-        navigationController?.pushViewController(pdfHistory, animated: true)
+        if let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/TestResults%2F-M5j2KV4Wz74yZfJY1Dr%2FDesign%20Principles%20and%20Patterns%20-%20Full.pdf?alt=media&token=f46ad9a4-b56c-4873-91a1-cd7c32c13e0a") {
+            UIApplication.shared.open(url)
+        }
+//        let pdfHistory = storyboard?.instantiateViewController(withIdentifier: "pdfHistory") as! PdfResultViewController
+//        navigationController?.pushViewController(pdfHistory, animated: true)
     }
 }

@@ -8,7 +8,19 @@
 
 import Foundation
 import UIKit
-extension NewRequestTableViewController : INewRequestView ,IView {
+extension NewRequestTableViewController : INewRequestView ,IView , IViewAdvancedAlert{
+    func pressOk() {
+        let ref=self.storyboard?.instantiateViewController(withIdentifier:"editSvc") as! EditProfileTableViewController
+                
+        //        ref.user=user
+                
+                    navigationController?.pushViewController(ref, animated: true)
+    }
+    
+    func pressCancel() {
+        
+    }
+    
     func updateView() {
 //        Toast.show(message: "request send Successfully", controller: self)
         showToast(message: "request sent") // change it to view controller success
@@ -37,10 +49,15 @@ extension NewRequestTableViewController : INewRequestView ,IView {
     }
     
     func checkValidation() -> Bool {
+//        var hasPhone = false
+//        if user.phone != nil {
+//
+//        }
         var message: String = ""
         if(DatabaseImageArray.count == 0 && testTexts.count == 0){
             message = "please insert at least photo or test Name"
         }
+        
         else if dateTextField.text!.isEmpty{
 //            message = NSLocalizedString("alertDateMessageError", comment: "")
             message = "alertDateMessageError"
@@ -48,9 +65,14 @@ extension NewRequestTableViewController : INewRequestView ,IView {
         else if timeTextField.text!.isEmpty{
             message = "time is required"
         }
-//        else if (isFromHome! && address.text!.isEmpty){
-//            message = "address is required"
-//        }
+        else if (isFromHome! && addressObj == nil){
+            message = "address is required"
+        }
+        else if ((user.phone?.count == 0 || (user.phone![0].number! == "" && user.phone![1].number! == "")) || user.birthdate == "" || user.gender == ""){
+                    Alert.showAdvancedAlert(title: "Complete your profile", message: "make sure that you entered your phone, birthdate and gender", viewAdvancedAlertRef: self)
+                    return false
+        //            message = "address is required"
+                }
         if !message.isEmpty {
             Alert.showSimpleAlert(title: "sorry", message: message, viewRef: self)
             return false

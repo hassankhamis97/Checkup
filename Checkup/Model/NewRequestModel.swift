@@ -87,7 +87,23 @@ class NewRequestModel: INewRequestModel {
                 case .success:
                     print(response)
                     self.newRequestPresenterRef.onSuccess()
-                    
+                    Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetIsFirstDealWithBranch?userId=\(Auth.auth().currentUser!.uid)&branchId=\(testFinObj.branchId!)").validate().responseJSON { response in
+                    switch response.result {
+                    case .success(let value):
+                        if value as! Int == 0 {
+                            self.charInitializeInFireStore(firstId: Auth.auth().currentUser!.uid, secondId: testFinObj.branchId!)
+                            self.charInitializeInFireStore(firstId: testFinObj.branchId!, secondId: Auth.auth().currentUser!.uid)
+                        }
+                        debugPrint(response)
+                       
+                        break
+                    case .failure(let error):
+//                        self.newRequestPresenterRef.onFail(message: error.localizedDescription)
+                        print(error)
+                        break
+                    }
+                    }
+                        
                     break
                 case .failure(let error):
                     self.newRequestPresenterRef.onFail(message: error.localizedDescription)
@@ -102,4 +118,83 @@ class NewRequestModel: INewRequestModel {
             print(error.localizedDescription)
         }
     }
+    func charInitializeInFireStore(firstId: String , secondId: String) {
+        var chatStatus = ChatStatus(lastMsgTimeStamp: "", noOfUnReadMessage: 0, lastMessage: "let's start chat", senderId: "")
+        let chatStatusDic = try! DictionaryEncoder.encode(chatStatus)
+        if Auth.auth().currentUser!.uid == firstId {
+        self.db?.collection("userChat").document(firstId).setData(["currentViewedPerson": ""]){ err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        }
+        self.db?.collection("userChat").document(firstId).collection(firstId).document(secondId).setData(chatStatusDic){ err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
+//    func hashString(str: String) -> Int {
+//        var hash : Int = 0
+//        for i in 0..<str.count {
+////            var yy = Character("a").asciiValue
+////            var x = Character(str[i]).asciiValue
+//            var x = Character(str[i]).asciiValue * 31 as! Double
+//            var y = str.count - i as! Double
+//            hash += Int(pow(x,y))
+////            pow(Decimal(Character(str[i]).asciiValue * 31), 5)
+//            hash = hash & hash
+//        }
+//        return hash
+//    }
+//    hashString = str => {
+//        let hash = 0
+//        for (let i = 0; i < str.length; i++) {
+//            hash += Math.pow(str.characterAtIndex(i) * 31, str.length - i)
+//            hash = hash & hash // Convert to 32bit integer
+//        }
+//        return hash
+//    }
 }
+
+
+
+//
+//extension String {
+//
+//    var length: Int {
+//        return count
+//    }
+//
+//    subscript (i: Int) -> String {
+//        return self[i ..< i + 1]
+//    }
+//
+//    func substring(fromIndex: Int) -> String {
+//        return self[min(fromIndex, length) ..< length]
+//    }
+//
+//    func substring(toIndex: Int) -> String {
+//        return self[0 ..< max(0, toIndex)]
+//    }
+//
+//    subscript (r: Range<Int>) -> String {
+//        let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
+//                                            upper: min(length, max(0, r.upperBound))))
+//        let start = index(startIndex, offsetBy: range.lowerBound)
+//        let end = index(start, offsetBy: range.upperBound - range.lowerBound)
+//        return String(self[start ..< end])
+//    }
+//}
+//extension Character {
+//    var asciiValue: Int {
+//        get {
+//            let s = String(self).unicodeScalars
+//            return Int(s[s.startIndex].value)
+//        }
+//    }
+//}
