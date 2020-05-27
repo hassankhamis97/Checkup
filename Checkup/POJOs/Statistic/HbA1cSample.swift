@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HbA1cSample : Encodable{
+struct HbA1cSample : Codable{
     var year: [String]?
     var sample:[Double]?
 }

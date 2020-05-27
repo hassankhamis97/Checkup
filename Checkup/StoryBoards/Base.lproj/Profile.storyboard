@@ -71,8 +71,8 @@
                                                     <color key="textColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sara ali  abrahim" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aog-6W-f6c">
-                                                    <rect key="frame" x="23" y="226" width="152.66666666666666" height="36"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aog-6W-f6c">
+                                                    <rect key="frame" x="23" y="226" width="145" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="NYz-7p-EE5"/>
                                                     </constraints>
@@ -381,11 +381,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Address" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="1go-CU-LlM" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="26" y="12" width="374" height="55"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Address" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="1go-CU-LlM" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                    <rect key="frame" x="26" y="2" width="348" height="55"/>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="55" id="3me-TE-2da"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="peX-O3-OdV"/>
+                                                    </constraints>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="house.fill" catalog="system"/>
@@ -418,29 +422,28 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7i7-Fg-kAR">
-                                                    <rect key="frame" x="284" y="26.666666666666671" width="114" height="27"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7i7-Fg-kAR">
+                                                    <rect key="frame" x="372" y="25" width="30" height="32"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="3RT-zU-kIg"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="BZh-X2-FPL"/>
-                                                        <constraint firstAttribute="height" constant="27" id="gxi-Tw-FZa"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="jJC-wQ-PJ7"/>
+                                                        <constraint firstAttribute="height" constant="32" id="0Vt-2g-vka"/>
+                                                        <constraint firstAttribute="width" constant="30" id="fpc-hI-kPe"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                    <state key="normal" title="Preview Address"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <state key="normal" image="mappin.and.ellipse" catalog="system"/>
                                                     <connections>
                                                         <action selector="previewAddressBtn:" destination="pMs-hI-F8d" eventType="touchUpInside" id="BLD-dM-C0J"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="7i7-Fg-kAR" firstAttribute="centerY" secondItem="5w5-Bz-eVj" secondAttribute="centerY" id="5Xi-5d-k03"/>
-                                                <constraint firstItem="1go-CU-LlM" firstAttribute="leading" secondItem="5w5-Bz-eVj" secondAttribute="leadingMargin" constant="6" id="GUy-vc-ZRg"/>
-                                                <constraint firstItem="7i7-Fg-kAR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5w5-Bz-eVj" secondAttribute="leading" symbolic="YES" id="WsA-0V-tRI"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="1go-CU-LlM" secondAttribute="bottom" constant="2" id="bUF-tB-v2e"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="7i7-Fg-kAR" secondAttribute="trailing" constant="8" id="pAr-0f-mGW"/>
-                                                <constraint firstItem="1go-CU-LlM" firstAttribute="trailing" secondItem="5w5-Bz-eVj" secondAttribute="trailingMargin" constant="6" id="uwB-kP-5Q3"/>
-                                                <constraint firstItem="1go-CU-LlM" firstAttribute="top" secondItem="5w5-Bz-eVj" secondAttribute="topMargin" constant="1" id="yuL-qe-UHo"/>
+                                                <constraint firstItem="1go-CU-LlM" firstAttribute="top" secondItem="5w5-Bz-eVj" secondAttribute="top" constant="2" id="CO7-li-Orh"/>
+                                                <constraint firstAttribute="trailing" secondItem="7i7-Fg-kAR" secondAttribute="trailing" constant="12" id="IFr-aN-sk8"/>
+                                                <constraint firstAttribute="trailing" secondItem="1go-CU-LlM" secondAttribute="trailing" constant="40" id="KuJ-Jc-U7S"/>
+                                                <constraint firstAttribute="bottom" secondItem="1go-CU-LlM" secondAttribute="bottom" constant="23" id="OwZ-kp-quJ"/>
+                                                <constraint firstItem="7i7-Fg-kAR" firstAttribute="top" secondItem="5w5-Bz-eVj" secondAttribute="top" constant="25" id="UA6-5g-ibx"/>
+                                                <constraint firstItem="7i7-Fg-kAR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5w5-Bz-eVj" secondAttribute="leading" constant="20" symbolic="YES" id="WiJ-GG-6Pv"/>
+                                                <constraint firstItem="1go-CU-LlM" firstAttribute="leading" secondItem="5w5-Bz-eVj" secondAttribute="leading" constant="26" id="nP4-3H-5u1"/>
+                                                <constraint firstAttribute="bottom" secondItem="7i7-Fg-kAR" secondAttribute="bottom" constant="23" id="t6J-4C-XK0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -866,9 +869,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Address" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ua2-9b-yK4" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="26" y="12" width="374" height="55"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Address" adjustsFontForContentSizeCategory="YES" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ua2-9b-yK4" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                    <rect key="frame" x="26" y="12" width="350" height="55"/>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="5Rl-8x-50v"/>
+                                                        <constraint firstAttribute="height" constant="55" id="lMK-3c-EdT"/>
+                                                    </constraints>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -903,27 +910,26 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQi-je-7g7" userLabel="Edit Address">
-                                                    <rect key="frame" x="292" y="26.666666666666671" width="114" height="27"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQi-je-7g7" userLabel="Edit Address">
+                                                    <rect key="frame" x="376" y="38" width="30" height="29"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="XU0-b0-Gi4"/>
-                                                        <constraint firstAttribute="height" constant="27" id="p6B-0g-4K6"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="BBD-WO-IB2"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="XU0-b0-Gi4"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                    <state key="normal" title="Edit Address"/>
+                                                    <state key="normal" image="pencil" catalog="system"/>
                                                     <connections>
                                                         <action selector="editAddressBtn:" destination="xfM-Jr-M9W" eventType="touchUpInside" id="byt-US-Wnz"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Ua2-9b-yK4" firstAttribute="trailing" secondItem="Rth-Ps-oQq" secondAttribute="trailingMargin" constant="6" id="47d-ts-nfW"/>
-                                                <constraint firstItem="AQi-je-7g7" firstAttribute="centerY" secondItem="Rth-Ps-oQq" secondAttribute="centerY" id="59z-bd-n5N"/>
-                                                <constraint firstItem="AQi-je-7g7" firstAttribute="trailing" secondItem="Rth-Ps-oQq" secondAttribute="trailingMargin" id="FLJ-ZE-031"/>
+                                                <constraint firstAttribute="bottom" secondItem="AQi-je-7g7" secondAttribute="bottom" constant="13" id="46x-NG-AMh"/>
                                                 <constraint firstItem="Ua2-9b-yK4" firstAttribute="top" secondItem="Rth-Ps-oQq" secondAttribute="topMargin" constant="1" id="HnM-UT-WS5"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ua2-9b-yK4" secondAttribute="bottom" constant="2" id="NPn-Iw-PXb"/>
-                                                <constraint firstItem="AQi-je-7g7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rth-Ps-oQq" secondAttribute="leading" symbolic="YES" id="i8o-Ed-4z6"/>
-                                                <constraint firstItem="Ua2-9b-yK4" firstAttribute="leading" secondItem="Rth-Ps-oQq" secondAttribute="leadingMargin" constant="6" id="t7o-8D-UB3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ua2-9b-yK4" secondAttribute="trailing" constant="30" id="U0N-Dm-tCZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="AQi-je-7g7" secondAttribute="trailing" constant="8" id="bTx-cB-s6p"/>
+                                                <constraint firstItem="AQi-je-7g7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rth-Ps-oQq" secondAttribute="leading" constant="20" symbolic="YES" id="pAF-4b-2l3"/>
+                                                <constraint firstItem="Ua2-9b-yK4" firstAttribute="leading" secondItem="Rth-Ps-oQq" secondAttribute="leading" constant="26" id="xO5-bs-TE4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

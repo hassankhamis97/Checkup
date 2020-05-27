@@ -9,8 +9,8 @@
 import Foundation
 class LabDescPresenter : ILabDescPresenter{
    
-    
-    
+ 
+    var paramsPresenter : LabDescriptionParams!    
     var newView : ILabDescView!
     var newLabDescModel : ILabDescModel!
     
@@ -23,15 +23,13 @@ class LabDescPresenter : ILabDescPresenter{
         
     }
     
-    
-    
     func onFail() {
         
     }
     
-    func getDataFromLabDescModel() {
+    func getDataFromLabDescModel(params: LabDescriptionParams) {
         newLabDescModel = LabaDescriptionModel(descPreseneter: self)
-        newLabDescModel.fetchLabDes()
+        newLabDescModel.fetchLabDes(modelParams: params)
        
     }
        

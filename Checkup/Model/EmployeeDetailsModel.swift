@@ -21,19 +21,25 @@ class EmployeeDetailsModel : IEmployeeDetailsModel{
         
         ref.child(EmpId).observe(.value){
                          mahmoudSnapShoot in
-            if let values = mahmoudSnapShoot.value as! [String : Any]?{
-            
-            var emp = Employee()
-                
-                if let imgPath = values["imagePath"] as! String? , let empPhones = values["phones"] as! [String]? , let empUserName = values["userName"] as! String?{
-                    emp.userName = empUserName
-                     emp.imagePath = imgPath
-                    emp.phones = empPhones
-                }
+            guard mahmoudSnapShoot.value != nil else{
            
+                self.emplPresenterRef.onFail(message: "No Employee Data Found")
+                return
+            }
             
-            self.emplPresenterRef.onEmployeeReceived(employee:emp )
-        }
+             let employee = mahmoudSnapShoot.value as! [String : Any]?
+                       var emp = Employee()
+                           
+            if let imgPath = employee!["imagePath"] as! String? ,
+                            let empPhones = employee!["phones"] as! [String]? ,
+                            let empUserName = employee!["userName"] as! String?{
+                               emp.userName = empUserName
+                                emp.imagePath = imgPath
+                               emp.phones = empPhones
+                           }
+                      
+                       
+                       self.emplPresenterRef.onEmployeeReceived(employee:emp )
         }
         
         

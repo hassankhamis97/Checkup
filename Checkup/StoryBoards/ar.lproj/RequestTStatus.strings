@@ -1,120 +1,123 @@
 
-/* Class = "UIButton"; normalTitle = "Delete Request"; ObjectID = "0nT-KO-VXq"; */
-"0nT-KO-VXq.normalTitle" = "حذف الطلب";
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "09R-mG-bij"; */
+"09R-mG-bij.normalTitle" = "إغلاق";
 
-/* Class = "UILabel"; text = "Description :"; ObjectID = "10P-mD-CPR"; */
-"10P-mD-CPR.text" = "الوصف : ";
+/* Class = "UILabel"; text = "Test Name : "; ObjectID = "0Ew-Ex-Amy"; */
+"0Ew-Ex-Amy.text" = "التحاليل";
 
-/* Class = "UIButton"; normalTitle = "Cancel Request"; ObjectID = "4U7-xV-Y3f"; */
-"4U7-xV-Y3f.normalTitle" = "إلغاء الطلب";
+/* Class = "UILabel"; text = "Your Requset Is Refused"; ObjectID = "6YE-ta-AgI"; */
+"6YE-ta-AgI.text" = "نأسف لقد تم رفض الطلب";
 
-/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit x ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit"; ObjectID = "6De-nY-rLh"; */
-"6De-nY-rLh.text" = " لا يوجد وصف ٫٫٫";
+/* Class = "UILabel"; text = "Done"; ObjectID = "6ZS-6O-viu"; */
+"6ZS-6O-viu.text" = "تم";
 
-/* Class = "UILabel"; text = "15:20 pm"; ObjectID = "85y-xc-Mgq"; */
-"85y-xc-Mgq.text" = "";
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit x ea commodo consequat"; ObjectID = "7vn-pj-nWb"; */
+"7vn-pj-nWb.text" = "لا يوجد وصف";
 
-/* Class = "UIButton"; normalTitle = "Show Request Details"; ObjectID = "8wP-9Q-Mq4"; */
-"8wP-9Q-Mq4.normalTitle" = "إظهار تفاصيل الطلب ";
+/* Class = "UILabel"; text = "Cost : 250 L.E"; ObjectID = "9p4-LM-zMR"; */
+"9p4-LM-zMR.text" = "المبلغ: ٢٠٠ جنية";
 
-/* Class = "UILabel"; text = "22jun,2019"; ObjectID = "BRE-cH-xHL"; */
-"BRE-cH-xHL.text" = "";
+/* Class = "UILabel"; text = "Phone :"; ObjectID = "FnF-D7-yXI"; */
+"FnF-D7-yXI.text" = "الهاتف : ";
 
-/* Class = "UILabel"; text = "Date  :"; ObjectID = "GW2-7B-19M"; */
-"GW2-7B-19M.text" = " التاريخ : ";
+/* Class = "UIButton"; normalTitle = "Show Request Details"; ObjectID = "G6Y-RW-ERx"; */
+"G6Y-RW-ERx.normalTitle" = "عرض تفاصيل الطلب";
+
+/* Class = "UILabel"; text = "Empolyee Details :"; ObjectID = "Hwn-kv-7x0"; */
+"Hwn-kv-7x0.text" = "بيانات الموظف";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "IJX-L7-Myh"; */
+"IJX-L7-Myh.text" = "إنتظار";
+
+/* Class = "UILabel"; text = "Code"; ObjectID = "Iee-V1-9HC"; */
+"Iee-V1-9HC.text" = "الكود";
+
+/* Class = "UILabel"; text = "--------"; ObjectID = "IxS-fE-wO5"; */
+"IxS-fE-wO5.text" = "--------";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "JN8-kL-Zkh"; */
 "JN8-kL-Zkh.text" = "Label";
 
-/* Class = "UILabel"; text = "Test Name : "; ObjectID = "JWe-6s-pB5"; */
-"JWe-6s-pB5.text" = "إسم التحليل : ";
+/* Class = "UIButton"; normalTitle = "Show Details"; ObjectID = "K0a-8k-1VD"; */
+"K0a-8k-1VD.normalTitle" = "عرض تفاصيل الطلب";
 
-/* Class = "UILabel"; text = " Your Request Was Not Accepted"; ObjectID = "M1F-V1-MBg"; */
-"M1F-V1-MBg.text" = "المعذرة لم يتم قبول طلبكم";
+/* Class = "UILabel"; text = "Description :"; ObjectID = "Kcx-Yu-Sab"; */
+"Kcx-Yu-Sab.text" = "الوصف";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "NbB-bU-HFM"; */
 "NbB-bU-HFM.text" = "Label";
 
-/* Class = "UILabel"; text = "Phone :"; ObjectID = "Pma-yW-h0A"; */
-"Pma-yW-h0A.text" = "الهاتف: ";
+/* Class = "UILabel"; text = "22jun,2019"; ObjectID = "Oug-r6-HkG"; */
+"Oug-r6-HkG.text" = "٢٢بونيو,٢٠٢٠";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "TbE-q1-Sdt"; */
 "TbE-q1-Sdt.text" = "Label";
 
-/* Class = "UILabel"; text = "23456"; ObjectID = "TpZ-a4-9Rt"; */
-"TpZ-a4-9Rt.text" = "١٢٣";
+/* Class = "UIButton"; normalTitle = "Show Request Details"; ObjectID = "U8f-20-gGN"; */
+"U8f-20-gGN.normalTitle" = "عرض بيانات الطلب";
 
-/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit x ea commodo consequat"; ObjectID = "VfA-oq-l7Y"; */
-"VfA-oq-l7Y.text" = "لا توجد بيانات ";
+/* Class = "UIButton"; normalTitle = "Cancel Request"; ObjectID = "UXs-9w-gU4"; */
+"UXs-9w-gU4.normalTitle" = "إلغاء الطلب";
 
-/* Class = "UILabel"; text = "Code"; ObjectID = "Vfy-T8-zII"; */
-"Vfy-T8-zII.text" = "الكود ";
+/* Class = "UILabel"; text = "Label"; ObjectID = "VPI-R8-Qsd"; */
+"VPI-R8-Qsd.text" = "Label";
 
-/* Class = "UINavigationItem"; title = "Request Status"; ObjectID = "We4-ts-Esx"; */
-"We4-ts-Esx.title" = "حالة الطلب ";
+/* Class = "UILabel"; text = "Label"; ObjectID = "Xeq-6y-HRM"; */
+"Xeq-6y-HRM.text" = "Label";
 
-/* Class = "UILabel"; text = "Aly ibrahim"; ObjectID = "X9g-NQ-5Q2"; */
-"X9g-NQ-5Q2.text" = " على إبراهيم";
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit x ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit"; ObjectID = "chT-OG-q0n"; */
+"chT-OG-q0n.text" = "لا يوجد وصف ";
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "Y4I-bw-qY0"; */
-"Y4I-bw-qY0.text" = "Label";
+/* Class = "UIButton"; normalTitle = "Delete Request"; ObjectID = "dy3-6V-CZN"; */
+"dy3-6V-CZN.normalTitle" = "حذف الطلب";
 
-/* Class = "UILabel"; text = "Precautions :"; ObjectID = "YgK-Bi-rCz"; */
-"YgK-Bi-rCz.text" = "الإحتياطات : ";
-
-/* Class = "UILabel"; text = "Empolyee Details :"; ObjectID = "aI1-lt-IDh"; */
-"aI1-lt-IDh.text" = "بيانات الموظف : ";
-
-/* Class = "UILabel"; text = "Taking Sample"; ObjectID = "bK6-6P-q1a"; */
-"bK6-6P-q1a.text" = "أخذ العينه : ";
-
-/* Class = "UILabel"; text = "Your Are Wating For Result"; ObjectID = "ds2-oc-Ikf"; */
-"ds2-oc-Ikf.text" = "فى إنتظار النتيجه ";
+/* Class = "UILabel"; text = "Aly ibrahim"; ObjectID = "e0H-en-zRZ"; */
+"e0H-en-zRZ.text" = "على إبراهيم ";
 
 /* Class = "UILabel"; text = "Test Name : "; ObjectID = "eUQ-b2-eIX"; */
-"eUQ-b2-eIX.text" = "أسماء التحاليل :  ";
+"eUQ-b2-eIX.text" = " التحاليل :  ";
 
-/* Class = "UIButton"; normalTitle = "Show Details"; ObjectID = "evP-6i-bE9"; */
-"evP-6i-bE9.normalTitle" = "عرض التفاصيل ";
+/* Class = "UILabel"; text = "Test is not avilable"; ObjectID = "fvg-Fm-3PZ"; */
+"fvg-Fm-3PZ.text" = "التحليل غير متوفر";
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "iVB-hS-Jol"; */
-"iVB-hS-Jol.text" = "Label";
+/* Class = "UILabel"; text = "Reason:"; ObjectID = "g3j-PB-V2a"; */
+"g3j-PB-V2a.text" = "السبب";
 
-/* Class = "UILabel"; text = "Your Requset Is Confirmed"; ObjectID = "ibT-ig-w1x"; */
-"ibT-ig-w1x.text" = "تم قبول طلبك ";
+/* Class = "UIButton"; normalTitle = "Cancel Request"; ObjectID = "i4R-EY-6mj"; */
+"i4R-EY-6mj.normalTitle" = "إلغاء الطلب";
 
 /* Class = "UINavigationItem"; title = "Requests"; ObjectID = "jcs-eR-8Lb"; */
 "jcs-eR-8Lb.title" = "الطلبات";
 
-/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "lzR-cd-wbT"; */
-"lzR-cd-wbT.normalTitle" = "إغلاق";
+/* Class = "UILabel"; text = "Time  :"; ObjectID = "kss-BV-vhZ"; */
+"kss-BV-vhZ.text" = "الوقت :";
 
 /* Class = "UILabel"; text = "🔴 Refused"; ObjectID = "mdv-ks-mic"; */
-"mdv-ks-mic.text" = " مرفوض";
+"mdv-ks-mic.text" = "🔴 مرفوض";
 
-/* Class = "UILabel"; text = "Reason:"; ObjectID = "pbu-Ww-A4Z"; */
-"pbu-Ww-A4Z.text" = "السبب : ";
+/* Class = "UILabel"; text = "No Data Found Check §your §internet Connection"; ObjectID = "nUW-Cg-iPq"; */
+"nUW-Cg-iPq.text" = "لا توجد بيانات يرجى التأكد من اللإتصال بالانترنت";
 
-/* Class = "UILabel"; text = "Test is not avilable"; ObjectID = "q7N-rr-SPw"; */
-"q7N-rr-SPw.text" = "التحليل غير متاح";
+/* Class = "UILabel"; text = "Precautions :"; ObjectID = "o65-df-FrW"; */
+"o65-df-FrW.text" = "الإحتياطات :";
 
-/* Class = "UILabel"; text = "Done"; ObjectID = "qh3-bx-Vdi"; */
-"qh3-bx-Vdi.text" = "تم";
+/* Class = "UILabel"; text = "Date  :"; ObjectID = "oPG-El-H58"; */
+"oPG-El-H58.text" = "التاريخ :";
 
-/* Class = "UIButton"; normalTitle = "Show Request Details"; ObjectID = "rjD-7f-TSe"; */
-"rjD-7f-TSe.normalTitle" = "عرض تفاصيل الطلب ";
+/* Class = "UINavigationItem"; title = "Request Status"; ObjectID = "oVD-1g-N7d"; */
+"oVD-1g-N7d.title" = "حالة الطلب";
 
-/* Class = "UILabel"; text = "Cost : 250 L.E"; ObjectID = "sBq-vg-DgG"; */
-"sBq-vg-DgG.text" = "المبلغ : ";
+/* Class = "UILabel"; text = "Your Requset Is Confirmed"; ObjectID = "tFU-4x-hUt"; */
+"tFU-4x-hUt.text" = " تم قبول طلبكم ";
 
-/* Class = "UILabel"; text = "Time  :"; ObjectID = "t3a-9w-S7A"; */
-"t3a-9w-S7A.text" = "الوقت ";
+/* Class = "UILabel"; text = "15:20 pm"; ObjectID = "v4W-Ma-Wee"; */
+"v4W-Ma-Wee.text" = "٠١:٣٠ م";
 
-/* Class = "UILabel"; text = "Pending"; ObjectID = "u3O-hJ-om8"; */
-"u3O-hJ-om8.text" = "إنتظار";
+/* Class = "UILabel"; text = "Your Are Wating For Result"; ObjectID = "xqd-ps-Hg6"; */
+"xqd-ps-Hg6.text" = " انت فى إنتظار النتيجه";
 
-/* Class = "UIButton"; normalTitle = "Cancel Request"; ObjectID = "vnM-g6-Esb"; */
-"vnM-g6-Esb.normalTitle" = "إلغاء الطلب";
+/* Class = "UIButton"; normalTitle = "Show Request Details"; ObjectID = "y1R-M0-Pld"; */
+"y1R-M0-Pld.normalTitle" = "عرض تفاصيل الطلب";
 
-/* Class = "UIButton"; normalTitle = "Show Request Details"; ObjectID = "wzk-Og-rPw"; */
-"wzk-Og-rPw.normalTitle" = "عرض تفاصيل الطلب ";
+/* Class = "UILabel"; text = "Taking Sample"; ObjectID = "z3E-pk-d3s"; */
+"z3E-pk-d3s.text" = "أخذ العينة";
