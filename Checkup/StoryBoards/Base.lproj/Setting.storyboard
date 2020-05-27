@@ -114,7 +114,7 @@
         <scene sceneID="uFb-Ib-Uf1">
             <objects>
                 <tableViewController storyboardIdentifier="passWordSVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="biU-dX-9FY" customClass="PassWordDetailsTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iK7-ok-W5w">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iK7-ok-W5w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -128,13 +128,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="665"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rx1-2H-ZQU">
-                                                    <rect key="frame" x="20" y="31" width="374" height="255"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rx1-2H-ZQU">
+                                                    <rect key="frame" x="20" y="11" width="374" height="643"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tBb-Vw-GXj" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tBb-Vw-GXj" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                             <rect key="frame" x="8" y="23" width="358" height="34"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="34" id="ZOl-CP-G7A"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             <userDefinedRuntimeAttributes>
@@ -153,9 +154,11 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVg-cQ-u2F" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVg-cQ-u2F" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                             <rect key="frame" x="8" y="191" width="358" height="34"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="34" id="nqx-8K-4hG"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             <userDefinedRuntimeAttributes>
@@ -174,9 +177,11 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oOJ-yh-eJZ" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                            <rect key="frame" x="8" y="103" width="358" height="34"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oOJ-yh-eJZ" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                            <rect key="frame" x="8" y="107" width="358" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="34" id="Paq-iu-26x"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             <userDefinedRuntimeAttributes>
@@ -197,8 +202,25 @@
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.99399190989847719" green="0.99399190989847719" blue="0.99399190989847719" alpha="0.74844820205479456" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="oOJ-yh-eJZ" firstAttribute="leading" secondItem="rx1-2H-ZQU" secondAttribute="leading" constant="8" id="0qu-qE-kbV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tBb-Vw-GXj" secondAttribute="trailing" constant="8" id="1jl-v1-9pd"/>
+                                                        <constraint firstItem="tBb-Vw-GXj" firstAttribute="leading" secondItem="rx1-2H-ZQU" secondAttribute="leading" constant="8" id="JUo-QP-DUu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="oOJ-yh-eJZ" secondAttribute="trailing" constant="8" id="JVO-3K-Ntj"/>
+                                                        <constraint firstItem="ZVg-cQ-u2F" firstAttribute="leading" secondItem="rx1-2H-ZQU" secondAttribute="leading" constant="8" id="hDV-YO-T6o"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ZVg-cQ-u2F" secondAttribute="trailing" constant="8" id="mj7-mE-Y8d"/>
+                                                        <constraint firstItem="oOJ-yh-eJZ" firstAttribute="top" secondItem="tBb-Vw-GXj" secondAttribute="bottom" constant="50" id="omo-ej-kDV"/>
+                                                        <constraint firstItem="ZVg-cQ-u2F" firstAttribute="top" secondItem="oOJ-yh-eJZ" secondAttribute="bottom" constant="50" id="rzJ-5z-hBT"/>
+                                                        <constraint firstItem="tBb-Vw-GXj" firstAttribute="top" secondItem="rx1-2H-ZQU" secondAttribute="top" constant="23" id="xcz-kp-7SF"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rx1-2H-ZQU" secondAttribute="bottom" id="S6o-hf-E7B"/>
+                                                <constraint firstItem="rx1-2H-ZQU" firstAttribute="leading" secondItem="fwD-nJ-QuI" secondAttribute="leadingMargin" id="ebf-BK-SLC"/>
+                                                <constraint firstItem="rx1-2H-ZQU" firstAttribute="top" secondItem="fwD-nJ-QuI" secondAttribute="topMargin" id="h86-CC-6YR"/>
+                                                <constraint firstItem="rx1-2H-ZQU" firstAttribute="trailing" secondItem="fwD-nJ-QuI" secondAttribute="trailingMargin" id="ja5-5V-AEL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>

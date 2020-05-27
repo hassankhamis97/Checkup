@@ -186,6 +186,7 @@
 		CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A8772246D61020020C403 /* MoreTableViewController.swift */; };
 		CC298B1424740A04001DEAE5 /* ExtesnionMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */; };
 		CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */; };
+		CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */; };
 		CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65C92479ACED00BA1062 /* InternetConnection.swift */; };
 		CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */; };
 		CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */; };
@@ -199,10 +200,8 @@
 		CC76172D24732A050084CC6E /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76172C24732A050084CC6E /* ImageModel.swift */; };
 		CC76172F24732A610084CC6E /* ImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76172E24732A610084CC6E /* ImagePresenter.swift */; };
 		CC799DEB247BC1D200F6BAAD /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC799DED247BC1D200F6BAAD /* Profile.storyboard */; };
-		CC799DF0247C582500F6BAAD /* NewRequestScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC799DF2247C582500F6BAAD /* NewRequestScreen.storyboard */; };
 		CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */; };
 		CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */; };
-		CC80B9D624771CAD00521508 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC80B9D524771CAD00521508 /* Statistics.storyboard */; };
 		CC80B9D924771F5300521508 /* StatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80B9D824771F5300521508 /* StatisticsTableViewController.swift */; };
 		CC80B9DB247727E800521508 /* ExtensionStatisticsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80B9DA247727E800521508 /* ExtensionStatisticsPicker.swift */; };
 		CC80B9DE2477350C00521508 /* StatisticsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80B9DD2477350C00521508 /* StatisticsContract.swift */; };
@@ -441,6 +440,8 @@
 		CC1A8772246D61020020C403 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtesnionMoreView.swift; sourceTree = "<group>"; };
 		CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
+		CC49FBCD247D37EE00A00D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
+		CC49FBD0247D37F200A00D97 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Statistics.strings; sourceTree = "<group>"; };
 		CC4B65C92479ACED00BA1062 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICheckConnection.swift; sourceTree = "<group>"; };
 		CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequstDetailsTableViewController.swift; sourceTree = "<group>"; };
@@ -455,11 +456,8 @@
 		CC76172E24732A610084CC6E /* ImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresenter.swift; sourceTree = "<group>"; };
 		CC799DEC247BC1D200F6BAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		CC799DEF247BC1DA00F6BAAD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Profile.strings; sourceTree = "<group>"; };
-		CC799DF1247C582500F6BAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewRequestScreen.storyboard; sourceTree = "<group>"; };
-		CC799DF4247C584100F6BAAD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/NewRequestScreen.strings; sourceTree = "<group>"; };
 		CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		CC80B9D524771CAD00521508 /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
 		CC80B9D824771F5300521508 /* StatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewController.swift; sourceTree = "<group>"; };
 		CC80B9DA247727E800521508 /* ExtensionStatisticsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionStatisticsPicker.swift; sourceTree = "<group>"; };
 		CC80B9DD2477350C00521508 /* StatisticsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsContract.swift; sourceTree = "<group>"; };
@@ -872,7 +870,7 @@
 				4E4542112479C7F000955FD8 /* Setting.storyboard */,
 				A33CA623246D3AEE0014CF6B /* Employee.storyboard */,
 				CC1A876F246D60810020C403 /* More.storyboard */,
-				CC80B9D524771CAD00521508 /* Statistics.storyboard */,
+				CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -1893,7 +1891,7 @@
 				4EE9F9462469A47F00BB4A39 /* RecieverCellTableViewCell.xib in Resources */,
 				4ECE5C62246ED94200932947 /* Login.storyboard in Resources */,
 				4E45420F2479C7F000955FD8 /* Setting.storyboard in Resources */,
-				CC80B9D624771CAD00521508 /* Statistics.storyboard in Resources */,
+				CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */,
 				4EE9F94124699E3200BB4A39 /* SenderCellTableViewCell.xib in Resources */,
 				CC1A8770246D60810020C403 /* More.storyboard in Resources */,
 				4E4542192479C9FE00955FD8 /* Localizable.strings in Resources */,
@@ -2246,24 +2244,6 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		CC799DED247BC1D200F6BAAD /* Profile.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC799DEC247BC1D200F6BAAD /* Base */,
-				CC799DEF247BC1DA00F6BAAD /* ar */,
-			);
-			name = Profile.storyboard;
-			sourceTree = "<group>";
-		};
-		CC799DF2247C582500F6BAAD /* NewRequestScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC799DF1247C582500F6BAAD /* Base */,
-				CC799DF4247C584100F6BAAD /* ar */,
-			);
-			name = NewRequestScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		BB13259D247BC43000997EF3 /* RequestTStatus.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2272,6 +2252,24 @@
 				BB1325A1247BC46A00997EF3 /* en */,
 			);
 			name = RequestTStatus.storyboard;
+			sourceTree = "<group>";
+		};
+		CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC49FBCD247D37EE00A00D97 /* Base */,
+				CC49FBD0247D37F200A00D97 /* ar */,
+			);
+			name = Statistics.storyboard;
+			sourceTree = "<group>";
+		};
+		CC799DED247BC1D200F6BAAD /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC799DEC247BC1D200F6BAAD /* Base */,
+				CC799DEF247BC1DA00F6BAAD /* ar */,
+			);
+			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -291,44 +291,58 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-D6-QVr">
                                 <rect key="frame" x="66" y="338" width="283" height="221"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Your Email " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp6-27-wi0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Email " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp6-27-wi0">
                                         <rect key="frame" x="55" y="24" width="173" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54r-UU-CDx" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54r-UU-CDx" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                         <rect key="frame" x="31" y="65" width="221" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="5Od-X6-dEI"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-yF-IiQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-yF-IiQ">
                                         <rect key="frame" x="189" y="165" width="39" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Reset"/>
                                         <connections>
                                             <action selector="resetPasswordBtn:" destination="e6c-EV-5CE" eventType="touchUpInside" id="y3P-N5-LeX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5A-6V-Kzg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5A-6V-Kzg">
                                         <rect key="frame" x="54" y="165" width="48" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
                                             <action selector="cancelReset:" destination="e6c-EV-5CE" eventType="touchUpInside" id="ITZ-9d-6ag"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter valid Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ws-uA-Hvu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter valid Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ws-uA-Hvu">
                                         <rect key="frame" x="31" y="123" width="221" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.024170271520000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="s5A-6V-Kzg" firstAttribute="leading" secondItem="6Ul-D6-QVr" secondAttribute="leading" constant="54" id="5dH-n5-sdy"/>
+                                    <constraint firstItem="54r-UU-CDx" firstAttribute="top" secondItem="zp6-27-wi0" secondAttribute="bottom" constant="20" id="6DZ-db-BuH"/>
+                                    <constraint firstAttribute="trailing" secondItem="hqA-yF-IiQ" secondAttribute="trailing" constant="55" id="7pl-tW-HrR"/>
+                                    <constraint firstItem="s5A-6V-Kzg" firstAttribute="top" secondItem="8ws-uA-Hvu" secondAttribute="bottom" constant="21" id="7w6-vU-ABt"/>
+                                    <constraint firstItem="54r-UU-CDx" firstAttribute="leading" secondItem="6Ul-D6-QVr" secondAttribute="leading" constant="31" id="ApT-ZK-Mr9"/>
+                                    <constraint firstAttribute="trailing" secondItem="54r-UU-CDx" secondAttribute="trailing" constant="31" id="BRz-Dk-XD1"/>
+                                    <constraint firstItem="zp6-27-wi0" firstAttribute="top" secondItem="6Ul-D6-QVr" secondAttribute="top" constant="24" id="L3F-lV-f9P"/>
+                                    <constraint firstItem="hqA-yF-IiQ" firstAttribute="leading" secondItem="s5A-6V-Kzg" secondAttribute="trailing" constant="87" id="LuA-l9-inT"/>
+                                    <constraint firstItem="8ws-uA-Hvu" firstAttribute="leading" secondItem="6Ul-D6-QVr" secondAttribute="leading" constant="31" id="NsQ-NC-MX8"/>
+                                    <constraint firstAttribute="trailing" secondItem="zp6-27-wi0" secondAttribute="trailing" constant="55" id="Vq3-Hs-fjl"/>
+                                    <constraint firstItem="8ws-uA-Hvu" firstAttribute="top" secondItem="54r-UU-CDx" secondAttribute="bottom" constant="24" id="ahO-ia-X06"/>
+                                    <constraint firstItem="zp6-27-wi0" firstAttribute="leading" secondItem="6Ul-D6-QVr" secondAttribute="leading" constant="55" id="cLd-uV-OUV"/>
+                                    <constraint firstItem="hqA-yF-IiQ" firstAttribute="top" secondItem="8ws-uA-Hvu" secondAttribute="bottom" constant="21" id="ni6-if-F6Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="8ws-uA-Hvu" secondAttribute="trailing" constant="31" id="rq0-JI-iFP"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.99769268134715028" green="0.99769268134715028" blue="0.99769268134715028" alpha="0.25966109154929579" colorSpace="custom" customColorSpace="sRGB"/>
