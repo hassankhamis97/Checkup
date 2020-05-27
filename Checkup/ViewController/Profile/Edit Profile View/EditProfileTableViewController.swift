@@ -47,6 +47,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
             let profilePresenterRef = ProfilePresenter(profileView: self)
                   let userId = Auth.auth().currentUser?.uid
                   profilePresenterRef.getUser(userId: userId!)
+            
         }
       
         else{
@@ -171,11 +172,16 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         
                 vc.isEditable=true;
         vc.parentRef = self
-        if user.address?.address1! != "" {
-                           vc.addressObj = user.address
-                      }
+//        if user.address?.address1! != "" {
+//                           vc.addressObj = user.address
+//                      }
         
-        
+         if(addressObj.address1 != ""){
+              vc.addressObj = addressObj
+        }
+           
+            
+  
                       navigationController?.pushViewController(vc, animated: true)
 
        

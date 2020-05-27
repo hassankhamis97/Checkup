@@ -35,3 +35,9 @@
 "address is required" = "العنوان مطلوب";
 "please insert at least photo or test Name" = "من فضلك ادخل على الاقل صورة الروشتة او اكتب اسم التحليل";
 "Enter Year First"="إختر سنة أولاً";
+"address is required"="العنوان مطلوب";
+"floor number is required"="رقم الطابق مطلوب";
+"building number is required"="رقم المبنى مطلوب";
+"please drop pin on map"="من فضلك حدد موقعك على الخريطة";
+"Apartment number is required"="رقم الشقة مطلوب";
+"This graph show the percentage of HBA1C during "=" هذه الإحصائية تشير إلى معدل السكر التراكمي خلال عام ";
