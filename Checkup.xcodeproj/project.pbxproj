@@ -2364,6 +2364,8 @@
 				A3CAED37247DB31000C8D721 /* en */,
 			);
 			name = signUp.storyboard;
+			sourceTree = "<group>";
+		};
 		BB13259D247BC43000997EF3 /* RequestTStatus.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2372,6 +2374,17 @@
 				BBFDEEFF247E852A003E2464 /* en */,
 			);
 			name = RequestTStatus.storyboard;
+			sourceTree = "<group>";
+		};
+	
+	
+		CC799DED247BC1D200F6BAAD /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC799DEC247BC1D200F6BAAD /* Base */,
+				CC799DEF247BC1DA00F6BAAD /* ar */,
+			);
+			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 		CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */ = {
@@ -2383,33 +2396,7 @@
 			name = Statistics.storyboard;
 			sourceTree = "<group>";
 		};
-		CC799DED247BC1D200F6BAAD /* Profile.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC799DEC247BC1D200F6BAAD /* Base */,
-				CC799DEF247BC1DA00F6BAAD /* ar */,
-			);
-			name = Profile.storyboard;
-			sourceTree = "<group>";
-		};
-		CC799DED247BC1D200F6BAAD /* Profile.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC799DEC247BC1D200F6BAAD /* Base */,
-				CC799DEF247BC1DA00F6BAAD /* ar */,
-			);
-			name = Profile.storyboard;
-			sourceTree = "<group>";
-		};
-		CC799DED247BC1D200F6BAAD /* Profile.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC799DEC247BC1D200F6BAAD /* Base */,
-				CC799DEF247BC1DA00F6BAAD /* ar */,
-			);
-			name = Profile.storyboard;
-			sourceTree = "<group>";
-		};
+		
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
