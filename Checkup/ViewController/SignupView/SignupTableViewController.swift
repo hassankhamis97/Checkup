@@ -23,7 +23,7 @@ import Firebase
 class SignupTableViewController: UITableViewController {
     
     
-    @IBOutlet weak var userNAme: SkyFloatingLabelTextFieldWithIcon!
+    @IBOutlet weak var userName: SkyFloatingLabelTextFieldWithIcon!
     
     @IBOutlet weak var email: SkyFloatingLabelTextFieldWithIcon!
     
@@ -38,14 +38,18 @@ class SignupTableViewController: UITableViewController {
         signUpBtn.layer.cornerRadius=30
         signUpBtn.layer.borderColor=UIColor.white.cgColor
         signUpBtn.layer.borderWidth=2
+        
+        userName.placeholder = "SIGN_UP_NAME".localized
+        email.placeholder = "SIGN_UP_Email".localized
+        password.placeholder = "SIGN_UP_Password".localized
+        confirmPassword.placeholder = "SIGN_UP_ConfirmPassword".localized
+        signUpBtn.setTitle("SIGN_UP_signup".localized, for: .normal)
     }
     
     @IBAction func saveDataSignupBtn(_ sender: Any) {
         
         let signPresenter : SignupPresenter = SignupPresenter(signupViewRef: self)
-        if signPresenter.saveAuthDate(username: userNAme.text!, email: email.text!, password: password.text!, confirmPassword: confirmPassword.text! ) {
-            self.dismiss(animated: true, completion: nil)
-        }
+       signPresenter.saveAuthDate(username: userName.text!, email: email.text!, password: password.text!, confirmPassword: confirmPassword.text! ) 
     }
 }
 

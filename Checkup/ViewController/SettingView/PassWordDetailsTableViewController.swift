@@ -21,8 +21,12 @@ class PassWordDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+
+        oldPasswordLbl.placeholder = "NEW_PASSWORD_OldPassword".localized
         
+        newPasswordLbl.placeholder = "NEW_PASSWORD_NewPassword".localized
         
+        confirmNewPasswordLbl.placeholder = "NEW_PASSWORD_ConfirmNewPassword".localized
     }
     
     @IBAction func DoneBtn(_ sender: Any) {

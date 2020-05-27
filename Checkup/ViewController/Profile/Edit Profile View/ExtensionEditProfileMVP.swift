@@ -17,6 +17,7 @@ extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileV
     
     func renderProfileView(user: User) {
         self.user=user
+        self.addressObj=user.address
         reloadData()
     }
     

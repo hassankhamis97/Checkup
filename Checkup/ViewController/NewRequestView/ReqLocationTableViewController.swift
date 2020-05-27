@@ -90,7 +90,7 @@ class ReqLocationTableViewController: UITableViewController , ICheckLocation , U
         else if buildingNoTxt.text!.isEmpty{
             message = "building number is required"
         }
-            else if addressObj.latitude == 0 && addressObj.longitude == 0{
+            else if (addressObj.latitude == 0 && addressObj.longitude == 0)||(addressObj.latitude == nil && addressObj.longitude == nil){
             message = "please drop pin on map"
         }
             if !message.isEmpty {
