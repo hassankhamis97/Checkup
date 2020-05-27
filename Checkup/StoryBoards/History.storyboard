@@ -492,7 +492,7 @@
                                                             <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
-                                                            <integer key="value" value="1"/>
+                                                            <integer key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -724,17 +724,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4xj-qS-NgL">
-                                                    <rect key="frame" x="20" y="11" width="374" height="180"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="202"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tQb-gZ-XE1">
-                                                        <size key="itemSize" width="131" height="135"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="202" id="4hv-k8-GVi"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tQb-gZ-XE1">
+                                                        <size key="itemSize" width="131" height="202"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pdfCell" id="etf-Zy-Ihe" customClass="ResultPDFCollectionViewCell" customModule="Checkup" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="5" width="131" height="170"/>
+                                                            <rect key="frame" x="0.0" y="16" width="131" height="170"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wz4-H8-gv6">
                                                                 <rect key="frame" x="0.0" y="0.0" width="131" height="170"/>
@@ -748,8 +751,8 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rf-Fg-HbX">
-                                                                        <rect key="frame" x="39" y="133" width="53" height="27"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                        <rect key="frame" x="44.5" y="133" width="42" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -762,7 +765,7 @@
                                                                     <constraint firstItem="0rf-Fg-HbX" firstAttribute="centerX" secondItem="wz4-H8-gv6" secondAttribute="centerX" id="kBm-6B-rzL"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
-                                                            <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <size key="customSize" width="131" height="170"/>
                                                             <connections>
                                                                 <outlet property="pdfNameLabel" destination="0rf-Fg-HbX" id="bSr-ZC-By9"/>
@@ -776,10 +779,9 @@
                                                 </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="4xj-qS-NgL" secondAttribute="trailing" id="0ii-oN-Zun"/>
-                                                <constraint firstItem="4xj-qS-NgL" firstAttribute="leading" secondItem="lJC-8R-t9l" secondAttribute="leadingMargin" id="Fpt-EA-Hby"/>
-                                                <constraint firstItem="4xj-qS-NgL" firstAttribute="top" secondItem="lJC-8R-t9l" secondAttribute="topMargin" id="cV9-I5-aHa"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="4xj-qS-NgL" secondAttribute="bottom" id="rHC-Sb-FSt"/>
+                                                <constraint firstItem="4xj-qS-NgL" firstAttribute="trailing" secondItem="lJC-8R-t9l" secondAttribute="trailingMargin" id="76l-Be-wVo"/>
+                                                <constraint firstItem="4xj-qS-NgL" firstAttribute="leading" secondItem="lJC-8R-t9l" secondAttribute="leadingMargin" id="Qzn-t9-Xkw"/>
+                                                <constraint firstItem="4xj-qS-NgL" firstAttribute="top" secondItem="lJC-8R-t9l" secondAttribute="topMargin" id="s54-UC-bf5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
