@@ -15,9 +15,14 @@ class LabaDescriptionModel: ILabDescModel {
         newDescPresenter = descPreseneter
     }
 
-    func fetchLabDes() {
-  
-        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetLabBranchMenus?take=5&skip=0&latitude=31.1803167&longitude=29.9137701&labId=-M7O-IStoBsiYrQFpwo_&governId=1").responseJSON { (respone) in
+    func fetchLabDes(modelParams : LabDescriptionParams) {
+        var skip = modelParams.skip
+        var take = modelParams.take
+        var labId = modelParams.labId
+        var longitude = modelParams.longitude
+        var latitude = modelParams.latitude
+        var governId = modelParams.governId
+        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetLabBranchMenus?take=\(take)&skip=\(skip)&latitude=\(latitude)&longitude=\(longitude)&labId=\(labId)&governId=\(governId)").responseJSON { (respone) in
             if let JSON = respone.result.value{
                 print("lab description ")
 
