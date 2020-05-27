@@ -28,8 +28,10 @@ class RequestStatusTableViewController: UITableViewController  {
     
     
     @IBAction func showEmpDetailsBtn(_ sender: Any) {
-        var empDetails =  self.storyboard?.instantiateViewController(withIdentifier: "EMPDETAILS") as! PopUpTableViewController
+        
+        let empDetails =  self.storyboard?.instantiateViewController(withIdentifier: "EMPDETAILS") as! PopUpTableViewController
         guard let empID = self.testStatusObj.employeeId else {
+             Alert.showAdvancedAlert(title: "STATUS_EMP_NOT_FOUND".localized, message: "STATUS_DELETE_CONFIRMATION".localized, viewAdvancedAlertRef: self)
             return
         }
         empDetails.employeeID = empID
