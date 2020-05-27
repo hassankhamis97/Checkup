@@ -80,7 +80,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
         }
         
 
-        tabBarController?.tabBar.items?[1].badgeValue = "1"
+//        tabBarController?.tabBar.items?[1].badgeValue = "1"
 //        tabBarController?.repositionBadges(tab: 1)
 //        tabBarController?.tabBar.items?[1].se
 

@@ -93,6 +93,11 @@
 		4E4EA640247015F000309CAF /* NewRequestResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA63F247015F000309CAF /* NewRequestResponseExtension.swift */; };
 		4E77B4C2247757E3000B3118 /* GetFilteredLabsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77B4C1247757E3000B3118 /* GetFilteredLabsPresenter.swift */; };
 		4E77B4C42477597F000B3118 /* GetFilteredLabsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77B4C32477597F000B3118 /* GetFilteredLabsResponse.swift */; };
+		4E87AF48247EC2FD00002E66 /* ManualNotificationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87AF47247EC2FD00002E66 /* ManualNotificationContract.swift */; };
+		4E87AF4B247EC3A300002E66 /* ManualNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87AF4A247EC3A300002E66 /* ManualNotification.swift */; };
+		4E87AF4D247EC52700002E66 /* ManualNotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87AF4C247EC52600002E66 /* ManualNotificationPresenter.swift */; };
+		4E87AF4F247EC5D000002E66 /* ManualNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87AF4E247EC5D000002E66 /* ManualNotificationModel.swift */; };
+		4E87AF51247EDC5C00002E66 /* ResultDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87AF50247EDC5C00002E66 /* ResultDetailsTableViewController.swift */; };
 		4E936328247845430004FEDC /* ResultUITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E936327247845430004FEDC /* ResultUITabBar.swift */; };
 		4EAA2AD8246CABC70050B0AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */; };
 		4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */; };
@@ -347,6 +352,11 @@
 		4E4EA63F247015F000309CAF /* NewRequestResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestResponseExtension.swift; sourceTree = "<group>"; };
 		4E77B4C1247757E3000B3118 /* GetFilteredLabsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredLabsPresenter.swift; sourceTree = "<group>"; };
 		4E77B4C32477597F000B3118 /* GetFilteredLabsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredLabsResponse.swift; sourceTree = "<group>"; };
+		4E87AF47247EC2FD00002E66 /* ManualNotificationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualNotificationContract.swift; sourceTree = "<group>"; };
+		4E87AF4A247EC3A300002E66 /* ManualNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualNotification.swift; sourceTree = "<group>"; };
+		4E87AF4C247EC52600002E66 /* ManualNotificationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualNotificationPresenter.swift; sourceTree = "<group>"; };
+		4E87AF4E247EC5D000002E66 /* ManualNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualNotificationModel.swift; sourceTree = "<group>"; };
+		4E87AF50247EDC5C00002E66 /* ResultDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsTableViewController.swift; sourceTree = "<group>"; };
 		4E936327247845430004FEDC /* ResultUITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultUITabBar.swift; sourceTree = "<group>"; };
 		4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -940,6 +950,7 @@
 		4E432F0A2464F6EF00D1CACA /* History */ = {
 			isa = PBXGroup;
 			children = (
+				4E87AF52247EDC6F00002E66 /* Extention */,
 				4E432F0C2464F6EF00D1CACA /* HistoryTableViewCell.swift */,
 				4E432F0D2464F6EF00D1CACA /* HistoryTableViewController.swift */,
 				4E432F0E2464F6EF00D1CACA /* pdf.pdf */,
@@ -947,6 +958,7 @@
 				03F834702468D8D9000155A4 /* RadioButton.swift */,
 				0358339D246953FD008DD8C2 /* UIButtonExtension.swift */,
 				03FDA18A247035F20084C4AA /* PdfDescViewController.swift */,
+				4E87AF50247EDC5C00002E66 /* ResultDetailsTableViewController.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -990,6 +1002,37 @@
 			path = NewRequest;
 			sourceTree = "<group>";
 		};
+		4E87AF43247EC2A500002E66 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				4E87AF4C247EC52600002E66 /* ManualNotificationPresenter.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		4E87AF46247EC2E600002E66 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				4E87AF47247EC2FD00002E66 /* ManualNotificationContract.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		4E87AF49247EC38B00002E66 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				4E87AF4A247EC3A300002E66 /* ManualNotification.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		4E87AF52247EDC6F00002E66 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
 		4E936326247844FF0004FEDC /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1029,6 +1072,7 @@
 		4EBBC944246B5C9500C7978D /* POJOs */ = {
 			isa = PBXGroup;
 			children = (
+				4E87AF49247EC38B00002E66 /* Notification */,
 				CC80B9DF2477354D00521508 /* Statistic */,
 				4EC16270246F6A400053F581 /* Test */,
 				4EC1626B246F5BEC0053F581 /* User */,
@@ -1140,6 +1184,7 @@
 		4ECE5C48246E893D00932947 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				4E87AF43247EC2A500002E66 /* Notification */,
 				4EDCBA5E247D49B900DE1AB5 /* New Group */,
 				03C1DD2D24789E1C00D2A008 /* BranchDescription */,
 				03067A242477725D000F1424 /* LabDescription */,
@@ -1179,6 +1224,7 @@
 				03067A222477724F000F1424 /* LabDescriptionModel.swift */,
 				03C1DD292478581900D2A008 /* BranchDescModel.swift */,
 				CC80B9E5247738CC00521508 /*  StatisticsModel.swift */,
+				4E87AF4E247EC5D000002E66 /* ManualNotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1681,6 +1727,7 @@
 		CC8A1044245E0844007856BF /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				4E87AF46247EC2E600002E66 /* Notification */,
 				03C1DD282478579B00D2A008 /* BranchDescription */,
 				03067A2724777312000F1424 /* LabDescription */,
 				CC80B9DC247734BD00521508 /* Statistics */,
@@ -2038,6 +2085,7 @@
 				4EC1FD2D2472AA2A0029C499 /* AddressLocationView.swift in Sources */,
 				4E936328247845430004FEDC /* ResultUITabBar.swift in Sources */,
 				CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */,
+				4E87AF4D247EC52700002E66 /* ManualNotificationPresenter.swift in Sources */,
 				CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */,
 				4E206DFC246F076F007C401D /* Comment.swift in Sources */,
 				4EC1626F246F5EEA0053F581 /* Address.swift in Sources */,
@@ -2062,6 +2110,7 @@
 				4EE9F9452469A47F00BB4A39 /* RecieverCellTableViewCell.swift in Sources */,
 				4E2C9E0224708D77007C6109 /* BranchDescriptionViewController.swift in Sources */,
 				03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */,
+				4E87AF4F247EC5D000002E66 /* ManualNotificationModel.swift in Sources */,
 				4E77B4C42477597F000B3118 /* GetFilteredLabsResponse.swift in Sources */,
 				CCDF8BBD24713DE200F56B2D /* ExtensionLocationView.swift in Sources */,
 				4E206DF2246EF241007C401D /* RealTime.swift in Sources */,
@@ -2088,6 +2137,7 @@
 				CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */,
 				4E206DF5246F0257007C401D /* BranchDescription.swift in Sources */,
 				CC76172B247329030084CC6E /* ImageContract.swift in Sources */,
+				4E87AF51247EDC5C00002E66 /* ResultDetailsTableViewController.swift in Sources */,
 				4EE9F9492469B70A00BB4A39 /* MessageLabel.swift in Sources */,
 				A38CCEFF247214D900BC684A /* ResetPasswordViewController.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
@@ -2111,6 +2161,7 @@
 				03C1DD2A2478581900D2A008 /* BranchDescModel.swift in Sources */,
 				CC76172F24732A610084CC6E /* ImagePresenter.swift in Sources */,
 				03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */,
+				4E87AF48247EC2FD00002E66 /* ManualNotificationContract.swift in Sources */,
 				4E77B4C2247757E3000B3118 /* GetFilteredLabsPresenter.swift in Sources */,
 				A33CA62B246D3F610014CF6B /* UserCustomTableViewCell.swift in Sources */,
 				4EC1FD3A2472E2530029C499 /* SmallDescLabTableViewCell.swift in Sources */,
@@ -2153,6 +2204,7 @@
 				BBBB1B502477C9B30013D06F /* CancelRquestModel.swift in Sources */,
 				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
 				4EF2BA6724733C9F00602123 /* FilterStatus.swift in Sources */,
+				4E87AF4B247EC3A300002E66 /* ManualNotification.swift in Sources */,
 				4E128757247474AA00A57F25 /* GetAddressContract.swift in Sources */,
 				03FDA1902470B4440084C4AA /* BranchDescriptionTableView.swift in Sources */,
 				4E206DFA246F06E6007C401D /* Review.swift in Sources */,
@@ -2277,15 +2329,6 @@
 				CC49FBD0247D37F200A00D97 /* ar */,
 			);
 			name = Statistics.storyboard;
-			sourceTree = "<group>";
-		};
-		CC799DED247BC1D200F6BAAD /* Profile.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC799DEC247BC1D200F6BAAD /* Base */,
-				CC799DEF247BC1DA00F6BAAD /* ar */,
-			);
-			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 		CC799DED247BC1D200F6BAAD /* Profile.storyboard */ = {

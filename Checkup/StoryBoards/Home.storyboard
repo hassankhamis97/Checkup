@@ -354,10 +354,10 @@
             </objects>
             <point key="canvasLocation" x="-654" y="315"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--ResultUI Tab Bar-->
         <scene sceneID="Fgl-UN-hSU">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a7m-TO-BCx" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a7m-TO-BCx" customClass="ResultUITabBar" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bAa-Ju-IV3">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
