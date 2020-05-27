@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "This graph show the percentage of H1Ab1c during 2019"; ObjectID = "B4L-gc-pfz"; */
+"B4L-gc-pfz.text" = "This graph show the percentage of H1Ab1c during 2019";
+
+/* Class = "UITextField"; placeholder = "Enter Year To Show Graph"; ObjectID = "Mbk-T7-Nw8"; */
+"Mbk-T7-Nw8.placeholder" = "أدخل سنة محددة من فضلك";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "hB4-zv-CJa"; */
+"hB4-zv-CJa.normalTitle" = "تم";
