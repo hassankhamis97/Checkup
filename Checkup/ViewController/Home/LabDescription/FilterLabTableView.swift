@@ -8,16 +8,18 @@
 
 import UIKit
 
-class FilterLabTableView: UITableViewController {
+class FilterLabTableView: UITableViewController , IFilterLabView {
+    
 
         var sectionTitle : [String] = ["Governerates"]
-        var sectionGovernerates : [String] = ["Alexandria" , "Cairo" , "Mansoura"]
-     //   var sectionLocation : [String] = ["Somouha" , "Kafr Abdo" , "Abu Kir"]
+        var sectionGovernerates : [String] = ["Alex" , "Cairo" , "Mansoura","Portsaid" , "Sharm"]
 
+        var filterLabPresenter : IFilterLabPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        filterLabPresenter = FilterLabPresenter(view: self)
      
     }
 
@@ -50,12 +52,18 @@ class FilterLabTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
 
-print("aya")
-    
+        print("aya")
+         print(sectionGovernerates[indexPath.row])
+        filterLabPresenter.getDataFromModel(govern: sectionGovernerates[indexPath.row])
+        self.navigationController?.popViewController(animated: true)
     }
-
     
+    func returnDataToView(filterLabObjInView: FilterLab) {
+        print("data returnedin view")
+        print(filterLabObjInView.id!)
+    }
     
+      
     
     
     

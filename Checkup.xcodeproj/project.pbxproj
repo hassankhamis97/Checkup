@@ -15,7 +15,7 @@
 		0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */; };
 		0358339E246953FD008DD8C2 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358339D246953FD008DD8C2 /* UIButtonExtension.swift */; };
 		035A048B247DB0B50017A885 /* FilterLabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035A048A247DB0B50017A885 /* FilterLabModel.swift */; };
-		035A048E247DB1010017A885 /* FilterLaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035A048D247DB1010017A885 /* FilterLaPresenter.swift */; };
+		035A048E247DB1010017A885 /* FilterLabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035A048D247DB1010017A885 /* FilterLabPresenter.swift */; };
 		035A0491247DB1490017A885 /* FilterLabContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035A0490247DB1490017A885 /* FilterLabContract.swift */; };
 		035A0493247DFBA90017A885 /* LabDescriptionParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035A0492247DFBA90017A885 /* LabDescriptionParams.swift */; };
 		03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD2246CC39700C0BF33 /* BranchesCollectionViewCell.swift */; };
@@ -266,7 +266,7 @@
 		0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		0358339D246953FD008DD8C2 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		035A048A247DB0B50017A885 /* FilterLabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLabModel.swift; sourceTree = "<group>"; };
-		035A048D247DB1010017A885 /* FilterLaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLaPresenter.swift; sourceTree = "<group>"; };
+		035A048D247DB1010017A885 /* FilterLabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLabPresenter.swift; sourceTree = "<group>"; };
 		035A0490247DB1490017A885 /* FilterLabContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLabContract.swift; sourceTree = "<group>"; };
 		035A0492247DFBA90017A885 /* LabDescriptionParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescriptionParams.swift; sourceTree = "<group>"; };
 		03789BD2246CC39700C0BF33 /* BranchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -566,7 +566,7 @@
 		035A048C247DB0D00017A885 /* FilterLab */ = {
 			isa = PBXGroup;
 			children = (
-				035A048D247DB1010017A885 /* FilterLaPresenter.swift */,
+				035A048D247DB1010017A885 /* FilterLabPresenter.swift */,
 			);
 			path = FilterLab;
 			sourceTree = "<group>";
@@ -2169,7 +2169,7 @@
 				4EE9F9492469B70A00BB4A39 /* MessageLabel.swift in Sources */,
 				A38CCEFF247214D900BC684A /* ResetPasswordViewController.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
-				035A048E247DB1010017A885 /* FilterLaPresenter.swift in Sources */,
+				035A048E247DB1010017A885 /* FilterLabPresenter.swift in Sources */,
 				03FDA19B2470CA650084C4AA /* FifthStaticTableViewCell.swift in Sources */,
 				03F7D97024740D1700E92A73 /* MainChatPresenter.swift in Sources */,
 				4E2C9DFF24706E3E007C6109 /* IView.swift in Sources */,
@@ -2361,15 +2361,6 @@
 				CC49FBD0247D37F200A00D97 /* ar */,
 			);
 			name = Statistics.storyboard;
-			sourceTree = "<group>";
-		};
-		CC799DED247BC1D200F6BAAD /* Profile.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC799DEC247BC1D200F6BAAD /* Base */,
-				CC799DEF247BC1DA00F6BAAD /* ar */,
-			);
-			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 		CC799DED247BC1D200F6BAAD /* Profile.storyboard */ = {
