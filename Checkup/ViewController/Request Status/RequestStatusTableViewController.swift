@@ -301,7 +301,11 @@ class RequestStatusTableViewController: UITableViewController  {
         
         
         //****************** Languages check ****************///
-        let langStr = Locale.current.languageCode
+        if Locale.current.languageCode == "ar"
+        {
+            progressBarView.direction = StepIndicatorViewDirection(rawValue: 1)!
+        }
+        
         ///*********************////
         testStatusObj = Test();
         
