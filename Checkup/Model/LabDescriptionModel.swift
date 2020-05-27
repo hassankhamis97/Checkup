@@ -16,12 +16,12 @@ class LabaDescriptionModel: ILabDescModel {
     }
 
     func fetchLabDes(modelParams : LabDescriptionParams) {
-        var skip = modelParams.skip
-        var take = modelParams.take
-        var labId = modelParams.labId
-        var longitude = modelParams.longitude
-        var latitude = modelParams.latitude
-        var governId = modelParams.governId
+        var skip = modelParams.skip!
+        var take = modelParams.take!
+        var labId = modelParams.labId!
+        var longitude = modelParams.longitude!
+        var latitude = modelParams.latitude!
+        var governId = modelParams.governId!
         Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetLabBranchMenus?take=\(take)&skip=\(skip)&latitude=\(latitude)&longitude=\(longitude)&labId=\(labId)&governId=\(governId)").responseJSON { (respone) in
             if let JSON = respone.result.value{
                 print("lab description ")

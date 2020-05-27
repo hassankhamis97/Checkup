@@ -222,7 +222,7 @@
                                                     </cells>
                                                     <connections>
                                                         <outlet property="dataSource" destination="fm3-e1-75I" id="9tR-Jq-ORq"/>
-                                                        <outlet property="delegate" destination="qKj-Pp-iBe" id="tw4-tq-YVZ"/>
+                                                        <outlet property="delegate" destination="fm3-e1-75I" id="cE1-zs-1kw"/>
                                                     </connections>
                                                 </collectionView>
                                             </subviews>

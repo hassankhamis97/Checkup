@@ -53,8 +53,15 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
         
         //abDescProtocolObj!.paginatingData()
     }
-      
-
+    
+       func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//            print("cell is selected")
+//            var details = storyboard!.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
+//            self.navigationController?.pushViewController(details, animated: true)
+        let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
+        branchDesc.modalPresentationStyle = .fullScreen
+        self.present(branchDesc , animated: true , completion: nil)
+        }
 }
 
 

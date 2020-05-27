@@ -31,7 +31,7 @@ class LabDescTableViewController: UITableViewController , ILabDescView{
         
         
       
-       navigationItem.leftBarButtonItem = UIBarButtonItem(title: "description", style: .plain, target: self, action: #selector(navigateToDesc))
+//       navigationItem.leftBarButtonItem = UIBarButtonItem(title: "description", style: .plain, target: self, action: #selector(navigateToDesc))
        
         
         
@@ -58,12 +58,12 @@ class LabDescTableViewController: UITableViewController , ILabDescView{
     }
     
     
-    @objc func navigateToDesc() {
-        let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
-        branchDesc.modalPresentationStyle = .fullScreen
-        self.present(branchDesc , animated: true , completion: nil)
-        
-    }
+//    @objc func navigateToDesc() {
+//        let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
+//        branchDesc.modalPresentationStyle = .fullScreen
+//        self.present(branchDesc , animated: true , completion: nil)
+//        
+//    }
     
 
     func showingDataOnView(labDescObj: Branches) {
