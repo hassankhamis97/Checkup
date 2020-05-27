@@ -298,6 +298,10 @@ class RequestStatusTableViewController: UITableViewController  {
         
         self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
         
+        
+        
+        //****************** Languages check ****************///
+        let langStr = Locale.current.languageCode
         ///*********************////
         testStatusObj = Test();
         
