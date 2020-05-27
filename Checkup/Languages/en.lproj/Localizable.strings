@@ -28,3 +28,15 @@
 "STATUS_LOCATION"="Location";
 "STATUS_TIME"="Time";
 "STATUS_DATE"="Date";
+"SIGN_UP_NAME" = "Name";
+"SIGN_UP_Email" = "Email";
+"SIGN_UP_Password" = "password";
+"SIGN_UP_ConfirmPassword" = "Confirm Password";
+"SIGN_UP_signup" = "Sign up";
+"RESET_PASSWORD_EnterEmail" = "Enter Your Email";
+"RESET_PASSWORD_ValidEmail" = "Enter Valid Email";
+"RESET_PASSWORD_Reset" = "Reset";
+"RESET_PASSWORD_Cancel" = "Cancel";
+"NEW_PASSWORD_OldPassword"="Old Password";
+"NEW_PASSWORD_NewPassword"="New Password";
+"NEW_PASSWORD_ConfirmNewPassword"="Confirm New Password";

@@ -16,14 +16,12 @@ class SignupModel: ISignupModel {
     init(singupPresenterRef : ISignupPresenter) {
         self.singupPresenterRef = singupPresenterRef
     }
-    func saveAuthDate(username: String, email: String, password: String, confirmPassword: String) -> Bool {
+    func saveAuthDate(username: String, email: String, password: String, confirmPassword: String) {
         
-        var check: Bool = false
         
         if username.count == 0 && email.count == 0 && (password.count < 6 || password != confirmPassword ) {
             
             self.singupPresenterRef.onFail(message: "Invalid Data")
-            return check
         } else {
             
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -59,13 +57,10 @@ class SignupModel: ISignupModel {
                     realTime.addUser(id: id ?? "", email: email, birthdate: "", gender: "", phone: phoneArray, insurance: "", address: addressObj, imagePath: "", name: username)
                     
                     self.singupPresenterRef.onSuccess()
-                    check = true
-                    self.singupPresenterRef.onFail(message: "user created successfully")
+//                    self.singupPresenterRef.onFail(message: "user created successfully")
+//                    self.singupPresenterRef.onSuccess()
                 }
             }
         }
-        
-        return check
     }
-    
 }
