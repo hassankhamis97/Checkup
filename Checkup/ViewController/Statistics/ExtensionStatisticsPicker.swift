@@ -24,14 +24,53 @@ extension StatisticsTableViewController:UIPickerViewDelegate,UIPickerViewDataSou
        
        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
            
-           yearTextField.text=yearArray[row]
-           yearTextField.resignFirstResponder()
+        index=row
+    
        }
     
     
     
     
     
+    
+    
+    
+    func createDatePicker(){
+           
+           let toolbar=UIToolbar()
+           toolbar.sizeToFit()
+        
+           let doneBtn=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action:#selector(donePressed))
+           toolbar.setItems(([doneBtn]), animated: true)
+           yearTextField.inputAccessoryView=toolbar
+           yearTextField.inputView=yearPickerView
+
+           
+       }
+       
+    @objc func donePressed(){
+        if let ind=index{
+            if index==0{
+                 yearTextField.text=""
+            }
+            else{
+                  yearTextField.text=yearArray[index]
+            }
+        }
+        else{
+            yearTextField.text=""
+        }
+      
+
+         self.view.endEditing(true)
+//
+       }
+       
+    
+//    func getTheIndex()->Int{
+//        
+//        return self.index
+//    }
     
     
     

@@ -22,10 +22,11 @@ class StatisticsTableViewController: UITableViewController ,IView{
     
     @IBOutlet weak var barChartView: BarChartView!
     @IBOutlet weak var yearTextField: UITextField!
+      var index:Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        yearArray.append("Select Year")
         
         for n in 2020...2070 {
             var y = String(n)
@@ -39,6 +40,7 @@ class StatisticsTableViewController: UITableViewController ,IView{
         
         graphDescribtionLabel.alpha=0
         
+        createDatePicker()
     }
     
     
@@ -60,7 +62,7 @@ class StatisticsTableViewController: UITableViewController ,IView{
             
             statisticsPresenterRef.getSample(userId: Auth.auth().currentUser!.uid, year: selectedYear!)
             
-            setChart(dataPoints: sampleObj.year!, values: sampleObj.sample!)
+//            setChart(dataPoints: sampleObj.year!, values: sampleObj.sample!)
             
             
         }
@@ -96,18 +98,20 @@ class StatisticsTableViewController: UITableViewController ,IView{
         
         barChartView.xAxis.granularityEnabled = true
         barChartView.xAxis.granularity = 1.0
-        barChartView.leftAxis.axisMaximum=30
+        barChartView.leftAxis.axisMaximum=7
         self.barChartView.xAxis.drawGridLinesEnabled = false
         //             self.barChartView.legend.enabled = false
         self.barChartView.leftAxis.labelFont = UIFont.systemFont(ofSize: 10.0, weight:.bold)
         
         self.barChartView.xAxis.labelFont = UIFont.systemFont(ofSize: 10.0, weight:.bold)
         barChartView.rightAxis.enabled=false
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Hb1c1")
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "HBA1C")
         let chartData = BarChartData(dataSet: chartDataSet)
         chartDataSet.colors=ChartColorTemplates.liberty()
         chartDataSet.valueFont=UIFont.systemFont(ofSize: 10.0, weight:.bold)
         barChartView.data = chartData
+        let s="This graph show the percentage of HBA1C during ".localized
+        graphDescribtionLabel.text=s+yearTextField.text!
         graphDescribtionLabel.alpha=1
         
     }

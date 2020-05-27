@@ -392,7 +392,6 @@
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                             <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="22elsalamStreet"/>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
                                                             <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
@@ -403,6 +402,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                     <state key="normal" title="Preview Address"/>
+                                                    <connections>
+                                                        <action selector="previewAddressBtn:" destination="26o-WZ-09i" eventType="touchUpInside" id="ew9-Mu-CoX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -548,6 +550,7 @@
                     <navigationItem key="navigationItem" title="New Request" id="BnS-6m-rmy"/>
                     <connections>
                         <outlet property="activityIndicator" destination="ldJ-Qp-CB5" id="9q1-Fu-woh"/>
+                        <outlet property="addressTextField" destination="6pK-Ma-HUc" id="SgH-AW-4WP"/>
                         <outlet property="collectionView" destination="CnN-7h-CpX" id="cfc-cy-sii"/>
                         <outlet property="dateTextField" destination="d33-vj-3mb" id="APO-Q1-gcw"/>
                         <outlet property="deleteImageBtn" destination="Eh2-Lb-Neq" id="vaK-34-90J"/>
@@ -1088,6 +1091,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqn-My-xx6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1780" y="240"/>
+        </scene>
+        <!--editSvc-->
+        <scene sceneID="Ck6-KY-gZS">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="editSvc" storyboardName="Profile" referencedIdentifier="editSvc" id="rIV-Ep-3mi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UhO-I0-sxJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="292"/>
         </scene>
         <!--Req Pop Up From Home View Controller-->
         <scene sceneID="Xzr-Oc-gkF">

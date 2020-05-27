@@ -144,7 +144,7 @@ class GetLabsModel: IGetLabsModel {
                 print(error)
                 break
             }
-            self.getFilteredLabsPresenter!.onSuccess(filterLabs: filterLabList)
+//            self.getFilteredLabsPresenter!.onSuccess(filterLabs: filterLabList)
             //                switch response.result {
             //                    case .success(let value):
             //

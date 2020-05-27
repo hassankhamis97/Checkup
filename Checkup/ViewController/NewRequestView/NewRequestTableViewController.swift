@@ -25,6 +25,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     
     @IBOutlet var loadingImagesMessages: UILabel!
     
+    @IBOutlet var addressTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var dateTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var timeTextField: SkyFloatingLabelTextFieldWithIcon!
     var testTexts=[String]()
@@ -37,12 +38,12 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     let timePicker=UIDatePicker()
     var ind:Int!
     var x=1
-    var y=1
+//    var hasAddress = false
     var branchId : String?
     var labId: String?
     var isFromHome: Bool?
     var addressObj : Address!
-    
+    var user : User!
     @IBOutlet var saveRequestBtn: UIButton!
     @IBAction func saveNewRequestBtn(_ sender: UIButton) {
         if(checkValidation()){
@@ -76,6 +77,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+//        hashString(str: "Vgo15V8FFZX9b9bRtFT3kkAdJ9D2")
         
         uploadImage.layer.cornerRadius=uploadImage.frame.width/2
         
@@ -112,6 +114,10 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             loginVC.modalPresentationStyle = .fullScreen
             self.present(loginVC, animated: true, completion: nil)
 
+        }
+        else {
+            var profilePresenter = ProfilePresenter(profileView: self)
+            profilePresenter.getUser(userId: Auth.auth().currentUser!.uid)
         }
         tableView.rowHeight = UITableView.automaticDimension
         slideShow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
@@ -217,17 +223,18 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             return 90
         }
         if indexPath.row == 5{// FILLED ADRESS
-            if(y==1)
+            if(addressObj==nil)
             {
                 return 0
             }
             else{
+                addressTextField.text = addressObj.address1
                 return 70
             }
         }
         
         if indexPath.row==6{// FILLED ADRESS
-            if(isFromHome! && y==1)
+            if(isFromHome! && addressObj==nil)
             {
                 return 70
             }
@@ -424,14 +431,23 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         
         
         let alert = UIAlertController(title: "Location", message: "Please Select an Option", preferredStyle: .actionSheet)
-        
-        alert.addAction(UIAlertAction(title: "Use your saved location", style: .default , handler:{ (UIAlertAction)in
-            print("User click Approve button")
-            
-            self.y=2
-            self.tableView.reloadData()
-            
-        }))
+        if(user == nil)
+        {
+            Alert.showSimpleAlert(title: "Alert", message: "please wait for loading data", viewRef: self)
+        }
+        else{
+        if user.address!.address1! != "" {
+            alert.addAction(UIAlertAction(title: "Use your saved location", style: .default , handler:{ (UIAlertAction)in
+                        print("User click Approve button")
+                        
+            //            self.y=2
+                self.addressObj = self.user.address!
+                        
+                        self.tableView.reloadData()
+                        
+                    }))
+        }
+        }
         
         alert.addAction(UIAlertAction(title: "Add new location  ", style: .default , handler:{ (UIAlertAction)in
             
@@ -458,7 +474,18 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         
         
     }
-   
+    @IBAction func previewAddressBtn(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ReqlocationSVC") as! ReqLocationTableViewController
+        
+                vc.isEditable=false;
+        if user.address?.address1! != "" {
+                           vc.addressObj = user.address
+                      }
+        
+        
+                      navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 
@@ -529,14 +556,36 @@ extension NewRequestTableViewController:UICollectionViewDelegate,UICollectionVie
         print("buttonPressed ! \(sender.tag)")
         testTexts.remove(at: sender.tag)
         collectionView.reloadData()
+        tableView.reloadData()
     }
     
     func getAddress(addressObj: Address) {
         self.addressObj = addressObj
     }
-    
+//    func hashString(str: String) -> Int {
+//            var hash : Double = 0
+//            for i in 0..<str.count {
+//    //            var yy = Character("a").asciiValue
+//    //            var x = Character(str[i]).asciiValue
+//                var x = Double(Character(str[i]).asciiValue * 31)
+//                var y = Double(str.count - i)
+//                hash += pow(x,y)
+//    //            pow(Decimal(Character(str[i]).asciiValue * 31), 5)
+//                var newhash = Int64(hash) & Int64(hash)
+//            }
+//        return hash.toInt()!
+//        }
 }
 
 
 
-
+//
+//extension Double {
+//    func toInt() -> Int? {
+//        if self >= Double(Int.min) && self < Double(Int.max) {
+//            return Int(self)
+//        } else {
+//            return nil
+//        }
+//    }
+//}

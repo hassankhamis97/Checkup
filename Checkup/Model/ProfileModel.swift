@@ -39,7 +39,7 @@ class ProfileModel:IProfileModel{
                 ?? ""
             let addressMain = value?["address"] as? NSDictionary
             
-            let address = addressMain?["address1"] as? String
+            let address = addressMain?["address"] as? String
                 ?? ""
             let apartmentNo = addressMain?["apartmentNo"] as? String
                 ?? ""

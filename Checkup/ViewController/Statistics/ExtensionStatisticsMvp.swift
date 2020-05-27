@@ -11,7 +11,13 @@ import Foundation
 extension StatisticsTableViewController:IStatisticView{
     func renderView(sampleObj: HbA1cSample) {
         self.sampleObj=sampleObj
-        setChart(dataPoints: sampleObj.year!, values: sampleObj.sample!)
+        if(sampleObj.year!.isEmpty || sampleObj.sample!.isEmpty)
+        {
+            Alert.showSimpleAlert(title: "Alert", message: "No Recorded Samples For This Year", viewRef: self)
+        }
+             setChart(dataPoints: sampleObj.year!, values: sampleObj.sample!)
+       
+       
     }
     
     func showIndicator() {

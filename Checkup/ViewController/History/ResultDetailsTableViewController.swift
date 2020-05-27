@@ -1,68 +1,47 @@
 //
-//  FilterLabTableView.swift
+//  ResultDetailsTableViewController.swift
 //  Checkup
 //
-//  Created by Aya on 5/13/20.
+//  Created by Hassan Khamis on 5/27/20.
 //  Copyright © 2020 Hassan Khamis. All rights reserved.
 //
 
 import UIKit
-
-class FilterLabTableView: UITableViewController {
-
-        var sectionTitle : [String] = ["Governerates"]
-        var sectionGovernerates : [String] = ["Alexandria" , "Cairo" , "Mansoura"]
-     //   var sectionLocation : [String] = ["Somouha" , "Kafr Abdo" , "Abu Kir"]
-
-
+import StepIndicator
+class ResultDetailsTableViewController: UITableViewController {
+@IBOutlet weak var progressBarView: StepIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return sectionGovernerates.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "filterLabCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-      
-            cell.textLabel?.text = sectionGovernerates[indexPath.row]
+        // Configure the cell...
 
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Governerates"
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    */
 
-
-print("aya")
-    
-    }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
