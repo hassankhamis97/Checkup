@@ -7,17 +7,20 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class ResultUITabBar: UITabBarController , IManualNotificationView{
     func renderView(manualNotification: ManualNotification) {
-        tabBar.items?[1].badgeValue = String(manualNotification.requestBadge)
-        tabBar.items?[3].badgeValue = String(manualNotification.resultBadge)
+        tabBar.items?[1].badgeValue = manualNotification.requestBadge > 0 ? String(manualNotification.requestBadge) : nil
+        tabBar.items?[3].badgeValue =  manualNotification.resultBadge > 0 ? String(manualNotification.resultBadge) : nil
+
         reloadInputViews()
     }
     
     override func viewDidLoad() {
+        if Auth.auth().currentUser?.uid != nil {
         var manualNotificationPresenter = ManualNotificationPresenter(manualNotificationViewRef: self)
         manualNotificationPresenter.getNotificationNumbers()
+        }
     }
 //    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
 //        if item == (self.tabBar.items as! [UITabBarItem])[1]{

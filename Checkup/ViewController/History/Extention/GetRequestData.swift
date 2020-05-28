@@ -11,6 +11,8 @@ extension ResultDetailsTableViewController : IRequestStatusView {
     func onReceiveRequestStatus(myObj: Test) {
         testObj = myObj
         descriptionTextView.text = testObj.description!
+        resultDateTextView.text = testObj.dateResult!
+        resultTimeTextView.text = testObj.timeResult!
         pdfCollectionView.reloadData()
     }
     

@@ -17,8 +17,13 @@ class MessagingChatViewController: UIViewController {
     var allMessagesList : [String] = []
     var allMessagesListReversed : [String] = []
     var currentPearedUser : PearedUserData!
+    var messageParams = MessageParams()
+    var messages : [Message]!
+    var messagingChatPresenter : MessagingChatPresenter!
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = currentPearedUser.name
+        
         msgTextField.layer.cornerRadius = 15.0
         msgTextField.layer.borderWidth = 2.0
 //        msgTextField.layer.borderColor = UIColor.red.cgColor
@@ -36,8 +41,18 @@ class MessagingChatViewController: UIViewController {
         allMessagesList.append("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg")
         allMessagesListReversed = allMessagesList.reversed()
         // Do any additional setup after loading the view.
+        
+        messagingChatPresenter = MessagingChatPresenter(messagingChatViewRef: self)
+        messageParams.pearedId = currentPearedUser.idPearedUser
+                
+                
+                messageParams.take = 20
+        //        messagingChatPresenter.getData(messageParams: messageParams, skip: &(messageParams.skip)!)
+                messagingChatPresenter.getData(messageParams: messageParams)
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
 
     /*
     // MARK: - Navigation
