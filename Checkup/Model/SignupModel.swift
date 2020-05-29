@@ -73,7 +73,6 @@ class SignupModel: ISignupModel {
     
     func saveToRealm(id: String, username: String) {
         //add user name & id to Realm
-//        DispatchQueue.main.async {
             if id.count > 0 && username.count > 0{
                 let person = Person()
                 person.id = id
@@ -82,7 +81,6 @@ class SignupModel: ISignupModel {
                 try! realm.write {
                     realm.add(person)
                 }
-//            }
         }
     }
 }
