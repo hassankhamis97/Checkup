@@ -92,12 +92,14 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             cell.labImageVIew.sd_setImage(with: URL(string: searchedHomeLabsArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             
             cell.labRating.rating =  (searchedHomeLabsArr[indexPath.row].rating as! NSString).doubleValue
+            cell.labRating.settings.disablePanGestures = true
             cell.labHotLine.text = searchedHomeLabsArr[indexPath.row].hotline
             
         }else{
             cell.labImageVIew.sd_setImage(with: URL(string: homeLabArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             
             cell.labRating.rating =  (homeLabArr[indexPath.row].rating as! NSString).doubleValue
+            cell.labRating.settings.disablePanGestures = true
             cell.labHotLine.text = homeLabArr[indexPath.row].hotline
         }
         cell.labImageVIew.layer.cornerRadius = 15
@@ -150,6 +152,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
      }*/
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
         if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == false {
             
             print("reached")
@@ -167,8 +170,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         var slideShowImgs: [InputSource] = [InputSource]()
         if homeLabArr.count > 0{
             for i in homeLabArr {
-                var x = SDWebImageSource(url: URL(string: i.labPhoto ?? "")!)
-                slideShowImgs.append(x)
+                slideShowImgs.append(SDWebImageSource(url: URL(string: i.labPhoto ?? "")!))
                 
             }
         }

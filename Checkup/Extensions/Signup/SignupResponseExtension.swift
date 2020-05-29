@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import FirebaseAuth
 
 @available(iOS 13.0, *)
 extension SignupTableViewController: ISignupView, IView {
@@ -27,10 +27,8 @@ extension SignupTableViewController: ISignupView, IView {
     }
     
     func enterToApp() {
-        
-        self.dismiss(animated: true, completion: nil)
-//        guard let homeSB = self.storyboard?.instantiateViewController(withIdentifier: "homeSVC") else { return }
-//         present(homeSB, animated: true, completion: nil)
-//        navigationController?.pushViewController(homeSB, animated: true)
+        if Auth.auth().currentUser != nil {
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
 }

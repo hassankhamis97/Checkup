@@ -20,20 +20,27 @@ class GetLabsModel: IGetLabsModel {
         var labs = [HomeLab]()
         Alamofire.request(homeLabsURL).validate().responseJSON { response in
             
-            let json = JSON(response.data)
-            
-            for item in json.arrayValue {
-                var homeLab = HomeLab()
-                homeLab.idFB = item["idFB"].stringValue
-                homeLab.labPhoto = item["labPhoto"].stringValue
-                homeLab.labName = item["labName"].stringValue
-                homeLab.hotline = item["hotline"].stringValue
-                homeLab.rating = item["rating"].stringValue
-                labs.append(homeLab)
+            switch response.result {
+            case .success(_):
+                
+                let json = JSON(response.data)
+                
+                for item in json.arrayValue {
+                    var homeLab = HomeLab()
+                    homeLab.idFB = item["idFB"].stringValue
+                    homeLab.labPhoto = item["labPhoto"].stringValue
+                    homeLab.labName = item["labName"].stringValue
+                    homeLab.hotline = item["hotline"].stringValue
+                    homeLab.rating = item["rating"].stringValue
+                    labs.append(homeLab)
+                }
+                self.getLabsPresenterRef?.onSuccess(homeLabs: labs, str:"search")
+                break
+            case .failure(let error):
+                self.getLabsPresenterRef?.onFail(message: error.localizedDescription)
+            break
             }
-            self.getLabsPresenterRef?.onSuccess(homeLabs: labs, str:"search")
         }
-//        self.getLabsPresenterRef?.onFail(message: "No Internet Connection")
     }
     
     
@@ -61,20 +68,26 @@ class GetLabsModel: IGetLabsModel {
         //        Alamofire.request(homeLabsURL).responseJSON { (responseData) -> Void in
         Alamofire.request(homeLabsURL).validate().responseJSON { response in
             
-            let json = JSON(response.data)
-            
-            for item in json.arrayValue {
-                var homeLab = HomeLab()
-                homeLab.idFB = item["idFB"].stringValue
-                homeLab.labPhoto = item["labPhoto"].stringValue
-                homeLab.labName = item["labName"].stringValue
-                homeLab.hotline = item["hotline"].stringValue
-                homeLab.rating = item["rating"].stringValue
-                labs.append(homeLab)
+            switch response.result {
+                
+            case .success(_):
+                let json = JSON(response.data)
+                for item in json.arrayValue {
+                    var homeLab = HomeLab()
+                    homeLab.idFB = item["idFB"].stringValue
+                    homeLab.labPhoto = item["labPhoto"].stringValue
+                    homeLab.labName = item["labName"].stringValue
+                    homeLab.hotline = item["hotline"].stringValue
+                    homeLab.rating = item["rating"].stringValue
+                    labs.append(homeLab)
+                }
+                self.getLabsPresenterRef?.onSuccess(homeLabs: labs, str:"filtered")
+                break
+            case .failure(let error):
+                self.getLabsPresenterRef?.onFail(message: error.localizedDescription)
+            break
             }
-            self.getLabsPresenterRef?.onSuccess(homeLabs: labs, str:"filtered")
         }
-//        self.getLabsPresenterRef?.onFail(message: "No Internet Connection")
     }
     
     //    func getFilteredLabs() {
@@ -146,7 +159,7 @@ class GetLabsModel: IGetLabsModel {
                 print(error)
                 break
             }
-//            self.getFilteredLabsPresenter!.onSuccess(filterLabs: filterLabList)
+            //            self.getFilteredLabsPresenter!.onSuccess(filterLabs: filterLabList)
             //                switch response.result {
             //                    case .success(let value):
             //
