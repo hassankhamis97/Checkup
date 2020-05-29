@@ -71,6 +71,9 @@
                                                     <color key="textColor" red="0.17769028888181049" green="0.39203552609816755" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gA2-Ql-Pzq">
+                                                    <rect key="frame" x="188.66666666666666" y="259.66666666666669" width="37" height="37"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -83,6 +86,8 @@
                                                 <constraint firstItem="gKo-v5-LdR" firstAttribute="leading" secondItem="5FL-12-1O3" secondAttribute="leadingMargin" constant="-2" id="W97-MI-lrK"/>
                                                 <constraint firstItem="B4L-gc-pfz" firstAttribute="bottom" secondItem="5FL-12-1O3" secondAttribute="bottomMargin" constant="-64" id="d0i-UC-aQq"/>
                                                 <constraint firstItem="B4L-gc-pfz" firstAttribute="centerX" secondItem="5FL-12-1O3" secondAttribute="centerX" constant="2" id="dxN-tr-oGS"/>
+                                                <constraint firstItem="gA2-Ql-Pzq" firstAttribute="centerY" secondItem="5FL-12-1O3" secondAttribute="centerY" id="eiR-fT-Kt2"/>
+                                                <constraint firstItem="gA2-Ql-Pzq" firstAttribute="centerX" secondItem="5FL-12-1O3" secondAttribute="centerX" id="yQm-Ut-maV"/>
                                                 <constraint firstItem="gKo-v5-LdR" firstAttribute="centerY" secondItem="5FL-12-1O3" secondAttribute="centerY" constant="-54" id="ywV-9a-anP"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -96,6 +101,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="activityIndicator" destination="gA2-Ql-Pzq" id="vJ3-7X-2ru"/>
                         <outlet property="barChartView" destination="gKo-v5-LdR" id="xhM-FO-o2M"/>
                         <outlet property="graphDescribtionLabel" destination="B4L-gc-pfz" id="uqt-tb-TN3"/>
                         <outlet property="yearTextField" destination="Mbk-T7-Nw8" id="82n-LU-Iex"/>
