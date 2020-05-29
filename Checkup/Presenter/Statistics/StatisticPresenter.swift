@@ -9,7 +9,20 @@
 import Foundation
 
 
-class StatisticPresenter :IStatisticPresenter{
+class StatisticPresenter :IStatisticPresenter,ICheckConnection{
+    var year:String!
+    var userId:String!
+    func onSucessfullyConnected() {
+        statisticsViewRef.showIndicator()
+        let  statisticsModelRef = StatisticsModel(statisticPresenterRef: self)
+               statisticsModelRef.getSample(userId: userId, year: year)
+    }
+    
+    func onFailConnected() {
+        statisticsViewRef.errorMessage(msg: "No internet connection")
+        statisticsViewRef.hideIndicator()
+    }
+    
     
     
     let statisticsViewRef:IStatisticView!
@@ -21,13 +34,17 @@ class StatisticPresenter :IStatisticPresenter{
  
     
     func getSample(userId: String, year: String) {
-        let  statisticsModelRef = StatisticsModel(statisticPresenterRef: self)
-        statisticsModelRef.getSample(userId: userId, year: year)
+     
+        self.year=year
+        self.userId=userId
+        var check = InternetConnection.checkInternetConnection(iCheckConnection: self)
+          
     }
     
     func onSuccess(sampleObj: HbA1cSample) {
         
         statisticsViewRef.renderView(sampleObj: sampleObj)
+        statisticsViewRef.hideIndicator()
         
     }
     

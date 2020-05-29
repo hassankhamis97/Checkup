@@ -14,6 +14,7 @@ class SenderImageTableViewCell: UITableViewCell {
     @IBOutlet var sentImage: UIImageView!
 //    @IBOutlet weak var slideShow: ImageSlideshow!
 
+    @IBOutlet var timeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

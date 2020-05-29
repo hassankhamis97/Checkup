@@ -10,6 +10,7 @@ import UIKit
 import  ImageSlideshow
 import StepIndicator
 import SDWebImage
+import Firebase
 import SkyFloatingLabelTextField
 class RequestStatusTableViewController: UITableViewController  {
     var stepIndecatorShow : CGFloat = 100;
@@ -22,7 +23,7 @@ class RequestStatusTableViewController: UITableViewController  {
     var showCancel : CGFloat = 0
     var showDetailsPage = false ;
     var alertStatus : Int8 = 0 ;
-    
+    static var page: Int?
     @IBOutlet weak var costText: UILabel!
     
     
@@ -158,7 +159,7 @@ class RequestStatusTableViewController: UITableViewController  {
     @IBAction func showRequestDetailsBtn(_ sender: Any) {
         //         let backBarButtonItem = UIBarButtonItem(title: "BackMe!", style: .plain, target: nil, action: nil)
         //                      navigationItem.backBarButtonItem = backBarButtonItem
-        
+        RequestStatusTableViewController.page = x;
         showDetailsPage = true
         
         x = 1
@@ -171,7 +172,7 @@ class RequestStatusTableViewController: UITableViewController  {
               tableView.reloadData()
             return
         }
-        let location = "\( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
+        let location = "\( locAddress.address1) \( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
         
         self.locationTextArea.text = location
         
@@ -255,6 +256,14 @@ class RequestStatusTableViewController: UITableViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         
+       if(Auth.auth().currentUser?.uid == nil)
+       {
+           let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
+           loginVC.modalPresentationStyle = .fullScreen
+           self.present(loginVC, animated: true, completion: nil)
+           
+       }
+        
         ///*********************////
         //              testStatusObj = Test();
         //
@@ -267,16 +276,17 @@ class RequestStatusTableViewController: UITableViewController  {
     }
     
     //************** Back Buttom *****************//
-    @objc func addTapped() {
+    @objc func backTapped() {
         print("Button tapped")
         
         if showDetailsPage == true {
             stepIndecatorShow = 100
-            x = 7
+           // x = 7
+            x = RequestStatusTableViewController.page!
             tableView.reloadData()
             showDetailsPage = false
         }else{
-            self.navigationController?.popViewController(animated: true)
+    self.navigationController?.popViewController(animated: true)
         }
         showDetailsPage=false
         
@@ -294,11 +304,13 @@ class RequestStatusTableViewController: UITableViewController  {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        let backBtn = UIBarButtonItem(title: "STATUS_BACK".localized, style: .plain, target: self, action: #selector(addTapped))
+        let backBtn = UIBarButtonItem(title: "〈 "+"STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
         
-        self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
+    self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
         
-        
+         self.progressBarView.circleColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
+        self.progressBarView.circleTintColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
+        //UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
         
         //****************** Languages check ****************///
         if Locale.current.languageCode == "ar"
@@ -680,9 +692,9 @@ extension RequestStatusTableViewController : IRequestStatusView
             self.dateTextArea.text = myObj.dateRequest!
             self.timeTextArea.text = myObj.timeRequest!
             if let location = myObj.address {
-                let location = "\( myObj.address!.buildingNo!)  \(myObj.address!.apartmentNo!)     \(myObj.address!.floorNo!)"
+                let myAdress = "\( location.buildingNo!)  \(location.apartmentNo!)     \(location.floorNo!)"
                 
-                self.locationTextArea.text = location
+                self.locationTextArea.text = myAdress
             }
             
             
@@ -721,6 +733,8 @@ extension RequestStatusTableViewController : IRequestStatusView
                 x=5
                 progressBarView.currentStep=1
                 progressBarView.lineTintColor=UIColor.red
+                self.progressBarView.circleColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+                self.progressBarView.circleTintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
                 // self.tableView.reloadData()
                 
         }
@@ -774,11 +788,11 @@ extension RequestStatusTableViewController : IRequestStatusView
 extension RequestStatusTableViewController : ICancelRequestView
 {
     func onCancelDone() {
-        
+        self.navigationController?.popViewController(animated: true)
+
         Alert.showSimpleAlert(title: "STATUS_CONFIRMATION",message: "STATUS_CANCEL_SUCCESS", viewRef: self)
         //************ back **************/
         
-        self.navigationController?.popViewController(animated: true)
         
         //        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: .alert)
         //
@@ -823,11 +837,11 @@ extension RequestStatusTableViewController : ICancelRequestView
 extension RequestStatusTableViewController : IDeleteRequestView
 {  
     func onRequetDeleted() {
-        
         Alert.showSimpleAlert(title: "INFORMATION",message: "STATUS_DELETION_SUCCESS", viewRef: self)
         //************ back **************/
-        
         self.navigationController?.popViewController(animated: true)
+
+       
         
         //     let alert = UIAlertController(title: "Confirmation", message: "Your Request has been Deleted Successfully", preferredStyle: UIAlertController.Style.alert)
         //                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
@@ -856,7 +870,7 @@ extension RequestStatusTableViewController : IViewAdvancedAlert,IView{
         
         
         
-        if alertStatus == 0
+        if alertStatus == 0 // alertStatue = 0 Cancel
         {
             print("Cancel request .... !")
             
@@ -877,6 +891,8 @@ extension RequestStatusTableViewController : IViewAdvancedAlert,IView{
                 
                 Alert.showSimpleAlert(title: "sorry",message: "STATUS_SORRY_CANCEL", viewRef: self)
                 
+               //  Alert.showAdvancedAlert(title: "STATUS_CONFIRMATION".localized, message: "STATUS_DELETE_CONFIRMATION".localized, viewAdvancedAlertRef: self)
+                
                 //                     let alert = UIAlertController(title: "Confirmation Message", message: "Sorry You can't cancel this request we are about to take your sample now if you insest please call the laboratory ?", preferredStyle: .alert)
                 //
                 //
@@ -888,8 +904,8 @@ extension RequestStatusTableViewController : IViewAdvancedAlert,IView{
                 
             }
             
-        } // alertStatue = 0 Cancel
-        else if alertStatus == 1
+        }
+        else if alertStatus == 1 // alertStatus == 1 Delete
         {
             let deleteRequestPresenter = DeleteRequestPresenter(deleteRequestRef : self)
             
@@ -898,7 +914,7 @@ extension RequestStatusTableViewController : IViewAdvancedAlert,IView{
         }
         
         
-    }// alertStatus == 1 Delete
+    }
     
     func pressCancel() {
         

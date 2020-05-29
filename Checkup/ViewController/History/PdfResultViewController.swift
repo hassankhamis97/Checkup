@@ -18,7 +18,7 @@ class PdfResultViewController: UIViewController {
         // Do any additional setup after loading the view.
 //         if let path = Bundle.main.path(forResource: "pdf", ofType: "pdf")
 //         {
-        let url = URL(string: pdfUrl)!
+        let url = URL(string: pdfUrl!)!
 //            let url = URL(fileURLWithPath: pdfUrl)
             if let pdfDocument = PDFDocument(url: url){
                 pdfView.autoScales = true

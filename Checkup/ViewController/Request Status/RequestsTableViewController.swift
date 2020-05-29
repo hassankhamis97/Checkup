@@ -261,8 +261,9 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
             navigationController?.pushViewController(vc, animated: true)
         }
         else{
-        let pdfDesc = storyboard?.instantiateViewController(withIdentifier: "pdfDesc") as! PdfDescViewController
-        navigationController?.pushViewController(pdfDesc, animated: true)
+        let resultDetailsTVC = storyboard?.instantiateViewController(withIdentifier: "resultDetailsSVC") as! ResultDetailsTableViewController
+            resultDetailsTVC.testID = requests![indexPath.row].id
+        navigationController?.pushViewController(resultDetailsTVC, animated: true)
         }
         
     }

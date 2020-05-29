@@ -15,6 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.17769028889999999" green="0.39203552609999998" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection id="3HP-oc-G3Q">
                                 <cells>
@@ -54,35 +55,42 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="556" id="oTx-rP-4uD">
-                                        <rect key="frame" x="0.0" y="86" width="414" height="556"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="589" id="oTx-rP-4uD">
+                                        <rect key="frame" x="0.0" y="86" width="414" height="589"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oTx-rP-4uD" id="5FL-12-1O3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="556"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="589"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKo-v5-LdR" customClass="BarChartView" customModule="Charts">
-                                                    <rect key="frame" x="18" y="26" width="374" height="396"/>
+                                                    <rect key="frame" x="18" y="26" width="374" height="429"/>
                                                     <color key="backgroundColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4L-gc-pfz">
-                                                    <rect key="frame" x="20" y="430" width="378" height="51"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4L-gc-pfz">
+                                                    <rect key="frame" x="20" y="455" width="378" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="bJB-OW-uzD"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.17769028888181049" green="0.39203552609816755" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gA2-Ql-Pzq">
+                                                    <rect key="frame" x="188.66666666666666" y="276" width="37" height="37"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="gKo-v5-LdR" firstAttribute="centerX" secondItem="5FL-12-1O3" secondAttribute="centerX" constant="-2" id="38j-7c-fAj"/>
-                                                <constraint firstItem="B4L-gc-pfz" firstAttribute="top" secondItem="gKo-v5-LdR" secondAttribute="bottom" constant="8" id="3oC-D8-x2d"/>
+                                                <constraint firstItem="B4L-gc-pfz" firstAttribute="top" secondItem="gKo-v5-LdR" secondAttribute="bottom" id="3oC-D8-x2d"/>
                                                 <constraint firstItem="gKo-v5-LdR" firstAttribute="top" secondItem="5FL-12-1O3" secondAttribute="topMargin" constant="15" id="9LH-iV-OiQ"/>
                                                 <constraint firstItem="gKo-v5-LdR" firstAttribute="centerY" secondItem="5FL-12-1O3" secondAttribute="centerY" constant="-54" id="LLw-R1-r4X"/>
                                                 <constraint firstItem="B4L-gc-pfz" firstAttribute="leading" secondItem="5FL-12-1O3" secondAttribute="leading" constant="20" id="RPE-He-iB0"/>
                                                 <constraint firstAttribute="trailing" secondItem="B4L-gc-pfz" secondAttribute="trailing" constant="16" id="Vz1-Qx-wvH"/>
                                                 <constraint firstItem="gKo-v5-LdR" firstAttribute="leading" secondItem="5FL-12-1O3" secondAttribute="leadingMargin" constant="-2" id="W97-MI-lrK"/>
-                                                <constraint firstItem="B4L-gc-pfz" firstAttribute="bottom" secondItem="5FL-12-1O3" secondAttribute="bottomMargin" constant="-64" id="d0i-UC-aQq"/>
                                                 <constraint firstItem="B4L-gc-pfz" firstAttribute="centerX" secondItem="5FL-12-1O3" secondAttribute="centerX" constant="2" id="dxN-tr-oGS"/>
+                                                <constraint firstItem="gA2-Ql-Pzq" firstAttribute="centerY" secondItem="5FL-12-1O3" secondAttribute="centerY" id="eiR-fT-Kt2"/>
+                                                <constraint firstItem="gA2-Ql-Pzq" firstAttribute="centerX" secondItem="5FL-12-1O3" secondAttribute="centerX" id="yQm-Ut-maV"/>
                                                 <constraint firstItem="gKo-v5-LdR" firstAttribute="centerY" secondItem="5FL-12-1O3" secondAttribute="centerY" constant="-54" id="ywV-9a-anP"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -96,6 +104,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="activityIndicator" destination="gA2-Ql-Pzq" id="vJ3-7X-2ru"/>
                         <outlet property="barChartView" destination="gKo-v5-LdR" id="xhM-FO-o2M"/>
                         <outlet property="graphDescribtionLabel" destination="B4L-gc-pfz" id="uqt-tb-TN3"/>
                         <outlet property="yearTextField" destination="Mbk-T7-Nw8" id="82n-LU-Iex"/>

@@ -331,12 +331,20 @@
                         <outlet property="email" destination="Cqp-Xd-ZLO" id="E4V-0E-d2W"/>
                         <outlet property="password" destination="uo1-KL-Vkb" id="HhP-Ec-uDs"/>
                         <outlet property="signUpBtn" destination="Qkf-Xa-nM5" id="DY7-jJ-91P"/>
-                        <outlet property="userNAme" destination="hQf-ON-fsU" id="dTD-NC-qAT"/>
+                        <outlet property="userName" destination="hQf-ON-fsU" id="dTD-NC-qAT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifg-z5-cwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1807.2463768115942" y="63.586956521739133"/>
+        </scene>
+        <!--homeSVC-->
+        <scene sceneID="adQ-12-Ckm">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="homeSVC" storyboardName="Home" referencedIdentifier="homeSVC" id="wMa-8K-eYK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2q-bg-6HL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872" y="493"/>
         </scene>
         <!--moreSVC-->
         <scene sceneID="qwy-T1-kvS">
