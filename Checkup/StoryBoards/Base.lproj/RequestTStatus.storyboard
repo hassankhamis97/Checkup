@@ -812,8 +812,11 @@
                                                             <color key="textColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0a-8k-1VD">
-                                                            <rect key="frame" x="193" y="131" width="124.33333333333331" height="22"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="K0a-8k-1VD">
+                                                            <rect key="frame" x="193" y="131" width="133" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="133" id="lEU-Zb-MNJ"/>
+                                                            </constraints>
                                                             <state key="normal" title="Show Details" image="person.crop.square.fill" catalog="system">
                                                                 <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
@@ -895,7 +898,6 @@
                                                         <constraint firstItem="7vn-pj-nWb" firstAttribute="leading" secondItem="mGC-1t-bx4" secondAttribute="leading" constant="8" id="8je-zB-mN7"/>
                                                         <constraint firstItem="oPG-El-H58" firstAttribute="leading" secondItem="mGC-1t-bx4" secondAttribute="leading" constant="8" id="A1W-eL-jcy"/>
                                                         <constraint firstItem="oPG-El-H58" firstAttribute="top" secondItem="EBL-6c-9ND" secondAttribute="bottom" constant="15" id="C2V-6h-oks"/>
-                                                        <constraint firstItem="K0a-8k-1VD" firstAttribute="top" secondItem="tFU-4x-hUt" secondAttribute="bottom" constant="87" id="Clm-ZW-E4g"/>
                                                         <constraint firstItem="tFU-4x-hUt" firstAttribute="centerX" secondItem="mGC-1t-bx4" secondAttribute="centerX" id="G2H-wz-ldd"/>
                                                         <constraint firstItem="Hwn-kv-7x0" firstAttribute="top" secondItem="v4W-Ma-Wee" secondAttribute="bottom" constant="11" id="IGT-9q-EF8"/>
                                                         <constraint firstItem="Hwn-kv-7x0" firstAttribute="leading" secondItem="mGC-1t-bx4" secondAttribute="leading" constant="8" id="L9Q-6P-znM"/>
@@ -911,6 +913,7 @@
                                                         <constraint firstItem="kss-BV-vhZ" firstAttribute="top" secondItem="oPG-El-H58" secondAttribute="bottom" constant="15" id="i6s-qP-ozQ"/>
                                                         <constraint firstAttribute="trailing" secondItem="jcP-da-gkM" secondAttribute="trailing" constant="65" id="jOJ-Fs-zlU"/>
                                                         <constraint firstItem="o65-df-FrW" firstAttribute="leading" secondItem="mGC-1t-bx4" secondAttribute="leading" constant="8" id="mTJ-Du-fcx"/>
+                                                        <constraint firstItem="K0a-8k-1VD" firstAttribute="top" secondItem="tFU-4x-hUt" secondAttribute="bottom" constant="87" id="mfa-z1-jBx"/>
                                                         <constraint firstItem="o65-df-FrW" firstAttribute="top" secondItem="Hwn-kv-7x0" secondAttribute="bottom" constant="15" id="sqn-rg-aLU"/>
                                                         <constraint firstItem="7vn-pj-nWb" firstAttribute="top" secondItem="o65-df-FrW" secondAttribute="bottom" constant="13" id="yEx-fU-Wfk"/>
                                                         <constraint firstAttribute="trailing" secondItem="7vn-pj-nWb" secondAttribute="trailing" constant="8" id="yQd-h3-VOO"/>
@@ -937,10 +940,10 @@
                                                     <rect key="frame" x="7" y="2" width="400" height="48"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXs-9w-gU4">
-                                                            <rect key="frame" x="0.0" y="4" width="170" height="40"/>
+                                                            <rect key="frame" x="0.0" y="1.6666666666666679" width="170" height="45"/>
                                                             <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="dcv-zE-UkV"/>
+                                                                <constraint firstAttribute="height" constant="45" id="dcv-zE-UkV"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                             <state key="normal" title="Cancel Request">
@@ -962,10 +965,10 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1R-M0-Pld">
-                                                            <rect key="frame" x="230" y="4" width="170" height="40"/>
+                                                            <rect key="frame" x="230" y="1.6666666666666679" width="170" height="45"/>
                                                             <color key="backgroundColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="wUF-G3-Db5"/>
+                                                                <constraint firstAttribute="height" constant="45" id="wUF-G3-Db5"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                             <state key="normal" title="Show Request Details">
@@ -1108,10 +1111,10 @@
                                                     <rect key="frame" x="7" y="2" width="400" height="48"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy3-6V-CZN">
-                                                            <rect key="frame" x="0.0" y="4" width="190" height="40"/>
+                                                            <rect key="frame" x="0.0" y="1.6666666666666679" width="190" height="45"/>
                                                             <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="P4S-2e-Rpj"/>
+                                                                <constraint firstAttribute="height" constant="45" id="P4S-2e-Rpj"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                             <state key="normal" title="Delete Request">
@@ -1133,10 +1136,10 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8f-20-gGN">
-                                                            <rect key="frame" x="210" y="4" width="190" height="40"/>
+                                                            <rect key="frame" x="210" y="1.6666666666666679" width="190" height="45"/>
                                                             <color key="backgroundColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="a5H-RV-PxZ"/>
+                                                                <constraint firstAttribute="height" constant="45" id="a5H-RV-PxZ"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                             <state key="normal" title="Show Request Details">
@@ -1487,10 +1490,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4R-EY-6mj">
-                                                    <rect key="frame" x="107" y="6.6666666666666679" width="200" height="40"/>
+                                                    <rect key="frame" x="107" y="4" width="200" height="45"/>
                                                     <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="nFs-pN-EPc"/>
+                                                        <constraint firstAttribute="height" constant="45" id="nFs-pN-EPc"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <state key="normal" title="Cancel Request">
@@ -1543,11 +1546,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6Y-RW-ERx">
-                                                    <rect key="frame" x="117" y="96" width="200" height="40"/>
+                                                    <rect key="frame" x="118" y="96" width="178" height="45"/>
                                                     <color key="backgroundColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="oGk-n5-T4i"/>
-                                                        <constraint firstAttribute="height" constant="40" id="zXp-Q7-JXV"/>
+                                                        <constraint firstAttribute="height" constant="45" id="WCd-RF-bOE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <state key="normal" title="Show Request Details">
@@ -1574,15 +1576,16 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Rdz-0I-h1a" secondAttribute="bottom" id="4Qd-7B-NL7"/>
-                                                <constraint firstItem="G6Y-RW-ERx" firstAttribute="centerX" secondItem="MzW-vh-hc4" secondAttribute="centerX" constant="10" id="DYz-AQ-8cs"/>
                                                 <constraint firstItem="HVI-xm-bpw" firstAttribute="top" secondItem="MzW-vh-hc4" secondAttribute="topMargin" constant="17" id="L9V-CB-Pgi"/>
+                                                <constraint firstItem="G6Y-RW-ERx" firstAttribute="leading" secondItem="MzW-vh-hc4" secondAttribute="leadingMargin" constant="110" id="MLA-QP-o9R"/>
                                                 <constraint firstItem="xqd-ps-Hg6" firstAttribute="top" secondItem="MzW-vh-hc4" secondAttribute="topMargin" constant="15" id="PFs-H6-k6q"/>
                                                 <constraint firstItem="Rdz-0I-h1a" firstAttribute="leading" secondItem="MzW-vh-hc4" secondAttribute="leading" id="QXc-4Q-rjk"/>
+                                                <constraint firstItem="G6Y-RW-ERx" firstAttribute="top" secondItem="xqd-ps-Hg6" secondAttribute="bottom" constant="46" id="W77-eP-3sK"/>
                                                 <constraint firstItem="xqd-ps-Hg6" firstAttribute="leading" secondItem="HVI-xm-bpw" secondAttribute="trailing" constant="15" id="a4b-03-qKm"/>
                                                 <constraint firstItem="xqd-ps-Hg6" firstAttribute="centerX" secondItem="MzW-vh-hc4" secondAttribute="centerX" id="d9X-aP-DG8"/>
                                                 <constraint firstAttribute="trailing" secondItem="Rdz-0I-h1a" secondAttribute="trailing" id="dYH-fP-MV7"/>
                                                 <constraint firstItem="Rdz-0I-h1a" firstAttribute="top" secondItem="MzW-vh-hc4" secondAttribute="top" id="nHJ-4H-e33"/>
-                                                <constraint firstItem="G6Y-RW-ERx" firstAttribute="centerY" secondItem="xqd-ps-Hg6" secondAttribute="centerY" constant="78" id="urN-pa-0Yr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="G6Y-RW-ERx" secondAttribute="trailing" constant="110" id="xFK-Ky-k38"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
