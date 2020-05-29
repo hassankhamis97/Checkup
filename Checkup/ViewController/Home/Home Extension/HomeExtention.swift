@@ -37,7 +37,6 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
     {
         //Hide Cancel
-        searchBar.text = ""
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.resignFirstResponder()
     }
@@ -45,7 +44,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
     {
         //Hide Cancel
-        searchBar.text = ""
+        searchBar.searchTextField.text = ""
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = String()
         searchBar.resignFirstResponder()
@@ -95,7 +94,9 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = searchedHomeLabsArr[indexPath.row].hotline
             
-        }else{
+        } else if searchedHomeLabsArr.count <= 0 &&  searchController.searchBar.text?.count ?? 0 > 0 {
+            print("NoData")
+        } else{
             cell.labImageVIew.sd_setImage(with: URL(string: homeLabArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             
             cell.labRating.rating =  (homeLabArr[indexPath.row].rating as! NSString).doubleValue

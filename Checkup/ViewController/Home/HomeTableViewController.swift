@@ -30,7 +30,7 @@ class HomeTableViewController: UITableViewController   {
     let pageIndicator = UIPageControl()
     
     
-    fileprivate let searchController = UISearchController(searchResultsController: nil)
+    let searchController = UISearchController(searchResultsController: nil)
     
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -59,6 +59,7 @@ class HomeTableViewController: UITableViewController   {
         // search bar in navigation controller
         
         //Setup Search Controller
+        
         self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.searchBar.placeholder = "Search"
         self.searchController.searchBar.barStyle = .black
@@ -107,49 +108,3 @@ class HomeTableViewController: UITableViewController   {
         
     }
 }
-
-
-
-//MARK: SEARCH BAR DELEGATE
-/*extension HomeTableViewController: UISearchBarDelegate
- {
- //    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
- //    {
- //        //Show Cancel
- //        searchBar.setShowsCancelButton(true, animated: true)
- //        searchBar.tintColor = .white
- //    }
- 
- //    private func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
- //    {
- //        //Filter function
- ////        self.filterFunction(searchText: searchText)
- //    }
- 
- func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
- {
- //Hide Cancel
- searchBar.setShowsCancelButton(false, animated: true)
- searchBar.resignFirstResponder()
- 
- //        guard let term = searchBar.text , term.trim().isEmpty == false else {
- //
- //            //Notification "White spaces are not permitted"
- //            return
- //        }
- 
- //Filter function
- //        self.filterFunction(searchText: term)
- }
- 
- func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
- {
- //Hide Cancel
- searchBar.setShowsCancelButton(false, animated: true)
- searchBar.text = String()
- searchBar.resignFirstResponder()
- 
- //Filter function
- //        self.filterFunction(searchText: searchBar.text)
- }
- }*/
