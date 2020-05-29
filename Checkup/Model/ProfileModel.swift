@@ -8,7 +8,7 @@
 
 import Foundation
 import Firebase
-
+import RealmSwift
 class ProfileModel:IProfileModel{
     
     var phoNArray=[Phone]()
@@ -78,6 +78,8 @@ class ProfileModel:IProfileModel{
             
             
             
+            
+            self.setUserRealm(userName: user.name!, userId: user.id!)
             self.profilePresenterRef.onSuccess(user: user)
             
             
@@ -95,11 +97,31 @@ class ProfileModel:IProfileModel{
         
         
         
+        
+        
     }
     
     
+    func setUserRealm(userName:String,userId:String){
+        let realm=try! Realm()
+        try! realm.write {
+            realm.create(Person.self, value: ["name": userName, "id": userId], update: .all)
+        }
+    }
+ 
     
     
+    func getUserRealm(userId:String){
+        
+       let realm=try!Realm()
+        
+        let user=realm.objects(Person.self).filter("id == %@", userId).first
+        
+        if let name = user?.name {
+            self.profilePresenterRef.onSucessRealm(userName: name)
+        }
+      
+    }
     
     
     
