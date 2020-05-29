@@ -152,11 +152,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
      }*/
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        /*
-         (isTop == false && msgTableView.contentOffset.y >= (msgTableView.contentSize.height - msgTableView.frame.size.height))
-         */
-        
+      
         if labCollection.bounds.maxY >= labCollection.contentSize.height -   labCollection.frame.size.height  && reach == false {
             
             print("reached")
