@@ -192,6 +192,13 @@
                                                         <outlet property="delegate" destination="fm3-e1-75I" id="cE1-zs-1kw"/>
                                                     </connections>
                                                 </collectionView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="There's no data in this branch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83s-re-pua">
+                                                    <rect key="frame" x="94" y="167" width="227" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -214,6 +221,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="errorLabelOutlet" destination="83s-re-pua" id="iB2-At-XVn"/>
                         <outlet property="labBrachCollection" destination="NQT-Ad-KkZ" id="K85-QX-fNt"/>
                         <outlet property="labImageViewOutlet" destination="gl0-2R-wcX" id="o8e-tf-Hll"/>
                     </connections>
