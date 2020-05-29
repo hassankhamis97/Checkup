@@ -19,18 +19,34 @@ extension MessagingChatViewController : UITableViewDelegate,UITableViewDataSourc
         if messages == nil {
             return 0
         }
+        else if isSendImage == true {
+            messages.insert(Message(content: "", idFrom: "", idTo: "", timestamp: "", type: 3), at: 0)
+//            messages.append(Message(content: "", idFrom: "", idTo: "", timestamp: "", type: 3))
+            return messages.count
+        }
         else{
         return messages.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if messages![indexPath.row].type == 0 && messages![indexPath.row].idFrom == Auth.auth().currentUser!.uid {
+        
+        if isSendImage == true && indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "imageLoadingCell", for: indexPath) as! ImageIndicatorTableViewCell
+                        cell.transform = CGAffineTransform(scaleX: 1, y: -1)
+                        //        cell.textLabel?.text = "ay 7agaaa"
+                                // Configure the cell...
+            
+                                return cell
+        }
+        else if messages![indexPath.row].type == 0 && messages![indexPath.row].idFrom == Auth.auth().currentUser!.uid {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SenderCellTableViewCell
                         cell.transform = CGAffineTransform(scaleX: 1, y: -1)
                         //        cell.textLabel?.text = "ay 7agaaa"
                                 // Configure the cell...
             cell.myLabel.text = messages![indexPath.row].content
+            cell.timeLabel.text = Date().getFullDateFromTimeStamp(timeStamp: Int64(messages![indexPath.row].timestamp!) as! Int64)
+            
                                 return cell
         }
         else if messages![indexPath.row].type == 0 && messages![indexPath.row].idFrom != Auth.auth().currentUser!.uid {
@@ -39,6 +55,7 @@ extension MessagingChatViewController : UITableViewDelegate,UITableViewDataSourc
                             //        cell.textLabel?.text = "ay 7agaaa"
                                     // Configure the cell...
                 cell.recieverLabel.text = messages![indexPath.row].content
+            cell.timeLabel.text = Date().getFullDateFromTimeStamp(timeStamp: Int64(messages![indexPath.row].timestamp!) as! Int64)
                                     return cell
             }
         else if messages![indexPath.row].type == 1 && messages![indexPath.row].idFrom == Auth.auth().currentUser!.uid
@@ -50,6 +67,7 @@ extension MessagingChatViewController : UITableViewDelegate,UITableViewDataSourc
             //            cell.recievedImg?.sd_setImage(with: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg", completed: nil)
             //
             cell.sentImage.sd_setImage(with: URL(string: messages![indexPath.row].content!), placeholderImage: UIImage(named: "placeholder.png"))
+            cell.timeLabel.text = Date().getFullDateFromTimeStamp(timeStamp: Int64(messages![indexPath.row].timestamp!) as! Int64)
                                 return cell
         }
             else if messages![indexPath.row].type == 1 && messages![indexPath.row].idFrom != Auth.auth().currentUser!.uid
@@ -61,6 +79,7 @@ extension MessagingChatViewController : UITableViewDelegate,UITableViewDataSourc
                 //            cell.recievedImg?.sd_setImage(with: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg", completed: nil)
                 //
                 cell.recievedImg.sd_setImage(with: URL(string: messages![indexPath.row].content!), placeholderImage: UIImage(named: "placeholder.png"))
+                cell.timeLabel.text = Date().getFullDateFromTimeStamp(timeStamp: Int64(messages![indexPath.row].timestamp!) as! Int64)
                                     return cell
             }
         else {
@@ -146,15 +165,20 @@ extension MessagingChatViewController : UITableViewDelegate,UITableViewDataSourc
 //        allMessagesList.reversed()
 //        allMessagesList.append(msg)
 //        allMessagesListReversed = allMessagesList.reversed()
-        let timeStamp = Date().toMillis()
-//        var x = String(timeStamp!)
-        var message = Message(content: msg, idFrom: Auth.auth().currentUser!.uid, idTo: currentPearedUser.idPearedUser!, timestamp: String(timeStamp!), type: 0)
-        messageParams.skip = nil
-        let sendMessagePresenter = SendMessagePresenter(messagingChatViewRef: self)
-        sendMessagePresenter.saveMessage(message: message)
-        msgTextField?.text = ""
-        msgTableView.reloadData()
+        if msgTextField?.text.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+            let timeStamp = Date().toMillis()
+            //        var x = String(timeStamp!)
+                    var message = Message(content: msg, idFrom: Auth.auth().currentUser!.uid, idTo: currentPearedUser.idPearedUser!, timestamp: String(timeStamp!), type: 0)
+                    messageParams.skip = nil
+                    let sendMessagePresenter = SendMessagePresenter(messagingChatViewRef: self)
+                    sendMessagePresenter.saveMessage(message: message)
+                    msgTextField?.text = ""
+                    msgTableView.reloadData()
+        }
+        
 
     }
     
 }
+
+

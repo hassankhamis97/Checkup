@@ -9,16 +9,20 @@
 import Foundation
 import Firebase
 class MessagingChatModel: IMessagingChatModel {
+    
+    
 
     
     
 //    var chatPresenterRef : IChat!
     let db : Firestore?
+    var ref: DatabaseReference!
     var groupId : String!
     static var instance: MessagingChatModel!
     private init() {
 //        self.chatPresenterRef = chatPresenterRef
         db = Firestore.firestore()
+        ref = Database.database().reference()
     }
     // sigletone method
     static func getInstance() -> MessagingChatModel {
@@ -104,10 +108,63 @@ class MessagingChatModel: IMessagingChatModel {
         if let err = err {
             print("Error writing document: \(err)")
         } else {
+            if let sendMessagePresenter = chatPresenterRef as? ISendMessagePresenter {
+                    sendMessagePresenter.onSuccess()
+            }
+            if let imageMessagePresenter = chatPresenterRef as? IImageMessagePresenter {
+                    imageMessagePresenter.onSuccess()
+            }
+                               
+                           
             print("Document successfully written!")
         }
         
         
     }
 }
+    func saveMessage(chatPresenterRef: IChat, imageMessage: ImageMessage) {
+        var imgPathsArr = [String]()
+        var count = 0
+            for i in 0..<imageMessage.images!.count{
+                var id = ref.childByAutoId()
+                let storageRef = Storage.storage().reference().child("chat/\(Auth.auth().currentUser!.uid)/image\(id.key!).jpg")
+                // Create the file metadata
+                let metadata = StorageMetadata()
+                metadata.contentType = "image/jpeg"
+                let uploadTask = storageRef.putData(imageMessage.images![i].pngData()!, metadata: metadata) { (metadata, error) in
+                    guard let metadata = metadata else {
+                        // Uh-oh, an error occurred!
+//                        self.newRequestPresenterRef.onFail(message: error!.localizedDescription)
+                        return
+                    }
+                    // Metadata contains file metadata such as size, content-type.
+                    let size = metadata.size
+                    // You can also access to download URL after upload.
+                    storageRef.downloadURL { (url, error) in
+                        guard let downloadURL = url else {
+//                            self.newRequestPresenterRef.onFail(message: error!.localizedDescription)
+                            // Uh-oh, an error occurred!
+                            return
+                        }
+                        imgPathsArr.append(downloadURL.absoluteString)
+                        print(url)
+                        count += 1
+                        if(count == imageMessage.images!.count){
+                            //                    testObj.roushettaPaths = imgPathsArr
+                            self.saveCompleteObj(imgPathsArr: imgPathsArr, idTo: imageMessage.idTo,chatPresenterRef: chatPresenterRef)
+//                            self.newRequestPresenterRef.onSuccess()
+                        }
+                    }
+                }
+            }
+        
+    }
+    func saveCompleteObj(imgPathsArr: [String]?, idTo: String?,chatPresenterRef: IChat) {
+        for item in imgPathsArr! {
+            var message = Message(content: item, idFrom: Auth.auth().currentUser!.uid, idTo: idTo!, timestamp: String(Date().toMillis()!), type: 1)
+            saveMessage(chatPresenterRef: chatPresenterRef, message: message)
+            
+        }
+    }
 }
+

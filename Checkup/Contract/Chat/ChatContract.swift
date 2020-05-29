@@ -13,4 +13,5 @@ protocol IChat {
 protocol IMessagingChatModel {
     func getData(chatPresenterRef : IChat,messageParams: MessageParams)
     func saveMessage(chatPresenterRef : IChat,message: Message)
+    func saveMessage(chatPresenterRef : IChat,imageMessage: ImageMessage)
 }

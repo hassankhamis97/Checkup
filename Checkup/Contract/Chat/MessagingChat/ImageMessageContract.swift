@@ -1,5 +1,5 @@
 //
-//  SendMessageContract.swift
+//  ImageMessageContract.swift
 //  Checkup
 //
 //  Created by Hassan Khamis on 5/28/20.
@@ -7,17 +7,13 @@
 //
 
 import Foundation
-protocol ISendMessageView {
-    func renderViewSendMessage()
+protocol IImageMessageView {
+    func renderViewImageMessage()
 }
 
-protocol ISendMessagePresenter : IChat{
-    func saveMessage(message: Message)
+protocol IImageMessagePresenter : IChat{
+    func saveMessage(imageMessage: ImageMessage)
 //    func getData(messageParams: MessageParams, skip : inout QueryDocumentSnapshot)
     func onSuccess()
     func onFail(message: String)
 }
-
-//protocol IMessagingChatModel {
-//    func getData(messageParams: MessageParams)
-//}

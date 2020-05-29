@@ -7,7 +7,19 @@
 //
 
 import Foundation
-extension MessagingChatViewController : IMessagingChatView {
+extension MessagingChatViewController : IMessagingChatView , IImageMessageView , ISendMessageView {
+    func renderViewSendMessage() {
+        
+    }
+    
+
+    
+    func renderViewImageMessage() {
+        isSendImage = false
+        self.messages.remove(at: 0)
+        msgTableView.reloadData()
+    }
+    
     func dataInView(allMessages : AllMessages,isFirebaseCall: Bool) {
         if (messageParams.skip != nil && isFirebaseCall == false){
             for item in allMessages.messages!{

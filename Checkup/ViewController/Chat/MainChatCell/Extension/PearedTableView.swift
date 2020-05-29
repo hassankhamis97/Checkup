@@ -25,7 +25,7 @@ extension MainChatViewController : UITableViewDataSource,UITableViewDelegate {
         
         cell.lastMessage.text = viewPearedArr[indexPath.row].lastMessage!
      
-        cell.lastMessageTime.text = getDateFromTimeStamp(timeStamp: Int64(viewPearedArr[indexPath.row].lastMessageTime!) as! Int64)
+        cell.lastMessageTime.text = Date().getDateFromTimeStamp(timeStamp: Int64(viewPearedArr[indexPath.row].lastMessageTime!) as! Int64)
         
         
         if(viewPearedArr[indexPath.row].noOfUnReadMessages == "0")
@@ -48,14 +48,14 @@ extension MainChatViewController : UITableViewDataSource,UITableViewDelegate {
     
     }
     
-    func getDateFromTimeStamp(timeStamp : Int64) -> String {
-        
-        var date1 = Date(milliseconds: Int64(timeStamp)) // "Dec 31, 1969, 4:00 PM" (PDT variant of
-                let dateFormatter = DateFormatter()
-                dateFormatter.timeZone = TimeZone(abbreviation: "GMT+4") //Set timezone that you want
-                dateFormatter.locale = NSLocale.current
-                dateFormatter.dateFormat = "h:mm a" //Specify your format that you want
-        //        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm a" //Specify your format that you want
-                return dateFormatter.string(from: date1)
-    }
+//    func getDateFromTimeStamp(timeStamp : Int64) -> String {
+//
+//        var date1 = Date(milliseconds: Int64(timeStamp)) // "Dec 31, 1969, 4:00 PM" (PDT variant of
+//                let dateFormatter = DateFormatter()
+//                dateFormatter.timeZone = TimeZone(abbreviation: "GMT+4") //Set timezone that you want
+//                dateFormatter.locale = NSLocale.current
+//                dateFormatter.dateFormat = "h:mm a" //Specify your format that you want
+//        //        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm a" //Specify your format that you want
+//                return dateFormatter.string(from: date1)
+//    }
 }

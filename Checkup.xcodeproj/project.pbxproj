@@ -117,6 +117,11 @@
 		4EA875152480044B00E95B30 /* SendMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA875142480044B00E95B30 /* SendMessagePresenter.swift */; };
 		4EA87517248004B100E95B30 /* SendMessageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA87516248004B100E95B30 /* SendMessageContract.swift */; };
 		4EA875192480055E00E95B30 /* ChatContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA875182480055E00E95B30 /* ChatContract.swift */; };
+		4EA8751B248048F600E95B30 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8751A248048F600E95B30 /* ImageMessage.swift */; };
+		4EA8751D248049CB00E95B30 /* ImageMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8751C248049CB00E95B30 /* ImageMessagePresenter.swift */; };
+		4EA8751F24804ACA00E95B30 /* ImageMessageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8751E24804ACA00E95B30 /* ImageMessageContract.swift */; };
+		4EA87524248068D300E95B30 /* ImageIndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA87522248068D300E95B30 /* ImageIndicatorTableViewCell.swift */; };
+		4EA87525248068D300E95B30 /* ImageIndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */; };
 		4EAA2AD8246CABC70050B0AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */; };
 		4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */; };
 		4EBBC93D246B47F200C7978D /* MainChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBC93B246B47F200C7978D /* MainChatTableViewCell.xib */; };
@@ -393,6 +398,11 @@
 		4EA875142480044B00E95B30 /* SendMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessagePresenter.swift; sourceTree = "<group>"; };
 		4EA87516248004B100E95B30 /* SendMessageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageContract.swift; sourceTree = "<group>"; };
 		4EA875182480055E00E95B30 /* ChatContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContract.swift; sourceTree = "<group>"; };
+		4EA8751A248048F600E95B30 /* ImageMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
+		4EA8751C248049CB00E95B30 /* ImageMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMessagePresenter.swift; sourceTree = "<group>"; };
+		4EA8751E24804ACA00E95B30 /* ImageMessageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMessageContract.swift; sourceTree = "<group>"; };
+		4EA87522248068D300E95B30 /* ImageIndicatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIndicatorTableViewCell.swift; sourceTree = "<group>"; };
+		4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIndicatorTableViewCell.xib; sourceTree = "<group>"; };
 		4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatTableViewCell.swift; sourceTree = "<group>"; };
 		4EBBC93B246B47F200C7978D /* MainChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChatTableViewCell.xib; sourceTree = "<group>"; };
@@ -1123,6 +1133,7 @@
 			children = (
 				4EA87501247FC09900E95B30 /* MessagingChat.swift */,
 				4EA87516248004B100E95B30 /* SendMessageContract.swift */,
+				4EA8751E24804ACA00E95B30 /* ImageMessageContract.swift */,
 			);
 			path = MessagingChat;
 			sourceTree = "<group>";
@@ -1157,8 +1168,18 @@
 			children = (
 				4EA87508247FC1CC00E95B30 /* MessagingChatPresenter.swift */,
 				4EA875142480044B00E95B30 /* SendMessagePresenter.swift */,
+				4EA8751C248049CB00E95B30 /* ImageMessagePresenter.swift */,
 			);
 			path = MessagingChat;
+			sourceTree = "<group>";
+		};
+		4EA87521248068A500E95B30 /* ImageIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				4EA87522248068D300E95B30 /* ImageIndicatorTableViewCell.swift */,
+				4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */,
+			);
+			path = ImageIndicator;
 			sourceTree = "<group>";
 		};
 		4EBBC939246B476F00C7978D /* MainChatCell */ = {
@@ -1212,6 +1233,7 @@
 				4E1FBE35247E1CFB00C463D5 /* ChatStatus.swift */,
 				4EA8750E247FCCEA00E95B30 /* Message.swift */,
 				4EA87512247FEE2000E95B30 /* AllMessages.swift */,
+				4EA8751A248048F600E95B30 /* ImageMessage.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1532,6 +1554,7 @@
 		4EE9F93D24699E0800BB4A39 /* SenderCell */ = {
 			isa = PBXGroup;
 			children = (
+				4EA87521248068A500E95B30 /* ImageIndicator */,
 				4EE7EA27246AD37800BF434F /* Image */,
 				4EE7EA26246AD36500BF434F /* NormalText */,
 			);
@@ -2068,6 +2091,7 @@
 				A39BF976246DA047003500A8 /* ImgTableViewCell.xib in Resources */,
 				4E22F909243E6E6D0090693C /* Assets.xcassets in Resources */,
 				A33CA624246D3AEE0014CF6B /* Employee.storyboard in Resources */,
+				4EA87525248068D300E95B30 /* ImageIndicatorTableViewCell.xib in Resources */,
 				4EE7EA30246AF2B800BF434F /* DateTableViewCell.xib in Resources */,
 				4E11EE2B247C56C800B3BDBA /* NewRequestScreen.storyboard in Resources */,
 				CC799DEB247BC1D200F6BAAD /* Profile.storyboard in Resources */,
@@ -2225,6 +2249,7 @@
 				4EF2BA6D247357AE00602123 /* RequestConfigration.swift in Sources */,
 				4E15ACE4247180E5004418B1 /* GetRequestsModel.swift in Sources */,
 				4E3C1F482476A65E00D9761D /* HomeLab.swift in Sources */,
+				4EA8751F24804ACA00E95B30 /* ImageMessageContract.swift in Sources */,
 				4E15ACEA24718279004418B1 /* GetRequestsContract.swift in Sources */,
 				4E22F907243E6E6C0090693C /* Checkup.xcdatamodeld in Sources */,
 				CC761723247305B40084CC6E /* EditProfileModel.swift in Sources */,
@@ -2243,6 +2268,7 @@
 				4E2C9E0224708D77007C6109 /* BranchDescriptionViewController.swift in Sources */,
 				4EA875192480055E00E95B30 /* ChatContract.swift in Sources */,
 				03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */,
+				4EA87524248068D300E95B30 /* ImageIndicatorTableViewCell.swift in Sources */,
 				4E87AF4F247EC5D000002E66 /* ManualNotificationModel.swift in Sources */,
 				4E77B4C42477597F000B3118 /* GetFilteredLabsResponse.swift in Sources */,
 				CCDF8BBD24713DE200F56B2D /* ExtensionLocationView.swift in Sources */,
@@ -2339,11 +2365,13 @@
 				4E15ACEE24718EDF004418B1 /* GetRequestResponseExtension.swift in Sources */,
 				4EF1A1ED2476F00100597A15 /* Branches.swift in Sources */,
 				03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */,
+				4EA8751B248048F600E95B30 /* ImageMessage.swift in Sources */,
 				031046AE246C8F77000372BD /* FilterLabTableView.swift in Sources */,
 				BBBB1B562477CAB90013D06F /* CancelRequestPresenter.swift in Sources */,
 				BBBB1B6024782D3B0013D06F /* DeleteRequestModel.swift in Sources */,
 				03C1DD2F24789E4500D2A008 /* BranchDescPresenter.swift in Sources */,
 				035A0491247DB1490017A885 /* FilterLabContract.swift in Sources */,
+				4EA8751D248049CB00E95B30 /* ImageMessagePresenter.swift in Sources */,
 				BBBB1B502477C9B30013D06F /* CancelRquestModel.swift in Sources */,
 				03F834712468D8D9000155A4 /* RadioButton.swift in Sources */,
 				4EF2BA6724733C9F00602123 /* FilterStatus.swift in Sources */,
