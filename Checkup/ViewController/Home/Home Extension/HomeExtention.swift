@@ -11,7 +11,7 @@ import UIKit
 import ImageSlideshow
 import SDWebImage
 
-extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ImageSlideshowDelegate, IGetLabsView,  UISearchBarDelegate {
+extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ImageSlideshowDelegate, IGetLabsView,  UISearchBarDelegate, IView {
     
     func getSearchedLabs(seachedHomeLabs: [HomeLab]) {
         
@@ -37,18 +37,18 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
     {
         //Hide Cancel
+        searchBar.text = ""
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.resignFirstResponder()
-        searchBar.text = ""
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
     {
         //Hide Cancel
+        searchBar.text = ""
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = String()
         searchBar.resignFirstResponder()
-        searchBar.text = ""
     }
     
     func getLabsForRender(homeLabs: [HomeLab]) {
@@ -71,7 +71,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     }
     
     func errorMessage(msg: String) {
-        
+        Alert.showSimpleAlert(title: "Sorry", message: "No Internet Connection", viewRef: self)
     }
     
     

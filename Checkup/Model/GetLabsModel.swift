@@ -33,6 +33,7 @@ class GetLabsModel: IGetLabsModel {
             }
             self.getLabsPresenterRef?.onSuccess(homeLabs: labs, str:"search")
         }
+//        self.getLabsPresenterRef?.onFail(message: "No Internet Connection")
     }
     
     
@@ -73,6 +74,7 @@ class GetLabsModel: IGetLabsModel {
             }
             self.getLabsPresenterRef?.onSuccess(homeLabs: labs, str:"filtered")
         }
+//        self.getLabsPresenterRef?.onFail(message: "No Internet Connection")
     }
     
     //    func getFilteredLabs() {
