@@ -12,13 +12,10 @@ protocol IManualNotificationView{
 }
 
 
-protocol IManualNotificationPresenter{
+protocol IManualNotificationPresenter : INotificationPresenter{
     func getNotificationNumbers()
     func onSuccess(manualNotification: ManualNotification)
     func onFail(errorMsg: String)
 }
 
 
-protocol IManualNotificationModel{
-    func getNotificationNumbers()
-}
