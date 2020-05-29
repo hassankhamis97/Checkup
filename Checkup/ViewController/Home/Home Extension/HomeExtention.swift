@@ -130,6 +130,8 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20  && reach == false {
             
             print("reached")
+            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
             reach = true
         } else if contentOffsetY < (scrollView.contentSize.height - scrollView.bounds.height) - 20  && reach == true {
             

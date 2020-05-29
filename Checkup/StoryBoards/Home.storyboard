@@ -107,17 +107,15 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Available " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cr-GY-iBc">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="410" height="400"/>
+                                                                        <rect key="frame" x="271.5" y="379.5" width="138.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="bottom" secondItem="5Cr-GY-iBc" secondAttribute="bottom" id="05j-2A-9cM"/>
-                                                                    <constraint firstItem="5Cr-GY-iBc" firstAttribute="top" secondItem="orV-wa-YBA" secondAttribute="top" id="Nk5-YJ-PFM"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="5Cr-GY-iBc" secondAttribute="trailing" id="l7N-N0-bSl"/>
-                                                                    <constraint firstItem="5Cr-GY-iBc" firstAttribute="leading" secondItem="orV-wa-YBA" secondAttribute="leading" id="wAb-9f-TNf"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="5Cr-GY-iBc" secondAttribute="bottom" id="Pht-zk-Efy"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="5Cr-GY-iBc" secondAttribute="trailing" id="xkM-qv-roe"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="410" height="400"/>

@@ -66,7 +66,8 @@ class HomeTableViewController: UITableViewController   {
         self.searchController.searchBar.delegate = self
         self.definesPresentationContext = true
         self.navigationItem.searchController = searchController
-        
+        self.definesPresentationContext = true
+        searchController.dismiss(animated: false, completion: nil)
         //
         //        var labObj = Laboratory(id: "", name: "El Mokhtabar", formalReferencePathId: "", specialTests: "", image: "", branches: ["",""])
         //
