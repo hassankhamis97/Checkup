@@ -11,6 +11,7 @@ import UIKit
 class RecievedImageTableViewCell: UITableViewCell {
     @IBOutlet var recievedPersonImage: UIImageView!
 
+    @IBOutlet var timeLabel: UILabel!
     @IBOutlet var recievedImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

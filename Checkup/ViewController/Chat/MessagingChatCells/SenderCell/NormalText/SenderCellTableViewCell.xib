@@ -10,35 +10,45 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="65" id="KGk-i7-Jjw" customClass="SenderCellTableViewCell" customModule="Checkup" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="67" id="KGk-i7-Jjw" customClass="SenderCellTableViewCell" customModule="Checkup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AY-En-WaW" customClass="MessageLabel" customModule="Checkup" customModuleProvider="target">
-                        <rect key="frame" x="100" y="7" width="200" height="31"/>
+                        <rect key="frame" x="258" y="7" width="42" height="20.5"/>
                         <color key="backgroundColor" red="0.22745098039215686" green="0.23921568627450979" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxP-zy-ubg">
+                        <rect key="frame" x="264" y="31.5" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.56963762500203052" green="0.56963762500203052" blue="0.56963762500203052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="8AY-En-WaW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="100" id="HAc-mO-aSN"/>
+                    <constraint firstItem="8AY-En-WaW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="100" id="HAc-mO-aSN"/>
                     <constraint firstItem="8AY-En-WaW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="KwI-pe-M5H"/>
                     <constraint firstAttribute="trailing" secondItem="8AY-En-WaW" secondAttribute="trailing" constant="20" id="ZPP-3O-nmR"/>
-                    <constraint firstAttribute="bottom" secondItem="8AY-En-WaW" secondAttribute="bottom" constant="7" id="mh9-wA-Cfo"/>
+                    <constraint firstItem="nxP-zy-ubg" firstAttribute="top" secondItem="8AY-En-WaW" secondAttribute="bottom" constant="4" id="mqY-lm-4yE"/>
+                    <constraint firstAttribute="trailing" secondItem="nxP-zy-ubg" secondAttribute="trailing" constant="25" id="n61-UP-6ql"/>
+                    <constraint firstAttribute="bottom" secondItem="nxP-zy-ubg" secondAttribute="bottom" id="tKr-IE-qO2"/>
+                    <constraint firstItem="nxP-zy-ubg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="100" id="wR3-FY-HuB"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="myLabel" destination="8AY-En-WaW" id="fTg-s8-Vt7"/>
+                <outlet property="timeLabel" destination="nxP-zy-ubg" id="3O6-k1-IIm"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="106.13839285714285"/>
+            <point key="canvasLocation" x="137.68115942028987" y="106.47321428571428"/>
         </tableViewCell>
     </objects>
 </document>

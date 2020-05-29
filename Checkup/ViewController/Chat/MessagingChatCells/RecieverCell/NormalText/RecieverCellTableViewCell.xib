@@ -11,33 +11,42 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="45" id="KGk-i7-Jjw" customClass="RecieverCellTableViewCell" customModule="Checkup" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjn-DV-Ljk" customClass="MessageLabel" customModule="Checkup" customModuleProvider="target">
-                        <rect key="frame" x="60" y="7" width="180" height="31"/>
+                        <rect key="frame" x="60" y="7" width="42" height="20.5"/>
                         <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="0.77407962330000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.18793623096446699" green="0.18793623096446699" blue="0.18793623096446699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alpha" translatesAutoresizingMaskIntoConstraints="NO" id="eJH-zb-hFS">
-                        <rect key="frame" x="10" y="-5" width="35" height="35"/>
+                        <rect key="frame" x="10" y="-4" width="35" height="35"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="2I6-Cc-5hr"/>
                             <constraint firstAttribute="width" constant="35" id="BYA-EQ-EZN"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOg-Ju-cof">
+                        <rect key="frame" x="65" y="31.5" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.56963762500000004" green="0.56963762500000004" blue="0.56963762500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="tjn-DV-Ljk" secondAttribute="trailing" constant="80" id="JwR-wK-LLn"/>
+                    <constraint firstAttribute="bottom" secondItem="YOg-Ju-cof" secondAttribute="bottom" id="I6d-9o-eTO"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tjn-DV-Ljk" secondAttribute="trailing" constant="80" id="JwR-wK-LLn"/>
+                    <constraint firstItem="YOg-Ju-cof" firstAttribute="top" secondItem="tjn-DV-Ljk" secondAttribute="bottom" constant="4" id="Xi4-G2-QOx"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YOg-Ju-cof" secondAttribute="trailing" constant="100" id="gfO-O9-bfS"/>
                     <constraint firstItem="tjn-DV-Ljk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="iRs-p0-UBl"/>
                     <constraint firstItem="tjn-DV-Ljk" firstAttribute="leading" secondItem="eJH-zb-hFS" secondAttribute="trailing" constant="15" id="msR-m7-HE0"/>
-                    <constraint firstAttribute="bottom" secondItem="tjn-DV-Ljk" secondAttribute="bottom" constant="7" id="spc-mq-wqg"/>
+                    <constraint firstItem="YOg-Ju-cof" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="65" id="s4p-XD-PSY"/>
                     <constraint firstItem="tjn-DV-Ljk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="ssj-Vd-srz"/>
                     <constraint firstAttribute="bottom" secondItem="eJH-zb-hFS" secondAttribute="bottom" constant="15" id="uQZ-ep-uAI"/>
                 </constraints>
@@ -47,6 +56,7 @@
             <connections>
                 <outlet property="recievedPersonImage" destination="eJH-zb-hFS" id="pDd-hJ-oXE"/>
                 <outlet property="recieverLabel" destination="tjn-DV-Ljk" id="1qB-Di-m0J"/>
+                <outlet property="timeLabel" destination="YOg-Ju-cof" id="yuG-WP-M3D"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="103.45982142857143"/>
         </tableViewCell>
