@@ -31,6 +31,7 @@ extension StatisticsTableViewController:IStatisticView{
     func hideIndicator() {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        activityIndicator.alpha=0
               activityIndicator.hide()
     }
     

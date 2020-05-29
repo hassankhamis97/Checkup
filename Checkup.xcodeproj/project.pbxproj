@@ -214,6 +214,8 @@
 		CC157CAD24701160001AE122 /* EditProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC157CAC24701160001AE122 /* EditProfileContract.swift */; };
 		CC1A8770246D60810020C403 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1A876F246D60810020C403 /* More.storyboard */; };
 		CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A8772246D61020020C403 /* MoreTableViewController.swift */; };
+		CC1E7C2F24812E8000039693 /* UserChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C2E24812E8000039693 /* UserChat.swift */; };
+		CC1E7C3124814C6D00039693 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C3024814C6D00039693 /* UserRealm.swift */; };
 		CC298B1424740A04001DEAE5 /* ExtesnionMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */; };
 		CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */; };
 		CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */; };
@@ -500,6 +502,8 @@
 		CC157CAC24701160001AE122 /* EditProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileContract.swift; sourceTree = "<group>"; };
 		CC1A876F246D60810020C403 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		CC1A8772246D61020020C403 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		CC1E7C2E24812E8000039693 /* UserChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChat.swift; sourceTree = "<group>"; };
+		CC1E7C3024814C6D00039693 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
 		CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtesnionMoreView.swift; sourceTree = "<group>"; };
 		CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
 		CC49FBCD247D37EE00A00D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
@@ -1250,6 +1254,8 @@
 			isa = PBXGroup;
 			children = (
 				4EC1626C246F5C1D0053F581 /* User.swift */,
+				CC1E7C2E24812E8000039693 /* UserChat.swift */,
+				CC1E7C3024814C6D00039693 /* UserRealm.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -2272,6 +2278,7 @@
 				4E87AF4F247EC5D000002E66 /* ManualNotificationModel.swift in Sources */,
 				4E77B4C42477597F000B3118 /* GetFilteredLabsResponse.swift in Sources */,
 				CCDF8BBD24713DE200F56B2D /* ExtensionLocationView.swift in Sources */,
+				CC1E7C2F24812E8000039693 /* UserChat.swift in Sources */,
 				4E206DF2246EF241007C401D /* RealTime.swift in Sources */,
 				CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */,
 				CC7617212472D51F0084CC6E /* ExtensionEditProfile.swift in Sources */,
@@ -2327,6 +2334,7 @@
 				03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */,
 				4E87AF48247EC2FD00002E66 /* ManualNotificationContract.swift in Sources */,
 				4E77B4C2247757E3000B3118 /* GetFilteredLabsPresenter.swift in Sources */,
+				CC1E7C3124814C6D00039693 /* UserRealm.swift in Sources */,
 				A33CA62B246D3F610014CF6B /* UserCustomTableViewCell.swift in Sources */,
 				4EC1FD3A2472E2530029C499 /* SmallDescLabTableViewCell.swift in Sources */,
 				4E4EA640247015F000309CAF /* NewRequestResponseExtension.swift in Sources */,
