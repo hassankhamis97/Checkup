@@ -10,4 +10,5 @@ import Foundation
 import RealmSwift
 class Person: Object {
     @objc dynamic var name = ""
+     @objc dynamic var id = ""
 }
