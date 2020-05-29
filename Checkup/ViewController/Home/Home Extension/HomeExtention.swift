@@ -125,19 +125,18 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     
     
     
-    /*override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-     let contentOffsetY = scrollView.contentOffset.y
-     if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20 /* Needed offset */ {
-     guard !self.reach else { return }
-     self.reach = true
-     // load more data
-     // than set self.isLoading to false when new data is loaded
-     print("reached")
-     //            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-     //            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
-     
-     }
-     }*/
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetY = scrollView.contentOffset.y
+        if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20  && reach == false {
+            
+            print("reached")
+            reach = true
+        } else if contentOffsetY < (scrollView.contentSize.height - scrollView.bounds.height) - 20  && reach == true {
+            
+            reach = false
+        }
+
+    }
     
     
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -157,7 +156,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
      }
      }*/
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         //-   labCollection.frame.size.height
         if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == false {
             
@@ -170,7 +169,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             
             reach = false
         }
-    }
+    }*/
     
     func showSlider() {
         var slideShowImgs: [InputSource] = [InputSource]()
