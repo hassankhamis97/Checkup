@@ -9,13 +9,13 @@
 import Foundation
 
 protocol ILabDescView {
-    func showingDataOnView(labDescObj : Branches)
+    func showingDataOnView(labDescObj : Branches , id: Int)
 }
 
 
 protocol ILabDescPresenter {
     func getDataFromLabDescModel(params : LabDescriptionParams)
-    func onSuccess(descObj : Branches)
+    func onSuccess(descObj : Branches , id : Int)
     func onFail()
 }
 

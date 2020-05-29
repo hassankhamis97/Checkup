@@ -37,7 +37,6 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
     {
         //Hide Cancel
-        searchBar.text = ""
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.resignFirstResponder()
     }
@@ -45,7 +44,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
     {
         //Hide Cancel
-        searchBar.text = ""
+        searchBar.searchTextField.text = ""
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = String()
         searchBar.resignFirstResponder()
@@ -78,6 +77,8 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if searchedHomeLabsArr.count > 0{
             return searchedHomeLabsArr.count
+        }else if searchedHomeLabsArr.count <= 0 &&  searchController.searchBar.text?.count ?? 0 > 0 {
+            return 1
         } else {
             return homeLabArr.count
         }
@@ -92,12 +93,19 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             cell.labImageVIew.sd_setImage(with: URL(string: searchedHomeLabsArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             
             cell.labRating.rating =  (searchedHomeLabsArr[indexPath.row].rating as! NSString).doubleValue
+            cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = searchedHomeLabsArr[indexPath.row].hotline
             
-        }else{
+        } else if searchedHomeLabsArr.count <= 0 &&  searchController.searchBar.text?.count ?? 0 > 0 {
+            print("NoData")
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "noDataCell", for: indexPath)
+            //noDataCell
+            cell.sizeThatFits(CGSize(width: 500.0, height: 500.0))
+            return cell
+        } else{
             cell.labImageVIew.sd_setImage(with: URL(string: homeLabArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
-            
             cell.labRating.rating =  (homeLabArr[indexPath.row].rating as! NSString).doubleValue
+            cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = homeLabArr[indexPath.row].hotline
         }
         cell.labImageVIew.layer.cornerRadius = 15
@@ -117,19 +125,18 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     
     
     
-    /*override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-     let contentOffsetY = scrollView.contentOffset.y
-     if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20 /* Needed offset */ {
-     guard !self.reach else { return }
-     self.reach = true
-     // load more data
-     // than set self.isLoading to false when new data is loaded
-     print("reached")
-     //            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-     //            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
-     
-     }
-     }*/
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetY = scrollView.contentOffset.y
+        if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20  && reach == false {
+            
+            print("reached")
+            reach = true
+        } else if contentOffsetY < (scrollView.contentSize.height - scrollView.bounds.height) - 20  && reach == true {
+            
+            reach = false
+        }
+
+    }
     
     
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -149,7 +156,8 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
      }
      }*/
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        //-   labCollection.frame.size.height
         if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == false {
             
             print("reached")
@@ -157,18 +165,17 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
             reach = true
             
-        } else if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == true {
+        } else if labCollection.bounds.maxY < labCollection.contentSize.height && reach == true {
             
             reach = false
         }
-    }
+    }*/
     
     func showSlider() {
         var slideShowImgs: [InputSource] = [InputSource]()
         if homeLabArr.count > 0{
             for i in homeLabArr {
-                var x = SDWebImageSource(url: URL(string: i.labPhoto ?? "")!)
-                slideShowImgs.append(x)
+                slideShowImgs.append(SDWebImageSource(url: URL(string: i.labPhoto ?? "")!))
                 
             }
         }

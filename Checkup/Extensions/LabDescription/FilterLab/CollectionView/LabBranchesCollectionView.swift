@@ -47,17 +47,51 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
     
     }
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("scrolled")
-     //   labDescPresenter.getDataFromLabDescModel()
-       
-        
-        //abDescProtocolObj!.paginatingData()
+
+        //print("scrolled")
+        let height = scrollView.frame.size.height
+                    let contentYoffset = scrollView.contentOffset.y
+                    let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+                    if isBottom == false && distanceFromBottom < height {
+                        isBottom = true
+                        print("scrolled")
+                  
+                    paginatingParams.governId = 1
+                    paginatingParams.labId = "-M7O-IStoBsiYrQFpwo_"
+                    paginatingParams.latitude = 31.1803167
+                    paginatingParams.longitude = 29.9137701
+                    paginatingParams.take = 6
+                    paginatingParams.skip =  labDescriptionObj.branches?.count
+                    if(labDescriptionObj.branches == nil){
+                        paginatingParams.skip = 0
+                    }
+                    labDescPresenter.getDataFromLabDescModel(params: paginatingParams)
+                    }
+                    else if distanceFromBottom > height{
+                        isBottom = false
+                    }
     }
+   
+    
+   /* func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if(indexPath.row == labDescriptionObj.branches!.count - 1){
+            print("last cell is here")
+           var paginatingParams: LabDescriptionParams = LabDescriptionParams()
+   
+            paginatingParams.governId = 1
+            paginatingParams.labId = "-M7O-IStoBsiYrQFpwo_"
+            paginatingParams.latitude = 31.1803167
+            paginatingParams.longitude = 29.9137701
+            paginatingParams.take = 6
+            paginatingParams.skip = 0
+          labDescPresenter.getDataFromLabDescModel(params: paginatingParams)
+            
+        }
+    }*/
+    
     
        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//            print("cell is selected")
-//            var details = storyboard!.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
-//            self.navigationController?.pushViewController(details, animated: true)
+        
         let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
         branchDesc.modalPresentationStyle = .fullScreen
         self.present(branchDesc , animated: true , completion: nil)

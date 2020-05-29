@@ -8,8 +8,14 @@
 
 import Foundation
 import Alamofire
-class FilterLabModel : IFilterLaModel{
- 
+class FilterLabModel : IFilterLabModel{
+     
+    var filtreLabPresenterInModel : IFilterLabPresenter!
+    
+    init(presenter : IFilterLabPresenter) {
+        filtreLabPresenterInModel = presenter
+    }
+    
     
     func fetchFilteredLab(){
 
@@ -18,10 +24,15 @@ class FilterLabModel : IFilterLaModel{
                       print(json)
                 
                 do{
-               //     let filterLabObj = try JSONDecoder().decode(FilterLab.self, from: response.data!)
-           //         print(filterLabObj)
-                }catch{
+                    let filterLabObj = try JSONDecoder().decode(Array<FilterGovern>.self, from: response.data!)
+                    print(filterLabObj)
+                    print("api")
+                //    print(filterLabObj.id)
+                self.filtreLabPresenterInModel.onSuccess(filteredData: filterLabObj)
                     
+                }catch let error{
+                    print(error)
+
                 }
             }
         }
@@ -31,14 +42,4 @@ class FilterLabModel : IFilterLaModel{
     
     
 }
-/*
- do{
-               let brachDescObj = try JSONDecoder().decode(BranchDescription.self , from: response.data!)
-           
-               print(brachDescObj)
-               print("aya")
-               self.newBranchPresenter.onSuccess(branchDescObj: brachDescObj)
-           }catch let error{
-               print(error)
-           }
- */
+

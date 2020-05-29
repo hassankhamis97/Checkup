@@ -9,9 +9,8 @@
 import UIKit
 import ImageSlideshow
 import Firebase
+
 class HomeTableViewController: UITableViewController   {
-    
-//    var searchCellHeight = 0.0
     
     var reach : Bool = false
     
@@ -30,39 +29,37 @@ class HomeTableViewController: UITableViewController   {
     
     let pageIndicator = UIPageControl()
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row == 0{
-//            return CGFloat(searchCellHeight)
-//        } else if indexPath.row == 1 {
-//            return 192
-//        }
-//        else if indexPath.row == 2 {
-//            return 479
-//        } else {
-//            return 0
-//        }
-//
-//    }
-  
-      fileprivate let searchController = UISearchController(searchResultsController: nil)
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+           super.viewWillTransition(to: size, with: coordinator)
+           if UIDevice.current.orientation.isLandscape {
+                self.tableView.isScrollEnabled = true
+           } else {
+               self.tableView.isScrollEnabled = false
+           }
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tabBarItem.badgeValue = "1"
+        //        tabBarItem.badgeValue = "1"
         
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
         homeLabPresenter.getLabs(take: 8, skip: homeLabArr.count)
         
         let layout = UICollectionViewFlowLayout()
-               layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-               layout.itemSize = CGSize(width: 200, height: 240)  //233
-               layout.minimumInteritemSpacing = 0.05
-               
-               self.labCollection?.collectionViewLayout = layout
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        layout.itemSize = CGSize(width: 200, height: 240)  //233
+        layout.minimumInteritemSpacing = 0.05
+        
+        self.labCollection?.collectionViewLayout = layout
         
         // search bar in navigation controller
         
         //Setup Search Controller
+        
         self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.searchBar.placeholder = "Search"
         self.searchController.searchBar.barStyle = .black
@@ -108,52 +105,6 @@ class HomeTableViewController: UITableViewController   {
             
         }
         navigationController?.pushViewController(labFilter, animated: true)
-       
+        
     }
 }
-
-
-       
-        //MARK: SEARCH BAR DELEGATE
-/*extension HomeTableViewController: UISearchBarDelegate
-{
-//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
-//    {
-//        //Show Cancel
-//        searchBar.setShowsCancelButton(true, animated: true)
-//        searchBar.tintColor = .white
-//    }
-    
-//    private func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
-//    {
-//        //Filter function
-////        self.filterFunction(searchText: searchText)
-//    }
-
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
-    {
-        //Hide Cancel
-        searchBar.setShowsCancelButton(false, animated: true)
-        searchBar.resignFirstResponder()
-
-//        guard let term = searchBar.text , term.trim().isEmpty == false else {
-//
-//            //Notification "White spaces are not permitted"
-//            return
-//        }
-
-         //Filter function
-//        self.filterFunction(searchText: term)
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
-    {
-        //Hide Cancel
-        searchBar.setShowsCancelButton(false, animated: true)
-        searchBar.text = String()
-        searchBar.resignFirstResponder()
-        
-        //Filter function
-//        self.filterFunction(searchText: searchBar.text)
-    }
-}*/

@@ -31,7 +31,7 @@ class LabaDescriptionModel: ILabDescModel {
                 do{
                 let labDescObj = try JSONDecoder().decode(Branches.self, from: respone.data!)
                     print(labDescObj)
-                    self.newDescPresenter.onSuccess(descObj: labDescObj)
+                    self.newDescPresenter.onSuccess(descObj: labDescObj , id: governId)
                 }
                 catch{
                     
