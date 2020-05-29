@@ -17,16 +17,18 @@ class FilterLabModel : IFilterLabModel{
     }
     
     
-    func fetchFilteredLab(govern: String){
+    func fetchFilteredLab(){
 
         Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetGoverns").responseJSON { (response) in
             if let json = response.result.value{
                       print(json)
                 
                 do{
-                    let filterLabObj = try JSONDecoder().decode(FilterLab.self, from: response.data!)
+                    let filterLabObj = try JSONDecoder().decode(Array<FilterGovern>.self, from: response.data!)
                     print(filterLabObj)
-                    self.filtreLabPresenterInModel.onSuccess(filteredDara: filterLabObj)
+                    print("api")
+                //    print(filterLabObj.id)
+                self.filtreLabPresenterInModel.onSuccess(filteredData: filterLabObj)
                     
                 }catch let error{
                     print(error)
@@ -40,13 +42,4 @@ class FilterLabModel : IFilterLabModel{
     
     
 }
-/*
- do{
-               let brachDescObj = try JSONDecoder().decode(BranchDescription.self , from: response.data!)
-           
-               print(brachDescObj)
-               print("aya")
-               self.newBranchPresenter.onSuccess(branchDescObj: brachDescObj)
-           }catch let error{
-           }
- */
+

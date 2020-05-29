@@ -9,6 +9,8 @@
 import Foundation
 
 class FilterLabPresenter: IFilterLabPresenter {
+ 
+  
    
     var filterView : IFilterLabView!
     var filterModel : IFilterLabModel!
@@ -19,18 +21,16 @@ class FilterLabPresenter: IFilterLabPresenter {
         filterView = view
     }
     
-    
-    
-    
-    func getDataFromModel(govern: String) {
+
+    func getDataFromModel() {
         filterModel = FilterLabModel(presenter: self)
-        filterModel.fetchFilteredLab(govern: govern)
+        filterModel.fetchFilteredLab()
     }
     
-    func onSuccess(filteredDara: FilterLab) {
-        filterView.returnDataToView(filterLabObjInView: filteredDara)
-    }
-    
+    func onSuccess(filteredData: [FilterGovern]) {
+         filterView.returnDataToView(filterLabArrInView: filteredData)
+     }
+   
     func onFail() {
         
     }

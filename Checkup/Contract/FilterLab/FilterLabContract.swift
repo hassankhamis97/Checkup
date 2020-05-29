@@ -10,19 +10,19 @@ import Foundation
 
  
  protocol IFilterLabView{
-    func returnDataToView(filterLabObjInView : FilterLab)
+    func returnDataToView(filterLabArrInView : [FilterGovern])
  }
 
 
  protocol IFilterLabPresenter{
-    func getDataFromModel(govern : String)
-    func onSuccess(filteredDara : FilterLab)
+    func getDataFromModel()
+    func onSuccess(filteredData : [FilterGovern])
      func onFail()
  }
 
 
  protocol IFilterLabModel{
-    func fetchFilteredLab(govern : String)
+    func fetchFilteredLab()
  }
 
 
