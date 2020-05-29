@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileView,IView{
+    func renderRealmProfileView(userName: String) {
+        self.nameTextField.text=userName
+    }
+    
     func showBtnIndicator() {
           saveBtnOutlet.alpha = 0
            activityIndicator.alpha=1

@@ -3,9 +3,13 @@ import Foundation
 import Network
 
 class ProfilePresenter:IProfilePresenter,ICheckConnection{
+  
+    
     
     
     var userId:String!
+    
+    
     func onSucessfullyConnected() {
           
              let profileModel=ProfileModel(profilePresenterRef: self)
@@ -20,6 +24,9 @@ class ProfilePresenter:IProfilePresenter,ICheckConnection{
     func onFailConnected() {
         print("There's no internet connection.")
         self.profileView.errorMessage(msg: "No internet connection")
+        let profileModel=ProfileModel(profilePresenterRef: self)
+        profileModel.getUserRealm(userId: userId)
+        
     }
     
   
@@ -51,6 +58,8 @@ class ProfilePresenter:IProfilePresenter,ICheckConnection{
         profileView.errorMessage(msg: message)
     }
     
- 
+ func onSucessRealm(userName: String) {
+       profileView.renderRealmProfileView(userName: userName)
+   }
 
 }
