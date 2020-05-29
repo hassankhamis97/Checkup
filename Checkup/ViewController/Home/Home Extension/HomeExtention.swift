@@ -92,14 +92,14 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             cell.labImageVIew.sd_setImage(with: URL(string: searchedHomeLabsArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             
             cell.labRating.rating =  (searchedHomeLabsArr[indexPath.row].rating as! NSString).doubleValue
-            cell.labRating.settings.disablePanGestures = true
+            cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = searchedHomeLabsArr[indexPath.row].hotline
             
         }else{
             cell.labImageVIew.sd_setImage(with: URL(string: homeLabArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             
             cell.labRating.rating =  (homeLabArr[indexPath.row].rating as! NSString).doubleValue
-            cell.labRating.settings.disablePanGestures = true
+            cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = homeLabArr[indexPath.row].hotline
         }
         cell.labImageVIew.layer.cornerRadius = 15
@@ -157,14 +157,15 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
          (isTop == false && msgTableView.contentOffset.y >= (msgTableView.contentSize.height - msgTableView.frame.size.height))
          */
         
-        if labCollection.bounds.maxY >= labCollection.contentSize.height-labCollection.frame.size.height && reach == false {
+        if labCollection.bounds.maxY >= labCollection.contentSize.height -   labCollection.frame.size.height  && reach == false {
             
             print("reached")
             let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
             homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
             reach = true
             
-        } else if labCollection.bounds.maxY < labCollection.contentSize.height-labCollection.frame.size.height && reach == true {
+        } else if labCollection.bounds.maxY < labCollection.contentSize.height -
+            labCollection.frame.size.height && reach == true {
             
             reach = false
         }
