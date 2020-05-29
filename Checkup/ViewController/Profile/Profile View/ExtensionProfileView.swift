@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 extension ProfileTableViewController:IProfileView,IView{
+    func renderRealmProfileView(userName: String) {
+       
+        self.userName.text=userName
+    }
+    
     func renderProfileView(user: User) {
         self.user=user
          reloadData()

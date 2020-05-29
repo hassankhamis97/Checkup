@@ -214,10 +214,10 @@
 		CC157CA824700F83001AE122 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC157CA724700F83001AE122 /* EditProfilePresenter.swift */; };
 		CC157CAB247010B6001AE122 /* ProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC157CAA247010B6001AE122 /* ProfileContract.swift */; };
 		CC157CAD24701160001AE122 /* EditProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC157CAC24701160001AE122 /* EditProfileContract.swift */; };
-		CC1A8770246D60810020C403 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1A876F246D60810020C403 /* More.storyboard */; };
 		CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A8772246D61020020C403 /* MoreTableViewController.swift */; };
 		CC1E7C2F24812E8000039693 /* UserChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C2E24812E8000039693 /* UserChat.swift */; };
 		CC1E7C3124814C6D00039693 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C3024814C6D00039693 /* UserRealm.swift */; };
+		CC1E7C322481656A00039693 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1E7C342481656A00039693 /* More.storyboard */; };
 		CC298B1424740A04001DEAE5 /* ExtesnionMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */; };
 		CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */; };
 		CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */; };
@@ -504,10 +504,11 @@
 		CC157CA724700F83001AE122 /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
 		CC157CAA247010B6001AE122 /* ProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContract.swift; sourceTree = "<group>"; };
 		CC157CAC24701160001AE122 /* EditProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileContract.swift; sourceTree = "<group>"; };
-		CC1A876F246D60810020C403 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		CC1A8772246D61020020C403 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		CC1E7C2E24812E8000039693 /* UserChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChat.swift; sourceTree = "<group>"; };
 		CC1E7C3024814C6D00039693 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
+		CC1E7C332481656A00039693 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/More.storyboard; sourceTree = "<group>"; };
+		CC1E7C362481658100039693 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/More.strings; sourceTree = "<group>"; };
 		CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtesnionMoreView.swift; sourceTree = "<group>"; };
 		CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
 		CC49FBCD247D37EE00A00D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
@@ -941,7 +942,7 @@
 				0335FAF7246A08C600CE0863 /* Home.storyboard */,
 				4E4542112479C7F000955FD8 /* Setting.storyboard */,
 				A33CA623246D3AEE0014CF6B /* Employee.storyboard */,
-				CC1A876F246D60810020C403 /* More.storyboard */,
+				CC1E7C342481656A00039693 /* More.storyboard */,
 				CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */,
 			);
 			path = StoryBoards;
@@ -2116,7 +2117,7 @@
 				4E45420F2479C7F000955FD8 /* Setting.storyboard in Resources */,
 				CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */,
 				4EE9F94124699E3200BB4A39 /* SenderCellTableViewCell.xib in Resources */,
-				CC1A8770246D60810020C403 /* More.storyboard in Resources */,
+				CC1E7C322481656A00039693 /* More.storyboard in Resources */,
 				4E4542192479C9FE00955FD8 /* Localizable.strings in Resources */,
 				4E432F152464F6EF00D1CACA /* pdf.pdf in Resources */,
 				A39BF97C246DA47E003500A8 /* DataTableViewCell.xib in Resources */,
@@ -2526,6 +2527,15 @@
 				BBFDEEFF247E852A003E2464 /* en */,
 			);
 			name = RequestTStatus.storyboard;
+			sourceTree = "<group>";
+		};
+		CC1E7C342481656A00039693 /* More.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC1E7C332481656A00039693 /* Base */,
+				CC1E7C362481658100039693 /* ar */,
+			);
+			name = More.storyboard;
 			sourceTree = "<group>";
 		};
 		CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */ = {

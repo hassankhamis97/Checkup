@@ -9,11 +9,13 @@
 import Foundation
 protocol IProfileView :IBase{
     func renderProfileView (user:User)
+    func renderRealmProfileView(userName:String)
 }
 protocol IProfilePresenter {
     func getUser(userId:String)
     func onSuccess(user:User)
     func onFail(message: String)
+    func onSucessRealm(userName:String)
 }
 protocol IProfileModel {
     func getUser(userId:String)
