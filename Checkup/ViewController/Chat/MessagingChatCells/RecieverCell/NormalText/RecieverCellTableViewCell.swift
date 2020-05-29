@@ -9,7 +9,8 @@
 import UIKit
 
 class RecieverCellTableViewCell: UITableViewCell {
-
+    @IBOutlet var timeLabel: UILabel!
+    
     @IBOutlet var recievedPersonImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

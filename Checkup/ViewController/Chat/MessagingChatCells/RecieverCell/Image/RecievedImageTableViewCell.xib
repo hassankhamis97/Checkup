@@ -11,14 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="210" id="KGk-i7-Jjw" customClass="RecievedImageTableViewCell" customModule="Checkup" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="227.5"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="227.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alpha" translatesAutoresizingMaskIntoConstraints="NO" id="PI3-KN-N3h">
-                        <rect key="frame" x="10" y="166" width="35" height="35"/>
+                        <rect key="frame" x="10" y="167" width="35" height="35"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="VEQ-vn-uxV"/>
                             <constraint firstAttribute="height" constant="35" id="iPY-FL-jl4"/>
@@ -30,15 +30,24 @@
                             <constraint firstAttribute="width" secondItem="624-It-DP2" secondAttribute="height" multiplier="90:101" id="BmC-q1-WH1"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpC-tE-pvT">
+                        <rect key="frame" x="65" y="213" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.56963762500000004" green="0.56963762500000004" blue="0.56963762500000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="qpC-tE-pvT" firstAttribute="top" secondItem="624-It-DP2" secondAttribute="bottom" constant="4" id="0f6-Fd-RzA"/>
                     <constraint firstAttribute="trailing" secondItem="624-It-DP2" secondAttribute="trailing" constant="80" id="3Ku-Oi-rwz"/>
                     <constraint firstItem="PI3-KN-N3h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="DwQ-ca-xzz"/>
                     <constraint firstItem="624-It-DP2" firstAttribute="leading" secondItem="PI3-KN-N3h" secondAttribute="trailing" constant="15" id="G2p-Yu-pMv"/>
+                    <constraint firstItem="qpC-tE-pvT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="65" id="HZa-Ah-Dwc"/>
                     <constraint firstItem="624-It-DP2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="Mb5-bD-5bN"/>
-                    <constraint firstAttribute="bottom" secondItem="PI3-KN-N3h" secondAttribute="bottom" constant="15" id="S67-9N-WQQ"/>
-                    <constraint firstAttribute="bottom" secondItem="624-It-DP2" secondAttribute="bottom" constant="7" id="Uji-eC-IsI"/>
+                    <constraint firstAttribute="bottom" secondItem="PI3-KN-N3h" secondAttribute="bottom" constant="25.5" id="S67-9N-WQQ"/>
+                    <constraint firstAttribute="bottom" secondItem="qpC-tE-pvT" secondAttribute="bottom" id="fix-jK-yOI"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qpC-tE-pvT" secondAttribute="trailing" constant="100" id="tUJ-Sa-pUO"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,6 +55,7 @@
             <connections>
                 <outlet property="recievedImg" destination="624-It-DP2" id="IaO-j6-zRJ"/>
                 <outlet property="recievedPersonImage" destination="PI3-KN-N3h" id="hoi-U8-b8K"/>
+                <outlet property="timeLabel" destination="qpC-tE-pvT" id="mvn-6H-xwu"/>
             </connections>
             <point key="canvasLocation" x="53.623188405797109" y="158.03571428571428"/>
         </tableViewCell>

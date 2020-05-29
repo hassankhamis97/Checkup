@@ -11,6 +11,7 @@ import UIKit
 class SenderCellTableViewCell: UITableViewCell {
     @IBOutlet var myLabel: UILabel!
 
+    @IBOutlet var timeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
