@@ -171,7 +171,7 @@ class RequestStatusTableViewController: UITableViewController  {
               tableView.reloadData()
             return
         }
-        let location = "\( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
+        let location = "\( locAddress.address1) \( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
         
         self.locationTextArea.text = location
         
@@ -295,11 +295,13 @@ class RequestStatusTableViewController: UITableViewController  {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        let backBtn = UIBarButtonItem(title: "STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
+        let backBtn = UIBarButtonItem(title: "〈 "+"STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
         
     self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
         
-        
+         self.progressBarView.circleColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        self.progressBarView.circleTintColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
+        //UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
         
         //****************** Languages check ****************///
         if Locale.current.languageCode == "ar"
@@ -722,6 +724,8 @@ extension RequestStatusTableViewController : IRequestStatusView
                 x=5
                 progressBarView.currentStep=1
                 progressBarView.lineTintColor=UIColor.red
+                self.progressBarView.circleColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+                self.progressBarView.circleTintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
                 // self.tableView.reloadData()
                 
         }
@@ -877,6 +881,8 @@ extension RequestStatusTableViewController : IViewAdvancedAlert,IView{
                 
                 
                 Alert.showSimpleAlert(title: "sorry",message: "STATUS_SORRY_CANCEL", viewRef: self)
+                
+               //  Alert.showAdvancedAlert(title: "STATUS_CONFIRMATION".localized, message: "STATUS_DELETE_CONFIRMATION".localized, viewAdvancedAlertRef: self)
                 
                 //                     let alert = UIAlertController(title: "Confirmation Message", message: "Sorry You can't cancel this request we are about to take your sample now if you insest please call the laboratory ?", preferredStyle: .alert)
                 //

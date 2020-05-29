@@ -112,6 +112,18 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         
         createDatePicker()
         
+        // for dismissing keyboard
+              nameTextField.delegate=self
+             birthDateTextField.delegate=self
+             genderTextField.delegate=self
+             insuranceTextField.delegate=self
+             addressTextField.delegate=self
+            landPhonNumTextField.delegate=self
+            mobileNumTextField.delegate=self
+                       
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
         
     }
     
@@ -120,7 +132,17 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         
     }
     
-    
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+          self.view.endEditing(true)
+          return true
+      }
+      
+      
+      // function to enable dimiss key board(touch any where )
+      @objc func dismissKeyboard() {
+          view.endEditing(true)
+      }
+      
     
     
     
@@ -146,13 +168,7 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     }
     
     
-    
-    
-    
-    
-    
-    
-    
+  
     
     @IBAction func editAddressBtn(_ sender: Any) {
         
@@ -213,9 +229,16 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
         
         var user=User(id: id, name: name, email: email, birthdate: birthdate, gender: gender, phone: phoneArray, insurance: insurance, address: addressObj, imagePath:imageUrl)
         
-        var editProfilePresenterRef = EditProfilePresenter(editProfileView: self)
+        if (nameTextField.text?.isEmpty==true){
+            Alert.showSimpleAlert(title: "Alert", message: "Name is required", viewRef: self)
+        }
+        else{
+            var editProfilePresenterRef = EditProfilePresenter(editProfileView: self)
+                 
+                 editProfilePresenterRef.editUser(user: user,img: profileImg.image!)
+        }
         
-        editProfilePresenterRef.editUser(user: user,img: profileImg.image!)
+     
         
     }
     func getAddress(addressObj: Address) {

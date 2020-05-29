@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 import FirebaseStorage
-extension EditProfileTableViewController : ImagePickerDelegate{
+extension EditProfileTableViewController : ImagePickerDelegate,UITextFieldDelegate{
     
     
     // for saving image to database 

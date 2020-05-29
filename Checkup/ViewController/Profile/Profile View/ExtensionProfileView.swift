@@ -18,6 +18,7 @@ extension ProfileTableViewController:IProfileView,IView{
 
     func showIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        tableView.showActivityIndicator()
     }
 
     func hideIndicator() {

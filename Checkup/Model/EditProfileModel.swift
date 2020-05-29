@@ -10,18 +10,23 @@ import Foundation
 import Firebase
 import FirebaseStorage
 
+
 class EditProfileModel:IEditProfileModel{
       var ref: DatabaseReference!
+       let db : Firestore?
+    
     var editProfilePresenterRef:IEditProfilePresenter!
        init(editProfilePresenterRef:IEditProfilePresenter) {
            
            self.editProfilePresenterRef=editProfilePresenterRef
             ref = Database.database().reference()
+             db = Firestore.firestore()
        }
     
     func editUser(user: User,img:UIImage?) {
         
         var userObj=User()
+        var userChat=UserChat()
         userObj.id=user.id
         userObj.email=user.email
         userObj.name=user.name
@@ -30,6 +35,8 @@ class EditProfileModel:IEditProfileModel{
         userObj.address=user.address
         userObj.phone=user.phone
         userObj.insurance=user.insurance
+        userChat.id=user.id
+        userChat.nickname=user.name
         
         
         
@@ -64,11 +71,24 @@ class EditProfileModel:IEditProfileModel{
                                
                      
                             userObj.imagePath = url?.absoluteString
+                            userChat.photoUrl=url?.absoluteString
                             
                 let userDic = try! DictionaryEncoder.encode(userObj)
+                let userChatDic = try! DictionaryEncoder.encode(userChat)
                             self.ref.child("Users").child(userObj.id!).setValue(userDic)
+                            
+                            
+                            let dbRef = self.db?.collection("users").document(userObj.id!).setData(userChatDic) { err in
+                                   if let err = err {
+                                    self.editProfilePresenterRef.onFail(message: err.localizedDescription)
+                                   } else {
+                                         self.editProfilePresenterRef.onSuccess()
+                                       }
+                            }
+                            
+                            
                       
-                            self.editProfilePresenterRef.onSuccess()
+                          
                             
                             
 
