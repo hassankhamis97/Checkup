@@ -77,6 +77,8 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if searchedHomeLabsArr.count > 0{
             return searchedHomeLabsArr.count
+        }else if searchedHomeLabsArr.count <= 0 &&  searchController.searchBar.text?.count ?? 0 > 0 {
+            return 1
         } else {
             return homeLabArr.count
         }
@@ -96,9 +98,12 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             
         } else if searchedHomeLabsArr.count <= 0 &&  searchController.searchBar.text?.count ?? 0 > 0 {
             print("NoData")
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "noDataCell", for: indexPath)
+            //noDataCell
+            cell.sizeThatFits(CGSize(width: 500.0, height: 500.0))
+            return cell
         } else{
             cell.labImageVIew.sd_setImage(with: URL(string: homeLabArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
-            
             cell.labRating.rating =  (homeLabArr[indexPath.row].rating as! NSString).doubleValue
             cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = homeLabArr[indexPath.row].hotline
@@ -153,16 +158,15 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
      }*/
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-      
-        if labCollection.bounds.maxY >= labCollection.contentSize.height -   labCollection.frame.size.height  && reach == false {
+        //-   labCollection.frame.size.height
+        if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == false {
             
             print("reached")
             let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
             homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
             reach = true
             
-        } else if labCollection.bounds.maxY < labCollection.contentSize.height -
-            labCollection.frame.size.height && reach == true {
+        } else if labCollection.bounds.maxY < labCollection.contentSize.height && reach == true {
             
             reach = false
         }
