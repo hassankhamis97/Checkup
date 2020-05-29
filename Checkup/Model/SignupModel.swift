@@ -19,9 +19,15 @@ class SignupModel: ISignupModel {
     func saveAuthDate(username: String, email: String, password: String, confirmPassword: String) {
         
         
-        if username.count == 0 && email.count == 0 && (password.count < 6 || password != confirmPassword ) {
+        if username.count == 0 {
             
-            self.singupPresenterRef.onFail(message: "Invalid Data")
+            self.singupPresenterRef.onFail(message: "Name is Required")
+        } else if email.count == 0 {
+            self.singupPresenterRef.onFail(message: "Email is Required")
+        } else if password.count < 6  {
+            self.singupPresenterRef.onFail(message: "Password is Required")
+        } else if password != confirmPassword {
+            self.singupPresenterRef.onFail(message: "confirmPassword does not match Password")
         } else {
             
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -57,8 +63,8 @@ class SignupModel: ISignupModel {
                     realTime.addUser(id: id ?? "", email: email, birthdate: "", gender: "", phone: phoneArray, insurance: "", address: addressObj, imagePath: "", name: username)
                     
                     self.singupPresenterRef.onSuccess()
-//                    self.singupPresenterRef.onFail(message: "user created successfully")
-//                    self.singupPresenterRef.onSuccess()
+                    //                    self.singupPresenterRef.onFail(message: "user created successfully")
+                    //                    self.singupPresenterRef.onSuccess()
                 }
             }
         }

@@ -11,7 +11,7 @@ import ImageSlideshow
 import Firebase
 class HomeTableViewController: UITableViewController   {
     
-    var searchCellHeight = 0.0
+//    var searchCellHeight = 0.0
     
     var reach : Bool = false
     
@@ -26,27 +26,25 @@ class HomeTableViewController: UITableViewController   {
     
     @IBOutlet weak var labCollection: UICollectionView!
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    
     @IBOutlet weak var labSlideShow: ImageSlideshow!
-    
-    @IBOutlet weak var searchTVCell: UITableViewCell!
     
     let pageIndicator = UIPageControl()
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0{
-            return CGFloat(searchCellHeight)
-        } else if indexPath.row == 1 {
-            return 192
-        }
-        else if indexPath.row == 2 {
-            return 479
-        } else {
-            return 0
-        }
-        
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.row == 0{
+//            return CGFloat(searchCellHeight)
+//        } else if indexPath.row == 1 {
+//            return 192
+//        }
+//        else if indexPath.row == 2 {
+//            return 479
+//        } else {
+//            return 0
+//        }
+//
+//    }
+  
+      fileprivate let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +59,17 @@ class HomeTableViewController: UITableViewController   {
                layout.minimumInteritemSpacing = 0.05
                
                self.labCollection?.collectionViewLayout = layout
+        
+        // search bar in navigation controller
+        
+        //Setup Search Controller
+        self.searchController.obscuresBackgroundDuringPresentation = false
+        self.searchController.searchBar.placeholder = "Search"
+        self.searchController.searchBar.barStyle = .black
+        self.searchController.searchBar.delegate = self
+        self.definesPresentationContext = true
+        self.navigationItem.searchController = searchController
+        
         //
         //        var labObj = Laboratory(id: "", name: "El Mokhtabar", formalReferencePathId: "", specialTests: "", image: "", branches: ["",""])
         //
@@ -92,20 +101,6 @@ class HomeTableViewController: UITableViewController   {
         //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
     }
     
-    @IBAction func searchFilter(_ sender: Any) {
-        
-        if searchCellHeight == 70.0 {
-            searchCellHeight = 0.0
-        } else {
-            searchCellHeight = 70.0
-        }
-         searchBar.text = ""
-        searchedHomeLabsArr = []
-        labCollection.reloadData()
-        tableView.reloadData()
-    }
-    
-    
     @objc func filterTapped(){
         if #available(iOS 13.0, *) {
             labFilter = storyboard?.instantiateViewController(identifier: "filterLab") as! FilterLabTableView
@@ -116,3 +111,49 @@ class HomeTableViewController: UITableViewController   {
        
     }
 }
+
+
+       
+        //MARK: SEARCH BAR DELEGATE
+/*extension HomeTableViewController: UISearchBarDelegate
+{
+//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
+//    {
+//        //Show Cancel
+//        searchBar.setShowsCancelButton(true, animated: true)
+//        searchBar.tintColor = .white
+//    }
+    
+//    private func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
+//    {
+//        //Filter function
+////        self.filterFunction(searchText: searchText)
+//    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        //Hide Cancel
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.resignFirstResponder()
+
+//        guard let term = searchBar.text , term.trim().isEmpty == false else {
+//
+//            //Notification "White spaces are not permitted"
+//            return
+//        }
+
+         //Filter function
+//        self.filterFunction(searchText: term)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
+    {
+        //Hide Cancel
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.text = String()
+        searchBar.resignFirstResponder()
+        
+        //Filter function
+//        self.filterFunction(searchText: searchBar.text)
+    }
+}*/
