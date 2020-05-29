@@ -171,7 +171,7 @@ class RequestStatusTableViewController: UITableViewController  {
               tableView.reloadData()
             return
         }
-        let location = "\( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
+        let location = "\( locAddress.address1) \( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
         
         self.locationTextArea.text = location
         
