@@ -37,6 +37,7 @@ extension EditProfileTableViewController:IEditProfileView, IImageView, IProfileV
     func hideIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         activityIndicator.hide()
+        activityIndicator.alpha=0
     }
     
     func errorMessage(msg: String) {

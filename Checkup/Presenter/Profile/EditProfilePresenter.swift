@@ -23,6 +23,7 @@ class EditProfilePresenter :IEditProfilePresenter,ICheckConnection{
     
     func onFailConnected() {
         print("There's no internet connection.")
+        self.editProfileView.hideIndicator()
         self.editProfileView.errorMessage(msg: "No internet connection")
     }
     

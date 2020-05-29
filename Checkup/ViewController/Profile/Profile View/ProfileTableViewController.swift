@@ -88,7 +88,7 @@ class ProfileTableViewController: UITableViewController {
         
         
         profileStrengthLabel.sizeToFit()
-   
+
     }
     
     

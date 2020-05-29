@@ -8,10 +8,10 @@
 
 import Foundation
 import UIKit
-
+import FirebaseAuth
 
 @available(iOS 13.0, *)
-extension SignupTableViewController: ISignupView {
+extension SignupTableViewController: ISignupView, IView {
     func showIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         //        activityIndicator.show()
@@ -23,15 +23,12 @@ extension SignupTableViewController: ISignupView {
     }
     
     func errorMessage(msg: String) {
-        
-        let alert = UIAlertController(title: msg, message:"", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        Alert.showSimpleAlert(title: "Sorry", message: msg, viewRef: self)
     }
     
     func enterToApp() {
-        guard let homeSB = self.storyboard?.instantiateViewController(withIdentifier: "homeSVC") else { return }
-         present(homeSB, animated: true, completion: nil)
-//        navigationController?.pushViewController(homeSB, animated: true)
+        if Auth.auth().currentUser != nil {
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
 }

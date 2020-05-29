@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct FilterLab : Encodable {
+struct FilterLab : Codable {
     var id : String?
     var name : String?
     var isChecked: Bool?

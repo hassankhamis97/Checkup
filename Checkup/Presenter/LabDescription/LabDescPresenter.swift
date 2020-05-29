@@ -8,8 +8,7 @@
 
 import Foundation
 class LabDescPresenter : ILabDescPresenter{
-   
- 
+  
     var paramsPresenter : LabDescriptionParams!    
     var newView : ILabDescView!
     var newLabDescModel : ILabDescModel!
@@ -18,8 +17,8 @@ class LabDescPresenter : ILabDescPresenter{
         newView = view
     }
     
-    func onSuccess(descObj: Branches) {
-        newView.showingDataOnView(labDescObj: descObj)
+    func onSuccess(descObj: Branches , id: Int) {
+        newView.showingDataOnView(labDescObj: descObj, id: id)
         
     }
     

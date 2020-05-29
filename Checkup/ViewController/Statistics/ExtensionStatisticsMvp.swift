@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension StatisticsTableViewController:IStatisticView{
     func renderView(sampleObj: HbA1cSample) {
@@ -22,13 +23,20 @@ extension StatisticsTableViewController:IStatisticView{
     
     func showIndicator() {
         
+          UIApplication.shared.isNetworkActivityIndicatorVisible = true
+         activityIndicator.show()
+         activityIndicator.alpha=1
     }
     
     func hideIndicator() {
         
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        activityIndicator.alpha=0
+              activityIndicator.hide()
     }
     
     func errorMessage(msg: String) {
+        Alert.showSimpleAlert(title: "Sorry", message: msg, viewRef: self)
         
     }
     

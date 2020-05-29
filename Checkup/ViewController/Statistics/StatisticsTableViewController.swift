@@ -20,6 +20,7 @@ class StatisticsTableViewController: UITableViewController ,IView{
     
     @IBOutlet weak var graphDescribtionLabel: UILabel!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var barChartView: BarChartView!
     @IBOutlet weak var yearTextField: UITextField!
       var index:Int!
@@ -31,6 +32,7 @@ class StatisticsTableViewController: UITableViewController ,IView{
         for n in 2020...2070 {
             var y = String(n)
             yearArray.append(y)
+            activityIndicator.alpha=0
         }
         
         

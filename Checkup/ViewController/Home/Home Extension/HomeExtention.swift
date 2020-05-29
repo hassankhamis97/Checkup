@@ -11,7 +11,7 @@ import UIKit
 import ImageSlideshow
 import SDWebImage
 
-extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ImageSlideshowDelegate, IGetLabsView,  UISearchBarDelegate {
+extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ImageSlideshowDelegate, IGetLabsView,  UISearchBarDelegate, IView {
     
     func getSearchedLabs(seachedHomeLabs: [HomeLab]) {
         
@@ -25,14 +25,31 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
         homeLabPresenter.getSearchedLabs(name: searchText)
-        
-        //        searchBar
-        
-        //        filteredNames = allNames.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
-        //        searching = true
-        //        self.tableView.reloadData()
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
+    {
+        //Show Cancel
+        searchBar.setShowsCancelButton(true, animated: true)
+        searchBar.tintColor = .white
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        //Hide Cancel
+        searchBar.text = ""
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
+    {
+        //Hide Cancel
+        searchBar.text = ""
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.text = String()
+        searchBar.resignFirstResponder()
+    }
     
     func getLabsForRender(homeLabs: [HomeLab]) {
         for i in homeLabs{
@@ -54,7 +71,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     }
     
     func errorMessage(msg: String) {
-        
+        Alert.showSimpleAlert(title: "Sorry", message: "No Internet Connection", viewRef: self)
     }
     
     
@@ -75,12 +92,14 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             cell.labImageVIew.sd_setImage(with: URL(string: searchedHomeLabsArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             
             cell.labRating.rating =  (searchedHomeLabsArr[indexPath.row].rating as! NSString).doubleValue
+            cell.labRating.settings.disablePanGestures = true
             cell.labHotLine.text = searchedHomeLabsArr[indexPath.row].hotline
             
         }else{
             cell.labImageVIew.sd_setImage(with: URL(string: homeLabArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             
             cell.labRating.rating =  (homeLabArr[indexPath.row].rating as! NSString).doubleValue
+            cell.labRating.settings.disablePanGestures = true
             cell.labHotLine.text = homeLabArr[indexPath.row].hotline
         }
         cell.labImageVIew.layer.cornerRadius = 15
@@ -98,49 +117,54 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     }
     
     
-   
-
+    
+    
     /*override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let contentOffsetY = scrollView.contentOffset.y
-        if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20 /* Needed offset */ {
-            guard !self.reach else { return }
-            self.reach = true
-            // load more data
-            // than set self.isLoading to false when new data is loaded
-            print("reached")
-//            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-//            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
-
-        }
-    }*/
+     let contentOffsetY = scrollView.contentOffset.y
+     if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20 /* Needed offset */ {
+     guard !self.reach else { return }
+     self.reach = true
+     // load more data
+     // than set self.isLoading to false when new data is loaded
+     print("reached")
+     //            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+     //            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
+     
+     }
+     }*/
     
     
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == homeLabArr.count - 1 {  //numberofitem count
-            print("reached")
-            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
-        }
-    }*/
+     if indexPath.row == homeLabArr.count - 1 {  //numberofitem count
+     print("reached")
+     let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+     homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
+     }
+     }*/
     
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-         if (indexPath.row == homeLabArr.count - 1 ) { //it's your last cell
-           //Load more data & reload your collection view
-            print("reached")
-            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-            homeLabPresenter.getLabs(take: 3, skip: homeLabArr.count)
-         }
-    }*/
+     if (indexPath.row == homeLabArr.count - 1 ) { //it's your last cell
+     //Load more data & reload your collection view
+     print("reached")
+     let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+     homeLabPresenter.getLabs(take: 3, skip: homeLabArr.count)
+     }
+     }*/
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == false {
+        
+        /*
+         (isTop == false && msgTableView.contentOffset.y >= (msgTableView.contentSize.height - msgTableView.frame.size.height))
+         */
+        
+        if labCollection.bounds.maxY >= labCollection.contentSize.height-labCollection.frame.size.height && reach == false {
             
             print("reached")
             let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
             homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
             reach = true
             
-        } else if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == true {
+        } else if labCollection.bounds.maxY < labCollection.contentSize.height-labCollection.frame.size.height && reach == true {
             
             reach = false
         }
@@ -150,8 +174,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         var slideShowImgs: [InputSource] = [InputSource]()
         if homeLabArr.count > 0{
             for i in homeLabArr {
-                var x = SDWebImageSource(url: URL(string: i.labPhoto ?? "")!)
-                slideShowImgs.append(x)
+                slideShowImgs.append(SDWebImageSource(url: URL(string: i.labPhoto ?? "")!))
                 
             }
         }
