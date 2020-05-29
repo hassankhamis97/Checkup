@@ -30,8 +30,10 @@ extension SignupTableViewController: ISignupView {
     }
     
     func enterToApp() {
-        guard let homeSB = self.storyboard?.instantiateViewController(withIdentifier: "homeSVC") else { return }
-         present(homeSB, animated: true, completion: nil)
+        
+        self.dismiss(animated: true, completion: nil)
+//        guard let homeSB = self.storyboard?.instantiateViewController(withIdentifier: "homeSVC") else { return }
+//         present(homeSB, animated: true, completion: nil)
 //        navigationController?.pushViewController(homeSB, animated: true)
     }
 }

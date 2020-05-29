@@ -25,14 +25,31 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
         homeLabPresenter.getSearchedLabs(name: searchText)
-        
-        //        searchBar
-        
-        //        filteredNames = allNames.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
-        //        searching = true
-        //        self.tableView.reloadData()
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
+    {
+        //Show Cancel
+        searchBar.setShowsCancelButton(true, animated: true)
+        searchBar.tintColor = .white
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        //Hide Cancel
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.resignFirstResponder()
+        searchBar.text = ""
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
+    {
+        //Hide Cancel
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.text = String()
+        searchBar.resignFirstResponder()
+        searchBar.text = ""
+    }
     
     func getLabsForRender(homeLabs: [HomeLab]) {
         for i in homeLabs{
@@ -98,39 +115,39 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     }
     
     
-   
-
+    
+    
     /*override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let contentOffsetY = scrollView.contentOffset.y
-        if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20 /* Needed offset */ {
-            guard !self.reach else { return }
-            self.reach = true
-            // load more data
-            // than set self.isLoading to false when new data is loaded
-            print("reached")
-//            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-//            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
-
-        }
-    }*/
+     let contentOffsetY = scrollView.contentOffset.y
+     if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20 /* Needed offset */ {
+     guard !self.reach else { return }
+     self.reach = true
+     // load more data
+     // than set self.isLoading to false when new data is loaded
+     print("reached")
+     //            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+     //            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
+     
+     }
+     }*/
     
     
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == homeLabArr.count - 1 {  //numberofitem count
-            print("reached")
-            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
-        }
-    }*/
+     if indexPath.row == homeLabArr.count - 1 {  //numberofitem count
+     print("reached")
+     let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+     homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
+     }
+     }*/
     
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-         if (indexPath.row == homeLabArr.count - 1 ) { //it's your last cell
-           //Load more data & reload your collection view
-            print("reached")
-            let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-            homeLabPresenter.getLabs(take: 3, skip: homeLabArr.count)
-         }
-    }*/
+     if (indexPath.row == homeLabArr.count - 1 ) { //it's your last cell
+     //Load more data & reload your collection view
+     print("reached")
+     let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+     homeLabPresenter.getLabs(take: 3, skip: homeLabArr.count)
+     }
+     }*/
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if labCollection.bounds.maxY >= labCollection.contentSize.height && reach == false {
