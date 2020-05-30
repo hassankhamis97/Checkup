@@ -14,6 +14,8 @@
 		032AB5C42481DF1B0021DE4F /* ReviewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032AB5C32481DF1B0021DE4F /* ReviewsModel.swift */; };
 		032AB5C72481E0770021DE4F /* ReviewsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032AB5C62481E0770021DE4F /* ReviewsContract.swift */; };
 		032AB5CA2481E9310021DE4F /* ReviewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032AB5C92481E9310021DE4F /* ReviewsPresenter.swift */; };
+		032AB5CD248202730021DE4F /* ReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032AB5CC248202730021DE4F /* ReviewsTableViewController.swift */; };
+		032AB5CF24820F110021DE4F /* ReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032AB5CE24820F110021DE4F /* ReviewsTableViewCell.swift */; };
 		0335FAF8246A08C600CE0863 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0335FAF7246A08C600CE0863 /* Home.storyboard */; };
 		0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */; };
 		03380CDA247F245C0055717E /* FilterGovern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380CD9247F245C0055717E /* FilterGovern.swift */; };
@@ -293,6 +295,8 @@
 		032AB5C32481DF1B0021DE4F /* ReviewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsModel.swift; sourceTree = "<group>"; };
 		032AB5C62481E0770021DE4F /* ReviewsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsContract.swift; sourceTree = "<group>"; };
 		032AB5C92481E9310021DE4F /* ReviewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsPresenter.swift; sourceTree = "<group>"; };
+		032AB5CC248202730021DE4F /* ReviewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewsTableViewController.swift; path = Checkup/Presenter/Reviews/ReviewsTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		032AB5CE24820F110021DE4F /* ReviewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewCell.swift; sourceTree = "<group>"; };
 		0335FAF7246A08C600CE0863 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		03380CD9247F245C0055717E /* FilterGovern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterGovern.swift; sourceTree = "<group>"; };
@@ -627,6 +631,14 @@
 			path = Reviews;
 			sourceTree = "<group>";
 		};
+		032AB5CB2482023B0021DE4F /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				032AB5CC248202730021DE4F /* ReviewsTableViewController.swift */,
+			);
+			path = Reviews;
+			sourceTree = "<group>";
+		};
 		0335FAF9246A0B1A00CE0863 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -745,6 +757,7 @@
 				03FDA19E2470CA8D0084C4AA /* SeventhStaticTableViewCell.swift */,
 				03FDA1A02470CAB10084C4AA /* EighthStaticTableViewCell.swift */,
 				03FDA1A22470CAC50084C4AA /* NinthStaticTableViewCell.swift */,
+				032AB5CE24820F110021DE4F /* ReviewsTableViewCell.swift */,
 			);
 			path = StaticCells;
 			sourceTree = "<group>";
@@ -979,6 +992,7 @@
 		4E22F932243E73A90090693C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				032AB5CB2482023B0021DE4F /* Reviews */,
 				CC80B9D724771F1C00521508 /* Statistics */,
 				4EC1FD2E2472DD7A0029C499 /* FilterTests */,
 				4E2C9E0024708CB1007C6109 /* BranchDescription */,
@@ -2281,6 +2295,7 @@
 				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
 				CC157CA624700F6C001AE122 /* ProfilePresenter.swift in Sources */,
 				4E4EA63A2470117F00309CAF /* NewRequestContract.swift in Sources */,
+				032AB5CF24820F110021DE4F /* ReviewsTableViewCell.swift in Sources */,
 				A39BF975246DA047003500A8 /* ImgTableViewCell.swift in Sources */,
 				4EDCBA60247D611800DE1AB5 /* GetUserData.swift in Sources */,
 				4EE9F93424697CF300BB4A39 /* MessagingChatViewController.swift in Sources */,
@@ -2367,6 +2382,7 @@
 				CC8A1046245E087C007856BF /* IFillDataCells.swift in Sources */,
 				CC80B9E12477360000521508 /* HbA1cSample.swift in Sources */,
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
+				032AB5CD248202730021DE4F /* ReviewsTableViewController.swift in Sources */,
 				03F7D96A2473E68800E92A73 /* MainChatModel.swift in Sources */,
 				CC064E30245B03360046E67F /* NewRequestTableViewController.swift in Sources */,
 				BBBB1B522477CA1A0013D06F /* ICancelRequest.swift in Sources */,

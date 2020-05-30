@@ -19,7 +19,7 @@ extension BranchDescriptionViewController: UITableViewDataSource, UITableViewDel
  }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
- return 9
+ return 10
  }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var height : CGFloat = CGFloat()
@@ -43,10 +43,13 @@ extension BranchDescriptionViewController: UITableViewDataSource, UITableViewDel
         }else if(indexPath.row == 6){
             height = 70
             
-        }else if(indexPath.row == 7){
+        }else if(indexPath.row == 8){
         height = 300
         
-        }else if(indexPath.row == 8){
+        }else if(indexPath.row == 9){
+            height = 75
+            
+        }else if(indexPath.row == 7){
             height = 75
             
         }
@@ -95,7 +98,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         seventhCell.labAvailableOutelt.text = String(branchDescriptionView.isAvailableFromHome)
     return seventhCell
         
-    } else if(myTag==7){
+    } else if(myTag==8){
         let eighthCell = tableView.dequeueReusableCell(withIdentifier: "eighthCell", for: indexPath) as! EighthStaticTableViewCell
             let annotation = MKPointAnnotation()
             annotation.title = branchDescriptionView.labName!
@@ -104,16 +107,35 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         eighthCell.LabMapOutlet.addAnnotation(annotation)
        return eighthCell
         
-    } else if(myTag==8){
+    } else if(myTag==9){
           let ningthCell = tableView.dequeueReusableCell(withIdentifier: "ningthCell", for: indexPath) as! NinthStaticTableViewCell
         ningthCell.latitude = branchDescriptionView.address!.latitude
         ningthCell.longitude = branchDescriptionView.address!.longitude
         ningthCell.name = branchDescriptionView.labName!
           return ningthCell
        }
+    
+    else if(myTag==7){
+       let reviewsCell = tableView.dequeueReusableCell(withIdentifier: "reviewsCell", for: indexPath) as! ReviewsTableViewCell
+    
+   //     let reviews = storyboard?.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
+     //   navigationController?.pushViewController(reviews, animated: true)
+        
+       return reviewsCell
+    }
+    
    }
       return cell
   }
     
 
 }
+/*
+ reviewsCell
+ 
+ filter = storyboard?.instantiateViewController(withIdentifier: "filterLab") as! FilterLabTableView
+       filter.myFilterProtocol = self
+       navigationController?.pushViewController(filter, animated: true)
+ 
+ 
+ */
