@@ -129,6 +129,9 @@
 		4EBBC93D246B47F200C7978D /* MainChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBC93B246B47F200C7978D /* MainChatTableViewCell.xib */; };
 		4EBBC940246B595000C7978D /* MainChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93F246B595000C7978D /* MainChatViewController.swift */; };
 		4EBBC946246B5D3900C7978D /* PearedUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC945246B5D3900C7978D /* PearedUserData.swift */; };
+		4EBED8092481614E009A43FB /* UpdateNotificationFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBED8082481614E009A43FB /* UpdateNotificationFlag.swift */; };
+		4EBED80B24816235009A43FB /* UpdateNotificationFlagContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBED80A24816235009A43FB /* UpdateNotificationFlagContract.swift */; };
+		4EBED80D24816415009A43FB /* NotificationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBED80C24816415009A43FB /* NotificationContract.swift */; };
 		4EBFBB0024786009008326C0 /* ResultUITabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFBAFF24786009008326C0 /* ResultUITabBarItem.swift */; };
 		4EC1626A246F36930053F581 /* ConvertToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC16269246F36930053F581 /* ConvertToDictionary.swift */; };
 		4EC1626D246F5C1D0053F581 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1626C246F5C1D0053F581 /* User.swift */; };
@@ -187,7 +190,6 @@
 		A33E799D246DC2D5000897A6 /* MapViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33E799B246DC2D5000897A6 /* MapViewTableViewCell.xib */; };
 		A372090D24770574009ADC95 /* HomeLabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372090C24770574009ADC95 /* HomeLabPresenter.swift */; };
 		A372091024770DD4009ADC95 /* HomeExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372090F24770DD4009ADC95 /* HomeExtention.swift */; };
-		A38CCEFF247214D900BC684A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CCEFE247214D900BC684A /* ResetPasswordViewController.swift */; };
 		A39BF96D246D96A1003500A8 /* UserDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BF96C246D96A1003500A8 /* UserDataTableViewController.swift */; };
 		A39BF975246DA047003500A8 /* ImgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BF973246DA047003500A8 /* ImgTableViewCell.swift */; };
 		A39BF976246DA047003500A8 /* ImgTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39BF974246DA047003500A8 /* ImgTableViewCell.xib */; };
@@ -195,6 +197,7 @@
 		A39BF97C246DA47E003500A8 /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39BF97A246DA47E003500A8 /* DataTableViewCell.xib */; };
 		A3B75D5624786EC900C95139 /* HomeLabRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B75D5524786EC900C95139 /* HomeLabRealm.swift */; };
 		A3BC0855247D91D500D98A09 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BC0857247D91D500D98A09 /* Login.storyboard */; };
+		A3C421D92481FA1600CCF8B6 /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */; };
 		A3C5F02F2472BDA80069413F /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F02E2472BDA80069413F /* SignupModel.swift */; };
 		A3C5F0322472BE8C0069413F /* SignupContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0312472BE8C0069413F /* SignupContract.swift */; };
 		A3C5F0352472C2D60069413F /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0342472C2D60069413F /* SignupPresenter.swift */; };
@@ -415,6 +418,9 @@
 		4EBBC93B246B47F200C7978D /* MainChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChatTableViewCell.xib; sourceTree = "<group>"; };
 		4EBBC93F246B595000C7978D /* MainChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatViewController.swift; sourceTree = "<group>"; };
 		4EBBC945246B5D3900C7978D /* PearedUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PearedUserData.swift; sourceTree = "<group>"; };
+		4EBED8082481614E009A43FB /* UpdateNotificationFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotificationFlag.swift; sourceTree = "<group>"; };
+		4EBED80A24816235009A43FB /* UpdateNotificationFlagContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotificationFlagContract.swift; sourceTree = "<group>"; };
+		4EBED80C24816415009A43FB /* NotificationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationContract.swift; sourceTree = "<group>"; };
 		4EBFBAFF24786009008326C0 /* ResultUITabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultUITabBarItem.swift; sourceTree = "<group>"; };
 		4EC16269246F36930053F581 /* ConvertToDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToDictionary.swift; sourceTree = "<group>"; };
 		4EC1626C246F5C1D0053F581 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -473,7 +479,6 @@
 		A33E799B246DC2D5000897A6 /* MapViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewTableViewCell.xib; sourceTree = "<group>"; };
 		A372090C24770574009ADC95 /* HomeLabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLabPresenter.swift; sourceTree = "<group>"; };
 		A372090F24770DD4009ADC95 /* HomeExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExtention.swift; sourceTree = "<group>"; };
-		A38CCEFE247214D900BC684A /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		A39BF96C246D96A1003500A8 /* UserDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataTableViewController.swift; sourceTree = "<group>"; };
 		A39BF973246DA047003500A8 /* ImgTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgTableViewCell.swift; sourceTree = "<group>"; };
 		A39BF974246DA047003500A8 /* ImgTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImgTableViewCell.xib; sourceTree = "<group>"; };
@@ -482,6 +487,7 @@
 		A3B75D5524786EC900C95139 /* HomeLabRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLabRealm.swift; sourceTree = "<group>"; };
 		A3BC0856247D91D500D98A09 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ar; path = ar.lproj/Login.storyboard; sourceTree = "<group>"; };
 		A3BC0858247D91D800D98A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
 		A3C5F02E2472BDA80069413F /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		A3C5F0312472BE8C0069413F /* SignupContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupContract.swift; sourceTree = "<group>"; };
 		A3C5F0342472C2D60069413F /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
@@ -1070,6 +1076,7 @@
 			isa = PBXGroup;
 			children = (
 				4E87AF4C247EC52600002E66 /* ManualNotificationPresenter.swift */,
+				4EBED8082481614E009A43FB /* UpdateNotificationFlag.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -1078,6 +1085,8 @@
 			isa = PBXGroup;
 			children = (
 				4E87AF47247EC2FD00002E66 /* ManualNotificationContract.swift */,
+				4EBED80A24816235009A43FB /* UpdateNotificationFlagContract.swift */,
+				4EBED80C24816415009A43FB /* NotificationContract.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -1694,7 +1703,7 @@
 		A38CCEFD2472149400BC684A /* forgetPasswordPopup */ = {
 			isa = PBXGroup;
 			children = (
-				A38CCEFE247214D900BC684A /* ResetPasswordViewController.swift */,
+				A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */,
 			);
 			path = forgetPasswordPopup;
 			sourceTree = "<group>";
@@ -2238,6 +2247,7 @@
 				4E15ACDB24712F6E004418B1 /* ShowNewRequest.swift in Sources */,
 				CC80B9DB247727E800521508 /* ExtensionStatisticsPicker.swift in Sources */,
 				4E4542232479FAF700955FD8 /* AddViewIndicator.swift in Sources */,
+				4EBED80B24816235009A43FB /* UpdateNotificationFlagContract.swift in Sources */,
 				4EA87517248004B100E95B30 /* SendMessageContract.swift in Sources */,
 				CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */,
 				CCCDA045246A94F5005549EA /* ReqLocationTableViewController.swift in Sources */,
@@ -2254,6 +2264,7 @@
 				0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */,
 				CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */,
 				4E1FBE36247E1CFB00C463D5 /* ChatStatus.swift in Sources */,
+				4EBED80D24816415009A43FB /* NotificationContract.swift in Sources */,
 				4E87AF59247F000700002E66 /* ResultPDFCollectionViewCell.swift in Sources */,
 				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
 				CC157CA624700F6C001AE122 /* ProfilePresenter.swift in Sources */,
@@ -2289,6 +2300,7 @@
 				4EE7EA2A246AD3B900BF434F /* SenderImageTableViewCell.swift in Sources */,
 				03FDA1992470CA4F0084C4AA /* FourthStaticTableViewCell.swift in Sources */,
 				CCDF8BBF24713DF900F56B2D /* Annotation.swift in Sources */,
+				A3C421D92481FA1600CCF8B6 /* ResetPasswordTableViewController.swift in Sources */,
 				4EE9F94024699E3200BB4A39 /* SenderCellTableViewCell.swift in Sources */,
 				CCCDA04E246AD130005549EA /* SettingTableViewController.swift in Sources */,
 				4EC1FD3C2472E6D90029C499 /* FilterLab.swift in Sources */,
@@ -2330,7 +2342,6 @@
 				CC76172B247329030084CC6E /* ImageContract.swift in Sources */,
 				4E87AF51247EDC5C00002E66 /* ResultDetailsTableViewController.swift in Sources */,
 				4EE9F9492469B70A00BB4A39 /* MessageLabel.swift in Sources */,
-				A38CCEFF247214D900BC684A /* ResetPasswordViewController.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
 				4EA87502247FC09900E95B30 /* MessagingChat.swift in Sources */,
 				035A048E247DB1010017A885 /* FilterLabPresenter.swift in Sources */,
@@ -2388,6 +2399,7 @@
 				CC80B9E6247738CC00521508 /*  StatisticsModel.swift in Sources */,
 				4EFA6ED32474195400D83F32 /* FilterTestContract.swift in Sources */,
 				4EA87509247FC1CC00E95B30 /* MessagingChatPresenter.swift in Sources */,
+				4EBED8092481614E009A43FB /* UpdateNotificationFlag.swift in Sources */,
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
 				4ECE5C59246EA5C200932947 /* IBase.swift in Sources */,
 				4ECE5C51246E89F200932947 /* LoginContract.swift in Sources */,

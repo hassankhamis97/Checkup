@@ -469,6 +469,9 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAR-Ko-MA1" customClass="StepIndicatorView" customModule="StepIndicator">
                                                     <rect key="frame" x="8" y="51" width="398" height="51"/>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="51" id="RZA-oF-bV3"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
                                                             <integer key="value" value="3"/>
@@ -503,27 +506,19 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPU-7F-Zh0">
-                                                    <rect key="frame" x="8" y="19" width="99" height="23"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="23" id="B3V-0C-2bJ"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="V1t-aN-Y9B"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="8" y="19" width="71.5" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                     <color key="textColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NX-UX-Ix3">
-                                                    <rect key="frame" x="345" y="18" width="61" height="24"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="24" id="4vD-JC-Je7"/>
-                                                        <constraint firstAttribute="width" constant="61" id="IMN-YA-Rr5"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="359.5" y="19" width="46.5" height="23"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                                     <color key="textColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taking Sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzs-p4-agb">
-                                                    <rect key="frame" x="144" y="18" width="127" height="24"/>
+                                                    <rect key="frame" x="143.5" y="19" width="127" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                     <color key="textColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -531,19 +526,15 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="yAR-Ko-MA1" firstAttribute="bottom" secondItem="MMA-I1-ZE2" secondAttribute="bottomMargin" id="46S-Wo-G28"/>
-                                                <constraint firstItem="yAR-Ko-MA1" firstAttribute="top" secondItem="gPU-7F-Zh0" secondAttribute="bottom" constant="9" id="Bgg-bO-fsa"/>
-                                                <constraint firstItem="gPU-7F-Zh0" firstAttribute="leading" secondItem="MMA-I1-ZE2" secondAttribute="leading" constant="8" id="CgA-7a-vdO"/>
-                                                <constraint firstItem="yAR-Ko-MA1" firstAttribute="centerX" secondItem="zzs-p4-agb" secondAttribute="centerX" constant="-0.5" id="FlH-SX-7z3"/>
-                                                <constraint firstItem="zzs-p4-agb" firstAttribute="leading" secondItem="gPU-7F-Zh0" secondAttribute="trailing" constant="37" id="K7r-PB-c0c"/>
-                                                <constraint firstItem="gPU-7F-Zh0" firstAttribute="leading" secondItem="yAR-Ko-MA1" secondAttribute="leading" id="OCV-2C-ZH6"/>
-                                                <constraint firstItem="0NX-UX-Ix3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zzs-p4-agb" secondAttribute="trailing" constant="8" symbolic="YES" id="R6g-N1-tJG"/>
-                                                <constraint firstAttribute="trailing" secondItem="0NX-UX-Ix3" secondAttribute="trailing" constant="8" id="USn-F7-hdD"/>
-                                                <constraint firstItem="0NX-UX-Ix3" firstAttribute="trailing" secondItem="yAR-Ko-MA1" secondAttribute="trailing" id="VoM-zd-WBy"/>
-                                                <constraint firstItem="0NX-UX-Ix3" firstAttribute="centerY" secondItem="zzs-p4-agb" secondAttribute="centerY" id="by2-R4-Awr"/>
-                                                <constraint firstItem="gPU-7F-Zh0" firstAttribute="baseline" secondItem="zzs-p4-agb" secondAttribute="baseline" id="dUX-6R-Ukr"/>
-                                                <constraint firstItem="0NX-UX-Ix3" firstAttribute="bottom" secondItem="zzs-p4-agb" secondAttribute="bottom" id="jfG-5a-zh2"/>
-                                                <constraint firstItem="gPU-7F-Zh0" firstAttribute="top" secondItem="MMA-I1-ZE2" secondAttribute="topMargin" constant="8" id="xHl-1P-ZEj"/>
+                                                <constraint firstItem="yAR-Ko-MA1" firstAttribute="top" secondItem="gPU-7F-Zh0" secondAttribute="bottom" constant="9" id="Gt5-SC-xdp"/>
+                                                <constraint firstItem="zzs-p4-agb" firstAttribute="centerX" secondItem="MMA-I1-ZE2" secondAttribute="centerX" id="Ouz-0U-L6X"/>
+                                                <constraint firstItem="0NX-UX-Ix3" firstAttribute="top" secondItem="MMA-I1-ZE2" secondAttribute="top" constant="19" id="Qv4-EB-E4Y"/>
+                                                <constraint firstItem="zzs-p4-agb" firstAttribute="top" secondItem="MMA-I1-ZE2" secondAttribute="top" constant="19" id="WeZ-1h-GOE"/>
+                                                <constraint firstAttribute="trailing" secondItem="0NX-UX-Ix3" secondAttribute="trailing" constant="8" id="aRd-Td-ldd"/>
+                                                <constraint firstAttribute="trailing" secondItem="yAR-Ko-MA1" secondAttribute="trailing" constant="8" id="tp1-k0-SgN"/>
+                                                <constraint firstItem="gPU-7F-Zh0" firstAttribute="top" secondItem="MMA-I1-ZE2" secondAttribute="top" constant="19" id="xdt-MJ-mf3"/>
+                                                <constraint firstItem="gPU-7F-Zh0" firstAttribute="leading" secondItem="MMA-I1-ZE2" secondAttribute="leading" constant="8" id="y5d-2X-dcU"/>
+                                                <constraint firstItem="yAR-Ko-MA1" firstAttribute="leading" secondItem="MMA-I1-ZE2" secondAttribute="leading" constant="8" id="zrj-S1-fWC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

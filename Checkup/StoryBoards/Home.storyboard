@@ -56,6 +56,10 @@
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
+                                                    <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="Vyj-9f-Twg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </activityIndicatorView>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="labCell" id="QmN-zi-Qpj" customClass="LabsCollectionViewCell" customModule="Checkup" customModuleProvider="target">
                                                             <rect key="frame" x="111.5" y="0.0" width="191" height="233"/>
@@ -64,13 +68,11 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="233"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDG-dR-wyh">
-                                                                        <rect key="frame" x="34" y="15" width="126" height="124"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDG-dR-wyh">
+                                                                        <rect key="frame" x="34" y="15" width="123" height="124"/>
                                                                     </imageView>
-                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3sV-R1-n4w" customClass="CosmosView" customModule="Cosmos">
-                                                                        <rect key="frame" x="34" y="152" width="123" height="28"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sV-R1-n4w" customClass="CosmosView" customModule="Cosmos">
+                                                                        <rect key="frame" x="35.5" y="152" width="120" height="20"/>
                                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
@@ -81,15 +83,24 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5987132" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRe-wA-45U">
-                                                                        <rect key="frame" x="58" y="178" width="74" height="21"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5987132" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRe-wA-45U">
+                                                                        <rect key="frame" x="58.5" y="178" width="74" height="21"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                         <color key="textColor" red="0.19215686269999999" green="0.20392156859999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="3sV-R1-n4w" firstAttribute="top" secondItem="ouF-8l-jq3" secondAttribute="top" constant="152" id="25X-xh-IiF"/>
+                                                                    <constraint firstItem="3sV-R1-n4w" firstAttribute="top" secondItem="fDG-dR-wyh" secondAttribute="bottom" constant="13" id="AVR-ms-scq"/>
+                                                                    <constraint firstItem="fDG-dR-wyh" firstAttribute="centerX" secondItem="ouF-8l-jq3" secondAttribute="centerX" id="Vtp-4R-Upt"/>
+                                                                    <constraint firstItem="fDG-dR-wyh" firstAttribute="leading" secondItem="ouF-8l-jq3" secondAttribute="leading" constant="34" id="go5-fX-DSI"/>
+                                                                    <constraint firstItem="GRe-wA-45U" firstAttribute="top" secondItem="3sV-R1-n4w" secondAttribute="bottom" constant="6" id="rb9-yZ-kP5"/>
+                                                                    <constraint firstItem="fDG-dR-wyh" firstAttribute="top" secondItem="ouF-8l-jq3" secondAttribute="top" constant="15" id="shb-8T-IQt"/>
+                                                                    <constraint firstItem="GRe-wA-45U" firstAttribute="centerX" secondItem="ouF-8l-jq3" secondAttribute="centerX" id="wMv-yC-hgo"/>
+                                                                    <constraint firstItem="3sV-R1-n4w" firstAttribute="centerX" secondItem="ouF-8l-jq3" secondAttribute="centerX" id="xVW-ef-Db8"/>
+                                                                </constraints>
                                                             </collectionViewCellContentView>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <size key="customSize" width="191" height="233"/>
@@ -147,6 +158,7 @@
                     <connections>
                         <outlet property="labCollection" destination="GUX-I2-JLc" id="rSR-Iq-qem"/>
                         <outlet property="labSlideShow" destination="4ei-gy-2Ti" id="kFg-Sr-TgX"/>
+                        <outlet property="labsActicity" destination="Vyj-9f-Twg" id="Guh-oF-1Hm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ax-6u-f8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

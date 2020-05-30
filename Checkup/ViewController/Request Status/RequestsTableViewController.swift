@@ -257,13 +257,17 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
 //            let vc = storyboard?.instantiateViewController(identifier: "reqStatus") as! RequestStatusTableViewController
         if isResult == false {
         let vc = storyboard?.instantiateViewController(withIdentifier: "reqStatus") as! RequestStatusTableViewController
-            vc.testID = requests![indexPath.row].id
+            vc.testID = String(requests![indexPath.row].id!)
             navigationController?.pushViewController(vc, animated: true)
         }
         else{
         let resultDetailsTVC = storyboard?.instantiateViewController(withIdentifier: "resultDetailsSVC") as! ResultDetailsTableViewController
-            resultDetailsTVC.testID = requests![indexPath.row].id
-        navigationController?.pushViewController(resultDetailsTVC, animated: true)
+            resultDetailsTVC.testID = String(requests![indexPath.row].id!)
+            navigationController?.pushViewController(resultDetailsTVC, animated: true)
+        }
+        if requests![indexPath.row].isNotified! == true {
+            var updateNotificationFlagPresenter = UpdateNotificationFlagPresenter(updateNotificationFlagViewRef: self)
+            updateNotificationFlagPresenter.updateNotificationFlag(testId: requests![indexPath.row].id!)
         }
         
     }

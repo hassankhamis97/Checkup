@@ -301,12 +301,17 @@
                                                         <action selector="saveDataSignupBtn:" destination="BHA-3j-n3e" eventType="touchUpInside" id="jA7-QC-UyE"/>
                                                     </connections>
                                                 </button>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mpA-kR-A1j">
+                                                    <rect key="frame" x="197" y="55" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="Qkf-Xa-nM5" firstAttribute="top" secondItem="Kf8-wP-eiC" secondAttribute="topMargin" constant="22" id="7wP-eM-pYe"/>
+                                                <constraint firstItem="mpA-kR-A1j" firstAttribute="centerX" secondItem="Kf8-wP-eiC" secondAttribute="centerX" id="T9O-BX-9PI"/>
                                                 <constraint firstItem="Qkf-Xa-nM5" firstAttribute="leading" secondItem="Kf8-wP-eiC" secondAttribute="leadingMargin" constant="20" id="Wjk-Qx-HzF"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Qkf-Xa-nM5" secondAttribute="trailing" constant="20" id="aOW-vw-5z4"/>
+                                                <constraint firstItem="mpA-kR-A1j" firstAttribute="centerY" secondItem="Kf8-wP-eiC" secondAttribute="centerY" constant="15" id="vMZ-e7-dnf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="0.1816941353" colorSpace="custom" customColorSpace="sRGB"/>
@@ -331,6 +336,7 @@
                         <outlet property="email" destination="Cqp-Xd-ZLO" id="E4V-0E-d2W"/>
                         <outlet property="password" destination="uo1-KL-Vkb" id="HhP-Ec-uDs"/>
                         <outlet property="signUpBtn" destination="Qkf-Xa-nM5" id="DY7-jJ-91P"/>
+                        <outlet property="signupActivity" destination="mpA-kR-A1j" id="p8T-Rb-bxx"/>
                         <outlet property="userName" destination="hQf-ON-fsU" id="dTD-NC-qAT"/>
                     </connections>
                 </tableViewController>

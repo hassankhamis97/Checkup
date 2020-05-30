@@ -11,15 +11,17 @@ import Firebase
 import Alamofire
 import SwiftyJSON
 class ManualNotificationModel: IManualNotificationModel {
-    var manualNotificationPresenterRef : IManualNotificationPresenter!
+    
+    
+    var notificationPresenterRef : INotificationPresenter!
     var ref: DatabaseReference!
-    init(manualNotificationPresenterRef : IManualNotificationPresenter) {
-        self.manualNotificationPresenterRef = manualNotificationPresenterRef
+    init(notificationPresenterRef : INotificationPresenter) {
+        self.notificationPresenterRef = notificationPresenterRef
         
         ref = Database.database().reference()
     }
     func getNotificationNumbers() {
-        ref.child("Notification").child(Auth.auth().currentUser!.uid).setValue(["getNotified": "1"])
+       if let manualNotificationPresenterRef = notificationPresenterRef as? IManualNotificationPresenter { ref.child("Notification").child(Auth.auth().currentUser!.uid).setValue(["getNotified": "1"])
         ref.child("Notification").child(Auth.auth().currentUser!.uid).observe(.value, with: { (snapshot) in
             let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetNotificationNumbers?userId=\(Auth.auth().currentUser!.uid)"
             Alamofire.request(urlString).validate().responseJSON { response in
@@ -31,20 +33,39 @@ class ManualNotificationModel: IManualNotificationModel {
                 do{
                 let manualNotificationObj = try JSONDecoder().decode(ManualNotification.self , from: response.data!)
                 
-                self.manualNotificationPresenterRef.onSuccess(manualNotification: manualNotificationObj)
+                manualNotificationPresenterRef.onSuccess(manualNotification: manualNotificationObj)
                 }
                 catch let error {
-                    self.manualNotificationPresenterRef.onFail(errorMsg: error.localizedDescription)
+                    manualNotificationPresenterRef.onFail(errorMsg: error.localizedDescription)
                 }
                 break
             case .failure(let error):
-                self.manualNotificationPresenterRef.onFail(errorMsg: error.localizedDescription)
+                manualNotificationPresenterRef.onFail(errorMsg: error.localizedDescription)
                 print(error)
                 break
             }
             }
         })
-
+        }
     }
-
+    func updateNotificationFlag(testId: Int64) {
+        if let updateNotificationFlagPresenterRef = notificationPresenterRef as? IUpdateNotificationFlagPresenter {
+        let urlString = "http://www.checkup.somee.com/api/AnalysisService/UpdateNotifiedFalse?testId=\(testId)"
+        Alamofire.request(urlString).validate().responseJSON { response in
+        switch response.result {
+                            case .success(let value):
+                                if value as! Int == 1 {
+                                    self.ref.child("Notification").child(Auth.auth().currentUser!.uid).setValue(["getNotified": self.ref.childByAutoId().key!])
+                                }
+                                debugPrint(response)
+                               
+                                break
+                            case .failure(let error):
+        //                        self.newRequestPresenterRef.onFail(message: error.localizedDescription)
+                                print(error)
+                                break
+                            }
+        }
+        }
+    }
 }

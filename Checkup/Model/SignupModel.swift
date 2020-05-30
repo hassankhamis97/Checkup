@@ -10,6 +10,8 @@ import Foundation
 import FirebaseDatabase
 import FirebaseAuth
 import RealmSwift
+import FirebaseCore
+import FirebaseFirestore
 
 class SignupModel: ISignupModel {
     
@@ -64,23 +66,28 @@ class SignupModel: ISignupModel {
                     realTime.addUser(id: id ?? "", email: email, birthdate: "", gender: "", phone: phoneArray, insurance: "", address: addressObj, imagePath: "", name: username)
                     
                     self.saveToRealm(id: id ?? "0x", username: username)
-                    
+                    self.addNameToFireStore(username: username, id: id ?? "0x")
                     self.singupPresenterRef.onSuccess()
                 }
             }
-        }
+        }   
     }
     
     func saveToRealm(id: String, username: String) {
         //add user name & id to Realm
-            if id.count > 0 && username.count > 0{
-                let person = Person()
-                person.id = id
-                person.name = username
-                let realm = try! Realm()
-                try! realm.write {
-                    realm.add(person)
-                }
+        if id.count > 0 && username.count > 0{
+            let person = Person()
+            person.id = id
+            person.name = username
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(person)
+            }
         }
+    }
+    
+    func addNameToFireStore(username: String, id: String) {
+        // Update one field, creating the document if it does not exist.
+        Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": "" ], merge: true)
     }
 }
