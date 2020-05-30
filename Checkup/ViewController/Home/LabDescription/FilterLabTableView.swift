@@ -8,38 +8,56 @@
 
 import UIKit
 
-class FilterLabTableView: UITableViewController {
+class FilterLabTableView: UITableViewController , IFilterLabView {
+  
+    
 
         var sectionTitle : [String] = ["Governerates"]
-        var sectionGovernerates : [String] = ["Alexandria" , "Cairo" , "Mansoura"]
-     //   var sectionLocation : [String] = ["Somouha" , "Kafr Abdo" , "Abu Kir"]
+        var sectionGovernerates : [String] = ["Alex" , "Cairo" , "Mansoura","Portsaid" , "Sharm"]
 
-
+        var filterLabPresenter : IFilterLabPresenter!
+        var filteredArr : [FilterGovern]!
+        var myFilterProtocol : FilterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-     
+        
+       filterLabPresenter = FilterLabPresenter(view: self)
+       filterLabPresenter.getDataFromModel()
+    
+        
     }
+   
 
-    // MARK: - Table view data source
+    func returnDataToView(filterLabArrInView: [FilterGovern]) {
+        filteredArr = filterLabArrInView
+        print("data returned in view")
+        print(filteredArr.count)
+        tableView.reloadData()
+      }
+      
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return sectionGovernerates.count
+        if(filteredArr == nil){
+            return 0
+        }else{
+            return filteredArr!.count
+        }
+        
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "filterLabCell", for: indexPath)
-
-      
-            cell.textLabel?.text = sectionGovernerates[indexPath.row]
-
+        
+        cell.textLabel!.text = filteredArr[indexPath.row].name!
+        print(filteredArr[indexPath.row].name!)
         return cell
     }
     
@@ -49,63 +67,12 @@ class FilterLabTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-
-print("aya")
-    
+        self.myFilterProtocol?.passingDataFromFilterToDesc(governId: filteredArr[indexPath.row].id!)
+        self.navigationController?.popViewController(animated: true)
     }
+    
 
+      
     
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

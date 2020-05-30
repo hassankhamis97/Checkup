@@ -11,4 +11,9 @@ import RealmSwift
 class Person: Object {
     @objc dynamic var name = ""
      @objc dynamic var id = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }  
+    
 }

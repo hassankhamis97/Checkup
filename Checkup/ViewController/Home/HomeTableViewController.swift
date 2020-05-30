@@ -9,11 +9,13 @@
 import UIKit
 import ImageSlideshow
 import Firebase
-class HomeTableViewController: UITableViewController   {
-    
-//    var searchCellHeight = 0.0
+import CoreLocation
+
+class HomeTableViewController: UITableViewController, CLLocationManagerDelegate   {
     
     var reach : Bool = false
+    
+    @IBOutlet weak var labsActicity: UIActivityIndicatorView!
     
     var labFilter : FilterLabTableView!
     var labNames = ["El-Mokhtabar" , "Alpha" , "El-Borg" , "El-Mokhtabar"]
@@ -30,46 +32,75 @@ class HomeTableViewController: UITableViewController   {
     
     let pageIndicator = UIPageControl()
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row == 0{
-//            return CGFloat(searchCellHeight)
-//        } else if indexPath.row == 1 {
-//            return 192
-//        }
-//        else if indexPath.row == 2 {
-//            return 479
-//        } else {
-//            return 0
-//        }
-//
-//    }
-  
-      fileprivate let searchController = UISearchController(searchResultsController: nil)
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+           if let location = locations.first {
+               print("Found user's location: \(location)")
+           }
+       }
+
+       func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+           print("Failed to find user's location: \(error.localizedDescription)")
+       }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if UIDevice.current.orientation.isLandscape {
+            self.tableView.isScrollEnabled = true
+        } else {
+            
+            //Setup Search Controller
+            
+            self.searchController.obscuresBackgroundDuringPresentation = false
+            self.searchController.searchBar.placeholder = "Search".localized
+            self.searchController.searchBar.barStyle = .black
+            self.searchController.searchBar.delegate = self
+            self.definesPresentationContext = true
+            self.navigationItem.searchController = searchController
+            
+            self.tableView.isScrollEnabled = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tabBarItem.badgeValue = "1"
+        //        tabBarItem.badgeValue = "1"
         
+        let manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestAlwaysAuthorization()
+        manager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            manager.startUpdatingLocation()
+        }
+        
+        labsActicity.transform = CGAffineTransform.init(scaleX: 2, y: 2)
+        
+        showIndicator()
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-        homeLabPresenter.getLabs(take: 8, skip: homeLabArr.count)
+        homeLabPresenter.getLabs(take: 4, skip: homeLabArr.count)
         
         let layout = UICollectionViewFlowLayout()
-               layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-               layout.itemSize = CGSize(width: 200, height: 240)  //233
-               layout.minimumInteritemSpacing = 0.05
-               
-               self.labCollection?.collectionViewLayout = layout
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        layout.itemSize = CGSize(width: 200, height: 240)  //233
+        layout.minimumInteritemSpacing = 0.05
+        
+        self.labCollection?.collectionViewLayout = layout
         
         // search bar in navigation controller
         
         //Setup Search Controller
+        
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search"
+        self.searchController.searchBar.placeholder = "Search".localized
         self.searchController.searchBar.barStyle = .black
         self.searchController.searchBar.delegate = self
         self.definesPresentationContext = true
         self.navigationItem.searchController = searchController
-        
+        //        self.definesPresentationContext = true
+        //        searchController.dismiss(animated: false, completion: nil)
         //
         //        var labObj = Laboratory(id: "", name: "El Mokhtabar", formalReferencePathId: "", specialTests: "", image: "", branches: ["",""])
         //
@@ -108,52 +139,6 @@ class HomeTableViewController: UITableViewController   {
             
         }
         navigationController?.pushViewController(labFilter, animated: true)
-       
+        
     }
 }
-
-
-       
-        //MARK: SEARCH BAR DELEGATE
-/*extension HomeTableViewController: UISearchBarDelegate
-{
-//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
-//    {
-//        //Show Cancel
-//        searchBar.setShowsCancelButton(true, animated: true)
-//        searchBar.tintColor = .white
-//    }
-    
-//    private func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
-//    {
-//        //Filter function
-////        self.filterFunction(searchText: searchText)
-//    }
-
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
-    {
-        //Hide Cancel
-        searchBar.setShowsCancelButton(false, animated: true)
-        searchBar.resignFirstResponder()
-
-//        guard let term = searchBar.text , term.trim().isEmpty == false else {
-//
-//            //Notification "White spaces are not permitted"
-//            return
-//        }
-
-         //Filter function
-//        self.filterFunction(searchText: term)
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
-    {
-        //Hide Cancel
-        searchBar.setShowsCancelButton(false, animated: true)
-        searchBar.text = String()
-        searchBar.resignFirstResponder()
-        
-        //Filter function
-//        self.filterFunction(searchText: searchBar.text)
-    }
-}*/

@@ -22,6 +22,7 @@ import Firebase
 
 class SignupTableViewController: UITableViewController {
     
+    @IBOutlet weak var signupActivity: UIActivityIndicatorView!
     
     @IBOutlet weak var userName: SkyFloatingLabelTextFieldWithIcon!
     
@@ -35,6 +36,8 @@ class SignupTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signupActivity.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         signUpBtn.layer.cornerRadius=30
         signUpBtn.layer.borderColor=UIColor.white.cgColor
         signUpBtn.layer.borderWidth=2
@@ -48,6 +51,8 @@ class SignupTableViewController: UITableViewController {
     
     @IBAction func saveDataSignupBtn(_ sender: Any) {
         
+        showIndicator()
+        signUpBtn.isHidden = true
         let signPresenter : SignupPresenter = SignupPresenter(signupViewRef: self)
        signPresenter.saveAuthDate(username: userName.text!, email: email.text!, password: password.text!, confirmPassword: confirmPassword.text! ) 
     }

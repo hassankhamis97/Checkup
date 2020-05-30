@@ -108,7 +108,7 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView
         
         let resetPassPopup = (
             storyboard?.instantiateViewController(
-            withIdentifier: "resetPopUpSVC"))!
+                withIdentifier: "resetPopUpTV"))!
         present(resetPassPopup, animated: true, completion: nil)
     }
     

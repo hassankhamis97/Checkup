@@ -14,6 +14,7 @@ import Firebase
 import Alamofire
 class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,IFillDataCells , IGetAddress {
     
+    @IBOutlet var noImageLabel: UILabel!
     @IBOutlet weak var myCell: UITableViewCell!
     @IBOutlet weak var collectionView:UICollectionView!
     @IBOutlet weak var enterTestTextField: SkyFloatingLabelTextFieldWithIcon!
@@ -138,6 +139,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         if (inputImageArray.isEmpty){
             
             slideShow.setImageInputs(defaultImage)
+            noImageLabel.alpha = 1
             deleteImageBtn.alpha=0
         }
         
@@ -293,10 +295,12 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             DatabaseImageArray.remove(at: ind)//remove from database
         if inputImageArray.count == 0 {
             slideShow.setImageInputs(defaultImage)
+            noImageLabel.alpha = 1
             deleteImageBtn.alpha=0
         }
         else{
             slideShow.setImageInputs(inputImageArray)
+//            noImageLabel.alpha = 0
         }
             tableView.reloadData()
 //        }
@@ -344,6 +348,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             inputImageArray.append(x) // to save in slidshow
             ind=0
              deleteImageBtn.alpha=1
+            noImageLabel.alpha = 0
             
         }
         
@@ -512,6 +517,7 @@ extension NewRequestTableViewController: ImagePickerDelegate {
         inputImageArray.append(x)
         slideShow.setImageInputs(inputImageArray)
          deleteImageBtn.alpha=1
+        noImageLabel.alpha = 0
         
     }
 }

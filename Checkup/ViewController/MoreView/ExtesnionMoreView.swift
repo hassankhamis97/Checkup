@@ -9,6 +9,11 @@
 import Foundation
 
 extension MoreTableViewController:IProfileView{
+    func renderRealmProfileView(userName: String) {
+      
+        nameLabel.text=userName
+    }
+    
     func renderProfileView(user: User) {
         self.user=user
         reloadData()
