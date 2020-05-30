@@ -190,7 +190,6 @@
 		A33E799D246DC2D5000897A6 /* MapViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33E799B246DC2D5000897A6 /* MapViewTableViewCell.xib */; };
 		A372090D24770574009ADC95 /* HomeLabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372090C24770574009ADC95 /* HomeLabPresenter.swift */; };
 		A372091024770DD4009ADC95 /* HomeExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372090F24770DD4009ADC95 /* HomeExtention.swift */; };
-		A38CCEFF247214D900BC684A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CCEFE247214D900BC684A /* ResetPasswordViewController.swift */; };
 		A39BF96D246D96A1003500A8 /* UserDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BF96C246D96A1003500A8 /* UserDataTableViewController.swift */; };
 		A39BF975246DA047003500A8 /* ImgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BF973246DA047003500A8 /* ImgTableViewCell.swift */; };
 		A39BF976246DA047003500A8 /* ImgTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39BF974246DA047003500A8 /* ImgTableViewCell.xib */; };
@@ -198,6 +197,7 @@
 		A39BF97C246DA47E003500A8 /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39BF97A246DA47E003500A8 /* DataTableViewCell.xib */; };
 		A3B75D5624786EC900C95139 /* HomeLabRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B75D5524786EC900C95139 /* HomeLabRealm.swift */; };
 		A3BC0855247D91D500D98A09 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BC0857247D91D500D98A09 /* Login.storyboard */; };
+		A3C421D92481FA1600CCF8B6 /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */; };
 		A3C5F02F2472BDA80069413F /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F02E2472BDA80069413F /* SignupModel.swift */; };
 		A3C5F0322472BE8C0069413F /* SignupContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0312472BE8C0069413F /* SignupContract.swift */; };
 		A3C5F0352472C2D60069413F /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0342472C2D60069413F /* SignupPresenter.swift */; };
@@ -478,7 +478,6 @@
 		A33E799B246DC2D5000897A6 /* MapViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewTableViewCell.xib; sourceTree = "<group>"; };
 		A372090C24770574009ADC95 /* HomeLabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLabPresenter.swift; sourceTree = "<group>"; };
 		A372090F24770DD4009ADC95 /* HomeExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExtention.swift; sourceTree = "<group>"; };
-		A38CCEFE247214D900BC684A /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		A39BF96C246D96A1003500A8 /* UserDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataTableViewController.swift; sourceTree = "<group>"; };
 		A39BF973246DA047003500A8 /* ImgTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgTableViewCell.swift; sourceTree = "<group>"; };
 		A39BF974246DA047003500A8 /* ImgTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImgTableViewCell.xib; sourceTree = "<group>"; };
@@ -487,6 +486,7 @@
 		A3B75D5524786EC900C95139 /* HomeLabRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLabRealm.swift; sourceTree = "<group>"; };
 		A3BC0856247D91D500D98A09 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ar; path = ar.lproj/Login.storyboard; sourceTree = "<group>"; };
 		A3BC0858247D91D800D98A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
 		A3C5F02E2472BDA80069413F /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		A3C5F0312472BE8C0069413F /* SignupContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupContract.swift; sourceTree = "<group>"; };
 		A3C5F0342472C2D60069413F /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
@@ -1699,7 +1699,7 @@
 		A38CCEFD2472149400BC684A /* forgetPasswordPopup */ = {
 			isa = PBXGroup;
 			children = (
-				A38CCEFE247214D900BC684A /* ResetPasswordViewController.swift */,
+				A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */,
 			);
 			path = forgetPasswordPopup;
 			sourceTree = "<group>";
@@ -2285,6 +2285,7 @@
 				4EE7EA2A246AD3B900BF434F /* SenderImageTableViewCell.swift in Sources */,
 				03FDA1992470CA4F0084C4AA /* FourthStaticTableViewCell.swift in Sources */,
 				CCDF8BBF24713DF900F56B2D /* Annotation.swift in Sources */,
+				A3C421D92481FA1600CCF8B6 /* ResetPasswordTableViewController.swift in Sources */,
 				4EE9F94024699E3200BB4A39 /* SenderCellTableViewCell.swift in Sources */,
 				CCCDA04E246AD130005549EA /* SettingTableViewController.swift in Sources */,
 				4EC1FD3C2472E6D90029C499 /* FilterLab.swift in Sources */,
@@ -2326,10 +2327,9 @@
 				CC76172B247329030084CC6E /* ImageContract.swift in Sources */,
 				4E87AF51247EDC5C00002E66 /* ResultDetailsTableViewController.swift in Sources */,
 				4EE9F9492469B70A00BB4A39 /* MessageLabel.swift in Sources */,
-				A38CCEFF247214D900BC684A /* ResetPasswordViewController.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
 				4EA87502247FC09900E95B30 /* MessagingChat.swift in Sources */,
-				035A048E247DB1010017A885 /* FilterLaPresenter.swift in Sources */,
+				035A048E247DB1010017A885 /* FilterLabPresenter.swift in Sources */,
 				03FDA19B2470CA650084C4AA /* FifthStaticTableViewCell.swift in Sources */,
 				4EA87506247FC19700E95B30 /* MainChatPresenter.swift in Sources */,
 				4E87AF54247EFB8400002E66 /* PDFCollectionView.swift in Sources */,
