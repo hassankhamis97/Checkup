@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -249,6 +249,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7ZV-14-CPO" id="7b7-gr-qoE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLT-Io-LDU" customClass="GIDSignInButton">
+                                                    <rect key="frame" x="40" y="40.5" width="334" height="56"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="56" id="fXs-74-J6h"/>
+                                                        <constraint firstAttribute="width" constant="334" id="htV-En-KXQ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YLT-Io-LDU" firstAttribute="centerX" secondItem="7b7-gr-qoE" secondAttribute="centerX" id="h0g-rY-bId"/>
+                                                <constraint firstItem="YLT-Io-LDU" firstAttribute="centerY" secondItem="7b7-gr-qoE" secondAttribute="centerY" id="pOS-q0-pfH"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
@@ -271,6 +285,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="hWy-Ks-chh" id="g8P-HL-bQl"/>
                         <outlet property="emailTextView" destination="r1n-W2-QV3" id="oSG-zz-Pti"/>
+                        <outlet property="googleSignInBtn" destination="YLT-Io-LDU" id="zOO-bm-ki6"/>
                         <outlet property="loginBtnOutlet" destination="Weh-RQ-OYI" id="CHX-XK-tc1"/>
                         <outlet property="logoImage" destination="cDZ-H7-5zN" id="kpI-iK-UfG"/>
                         <outlet property="passWordTextView" destination="Sdi-Z7-y4r" id="3yH-vY-5FO"/>

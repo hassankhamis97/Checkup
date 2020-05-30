@@ -26,4 +26,5 @@ target 'Checkup' do
   pod 'Charts'
   pod 'RealmSwift'
   pod 'ImageSlideshow/SDWebImage'
+  pod 'GoogleSignIn'
 end
