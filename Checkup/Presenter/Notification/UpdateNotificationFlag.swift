@@ -7,17 +7,26 @@
 //
 
 import Foundation
-class UpdateNotificationFlagPresenter: IUpdateNotificationFlagPresenter {
+class UpdateNotificationFlagPresenter: IUpdateNotificationFlagPresenter,ICheckConnection {
+    func onSucessfullyConnected() {
+        var manualNotificationModel = ManualNotificationModel(notificationPresenterRef : self)
+        manualNotificationModel.updateNotificationFlag(testId: testId)
+    }
+    
+    func onFailConnected() {
+        
+    }
+    
   
     
     var updateNotificationFlagViewRef : IUpdateNotificationFlagView!
+    var testId: Int64!
     init(updateNotificationFlagViewRef : IUpdateNotificationFlagView) {
         self.updateNotificationFlagViewRef = updateNotificationFlagViewRef
     }
     func updateNotificationFlag(testId: Int64) {
-          var manualNotificationModel = ManualNotificationModel(notificationPresenterRef : self)
-          manualNotificationModel.updateNotificationFlag(testId: testId)
-
+        self.testId = testId
+        InternetConnection.checkInternetConnection(iCheckConnection: self)
       }
 //    func getNotificationNumbers() {
 //        var manualNotificationModel = ManualNotificationModel(manualNotificationPresenterRef : self)

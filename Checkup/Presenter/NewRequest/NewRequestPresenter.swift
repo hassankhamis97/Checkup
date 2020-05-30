@@ -8,16 +8,20 @@
 
 import Foundation
 import UIKit
-class NewRequestPresenter: INewRequestPresenter {
+class NewRequestPresenter: INewRequestPresenter , ICheckConnection{
+   
+    
     var newRequestViewRef : INewRequestView!
+    var testObj: Test!
+    var roushettaImages: [UIImage]!
     init(newRequestViewRef : INewRequestView) {
         self.newRequestViewRef = newRequestViewRef
     }
 
     func saveRequest(testObj: Test, roushettaImages: [UIImage]) {
-        newRequestViewRef.showIndicator()
-        var newRequestModel = NewRequestModel(newRequestPresenterRef: self)
-        newRequestModel.saveRequest(testObj: testObj, roushettaImages: roushettaImages)
+        self.testObj = testObj
+        self.roushettaImages = roushettaImages
+        InternetConnection.checkInternetConnection(iCheckConnection: self)
     }
     
         
@@ -30,6 +34,15 @@ class NewRequestPresenter: INewRequestPresenter {
         newRequestViewRef.hideIndicator()
         newRequestViewRef.errorMessage(msg: message)
     }
-    
+    func onSucessfullyConnected() {
+           newRequestViewRef.showIndicator()
+           var newRequestModel = NewRequestModel(newRequestPresenterRef: self)
+           newRequestModel.saveRequest(testObj: testObj, roushettaImages: roushettaImages)
+       }
+       
+       func onFailConnected() {
+           newRequestViewRef.hideIndicator()
+           newRequestViewRef.errorMessage(msg: "No internet connection")
+       }
 
 }

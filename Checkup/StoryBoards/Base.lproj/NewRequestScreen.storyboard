@@ -35,6 +35,12 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please upload your required test photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltQ-a3-MVk">
+                                                    <rect key="frame" x="59" y="125" width="296" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eh2-Lb-Neq">
                                                     <rect key="frame" x="16" y="4" width="35" height="35"/>
                                                     <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,9 +85,11 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Gfu-cd-HvS" secondAttribute="bottom" id="5Fj-BZ-WBj"/>
                                                 <constraint firstAttribute="bottom" secondItem="Gfu-cd-HvS" secondAttribute="bottom" id="I0k-Wn-LSE"/>
+                                                <constraint firstItem="ltQ-a3-MVk" firstAttribute="centerY" secondItem="6vl-LT-2AF" secondAttribute="centerY" id="IEx-lu-qsT"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gfu-cd-HvS" secondAttribute="trailing" id="Lgb-3W-b3e"/>
                                                 <constraint firstItem="Eh2-Lb-Neq" firstAttribute="top" secondItem="6vl-LT-2AF" secondAttribute="top" constant="4" id="Nrh-iL-4D1"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gfu-cd-HvS" secondAttribute="trailing" id="Prz-tf-9vt"/>
+                                                <constraint firstItem="ltQ-a3-MVk" firstAttribute="centerX" secondItem="6vl-LT-2AF" secondAttribute="centerX" id="W18-aa-n2S"/>
                                                 <constraint firstItem="Gfu-cd-HvS" firstAttribute="top" secondItem="6vl-LT-2AF" secondAttribute="top" id="dkB-6f-WF9"/>
                                                 <constraint firstItem="Gfu-cd-HvS" firstAttribute="leading" secondItem="6vl-LT-2AF" secondAttribute="leading" id="eqV-3Q-HZw"/>
                                                 <constraint firstItem="Gfu-cd-HvS" firstAttribute="leading" secondItem="6vl-LT-2AF" secondAttribute="leading" id="rwe-fT-58z"/>
@@ -463,9 +471,8 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Add new Address"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTS-CU-hks">
-                                                    <rect key="frame" x="45" y="27" width="349" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTS-CU-hks">
+                                                    <rect key="frame" x="45" y="29" width="177" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="tintColor" red="0.2097651549" green="0.2223840896" blue="0.39813792240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Tap To Add  Address">
@@ -482,6 +489,8 @@
                                                 <constraint firstItem="f1k-dN-gzH" firstAttribute="leading" secondItem="ZGj-bE-V1d" secondAttribute="leadingMargin" id="b92-lF-fft"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="f1k-dN-gzH" secondAttribute="bottom" constant="2" id="bOm-Iq-z77"/>
                                                 <constraint firstItem="f1k-dN-gzH" firstAttribute="trailing" secondItem="ZGj-bE-V1d" secondAttribute="trailingMargin" id="it8-qj-SUf"/>
+                                                <constraint firstItem="yTS-CU-hks" firstAttribute="leading" secondItem="ZGj-bE-V1d" secondAttribute="leadingMargin" constant="25" id="jlU-XC-pUF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="yTS-CU-hks" secondAttribute="bottom" constant="4" id="zSA-GA-9Ne"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -559,6 +568,7 @@
                         <outlet property="enterTestTextField" destination="bxM-vS-LHv" id="Iky-ic-XVd"/>
                         <outlet property="loadingImagesMessages" destination="KH5-Lg-Dnn" id="wow-Dl-mp5"/>
                         <outlet property="myCell" destination="LGb-ZR-TNx" id="A48-RP-QAx"/>
+                        <outlet property="noImageLabel" destination="ltQ-a3-MVk" id="blY-nK-1fO"/>
                         <outlet property="saveRequestBtn" destination="MiB-Bk-eJV" id="Ho9-Wt-QfO"/>
                         <outlet property="slideShow" destination="Gfu-cd-HvS" id="zIN-rd-MW5"/>
                         <outlet property="timeTextField" destination="QHs-em-mXN" id="4bg-MO-OSf"/>
