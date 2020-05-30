@@ -7,14 +7,15 @@
 //
 
 import Foundation
-class ManualNotificationPresenter: IManualNotificationPresenter {
+class ManualNotificationPresenter: IManualNotificationPresenter ,ICheckConnection {
+    
+    
     var manualNotificationViewRef : IManualNotificationView!
     init(manualNotificationViewRef : IManualNotificationView) {
         self.manualNotificationViewRef = manualNotificationViewRef
     }
     func getNotificationNumbers() {
-        var manualNotificationModel = ManualNotificationModel(notificationPresenterRef : self)
-        manualNotificationModel.getNotificationNumbers()
+        InternetConnection.checkInternetConnection(iCheckConnection: self)
     }
     
     func onSuccess(manualNotification: ManualNotification) {
@@ -24,6 +25,13 @@ class ManualNotificationPresenter: IManualNotificationPresenter {
     func onFail(errorMsg: String) {
         
     }
+    func onSucessfullyConnected() {
+        var manualNotificationModel = ManualNotificationModel(notificationPresenterRef : self)
+        manualNotificationModel.getNotificationNumbers()
+    }
     
+    func onFailConnected() {
+        
+    }
     
 }

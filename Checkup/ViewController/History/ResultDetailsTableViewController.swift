@@ -8,6 +8,7 @@
 
 import UIKit
 import StepIndicator
+import FirebaseAuth
 class ResultDetailsTableViewController: UITableViewController {
 
     @IBOutlet var progressBarView: StepIndicatorView!
@@ -18,6 +19,15 @@ class ResultDetailsTableViewController: UITableViewController {
     @IBOutlet var descriptionTextView: UITextView!
     var testID :String!
     var testObj : Test!
+    override func viewWillAppear(_ animated: Bool) {
+        if(Auth.auth().currentUser?.uid == nil)
+        {
+            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true, completion: nil)
+
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         if Locale.current.languageCode == "ar"

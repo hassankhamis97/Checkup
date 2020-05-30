@@ -8,17 +8,20 @@
 
 import Foundation
 import UIKit
-class GetRequestsPresenter: IGetRequestsPresenter {
+class GetRequestsPresenter: IGetRequestsPresenter , ICheckConnection{
+    
+    
     
     var getRequestsViewRef : IGetRequestsView!
+    var testFilter: TestFilter!
     init(getRequestsViewRef : IGetRequestsView) {
         self.getRequestsViewRef = getRequestsViewRef
     }
 
     func getRequests(testFilter: TestFilter) {
-        getRequestsViewRef.showIndicator()
-        var newRequestModel = GetRequestsModel(getRequestsPresenterRef: self)
-        newRequestModel.getRequests(testFilter: testFilter)
+        self.testFilter = testFilter
+        InternetConnection.checkInternetConnection(iCheckConnection: self)
+        
         
     }
     
@@ -32,6 +35,15 @@ class GetRequestsPresenter: IGetRequestsPresenter {
         getRequestsViewRef.hideIndicator()
         getRequestsViewRef.errorMessage(msg: message)
     }
+    func onSucessfullyConnected() {
+        getRequestsViewRef.showIndicator()
+        var newRequestModel = GetRequestsModel(getRequestsPresenterRef: self)
+        newRequestModel.getRequests(testFilter: testFilter)
+    }
     
+    func onFailConnected() {
+        self.getRequestsViewRef.hideIndicator()
+        self.getRequestsViewRef.errorMessage(msg: "No internet connection")
+    }
 
 }
