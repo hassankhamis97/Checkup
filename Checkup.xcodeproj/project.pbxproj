@@ -223,6 +223,8 @@
 		CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */; };
 		CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65C92479ACED00BA1062 /* InternetConnection.swift */; };
 		CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */; };
+		CC53A8B1248280EE0087CFC7 /* PrivacyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC53A8B0248280EE0087CFC7 /* PrivacyTableViewController.swift */; };
+		CC53A8B32482816D0087CFC7 /* EmailDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC53A8B22482816D0087CFC7 /* EmailDetailTableViewController.swift */; };
 		CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */; };
 		CC5DFD0C2468C22F003B9F18 /* PopUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */; };
 		CC5DFD0E2468C242003B9F18 /* PopUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD0D2468C242003B9F18 /* PopUpCollectionViewCell.swift */; };
@@ -371,7 +373,6 @@
 		4E45420D2479C55D00955FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Chat.storyboard; sourceTree = "<group>"; };
 		4E45420E2479C58300955FD8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Chat.strings; sourceTree = "<group>"; };
 		4E4542102479C7F000955FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
-		4E4542132479C80500955FD8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Setting.strings; sourceTree = "<group>"; };
 		4E45421A2479C9FE00955FD8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E45421D2479CA1400955FD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E45421F2479CEC800955FD8 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
@@ -515,6 +516,9 @@
 		CC49FBD0247D37F200A00D97 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Statistics.strings; sourceTree = "<group>"; };
 		CC4B65C92479ACED00BA1062 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICheckConnection.swift; sourceTree = "<group>"; };
+		CC53A8B0248280EE0087CFC7 /* PrivacyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTableViewController.swift; sourceTree = "<group>"; };
+		CC53A8B22482816D0087CFC7 /* EmailDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDetailTableViewController.swift; sourceTree = "<group>"; };
+		CC53A8B524828DDA0087CFC7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Setting.strings; sourceTree = "<group>"; };
 		CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequstDetailsTableViewController.swift; sourceTree = "<group>"; };
 		CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpTableViewController.swift; sourceTree = "<group>"; };
 		CC5DFD0D2468C242003B9F18 /* PopUpCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1841,6 +1845,16 @@
 			path = MoreView;
 			sourceTree = "<group>";
 		};
+		CC53A8AF248280A50087CFC7 /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				CC53A8B0248280EE0087CFC7 /* PrivacyTableViewController.swift */,
+				CC53A8B22482816D0087CFC7 /* EmailDetailTableViewController.swift */,
+				CCCDA04F246AE5D5005549EA /* PassWordDetailsTableViewController.swift */,
+			);
+			path = Privacy;
+			sourceTree = "<group>";
+		};
 		CC79E5AA2455B43C00C8A166 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1948,8 +1962,8 @@
 		CCCDA04C246AD107005549EA /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
+				CC53A8AF248280A50087CFC7 /* Privacy */,
 				CCCDA04D246AD130005549EA /* SettingTableViewController.swift */,
-				CCCDA04F246AE5D5005549EA /* PassWordDetailsTableViewController.swift */,
 			);
 			path = SettingView;
 			sourceTree = "<group>";
@@ -2263,6 +2277,7 @@
 				4E15ACE4247180E5004418B1 /* GetRequestsModel.swift in Sources */,
 				4E3C1F482476A65E00D9761D /* HomeLab.swift in Sources */,
 				4EA8751F24804ACA00E95B30 /* ImageMessageContract.swift in Sources */,
+				CC53A8B1248280EE0087CFC7 /* PrivacyTableViewController.swift in Sources */,
 				4E15ACEA24718279004418B1 /* GetRequestsContract.swift in Sources */,
 				4E22F907243E6E6C0090693C /* Checkup.xcdatamodeld in Sources */,
 				CC761723247305B40084CC6E /* EditProfileModel.swift in Sources */,
@@ -2318,7 +2333,7 @@
 				A38CCEFF247214D900BC684A /* ResetPasswordViewController.swift in Sources */,
 				03F8346F2468990B000155A4 /* FilterTableViewController.swift in Sources */,
 				4EA87502247FC09900E95B30 /* MessagingChat.swift in Sources */,
-				035A048E247DB1010017A885 /* FilterLaPresenter.swift in Sources */,
+				035A048E247DB1010017A885 /* FilterLabPresenter.swift in Sources */,
 				03FDA19B2470CA650084C4AA /* FifthStaticTableViewCell.swift in Sources */,
 				4EA87506247FC19700E95B30 /* MainChatPresenter.swift in Sources */,
 				4E87AF54247EFB8400002E66 /* PDFCollectionView.swift in Sources */,
@@ -2366,6 +2381,7 @@
 				CCCDA047246A95B5005549EA /* ReqPopUpLocationViewController.swift in Sources */,
 				CC157CA324700F2B001AE122 /* ProfileModel.swift in Sources */,
 				03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */,
+				CC53A8B32482816D0087CFC7 /* EmailDetailTableViewController.swift in Sources */,
 				4EFA6ECF2473D58100D83F32 /* TestType.swift in Sources */,
 				03380CDA247F245C0055717E /* FilterGovern.swift in Sources */,
 				03067A292477733D000F1424 /* LabDescContract.swift in Sources */,
@@ -2486,7 +2502,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4E4542102479C7F000955FD8 /* Base */,
-				4E4542132479C80500955FD8 /* ar */,
+				CC53A8B524828DDA0087CFC7 /* ar */,
 			);
 			name = Setting.storyboard;
 			sourceTree = "<group>";
