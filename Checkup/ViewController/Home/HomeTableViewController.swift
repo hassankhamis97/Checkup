@@ -34,15 +34,24 @@ class HomeTableViewController: UITableViewController   {
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-           super.viewWillTransition(to: size, with: coordinator)
-           if UIDevice.current.orientation.isLandscape {
-                self.tableView.isScrollEnabled = true
-           } else {
-               self.tableView.isScrollEnabled = false
-           }
-       }
+        super.viewWillTransition(to: size, with: coordinator)
+        if UIDevice.current.orientation.isLandscape {
+            self.tableView.isScrollEnabled = true
+        } else {
+            
+            //Setup Search Controller
+            
+            self.searchController.obscuresBackgroundDuringPresentation = false
+            self.searchController.searchBar.placeholder = "Search".localized
+            self.searchController.searchBar.barStyle = .black
+            self.searchController.searchBar.delegate = self
+            self.definesPresentationContext = true
+            self.navigationItem.searchController = searchController
+            
+            self.tableView.isScrollEnabled = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,8 +80,8 @@ class HomeTableViewController: UITableViewController   {
         self.searchController.searchBar.delegate = self
         self.definesPresentationContext = true
         self.navigationItem.searchController = searchController
-        self.definesPresentationContext = true
-        searchController.dismiss(animated: false, completion: nil)
+        //        self.definesPresentationContext = true
+        //        searchController.dismiss(animated: false, completion: nil)
         //
         //        var labObj = Laboratory(id: "", name: "El Mokhtabar", formalReferencePathId: "", specialTests: "", image: "", branches: ["",""])
         //
