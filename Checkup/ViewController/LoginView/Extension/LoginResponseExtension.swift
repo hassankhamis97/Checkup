@@ -24,11 +24,12 @@ extension LoginTableViewController : ILoginView {
     func hideIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         activityIndicator.hide()
+        loginBtnOutlet.alpha = 1
 //        activityIndicator.stopAnimating()
     }
     
     func errorMessage(msg: String) {
-        
+        Alert.showSimpleAlert(title: "sorry",message: msg, viewRef: self)
     }
     
     

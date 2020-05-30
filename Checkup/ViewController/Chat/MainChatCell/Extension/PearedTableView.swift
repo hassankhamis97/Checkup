@@ -25,8 +25,10 @@ extension MainChatViewController : UITableViewDataSource,UITableViewDelegate {
         
         cell.lastMessage.text = viewPearedArr[indexPath.row].lastMessage!
      
-        cell.lastMessageTime.text = Date().getDateFromTimeStamp(timeStamp: Int64(viewPearedArr[indexPath.row].lastMessageTime!) as! Int64)
-        
+//        if viewPearedArr[indexPath.row].lastMessageTime! != "" {
+//            viewPearedArr[indexPath.row].lastMessageTime! != "" ? cell.lastMessageTime.text = Date().getDateFromTimeStamp(timeStamp: Int64(viewPearedArr[indexPath.row].lastMessageTime!) as! Int64) : ""
+        cell.lastMessageTime.text = viewPearedArr[indexPath.row].lastMessageTime!.isEmpty ?  "" : Date().getDateFromTimeStamp(timeStamp: Int64(viewPearedArr[indexPath.row].lastMessageTime!) as! Int64) 
+//        }
         
         if(viewPearedArr[indexPath.row].noOfUnReadMessages == "0")
         {

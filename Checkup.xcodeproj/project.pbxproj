@@ -1071,6 +1071,22 @@
 			path = NewRequest;
 			sourceTree = "<group>";
 		};
+		4E5ED58E2482EBFE008A34CE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4ECE5C5B246EA85300932947 /* LoginResponseExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4E5ED58F24830622008A34CE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5F0372472C7850069413F /* SignupResponseExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4E87AF43247EC2A500002E66 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -1439,7 +1455,6 @@
 		4ECE5C5A246EA7C000932947 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				4ECE5C5B246EA85300932947 /* LoginResponseExtension.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1472,6 +1487,7 @@
 		4EE5696F2453069600688B65 /* SignupView */ = {
 			isa = PBXGroup;
 			children = (
+				4E5ED58F24830622008A34CE /* Extension */,
 				4E22F935243E743C0090693C /* SignupViewController.swift */,
 				CCCB1D5C24563FED00303C22 /* ImagePicker.swift */,
 				CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */,
@@ -1763,7 +1779,6 @@
 		A3C5F0362472C75A0069413F /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				A3C5F0372472C7850069413F /* SignupResponseExtension.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -1866,6 +1881,7 @@
 		CC79E5AA2455B43C00C8A166 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				4E5ED58E2482EBFE008A34CE /* Extension */,
 				A38CCEFD2472149400BC684A /* forgetPasswordPopup */,
 				CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */,
 				CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */,

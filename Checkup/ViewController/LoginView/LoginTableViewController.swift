@@ -83,21 +83,17 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView
     @IBAction func loginBtn(_ sender: Any) {
         
         
-        guard let email = emailTextView.text,let password = passWordTextView.text
-        else {
-            return
-        }
         
       
-        if (email != nil || password != nil){
+        if (emailTextView.text?.isEmpty == false && passWordTextView.text?.isEmpty == false){
             var loginPresenter : LoginPresenter = LoginPresenter(loginViewRef: self)
-            loginPresenter.checkUser(email: email, password: password)
+            loginPresenter.checkUser(email: emailTextView.text!, password: passWordTextView.text!)
         //  Login code
         }
         else{
             
             //show Alert Here .... empty fileds
-            Alert.showSimpleAlert(title: "sory".localized, message: "please Fill Required Fields", viewRef: self)
+            Alert.showSimpleAlert(title: "sorry".localized, message: "Please Fill Required Fields", viewRef: self)
             
         }
     }
@@ -170,7 +166,7 @@ extension LoginTableViewController : GIDSignInDelegate {
                  
                 self.userValidation()
 
-                    //dismiss(animated: true, completion: nil)
+//                self.dismiss(animated: true, completion: nil)
 
             //This is where you should add the functionality of successful login
             //i.e. dismissing this view or push the home view controller etc

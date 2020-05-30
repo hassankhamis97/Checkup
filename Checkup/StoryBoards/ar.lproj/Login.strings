@@ -1,39 +1,39 @@
 
 /* Class = "UILabel"; text = "Enter valid Email"; ObjectID = "8ws-uA-Hvu"; */
-"8ws-uA-Hvu.text" = "Enter valid Email";
+"8ws-uA-Hvu.text" = "أدخل بريد الكتروني صحيح";
 
 /* Class = "UILabel"; text = "Don't have an account?"; ObjectID = "FyH-eq-iKP"; */
-"FyH-eq-iKP.text" = "Don't have an account?";
+"FyH-eq-iKP.text" = "ليس لديك حساب ؟";
 
 /* Class = "UILabel"; text = "Check Up"; ObjectID = "Mtn-UK-aZN"; */
 "Mtn-UK-aZN.text" = "Check Up";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "Sdi-Z7-y4r"; */
-"Sdi-Z7-y4r.placeholder" = "Password";
+"Sdi-Z7-y4r.placeholder" = "كلمة السر";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Weh-RQ-OYI"; */
-"Weh-RQ-OYI.normalTitle" = "Login";
+"Weh-RQ-OYI.normalTitle" = "تسجيل الدخول";
 
 /* Class = "UIButton"; normalTitle = "Forget password?"; ObjectID = "YCI-ST-nfT"; */
-"YCI-ST-nfT.normalTitle" = "Forget password?";
+"YCI-ST-nfT.normalTitle" = "هل نسيت كلمة السر ؟";
 
 /* Class = "UIButton"; normalTitle = "Sign up!"; ObjectID = "cf9-E3-QaA"; */
-"cf9-E3-QaA.normalTitle" = "Sign up!";
+"cf9-E3-QaA.normalTitle" = "انشاء حساب";
 
 /* Class = "UINavigationItem"; title = "Login"; ObjectID = "g5C-I9-ozj"; */
-"g5C-I9-ozj.title" = "Login";
+"g5C-I9-ozj.title" = "تسجيل الدخول";
 
 /* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "hqA-yF-IiQ"; */
-"hqA-yF-IiQ.normalTitle" = "Reset";
+"hqA-yF-IiQ.normalTitle" = "إعادة تعيين";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "r1n-W2-QV3"; */
-"r1n-W2-QV3.placeholder" = "Email";
+"r1n-W2-QV3.placeholder" = "البريد الإلكتروني";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "s5A-6V-Kzg"; */
-"s5A-6V-Kzg.normalTitle" = "Cancel";
+"s5A-6V-Kzg.normalTitle" = "إالغاء";
 
 /* Class = "UIBarButtonItem"; title = "Requests"; ObjectID = "wrK-4d-Kqc"; */
-"wrK-4d-Kqc.title" = "Requests";
+"wrK-4d-Kqc.title" = "الطلبات";
 
 /* Class = "UILabel"; text = "Enter Your Email "; ObjectID = "zp6-27-wi0"; */
-"zp6-27-wi0.text" = "Enter Your Email ";
+"zp6-27-wi0.text" = "ادخل بريدك الإلكتروني ";

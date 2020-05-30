@@ -28,20 +28,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ei-gy-2Ti" customClass="ImageSlideshow" customModule="ImageSlideshow">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="192"/>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="4ei-gy-2Ti" secondAttribute="trailing" id="It9-dY-urd"/>
+                                                <constraint firstAttribute="trailing" secondItem="4ei-gy-2Ti" secondAttribute="trailing" constant="20" id="It9-dY-urd"/>
                                                 <constraint firstItem="4ei-gy-2Ti" firstAttribute="top" secondItem="x3O-aM-Otk" secondAttribute="top" id="LqX-ra-Ahc"/>
                                                 <constraint firstAttribute="bottom" secondItem="4ei-gy-2Ti" secondAttribute="bottom" id="cbr-KS-uWf"/>
-                                                <constraint firstItem="4ei-gy-2Ti" firstAttribute="leading" secondItem="x3O-aM-Otk" secondAttribute="leading" id="jbl-YE-Dx6"/>
+                                                <constraint firstItem="4ei-gy-2Ti" firstAttribute="leading" secondItem="x3O-aM-Otk" secondAttribute="leading" constant="20" id="jbl-YE-Dx6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nXy-J8-5Hg">
+                                        <rect key="frame" x="0.0" y="220" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nXy-J8-5Hg" id="BaQ-Ba-YTU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="479" id="nB0-tN-9IA">
-                                        <rect key="frame" x="0.0" y="220" width="414" height="479"/>
+                                        <rect key="frame" x="0.0" y="264" width="414" height="479"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nB0-tN-9IA" id="LI7-4y-1GQ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
@@ -68,7 +76,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="233"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDG-dR-wyh">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDG-dR-wyh">
                                                                         <rect key="frame" x="34" y="15" width="123" height="124"/>
                                                                     </imageView>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sV-R1-n4w" customClass="CosmosView" customModule="Cosmos">
@@ -118,7 +126,7 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Available " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cr-GY-iBc">
-                                                                        <rect key="frame" x="271.5" y="379.5" width="138.5" height="20.5"/>
+                                                                        <rect key="frame" x="52.5" y="192.5" width="138.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>

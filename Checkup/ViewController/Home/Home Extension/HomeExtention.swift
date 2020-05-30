@@ -113,7 +113,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = homeLabArr[indexPath.row].hotline
         }
-        cell.labImageVIew.layer.cornerRadius = 15
+        cell.labImageVIew.layer.cornerRadius = cell.labImageVIew.frame.width / 2
         //        cell.labRating.rating = 3
         
         cell.contentView.layer.cornerRadius = 15
@@ -181,9 +181,11 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     func showSlider() {
         var slideShowImgs: [InputSource] = [InputSource]()
         if homeLabArr.count > 0{
-            for i in homeLabArr {
-                slideShowImgs.append(SDWebImageSource(url: URL(string: i.labPhoto ?? "")!))
-                
+            for i in 0..<homeLabArr.count {
+                slideShowImgs.append(SDWebImageSource(url: URL(string: homeLabArr[i].labPhoto ?? "")!))
+                if (i == 2) {
+                    break
+                }
             }
         }
         if slideShowImgs.count > 0 {
@@ -197,8 +199,8 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         labSlideShow.delegate = self
         
         
-        pageIndicator.currentPageIndicatorTintColor = UIColor.black
-        pageIndicator.pageIndicatorTintColor = UIColor.black
+        pageIndicator.currentPageIndicatorTintColor = UIColor.gray
+        pageIndicator.pageIndicatorTintColor = UIColor.white
         labSlideShow.pageIndicator = pageIndicator
         labSlideShow.activityIndicator = DefaultActivityIndicator()
     }

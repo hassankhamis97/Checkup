@@ -22,16 +22,7 @@ class SignupModel: ISignupModel {
     func saveAuthDate(username: String, email: String, password: String, confirmPassword: String) {
         
         
-        if username.count == 0 {
-            
-            self.singupPresenterRef.onFail(message: "Name is Required")
-        } else if email.count == 0 {
-            self.singupPresenterRef.onFail(message: "Email is Required")
-        } else if password.count < 6  {
-            self.singupPresenterRef.onFail(message: "Password is Required")
-        } else if password != confirmPassword {
-            self.singupPresenterRef.onFail(message: "confirmPassword does not match Password")
-        } else {
+        
             
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 
@@ -43,19 +34,19 @@ class SignupModel: ISignupModel {
                         self.singupPresenterRef.onFail(message: "wrong password")
                     case AuthErrorCode.invalidEmail.rawValue:
                         print("invalid email")
-                        self.singupPresenterRef.onFail(message: "invalid email")
+                        self.singupPresenterRef.onFail(message: "The email address is badly formatted.")
                     case AuthErrorCode.accountExistsWithDifferentCredential.rawValue:
                         print("accountExistsWithDifferentCredential")
-                        self.singupPresenterRef.onFail(message: "accountExistsWithDifferentCredential")
+                        self.singupPresenterRef.onFail(message: "account Exists With Different Credential")
                     case AuthErrorCode.emailAlreadyInUse.rawValue:
-                        print("email is alreay in use")
-                        self.singupPresenterRef.onFail(message: "email is alreay in use")
+                        print("Email is already exist")
+                        self.singupPresenterRef.onFail(message: "Email is already exist")
                     default:
                         print("unknown error: \(err.localizedDescription)")
                         self.singupPresenterRef.onFail(message: "No Internet Connection")
                     }
                     
-                    self.singupPresenterRef.onFail(message: "Email is already exist")
+//                    self.singupPresenterRef.onFail(message: "Email is already exist")
                 }
                 else if authResult != nil {
                     
@@ -63,14 +54,14 @@ class SignupModel: ISignupModel {
                     let phoneArray=[Phone]()
                     let addressObj=Address()
                     let realTime=RealTime()
-                    realTime.addUser(id: id ?? "", email: email, birthdate: "", gender: "", phone: phoneArray, insurance: "", address: addressObj, imagePath: "", name: username)
+                    realTime.addUser(id: id ?? "", email: email, birthdate: "", gender: "", phone: phoneArray, insurance: "", address: addressObj, imagePath: "https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/users.png?alt=media&token=8fba9f3d-0739-4b7f-afab-8ae7b6e1c442", name: username)
                     
                     self.saveToRealm(id: id ?? "0x", username: username)
                     self.addNameToFireStore(username: username, id: id ?? "0x")
                     self.singupPresenterRef.onSuccess()
                 }
             }
-        }   
+           
     }
     
     func saveToRealm(id: String, username: String) {
@@ -88,6 +79,6 @@ class SignupModel: ISignupModel {
     
     func addNameToFireStore(username: String, id: String) {
         // Update one field, creating the document if it does not exist.
-        Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": "" ], merge: true)
+        Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": "https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/users.png?alt=media&token=8fba9f3d-0739-4b7f-afab-8ae7b6e1c442" ], merge: true)
     }
 }

@@ -251,29 +251,32 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0b-wo-ddy">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-eq-iKP">
-                                                            <rect key="frame" x="75" y="11" width="189" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf9-E3-QaA">
-                                                            <rect key="frame" x="274" y="4" width="75" height="35"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                            <state key="normal" title="Sign up!">
-                                                                <color key="titleColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="goToSignupSB:" destination="V6O-re-qlJ" eventType="touchUpInside" id="phd-eL-fis"/>
-                                                            </connections>
-                                                        </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qxa-2u-Fds">
+                                                            <rect key="frame" x="70" y="4" width="274" height="35"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-eq-iKP">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="189" height="35"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf9-E3-QaA">
+                                                                    <rect key="frame" x="199" y="0.0" width="75" height="35"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                                    <state key="normal" title="Sign up!">
+                                                                        <color key="titleColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="goToSignupSB:" destination="V6O-re-qlJ" eventType="touchUpInside" id="phd-eL-fis"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="cf9-E3-QaA" firstAttribute="leading" secondItem="FyH-eq-iKP" secondAttribute="trailing" constant="10" id="Pbw-jO-qPI"/>
-                                                        <constraint firstItem="FyH-eq-iKP" firstAttribute="centerY" secondItem="g0b-wo-ddy" secondAttribute="centerY" id="YII-yr-LGi"/>
-                                                        <constraint firstItem="cf9-E3-QaA" firstAttribute="centerY" secondItem="g0b-wo-ddy" secondAttribute="centerY" id="tHs-OV-ubh"/>
-                                                        <constraint firstItem="FyH-eq-iKP" firstAttribute="centerX" secondItem="g0b-wo-ddy" secondAttribute="centerX" constant="-37.5" id="xci-Ij-JTh"/>
+                                                        <constraint firstItem="qxa-2u-Fds" firstAttribute="centerX" secondItem="g0b-wo-ddy" secondAttribute="centerX" id="HeL-dP-p6A"/>
+                                                        <constraint firstItem="qxa-2u-Fds" firstAttribute="centerY" secondItem="g0b-wo-ddy" secondAttribute="centerY" id="fzt-Gw-R2B"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -311,15 +314,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="137" id="7ZV-14-CPO">
-                                        <rect key="frame" x="0.0" y="615" width="414" height="137"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="74" id="7ZV-14-CPO">
+                                        <rect key="frame" x="0.0" y="615" width="414" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7ZV-14-CPO" id="7b7-gr-qoE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="YLT-Io-LDU" customClass="GIDSignInButton">
-                                                    <rect key="frame" x="40" y="40.5" width="334" height="56"/>
+                                                    <rect key="frame" x="40" y="9" width="334" height="56"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="56" id="fXs-74-J6h"/>
@@ -332,7 +335,7 @@
                                                 <constraint firstItem="YLT-Io-LDU" firstAttribute="centerY" secondItem="7b7-gr-qoE" secondAttribute="centerY" id="pOS-q0-pfH"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -400,25 +403,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Enter your Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfp-Lj-Wzs" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="36" y="32" width="342" height="44"/>
+                                                    <rect key="frame" x="36" y="32" width="342" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRP-iZ-5gI">
-                                                    <rect key="frame" x="90" y="139" width="48" height="30"/>
+                                                    <rect key="frame" x="90" y="127" width="48" height="30"/>
                                                     <state key="normal" title="Cancel"/>
                                                     <connections>
                                                         <action selector="cancelReseting:" destination="SnO-rl-MQ3" eventType="touchUpInside" id="JRV-Nx-YPh"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Valid Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLO-0F-T6K">
-                                                    <rect key="frame" x="36" y="97" width="342" height="21"/>
+                                                    <rect key="frame" x="36" y="85" width="342" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.024170271520000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZt-7b-o97">
-                                                    <rect key="frame" x="285" y="139" width="39" height="30"/>
+                                                    <rect key="frame" x="285" y="127" width="39" height="30"/>
                                                     <state key="normal" title="Reset"/>
                                                     <connections>
                                                         <action selector="resetPassword:" destination="SnO-rl-MQ3" eventType="touchUpInside" id="H6t-QD-NoQ"/>

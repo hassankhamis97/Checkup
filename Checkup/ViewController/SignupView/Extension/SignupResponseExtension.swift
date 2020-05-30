@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
-@available(iOS 13.0, *)
 extension SignupTableViewController: ISignupView, IView {
     func showIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -27,7 +26,7 @@ extension SignupTableViewController: ISignupView, IView {
     func errorMessage(msg: String) {
         hideIndicator()
         signUpBtn.isHidden = false
-        Alert.showSimpleAlert(title: "Sorry", message: msg, viewRef: self)
+        Alert.showSimpleAlert(title: "sorry", message: msg, viewRef: self)
     }
     
     func enterToApp() {

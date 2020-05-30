@@ -17,9 +17,6 @@ import UIKit
 import SkyFloatingLabelTextField
 import Firebase
 
-@available(iOS 13.0, *)
-@available(iOS 13.0, *)
-
 class SignupTableViewController: UITableViewController {
     
     @IBOutlet weak var signupActivity: UIActivityIndicatorView!
@@ -42,20 +39,55 @@ class SignupTableViewController: UITableViewController {
         signUpBtn.layer.borderColor=UIColor.white.cgColor
         signUpBtn.layer.borderWidth=2
         
-        userName.placeholder = "SIGN_UP_NAME".localized
-        email.placeholder = "SIGN_UP_Email".localized
-        password.placeholder = "SIGN_UP_Password".localized
-        confirmPassword.placeholder = "SIGN_UP_ConfirmPassword".localized
-        signUpBtn.setTitle("SIGN_UP_signup".localized, for: .normal)
+//        userName.placeholder = "SIGN_UP_NAME".localized
+//        email.placeholder = "SIGN_UP_Email".localized
+//        password.placeholder = "SIGN_UP_Password".localized
+//        confirmPassword.placeholder = "SIGN_UP_ConfirmPassword".localized
+//        signUpBtn.setTitle("SIGN_UP_signup".localized, for: .normal)
     }
     
     @IBAction func saveDataSignupBtn(_ sender: Any) {
         
-        showIndicator()
-        signUpBtn.isHidden = true
-        let signPresenter : SignupPresenter = SignupPresenter(signupViewRef: self)
-       signPresenter.saveAuthDate(username: userName.text!, email: email.text!, password: password.text!, confirmPassword: confirmPassword.text! ) 
+        
+        if ( checkValidation()){
+            signUpBtn.isHidden = true
+             let signPresenter : SignupPresenter = SignupPresenter(signupViewRef: self)
+            signPresenter.saveAuthDate(username: userName.text!, email: email.text!, password: password.text!, confirmPassword: confirmPassword.text! )
+        }
+        
     }
+    func checkValidation() -> Bool {
+    //        var hasPhone = false
+    //        if user.phone != nil {
+    //
+    //        }
+            var message: String = ""
+        if userName.text!.count == 0 {
+                message = "Name is Required"
+            }
+            
+        else if email.text!.count == 0 {
+    //            message = NSLocalizedString("alertDateMessageError", comment: "")
+                message = "Email is Required"
+            }
+            else if password.text!.isEmpty {
+                message = "Password is Required"
+            }
+            else if password.text!.count <= 6 {
+                message = "Password must be more than 6 characters"
+            }
+        else if password.text! != confirmPassword.text! {
+                message = "confirmPassword does not match Password"
+            }
+            
+            if !message.isEmpty {
+                Alert.showSimpleAlert(title: "sorry", message: message, viewRef: self)
+                return false
+            }
+            return true
+        }
+  
+    
 }
 
 
