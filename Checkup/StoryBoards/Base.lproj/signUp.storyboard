@@ -294,7 +294,7 @@
                                                         <constraint firstAttribute="height" constant="56" id="SzE-Xg-Sz4"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                                    <state key="normal" title="Sign up">
+                                                    <state key="normal" title="Sign">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
