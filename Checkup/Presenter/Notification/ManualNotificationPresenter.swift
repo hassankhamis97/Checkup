@@ -13,7 +13,7 @@ class ManualNotificationPresenter: IManualNotificationPresenter {
         self.manualNotificationViewRef = manualNotificationViewRef
     }
     func getNotificationNumbers() {
-        var manualNotificationModel = ManualNotificationModel(manualNotificationPresenterRef : self)
+        var manualNotificationModel = ManualNotificationModel(notificationPresenterRef : self)
         manualNotificationModel.getNotificationNumbers()
     }
     

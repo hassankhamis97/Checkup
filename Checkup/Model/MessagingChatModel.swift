@@ -11,22 +11,22 @@ import Firebase
 class MessagingChatModel: IMessagingChatModel {
     
     
-
     
     
-//    var chatPresenterRef : IChat!
+    
+    //    var chatPresenterRef : IChat!
     let db : Firestore?
     var ref: DatabaseReference!
     var groupId : String!
     static var instance: MessagingChatModel!
     private init() {
-//        self.chatPresenterRef = chatPresenterRef
+        //        self.chatPresenterRef = chatPresenterRef
         db = Firestore.firestore()
         ref = Database.database().reference()
     }
     // sigletone method
     static func getInstance() -> MessagingChatModel {
-//        db = Firestore.firestore()
+        //        db = Firestore.firestore()
         if instance == nil {
             instance = MessagingChatModel()
             
@@ -44,11 +44,11 @@ class MessagingChatModel: IMessagingChatModel {
         }
         if messageParams.skip == nil{
             dbRef = db?.collection("messages").document(groupId).collection(groupId).order(by: "timestamp", descending: true).limit(to: messageParams.take!)
-//            isFirebaseCalled = true
+            //            isFirebaseCalled = true
         }
         else {
             dbRef = db?.collection("messages").document(groupId).collection(groupId).order(by: "timestamp", descending: true).limit(to: messageParams.take!).start(afterDocument: messageParams.skip!)
-//            isFirebaseCalled = true
+            //            isFirebaseCalled = true
         }
         isFirebaseCalled = false
         dbRef.addSnapshotListener { QuerySnapshot, error in
@@ -58,9 +58,9 @@ class MessagingChatModel: IMessagingChatModel {
                 print(QuerySnapshot)
                 var allMessages = AllMessages()
                 allMessages.messages = [Message]()
-//                guard let lastSnapshot = QuerySnapshot!.documents.last else {
-//                                    return
-//                                }
+                //                guard let lastSnapshot = QuerySnapshot!.documents.last else {
+                //                                    return
+                //                                }
                 
                 //                skip = lastSnapshot
                 for item in QuerySnapshot!.documents {
@@ -76,18 +76,18 @@ class MessagingChatModel: IMessagingChatModel {
                     allMessages.messages!.append(messageObj)
                     
                 }
-//                guard let lastSnapshot = QuerySnapshot!.documents.last else {
-//                                                    return
-//                                                }
-//                if(QuerySnapshot!.documents.count > 0 ){
-//                    allMessages.lastMessageSnapshot =
-//                }
+                //                guard let lastSnapshot = QuerySnapshot!.documents.last else {
+                //                                                    return
+                //                                                }
+                //                if(QuerySnapshot!.documents.count > 0 ){
+                //                    allMessages.lastMessageSnapshot =
+                //                }
                 if let lastSnapshot = QuerySnapshot!.documents.last {
                     allMessages.lastMessageSnapshot = lastSnapshot
                 }
-//                 if let lastSnapshot = QuerySnapshot!.documents.last else {
-//                                                    return
-//                                                }
+                //                 if let lastSnapshot = QuerySnapshot!.documents.last else {
+                //                                                    return
+                //                                                }
                 if let messagingChatPresenterRef = chatPresenterRef as? IMessagingChatPresenter {
                     if isFirebaseCalled == nil || isFirebaseCalled == true{
                         messagingChatPresenterRef.onSuccess(allMessages: allMessages, isFirebaseCall: true)
@@ -98,65 +98,65 @@ class MessagingChatModel: IMessagingChatModel {
                         isFirebaseCalled = true
                     }
                 }
-//                self.newPresenter.onSuccess(pearedArr: self.pearedArr)
+                //                self.newPresenter.onSuccess(pearedArr: self.pearedArr)
             }
         }
     }
     func saveMessage(chatPresenterRef : IChat,message : Message) {
         let messageDic = try! DictionaryEncoder.encode(message)
         let dbRef = db?.collection("messages").document(groupId).collection(groupId).document(message.timestamp!).setData(messageDic) { err in
-        if let err = err {
-            print("Error writing document: \(err)")
-        } else {
-            if let sendMessagePresenter = chatPresenterRef as? ISendMessagePresenter {
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                if let sendMessagePresenter = chatPresenterRef as? ISendMessagePresenter {
                     sendMessagePresenter.onSuccess()
-            }
-            if let imageMessagePresenter = chatPresenterRef as? IImageMessagePresenter {
+                }
+                if let imageMessagePresenter = chatPresenterRef as? IImageMessagePresenter {
                     imageMessagePresenter.onSuccess()
+                }
+                
+                
+                print("Document successfully written!")
             }
-                               
-                           
-            print("Document successfully written!")
+            
+            
         }
-        
-        
     }
-}
     func saveMessage(chatPresenterRef: IChat, imageMessage: ImageMessage) {
         var imgPathsArr = [String]()
         var count = 0
-            for i in 0..<imageMessage.images!.count{
-                var id = ref.childByAutoId()
-                let storageRef = Storage.storage().reference().child("chat/\(Auth.auth().currentUser!.uid)/image\(id.key!).jpg")
-                // Create the file metadata
-                let metadata = StorageMetadata()
-                metadata.contentType = "image/jpeg"
-                let uploadTask = storageRef.putData(imageMessage.images![i].pngData()!, metadata: metadata) { (metadata, error) in
-                    guard let metadata = metadata else {
+        for i in 0..<imageMessage.images!.count{
+            var id = ref.childByAutoId()
+            let storageRef = Storage.storage().reference().child("chat/\(Auth.auth().currentUser!.uid)/image\(id.key!).jpg")
+            // Create the file metadata
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            let uploadTask = storageRef.putData(imageMessage.images![i].pngData()!, metadata: metadata) { (metadata, error) in
+                guard let metadata = metadata else {
+                    // Uh-oh, an error occurred!
+                    //                        self.newRequestPresenterRef.onFail(message: error!.localizedDescription)
+                    return
+                }
+                // Metadata contains file metadata such as size, content-type.
+                let size = metadata.size
+                // You can also access to download URL after upload.
+                storageRef.downloadURL { (url, error) in
+                    guard let downloadURL = url else {
+                        //                            self.newRequestPresenterRef.onFail(message: error!.localizedDescription)
                         // Uh-oh, an error occurred!
-//                        self.newRequestPresenterRef.onFail(message: error!.localizedDescription)
                         return
                     }
-                    // Metadata contains file metadata such as size, content-type.
-                    let size = metadata.size
-                    // You can also access to download URL after upload.
-                    storageRef.downloadURL { (url, error) in
-                        guard let downloadURL = url else {
-//                            self.newRequestPresenterRef.onFail(message: error!.localizedDescription)
-                            // Uh-oh, an error occurred!
-                            return
-                        }
-                        imgPathsArr.append(downloadURL.absoluteString)
-                        print(url)
-                        count += 1
-                        if(count == imageMessage.images!.count){
-                            //                    testObj.roushettaPaths = imgPathsArr
-                            self.saveCompleteObj(imgPathsArr: imgPathsArr, idTo: imageMessage.idTo,chatPresenterRef: chatPresenterRef)
-//                            self.newRequestPresenterRef.onSuccess()
-                        }
+                    imgPathsArr.append(downloadURL.absoluteString)
+                    print(url)
+                    count += 1
+                    if(count == imageMessage.images!.count){
+                        //                    testObj.roushettaPaths = imgPathsArr
+                        self.saveCompleteObj(imgPathsArr: imgPathsArr, idTo: imageMessage.idTo,chatPresenterRef: chatPresenterRef)
+                        //                            self.newRequestPresenterRef.onSuccess()
                     }
                 }
             }
+        }
         
     }
     func saveCompleteObj(imgPathsArr: [String]?, idTo: String?,chatPresenterRef: IChat) {

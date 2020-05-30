@@ -56,9 +56,13 @@
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
+                                                    <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="Vyj-9f-Twg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </activityIndicatorView>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="labCell" id="QmN-zi-Qpj" customClass="LabsCollectionViewCell" customModule="Checkup" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="233"/>
+                                                            <rect key="frame" x="111.5" y="0.0" width="191" height="233"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ouF-8l-jq3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="233"/>
@@ -99,6 +103,27 @@
                                                                 <outlet property="labRating" destination="3sV-R1-n4w" id="f61-tQ-CC4"/>
                                                             </connections>
                                                         </collectionViewCell>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="noDataCell" id="JYM-z0-V6j">
+                                                            <rect key="frame" x="2" y="234" width="410" height="400"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="orV-wa-YBA">
+                                                                <rect key="frame" x="0.0" y="0.0" width="410" height="400"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Available " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cr-GY-iBc">
+                                                                        <rect key="frame" x="271.5" y="379.5" width="138.5" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="5Cr-GY-iBc" secondAttribute="bottom" id="Pht-zk-Efy"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="5Cr-GY-iBc" secondAttribute="trailing" id="xkM-qv-roe"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="410" height="400"/>
+                                                        </collectionViewCell>
                                                     </cells>
                                                     <connections>
                                                         <outlet property="dataSource" destination="8ET-JG-5tI" id="YPO-of-Ldx"/>
@@ -126,6 +151,7 @@
                     <connections>
                         <outlet property="labCollection" destination="GUX-I2-JLc" id="rSR-Iq-qem"/>
                         <outlet property="labSlideShow" destination="4ei-gy-2Ti" id="kFg-Sr-TgX"/>
+                        <outlet property="labsActicity" destination="Vyj-9f-Twg" id="Guh-oF-1Hm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ax-6u-f8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

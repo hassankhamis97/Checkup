@@ -8,6 +8,8 @@
 
 import Foundation
 extension NewRequestTableViewController : IProfileView {
+   
+    
     func renderProfileView(user: User) {
 //        self.user = User()
         self.user = user
@@ -18,5 +20,7 @@ extension NewRequestTableViewController : IProfileView {
 //        }
     }
     
-    
+    func renderRealmProfileView(userName: String) {
+           
+       }
 }

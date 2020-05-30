@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-extension RequestsTableViewController : IGetRequestsView{
+extension RequestsTableViewController : IGetRequestsView , IUpdateNotificationFlagView{
     func showIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         if(requests!.count == 0 || !isBottom)

@@ -52,23 +52,12 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
         let height = scrollView.frame.size.height
                     let contentYoffset = scrollView.contentOffset.y
                     let distanceFromBottom = scrollView.contentSize.height - contentYoffset
-                    if isBottom == false && distanceFromBottom < height {
+                    if isBottom == false && filteredGovernId == 0 && distanceFromBottom < height {
                         isBottom = true
                         print("scrolled")
                   
-                    paginatingParams.governId = 1
-                    paginatingParams.labId = "-M7O-IStoBsiYrQFpwo_"
-                    paginatingParams.latitude = 31.1803167
-                    paginatingParams.longitude = 29.9137701
-                    paginatingParams.take = 6
                     paginatingParams.skip =  labDescriptionObj.branches?.count
-                    if(labDescriptionObj.branches == nil){
-                        paginatingParams.skip = 0
-                    }
                     labDescPresenter.getDataFromLabDescModel(params: paginatingParams)
-                    }
-                    else if distanceFromBottom > height{
-                        isBottom = false
                     }
     }
    

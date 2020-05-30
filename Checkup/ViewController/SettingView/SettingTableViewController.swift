@@ -12,7 +12,8 @@ import Firebase
 class SettingTableViewController: UITableViewController {
 
     
-  
+    @IBOutlet weak var privacyLabel: UILabel!
+    
     override func viewWillAppear(_ animated: Bool) {
       
     }
@@ -20,11 +21,20 @@ class SettingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    
+        
+        
+//        let attachment = NSTextAttachment()
+//        attachment.image = UIImage(named: "Settings_50px")
+//        let attachmentString = NSAttributedString(attachment: attachment)
+//        let myString = NSMutableAttributedString(string: "price")
+//        myString.append(attachmentString)
+//        privacyLabel.attributedText = myString
+ 
+        
+        let image = UIImage(named: "Settings_50px")
+        
+        privacyLabel.set(image: image!, with: "privacy")
     }
 
     // MARK: - Table view data source
@@ -55,4 +65,22 @@ class SettingTableViewController: UITableViewController {
               }
         
 }
+}
+
+
+extension UILabel {
+  func set(image: UIImage, with text: String) {
+    let attachment = NSTextAttachment()
+    attachment.image = image
+    attachment.bounds = CGRect(x: 0, y: 0, width: 30, height: 30)
+    let attachmentStr = NSAttributedString(attachment: attachment)
+
+    let mutableAttributedString = NSMutableAttributedString()
+    mutableAttributedString.append(attachmentStr)
+
+    let textString = NSAttributedString(string: text, attributes: [.font: self.font])
+    mutableAttributedString.append(textString)
+
+    self.attributedText = mutableAttributedString
+  }
 }

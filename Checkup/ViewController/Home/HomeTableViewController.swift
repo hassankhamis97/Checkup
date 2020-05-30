@@ -14,6 +14,8 @@ class HomeTableViewController: UITableViewController   {
     
     var reach : Bool = false
     
+    @IBOutlet weak var labsActicity: UIActivityIndicatorView!
+    
     var labFilter : FilterLabTableView!
     var labNames = ["El-Mokhtabar" , "Alpha" , "El-Borg" , "El-Mokhtabar"]
     var labImages = ["mokhtabar" , "alpha" , "borg" ,"mokhtabar" ]
@@ -30,7 +32,7 @@ class HomeTableViewController: UITableViewController   {
     let pageIndicator = UIPageControl()
     
     
-    fileprivate let searchController = UISearchController(searchResultsController: nil)
+    let searchController = UISearchController(searchResultsController: nil)
     
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -46,8 +48,11 @@ class HomeTableViewController: UITableViewController   {
         super.viewDidLoad()
         //        tabBarItem.badgeValue = "1"
         
+        labsActicity.transform = CGAffineTransform.init(scaleX: 2, y: 2)
+        
+        showIndicator()
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-        homeLabPresenter.getLabs(take: 8, skip: homeLabArr.count)
+        homeLabPresenter.getLabs(take: 4, skip: homeLabArr.count)
         
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
@@ -59,13 +64,15 @@ class HomeTableViewController: UITableViewController   {
         // search bar in navigation controller
         
         //Setup Search Controller
+        
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search"
+        self.searchController.searchBar.placeholder = "Search".localized
         self.searchController.searchBar.barStyle = .black
         self.searchController.searchBar.delegate = self
         self.definesPresentationContext = true
         self.navigationItem.searchController = searchController
-        
+        self.definesPresentationContext = true
+        searchController.dismiss(animated: false, completion: nil)
         //
         //        var labObj = Laboratory(id: "", name: "El Mokhtabar", formalReferencePathId: "", specialTests: "", image: "", branches: ["",""])
         //
@@ -107,49 +114,3 @@ class HomeTableViewController: UITableViewController   {
         
     }
 }
-
-
-
-//MARK: SEARCH BAR DELEGATE
-/*extension HomeTableViewController: UISearchBarDelegate
- {
- //    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
- //    {
- //        //Show Cancel
- //        searchBar.setShowsCancelButton(true, animated: true)
- //        searchBar.tintColor = .white
- //    }
- 
- //    private func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
- //    {
- //        //Filter function
- ////        self.filterFunction(searchText: searchText)
- //    }
- 
- func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
- {
- //Hide Cancel
- searchBar.setShowsCancelButton(false, animated: true)
- searchBar.resignFirstResponder()
- 
- //        guard let term = searchBar.text , term.trim().isEmpty == false else {
- //
- //            //Notification "White spaces are not permitted"
- //            return
- //        }
- 
- //Filter function
- //        self.filterFunction(searchText: term)
- }
- 
- func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
- {
- //Hide Cancel
- searchBar.setShowsCancelButton(false, animated: true)
- searchBar.text = String()
- searchBar.resignFirstResponder()
- 
- //Filter function
- //        self.filterFunction(searchText: searchBar.text)
- }
- }*/

@@ -132,6 +132,9 @@
 		4EBBC93D246B47F200C7978D /* MainChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBC93B246B47F200C7978D /* MainChatTableViewCell.xib */; };
 		4EBBC940246B595000C7978D /* MainChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93F246B595000C7978D /* MainChatViewController.swift */; };
 		4EBBC946246B5D3900C7978D /* PearedUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC945246B5D3900C7978D /* PearedUserData.swift */; };
+		4EBED8092481614E009A43FB /* UpdateNotificationFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBED8082481614E009A43FB /* UpdateNotificationFlag.swift */; };
+		4EBED80B24816235009A43FB /* UpdateNotificationFlagContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBED80A24816235009A43FB /* UpdateNotificationFlagContract.swift */; };
+		4EBED80D24816415009A43FB /* NotificationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBED80C24816415009A43FB /* NotificationContract.swift */; };
 		4EBFBB0024786009008326C0 /* ResultUITabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFBAFF24786009008326C0 /* ResultUITabBarItem.swift */; };
 		4EC1626A246F36930053F581 /* ConvertToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC16269246F36930053F581 /* ConvertToDictionary.swift */; };
 		4EC1626D246F5C1D0053F581 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1626C246F5C1D0053F581 /* User.swift */; };
@@ -217,10 +220,10 @@
 		CC157CA824700F83001AE122 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC157CA724700F83001AE122 /* EditProfilePresenter.swift */; };
 		CC157CAB247010B6001AE122 /* ProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC157CAA247010B6001AE122 /* ProfileContract.swift */; };
 		CC157CAD24701160001AE122 /* EditProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC157CAC24701160001AE122 /* EditProfileContract.swift */; };
-		CC1A8770246D60810020C403 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1A876F246D60810020C403 /* More.storyboard */; };
 		CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A8772246D61020020C403 /* MoreTableViewController.swift */; };
 		CC1E7C2F24812E8000039693 /* UserChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C2E24812E8000039693 /* UserChat.swift */; };
 		CC1E7C3124814C6D00039693 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C3024814C6D00039693 /* UserRealm.swift */; };
+		CC1E7C322481656A00039693 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1E7C342481656A00039693 /* More.storyboard */; };
 		CC298B1424740A04001DEAE5 /* ExtesnionMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */; };
 		CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */; };
 		CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */; };
@@ -420,6 +423,9 @@
 		4EBBC93B246B47F200C7978D /* MainChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChatTableViewCell.xib; sourceTree = "<group>"; };
 		4EBBC93F246B595000C7978D /* MainChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatViewController.swift; sourceTree = "<group>"; };
 		4EBBC945246B5D3900C7978D /* PearedUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PearedUserData.swift; sourceTree = "<group>"; };
+		4EBED8082481614E009A43FB /* UpdateNotificationFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotificationFlag.swift; sourceTree = "<group>"; };
+		4EBED80A24816235009A43FB /* UpdateNotificationFlagContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotificationFlagContract.swift; sourceTree = "<group>"; };
+		4EBED80C24816415009A43FB /* NotificationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationContract.swift; sourceTree = "<group>"; };
 		4EBFBAFF24786009008326C0 /* ResultUITabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultUITabBarItem.swift; sourceTree = "<group>"; };
 		4EC16269246F36930053F581 /* ConvertToDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToDictionary.swift; sourceTree = "<group>"; };
 		4EC1626C246F5C1D0053F581 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -510,10 +516,11 @@
 		CC157CA724700F83001AE122 /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
 		CC157CAA247010B6001AE122 /* ProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContract.swift; sourceTree = "<group>"; };
 		CC157CAC24701160001AE122 /* EditProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileContract.swift; sourceTree = "<group>"; };
-		CC1A876F246D60810020C403 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		CC1A8772246D61020020C403 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		CC1E7C2E24812E8000039693 /* UserChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChat.swift; sourceTree = "<group>"; };
 		CC1E7C3024814C6D00039693 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
+		CC1E7C332481656A00039693 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/More.storyboard; sourceTree = "<group>"; };
+		CC1E7C362481658100039693 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/More.strings; sourceTree = "<group>"; };
 		CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtesnionMoreView.swift; sourceTree = "<group>"; };
 		CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
 		CC49FBCD247D37EE00A00D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
@@ -963,7 +970,7 @@
 				0335FAF7246A08C600CE0863 /* Home.storyboard */,
 				4E4542112479C7F000955FD8 /* Setting.storyboard */,
 				A33CA623246D3AEE0014CF6B /* Employee.storyboard */,
-				CC1A876F246D60810020C403 /* More.storyboard */,
+				CC1E7C342481656A00039693 /* More.storyboard */,
 				CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */,
 			);
 			path = StoryBoards;
@@ -1087,6 +1094,7 @@
 			isa = PBXGroup;
 			children = (
 				4E87AF4C247EC52600002E66 /* ManualNotificationPresenter.swift */,
+				4EBED8082481614E009A43FB /* UpdateNotificationFlag.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -1095,6 +1103,8 @@
 			isa = PBXGroup;
 			children = (
 				4E87AF47247EC2FD00002E66 /* ManualNotificationContract.swift */,
+				4EBED80A24816235009A43FB /* UpdateNotificationFlagContract.swift */,
+				4EBED80C24816415009A43FB /* NotificationContract.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -2141,7 +2151,7 @@
 				4E45420F2479C7F000955FD8 /* Setting.storyboard in Resources */,
 				CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */,
 				4EE9F94124699E3200BB4A39 /* SenderCellTableViewCell.xib in Resources */,
-				CC1A8770246D60810020C403 /* More.storyboard in Resources */,
+				CC1E7C322481656A00039693 /* More.storyboard in Resources */,
 				4E4542192479C9FE00955FD8 /* Localizable.strings in Resources */,
 				4E432F152464F6EF00D1CACA /* pdf.pdf in Resources */,
 				A39BF97C246DA47E003500A8 /* DataTableViewCell.xib in Resources */,
@@ -2248,6 +2258,7 @@
 				4E15ACDB24712F6E004418B1 /* ShowNewRequest.swift in Sources */,
 				CC80B9DB247727E800521508 /* ExtensionStatisticsPicker.swift in Sources */,
 				4E4542232479FAF700955FD8 /* AddViewIndicator.swift in Sources */,
+				4EBED80B24816235009A43FB /* UpdateNotificationFlagContract.swift in Sources */,
 				4EA87517248004B100E95B30 /* SendMessageContract.swift in Sources */,
 				032AB5C72481E0770021DE4F /* ReviewsContract.swift in Sources */,
 				CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */,
@@ -2265,6 +2276,7 @@
 				0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */,
 				CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */,
 				4E1FBE36247E1CFB00C463D5 /* ChatStatus.swift in Sources */,
+				4EBED80D24816415009A43FB /* NotificationContract.swift in Sources */,
 				4E87AF59247F000700002E66 /* ResultPDFCollectionViewCell.swift in Sources */,
 				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
 				CC157CA624700F6C001AE122 /* ProfilePresenter.swift in Sources */,
@@ -2397,6 +2409,7 @@
 				CC80B9E6247738CC00521508 /*  StatisticsModel.swift in Sources */,
 				4EFA6ED32474195400D83F32 /* FilterTestContract.swift in Sources */,
 				4EA87509247FC1CC00E95B30 /* MessagingChatPresenter.swift in Sources */,
+				4EBED8092481614E009A43FB /* UpdateNotificationFlag.swift in Sources */,
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
 				4ECE5C59246EA5C200932947 /* IBase.swift in Sources */,
 				4ECE5C51246E89F200932947 /* LoginContract.swift in Sources */,
@@ -2554,6 +2567,15 @@
 				BBFDEEFF247E852A003E2464 /* en */,
 			);
 			name = RequestTStatus.storyboard;
+			sourceTree = "<group>";
+		};
+		CC1E7C342481656A00039693 /* More.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC1E7C332481656A00039693 /* Base */,
+				CC1E7C362481658100039693 /* ar */,
+			);
+			name = More.storyboard;
 			sourceTree = "<group>";
 		};
 		CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */ = {
