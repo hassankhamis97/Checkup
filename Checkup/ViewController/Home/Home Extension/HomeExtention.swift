@@ -23,6 +23,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        showIndicator()
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
         homeLabPresenter.getSearchedLabs(name: searchText)
     }
@@ -62,11 +63,15 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     }
     
     func showIndicator() {
-        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        labsActicity.show()
+        labsActicity.startAnimating()
     }
     
     func hideIndicator() {
-        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        labsActicity.stopAnimating()
+        labsActicity.hide()
     }
     
     func errorMessage(msg: String) {
@@ -128,10 +133,10 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let contentOffsetY = scrollView.contentOffset.y
         if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20  && reach == false {
-            
+            showIndicator()
             print("reached")
             let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-            homeLabPresenter.getLabs(take: 1, skip: homeLabArr.count)
+            homeLabPresenter.getLabs(take: 2, skip: homeLabArr.count)
             reach = true
         } else if contentOffsetY < (scrollView.contentSize.height - scrollView.bounds.height) - 20  && reach == true {
             

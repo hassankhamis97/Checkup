@@ -3,7 +3,7 @@ import Foundation
 import Network
 
 class ProfilePresenter:IProfilePresenter,ICheckConnection{
-  
+    
     
     
     
@@ -11,14 +11,14 @@ class ProfilePresenter:IProfilePresenter,ICheckConnection{
     
     
     func onSucessfullyConnected() {
-          
-             let profileModel=ProfileModel(profilePresenterRef: self)
-                                          self.profileView.showIndicator()
-                  
-                               
-                  
-                                       profileModel.getUser(userId: userId)
-                  
+        
+        let profileModel=ProfileModel(profilePresenterRef: self)
+        self.profileView.showIndicator()
+        
+        
+        
+        profileModel.getUser(userId: userId)
+        
     }
     
     func onFailConnected() {
@@ -29,7 +29,7 @@ class ProfilePresenter:IProfilePresenter,ICheckConnection{
         
     }
     
-  
+    
     var profileView:IProfileView
     
     
@@ -40,11 +40,11 @@ class ProfilePresenter:IProfilePresenter,ICheckConnection{
     func getUser(userId: String)  {
         self.userId=userId
         
-
+        
         
         var check = InternetConnection.checkInternetConnection(iCheckConnection: self)
-    
-    
+        
+        
     }
     
     func onSuccess(user:User) {
@@ -58,8 +58,8 @@ class ProfilePresenter:IProfilePresenter,ICheckConnection{
         profileView.errorMessage(msg: message)
     }
     
- func onSucessRealm(userName: String) {
-       profileView.renderRealmProfileView(userName: userName)
-   }
-
+    func onSucessRealm(userName: String) {
+        profileView.renderRealmProfileView(userName: userName)
+    }
+    
 }

@@ -14,6 +14,8 @@ class HomeTableViewController: UITableViewController   {
     
     var reach : Bool = false
     
+    @IBOutlet weak var labsActicity: UIActivityIndicatorView!
+    
     var labFilter : FilterLabTableView!
     var labNames = ["El-Mokhtabar" , "Alpha" , "El-Borg" , "El-Mokhtabar"]
     var labImages = ["mokhtabar" , "alpha" , "borg" ,"mokhtabar" ]
@@ -46,8 +48,11 @@ class HomeTableViewController: UITableViewController   {
         super.viewDidLoad()
         //        tabBarItem.badgeValue = "1"
         
+        labsActicity.transform = CGAffineTransform.init(scaleX: 2, y: 2)
+        
+        showIndicator()
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-        homeLabPresenter.getLabs(take: 8, skip: homeLabArr.count)
+        homeLabPresenter.getLabs(take: 4, skip: homeLabArr.count)
         
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
@@ -61,7 +66,7 @@ class HomeTableViewController: UITableViewController   {
         //Setup Search Controller
         
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search"
+        self.searchController.searchBar.placeholder = "Search".localized
         self.searchController.searchBar.barStyle = .black
         self.searchController.searchBar.delegate = self
         self.definesPresentationContext = true

@@ -56,6 +56,10 @@
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
+                                                    <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="Vyj-9f-Twg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </activityIndicatorView>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="labCell" id="QmN-zi-Qpj" customClass="LabsCollectionViewCell" customModule="Checkup" customModuleProvider="target">
                                                             <rect key="frame" x="111.5" y="0.0" width="191" height="233"/>
@@ -147,6 +151,7 @@
                     <connections>
                         <outlet property="labCollection" destination="GUX-I2-JLc" id="rSR-Iq-qem"/>
                         <outlet property="labSlideShow" destination="4ei-gy-2Ti" id="kFg-Sr-TgX"/>
+                        <outlet property="labsActicity" destination="Vyj-9f-Twg" id="Guh-oF-1Hm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ax-6u-f8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
