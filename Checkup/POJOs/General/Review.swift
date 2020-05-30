@@ -13,5 +13,6 @@ struct Review : Codable{
     var description: String?
     var rateNumber: Int?
     var userId: String?
+    var date: String?
 //    func toDictionary() -> Any {     return ["id": id, "rateNumber": rateNumber, "comments": comments.toDictionary()] as Any }
 }
