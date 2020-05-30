@@ -14,19 +14,24 @@ import FirebaseAuth
 extension SignupTableViewController: ISignupView, IView {
     func showIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        //        activityIndicator.show()
+        signupActivity.show()
+        signupActivity.startAnimating()
     }
     
     func hideIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        //        activityIndicator.hide()
+        signupActivity.stopAnimating()
+        signupActivity.hide()
     }
     
     func errorMessage(msg: String) {
+        hideIndicator()
+        signUpBtn.isHidden = false
         Alert.showSimpleAlert(title: "Sorry", message: msg, viewRef: self)
     }
     
     func enterToApp() {
+        hideIndicator()
         if Auth.auth().currentUser != nil {
             self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         }
