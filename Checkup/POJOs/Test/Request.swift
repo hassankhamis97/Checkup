@@ -7,10 +7,11 @@
 //
 
 import Foundation
-struct Request {
-    var id : String?
+struct Request : Codable {
+    var id : Int64?
     var dateRequest: String?
     var status: String?
     var labName: String?
     var labPhoto: String?
+    var isNotified: Bool?
 }
