@@ -58,7 +58,7 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
                    
            cell.reviewsDateOutlet?.text =  reviewObjInView[indexPath.row].date!
                 
-           cell.descriptionOutlet.text = reviewObjInView[indexPath.row].description!
+           //cell.descriptionOutlet.text = reviewObjInView[indexPath.row].description!
         }else
         {
             print("error")

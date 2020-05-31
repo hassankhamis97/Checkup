@@ -135,10 +135,10 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
       //     navigationController?.pushViewController(reviews, animated: true)
         if(true) {
             let reviews = storyboard!.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
-            navigationController?.pushViewController(reviews, animated: true)
+           // navigationController?.pushViewController(reviews, animated: true)
             print("pressed")
-           // reviews.modalPresentationStyle = .fullScreen
-            //present(reviews, animated: true, completion: nil)
+            reviews.modalPresentationStyle = .fullScreen
+            present(reviews, animated: true, completion: nil)
          
          }
          else{
