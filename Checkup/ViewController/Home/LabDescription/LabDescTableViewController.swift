@@ -28,6 +28,7 @@ class LabDescTableViewController: UITableViewController , ILabDescView , FilterP
     var filteredGovernId : Int!
     var filter : FilterLabTableView!
     var myId : Int!
+    var labId : String!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +52,7 @@ class LabDescTableViewController: UITableViewController , ILabDescView , FilterP
         filteredGovernId = 0
         
         paginatingParams.governId = 0
-        paginatingParams.labId = "-M7O-IStoBsiYrQFpwo_"
+        paginatingParams.labId = labId
         paginatingParams.latitude = 31.1803167
         paginatingParams.longitude = 29.9137701
         paginatingParams.take = 6

@@ -392,7 +392,7 @@
             </objects>
             <point key="canvasLocation" x="1684.057971014493" y="62.946428571428569"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="DC4-rl-KLc">
             <objects>
                 <viewController id="KaH-7S-5c3" customClass="HomeViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -409,7 +409,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="0RK-g3-tnq"/>
                                         </constraints>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                         <scopeButtonTitles>
                                             <string>All</string>
                                             <string>All-All</string>
@@ -447,7 +447,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="60m-mf-RrD">
-                                    <rect key="frame" x="0.0" y="194" width="404" height="439"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="404" height="439"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <cells>
@@ -549,7 +549,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hvM-Hm-dtf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jp5-tf-ft7"/>
+                    <navigationItem key="navigationItem" title="Home" id="jp5-tf-ft7"/>
                     <connections>
                         <outlet property="headerViewHeight" destination="ygM-Cw-5qe" id="otk-k8-4jY"/>
                         <outlet property="labCollection" destination="LNC-L9-kiL" id="d6L-1U-j22"/>

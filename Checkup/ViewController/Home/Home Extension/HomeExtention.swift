@@ -11,7 +11,7 @@ import UIKit
 import ImageSlideshow
 import SDWebImage
 
-extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSource, ImageSlideshowDelegate, IGetLabsView,  UISearchBarDelegate, IView {
+extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSource, ImageSlideshowDelegate, IGetLabsView, IView {
     
     func getSearchedLabs(seachedHomeLabs: [HomeLab]) {
         
@@ -19,10 +19,12 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
         self.labCollection.reloadData()
     }
     
-    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        view.addGestureRecognizer(tap)
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+//        view.addGestureRecognizer(tap)
         showIndicator()
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
         homeLabPresenter.getSearchedLabs(name: searchText)
@@ -35,12 +37,13 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
 //        searchBar.tintColor = .red
 //    }
     
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
-//    {
-//        //Hide Cancel
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        //Hide Cancel
 //        searchBar.setShowsCancelButton(false, animated: true)
-//        searchBar.resignFirstResponder()
-//    }
+//        view.addGestureRecognizer(tap)
+        searchBar.resignFirstResponder()
+    }
 //
 //    func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
 //    {
@@ -57,7 +60,7 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
         }
         if homeLabs.count > 0 {
             self.showSlider()
-            self.labCollection.reloadData()
+//            self.labCollection.reloadData()
         }
         
     }
@@ -130,8 +133,27 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var labDesc = storyboard?.instantiateViewController(withIdentifier: "labDescSCV")as! LabDescTableViewController
-        navigationController?.pushViewController(labDesc, animated: true)
+        var senderLabId : String!
+//        if searchedHomeLabsArr.count > 0{
+//            return searchedHomeLabsArr.count
+//        }else if searchedHomeLabsArr.count <= 0 &&  searchBar.text?.count ?? 0 > 0 {
+//            return 1
+//        } else {
+//            return homeLabArr.count
+//        }
+        if (searchedHomeLabsArr.count > 0) {
+            senderLabId = searchedHomeLabsArr[indexPath.row].idFB
+            
+        }
+        else if  homeLabArr.count > 0 {
+            senderLabId = homeLabArr[indexPath.row].idFB
+        }
+        
+        if senderLabId != nil {
+            var labDesc = storyboard?.instantiateViewController(withIdentifier: "labDescSCV")as! LabDescTableViewController
+            labDesc.labId = senderLabId
+            navigationController?.pushViewController(labDesc, animated: true)
+        }
     }
     
     

@@ -10,7 +10,7 @@ import UIKit
 import ImageSlideshow
 import Firebase
 import CoreLocation
-class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollectionViewDelegateFlowLayout  {
+class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollectionViewDelegateFlowLayout ,UITextFieldDelegate,UISearchBarDelegate {
     //    @IBOutlet var labCollectionCell: UITableViewCell!
     @IBOutlet var topViewConstraint: NSLayoutConstraint!
     @IBOutlet var headerViewHeight: NSLayoutConstraint!
@@ -32,6 +32,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollecti
     
     var searchedHomeLabsArr = [HomeLab]()
     var isLoading = false
+    var tap: UITapGestureRecognizer!
     @IBOutlet weak var labCollection: UICollectionView!
     
     @IBOutlet weak var labSlideShow: ImageSlideshow!
@@ -85,9 +86,9 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollecti
         homeLabPresenter.getLabs(take: 4, skip: homeLabArr.count)
         
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        
-        view.addGestureRecognizer(tap)
+        tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+
+//        view.addGestureRecognizer(tap)
         //        let layout = UICollectionViewFlowLayout()
         //        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         //        layout.itemSize = CGSize(width: 180, height: 240)  //233
@@ -148,10 +149,11 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollecti
         self.view.endEditing(true)
         return true
     }
-    
-    
+
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {     searchBar.resignFirstResponder() }
     // function to enable dimiss key board(touch any where )
     @objc func dismissKeyboard() {
+        view.removeGestureRecognizer(tap)
         view.endEditing(true)
     }
     //    @objc func filterTapped(){
