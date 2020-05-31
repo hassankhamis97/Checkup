@@ -113,7 +113,7 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = homeLabArr[indexPath.row].hotline
         }
-        cell.labImageVIew.layer.cornerRadius = cell.labImageVIew.frame.width / 2
+        cell.labImageVIew.layer.cornerRadius = 10
         //        cell.labRating.rating = 3
         
         cell.contentView.layer.cornerRadius = 15

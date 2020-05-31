@@ -58,7 +58,13 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
             self.searchController.searchBar.delegate = self
             self.definesPresentationContext = true
             self.navigationItem.searchController = searchController
-            
+//            let leftConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .leading, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .leading, multiplier: 1, constant: 20) // add margin
+//
+//            let bottomConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .bottom, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .bottom, multiplier: 1, constant: 1)
+//
+//            let topConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .top, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .top, multiplier: 1, constant: 1)
+//
+//            let widthConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: self.view.frame.size.width - 40)
             self.tableView.isScrollEnabled = false
         }
     }
@@ -66,7 +72,7 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         //        tabBarItem.badgeValue = "1"
-        
+        labSlideShow.layer.cornerRadius = 10
         let manager = CLLocationManager()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -84,7 +90,7 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        layout.itemSize = CGSize(width: 200, height: 240)  //233
+        layout.itemSize = CGSize(width: 180, height: 240)  //233
         layout.minimumInteritemSpacing = 0.05
         
         self.labCollection?.collectionViewLayout = layout
@@ -130,6 +136,13 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
          
          */
         //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
+        let leftConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .leading, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .leading, multiplier: 1, constant: 20) // add margin
+
+        let bottomConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .bottom, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .bottom, multiplier: 1, constant: 1)
+
+        let topConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .top, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .top, multiplier: 1, constant: 1)
+
+        let widthConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: self.view.frame.size.width - 40) // - margins from both sides
     }
     
     @objc func filterTapped(){
@@ -141,4 +154,23 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
         navigationController?.pushViewController(labFilter, animated: true)
         
     }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//    //       let width = ((collectionView.frame.width - 20) / 2) // 15 because of paddings
+//    //       print("cell width : \(width)")
+//    //       return CGSize(width: width, height: 200)
+//        let height = labCollection.frame.size.height
+//        let width = labCollection.frame.size.width
+//
+//        if(height > width)
+//        {
+//        // in case you you want the cell to be 40% of your controllers view
+//    //        return CGSize(width: width * 0.5, height: 266)
+//            let cellHeight = (width * 0.5 * 285)/(375 * 0.5)
+//            return CGSize(width: width * 0.5, height: cellHeight)
+//        }
+//        else{
+//            let cellHeight = (width * 0.25 * 250)/(667 * 0.25)
+//            return CGSize(width: width * 0.25, height: cellHeight)
+//        }
+//       }
 }
