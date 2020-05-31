@@ -8,9 +8,7 @@
 
 import Foundation
 class ReviewsPresenter : IReviewsPresenter {
-    func onSuccess() {
-        
-    }
+ 
     
   
     var reviewsView : IReviewsView!
@@ -26,10 +24,13 @@ class ReviewsPresenter : IReviewsPresenter {
         
     }
     
-  
+   
+      func onSuccess(reviewsObj: [Review]) {
+            reviewsView.returnDataToView(reviewsObj: reviewsObj)
+       }
+       
     
-    
-    
+        
     func onFail() {
         
     }

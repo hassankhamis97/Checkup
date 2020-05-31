@@ -11,13 +11,13 @@ import Foundation
 
  
  protocol IReviewsView{
-    func returnDataToView()
+    func returnDataToView(reviewsObj : [Review])
  }
 
 
  protocol IReviewsPresenter{
     func getReviewsDataFromModel()
-    func onSuccess()
+    func onSuccess(reviewsObj : [Review])
     func onFail()
  }
 

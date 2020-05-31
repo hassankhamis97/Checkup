@@ -24,26 +24,32 @@ class ReviewsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 5
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reviewsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reviewsCell", for: indexPath) as! mainReviewsTableViewCell
 
         // Configure the cell...
-        cell.layer.shadowPath = UIBezierPath(rect: cell.bounds).cgPath
-         cell.layer.shadowRadius = 5
-        cell.layer.shadowOffset = .zero
-         cell.layer.shadowOpacity = 1
+        cell.viewOutlet.layer.shadowPath =  UIBezierPath(rect: cell.bounds).cgPath
+        cell.viewOutlet.layer.shadowRadius = 5
+        cell.viewOutlet.layer.shadowOffset = .zero
+        cell.viewOutlet.layer.shadowOpacity = 0.05
+        cell.viewOutlet.layer.cornerRadius = 5
+        cell.viewOutlet.layer.borderWidth = 5
+        cell.viewOutlet.layer.borderColor = UIColor.white.cgColor
         
 
         return cell
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 115
     }
     
 
