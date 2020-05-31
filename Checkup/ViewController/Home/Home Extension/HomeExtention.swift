@@ -11,7 +11,7 @@ import UIKit
 import ImageSlideshow
 import SDWebImage
 
-extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ImageSlideshowDelegate, IGetLabsView,  UISearchBarDelegate, IView {
+extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSource, ImageSlideshowDelegate, IGetLabsView,  UISearchBarDelegate, IView {
     
     func getSearchedLabs(seachedHomeLabs: [HomeLab]) {
         
@@ -28,28 +28,28 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
         homeLabPresenter.getSearchedLabs(name: searchText)
     }
     
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
-    {
-        //Show Cancel
-        searchBar.setShowsCancelButton(true, animated: true)
-        searchBar.tintColor = .white
-    }
+//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
+//    {
+//        //Show Cancel
+//        searchBar.setShowsCancelButton(true, animated: true)
+//        searchBar.tintColor = .red
+//    }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
-    {
-        //Hide Cancel
-        searchBar.setShowsCancelButton(false, animated: true)
-        searchBar.resignFirstResponder()
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
-    {
-        //Hide Cancel
-        searchBar.searchTextField.text = ""
-        searchBar.setShowsCancelButton(false, animated: true)
-        searchBar.text = String()
-        searchBar.resignFirstResponder()
-    }
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+//    {
+//        //Hide Cancel
+//        searchBar.setShowsCancelButton(false, animated: true)
+//        searchBar.resignFirstResponder()
+//    }
+//
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
+//    {
+//        //Hide Cancel
+//        searchBar.searchTextField.text = ""
+//        searchBar.setShowsCancelButton(false, animated: true)
+//        searchBar.text = String()
+//        searchBar.resignFirstResponder()
+//    }
     
     func getLabsForRender(homeLabs: [HomeLab]) {
         for i in homeLabs{
@@ -75,14 +75,14 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     }
     
     func errorMessage(msg: String) {
-        Alert.showSimpleAlert(title: "Sorry", message: "No Internet Connection", viewRef: self)
+        Alert.showSimpleAlert(title: "sorry", message: "No Internet Connection", viewRef: self)
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if searchedHomeLabsArr.count > 0{
             return searchedHomeLabsArr.count
-        }else if searchedHomeLabsArr.count <= 0 &&  searchController.searchBar.text?.count ?? 0 > 0 {
+        }else if searchedHomeLabsArr.count <= 0 &&  searchBar.text?.count ?? 0 > 0 {
             return 1
         } else {
             return homeLabArr.count
@@ -92,22 +92,24 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "labCell", for: indexPath) as! LabsCollectionViewCell
-        
         if searchedHomeLabsArr.count > 0{
-            
+
             cell.labImageVIew.sd_setImage(with: URL(string: searchedHomeLabsArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             
             cell.labRating.rating =  (searchedHomeLabsArr[indexPath.row].rating as! NSString).doubleValue
             cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = searchedHomeLabsArr[indexPath.row].hotline
             
-        } else if searchedHomeLabsArr.count <= 0 &&  searchController.searchBar.text?.count ?? 0 > 0 {
+        } else if searchedHomeLabsArr.count <= 0 &&  searchBar.text?.count ?? 0 > 0 {
             print("NoData")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "noDataCell", for: indexPath)
             //noDataCell
             cell.sizeThatFits(CGSize(width: 500.0, height: 500.0))
             return cell
         } else{
+//            if cellWidth != nil {
+//                cell.bounds.size = cellWidth
+//            }
             cell.labImageVIew.sd_setImage(with: URL(string: homeLabArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             cell.labRating.rating =  (homeLabArr[indexPath.row].rating as! NSString).doubleValue
             cell.labRating.settings.updateOnTouch = false
@@ -130,8 +132,13 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
     
     
     
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let contentOffsetY = scrollView.contentOffset.y
+//        var offsetYFixed = 0
+        var newHeaderHeightFixed = CGFloat(0)
+//        if ( contentOffsetY > 0){
+//            var offsetYFixed = contentOffsetY
+//        }
         if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 20  && reach == false {
             showIndicator()
             print("reached")
@@ -142,10 +149,57 @@ extension HomeTableViewController : UICollectionViewDelegate , UICollectionViewD
             
             reach = false
         }
+//        let y : CGFloat = scrollView.contentOffset.y 276 - (-50)
+                      let newHeaderHeight : CGFloat = headerViewHeight.constant-contentOffsetY    // 276 - 76 = 200
+//        if newHeaderHeight !=  headerViewHeight.constant{
+//            newHeaderHeightFixed = newHeaderHeight
+//        }
+                  if newHeaderHeight >= imageViewMaxHeight{ //200 >= 276
+                          headerViewHeight.constant = imageViewMaxHeight
+                            topViewConstraint.constant = topViewConstrainsMaxHeight
+                      }else if newHeaderHeight < imageViewMinHeight{ //200 < 0
+                          headerViewHeight.constant = imageViewMinHeight
+                            topViewConstraint.constant = topViewConstrainsMinHeight
+                      }else{
+        //
+//                    labImageView.alpha = 1 - (((imageViewMaxHeight - newHeaderHeight)*(0.9)) / (imageViewMaxHeight - imageViewMinHeight))
+//                    labImageView.contentMode = .scaleAspectFill
+                    if headerViewHeight.constant != newHeaderHeight {
+                    topViewConstraint.constant =  topViewConstraint.constant -  (headerViewHeight.constant - newHeaderHeight)  // topViewConstrainsMaxHeight - offsetYFixed    -71
+                    }
+                          headerViewHeight.constant = newHeaderHeight   //200
+                    
+                          scrollView.contentOffset.y = 0
+                      }
+//        let currentCell = tableView.cellForRow(at: 1) as! SmallDescLabTableViewCell
+//        let indexPath = IndexPath(row: 1, section: 1)
+//            let cell = tableView.cellForRow(at: indexPath)
+//        var cellWidth = sliderShowCell?.bounds.width
+//        var cellHeight = sliderShowCell?.bounds.height
+//        sliderShowCell?.bounds.size = CGSize(width: cellWidth!, height: 0)
+//        labCollectionCell?.bounds.size = CGSize(width: cellWidth!, height: (labCollectionCell?.bounds.height)! + cellHeight!*2)
+//        let y : CGFloat = scrollView.contentOffset.y
+//                      let newHeaderHeight : CGFloat = headerViewHeight.constant-y
+//
+//                  if newHeaderHeight >= imageViewMaxHeight{
+//                          headerViewHeight.constant = imageViewMaxHeight
+//                      }else if newHeaderHeight < imageViewMinHeight{
+//                          headerViewHeight.constant = imageViewMinHeight
+//
+//                      }else{
+//
+//                      }
 
     }
-    
-    
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        var cell = tableView.cellForRow(at: indexPath)
+//        var cellHeight = cell?.layer.frame.height
+//        if indexPath.row == 1 {
+//            return 0
+//        }
+//        return cellHeight!
+//    }
+
     /*func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
      if indexPath.row == homeLabArr.count - 1 {  //numberofitem count
      print("reached")

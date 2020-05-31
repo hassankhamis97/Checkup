@@ -95,6 +95,7 @@
 		4E4EA63A2470117F00309CAF /* NewRequestContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA6392470117F00309CAF /* NewRequestContract.swift */; };
 		4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA63C247011F000309CAF /* NewRequestPresenter.swift */; };
 		4E4EA640247015F000309CAF /* NewRequestResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA63F247015F000309CAF /* NewRequestResponseExtension.swift */; };
+		4E6223F42483F966003BA836 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6223F32483F966003BA836 /* HomeViewController.swift */; };
 		4E77B4C2247757E3000B3118 /* GetFilteredLabsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77B4C1247757E3000B3118 /* GetFilteredLabsPresenter.swift */; };
 		4E77B4C42477597F000B3118 /* GetFilteredLabsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77B4C32477597F000B3118 /* GetFilteredLabsResponse.swift */; };
 		4E87AF48247EC2FD00002E66 /* ManualNotificationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87AF47247EC2FD00002E66 /* ManualNotificationContract.swift */; };
@@ -385,6 +386,7 @@
 		4E4EA63C247011F000309CAF /* NewRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestPresenter.swift; sourceTree = "<group>"; };
 		4E4EA63F247015F000309CAF /* NewRequestResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestResponseExtension.swift; sourceTree = "<group>"; };
 		4E5ED58D2482E54D008A34CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/signUp.strings; sourceTree = "<group>"; };
+		4E6223F32483F966003BA836 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4E77B4C1247757E3000B3118 /* GetFilteredLabsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredLabsPresenter.swift; sourceTree = "<group>"; };
 		4E77B4C32477597F000B3118 /* GetFilteredLabsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredLabsResponse.swift; sourceTree = "<group>"; };
 		4E87AF47247EC2FD00002E66 /* ManualNotificationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualNotificationContract.swift; sourceTree = "<group>"; };
@@ -616,6 +618,7 @@
 				0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */,
 				03F6C7F5246B00A700E89178 /* LabsCollectionViewCell.swift */,
 				03F44499246F149D00036549 /* DetailsViewController.swift */,
+				4E6223F32483F966003BA836 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -2418,6 +2421,7 @@
 				4EC1626D246F5C1D0053F581 /* User.swift in Sources */,
 				035A0493247DFBA90017A885 /* LabDescriptionParams.swift in Sources */,
 				4EBBC946246B5D3900C7978D /* PearedUserData.swift in Sources */,
+				4E6223F42483F966003BA836 /* HomeViewController.swift in Sources */,
 				03FDA1952470C9FD0084C4AA /* SecStaticTableViewCell.swift in Sources */,
 				CC064E32245B05FA0046E67F /* SliderCell.swift in Sources */,
 				4EF1A1DE2476B05A00597A15 /* EmployeeDetailsPresenter.swift in Sources */,
