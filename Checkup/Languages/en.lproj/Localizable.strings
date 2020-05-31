@@ -53,3 +53,18 @@
 "please drop pin on map"="please drop pin on map";
 "Apartment number is required"="Apartment number is required";
 "This graph show the percentage of HBA1C during "="This graph show the percentage of HBA1C during ";
+"The password is invalid or the user does not have a password." = "The password is invalid or the user does not have a password.";
+"The email address is badly formatted." = "The email address is badly formatted.";
+"There is no user record corresponding to this identifier. The user may have been deleted." = "There is no user record corresponding to this identifier.";
+"An error occured please try again later" = "An error occured please try again later";
+"Please Fill Required Fields" = "Please Fill Required Fields";
+"Name is Required" = "Name is Required";
+"Email is Required" = "Email is Required";
+"Password is Required" =  "Password is Required";
+"Password must be more than 6 characters" = "Password must be more than 6 characters";
+"confirmPassword does not match Password" = "confirmPassword does not match Password";
+"wrong password" = "wrong password";
+"account Exists With Different Credential" = "account Exists With Different Credential";
+"Email is already exist" = "Email is already exist";
+"No Internet Connection" = "No Internet Connection";
+

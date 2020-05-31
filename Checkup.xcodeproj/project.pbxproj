@@ -232,6 +232,8 @@
 		CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */; };
 		CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65C92479ACED00BA1062 /* InternetConnection.swift */; };
 		CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */; };
+		CC53A8B1248280EE0087CFC7 /* PrivacyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC53A8B0248280EE0087CFC7 /* PrivacyTableViewController.swift */; };
+		CC53A8B32482816D0087CFC7 /* EmailDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC53A8B22482816D0087CFC7 /* EmailDetailTableViewController.swift */; };
 		CC5DFD062468C01D003B9F18 /* RequstDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */; };
 		CC5DFD0C2468C22F003B9F18 /* PopUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */; };
 		CC5DFD0E2468C242003B9F18 /* PopUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DFD0D2468C242003B9F18 /* PopUpCollectionViewCell.swift */; };
@@ -386,7 +388,6 @@
 		4E45420D2479C55D00955FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Chat.storyboard; sourceTree = "<group>"; };
 		4E45420E2479C58300955FD8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Chat.strings; sourceTree = "<group>"; };
 		4E4542102479C7F000955FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
-		4E4542132479C80500955FD8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Setting.strings; sourceTree = "<group>"; };
 		4E45421A2479C9FE00955FD8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E45421D2479CA1400955FD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E45421F2479CEC800955FD8 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
@@ -395,6 +396,7 @@
 		4E4EA6392470117F00309CAF /* NewRequestContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestContract.swift; sourceTree = "<group>"; };
 		4E4EA63C247011F000309CAF /* NewRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestPresenter.swift; sourceTree = "<group>"; };
 		4E4EA63F247015F000309CAF /* NewRequestResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestResponseExtension.swift; sourceTree = "<group>"; };
+		4E5ED58D2482E54D008A34CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/signUp.strings; sourceTree = "<group>"; };
 		4E77B4C1247757E3000B3118 /* GetFilteredLabsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredLabsPresenter.swift; sourceTree = "<group>"; };
 		4E77B4C32477597F000B3118 /* GetFilteredLabsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredLabsResponse.swift; sourceTree = "<group>"; };
 		4E87AF47247EC2FD00002E66 /* ManualNotificationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualNotificationContract.swift; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 		4EC1FD322472DDFF0029C499 /* LabsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsTable.swift; sourceTree = "<group>"; };
 		4EC1FD392472E2530029C499 /* SmallDescLabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallDescLabTableViewCell.swift; sourceTree = "<group>"; };
 		4EC1FD3B2472E6D90029C499 /* FilterLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLab.swift; sourceTree = "<group>"; };
+		4EC52D802482BC5D005FE9D2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Login.strings; sourceTree = "<group>"; };
 		4EC82409246FDADA0075C894 /* DictionaryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoder.swift; sourceTree = "<group>"; };
 		4EC8240B246FDD0A0075C894 /* ReqPopUpFromHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqPopUpFromHomeViewController.swift; sourceTree = "<group>"; };
 		4ECE5C4A246E898D00932947 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -496,15 +499,12 @@
 		A39BF979246DA47E003500A8 /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 		A39BF97A246DA47E003500A8 /* DataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataTableViewCell.xib; sourceTree = "<group>"; };
 		A3B75D5524786EC900C95139 /* HomeLabRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLabRealm.swift; sourceTree = "<group>"; };
-		A3BC0856247D91D500D98A09 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ar; path = ar.lproj/Login.storyboard; sourceTree = "<group>"; };
 		A3BC0858247D91D800D98A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
 		A3C5F02E2472BDA80069413F /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		A3C5F0312472BE8C0069413F /* SignupContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupContract.swift; sourceTree = "<group>"; };
 		A3C5F0342472C2D60069413F /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		A3C5F0372472C7850069413F /* SignupResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseExtension.swift; sourceTree = "<group>"; };
-		A3CAED37247DB31000C8D721 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/signUp.strings; sourceTree = "<group>"; };
-		A3DA5538247D5CD80038AF1B /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ar; path = ar.lproj/signUp.storyboard; sourceTree = "<group>"; };
 		A3DA553A247D5CE00038AF1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/signUp.storyboard; sourceTree = "<group>"; };
 		BB13259C247BC43000997EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RequestTStatus.storyboard; sourceTree = "<group>"; };
 		BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelRquestModel.swift; sourceTree = "<group>"; };
@@ -533,6 +533,9 @@
 		CC49FBD0247D37F200A00D97 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Statistics.strings; sourceTree = "<group>"; };
 		CC4B65C92479ACED00BA1062 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICheckConnection.swift; sourceTree = "<group>"; };
+		CC53A8B0248280EE0087CFC7 /* PrivacyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTableViewController.swift; sourceTree = "<group>"; };
+		CC53A8B22482816D0087CFC7 /* EmailDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDetailTableViewController.swift; sourceTree = "<group>"; };
+		CC53A8B524828DDA0087CFC7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Setting.strings; sourceTree = "<group>"; };
 		CC5DFD052468C01D003B9F18 /* RequstDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequstDetailsTableViewController.swift; sourceTree = "<group>"; };
 		CC5DFD0B2468C22F003B9F18 /* PopUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpTableViewController.swift; sourceTree = "<group>"; };
 		CC5DFD0D2468C242003B9F18 /* PopUpCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1115,6 +1118,22 @@
 			path = NewRequest;
 			sourceTree = "<group>";
 		};
+		4E5ED58E2482EBFE008A34CE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4ECE5C5B246EA85300932947 /* LoginResponseExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4E5ED58F24830622008A34CE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5F0372472C7850069413F /* SignupResponseExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4E87AF43247EC2A500002E66 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -1485,7 +1504,6 @@
 		4ECE5C5A246EA7C000932947 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				4ECE5C5B246EA85300932947 /* LoginResponseExtension.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1518,6 +1536,7 @@
 		4EE5696F2453069600688B65 /* SignupView */ = {
 			isa = PBXGroup;
 			children = (
+				4E5ED58F24830622008A34CE /* Extension */,
 				4E22F935243E743C0090693C /* SignupViewController.swift */,
 				CCCB1D5C24563FED00303C22 /* ImagePicker.swift */,
 				CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */,
@@ -1809,7 +1828,6 @@
 		A3C5F0362472C75A0069413F /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				A3C5F0372472C7850069413F /* SignupResponseExtension.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -1899,9 +1917,20 @@
 			path = MoreView;
 			sourceTree = "<group>";
 		};
+		CC53A8AF248280A50087CFC7 /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				CC53A8B0248280EE0087CFC7 /* PrivacyTableViewController.swift */,
+				CC53A8B22482816D0087CFC7 /* EmailDetailTableViewController.swift */,
+				CCCDA04F246AE5D5005549EA /* PassWordDetailsTableViewController.swift */,
+			);
+			path = Privacy;
+			sourceTree = "<group>";
+		};
 		CC79E5AA2455B43C00C8A166 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				4E5ED58E2482EBFE008A34CE /* Extension */,
 				A38CCEFD2472149400BC684A /* forgetPasswordPopup */,
 				CC79E5AB2455B46A00C8A166 /* LoginTableViewController.swift */,
 				CC79E5AF2455CE8300C8A166 /* SplashViewController.swift */,
@@ -2007,8 +2036,8 @@
 		CCCDA04C246AD107005549EA /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
+				CC53A8AF248280A50087CFC7 /* Privacy */,
 				CCCDA04D246AD130005549EA /* SettingTableViewController.swift */,
-				CCCDA04F246AE5D5005549EA /* PassWordDetailsTableViewController.swift */,
 			);
 			path = SettingView;
 			sourceTree = "<group>";
@@ -2058,6 +2087,7 @@
 				4E22F8F6243E6E6C0090693C /* Frameworks */,
 				4E22F8F7243E6E6C0090693C /* Resources */,
 				8AE194363E5A627100B10150 /* [CP] Embed Pods Frameworks */,
+				5C160FFF2F514F6BD7687254 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2226,6 +2256,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5C160FFF2F514F6BD7687254 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Checkup/Pods-Checkup-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Checkup/Pods-Checkup-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Checkup/Pods-Checkup-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8AE194363E5A627100B10150 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2327,6 +2374,7 @@
 				4E15ACE4247180E5004418B1 /* GetRequestsModel.swift in Sources */,
 				4E3C1F482476A65E00D9761D /* HomeLab.swift in Sources */,
 				4EA8751F24804ACA00E95B30 /* ImageMessageContract.swift in Sources */,
+				CC53A8B1248280EE0087CFC7 /* PrivacyTableViewController.swift in Sources */,
 				4E15ACEA24718279004418B1 /* GetRequestsContract.swift in Sources */,
 				4E22F907243E6E6C0090693C /* Checkup.xcdatamodeld in Sources */,
 				CC761723247305B40084CC6E /* EditProfileModel.swift in Sources */,
@@ -2431,6 +2479,7 @@
 				CCCDA047246A95B5005549EA /* ReqPopUpLocationViewController.swift in Sources */,
 				CC157CA324700F2B001AE122 /* ProfileModel.swift in Sources */,
 				03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */,
+				CC53A8B32482816D0087CFC7 /* EmailDetailTableViewController.swift in Sources */,
 				4EFA6ECF2473D58100D83F32 /* TestType.swift in Sources */,
 				03380CDA247F245C0055717E /* FilterGovern.swift in Sources */,
 				03067A292477733D000F1424 /* LabDescContract.swift in Sources */,
@@ -2554,7 +2603,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4E4542102479C7F000955FD8 /* Base */,
-				4E4542132479C80500955FD8 /* ar */,
+				CC53A8B524828DDA0087CFC7 /* ar */,
 			);
 			name = Setting.storyboard;
 			sourceTree = "<group>";
@@ -2571,8 +2620,8 @@
 		A3BC0857247D91D500D98A09 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A3BC0856247D91D500D98A09 /* ar */,
 				A3BC0858247D91D800D98A09 /* Base */,
+				4EC52D802482BC5D005FE9D2 /* ar */,
 			);
 			name = Login.storyboard;
 			sourceTree = "<group>";
@@ -2580,9 +2629,8 @@
 		A3DA5539247D5CD80038AF1B /* signUp.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A3DA5538247D5CD80038AF1B /* ar */,
 				A3DA553A247D5CE00038AF1B /* Base */,
-				A3CAED37247DB31000C8D721 /* en */,
+				4E5ED58D2482E54D008A34CE /* ar */,
 			);
 			name = signUp.storyboard;
 			sourceTree = "<group>";
@@ -2749,14 +2797,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TRNKZ229R6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Checkup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup.kasper;
+				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2769,14 +2817,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TRNKZ229R6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Checkup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup.kasper;
+				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

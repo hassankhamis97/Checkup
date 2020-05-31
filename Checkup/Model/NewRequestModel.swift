@@ -119,7 +119,7 @@ class NewRequestModel: INewRequestModel {
         }
     }
     func charInitializeInFireStore(firstId: String , secondId: String) {
-        var chatStatus = ChatStatus(lastMsgTimeStamp: "", noOfUnReadMessage: 0, lastMessage: "let's start chat", senderId: "")
+        var chatStatus = ChatStatus(lastMsgTimeStamp: "", noOfUnReadMessage: 0, lastMessage: "let's start chat", senderId: secondId)
         let chatStatusDic = try! DictionaryEncoder.encode(chatStatus)
         if Auth.auth().currentUser!.uid == firstId {
         self.db?.collection("userChat").document(firstId).setData(["currentViewedPerson": ""]){ err in

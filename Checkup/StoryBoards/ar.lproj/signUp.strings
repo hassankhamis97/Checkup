@@ -1,0 +1,25 @@
+
+/* Class = "UINavigationItem"; title = "Sign Up"; ObjectID = "61X-FQ-Tme"; */
+"61X-FQ-Tme.title" = "تسجيل حساب";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "Cqp-Xd-ZLO"; */
+"Cqp-Xd-ZLO.placeholder" = "البريد الالكترونى";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "Qkf-Xa-nM5"; */
+"Qkf-Xa-nM5.normalTitle" = "تسجيل حساب";
+
+/* Class = "UITextField"; placeholder = "Confirm password"; ObjectID = "aeX-cc-qms"; */
+"aeX-cc-qms.placeholder" = "تاكيد كلمة السر";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "btb-3w-qi1"; */
+"btb-3w-qi1.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "hQf-ON-fsU"; */
+"hQf-ON-fsU.placeholder" = "الاسم";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "uo1-KL-Vkb"; */
+"uo1-KL-Vkb.placeholder" = "كلمة السر";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "wU6-G4-Xza"; */
+"wU6-G4-Xza.title" = "Item";
+

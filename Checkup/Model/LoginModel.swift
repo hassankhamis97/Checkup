@@ -21,7 +21,21 @@ class LoginModel: ILoginModel {
                 self.loginPresenterRef.onSuccess()
             }
             else {
-                self.loginPresenterRef.onFail(message: error!.localizedDescription)
+                var message: String!
+                switch error!.localizedDescription {
+                case "There is no user record corresponding to this identifier. The user may have been deleted.":
+                    message = error!.localizedDescription
+                    break
+                    case "The email address is badly formatted.":
+                                        message = error!.localizedDescription
+                                        break
+                    case "The password is invalid or the user does not have a password.":
+                                        message = error!.localizedDescription
+                                        break
+                default:
+                    message = "An error occured please try again later"
+                }
+                self.loginPresenterRef.onFail(message: message)
             }
         }
     }

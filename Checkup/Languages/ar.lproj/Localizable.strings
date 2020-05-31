@@ -53,3 +53,18 @@
 "please drop pin on map"="من فضلك حدد موقعك على الخريطة";
 "Apartment number is required"="رقم الشقة مطلوب";
 "This graph show the percentage of HBA1C during "=" هذه الإحصائية تشير إلى معدل السكر التراكمي خلال عام ";
+"The password is invalid or the user does not have a password." = "كلمة السر غير صحيحة";
+"The email address is badly formatted." = "صيغة البريد الالكتروني غير صحيحة";
+"There is no user record corresponding to this identifier. The user may have been deleted." = "هذا البريد الالكتروني غير مسجل";
+"An error occured please try again later" = "حدث خطأ ما من فضلك اعد المحاولة في وقت لاحق";
+"Please Fill Required Fields" = "من فضلك أملأ الخانات المطلوبة";
+"Name is Required" = "اسم المستخدم مطلوب";
+"Email is Required" = "البريد الإلكتروني مطلوب";
+"Password is Required" =  "كلمة السر مطلوبة";
+"Password must be more than 6 characters" = "كلمة السر يجب ان تزيد عن ٦ احرف";
+"confirmPassword does not match Password" = "تأكيد كلمة السر لا يطابق كلمة السر";
+
+"wrong password" = "كلمة السر غير صحيحة";
+"account Exists With Different Credential" = "الحساب موجود ولكن ببيانات مختلفة";
+"Email is already exist" = "هذا البريد الإلكتروني موجود بالفعل";
+"No Internet Connection" = "لا يوجد إتصال بالانترنت";

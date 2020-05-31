@@ -9,16 +9,85 @@
 import UIKit
 import CoreData
 import Firebase
+import GoogleSignIn
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+   
 
 var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+//        GIDSignIn.sharedInstance()?.clientID = "734287541282-h8v1ojlr4hm4fl26idajo1fu25lh9i51.apps.googleusercontent.com"//
+//        GIDSignIn.sharedInstance()?.delegate = self//
+
         return true
     }
-
+ 
+    
+                      ////  My Custom Function Mahmoud ///////
+    //////**************** Siign In With Google **************** //
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+////      // ...
+////      if let error = error {
+////        // ...
+////        return
+////      }
+////
+////          print("The User Signed In Successfullt With Google ")
+////
+////          guard  ((user.profile?.email) != nil)  else {
+////              return
+////          }
+////          print("The User Email : \( user.profile.email ?? "No Email")")
+////      guard let authentication = user.authentication else { return }
+////      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+////                                                        accessToken: authentication.accessToken)
+////      // ...
+//        if let error = error {
+//        print(error.localizedDescription)
+//        return
+//        }
+//        guard let auth = user.authentication else { return }
+//        let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
+//        Auth.auth().signIn(with: credentials) { (authResult, error) in
+//        if let error = error {
+//        print(error.localizedDescription)
+//        } else {
+//        print("Login Successful.")
+//            	//dismiss(animated: true, completion: nil)
+//
+//        //This is where you should add the functionality of successful login
+//        //i.e. dismissing this view or push the home view controller etc
+//        }
+//        
+//        
+//        }}
+//
+//    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+//        // Perform any operations when the user disconnects from app here.
+//        // ...
+//    }
+//    
+//    
+//    
+// 
+//       
+//    @available(iOS 9.0, *)
+//    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+//      -> Bool {
+//      return GIDSignIn.sharedInstance().handle(url)
+//    }
+//    
+//    //For your app to run on iOS 8 and older, also implement the deprecated
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        return GIDSignIn.sharedInstance().handle(url)
+//    }
+//    
+// 
+    
+    
+     ///************** end of custom functions ************
     // MARK: UISceneSession Lifecycle
 @available(iOS 13.0, *)
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
