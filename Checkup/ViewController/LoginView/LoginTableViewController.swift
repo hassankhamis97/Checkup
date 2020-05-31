@@ -12,7 +12,7 @@ import SkyFloatingLabelTextField
 import UIColor_Hex_Swift
 import Firebase
 import GoogleSignIn
-
+import RealmSwift
 
 class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView {
     
@@ -21,33 +21,40 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView
     @IBOutlet weak var emailTextView: SkyFloatingLabelTextFieldWithIcon!
     
     @IBOutlet weak var passWordTextView: SkyFloatingLabelTextFieldWithIcon!
+    @IBOutlet weak var googleLogin: UIButton!
     
     @IBOutlet weak var loginBtnOutlet: UIButton!
     
-    @IBOutlet weak var googleSignInBtn: GIDSignInButton!
+    @IBOutlet weak var googleAccountSignIn: GIDSignInButton!
+    @IBAction func googleSignInAction(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+        print("Google .....")
+        
+        
+    }
+    //
+    //    @IBOutlet weak var googleSignInBtn: GIDSignInButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-         /// Google Sign In /
-  
- 
+        /// Google Sign In /
+        googleAccountSignIn.style = GIDSignInButtonStyle.iconOnly
+        
         
         GIDSignIn.sharedInstance()?.clientID = "734287541282-h8v1ojlr4hm4fl26idajo1fu25lh9i51.apps.googleusercontent.com"//
-              GIDSignIn.sharedInstance()?.delegate = self//
-
-         
+        GIDSignIn.sharedInstance()?.delegate = self//
+        
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        //GIDSignIn.sharedInstance().signIn()
         
         
         
         
         
-//        if GIDSignIn.sharedInstance()?.currentUser != nil{
-//            
-//        }else{
-//            GIDSignIn.sharedInstance()?.presentingViewController = self
-//        }
+        //        if GIDSignIn.sharedInstance()?.currentUser != nil{
+        //
+        //        }else{
+        //            GIDSignIn.sharedInstance()?.presentingViewController = self
+        //        }
         //*******************//
         loginBtnOutlet.layer.cornerRadius=30
         loginBtnOutlet.layer.borderColor=UIColor.white.cgColor
@@ -64,7 +71,7 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView
         
         view.addGestureRecognizer(tap)
         activityIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-       activityIndicator.hide()
+        activityIndicator.hide()
     }
     //  function to enable dimiss key board(Return key)
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
@@ -84,11 +91,11 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView
         
         
         
-      
+        
         if (emailTextView.text?.isEmpty == false && passWordTextView.text?.isEmpty == false){
             var loginPresenter : LoginPresenter = LoginPresenter(loginViewRef: self)
             loginPresenter.checkUser(email: emailTextView.text!, password: passWordTextView.text!)
-        //  Login code
+            //  Login code
         }
         else{
             
@@ -111,12 +118,92 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView
     @IBAction func goToSignupSB(_ sender: Any) {
         
         let signup = (
-        storyboard?.instantiateViewController(
-        withIdentifier: "signupSVC"))!
+            storyboard?.instantiateViewController(
+                withIdentifier: "signupSVC"))!
         
         present(signup, animated: true, completion: nil)
         
     }
+    
+    
+    
+    
+    //     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+    //        //      // ...
+    //        //      if let error = error {
+    //        //        // ...
+    //        //        return
+    //        //      }
+    //        //
+    //        //          print("The User Signed In Successfullt With Google ")
+    //        //
+    //        //          guard  ((user.profile?.email) != nil)  else {
+    //        //              return
+    //        //          }
+    //        //          print("The User Email : \( user.profile.email ?? "No Email")")
+    //        //      guard let authentication = user.authentication else { return }
+    //        //      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+    //        //                                                        accessToken: authentication.accessToken)
+    //        //      // ...
+    //                if let error = error {
+    //                print(error.localizedDescription)
+    //                return
+    //                }
+    //                guard let auth = user.authentication else { return }
+    //                let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
+    //                Auth.auth().signIn(with: credentials) { (authResult, error) in
+    //                if let error = error {
+    //                print(error.localizedDescription)
+    //                } else {
+    //                print("Login Successful.")
+    //                    guard  ((user.profile?.email) != nil)  else {
+    //                                  return
+    //                              }
+    //
+    //                        let user: GIDGoogleUser = GIDSignIn.sharedInstance()!.currentUser
+    //                        let fullName = user.profile.name
+    //                        let email = user.profile.email
+    //                    var userDP:String?
+    //                        if user.profile.hasImage {
+    //                            userDP = String(describing : user.profile.imageURL(withDimension: 200))
+    //                            print("User Image :\(String(describing: userDP))")
+    //                        }
+    //
+    //                    SignupModel.addNameToFireStore(username: user.profile.name, id: user.userID)
+    //
+    //                    SignupModel.saveToRealm(id:  user.userID, username: user.profile.name)
+    //                    RealTime().addUser(id:  user.userID, email: user.profile.email, birthdate:"", gender: "", phone:[Phone()], insurance: "", address:Address() , imagePath: userDP ?? "", name: user.profile.name)
+    //    //
+    //                    self.userValidation()
+    //
+    //    //                self.dismiss(animated: true, completion: nil)
+    //
+    //                //This is where you should add the functionality of successful login
+    //                //i.e. dismissing this view or push the home view controller etc
+    //                }
+    //
+    //
+    //                }}
+    //
+    //            func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+    //                // Perform any operations when the user disconnects from app here.
+    //                // ...
+    //            }
+    //
+    
+    
+    
+    //
+    //        @available(iOS 9.0, *)
+    //        func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+    //          -> Bool {
+    //          return GIDSignIn.sharedInstance().handle(url)
+    //        }
+    //
+    //        //For your app to run on iOS 8 and older, also implement the deprecated
+    //        func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+    //            return GIDSignIn.sharedInstance().handle(url)
+    //        }
     
     
 }
@@ -125,78 +212,79 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView
 extension LoginTableViewController : GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-    //      // ...
-    //      if let error = error {
-    //        // ...
-    //        return
-    //      }
-    //
-    //          print("The User Signed In Successfullt With Google ")
-    //
-    //          guard  ((user.profile?.email) != nil)  else {
-    //              return
-    //          }
-    //          print("The User Email : \( user.profile.email ?? "No Email")")
-    //      guard let authentication = user.authentication else { return }
-    //      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-    //                                                        accessToken: authentication.accessToken)
-    //      // ...
-            if let error = error {
+        //      // ...
+        //      if let error = error {
+        //        // ...
+        //        return
+        //      }
+        //
+        //          print("The User Signed In Successfullt With Google ")
+        //
+        //          guard  ((user.profile?.email) != nil)  else {
+        //              return
+        //          }
+        //          print("The User Email : \( user.profile.email ?? "No Email")")
+        //      guard let authentication = user.authentication else { return }
+        //      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+        //                                                        accessToken: authentication.accessToken)
+        //      // ...
+        if let error = error {
             print(error.localizedDescription)
             return
-            }
-            guard let auth = user.authentication else { return }
-            let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
-            Auth.auth().signIn(with: credentials) { (authResult, error) in
+        }
+        guard let auth = user.authentication else { return }
+        let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
+        Auth.auth().signIn(with: credentials) { (authResult, error) in
             if let error = error {
-            print(error.localizedDescription)
+                print(error.localizedDescription)
             } else {
-            print("Login Successful.")
+                print("Login Successful.")
+                self.dismiss(animated: true, completion: nil)
                 guard  ((user.profile?.email) != nil)  else {
-                              return
-                          }
+                    return
+                }
+                
+                let user: GIDGoogleUser = GIDSignIn.sharedInstance()!.currentUser
+                let fullName = user.profile.name
+                let email = user.profile.email
+                var userDP:String?
+                if user.profile.hasImage {
+                    userDP = String(describing : user.profile.imageURL(withDimension: 200)!)
+                    print("User Image :\(userDP)")
+                }
+                
+                let realm = try! Realm()
+                
+                
+             //   let scope = realm.objects(Person.self).filter("id == %@", user.userID)
+                 let scope = realm.object(ofType: Person.self, forPrimaryKey: user.userID)
+                if scope == nil {
+                    SignupModel.addNameToFireStore(username: user.profile.name, id: user.userID)
                     
-                    let user: GIDGoogleUser = GIDSignIn.sharedInstance()!.currentUser
-                    let fullName = user.profile.name
-                    let email = user.profile.email
-                    if user.profile.hasImage {
-                    let userDP = user.profile.imageURL(withDimension: 200)
-                        print("User Image :\(String(describing: userDP))")
-                    }
-                 
-                self.userValidation()
-
-//                self.dismiss(animated: true, completion: nil)
-
-            //This is where you should add the functionality of successful login
-            //i.e. dismissing this view or push the home view controller etc
+                    SignupModel.saveToRealm(id:  user.userID, username: user.profile.name)
+                    RealTime().addUser(id:  user.userID, email: user.profile.email, birthdate:"", gender: "", phone:[Phone()], insurance: "", address:Address() , imagePath: userDP! ?? "", name: user.profile.name)
+                }
+                
+                
+                
+                // self.userValidation()
+                
+                // self.dismiss(animated: true, completion: nil)
+                
+                //This is where you should add the functionality of successful login
+                //i.e. dismissing this view or push the home view controller etc
+                
             }
             
             
-            }}
-
-        func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-            // Perform any operations when the user disconnects from app here.
-            // ...
-        }
-        
-        
-        
-     
-           
-        @available(iOS 9.0, *)
-        func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
-          -> Bool {
-          return GIDSignIn.sharedInstance().handle(url)
-        }
-        
-        //For your app to run on iOS 8 and older, also implement the deprecated
-        func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-            return GIDSignIn.sharedInstance().handle(url)
-        }
-        
-     
+        }}
     
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
     }
+    
+    
+}
 
 
