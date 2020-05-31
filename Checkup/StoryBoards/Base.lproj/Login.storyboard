@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -329,6 +329,17 @@
                                                         <constraint firstAttribute="width" constant="334" id="htV-En-KXQ"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="SZn-Zn-qln">
+                                                    <rect key="frame" x="40" y="0.0" width="334" height="63"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="googleSignInAction:" destination="V6O-re-qlJ" eventType="touchUpInside" id="6Ff-m2-oPf"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="YLT-Io-LDU" firstAttribute="centerX" secondItem="7b7-gr-qoE" secondAttribute="centerX" id="h0g-rY-bId"/>
@@ -356,7 +367,8 @@
                     <connections>
                         <outlet property="activityIndicator" destination="hWy-Ks-chh" id="g8P-HL-bQl"/>
                         <outlet property="emailTextView" destination="r1n-W2-QV3" id="oSG-zz-Pti"/>
-                        <outlet property="googleSignInBtn" destination="YLT-Io-LDU" id="zOO-bm-ki6"/>
+                        <outlet property="googleAccountSignIn" destination="YLT-Io-LDU" id="5xf-z3-uPL"/>
+                        <outlet property="googleLogin" destination="SZn-Zn-qln" id="90L-th-zeb"/>
                         <outlet property="loginBtnOutlet" destination="Weh-RQ-OYI" id="CHX-XK-tc1"/>
                         <outlet property="logoImage" destination="cDZ-H7-5zN" id="kpI-iK-UfG"/>
                         <outlet property="passWordTextView" destination="Sdi-Z7-y4r" id="3yH-vY-5FO"/>
@@ -364,7 +376,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eob-tU-b2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2789.8550724637685" y="72.991071428571431"/>
+            <point key="canvasLocation" x="2710" y="113"/>
         </scene>
         <!--Reset Password Table View Controller-->
         <scene sceneID="Lu2-H4-w6S">

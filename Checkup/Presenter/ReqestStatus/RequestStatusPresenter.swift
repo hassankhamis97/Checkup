@@ -9,33 +9,33 @@
 import Foundation
 class RequestStatusPresenter : IRequestStatusPresenter , ICheckConnection{
     
+       var requestViewRef : IRequestStatusView!
+       init(requestViewRef : IRequestStatusView) {
+           self.requestViewRef = requestViewRef
+       }
+       
     var id : String?
     func onSucessfullyConnected() {
-      var requestStatusModel = RequestStatusModel(requestPresenterRef : self)
-            requestStatusModel.onRequestStatusRevieved(testId:id!)
+        var requestStatusModel = RequestStatusModel(requestPresenterRef : self)
+        requestStatusModel.onRequestStatusRevieved(testId:id!)
     }
     
     func onFailConnected() {
-      
+        
     }
     
+    
+    
+    
    
-
-      
-      
-      var requestViewRef : IRequestStatusView!
-      init(requestViewRef : IRequestStatusView) {
-          self.requestViewRef = requestViewRef
-      }
-
     func getRequest(testId:String) {
         self.id = testId
-          var check = InternetConnection.checkInternetConnection(iCheckConnection: self)
+        var check = InternetConnection.checkInternetConnection(iCheckConnection: self)
     }
     
     func onRequestReceived(myObj:Test) {
         requestViewRef.onReceiveRequestStatus(myObj: myObj)
-             print("success ......")
+        print("success ......")
     }
     
     func onFail(message: String) {
@@ -44,5 +44,5 @@ class RequestStatusPresenter : IRequestStatusPresenter , ICheckConnection{
     
     
     
-
+    
 }
