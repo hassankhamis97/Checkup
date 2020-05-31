@@ -121,6 +121,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     
         let reviews = self.storyboard?.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
         self.navigationController?.pushViewController(reviews, animated: true)
+        
    
        return reviewsCell
     }
@@ -130,14 +131,14 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
   }
     @objc func reviewsNavigation(_ sender : UIButton){
          sender.pulsate()
-         let reviews = storyboard!.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
-           navigationController?.pushViewController(reviews, animated: true)
+    //     let reviews = storyboard!.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
+      //     navigationController?.pushViewController(reviews, animated: true)
         if(true) {
             let reviews = storyboard!.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
             navigationController?.pushViewController(reviews, animated: true)
             print("pressed")
-         //   reviews.modalPresentationStyle = .fullScreen
-           // present(reviews, animated: true, completion: nil)
+           // reviews.modalPresentationStyle = .fullScreen
+            //present(reviews, animated: true, completion: nil)
          
          }
          else{

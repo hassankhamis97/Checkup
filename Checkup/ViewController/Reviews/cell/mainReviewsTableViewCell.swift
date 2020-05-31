@@ -10,6 +10,7 @@ import UIKit
 import Cosmos
 class mainReviewsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var descriptionOutlet: UILabel!
     @IBOutlet weak var viewOutlet: UIView!
     @IBOutlet weak var ratingOutlet: CosmosView!
     @IBOutlet weak var userNameOutlet: UILabel!

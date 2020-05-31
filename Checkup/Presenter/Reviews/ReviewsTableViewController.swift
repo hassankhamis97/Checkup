@@ -8,16 +8,17 @@
 
 import UIKit
 
-class ReviewsTableViewController: UITableViewController {
+class ReviewsTableViewController: UITableViewController , IReviewsView{
+   
+    var reviewPresenterInView : IReviewsPresenter!
+    var reviewObjInView : [Review]!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        reviewPresenterInView = ReviewsPresenter(view: self)
+        reviewPresenterInView.getReviewsDataFromModel()
     }
 
     // MARK: - Table view data source
@@ -29,7 +30,13 @@ class ReviewsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        if(reviewObjInView != nil){
+            return reviewObjInView!.count
+        }else
+        {
+            return 0
+        }
+        
     }
 
     
@@ -45,6 +52,25 @@ class ReviewsTableViewController: UITableViewController {
         cell.viewOutlet.layer.borderWidth = 5
         cell.viewOutlet.layer.borderColor = UIColor.white.cgColor
         
+        
+        if(reviewObjInView != nil){
+            cell.ratingOutlet.rating = Double(reviewObjInView[indexPath.row].rateNumber!)
+                   
+           cell.reviewsDateOutlet?.text =  reviewObjInView[indexPath.row].date!
+                
+           cell.descriptionOutlet.text = reviewObjInView[indexPath.row].description!
+        }else
+        {
+            print("error")
+        }
+        
+        
+      //  cell.ratingOutlet.rating = Double(reviewObjInView[indexPath.row].rateNumber!)
+        
+   //     cell.reviewsDateOutlet?.text =  reviewObjInView[indexPath.row].date!
+        
+     //   cell.descriptionOutlet.text = reviewObjInView[indexPath.row].description!
+        
 
         return cell
     }
@@ -53,6 +79,14 @@ class ReviewsTableViewController: UITableViewController {
     }
     
 
+    
+    func returnDataToView(reviewsObj: [Review]) {
+        reviewObjInView = reviewsObj
+            print("reviews in view \(reviewObjInView)")
+        tableView.reloadData()
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

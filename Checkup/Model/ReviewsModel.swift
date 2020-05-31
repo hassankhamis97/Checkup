@@ -24,7 +24,7 @@ class ReviewsModel : IReviewsModel{
     
     func fetchReviews() {
         
-        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetBranchReviews?branchId=2&take=10&skip=0").responseJSON { (response) in
+        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetBranchReviews?branchId=2&take=50&skip=0").responseJSON { (response) in
             if let json = response.result.value{
                       print("reviews: \(json)")
                 
