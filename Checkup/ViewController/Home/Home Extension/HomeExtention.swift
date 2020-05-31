@@ -63,15 +63,19 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
     }
     
     func showIndicator() {
+        isLoading = true
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         labsActicity.show()
         labsActicity.startAnimating()
+        labCollection.reloadData()
     }
     
     func hideIndicator() {
+        isLoading = false
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         labsActicity.stopAnimating()
         labsActicity.hide()
+        labCollection.reloadData()
     }
     
     func errorMessage(msg: String) {
@@ -100,11 +104,12 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
             cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = searchedHomeLabsArr[indexPath.row].hotline
             
-        } else if searchedHomeLabsArr.count <= 0 &&  searchBar.text?.count ?? 0 > 0 {
+        } else if searchedHomeLabsArr.count <= 0 &&  searchBar.text?.count ?? 0 > 0{
             print("NoData")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "noDataCell", for: indexPath)
             //noDataCell
             cell.sizeThatFits(CGSize(width: 500.0, height: 500.0))
+            
             return cell
         } else{
 //            if cellWidth != nil {
