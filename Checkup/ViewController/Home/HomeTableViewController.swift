@@ -11,16 +11,17 @@ import ImageSlideshow
 import Firebase
 import CoreLocation
 
-class HomeTableViewController: UITableViewController, CLLocationManagerDelegate   {
+class HomeTableViewController: UITableViewController, CLLocationManagerDelegate ,UICollectionViewDelegateFlowLayout   {
     
+    @IBOutlet var labCollectionCell: UITableViewCell!
     var reach : Bool = false
     
+    @IBOutlet var sliderShowCell: UITableViewCell!
+    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet weak var labsActicity: UIActivityIndicatorView!
-    
-    var labFilter : FilterLabTableView!
-    var labNames = ["El-Mokhtabar" , "Alpha" , "El-Borg" , "El-Mokhtabar"]
-    var labImages = ["mokhtabar" , "alpha" , "borg" ,"mokhtabar" ]
-    var labDate = ["21/2/2005" , "1/11/2019" , "5/9/2008" , "8/6/2016"]
+    @IBOutlet var headerViewHeight: NSLayoutConstraint!
+       let imageViewMaxHeight : CGFloat = 192
+         let imageViewMinHeight : CGFloat = 0
     
     var homeLabArr = [HomeLab]()
     
@@ -44,31 +45,33 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
            print("Failed to find user's location: \(error.localizedDescription)")
        }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        if UIDevice.current.orientation.isLandscape {
-            self.tableView.isScrollEnabled = true
-        } else {
-            
-            //Setup Search Controller
-            
-            self.searchController.obscuresBackgroundDuringPresentation = false
-            self.searchController.searchBar.placeholder = "Search".localized
-            self.searchController.searchBar.barStyle = .black
-            self.searchController.searchBar.delegate = self
-            self.definesPresentationContext = true
-            self.navigationItem.searchController = searchController
-//            let leftConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .leading, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .leading, multiplier: 1, constant: 20) // add margin
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransition(to: size, with: coordinator)
+//        if UIDevice.current.orientation.isLandscape {
+//            self.tableView.isScrollEnabled = true
+//        } else {
 //
-//            let bottomConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .bottom, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .bottom, multiplier: 1, constant: 1)
+//            //Setup Search Controller
 //
-//            let topConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .top, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .top, multiplier: 1, constant: 1)
-//
-//            let widthConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: self.view.frame.size.width - 40)
-            self.tableView.isScrollEnabled = false
-        }
+//            self.searchController.obscuresBackgroundDuringPresentation = false
+//            self.searchController.searchBar.placeholder = "Search".localized
+//            self.searchController.searchBar.barStyle = .black
+//            self.searchController.searchBar.delegate = self
+//            self.definesPresentationContext = true
+//            self.navigationItem.searchController = searchController
+////            let leftConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .leading, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .leading, multiplier: 1, constant: 20) // add margin
+////
+////            let bottomConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .bottom, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .bottom, multiplier: 1, constant: 1)
+////
+////            let topConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .top, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .top, multiplier: 1, constant: 1)
+////
+////            let widthConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: self.view.frame.size.width - 40)
+//            self.tableView.isScrollEnabled = false
+//        }
+//    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.headerViewHeight.constant = self.imageViewMaxHeight
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //        tabBarItem.badgeValue = "1"
@@ -84,27 +87,27 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
         
         labsActicity.transform = CGAffineTransform.init(scaleX: 2, y: 2)
         
-        showIndicator()
-        let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-        homeLabPresenter.getLabs(take: 4, skip: homeLabArr.count)
+//        showIndicator()
+//        let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
+//        homeLabPresenter.getLabs(take: 4, skip: homeLabArr.count)
         
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        layout.itemSize = CGSize(width: 180, height: 240)  //233
-        layout.minimumInteritemSpacing = 0.05
-        
-        self.labCollection?.collectionViewLayout = layout
+//        let layout = UICollectionViewFlowLayout()
+//        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+//        layout.itemSize = CGSize(width: 180, height: 240)  //233
+//        layout.minimumInteritemSpacing = 0.05
+//
+//        self.labCollection?.collectionViewLayout = layout
         
         // search bar in navigation controller
         
         //Setup Search Controller
         
-        self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search".localized
-        self.searchController.searchBar.barStyle = .black
-        self.searchController.searchBar.delegate = self
-        self.definesPresentationContext = true
-        self.navigationItem.searchController = searchController
+//        self.searchController.obscuresBackgroundDuringPresentation = false
+//        self.searchController.searchBar.placeholder = "Search".localized
+//        self.searchController.searchBar.barStyle = .black
+//        self.searchController.searchBar.delegate = self
+//        self.definesPresentationContext = true
+//        self.navigationItem.searchController = searchController
         //        self.definesPresentationContext = true
         //        searchController.dismiss(animated: false, completion: nil)
         //
@@ -136,41 +139,50 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
          
          */
         //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterTapped))
-        let leftConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .leading, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .leading, multiplier: 1, constant: 20) // add margin
-
-        let bottomConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .bottom, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .bottom, multiplier: 1, constant: 1)
-
-        let topConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .top, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .top, multiplier: 1, constant: 1)
-
-        let widthConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: self.view.frame.size.width - 40) // - margins from both sides
+//        let leftConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .leading, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .leading, multiplier: 1, constant: 20) // add margin
+//
+//        let bottomConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .bottom, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .bottom, multiplier: 1, constant: 1)
+//
+//        let topConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .top, relatedBy: .equal, toItem: navigationController?.navigationBar, attribute: .top, multiplier: 1, constant: 1)
+//
+//        let widthConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: self.view.frame.size.width - 40) // - margins from both sides
     }
     
-    @objc func filterTapped(){
-        if #available(iOS 13.0, *) {
-            labFilter = storyboard?.instantiateViewController(identifier: "filterLab") as! FilterLabTableView
-        } else {
-            
-        }
-        navigationController?.pushViewController(labFilter, animated: true)
-        
-    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//    //       let width = ((collectionView.frame.width - 20) / 2) // 15 because of paddings
-//    //       print("cell width : \(width)")
-//    //       return CGSize(width: width, height: 200)
-//        let height = labCollection.frame.size.height
-//        let width = labCollection.frame.size.width
+//    @objc func filterTapped(){
+//        if #available(iOS 13.0, *) {
+//            labFilter = storyboard?.instantiateViewController(identifier: "filterLab") as! FilterLabTableView
+//        } else {
 //
-//        if(height > width)
-//        {
-//        // in case you you want the cell to be 40% of your controllers view
-//    //        return CGSize(width: width * 0.5, height: 266)
+//        }
+//        navigationController?.pushViewController(labFilter, animated: true)
+//
+//    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        labCollection.collectionViewLayout.invalidateLayout()
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    //       let width = ((collectionView.frame.width - 20) / 2) // 15 because of paddings
+    //       print("cell width : \(width)")
+    //       return CGSize(width: width, height: 200)
+        let height = labCollection.frame.size.height
+        let width = labCollection.frame.size.width
+        if searchedHomeLabsArr.count <= 0 &&  searchBar.text?.count ?? 0 > 0 {
+                   return CGSize(width: width, height: height)
+               }
+        
+        else if(height > width)
+        {
+        // in case you you want the cell to be 40% of your controllers view
+    //        return CGSize(width: width * 0.5, height: 266)
 //            let cellHeight = (width * 0.5 * 285)/(375 * 0.5)
-//            return CGSize(width: width * 0.5, height: cellHeight)
-//        }
-//        else{
+//            let cellHeight = 240
+            return CGSize(width: width * 0.5, height: 240)
+        }
+        else{
+//            let cellHeight = 240
 //            let cellHeight = (width * 0.25 * 250)/(667 * 0.25)
-//            return CGSize(width: width * 0.25, height: cellHeight)
-//        }
-//       }
+            return CGSize(width: width * 0.25, height: 240)
+        }
+       }
 }

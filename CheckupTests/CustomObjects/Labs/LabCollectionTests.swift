@@ -35,7 +35,7 @@ class LabCollectionTests: XCTestCase {
         var id = ref.childByAutoId()
         labObj.id = id.key! as! String
         expectationObj.fulfill()
-        ref.child("Lab").child(labObj.id!).setValue(labObj.toDictionary())
+//        ref.child("Lab").child(labObj.id!).setValue(labObj.toDictionary())
         waitForExpectations(timeout: 15.0)
 
     
