@@ -14,11 +14,12 @@ import RealmSwift
 
 class GetLabsModel: IGetLabsModel {
     func getSearchedLabs(name: String) {
-        let homeLabsURL = "http://www.checkup.somee.com/api/AnalysisService/GetLabMenus?searchName="+name
-        
+        let homeLabsURL = "http://www.checkup.somee.com/api/AnalysisService/GetLabMenus"
+        let url = URL(string: homeLabsURL)
         // for Azab
         var labs = [HomeLab]()
-        Alamofire.request(homeLabsURL).validate().responseJSON { response in
+//        let safeURL = homeLabsURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+        Alamofire.request(homeLabsURL,parameters: ["searchName": name]).validate().responseJSON { response in
             
             switch response.result {
             case .success(_):

@@ -8,22 +8,30 @@
 
 import UIKit
 import SDWebImage
-class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate , IBranchDescView{
+class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate , IBranchDescView , IReviewsView{
+   
  
-     var branchDescriptionView : BranchDescription!
+    var branchDescriptionView : BranchDescription!
     var branchDescPresenter : IBranchDescPresenter!
+    
+    var reviewPresenterInView : IReviewsPresenter!
+    var reviewObjInView : [Review]!
+    
+    let imageViewMaxHeight : CGFloat = 250
+    let imageViewMinHeight : CGFloat = 100
+    
     @IBOutlet weak var myLabel: UILabel!
     @IBAction func backBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     @IBOutlet var branchDescriptionTableView: UITableView!
     @IBOutlet var headerViewHeight: NSLayoutConstraint!
-    let imageViewMaxHeight : CGFloat = 250
-      let imageViewMinHeight : CGFloat = 100
-    
-    
     @IBOutlet var labImageView: UIImageView!
+    @IBOutlet weak var viewOutlet: UIView!
     
+    
+  
+      
     override func viewWillAppear(_ animated: Bool) {
         self.headerViewHeight.constant = self.imageViewMaxHeight
       
@@ -36,7 +44,15 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
         myLabel.alpha = 0
         branchDescPresenter = BranchDescPresenter(view: self)
         branchDescPresenter.getDataFromModel()
-                  
+               
+        //reviewPresenterInView = ReviewsPresenter(view: self)
+        //reviewPresenterInView.getReviewsDataFromModel()
+       
+        
+        viewOutlet.clipsToBounds = true
+        viewOutlet.layer.cornerRadius = 40
+       // viewOutlet.layer.maskedCorners = [.layerMinXMinYCorner , .layerMaxXMinYCorner]
+        viewOutlet.layer.maskedCorners = [.layerMaxXMaxYCorner , .layerMinXMaxYCorner]
     
 
     }
@@ -51,6 +67,15 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
 
     
   }
+ 
+    func returnDataToView(reviewsObj: [Review]) {
+       //    reviewObjInView = reviewsObj
+     //   print("reviews in view \(reviewObjInView)")
+    
+    }
+       
+    
+     
   
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

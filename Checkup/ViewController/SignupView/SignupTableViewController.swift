@@ -17,7 +17,7 @@ import UIKit
 import SkyFloatingLabelTextField
 import Firebase
 
-class SignupTableViewController: UITableViewController {
+class SignupTableViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var signupActivity: UIActivityIndicatorView!
     
@@ -38,6 +38,18 @@ class SignupTableViewController: UITableViewController {
         signUpBtn.layer.cornerRadius=30
         signUpBtn.layer.borderColor=UIColor.white.cgColor
         signUpBtn.layer.borderWidth=2
+        
+        
+        userName.delegate=self
+        email.delegate=self
+        password.delegate=self
+        confirmPassword.delegate=self
+        //
+        
+        // to enable hide key board when touching any where
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
         
 //        userName.placeholder = "SIGN_UP_NAME".localized
 //        email.placeholder = "SIGN_UP_Email".localized
@@ -86,7 +98,16 @@ class SignupTableViewController: UITableViewController {
             }
             return true
         }
+  func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+      self.view.endEditing(true)
+      return true
+  }
   
+  
+  // function to enable dimiss key board(touch any where )
+  @objc func dismissKeyboard() {
+      view.endEditing(true)
+  }
     
 }
 
