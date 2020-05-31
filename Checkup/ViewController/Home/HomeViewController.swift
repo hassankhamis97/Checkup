@@ -84,6 +84,10 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollecti
             let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
             homeLabPresenter.getLabs(take: 4, skip: homeLabArr.count)
             
+            
+            let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+                   
+                   view.addGestureRecognizer(tap)
     //        let layout = UICollectionViewFlowLayout()
     //        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
     //        layout.itemSize = CGSize(width: 180, height: 240)  //233
@@ -140,7 +144,16 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollecti
     //
     //        let widthConstraint = NSLayoutConstraint(item: self.searchController.searchBar, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: self.view.frame.size.width - 40) // - margins from both sides
         }
+        func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return true
+        }
         
+        
+        // function to enable dimiss key board(touch any where )
+        @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
     //    @objc func filterTapped(){
     //        if #available(iOS 13.0, *) {
     //            labFilter = storyboard?.instantiateViewController(identifier: "filterLab") as! FilterLabTableView

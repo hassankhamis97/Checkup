@@ -1,0 +1,141 @@
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "03W-uR-ADJ"; */
+"03W-uR-ADJ.title" = "Item";
+
+/* Class = "UILabel"; text = "Governerate : "; ObjectID = "3ag-VQ-Q0C"; */
+"3ag-VQ-Q0C.text" = "Governerate : ";
+
+/* Class = "UILabel"; text = "Aya"; ObjectID = "3ib-QW-0Kj"; */
+"3ib-QW-0Kj.text" = "Aya";
+
+/* Class = "UILabel"; text = "No Data Available "; ObjectID = "5Cr-GY-iBc"; */
+"5Cr-GY-iBc.text" = "No Data Available ";
+
+/* Class = "UILabel"; text = "Address : "; ObjectID = "7Jd-Hi-kbM"; */
+"7Jd-Hi-kbM.text" = "Address : ";
+
+/* Class = "UILabel"; text = "There's no data in this branch"; ObjectID = "83s-re-pua"; */
+"83s-re-pua.text" = "There's no data in this branch";
+
+/* Class = "UILabel"; text = "Lab Name : "; ObjectID = "9Mz-z0-B1R"; */
+"9Mz-z0-B1R.text" = "Lab Name : ";
+
+/* Class = "UISearchBar"; placeholder = "search ..."; ObjectID = "9dj-L2-wKW"; */
+"9dj-L2-wKW.placeholder" = "search ...";
+
+/* Class = "UISearchBar"; 9dj-L2-wKW.scopeButtonTitles[0] = "All"; ObjectID = "9dj-L2-wKW"; */
+"9dj-L2-wKW.scopeButtonTitles[0]" = "All";
+
+/* Class = "UISearchBar"; 9dj-L2-wKW.scopeButtonTitles[1] = "All-All"; ObjectID = "9dj-L2-wKW"; */
+"9dj-L2-wKW.scopeButtonTitles[1]" = "All-All";
+
+/* Class = "UILabel"; text = "Available From Home : "; ObjectID = "AgD-b0-EzN"; */
+"AgD-b0-EzN.text" = "Available From Home : ";
+
+/* Class = "UILabel"; text = "Mehatet EL-Raml Besides ayebd ok"; ObjectID = "BwE-wr-LFF"; */
+"BwE-wr-LFF.text" = "Mehatet EL-Raml Besides ayebd ok";
+
+/* Class = "UILabel"; text = "Phone : "; ObjectID = "CpE-Tz-zme"; */
+"CpE-Tz-zme.text" = "Phone : ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ehj-DN-nzJ"; */
+"Ehj-DN-nzJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Alexandria"; ObjectID = "Fd2-ch-P1T"; */
+"Fd2-ch-P1T.text" = "Alexandria";
+
+/* Class = "UILabel"; text = "5987132"; ObjectID = "GRe-wA-45U"; */
+"GRe-wA-45U.text" = "5987132";
+
+/* Class = "UITabBarItem"; title = "More"; ObjectID = "I1z-0u-44f"; */
+"I1z-0u-44f.title" = "More";
+
+/* Class = "UILabel"; text = "this lab is the best out there "; ObjectID = "JxY-MN-T3a"; */
+"JxY-MN-T3a.text" = "this lab is the best out there ";
+
+/* Class = "UIButton"; normalTitle = "read more"; ObjectID = "M1S-MT-CLv"; */
+"M1S-MT-CLv.normalTitle" = "read more";
+
+/* Class = "UILabel"; text = "Address : "; ObjectID = "NrD-Qy-fFR"; */
+"NrD-Qy-fFR.text" = "Address : ";
+
+/* Class = "UITabBarItem"; title = "Result"; ObjectID = "OLn-00-SMx"; */
+"OLn-00-SMx.title" = "Result";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Oyl-1j-QVe"; */
+"Oyl-1j-QVe.title" = "Item";
+
+/* Class = "UILabel"; text = "586932015"; ObjectID = "SVF-5T-V4V"; */
+"SVF-5T-V4V.text" = "586932015";
+
+/* Class = "UILabel"; text = "Work Time : "; ObjectID = "TB2-Mh-fli"; */
+"TB2-Mh-fli.text" = "Work Time : ";
+
+/* Class = "UILabel"; text = "El-Borg"; ObjectID = "V7X-58-dFY"; */
+"V7X-58-dFY.text" = "El-Borg";
+
+/* Class = "UILabel"; text = "10 Am to 9 Pm"; ObjectID = "VOg-h8-v21"; */
+"VOg-h8-v21.text" = "10 Am to 9 Pm";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XYz-Gk-BPR"; */
+"XYz-Gk-BPR.text" = "Label";
+
+/* Class = "UILabel"; text = "5987132"; ObjectID = "Yx7-8b-lMK"; */
+"Yx7-8b-lMK.text" = "5987132";
+
+/* Class = "UILabel"; text = "Alexandria"; ObjectID = "azk-yY-6ae"; */
+"azk-yY-6ae.text" = "Alexandria";
+
+/* Class = "UILabel"; text = "Friday"; ObjectID = "c7Y-4Z-49O"; */
+"c7Y-4Z-49O.text" = "Friday";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "dWN-Dl-lKZ"; */
+"dWN-Dl-lKZ.title" = "Item";
+
+/* Class = "UISearchBar"; placeholder = "search ..."; ObjectID = "dZO-wP-BTk"; */
+"dZO-wP-BTk.placeholder" = "search ...";
+
+/* Class = "UISearchBar"; dZO-wP-BTk.scopeButtonTitles[0] = "All"; ObjectID = "dZO-wP-BTk"; */
+"dZO-wP-BTk.scopeButtonTitles[0]" = "All";
+
+/* Class = "UISearchBar"; dZO-wP-BTk.scopeButtonTitles[1] = "All-All"; ObjectID = "dZO-wP-BTk"; */
+"dZO-wP-BTk.scopeButtonTitles[1]" = "All-All";
+
+/* Class = "UIButton"; normalTitle = "Lab Direction"; ObjectID = "hpr-1Q-gJX"; */
+"hpr-1Q-gJX.normalTitle" = "Lab Direction";
+
+/* Class = "UILabel"; text = "Holidays : "; ObjectID = "huv-V4-NQd"; */
+"huv-V4-NQd.text" = "Holidays : ";
+
+/* Class = "UILabel"; text = "El-Borg"; ObjectID = "iBL-Rc-uGl"; */
+"iBL-Rc-uGl.text" = "El-Borg";
+
+/* Class = "UILabel"; text = "27/8/2020"; ObjectID = "jSY-XG-MV8"; */
+"jSY-XG-MV8.text" = "27/8/2020";
+
+/* Class = "UILabel"; text = "Governerate : "; ObjectID = "knr-gv-Gr0"; */
+"knr-gv-Gr0.text" = "Governerate : ";
+
+/* Class = "UILabel"; text = "Lab Name : "; ObjectID = "mHv-wC-vGL"; */
+"mHv-wC-vGL.text" = "Lab Name : ";
+
+/* Class = "UIBarButtonItem"; title = "Filter"; ObjectID = "nqf-dX-RIZ"; */
+"nqf-dX-RIZ.title" = "Filter";
+
+/* Class = "UILabel"; text = "Reviews :"; ObjectID = "oEK-K0-5od"; */
+"oEK-K0-5od.text" = "Reviews :";
+
+/* Class = "UITabBarItem"; title = "Request"; ObjectID = "qnv-JE-1gv"; */
+"qnv-JE-1gv.title" = "Request";
+
+/* Class = "UITabBarItem"; title = "Chat"; ObjectID = "sJf-Af-Wps"; */
+"sJf-Af-Wps.title" = "Chat";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "tDN-YT-Vqd"; */
+"tDN-YT-Vqd.text" = "Yes";
+
+/* Class = "UILabel"; text = "No Data Available "; ObjectID = "tfE-Rb-czm"; */
+"tfE-Rb-czm.text" = "No Data Available ";
+
+/* Class = "UILabel"; text = "Mahatet El-Raml"; ObjectID = "waR-Jr-SMo"; */
+"waR-Jr-SMo.text" = "Mahatet El-Raml";
