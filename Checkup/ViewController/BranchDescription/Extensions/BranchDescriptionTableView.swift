@@ -118,26 +118,33 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     else if(myTag==7){
        let reviewsCell = tableView.dequeueReusableCell(withIdentifier: "reviewsCell", for: indexPath) as! ReviewsTableViewCell
         reviewsCell.readMoreOutlet.addTarget(self, action: #selector(reviewsNavigation), for: .touchUpInside)
-    
-        let reviews = self.storyboard?.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
-        self.navigationController?.pushViewController(reviews, animated: true)
-        
-   
-       return reviewsCell
+        return reviewsCell
     }
     
    }
       return cell
   }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row == 7){
+         
+             let reviews = self.storyboard?.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
+             self.navigationController?.pushViewController(reviews, animated: true)
+        }
+        
+    }
+    
+    
+    
     @objc func reviewsNavigation(_ sender : UIButton){
          sender.pulsate()
-    //     let reviews = storyboard!.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
-      //     navigationController?.pushViewController(reviews, animated: true)
+    
         if(true) {
             let reviews = storyboard!.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
            // navigationController?.pushViewController(reviews, animated: true)
             print("pressed")
-            reviews.modalPresentationStyle = .fullScreen
+           // reviews.modalPresentationStyle = .fullScreen
             present(reviews, animated: true, completion: nil)
          
          }
@@ -148,12 +155,8 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
      }
 
 }
+
 /*
- reviewsCell
- 
- filter = storyboard?.instantiateViewController(withIdentifier: "filterLab") as! FilterLabTableView
-       filter.myFilterProtocol = self
-       navigationController?.pushViewController(filter, animated: true)
- 
- 
+ //   let reviews = self.storyboard?.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
+      //  self.navigationController?.pushViewController(reviews, animated: true)
  */

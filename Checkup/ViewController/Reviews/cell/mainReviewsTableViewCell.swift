@@ -15,6 +15,7 @@ class mainReviewsTableViewCell: UITableViewCell {
     @IBOutlet weak var ratingOutlet: CosmosView!
     @IBOutlet weak var userNameOutlet: UILabel!
     @IBOutlet weak var reviewsDateOutlet: UILabel!
+    @IBOutlet weak var userImageOutlet: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

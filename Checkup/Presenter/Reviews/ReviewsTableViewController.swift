@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class ReviewsTableViewController: UITableViewController , IReviewsView{
    
     var reviewPresenterInView : IReviewsPresenter!
@@ -19,6 +19,8 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
 
         reviewPresenterInView = ReviewsPresenter(view: self)
         reviewPresenterInView.getReviewsDataFromModel()
+        
+        
     }
 
     // MARK: - Table view data source
@@ -43,9 +45,9 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reviewsCell", for: indexPath) as! mainReviewsTableViewCell
 
-        // Configure the cell...
+        
         cell.viewOutlet.layer.shadowPath =  UIBezierPath(rect: cell.bounds).cgPath
-        cell.viewOutlet.layer.shadowRadius = 5
+        cell.viewOutlet.layer.shadowRadius = 4
         cell.viewOutlet.layer.shadowOffset = .zero
         cell.viewOutlet.layer.shadowOpacity = 0.05
         cell.viewOutlet.layer.cornerRadius = 5
@@ -53,24 +55,23 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
         cell.viewOutlet.layer.borderColor = UIColor.white.cgColor
         
         
-        if(reviewObjInView != nil){
-            cell.ratingOutlet.rating = Double(reviewObjInView[indexPath.row].rateNumber!)
-                   
-           cell.reviewsDateOutlet?.text =  reviewObjInView[indexPath.row].date!
-                
-           //cell.descriptionOutlet.text = reviewObjInView[indexPath.row].description!
-        }else
-        {
-            print("error")
-        }
+        cell.userImageOutlet.layer.cornerRadius = 10
         
         
-      //  cell.ratingOutlet.rating = Double(reviewObjInView[indexPath.row].rateNumber!)
         
-   //     cell.reviewsDateOutlet?.text =  reviewObjInView[indexPath.row].date!
+        cell.reviewsDateOutlet.sizeToFit()
+        cell.descriptionOutlet.sizeToFit()
         
-     //   cell.descriptionOutlet.text = reviewObjInView[indexPath.row].description!
+    
+        cell.ratingOutlet.rating = Double(reviewObjInView[indexPath.row].rateNumber!)
+        cell.reviewsDateOutlet?.text =  reviewObjInView[indexPath.row].date!
+        cell.descriptionOutlet.text = reviewObjInView[indexPath.row].description ?? "no review"
+        cell.userNameOutlet.text = reviewObjInView[indexPath.row].nickname!
+        cell.userImageOutlet.sd_setImage(with: URL(string: reviewObjInView[indexPath.row].photoUrl!), placeholderImage:UIImage(named: "placeholder.png"))
         
+           
+
+
 
         return cell
     }
