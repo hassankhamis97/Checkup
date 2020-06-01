@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--More Table View Controller-->
+        <!--More-->
         <scene sceneID="ROD-hY-fsk">
             <objects>
                 <tableViewController storyboardIdentifier="moreSVC" id="0Ra-8F-6DQ" customClass="MoreTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,7 +170,7 @@
                             <outlet property="delegate" destination="0Ra-8F-6DQ" id="Lfl-6N-5NJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="VpU-6N-bK7"/>
+                    <navigationItem key="navigationItem" title="More" id="VpU-6N-bK7"/>
                     <connections>
                         <outlet property="nameLabel" destination="28d-aB-N7J" id="Idf-IZ-JEP"/>
                         <outlet property="profileImg" destination="m1b-mO-Ttk" id="0C9-cB-ly9"/>
@@ -178,7 +178,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DsB-MD-acC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2814.4927536231885" y="-48.913043478260875"/>
+            <point key="canvasLocation" x="3721.739130434783" y="-48.913043478260875"/>
         </scene>
         <!--profileSVC-->
         <scene sceneID="aOH-U6-oNu">
@@ -188,7 +188,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZD6-8v-pkR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3292.0289855072465" y="-79.076086956521749"/>
+            <point key="canvasLocation" x="4199.275362318841" y="-79.076086956521749"/>
         </scene>
         <!--settingSVC-->
         <scene sceneID="bqa-7W-344">
@@ -196,7 +196,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="settingSVCRef" storyboardName="Setting" referencedIdentifier="settingSVC" id="9YA-Ue-O12" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHh-DR-JmW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3298.5507246376815" y="-4.0760869565217392"/>
+            <point key="canvasLocation" x="4205.7971014492759" y="-4.0760869565217392"/>
         </scene>
         <!--loginSVC-->
         <scene sceneID="Ol5-K8-5Zw">
@@ -213,6 +213,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D4l-1r-AZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3220" y="297"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4LH-Xp-paT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2U1-29-9il" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kzK-UW-Ysp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Ra-8F-6DQ" kind="relationship" relationship="rootViewController" id="wht-EL-VRN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPB-Gl-c9f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2814.4927536231885" y="-48.913043478260875"/>
         </scene>
     </scenes>
     <resources>

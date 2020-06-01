@@ -321,57 +321,58 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="YLT-Io-LDU" customClass="GIDSignInButton">
-                                                    <rect key="frame" x="40" y="9" width="69" height="56"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PjN-jv-WEP">
+                                                    <rect key="frame" x="40" y="9" width="336" height="56"/>
                                                     <subviews>
-                                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="SZn-Zn-qln">
+                                                        <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="YLT-Io-LDU" customClass="GIDSignInButton">
                                                             <rect key="frame" x="0.0" y="0.0" width="69" height="56"/>
+                                                            <subviews>
+                                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="SZn-Zn-qln">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="69" height="56"/>
+                                                                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="69" id="ZBv-Cp-Yuw"/>
+                                                                    </constraints>
+                                                                    <size key="titleShadowOffset" width="5" height="5"/>
+                                                                    <state key="normal">
+                                                                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="googleSignInAction:" destination="V6O-re-qlJ" eventType="touchUpInside" id="6Ff-m2-oPf"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="SZn-Zn-qln" secondAttribute="trailing" id="DsL-lG-qKf"/>
+                                                                <constraint firstAttribute="width" constant="69" id="QqY-23-NbO"/>
+                                                                <constraint firstItem="SZn-Zn-qln" firstAttribute="top" secondItem="YLT-Io-LDU" secondAttribute="top" id="SNp-na-SaG"/>
+                                                                <constraint firstItem="SZn-Zn-qln" firstAttribute="leading" secondItem="YLT-Io-LDU" secondAttribute="leading" id="Uyq-Ml-9T9"/>
+                                                                <constraint firstAttribute="bottom" secondItem="SZn-Zn-qln" secondAttribute="bottom" id="qWM-Hc-XGx"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oue-Ns-q71">
+                                                            <rect key="frame" x="77" y="0.0" width="259" height="56"/>
                                                             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="69" id="ZBv-Cp-Yuw"/>
+                                                                <constraint firstAttribute="width" constant="259" id="yPf-Dh-QIi"/>
                                                             </constraints>
-                                                            <size key="titleShadowOffset" width="5" height="5"/>
-                                                            <state key="normal">
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <state key="normal" title="Login With Google">
+                                                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                             <connections>
-                                                                <action selector="googleSignInAction:" destination="V6O-re-qlJ" eventType="touchUpInside" id="6Ff-m2-oPf"/>
+                                                                <action selector="googleSignInAction:" destination="V6O-re-qlJ" eventType="touchUpInside" id="vfd-hL-qPk"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="SZn-Zn-qln" secondAttribute="trailing" id="DsL-lG-qKf"/>
-                                                        <constraint firstAttribute="width" constant="69" id="QqY-23-NbO"/>
-                                                        <constraint firstItem="SZn-Zn-qln" firstAttribute="top" secondItem="YLT-Io-LDU" secondAttribute="top" id="SNp-na-SaG"/>
-                                                        <constraint firstItem="SZn-Zn-qln" firstAttribute="leading" secondItem="YLT-Io-LDU" secondAttribute="leading" id="Uyq-Ml-9T9"/>
-                                                        <constraint firstAttribute="bottom" secondItem="SZn-Zn-qln" secondAttribute="bottom" id="qWM-Hc-XGx"/>
-                                                    </constraints>
-                                                </view>
-                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oue-Ns-q71">
-                                                    <rect key="frame" x="117" y="9" width="259" height="56"/>
-                                                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="259" id="yPf-Dh-QIi"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                    <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Login With Google">
-                                                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="googleSignInAction:" destination="V6O-re-qlJ" eventType="touchUpInside" id="vfd-hL-qPk"/>
-                                                    </connections>
-                                                </button>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="YLT-Io-LDU" firstAttribute="top" secondItem="7b7-gr-qoE" secondAttribute="top" constant="9" id="61v-pv-nnH"/>
-                                                <constraint firstItem="YLT-Io-LDU" firstAttribute="leading" secondItem="7b7-gr-qoE" secondAttribute="leading" constant="40" id="6Bu-uE-3dh"/>
-                                                <constraint firstItem="oue-Ns-q71" firstAttribute="leading" secondItem="YLT-Io-LDU" secondAttribute="trailing" constant="8" id="KgG-zP-wDa"/>
-                                                <constraint firstAttribute="bottom" secondItem="oue-Ns-q71" secondAttribute="bottom" constant="9" id="QmS-8j-7bt"/>
-                                                <constraint firstAttribute="bottom" secondItem="YLT-Io-LDU" secondAttribute="bottom" constant="9" id="Z3Q-3c-6th"/>
-                                                <constraint firstItem="oue-Ns-q71" firstAttribute="top" secondItem="7b7-gr-qoE" secondAttribute="top" constant="9" id="q8k-Bg-Nzh"/>
+                                                <constraint firstItem="PjN-jv-WEP" firstAttribute="centerX" secondItem="7b7-gr-qoE" secondAttribute="centerX" id="JMV-gV-eC9"/>
+                                                <constraint firstItem="PjN-jv-WEP" firstAttribute="centerY" secondItem="7b7-gr-qoE" secondAttribute="centerY" id="XFo-Uy-N8D"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
@@ -397,6 +398,7 @@
                         <outlet property="emailTextView" destination="r1n-W2-QV3" id="oSG-zz-Pti"/>
                         <outlet property="googleAccountSignIn" destination="YLT-Io-LDU" id="5xf-z3-uPL"/>
                         <outlet property="googleLogin" destination="SZn-Zn-qln" id="90L-th-zeb"/>
+                        <outlet property="googleLoginOutletBtn" destination="oue-Ns-q71" id="brA-tX-dAQ"/>
                         <outlet property="loginBtnOutlet" destination="Weh-RQ-OYI" id="CHX-XK-tc1"/>
                         <outlet property="logoImage" destination="cDZ-H7-5zN" id="kpI-iK-UfG"/>
                         <outlet property="passWordTextView" destination="Sdi-Z7-y4r" id="3yH-vY-5FO"/>

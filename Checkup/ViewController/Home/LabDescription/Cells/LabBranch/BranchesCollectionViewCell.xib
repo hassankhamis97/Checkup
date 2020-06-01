@@ -86,6 +86,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="addressOutlet" destination="8gf-wa-LG3" id="I2Q-8k-3gi"/>
                 <outlet property="branchDescOutlet" destination="8gf-wa-LG3" id="NyD-nq-DFJ"/>
                 <outlet property="distanceOutlet" destination="znB-Ws-HnF" id="CnZ-5E-VqC"/>
                 <outlet property="governNameOutlet" destination="bMS-xC-Xma" id="wba-dz-Qao"/>

@@ -16,7 +16,7 @@ protocol ILabDescView : IBase {
 protocol ILabDescPresenter {
     func getDataFromLabDescModel(params : LabDescriptionParams)
     func onSuccess(descObj : Branches , id : Int)
-    func onFail()
+    func onFail(msg: String)
 }
 
 

@@ -41,7 +41,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var x=1
 //    var hasAddress = false
     var branchId : String?
-    var labId: String?
+//    var labId: String?
     var isFromHome: Bool?
     var addressObj : Address!
     var user : User!
@@ -61,7 +61,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             testObj.resultFilespaths = [String]()
             testObj.testName = testTexts
             testObj.branchId = branchId
-            testObj.labId = labId
+//            testObj.labId = labId
             testObj.dateForTakingSample = dateTextField.text
             testObj.timeForTakingSample = timeTextField.text
             testObj.address = addressObj

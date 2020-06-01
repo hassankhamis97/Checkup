@@ -3,10 +3,10 @@
 "4sb-L8-FVx.text" = "الاحصائيات";
 
 /* Class = "UILabel"; text = "Log out"; ObjectID = "Ccl-WQ-YXr"; */
-"Ccl-WQ-YXr.text" = "Log out";
+"Ccl-WQ-YXr.text" = "خروج";
 
 /* Class = "UIButton"; normalTitle = "View Profile"; ObjectID = "Yn0-gC-iOt"; */
-"Yn0-gC-iOt.normalTitle" = "View Profile";
+"Yn0-gC-iOt.normalTitle" = "عرض الصفحة الشخصية";
 
 /* Class = "UILabel"; text = "Settings"; ObjectID = "uRr-mI-sex"; */
-"uRr-mI-sex.text" = "Settings";
+"uRr-mI-sex.text" = "الإعدادات";

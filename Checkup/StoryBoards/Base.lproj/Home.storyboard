@@ -240,17 +240,17 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kv7-pa-R4I">
-                                <rect key="frame" x="8" y="282" width="398" height="570"/>
+                                <rect key="frame" x="8" y="282" width="398" height="580"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="scrollIndicatorInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="OYP-N0-8Wa">
                                     <size key="itemSize" width="151" height="206"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="fJZ-8P-3E3">
-                                    <rect key="frame" x="0.0" y="0.0" width="398" height="570"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="580"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <cells>
@@ -270,9 +270,8 @@
                                     <outlet property="delegate" destination="Rjq-zv-GTB" id="Oel-zf-BwV"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="There's no data in this branch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY1-Uw-xYS">
-                                <rect key="frame" x="93" y="437" width="227" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There's no data in this branch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY1-Uw-xYS">
+                                <rect key="frame" x="93.5" y="314" width="227" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -280,9 +279,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="PY1-Uw-xYS" firstAttribute="centerX" secondItem="HNF-Dc-2c7" secondAttribute="centerX" id="7jD-w0-EmD"/>
                             <constraint firstItem="iey-el-54n" firstAttribute="top" secondItem="l9T-Sd-7ed" secondAttribute="top" id="8SJ-2o-55K"/>
+                            <constraint firstItem="PY1-Uw-xYS" firstAttribute="top" secondItem="l9T-Sd-7ed" secondAttribute="top" constant="270" id="Cu7-Vh-fBG"/>
                             <constraint firstItem="kv7-pa-R4I" firstAttribute="top" secondItem="iey-el-54n" secondAttribute="bottom" constant="10" id="EQY-R0-po6"/>
-                            <constraint firstItem="l9T-Sd-7ed" firstAttribute="bottom" secondItem="kv7-pa-R4I" secondAttribute="bottom" constant="10" id="HfB-1R-D3J"/>
+                            <constraint firstItem="l9T-Sd-7ed" firstAttribute="bottom" secondItem="kv7-pa-R4I" secondAttribute="bottom" id="HfB-1R-D3J"/>
                             <constraint firstItem="iey-el-54n" firstAttribute="leading" secondItem="l9T-Sd-7ed" secondAttribute="leading" id="JdE-WM-rFb"/>
                             <constraint firstItem="iey-el-54n" firstAttribute="trailing" secondItem="l9T-Sd-7ed" secondAttribute="trailing" id="RPw-Bt-My1"/>
                             <constraint firstItem="l9T-Sd-7ed" firstAttribute="trailing" secondItem="kv7-pa-R4I" secondAttribute="trailing" constant="8" id="e3U-iN-fIO"/>
@@ -450,11 +451,11 @@
             </objects>
             <point key="canvasLocation" x="5067" y="341"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="P8r-Q0-61d">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LwG-Rt-58h" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="Home_50px" selectedImage="Home_50px" id="dWN-Dl-lKZ">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home_50px" selectedImage="Home_50px" id="dWN-Dl-lKZ">
                         <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -684,7 +685,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.2274509804" green="0.23921568630000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.2274509804" green="0.23921568630000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.1078975573" green="0.61845129730000004" blue="0.89283031229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="LwG-Rt-58h" kind="relationship" relationship="viewControllers" id="Ovx-i3-y1D"/>
@@ -1299,6 +1300,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kgd-rY-Gw0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
