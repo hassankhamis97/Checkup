@@ -212,7 +212,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weh-RQ-OYI">
                                                     <rect key="frame" x="40" y="22" width="334" height="56"/>
-                                                    <color key="backgroundColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.22745098039215686" green="0.23921568627450979" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="56" id="F2e-7h-F6E"/>
                                                         <constraint firstAttribute="width" constant="334" id="yeE-cu-uTB"/>
@@ -322,28 +322,54 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="YLT-Io-LDU" customClass="GIDSignInButton">
-                                                    <rect key="frame" x="40" y="9" width="334" height="56"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <rect key="frame" x="40" y="9" width="69" height="56"/>
+                                                    <subviews>
+                                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="SZn-Zn-qln">
+                                                            <rect key="frame" x="0.0" y="0.0" width="69" height="56"/>
+                                                            <color key="backgroundColor" red="0.22745098039215686" green="0.23921568627450979" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="69" id="ZBv-Cp-Yuw"/>
+                                                            </constraints>
+                                                            <state key="normal">
+                                                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="googleSignInAction:" destination="V6O-re-qlJ" eventType="touchUpInside" id="6Ff-m2-oPf"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="56" id="fXs-74-J6h"/>
-                                                        <constraint firstAttribute="width" constant="334" id="htV-En-KXQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="SZn-Zn-qln" secondAttribute="trailing" id="DsL-lG-qKf"/>
+                                                        <constraint firstAttribute="width" constant="69" id="QqY-23-NbO"/>
+                                                        <constraint firstItem="SZn-Zn-qln" firstAttribute="top" secondItem="YLT-Io-LDU" secondAttribute="top" id="SNp-na-SaG"/>
+                                                        <constraint firstItem="SZn-Zn-qln" firstAttribute="leading" secondItem="YLT-Io-LDU" secondAttribute="leading" id="Uyq-Ml-9T9"/>
+                                                        <constraint firstAttribute="bottom" secondItem="SZn-Zn-qln" secondAttribute="bottom" id="qWM-Hc-XGx"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="SZn-Zn-qln">
-                                                    <rect key="frame" x="40" y="0.0" width="334" height="63"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal">
-                                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oue-Ns-q71">
+                                                    <rect key="frame" x="117" y="9" width="259" height="56"/>
+                                                    <color key="backgroundColor" red="0.22745098039215686" green="0.23921568627450979" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="259" id="yPf-Dh-QIi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                                    <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Login With GOOGLE">
+                                                        <color key="titleColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="googleSignInAction:" destination="V6O-re-qlJ" eventType="touchUpInside" id="6Ff-m2-oPf"/>
+                                                        <action selector="googleSignInAction:" destination="V6O-re-qlJ" eventType="touchUpInside" id="vfd-hL-qPk"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="YLT-Io-LDU" firstAttribute="centerX" secondItem="7b7-gr-qoE" secondAttribute="centerX" id="h0g-rY-bId"/>
-                                                <constraint firstItem="YLT-Io-LDU" firstAttribute="centerY" secondItem="7b7-gr-qoE" secondAttribute="centerY" id="pOS-q0-pfH"/>
+                                                <constraint firstItem="YLT-Io-LDU" firstAttribute="top" secondItem="7b7-gr-qoE" secondAttribute="top" constant="9" id="61v-pv-nnH"/>
+                                                <constraint firstItem="YLT-Io-LDU" firstAttribute="leading" secondItem="7b7-gr-qoE" secondAttribute="leading" constant="40" id="6Bu-uE-3dh"/>
+                                                <constraint firstItem="oue-Ns-q71" firstAttribute="leading" secondItem="YLT-Io-LDU" secondAttribute="trailing" constant="8" id="KgG-zP-wDa"/>
+                                                <constraint firstAttribute="bottom" secondItem="oue-Ns-q71" secondAttribute="bottom" constant="9" id="QmS-8j-7bt"/>
+                                                <constraint firstAttribute="bottom" secondItem="YLT-Io-LDU" secondAttribute="bottom" constant="9" id="Z3Q-3c-6th"/>
+                                                <constraint firstItem="oue-Ns-q71" firstAttribute="top" secondItem="7b7-gr-qoE" secondAttribute="top" constant="9" id="q8k-Bg-Nzh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
@@ -376,7 +402,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eob-tU-b2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710" y="113"/>
+            <point key="canvasLocation" x="2708.6956521739135" y="112.5"/>
         </scene>
         <!--Reset Password Table View Controller-->
         <scene sceneID="Lu2-H4-w6S">
