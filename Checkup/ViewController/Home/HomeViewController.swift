@@ -10,7 +10,7 @@ import UIKit
 import ImageSlideshow
 import Firebase
 import CoreLocation
-class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollectionViewDelegateFlowLayout ,UITextFieldDelegate,UISearchBarDelegate {
+class HomeViewController: UIViewController ,UICollectionViewDelegateFlowLayout ,UITextFieldDelegate,UISearchBarDelegate {
     //    @IBOutlet var labCollectionCell: UITableViewCell!
     @IBOutlet var topViewConstraint: NSLayoutConstraint!
     @IBOutlet var headerViewHeight: NSLayoutConstraint!
@@ -20,6 +20,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollecti
     let imageViewMinHeight : CGFloat = 0
     let topViewConstrainsMaxHeight : CGFloat = 5
     let topViewConstrainsMinHeight : CGFloat = -271
+    var locationManager:CLLocationManager!
     //    @IBOutlet var sliderShowCell: UITableViewCell!
 //    @IBOutlet var noDataLabel: UILabel!
     @IBOutlet var searchBar: UISearchBar!
@@ -41,17 +42,49 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollecti
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            print("Found user's location: \(location)")
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        if let location = locations.first {
+//            print("Found user's location: \(location)")
+//        }
+//    }
+    
+//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+//        print("Failed to find user's location: \(error.localizedDescription)")
+//    }
+//
+    func determineCurrentLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
         }
     }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Failed to find user's location: \(error.localizedDescription)")
-    }
-    
-    
+    func setUsersClosestLocation(mLattitude: CLLocationDegrees, mLongitude: CLLocationDegrees) {
+            print(mLattitude )
+        print(mLongitude )
+        
+            let defaultsLocation = UserDefaults.standard
+            defaultsLocation.set(mLattitude.magnitude, forKey: "Lattitude")
+            defaultsLocation.set(mLongitude.magnitude, forKey: "Longitude")
+//        let lattitude = defaultsLocation.object(forKey: "Lattitude") as? Double ?? 0
+//        let longitude = defaultsLocation.object(forKey: "Longitude") as? Double ?? 0
+//        print(longitude)
+//            mkAnnotation.coordinate = CLLocationCoordinate2DMake(mLattitude, mLongitude)
+            
+//            addressObj.longitude = mLongitude
+//            addressObj.latitude = mLattitude
+            
+            
+//            getNameByGeoCoder(latitude: mLattitude, longitude: mLongitude)
+//
+//
+//            mapView.addAnnotation(mkAnnotation)
+
+    //        return currentLocationStr
+        }
     /*
      // MARK: - Navigation
      
@@ -63,27 +96,23 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate ,UICollecti
      */
     override func viewWillAppear(_ animated: Bool) {
         //                   self.headerViewHeight.constant = self.imageViewMaxHeight
+        
         self.headerViewHeight.constant = self.imageViewMaxHeight
         self.topViewConstraint.constant =  topViewConstrainsMaxHeight
+        determineCurrentLocation()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         //        tabBarItem.badgeValue = "1"
         labSlideShow.layer.cornerRadius = 10
         let manager = CLLocationManager()
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestAlwaysAuthorization()
-        manager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            manager.startUpdatingLocation()
-        }
+        
         
         labsActicity.transform = CGAffineTransform.init(scaleX: 2, y: 2)
         
         showIndicator()
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-        homeLabPresenter.getLabs(take: 4, skip: homeLabArr.count)
+        homeLabPresenter.getLabs(take: 2, skip: homeLabArr.count)
         
         
         tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")

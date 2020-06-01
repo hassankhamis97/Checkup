@@ -21,8 +21,14 @@ var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-      
-
+//      let navigationBar = UINavigationBar.appearance()
+//        let gradient = CAGradientLayer()
+//        var bounds = navigationBar.bounds
+//        navigationBar.bounds.size.height += UIApplication.shared.statusBarFrame.size.height
+//        navigationBar.gradient.frame = bounds
+//        navigationBar.gradient.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+//        navigationBar.gradient.startPoint = CGPoint(x: 0, y: 0)
+//        navigationBar.gradient.endPoint = CGPoint(x: 1, y: 0)
         return true
     }
  

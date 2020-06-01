@@ -150,7 +150,7 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
         }
         
         if senderLabId != nil {
-            var labDesc = storyboard?.instantiateViewController(withIdentifier: "labDescSCV")as! LabDescTableViewController
+            var labDesc = storyboard?.instantiateViewController(withIdentifier: "labDescSCV")as! LabDescViewController
             labDesc.labId = senderLabId
             navigationController?.pushViewController(labDesc, animated: true)
         }

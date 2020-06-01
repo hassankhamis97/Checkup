@@ -7,7 +7,7 @@
 //
 
 import Foundation
-extension LabDescTableViewController : IShowNewRequest{
+extension LabDescViewController : IShowNewRequest{
     func transferToNewReq(isFromHome: Bool) {
         var newRequestVC = storyboard!.instantiateViewController(withIdentifier: "newReqSVC") as! NewRequestTableViewController
         newRequestVC.labId = "-M7Nzg7KJg0GX6jwDpRF"
