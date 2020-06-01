@@ -7,12 +7,14 @@
 //
 
 import Foundation
-struct Review : Codable{
+class Review : Codable{
     var id: Int64?
 //    var comments: [Comment]?
     var description: String?
     var rateNumber: Int?
     var userId: String?
     var date: String?
+    var nickname : String?
+    var photoUrl : String?
 //    func toDictionary() -> Any {     return ["id": id, "rateNumber": rateNumber, "comments": comments.toDictionary()] as Any }
 }

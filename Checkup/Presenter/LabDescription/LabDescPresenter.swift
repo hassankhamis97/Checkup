@@ -7,7 +7,21 @@
 //
 
 import Foundation
-class LabDescPresenter : ILabDescPresenter{
+class LabDescPresenter : ILabDescPresenter ,ICheckConnection{
+    var params: LabDescriptionParams!
+    func onSucessfullyConnected() {
+        newLabDescModel = LabaDescriptionModel(descPreseneter: self)
+         newLabDescModel.fetchLabDes(modelParams: params)
+        newView.showIndicator()
+    }
+    
+    func onFailConnected() {
+        newView.hideIndicator()
+        newView.errorMessage(msg: "No internet connection")
+    }
+    
+   
+    
   
     var paramsPresenter : LabDescriptionParams!    
     var newView : ILabDescView!
@@ -19,17 +33,17 @@ class LabDescPresenter : ILabDescPresenter{
     
     func onSuccess(descObj: Branches , id: Int) {
         newView.showingDataOnView(labDescObj: descObj, id: id)
-        
+        newView.hideIndicator()
     }
     
-    func onFail() {
-        
-    }
+    func onFail(msg: String) {
+           newView.hideIndicator()
+        newView.errorMessage(msg: msg)
+       }
     
     func getDataFromLabDescModel(params: LabDescriptionParams) {
-        newLabDescModel = LabaDescriptionModel(descPreseneter: self)
-        newLabDescModel.fetchLabDes(modelParams: params)
-       
+        self.params = params
+        InternetConnection.checkInternetConnection(iCheckConnection: self)
     }
        
     

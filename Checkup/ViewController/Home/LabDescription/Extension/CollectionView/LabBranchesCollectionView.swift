@@ -12,7 +12,7 @@ extension LabDescViewController : UICollectionViewDataSource , UICollectionViewD
 
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if (labDescriptionObj.branches == nil){
+        if (labDescriptionObj.branches == nil || isLoading == true || isError == true){
             return 0
         }else{
         return labDescriptionObj.branches!.count
@@ -24,24 +24,30 @@ extension LabDescViewController : UICollectionViewDataSource , UICollectionViewD
         cell.requestBtnOutlet.tag = indexPath.item
         cell.requestBtnOutlet.addTarget(self, action: #selector(newRequestAction), for: .touchUpInside)
         cell.isSelected = true
-        let convertedDiestance = String(labDescriptionObj.branches![indexPath.item].distance!)
+        let convertedDiestance = String(labDescriptionObj.branches![indexPath.item].distance!) + " km"
+        
         
         cell.governNameOutlet.text = labDescriptionObj.branches![indexPath.item].govern
         cell.ratingOutlet.rating = labDescriptionObj.branches![indexPath.item].rating!
         cell.distanceOutlet.text = convertedDiestance
+        cell.addressOutlet.text = String(labDescriptionObj.branches![indexPath.item].address!.buildingNo!) + labDescriptionObj.branches![indexPath.item].address!.address1!
        // cell.branchDescOutlet.text = labDescriptionObj.branches![indexPath.item].address?.address as! String
         return cell
         
     }
     @objc func newRequestAction(_ sender : UIButton){
         sender.pulsate()
-        if(true) { //check if branch has from home feature or not
+//        let index = sender.tag
+        
+        if(labDescriptionObj.branches![sender.tag].isAvailableFromHome == true) { //check if branch has from home feature or not
             let reqLocPopUpVC = storyboard!.instantiateViewController(withIdentifier: "ReqPopUpFromHomeSVC") as! ReqPopUpFromHomeViewController
+//            reqLocPopUpVC.
             reqLocPopUpVC.showNewRequestRef = self
+            reqLocPopUpVC.elementIndex = sender.tag
             present(reqLocPopUpVC, animated: true, completion: nil)
         }
         else{
-            transferToNewReq(isFromHome: false)
+            transferToNewReq(isFromHome: false, index: sender.tag)
         }
 
     

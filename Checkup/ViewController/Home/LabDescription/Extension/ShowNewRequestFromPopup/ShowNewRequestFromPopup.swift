@@ -8,10 +8,10 @@
 
 import Foundation
 extension LabDescViewController : IShowNewRequest{
-    func transferToNewReq(isFromHome: Bool) {
+    func transferToNewReq(isFromHome: Bool,index: Int) {
         var newRequestVC = storyboard!.instantiateViewController(withIdentifier: "newReqSVC") as! NewRequestTableViewController
-        newRequestVC.labId = "-M7Nzg7KJg0GX6jwDpRF"
-        newRequestVC.branchId = "IaTcOwrdXhVBa7qx40FOkW5b94J3"
+//        newRequestVC.labId = "-M7Nzg7KJg0GX6jwDpRF"
+        newRequestVC.branchId = labDescriptionObj.branches![index].idFB
         newRequestVC.isFromHome = isFromHome
          self.navigationController?.pushViewController(newRequestVC, animated: true)
     }
