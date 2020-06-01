@@ -451,11 +451,11 @@
             </objects>
             <point key="canvasLocation" x="5067" y="341"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="P8r-Q0-61d">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LwG-Rt-58h" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="Home_50px" selectedImage="Home_50px" id="dWN-Dl-lKZ">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home_50px" selectedImage="Home_50px" id="dWN-Dl-lKZ">
                         <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                     </tabBarItem>
                     <toolbarItems/>
