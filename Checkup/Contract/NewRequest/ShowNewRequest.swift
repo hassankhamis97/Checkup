@@ -8,5 +8,5 @@
 
 import Foundation
 protocol IShowNewRequest {
-    func transferToNewReq(isFromHome: Bool)
+    func transferToNewReq(isFromHome: Bool,index: Int)
 }

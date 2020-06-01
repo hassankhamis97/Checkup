@@ -12,13 +12,14 @@ class ReqPopUpFromHomeViewController: UIViewController  {
 //    var branchId: String?
 //    var labId: String?
     var showNewRequestRef : IShowNewRequest?
+    var elementIndex : Int!
     @IBAction func fromHomeBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-        showNewRequestRef!.transferToNewReq(isFromHome: true)
+        showNewRequestRef!.transferToNewReq(isFromHome: true,index: elementIndex)
     }
     @IBAction func fromLabBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-        showNewRequestRef!.transferToNewReq(isFromHome: false)
+        showNewRequestRef!.transferToNewReq(isFromHome: false, index: elementIndex)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Abstract Blue Background Vector Graphic 1" translatesAutoresizingMaskIntoConstraints="NO" id="oKX-80-vbY">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="g-g21-32(851)" translatesAutoresizingMaskIntoConstraints="NO" id="oKX-80-vbY">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="139" id="0K3-mJ-1lC"/>
@@ -48,13 +48,13 @@
                                                         <constraint firstAttribute="width" constant="47" id="3eA-IM-OG4"/>
                                                         <constraint firstAttribute="height" constant="47" id="ZU0-Xb-8DG"/>
                                                     </constraints>
-                                                    <color key="tintColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" red="0.10729987169999999" green="0.49880427119999998" blue="0.93076020479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" backgroundImage="pencil" catalog="system"/>
                                                     <connections>
                                                         <action selector="editProfileBtn:" destination="pMs-hI-F8d" eventType="touchUpInside" id="JUz-UK-m0I"/>
                                                     </connections>
                                                 </button>
-                                                <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="5Ht-eN-Ctz">
+                                                <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="5Ht-eN-Ctz">
                                                     <rect key="frame" x="78" y="333" width="258" height="2"/>
                                                     <color key="tintColor" red="0.52121115893824421" green="0.6210421998989184" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -68,7 +68,7 @@
                                                         <constraint firstAttribute="height" constant="33" id="ceK-V5-0KM"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                                    <color key="textColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aog-6W-f6c">
@@ -144,7 +144,7 @@
                                                             <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
-                                                            <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.19215686274509802" green="0.20392156862745098" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
@@ -198,7 +198,7 @@
                                                             <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
-                                                            <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
@@ -252,7 +252,7 @@
                                                             <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
-                                                            <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
@@ -360,7 +360,7 @@
                                                             <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
-                                                            <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
@@ -418,7 +418,7 @@
                                                             <color key="value" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
-                                                            <color key="value" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
@@ -474,7 +474,7 @@
             </objects>
             <point key="canvasLocation" x="918.84057971014499" y="25.271739130434785"/>
         </scene>
-        <!--Edit Profile Table View Controller-->
+        <!--Edit Profile-->
         <scene sceneID="7xs-Hi-BnK">
             <objects>
                 <tableViewController storyboardIdentifier="editSvc" id="xfM-Jr-M9W" customClass="EditProfileTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -494,7 +494,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="291"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Abstract Blue Background Vector Graphic 1" translatesAutoresizingMaskIntoConstraints="NO" id="jS4-mf-3Bh">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="g-g21-32(851)" translatesAutoresizingMaskIntoConstraints="NO" id="jS4-mf-3Bh">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="163"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="414" id="mFw-nm-iB7"/>
@@ -516,7 +516,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <state key="normal" title="Change picture">
-                                                        <color key="titleColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="changeImgBtn:" destination="xfM-Jr-M9W" eventType="touchUpInside" id="qrB-Za-v6v"/>
@@ -952,7 +952,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9f9-mV-Imn" customClass="TransitionButton" customModule="TransitionButton">
                                                     <rect key="frame" x="40" y="11" width="334" height="56"/>
-                                                    <color key="backgroundColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.035294117647058823" green="0.74117647058823533" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="334" id="6Gx-di-O2i"/>
                                                         <constraint firstAttribute="height" constant="56" id="b3h-So-KUf"/>
@@ -1003,7 +1003,7 @@
                             <outlet property="delegate" destination="xfM-Jr-M9W" id="26i-0n-HYI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8YI-hN-7G6"/>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="8YI-hN-7G6"/>
                     <connections>
                         <outlet property="activityIndicator" destination="GeN-l2-nry" id="FmP-FR-TaG"/>
                         <outlet property="addressTextField" destination="Ua2-9b-yK4" id="lNb-t0-CbD"/>
@@ -1019,7 +1019,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUK-gg-inx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1656.521739130435" y="24.456521739130437"/>
+            <point key="canvasLocation" x="2563.768115942029" y="24.456521739130437"/>
         </scene>
         <!--ReqlocationSVC-->
         <scene sceneID="7Fg-ll-5yD">
@@ -1355,7 +1355,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIA-7X-1Ca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2379.7101449275365" y="19.565217391304348"/>
+            <point key="canvasLocation" x="3286.9565217391305" y="19.565217391304348"/>
         </scene>
         <!--Pop Up Location View Controller-->
         <scene sceneID="SfL-hu-8Ja">
@@ -1455,7 +1455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRi-hg-bas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2994" y="20"/>
+            <point key="canvasLocation" x="3900.0000000000005" y="19.565217391304348"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ukP-eG-adJ">
@@ -1478,11 +1478,33 @@
             </objects>
             <point key="canvasLocation" x="8.6956521739130448" y="25.446428571428569"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Iko-RA-mnW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bx3-BG-Zd4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qzb-4f-aIY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xfM-Jr-M9W" kind="relationship" relationship="rootViewController" id="akE-td-Wgc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qOg-fa-ynf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656.521739130435" y="24.456521739130437"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Abstract Blue Background Vector Graphic 1" width="794" height="554"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="creditcard.fill" catalog="system" width="64" height="44"/>
+        <image name="g-g21-32(851)" width="5000" height="5000"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="mappin.and.ellipse" catalog="system" width="58" height="64"/>
         <image name="pencil" catalog="system" width="64" height="56"/>

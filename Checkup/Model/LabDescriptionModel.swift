@@ -22,16 +22,24 @@ class LabaDescriptionModel: ILabDescModel {
         var longitude = modelParams.longitude!
         var latitude = modelParams.latitude!
         var governId = modelParams.governId!
-        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetLabBranchMenus?take=\(take)&skip=\(skip)&latitude=\(latitude)&longitude=\(longitude)&labId=\(labId)&governId=\(governId)").responseJSON { (respone) in
-            if let JSON = respone.result.value{
+//        var governId = 15
+        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetLabBranchMenus?take=\(take)&skip=\(skip)&latitude=\(latitude)&longitude=\(longitude)&labId=\(labId)&governId=\(governId)").responseJSON { (response) in
+            switch response.result {
+            case .success(_):
+            if let JSON = response.result.value{
                 print("lab description ")
 
                 
                 print(JSON)
                 do{
-                let labDescObj = try JSONDecoder().decode(Branches.self, from: respone.data!)
+                let labDescObj = try JSONDecoder().decode(Branches.self, from: response.data!)
                     print(labDescObj)
+//                    if labDescObj.branches!.count > 0 {
                     self.newDescPresenter.onSuccess(descObj: labDescObj , id: governId)
+//                    }
+//                    else {
+//                        self.newDescPresenter.onFail(msg: "There is no data")
+//                    }
                 }
                 catch{
                     
@@ -40,6 +48,11 @@ class LabaDescriptionModel: ILabDescModel {
                 
                 
                 }
+                break
+                case .failure(let error):
+                    self.newDescPresenter.onFail(msg: "An error occured please try again later")
+                break
+            }
         }
     }
     

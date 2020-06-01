@@ -32,6 +32,8 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView
         
         
     }
+
+    @IBOutlet weak var googleLoginOutletBtn: UIButton!
     //
     //    @IBOutlet weak var googleSignInBtn: GIDSignInButton!
     override func viewDidLoad() {
@@ -72,6 +74,24 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView
         view.addGestureRecognizer(tap)
         activityIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         activityIndicator.hide()
+        
+        
+        
+        
+        googleLoginOutletBtn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        googleLoginOutletBtn.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        googleLoginOutletBtn.layer.shadowOpacity = 1.0
+        googleLoginOutletBtn.layer.shadowRadius = 0.0
+        googleLoginOutletBtn.layer.masksToBounds = false
+        googleLoginOutletBtn.layer.cornerRadius = 4.0
+        
+      
+          googleAccountSignIn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+          googleAccountSignIn.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+          googleAccountSignIn.layer.shadowOpacity = 1.0
+          googleAccountSignIn.layer.shadowRadius = 0.0
+          googleAccountSignIn.layer.masksToBounds = false
+          googleAccountSignIn.layer.cornerRadius = 4.0
     }
     //  function to enable dimiss key board(Return key)
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
