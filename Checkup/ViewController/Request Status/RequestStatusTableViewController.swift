@@ -308,8 +308,8 @@ class RequestStatusTableViewController: UITableViewController  {
         
     self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
         
-         self.progressBarView.circleColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
-        self.progressBarView.circleTintColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
+         self.progressBarView.circleColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
+        self.progressBarView.circleTintColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
         //UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
         
         //****************** Languages check ****************///
