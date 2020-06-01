@@ -13,5 +13,6 @@ struct MainBranch : Codable {
     var address : Address?
     var rating : Double?
     var distance : Double?
+    var isAvailableFromHome : Bool?
 }
 

@@ -10,23 +10,34 @@ import UIKit
 import SDWebImage
 class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , IView{
     func showIndicator() {
-        isLoading = true
+        if labDescriptionObj.branches == nil || labDescriptionObj.branches!.count == 0{
+            isLoading = true
+                       labsActicity.show()
+                       labsActicity.startAnimating()
+                       labBrachCollection.reloadData()
+                   }
+        
+        errorLabelOutlet.alpha = 0
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        labsActicity.show()
-        labsActicity.startAnimating()
-//        bran.reloadData()
+        
     }
     
     func hideIndicator() {
+//        if labDescriptionObj.branches == nil || labDescriptionObj.branches!.count == 0{
         isLoading = false
+                   labsActicity.stopAnimating()
+                   labsActicity.hide()
+                   labBrachCollection.reloadData()
+//               }
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        labsActicity.stopAnimating()
-        labsActicity.hide()
-//        labCollection.reloadData()
+
     }
     
     func errorMessage(msg: String) {
-        Alert.showSimpleAlert(title: "sorry", message: "No Internet Connection", viewRef: self)
+//        Alert.showSimpleAlert(title: "sorry", message: msg, viewRef: self)
+        isError = true
+        errorLabelOutlet.text = msg.localized
+        errorLabelOutlet.alpha = 1
     }
     
         @IBOutlet weak var labsActicity: UIActivityIndicatorView!
@@ -53,14 +64,20 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
         var filter : FilterLabTableView!
         var myId : Int!
         var labId : String!
+    var lattitude : Double!
+    var longitude : Double!
     var isLoading = false
+    var isError = false
     override func viewWillAppear(_ animated: Bool) {
         self.headerViewHeight.constant = self.imageViewMaxHeight
         self.topViewConstraint.constant =  topViewConstrainsMaxHeight
     }
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+            let defaultsLocation = UserDefaults.standard
+
+            lattitude = defaultsLocation.object(forKey: "Lattitude") as? Double ?? 0
+            longitude = defaultsLocation.object(forKey: "Longitude") as? Double ?? 0
             errorLabelOutlet.alpha = 0
             paginatingParams.skip = 0
             labBrachCollection.register(UINib(nibName: "BranchesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "branchCell")
@@ -81,8 +98,8 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
             
             paginatingParams.governId = 0
             paginatingParams.labId = labId
-            paginatingParams.latitude = 31.1803167
-            paginatingParams.longitude = 29.9137701
+            paginatingParams.latitude = lattitude
+            paginatingParams.longitude = longitude
             paginatingParams.take = 6
             paginatingParams.skip =  0
             
@@ -111,6 +128,15 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
         
         func showingDataOnView(labDescObj: Branches , id: Int) {
             isBottom = false
+            isError = false
+            
+            if labDescObj.branches!.count > 0 {
+                errorLabelOutlet.alpha = 0
+                
+            }
+            else if labDescriptionObj.branches!.count == 0{
+                errorMessage(msg: "There is no data")
+            }
     //        myId = id
     //        print("my id\(id)")
                                                    // if there is data

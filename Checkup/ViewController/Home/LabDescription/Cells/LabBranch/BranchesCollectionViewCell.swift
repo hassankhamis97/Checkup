@@ -13,6 +13,7 @@ class BranchesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var branchDescOutlet: UILabel!
     @IBOutlet weak var governNameOutlet: UILabel!
     @IBOutlet weak var ratingOutlet: CosmosView!
+    @IBOutlet var addressOutlet: UILabel!
     
     @IBOutlet weak var requestBtnOutlet: UIButton!
 
