@@ -215,10 +215,105 @@
             </objects>
             <point key="canvasLocation" x="1486" y="-727"/>
         </scene>
+        <!--Lab Desc View Controller-->
+        <scene sceneID="cvX-ez-elD">
+            <objects>
+                <viewController storyboardIdentifier="labDescSCV" id="Rjq-zv-GTB" customClass="LabDescViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HNF-Dc-2c7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iey-el-54n">
+                                <rect key="frame" x="0.0" y="44" width="414" height="228"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HD1-Lx-cck">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="228"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="228" id="P0f-Wh-P1X"/>
+                                    <constraint firstItem="HD1-Lx-cck" firstAttribute="top" secondItem="iey-el-54n" secondAttribute="top" id="QOn-7Q-XxE"/>
+                                    <constraint firstAttribute="trailing" secondItem="HD1-Lx-cck" secondAttribute="trailing" id="gWg-1A-eAq"/>
+                                    <constraint firstItem="HD1-Lx-cck" firstAttribute="leading" secondItem="iey-el-54n" secondAttribute="leading" id="kLL-qC-vR5"/>
+                                    <constraint firstAttribute="bottom" secondItem="HD1-Lx-cck" secondAttribute="bottom" id="mpH-mA-Ekm"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kv7-pa-R4I">
+                                <rect key="frame" x="8" y="282" width="398" height="570"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="scrollIndicatorInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="OYP-N0-8Wa">
+                                    <size key="itemSize" width="151" height="206"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="fJZ-8P-3E3">
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="570"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="branchCell" id="VM0-wL-lxV" customClass="BranchesCollectionViewCell" customModule="Checkup" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="233"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pi5-h1-U5m">
+                                            <rect key="frame" x="0.0" y="0.0" width="191" height="233"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="191" height="233"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rjq-zv-GTB" id="kfb-wl-aUL"/>
+                                    <outlet property="delegate" destination="Rjq-zv-GTB" id="Oel-zf-BwV"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="There's no data in this branch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY1-Uw-xYS">
+                                <rect key="frame" x="93" y="437" width="227" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iey-el-54n" firstAttribute="top" secondItem="l9T-Sd-7ed" secondAttribute="top" id="8SJ-2o-55K"/>
+                            <constraint firstItem="kv7-pa-R4I" firstAttribute="top" secondItem="iey-el-54n" secondAttribute="bottom" constant="10" id="EQY-R0-po6"/>
+                            <constraint firstItem="l9T-Sd-7ed" firstAttribute="bottom" secondItem="kv7-pa-R4I" secondAttribute="bottom" constant="10" id="HfB-1R-D3J"/>
+                            <constraint firstItem="iey-el-54n" firstAttribute="leading" secondItem="l9T-Sd-7ed" secondAttribute="leading" id="JdE-WM-rFb"/>
+                            <constraint firstItem="iey-el-54n" firstAttribute="trailing" secondItem="l9T-Sd-7ed" secondAttribute="trailing" id="RPw-Bt-My1"/>
+                            <constraint firstItem="l9T-Sd-7ed" firstAttribute="trailing" secondItem="kv7-pa-R4I" secondAttribute="trailing" constant="8" id="e3U-iN-fIO"/>
+                            <constraint firstItem="kv7-pa-R4I" firstAttribute="leading" secondItem="l9T-Sd-7ed" secondAttribute="leading" constant="8" id="krY-bt-weR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l9T-Sd-7ed"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xgP-Zt-UzT">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="1ki-3D-tCk">
+                            <connections>
+                                <segue destination="wnF-gL-8uS" kind="push" id="3AC-8U-ODF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="errorLabelOutlet" destination="PY1-Uw-xYS" id="tzU-au-jmu"/>
+                        <outlet property="headerViewHeight" destination="P0f-Wh-P1X" id="UYP-lj-TJC"/>
+                        <outlet property="labBrachCollection" destination="kv7-pa-R4I" id="d8s-qu-uAt"/>
+                        <outlet property="labImageViewOutlet" destination="HD1-Lx-cck" id="t7L-2K-lqq"/>
+                        <outlet property="labsActicity" destination="fJZ-8P-3E3" id="BfC-kh-gMT"/>
+                        <outlet property="topViewConstraint" destination="QOn-7Q-XxE" id="I1D-o9-kgW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCj-jq-n16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3389.8550724637685" y="73.660714285714278"/>
+        </scene>
         <!--Lab Desc Table View Controller-->
         <scene sceneID="iHk-f0-GyV">
             <objects>
-                <tableViewController storyboardIdentifier="labDescSCV" id="fm3-e1-75I" customClass="LabDescTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fm3-e1-75I" customClass="LabDescTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XZf-dj-t7e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +342,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="482"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NQT-Ad-KkZ">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NQT-Ad-KkZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="476"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -295,11 +390,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="dVs-gY-TPV">
                         <rightBarButtonItems>
-                            <barButtonItem title="Filter" id="nqf-dX-RIZ">
-                                <connections>
-                                    <segue destination="wnF-gL-8uS" kind="push" id="ezK-LL-COy"/>
-                                </connections>
-                            </barButtonItem>
+                            <barButtonItem title="Filter" id="nqf-dX-RIZ"/>
                             <barButtonItem title="Item" id="03W-uR-ADJ"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -318,7 +409,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </objects>
-            <point key="canvasLocation" x="3560.8695652173915" y="66.964285714285708"/>
+            <point key="canvasLocation" x="3503" y="-633"/>
         </scene>
         <!--Filter Lab Table View-->
         <scene sceneID="bML-pb-E0S">
@@ -362,7 +453,7 @@
         <!--Item-->
         <scene sceneID="P8r-Q0-61d">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LwG-Rt-58h" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LwG-Rt-58h" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="Home_50px" selectedImage="Home_50px" id="dWN-Dl-lKZ">
                         <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                     </tabBarItem>
@@ -392,7 +483,7 @@
             </objects>
             <point key="canvasLocation" x="1684.057971014493" y="62.946428571428569"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="DC4-rl-KLc">
             <objects>
                 <viewController id="KaH-7S-5c3" customClass="HomeViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
@@ -409,7 +500,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="0RK-g3-tnq"/>
                                         </constraints>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                         <scopeButtonTitles>
                                             <string>All</string>
                                             <string>All-All</string>
@@ -447,7 +538,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="60m-mf-RrD">
-                                    <rect key="frame" x="0.0" y="194" width="404" height="439"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="404" height="439"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <cells>
@@ -549,7 +640,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hvM-Hm-dtf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jp5-tf-ft7"/>
+                    <navigationItem key="navigationItem" title="Home" id="jp5-tf-ft7"/>
                     <connections>
                         <outlet property="headerViewHeight" destination="ygM-Cw-5qe" id="otk-k8-4jY"/>
                         <outlet property="labCollection" destination="LNC-L9-kiL" id="d6L-1U-j22"/>
@@ -620,7 +711,7 @@
         <!--Request-->
         <scene sceneID="jqE-ne-h0e">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NcF-gP-ShD" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NcF-gP-ShD" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Request" image="Request_usselect_50px" selectedImage="Request_usselect_50px" id="qnv-JE-1gv">
                         <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                     </tabBarItem>
@@ -656,7 +747,7 @@
         <!--Chat-->
         <scene sceneID="8Wu-HC-PKL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LHd-HO-x4Y" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LHd-HO-x4Y" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Chat" image="Chat1_50px" selectedImage="Chat1_50px" id="sJf-Af-Wps">
                         <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                     </tabBarItem>
@@ -1152,7 +1243,7 @@
         <!--Result-->
         <scene sceneID="rTC-7D-WQj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hOE-Pc-j3u" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hOE-Pc-j3u" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Result" image="result_usselect_50px" selectedImage="result_usselect_50px" id="OLn-00-SMx" customClass="ResultUITabBarItem" customModule="Checkup" customModuleProvider="target">
                         <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                     </tabBarItem>
@@ -1178,7 +1269,7 @@
         <!--More-->
         <scene sceneID="j4V-Ff-nIJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xDJ-wa-HQ2" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xDJ-wa-HQ2" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="More" image="More_50px" selectedImage="More_50px" id="I1z-0u-44f">
                         <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                     </tabBarItem>

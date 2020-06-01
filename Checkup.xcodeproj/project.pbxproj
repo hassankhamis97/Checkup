@@ -82,6 +82,8 @@
 		4E2C9DFD24706B6D007C6109 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C9DFC24706B6D007C6109 /* Alert.swift */; };
 		4E2C9DFF24706E3E007C6109 /* IView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C9DFE24706E3E007C6109 /* IView.swift */; };
 		4E2C9E0224708D77007C6109 /* BranchDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C9E0124708D77007C6109 /* BranchDescriptionViewController.swift */; };
+		4E32D2992485117A003B6408 /* LabDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32D2982485117A003B6408 /* LabDescViewController.swift */; };
+		4E32D29D2485297A003B6408 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32D29C2485297A003B6408 /* StyleViewController.swift */; };
 		4E3C1F3E2476919800D9761D /* MainBranch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C1F3D2476919800D9761D /* MainBranch.swift */; };
 		4E3C1F40247693A700D9761D /* GetLabsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C1F3F247693A700D9761D /* GetLabsModel.swift */; };
 		4E3C1F432476941A00D9761D /* GetLabsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C1F422476941A00D9761D /* GetLabsPresenter.swift */; };
@@ -133,6 +135,7 @@
 		4EA87525248068D300E95B30 /* ImageIndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */; };
 		4EAA2AD8246CABC70050B0AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */; };
 		4EB18BD924844EE3007D35AE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB18BDB24844EE3007D35AE /* Home.storyboard */; };
+		4EB18BDF24847B45007D35AE /* AccessLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB18BDE24847B45007D35AE /* AccessLocation.swift */; };
 		4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */; };
 		4EBBC93D246B47F200C7978D /* MainChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBBC93B246B47F200C7978D /* MainChatTableViewCell.xib */; };
 		4EBBC940246B595000C7978D /* MainChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93F246B595000C7978D /* MainChatViewController.swift */; };
@@ -375,6 +378,8 @@
 		4E2C9DFC24706B6D007C6109 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		4E2C9DFE24706E3E007C6109 /* IView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IView.swift; sourceTree = "<group>"; };
 		4E2C9E0124708D77007C6109 /* BranchDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescriptionViewController.swift; sourceTree = "<group>"; };
+		4E32D2982485117A003B6408 /* LabDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescViewController.swift; sourceTree = "<group>"; };
+		4E32D29C2485297A003B6408 /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
 		4E3C1F3D2476919800D9761D /* MainBranch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBranch.swift; sourceTree = "<group>"; };
 		4E3C1F3F247693A700D9761D /* GetLabsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLabsModel.swift; sourceTree = "<group>"; };
 		4E3C1F422476941A00D9761D /* GetLabsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLabsPresenter.swift; sourceTree = "<group>"; };
@@ -431,7 +436,7 @@
 		4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIndicatorTableViewCell.xib; sourceTree = "<group>"; };
 		4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EB18BDA24844EE3007D35AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
-		4EB18BDD24844EFC007D35AE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Home.strings; sourceTree = "<group>"; };
+		4EB18BDE24847B45007D35AE /* AccessLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLocation.swift; sourceTree = "<group>"; };
 		4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatTableViewCell.swift; sourceTree = "<group>"; };
 		4EBBC93B246B47F200C7978D /* MainChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChatTableViewCell.xib; sourceTree = "<group>"; };
 		4EBBC93F246B595000C7978D /* MainChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatViewController.swift; sourceTree = "<group>"; };
@@ -687,23 +692,6 @@
 			path = FilterLab;
 			sourceTree = "<group>";
 		};
-		03789BD6246CC64E00C0BF33 /* LabDescription */ = {
-			isa = PBXGroup;
-			children = (
-				4E15ACDC24712FFF004418B1 /* ShowNewRequestFromPopup */,
-				03789BD7246CC6A100C0BF33 /* FilterLab */,
-			);
-			path = LabDescription;
-			sourceTree = "<group>";
-		};
-		03789BD7246CC6A100C0BF33 /* FilterLab */ = {
-			isa = PBXGroup;
-			children = (
-				03789BD8246CC6BD00C0BF33 /* CollectionView */,
-			);
-			path = FilterLab;
-			sourceTree = "<group>";
-		};
 		03789BD8246CC6BD00C0BF33 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,10 +719,12 @@
 		03F6C7F7246B884200E89178 /* LabDescription */ = {
 			isa = PBXGroup;
 			children = (
+				4E32D29A2485126E003B6408 /* Extension */,
 				03F6C7FE246B89E200E89178 /* Cells */,
 				03F6C7F8246B891800E89178 /* LabDescTableViewController.swift */,
 				031046AD246C8F77000372BD /* FilterLabTableView.swift */,
 				03380CDB247F5C590055717E /* FilterProtocol.swift */,
+				4E32D2982485117A003B6408 /* LabDescViewController.swift */,
 			);
 			name = LabDescription;
 			path = Home/LabDescription;
@@ -1013,6 +1003,7 @@
 		4E22F932243E73A90090693C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4E32D29B248528FB003B6408 /* Navigation */,
 				032AB5CB2482023B0021DE4F /* Reviews */,
 				CC80B9D724771F1C00521508 /* Statistics */,
 				4EC1FD2E2472DD7A0029C499 /* FilterTests */,
@@ -1049,6 +1040,23 @@
 			children = (
 			);
 			path = PopUp;
+			sourceTree = "<group>";
+		};
+		4E32D29A2485126E003B6408 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				03789BD8246CC6BD00C0BF33 /* CollectionView */,
+				4E15ACDC24712FFF004418B1 /* ShowNewRequestFromPopup */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4E32D29B248528FB003B6408 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4E32D29C2485297A003B6408 /* StyleViewController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		4E3C1F41247693B800D9761D /* Labs */ = {
@@ -1114,13 +1122,6 @@
 			isa = PBXGroup;
 			children = (
 				4E4EA63C247011F000309CAF /* NewRequestPresenter.swift */,
-			);
-			path = NewRequest;
-			sourceTree = "<group>";
-		};
-		4E4EA63E247015CF00309CAF /* NewRequest */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = NewRequest;
 			sourceTree = "<group>";
@@ -1508,13 +1509,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		4ECE5C5A246EA7C000932947 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		4EDADEC5246A1F410069B0E5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -1608,11 +1602,7 @@
 			children = (
 				4E4542212479FAD300955FD8 /* TableView */,
 				4E45421E2479CEA700955FD8 /* String */,
-				A3C5F0362472C75A0069413F /* Signup */,
-				4E4EA63E247015CF00309CAF /* NewRequest */,
 				4EC16268246F366D0053F581 /* ConvertToDictionary */,
-				4ECE5C5A246EA7C000932947 /* Login */,
-				03789BD6246CC64E00C0BF33 /* LabDescription */,
 				4E0E34FF246BA0DA00814696 /* Date */,
 				4EE9F93824699B8500BB4A39 /* Chat */,
 			);
@@ -1767,6 +1757,7 @@
 			isa = PBXGroup;
 			children = (
 				A372090F24770DD4009ADC95 /* HomeExtention.swift */,
+				4EB18BDE24847B45007D35AE /* AccessLocation.swift */,
 			);
 			path = "Home Extension";
 			sourceTree = "<group>";
@@ -1828,13 +1819,6 @@
 			isa = PBXGroup;
 			children = (
 				A3C5F0342472C2D60069413F /* SignupPresenter.swift */,
-			);
-			path = Signup;
-			sourceTree = "<group>";
-		};
-		A3C5F0362472C75A0069413F /* Signup */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -2333,12 +2317,14 @@
 				4E22F8FF243E6E6C0090693C /* SceneDelegate.swift in Sources */,
 				A372090D24770574009ADC95 /* HomeLabPresenter.swift in Sources */,
 				CC76172524730BF80084CC6E /* ExtensionEditProfileMVP.swift in Sources */,
+				4E32D29D2485297A003B6408 /* StyleViewController.swift in Sources */,
 				4EF1A1E62476B0E800597A15 /* IEmployeeDetails.swift in Sources */,
 				4EE7EA34246B023000BF434F /* KeyboardLayoutConstraint.swift in Sources */,
 				4E15ACDB24712F6E004418B1 /* ShowNewRequest.swift in Sources */,
 				CC80B9DB247727E800521508 /* ExtensionStatisticsPicker.swift in Sources */,
 				4E4542232479FAF700955FD8 /* AddViewIndicator.swift in Sources */,
 				4EBED80B24816235009A43FB /* UpdateNotificationFlagContract.swift in Sources */,
+				4EB18BDF24847B45007D35AE /* AccessLocation.swift in Sources */,
 				4EA87517248004B100E95B30 /* SendMessageContract.swift in Sources */,
 				032AB5C72481E0770021DE4F /* ReviewsContract.swift in Sources */,
 				CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */,
@@ -2459,6 +2445,7 @@
 				4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */,
 				03C1DD2A2478581900D2A008 /* BranchDescModel.swift in Sources */,
 				CC76172F24732A610084CC6E /* ImagePresenter.swift in Sources */,
+				4E32D2992485117A003B6408 /* LabDescViewController.swift in Sources */,
 				03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */,
 				4E87AF48247EC2FD00002E66 /* ManualNotificationContract.swift in Sources */,
 				03380CDC247F5C590055717E /* FilterProtocol.swift in Sources */,
@@ -2630,7 +2617,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				4EB18BDA24844EE3007D35AE /* Base */,
-				4EB18BDD24844EFC007D35AE /* ar */,
 			);
 			name = Home.storyboard;
 			sourceTree = "<group>";

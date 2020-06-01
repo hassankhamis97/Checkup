@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-extension LabDescTableViewController : UICollectionViewDataSource , UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
+extension LabDescViewController : UICollectionViewDataSource , UICollectionViewDelegate , UICollectionViewDelegateFlowLayout, UIScrollViewDelegate{
 
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,9 +46,10 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
 
     
     }
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
         //print("scrolled")
+//        let contentOffsetY = scrollView.contentOffset.y
         let height = scrollView.frame.size.height
                     let contentYoffset = scrollView.contentOffset.y
                     let distanceFromBottom = scrollView.contentSize.height - contentYoffset
@@ -59,6 +60,27 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
                     paginatingParams.skip =  labDescriptionObj.branches?.count
                     labDescPresenter.getDataFromLabDescModel(params: paginatingParams)
                     }
+          let newHeaderHeight : CGFloat = headerViewHeight.constant-contentYoffset    // 276 - 76 = 200
+        //        if newHeaderHeight !=  headerViewHeight.constant{
+        //            newHeaderHeightFixed = newHeaderHeight
+        //        }
+                          if newHeaderHeight >= imageViewMaxHeight{ //200 >= 276
+                                  headerViewHeight.constant = imageViewMaxHeight
+                                    topViewConstraint.constant = topViewConstrainsMaxHeight
+                              }else if newHeaderHeight < imageViewMinHeight{ //200 < 0
+                                  headerViewHeight.constant = imageViewMinHeight
+                                    topViewConstraint.constant = topViewConstrainsMinHeight
+                              }else{
+                //
+        //                    labImageView.alpha = 1 - (((imageViewMaxHeight - newHeaderHeight)*(0.9)) / (imageViewMaxHeight - imageViewMinHeight))
+        //                    labImageView.contentMode = .scaleAspectFill
+                            if headerViewHeight.constant != newHeaderHeight {
+                            topViewConstraint.constant =  topViewConstraint.constant -  (headerViewHeight.constant - newHeaderHeight)  // topViewConstrainsMaxHeight - offsetYFixed    -71
+                            }
+                                  headerViewHeight.constant = newHeaderHeight   //200
+                            
+                                  scrollView.contentOffset.y = 0
+                              }
     }
    
     
@@ -85,6 +107,31 @@ extension LabDescTableViewController : UICollectionViewDataSource , UICollection
         branchDesc.modalPresentationStyle = .fullScreen
         self.present(branchDesc , animated: true , completion: nil)
         }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let height = labBrachCollection.frame.size.height
+        let width = labBrachCollection.frame.size.width
+        if labDescriptionObj.branches!.count <= 0  {
+//            if isLoading == false{
+            return CGSize(width: width, height: height)
+//            }
+//            else {
+//                return CGSize(width: 0, height: 0)
+//            }
+        }
+            
+            //
+            //
+        else if view.frame.size.width > view.frame.size.height {
+            return CGSize(width: width * 0.24, height: 213)
+        }
+        else {
+            return CGSize(width: width * 0.49, height: 213)
+        }
+    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        labBrachCollection.reloadData()
+    }
 }
 
 
