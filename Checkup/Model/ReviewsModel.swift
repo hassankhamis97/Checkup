@@ -8,20 +8,17 @@
 
 import Foundation
 import Alamofire
+import FirebaseFirestore
 class ReviewsModel : IReviewsModel{
     
     
-    
+    let db = Firestore.firestore()
+     var counter  = 0
+    var reviewsObj : [Review]!
     var reviewsPresenter : IReviewsPresenter!
     init(presenter : IReviewsPresenter) {
         reviewsPresenter = presenter
     }
-    
-      
-    
-    
-    
-    
     func fetchReviews() {
         
         Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetBranchReviews?branchId=2&take=50&skip=0").responseJSON { (response) in
@@ -29,11 +26,14 @@ class ReviewsModel : IReviewsModel{
                       print("reviews: \(json)")
                 
                 do{
-                    let reviewsObj = try JSONDecoder().decode(Array<Review>.self,from: response.data!)
-                    print(reviewsObj)
+                    self.reviewsObj = try JSONDecoder().decode(Array<Review>.self,from: response.data!)
+                    print(self.reviewsObj)
                     print("reviews")
-                  //  print(reviewsObj.date!)
-                    self.reviewsPresenter.onSuccess(reviewsObj: reviewsObj)
+                  //  self.reviewsPresenter.onSuccess(reviewsObj: reviewsObj)
+                    for review in self.reviewsObj{
+                        self.readRestOfDataFromFirestore( count: self.reviewsObj.count, obj: review)
+                    }
+                    
                     
                 }catch let error{
                     print(error)
@@ -44,6 +44,39 @@ class ReviewsModel : IReviewsModel{
 
     }
     
+    
+  
+    func readRestOfDataFromFirestore( count : Int , obj : Review){
+      
+            var myReviewObj = obj
+        
+        db.collection("users").document(myReviewObj.userId!).getDocument {(document  ,error) in
+             
+              print(document!)
+              print(document?.data()?["nickname"] as? String?)
+              
+            myReviewObj.nickname = (document?.data()?["nickname"] as? String?)!
+            myReviewObj.photoUrl = (document?.data()?["photoUrl"] as? String?)!
+              
+          
+            self.counter = self.counter+1
+              
+ 
+            if (self.counter == count ){
+                self.reviewsPresenter.onSuccess(reviewsObj: self.reviewsObj )
+                print(self.reviewsObj!)
+                for rev in self.reviewsObj{
+                    print(rev.nickname)
+                }
+                  print("counter :  \(self.counter)")
+
+              }
+          }
+          
+
+      }
+    
+
     
 }
 
