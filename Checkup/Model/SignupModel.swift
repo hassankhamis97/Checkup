@@ -56,15 +56,15 @@ class SignupModel: ISignupModel {
                     let realTime=RealTime()
                     realTime.addUser(id: id ?? "", email: email, birthdate: "", gender: "", phone: phoneArray, insurance: "", address: addressObj, imagePath: "https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/users.png?alt=media&token=8fba9f3d-0739-4b7f-afab-8ae7b6e1c442", name: username)
                     
-                    self.saveToRealm(id: id ?? "0x", username: username)
-                    self.addNameToFireStore(username: username, id: id ?? "0x")
+                    SignupModel.saveToRealm(id: id ?? "0x", username: username)
+                    SignupModel.addNameToFireStore(username: username, id: id ?? "0x")
                     self.singupPresenterRef.onSuccess()
                 }
             }
            
     }
     
-    func saveToRealm(id: String, username: String) {
+   class func saveToRealm(id: String, username: String) {
         //add user name & id to Realm
         if id.count > 0 && username.count > 0{
             let person = Person()
@@ -77,7 +77,7 @@ class SignupModel: ISignupModel {
         }
     }
     
-    func addNameToFireStore(username: String, id: String) {
+   class func addNameToFireStore(username: String, id: String) {
         // Update one field, creating the document if it does not exist.
         Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": "https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/users.png?alt=media&token=8fba9f3d-0739-4b7f-afab-8ae7b6e1c442" ], merge: true)
     }

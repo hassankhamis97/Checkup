@@ -10,17 +10,25 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
+import RealmSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+ 
+    
    
 
 var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-//        GIDSignIn.sharedInstance()?.clientID = "734287541282-h8v1ojlr4hm4fl26idajo1fu25lh9i51.apps.googleusercontent.com"//
-//        GIDSignIn.sharedInstance()?.delegate = self//
-
+//      let navigationBar = UINavigationBar.appearance()
+//        let gradient = CAGradientLayer()
+//        var bounds = navigationBar.bounds
+//        navigationBar.bounds.size.height += UIApplication.shared.statusBarFrame.size.height
+//        navigationBar.gradient.frame = bounds
+//        navigationBar.gradient.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+//        navigationBar.gradient.startPoint = CGPoint(x: 0, y: 0)
+//        navigationBar.gradient.endPoint = CGPoint(x: 1, y: 0)
         return true
     }
  
@@ -85,8 +93,17 @@ var window: UIWindow?
 //    }
 //    
 // 
-    
-    
+     @available(iOS 9.0, *)
+           func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+             -> Bool {
+             return GIDSignIn.sharedInstance().handle(url)
+           }
+           
+           //For your app to run on iOS 8 and older, also implement the deprecated
+           func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+               return GIDSignIn.sharedInstance().handle(url)
+           }
+           
      ///************** end of custom functions ************
     // MARK: UISceneSession Lifecycle
 @available(iOS 13.0, *)

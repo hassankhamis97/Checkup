@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ILabDescView {
+protocol ILabDescView : IBase {
     func showingDataOnView(labDescObj : Branches , id: Int)
 }
 

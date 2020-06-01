@@ -11,7 +11,7 @@ import UIKit
 import ImageSlideshow
 import SDWebImage
 
-extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSource, ImageSlideshowDelegate, IGetLabsView,  UISearchBarDelegate, IView {
+extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSource, ImageSlideshowDelegate, IGetLabsView, IView {
     
     func getSearchedLabs(seachedHomeLabs: [HomeLab]) {
         
@@ -19,10 +19,12 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
         self.labCollection.reloadData()
     }
     
-    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        view.addGestureRecognizer(tap)
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+//        view.addGestureRecognizer(tap)
         showIndicator()
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
         homeLabPresenter.getSearchedLabs(name: searchText)
@@ -35,12 +37,13 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
 //        searchBar.tintColor = .red
 //    }
     
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
-//    {
-//        //Hide Cancel
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        //Hide Cancel
 //        searchBar.setShowsCancelButton(false, animated: true)
-//        searchBar.resignFirstResponder()
-//    }
+//        view.addGestureRecognizer(tap)
+        searchBar.resignFirstResponder()
+    }
 //
 //    func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
 //    {
@@ -57,21 +60,25 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
         }
         if homeLabs.count > 0 {
             self.showSlider()
-            self.labCollection.reloadData()
+//            self.labCollection.reloadData()
         }
         
     }
     
     func showIndicator() {
+        isLoading = true
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         labsActicity.show()
         labsActicity.startAnimating()
+        labCollection.reloadData()
     }
     
     func hideIndicator() {
+        isLoading = false
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         labsActicity.stopAnimating()
         labsActicity.hide()
+        labCollection.reloadData()
     }
     
     func errorMessage(msg: String) {
@@ -100,11 +107,12 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
             cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = searchedHomeLabsArr[indexPath.row].hotline
             
-        } else if searchedHomeLabsArr.count <= 0 &&  searchBar.text?.count ?? 0 > 0 {
+        } else if searchedHomeLabsArr.count <= 0 &&  searchBar.text?.count ?? 0 > 0{
             print("NoData")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "noDataCell", for: indexPath)
             //noDataCell
             cell.sizeThatFits(CGSize(width: 500.0, height: 500.0))
+            
             return cell
         } else{
 //            if cellWidth != nil {
@@ -125,8 +133,27 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var labDesc = storyboard?.instantiateViewController(withIdentifier: "labDescSCV")as! LabDescTableViewController
-        navigationController?.pushViewController(labDesc, animated: true)
+        var senderLabId : String!
+//        if searchedHomeLabsArr.count > 0{
+//            return searchedHomeLabsArr.count
+//        }else if searchedHomeLabsArr.count <= 0 &&  searchBar.text?.count ?? 0 > 0 {
+//            return 1
+//        } else {
+//            return homeLabArr.count
+//        }
+        if (searchedHomeLabsArr.count > 0) {
+            senderLabId = searchedHomeLabsArr[indexPath.row].idFB
+            
+        }
+        else if  homeLabArr.count > 0 {
+            senderLabId = homeLabArr[indexPath.row].idFB
+        }
+        
+        if senderLabId != nil {
+            var labDesc = storyboard?.instantiateViewController(withIdentifier: "labDescSCV")as! LabDescViewController
+            labDesc.labId = senderLabId
+            navigationController?.pushViewController(labDesc, animated: true)
+        }
     }
     
     
@@ -154,7 +181,7 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
 //        if newHeaderHeight !=  headerViewHeight.constant{
 //            newHeaderHeightFixed = newHeaderHeight
 //        }
-                  if newHeaderHeight >= imageViewMaxHeight{ //200 >= 276
+                  if newHeaderHeight >= (imageViewMaxHeight - 50){ //200 >= 276
                           headerViewHeight.constant = imageViewMaxHeight
                             topViewConstraint.constant = topViewConstrainsMaxHeight
                       }else if newHeaderHeight < imageViewMinHeight{ //200 < 0

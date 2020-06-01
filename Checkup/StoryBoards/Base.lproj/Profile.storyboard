@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a10975fa96bcad4f5592307992fa8918" translatesAutoresizingMaskIntoConstraints="NO" id="oKX-80-vbY">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Abstract Blue Background Vector Graphic 1" translatesAutoresizingMaskIntoConstraints="NO" id="oKX-80-vbY">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="139" id="0K3-mJ-1lC"/>
@@ -494,7 +494,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="291"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a10975fa96bcad4f5592307992fa8918" translatesAutoresizingMaskIntoConstraints="NO" id="jS4-mf-3Bh">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Abstract Blue Background Vector Graphic 1" translatesAutoresizingMaskIntoConstraints="NO" id="jS4-mf-3Bh">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="163"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="414" id="mFw-nm-iB7"/>
@@ -1465,6 +1465,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LeU-Zw-bxI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1477,7 +1480,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="a10975fa96bcad4f5592307992fa8918" width="800" height="800"/>
+        <image name="Abstract Blue Background Vector Graphic 1" width="794" height="554"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="creditcard.fill" catalog="system" width="64" height="44"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
