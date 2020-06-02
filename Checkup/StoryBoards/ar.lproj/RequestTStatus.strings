@@ -24,7 +24,7 @@
 "G6Y-RW-ERx.normalTitle" = "عرض تفاصيل الطلب";
 
 /* Class = "UILabel"; text = "Empolyee Details :"; ObjectID = "Hwn-kv-7x0"; */
-"Hwn-kv-7x0.text" = "بيانات الموظف";
+"Hwn-kv-7x0.text" = "بيانات الموظف:";
 
 /* Class = "UILabel"; text = "Pending"; ObjectID = "IJX-L7-Myh"; */
 "IJX-L7-Myh.text" = "إنتظار";
@@ -39,7 +39,7 @@
 "JN8-kL-Zkh.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "Show Details"; ObjectID = "K0a-8k-1VD"; */
-"K0a-8k-1VD.normalTitle" = "عرض تفاصيل الطلب";
+"K0a-8k-1VD.normalTitle" = "عرض البيانات";
 
 /* Class = "UILabel"; text = "Description :"; ObjectID = "Kcx-Yu-Sab"; */
 "Kcx-Yu-Sab.text" = "الوصف";

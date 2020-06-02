@@ -16,9 +16,9 @@ class EmployeeDetailsPresenter :IEmployeeDetailsPresenter {
 
     
     
-     func getEmployee(empId : String ) {
+     func getEmployee(branchId : String ,empId : String ) {
         var emplyeeModel = EmployeeDetailsModel(emplyeePresenterRef: self)
-        emplyeeModel.getEmployeeData(EmpId: empId)
+        emplyeeModel.getEmployeeData(branchId: branchId, EmpId: empId)
     }
     
     func onEmployeeReceived(employee: Employee) {

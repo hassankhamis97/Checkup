@@ -24,24 +24,24 @@ extension BranchDescriptionViewController: UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var height : CGFloat = CGFloat()
         if(indexPath.row == 0){
-            height = 70
+            height = 65
         }else if(indexPath.row == 1){
-            height = 70
+            height = 65
             
         }else if(indexPath.row == 2){
-            height = 70
+            height = 65
             
         }else if(indexPath.row == 3){
-            height = 70
+            height = 65
             
         }else if(indexPath.row == 4){
-            height = 70
+            height = 65
             
         }else if(indexPath.row == 5){
-            height = 70
+            height = 65
             
         }else if(indexPath.row == 6){
-            height = 70
+            height = 65
             
         }else if(indexPath.row == 8){
         height = 300

@@ -19,6 +19,7 @@ class PopUpTableViewController: UITableViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var employeeID : String?
+    var branchID : String?
     var phoneNumberArray=["No Phone Available"]
     
     
@@ -33,12 +34,13 @@ class PopUpTableViewController: UITableViewController {
    override func viewWillAppear(_ animated: Bool) {
           var employeeDetailsPresenter : EmployeeDetailsPresenter = EmployeeDetailsPresenter(empViewRef : self)
     
-    guard let eID = employeeID else{
+    guard let eID = employeeID , let branchId = branchID else{
         return
     }
     
-    employeeDetailsPresenter.getEmployee(empId:eID )
+    //employeeDetailsPresenter.getEmployee(  empId:eID )
      
+    employeeDetailsPresenter.getEmployee(branchId: branchId, empId: eID)
     
            }
     
