@@ -72,10 +72,10 @@
 "dy3-6V-CZN.normalTitle" = "حذف الطلب";
 
 /* Class = "UILabel"; text = "Aly ibrahim"; ObjectID = "e0H-en-zRZ"; */
-"e0H-en-zRZ.text" = "على إبراهيم ";
+"e0H-en-zRZ.text" ="";
 
 /* Class = "UILabel"; text = "Test Name : "; ObjectID = "eUQ-b2-eIX"; */
-"eUQ-b2-eIX.text" = " التحاليل :  ";
+"eUQ-b2-eIX.text" = " التحاليل:";
 
 /* Class = "UILabel"; text = "Test is not avilable"; ObjectID = "fvg-Fm-3PZ"; */
 "fvg-Fm-3PZ.text" = "التحليل غير متوفر";
