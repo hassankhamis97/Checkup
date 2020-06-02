@@ -36,7 +36,7 @@ class MessagingChatModel: IMessagingChatModel {
     func getData(chatPresenterRef : IChat,messageParams: MessageParams) {
         var isFirebaseCalled : Bool? = nil
         var dbRef : Query!
-        if messageParams.pearedId! > Auth.auth().currentUser!.uid {
+        if messageParams.pearedId! < Auth.auth().currentUser!.uid {
             groupId = messageParams.pearedId! + "-" + Auth.auth().currentUser!.uid
         }
         else {

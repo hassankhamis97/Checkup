@@ -692,7 +692,7 @@ extension RequestStatusTableViewController : IRequestStatusView
             self.dateTextArea.text = myObj.dateRequest!
             self.timeTextArea.text = myObj.timeRequest!
             if let location = myObj.address {
-                let myAdress = "\( location.buildingNo!)  \(location.apartmentNo!)     \(location.floorNo!)"
+                let myAdress = "\( location.buildingNo!)  \(location.apartmentNo!)  \(location.address1!)   \(location.floorNo!)"
                 
                 self.locationTextArea.text = myAdress
             }
