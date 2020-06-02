@@ -134,7 +134,7 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
                 errorLabelOutlet.alpha = 0
                 
             }
-            else if labDescriptionObj.branches!.count == 0{
+            else if labDescriptionObj.branches == nil ||  labDescriptionObj.branches!.count == 0{
                 errorMessage(msg: "There is no data")
             }
     //        myId = id

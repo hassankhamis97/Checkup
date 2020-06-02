@@ -38,11 +38,11 @@
                                                     <color key="textColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yn0-gC-iOt">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yn0-gC-iOt">
                                                     <rect key="frame" x="128" y="74" width="91" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33" id="mt7-JG-hLL"/>
-                                                        <constraint firstAttribute="width" constant="91" id="my3-8y-2GR"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="91" id="my3-8y-2GR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="View Profile">
@@ -62,7 +62,7 @@
                                                 <constraint firstItem="m1b-mO-Ttk" firstAttribute="leading" secondItem="wlO-qX-rCb" secondAttribute="leading" constant="20" id="cSx-Vg-q8W"/>
                                                 <constraint firstItem="Yn0-gC-iOt" firstAttribute="leading" secondItem="m1b-mO-Ttk" secondAttribute="trailing" constant="8" id="fF3-nu-WNb"/>
                                                 <constraint firstItem="m1b-mO-Ttk" firstAttribute="top" secondItem="wlO-qX-rCb" secondAttribute="top" constant="11" id="hFJ-aP-pqe"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Yn0-gC-iOt" secondAttribute="trailing" constant="175" id="lls-lX-vK0"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Yn0-gC-iOt" secondAttribute="trailing" constant="175" id="lls-lX-vK0"/>
                                                 <constraint firstItem="Yn0-gC-iOt" firstAttribute="bottom" secondItem="wlO-qX-rCb" secondAttribute="bottomMargin" id="w6Q-qQ-NDS"/>
                                                 <constraint firstItem="28d-aB-N7J" firstAttribute="leading" secondItem="Yn0-gC-iOt" secondAttribute="leading" id="xg4-Bf-QpW"/>
                                             </constraints>

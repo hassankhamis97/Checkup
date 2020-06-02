@@ -24,7 +24,7 @@
 "G6Y-RW-ERx.normalTitle" = "عرض تفاصيل الطلب";
 
 /* Class = "UILabel"; text = "Empolyee Details :"; ObjectID = "Hwn-kv-7x0"; */
-"Hwn-kv-7x0.text" = "بيانات الموظف";
+"Hwn-kv-7x0.text" = "بيانات الموظف:";
 
 /* Class = "UILabel"; text = "Pending"; ObjectID = "IJX-L7-Myh"; */
 "IJX-L7-Myh.text" = "إنتظار";
@@ -39,7 +39,7 @@
 "JN8-kL-Zkh.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "Show Details"; ObjectID = "K0a-8k-1VD"; */
-"K0a-8k-1VD.normalTitle" = "عرض تفاصيل الطلب";
+"K0a-8k-1VD.normalTitle" = "عرض البيانات";
 
 /* Class = "UILabel"; text = "Description :"; ObjectID = "Kcx-Yu-Sab"; */
 "Kcx-Yu-Sab.text" = "الوصف";
@@ -72,10 +72,10 @@
 "dy3-6V-CZN.normalTitle" = "حذف الطلب";
 
 /* Class = "UILabel"; text = "Aly ibrahim"; ObjectID = "e0H-en-zRZ"; */
-"e0H-en-zRZ.text" = "على إبراهيم ";
+"e0H-en-zRZ.text" ="";
 
 /* Class = "UILabel"; text = "Test Name : "; ObjectID = "eUQ-b2-eIX"; */
-"eUQ-b2-eIX.text" = " التحاليل :  ";
+"eUQ-b2-eIX.text" = " التحاليل:";
 
 /* Class = "UILabel"; text = "Test is not avilable"; ObjectID = "fvg-Fm-3PZ"; */
 "fvg-Fm-3PZ.text" = "التحليل غير متوفر";

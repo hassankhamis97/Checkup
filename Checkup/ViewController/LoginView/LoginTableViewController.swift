@@ -275,14 +275,14 @@ extension LoginTableViewController : GIDSignInDelegate {
                 
                 let realm = try! Realm()
                 
-                
+                var userID = Auth.auth().currentUser!.uid ;
              //   let scope = realm.objects(Person.self).filter("id == %@", user.userID)
-                 let scope = realm.object(ofType: Person.self, forPrimaryKey: user.userID)
+                 let scope = realm.object(ofType: Person.self, forPrimaryKey: userID)
                 if scope == nil {
-                    SignupModel.addNameToFireStore(username: user.profile.name, id: user.userID)
+                    SignupModel.addNameToFireStore(username: user.profile.name, id: userID )
                     
-                    SignupModel.saveToRealm(id:  user.userID, username: user.profile.name)
-                    RealTime().addUser(id:  user.userID, email: user.profile.email, birthdate:"", gender: "", phone:[Phone()], insurance: "", address:Address() , imagePath: userDP! ?? "", name: user.profile.name)
+                    SignupModel.saveToRealm(id:  userID, username: user.profile.name)
+                    RealTime().addUser(id:  userID, email: user.profile.email, birthdate:"", gender: "", phone:[Phone()], insurance: "", address:Address() , imagePath: userDP! ?? "", name: user.profile.name)
                 }
                 
                 

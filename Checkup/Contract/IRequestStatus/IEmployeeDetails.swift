@@ -15,10 +15,11 @@ protocol IEmployeeDetailsView  {
     func onReceiveEmployeeDetails(employee:Employee)
 }
 protocol IEmployeeDetailsPresenter {
-    func getEmployee(empId : String )
+    func getEmployee(branchId : String , empId : String )
     func onEmployeeReceived(employee:Employee)
     func onFail(message: String)
 }
 protocol IEmployeeDetailsModel {
-    func getEmployeeData(EmpId : String)
+    func getEmployeeData(branchId : String , EmpId : String)
 }
+

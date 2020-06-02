@@ -17,9 +17,9 @@ class EmployeeDetailsModel : IEmployeeDetailsModel{
            self.emplPresenterRef = emplyeePresenterRef
        }
     
-    func getEmployeeData(EmpId: String) {
+    func getEmployeeData(branchId : String , EmpId: String) {
         
-        ref.child(EmpId).observe(.value){
+        ref.child(branchId).child(EmpId).observe(.value){
                          mahmoudSnapShoot in
             guard mahmoudSnapShoot.value != nil else{
            

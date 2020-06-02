@@ -27,7 +27,7 @@
 "STATUS_BACK"="الخلف";
 "STATUS_LOCATION"="العنوان";
 "STATUS_TIME"="الوقت ";
-"STATUS_DATE"="التارخ";
+"STATUS_DATE"="التاريخ";
 "SIGN_UP_NAME" = "الاسم";
 "SIGN_UP_Email" = "البريد الالكترونى";
 "SIGN_UP_Password" = "الرقم السري";
@@ -36,7 +36,7 @@
 "RESET_PASSWORD_EnterEmail" = "ادخل بريدك الالكترونى";
 "RESET_PASSWORD_ValidEmail" = "ادخل بريد الكترونى صحيح";
 "RESET_PASSWORD_Reset" = "إعادة تعيين";
-"RESET_PASSWORD_Cancel" = "اعلاق";
+"RESET_PASSWORD_Cancel" = "اغلاق";
 "NEW_PASSWORD_OldPassword"="الرقم السري السابق ";
 "NEW_PASSWORD_NewPassword"="الرقم السرى الجديد ";
 "NEW_PASSWORD_ConfirmNewPassword"="تاكيد الرقم السرى الجديد ";

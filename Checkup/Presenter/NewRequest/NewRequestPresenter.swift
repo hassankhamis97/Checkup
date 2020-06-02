@@ -21,6 +21,9 @@ class NewRequestPresenter: INewRequestPresenter , ICheckConnection{
     func saveRequest(testObj: Test, roushettaImages: [UIImage]) {
         self.testObj = testObj
         self.roushettaImages = roushettaImages
+        newRequestViewRef.showIndicator()
+        var newRequestModel = NewRequestModel(newRequestPresenterRef: self)
+        newRequestModel.saveRequest(testObj: testObj, roushettaImages: roushettaImages)
         InternetConnection.checkInternetConnection(iCheckConnection: self)
     }
     
@@ -35,9 +38,9 @@ class NewRequestPresenter: INewRequestPresenter , ICheckConnection{
         newRequestViewRef.errorMessage(msg: message)
     }
     func onSucessfullyConnected() {
-           newRequestViewRef.showIndicator()
-           var newRequestModel = NewRequestModel(newRequestPresenterRef: self)
-           newRequestModel.saveRequest(testObj: testObj, roushettaImages: roushettaImages)
+//           newRequestViewRef.showIndicator()
+//           var newRequestModel = NewRequestModel(newRequestPresenterRef: self)
+//           newRequestModel.saveRequest(testObj: testObj, roushettaImages: roushettaImages)
        }
        
        func onFailConnected() {
