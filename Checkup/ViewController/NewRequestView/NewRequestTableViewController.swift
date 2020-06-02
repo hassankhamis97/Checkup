@@ -12,7 +12,7 @@ import ImageSlideshow
 import SkyFloatingLabelTextField
 import Firebase
 import Alamofire
-class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,IFillDataCells , IGetAddress {
+class NewRequestTableViewController: UITableViewController,OpalImagePickerControllerDelegate,IFillDataCells , IGetAddress , UITextFieldDelegate{
     
     @IBOutlet var noImageLabel: UILabel!
     @IBOutlet weak var myCell: UITableViewCell!
@@ -41,7 +41,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var x=1
 //    var hasAddress = false
     var branchId : String?
-//    var labId: String?
+    var labId: String?
     var isFromHome: Bool?
     var addressObj : Address!
     var user : User!
@@ -61,7 +61,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             testObj.resultFilespaths = [String]()
             testObj.testName = testTexts
             testObj.branchId = branchId
-//            testObj.labId = labId
+            testObj.labId = labId
             testObj.dateForTakingSample = dateTextField.text
             testObj.timeForTakingSample = timeTextField.text
             testObj.address = addressObj
@@ -79,7 +79,13 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     override func viewDidLoad() {
         super.viewDidLoad()
 //        hashString(str: "Vgo15V8FFZX9b9bRtFT3kkAdJ9D2")
+        enterTestTextField.delegate=self
+        addressTextField.delegate=self
+        dateTextField.delegate=self
+        timeTextField.delegate=self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         
+        view.addGestureRecognizer(tap)
         uploadImage.layer.cornerRadius=uploadImage.frame.width/2
         
         
@@ -93,7 +99,9 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         activityIndicator.hide()
         activityIndicator.alpha = 0
         dateTextField.addTarget(self, action: #selector(NewRequestTableViewController.textFieldDidChange(_:)), for: .editingChanged)
-
+        saveRequestBtn.layer.cornerRadius=30
+        saveRequestBtn.layer.borderColor=UIColor.white.cgColor
+        saveRequestBtn.layer.borderWidth=2
     }
     
     @objc func textFieldDidChange(_ textField: SkyFloatingLabelTextFieldWithIcon) {
@@ -102,7 +110,22 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             timeTextField.text = ""
         }
     }
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        self.view.endEditing(true)
+        if scoreText == enterTestTextField{
+            testTexts.append(enterTestTextField.text!)
+            collectionView.reloadData()
+            enterTestTextField.text=""
+            tableView.reloadData()
+        }
+        return true
+    }
     
+    
+    // function to enable dimiss key board(touch any where )
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     override func viewWillAppear(_ animated: Bool) {
          
 //        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests").validate().responseJSON { response in
@@ -515,6 +538,7 @@ extension NewRequestTableViewController: ImagePickerDelegate {
         
         var x=ImageSource(image:image!)
         inputImageArray.append(x)
+        ind=0
         slideShow.setImageInputs(inputImageArray)
          deleteImageBtn.alpha=1
         noImageLabel.alpha = 0

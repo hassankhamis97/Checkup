@@ -24,7 +24,7 @@ extension NewRequestTableViewController : INewRequestView ,IView , IViewAdvanced
     func updateView() {
 //        Toast.show(message: "request send Successfully", controller: self)
         showToast(message: "request sent") // change it to view controller success
-        Alert.showSimpleAlert(title: "Alert", message: "your request sent successfully", viewRef: self)
+//        Alert.showSimpleAlert(title: "Alert", message: "your request sent successfully", viewRef: self)
         navigationController?.popViewController(animated: true)
     }
     
