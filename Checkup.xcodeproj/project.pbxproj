@@ -135,6 +135,7 @@
 		4EA87524248068D300E95B30 /* ImageIndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA87522248068D300E95B30 /* ImageIndicatorTableViewCell.swift */; };
 		4EA87525248068D300E95B30 /* ImageIndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */; };
 		4EAA2AD8246CABC70050B0AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */; };
+		4EB022E2248825A600965345 /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB022E1248825A600965345 /* DispatchQueueExtension.swift */; };
 		4EB18BD924844EE3007D35AE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB18BDB24844EE3007D35AE /* Home.storyboard */; };
 		4EB18BDF24847B45007D35AE /* AccessLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB18BDE24847B45007D35AE /* AccessLocation.swift */; };
 		4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */; };
@@ -439,6 +440,7 @@
 		4EA87522248068D300E95B30 /* ImageIndicatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIndicatorTableViewCell.swift; sourceTree = "<group>"; };
 		4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIndicatorTableViewCell.xib; sourceTree = "<group>"; };
 		4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4EB022E1248825A600965345 /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
 		4EB18BDA24844EE3007D35AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		4EB18BDE24847B45007D35AE /* AccessLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLocation.swift; sourceTree = "<group>"; };
 		4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -1285,6 +1287,14 @@
 			path = ImageIndicator;
 			sourceTree = "<group>";
 		};
+		4EB022E02488251600965345 /* DispatchQueue */ = {
+			isa = PBXGroup;
+			children = (
+				4EB022E1248825A600965345 /* DispatchQueueExtension.swift */,
+			);
+			path = DispatchQueue;
+			sourceTree = "<group>";
+		};
 		4EBBC939246B476F00C7978D /* MainChatCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1609,6 +1619,7 @@
 		4EE9F93724699B7700BB4A39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4EB022E02488251600965345 /* DispatchQueue */,
 				4E4542212479FAD300955FD8 /* TableView */,
 				4E45421E2479CEA700955FD8 /* String */,
 				4EC16268246F366D0053F581 /* ConvertToDictionary */,
@@ -2361,6 +2372,7 @@
 				0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */,
 				CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */,
 				4E1FBE36247E1CFB00C463D5 /* ChatStatus.swift in Sources */,
+				4EB022E2248825A600965345 /* DispatchQueueExtension.swift in Sources */,
 				4EBED80D24816415009A43FB /* NotificationContract.swift in Sources */,
 				4E87AF59247F000700002E66 /* ResultPDFCollectionViewCell.swift in Sources */,
 				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
