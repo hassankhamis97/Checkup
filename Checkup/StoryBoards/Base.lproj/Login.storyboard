@@ -419,70 +419,90 @@
                         <sections>
                             <tableViewSection id="cx8-zc-oYp">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="178" id="ftM-Ii-LWB">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="178"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="165" id="ftM-Ii-LWB">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="165"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ftM-Ii-LWB" id="Da4-H4-1hB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="116" id="zCX-GW-Kjr">
-                                        <rect key="frame" x="0.0" y="206" width="414" height="116"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zCX-GW-Kjr" id="Ps4-ug-e8C">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="201" id="ngm-of-0ix">
-                                        <rect key="frame" x="0.0" y="322" width="414" height="201"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="333" id="ngm-of-0ix">
+                                        <rect key="frame" x="0.0" y="193" width="414" height="333"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ngm-of-0ix" id="Sob-us-UVf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Enter your Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfp-Lj-Wzs" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                    <rect key="frame" x="36" y="32" width="342" height="32"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRP-iZ-5gI">
-                                                    <rect key="frame" x="90" y="127" width="48" height="30"/>
-                                                    <state key="normal" title="Cancel"/>
-                                                    <connections>
-                                                        <action selector="cancelReseting:" destination="SnO-rl-MQ3" eventType="touchUpInside" id="JRV-Nx-YPh"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Valid Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLO-0F-T6K">
-                                                    <rect key="frame" x="36" y="85" width="342" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.024170271520000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZt-7b-o97">
-                                                    <rect key="frame" x="285" y="127" width="39" height="30"/>
-                                                    <state key="normal" title="Reset"/>
-                                                    <connections>
-                                                        <action selector="resetPassword:" destination="SnO-rl-MQ3" eventType="touchUpInside" id="H6t-QD-NoQ"/>
-                                                    </connections>
-                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cal-W2-Qx4">
+                                                    <rect key="frame" x="20" y="11" width="374" height="311"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Enter your Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfp-Lj-Wzs" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                            <rect key="frame" x="20" y="20" width="334" height="44"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Valid Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLO-0F-T6K">
+                                                            <rect key="frame" x="20" y="84" width="334" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="0.024170271520000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZt-7b-o97">
+                                                            <rect key="frame" x="116" y="134.5" width="142" height="57"/>
+                                                            <color key="backgroundColor" red="0.019607843137254902" green="0.60392156862745094" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="57" id="FBD-wr-KB0"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="ore-JU-EYU"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Reset">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="resetPassword:" destination="SnO-rl-MQ3" eventType="touchUpInside" id="H6t-QD-NoQ"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRP-iZ-5gI">
+                                                            <rect key="frame" x="116" y="221.5" width="142" height="57"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="57" id="JXl-J6-3So"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="tVA-qL-550"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Cancel">
+                                                                <color key="titleColor" red="0.0" green="0.03205958549" blue="0.023433238669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="cancelReseting:" destination="SnO-rl-MQ3" eventType="touchUpInside" id="JRV-Nx-YPh"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="GLO-0F-T6K" firstAttribute="centerX" secondItem="cal-W2-Qx4" secondAttribute="centerX" id="CIp-gi-4pD"/>
+                                                        <constraint firstItem="oRP-iZ-5gI" firstAttribute="centerX" secondItem="cal-W2-Qx4" secondAttribute="centerX" id="DZ8-jy-YwB"/>
+                                                        <constraint firstItem="GLO-0F-T6K" firstAttribute="top" secondItem="qfp-Lj-Wzs" secondAttribute="bottom" constant="20" id="ElW-dz-Jsd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="GLO-0F-T6K" secondAttribute="trailing" constant="20" id="LBA-hg-l9J"/>
+                                                        <constraint firstItem="cZt-7b-o97" firstAttribute="centerX" secondItem="cal-W2-Qx4" secondAttribute="centerX" id="Sva-Kb-3Do"/>
+                                                        <constraint firstItem="oRP-iZ-5gI" firstAttribute="top" secondItem="cZt-7b-o97" secondAttribute="bottom" constant="30" id="cde-Fc-5SP"/>
+                                                        <constraint firstItem="qfp-Lj-Wzs" firstAttribute="leading" secondItem="cal-W2-Qx4" secondAttribute="leading" constant="20" id="eV2-6N-y0t"/>
+                                                        <constraint firstItem="GLO-0F-T6K" firstAttribute="leading" secondItem="cal-W2-Qx4" secondAttribute="leading" constant="20" id="kcC-T9-cvq"/>
+                                                        <constraint firstItem="cZt-7b-o97" firstAttribute="top" secondItem="GLO-0F-T6K" secondAttribute="bottom" constant="30" id="rNf-Np-xQT"/>
+                                                        <constraint firstItem="qfp-Lj-Wzs" firstAttribute="centerX" secondItem="cal-W2-Qx4" secondAttribute="centerX" id="suu-oB-HhB"/>
+                                                        <constraint firstItem="qfp-Lj-Wzs" firstAttribute="top" secondItem="cal-W2-Qx4" secondAttribute="top" constant="20" id="vmC-kG-iA1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qfp-Lj-Wzs" secondAttribute="trailing" constant="20" id="zD7-el-nFh"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="cZt-7b-o97" firstAttribute="top" secondItem="GLO-0F-T6K" secondAttribute="bottom" constant="21" id="4sP-H6-H6h"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="GLO-0F-T6K" secondAttribute="trailing" constant="16" id="5k6-KE-dOv"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="cZt-7b-o97" secondAttribute="trailing" constant="70" id="7LU-Wx-lsO"/>
-                                                <constraint firstItem="GLO-0F-T6K" firstAttribute="leading" secondItem="Sob-us-UVf" secondAttribute="leadingMargin" constant="16" id="CKU-dd-rKR"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="qfp-Lj-Wzs" secondAttribute="trailing" constant="16" id="DXT-bk-Khl"/>
-                                                <constraint firstItem="qfp-Lj-Wzs" firstAttribute="leading" secondItem="Sob-us-UVf" secondAttribute="leadingMargin" constant="16" id="Iuy-Cp-Olr"/>
-                                                <constraint firstItem="oRP-iZ-5gI" firstAttribute="leading" secondItem="Sob-us-UVf" secondAttribute="leadingMargin" constant="70" id="XqS-2g-h7H"/>
-                                                <constraint firstItem="oRP-iZ-5gI" firstAttribute="top" secondItem="GLO-0F-T6K" secondAttribute="bottom" constant="21" id="qRV-5u-oDe"/>
-                                                <constraint firstItem="qfp-Lj-Wzs" firstAttribute="top" secondItem="Sob-us-UVf" secondAttribute="topMargin" constant="21" id="sNR-iW-ieo"/>
-                                                <constraint firstItem="GLO-0F-T6K" firstAttribute="top" secondItem="qfp-Lj-Wzs" secondAttribute="bottom" constant="21" id="vnM-J9-2WM"/>
+                                                <constraint firstItem="cal-W2-Qx4" firstAttribute="centerX" secondItem="Sob-us-UVf" secondAttribute="centerX" id="8z2-ET-HZZ"/>
+                                                <constraint firstItem="cal-W2-Qx4" firstAttribute="top" secondItem="Sob-us-UVf" secondAttribute="topMargin" id="FIp-S3-gDH"/>
+                                                <constraint firstItem="cal-W2-Qx4" firstAttribute="leading" secondItem="Sob-us-UVf" secondAttribute="leading" constant="20" id="Xg1-0A-u1s"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cal-W2-Qx4" secondAttribute="bottom" id="aBj-kf-ohe"/>
+                                                <constraint firstAttribute="trailing" secondItem="cal-W2-Qx4" secondAttribute="trailing" constant="20" id="wNq-Vw-kPL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
