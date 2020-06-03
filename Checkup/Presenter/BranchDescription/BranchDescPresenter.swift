@@ -8,7 +8,7 @@
 
 import Foundation
 class BranchDescPresenter : IBranchDescPresenter {
-    
+   
     
     
     var branchDescModel : IBranchDescModel!
@@ -19,11 +19,14 @@ class BranchDescPresenter : IBranchDescPresenter {
     }
     
     
-    func getDataFromModel() {
+  
+    func getDataFromModel(id: String) {
+           
         branchDescModel = BranchDescModel(presenter: self)
-        branchDescModel.fetchBranchDesc()
-        
-    }
+        branchDescModel.fetchBranchDesc(id: id)
+       }
+       
+       
     
     func onSuccess(branchDescObj: BranchDescription) {
         branchDescView.showDataToView(barnchDescObjInView: branchDescObj)

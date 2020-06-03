@@ -21,6 +21,7 @@ extension MainChatViewController : UITableViewDataSource,UITableViewDelegate {
        cell.pearedUserName.text = viewPearedArr[indexPath.row].name!
         
         
+        
         cell.pearedUserImg.sd_setImage(with: URL(string: viewPearedArr[indexPath.row].imgUrl!), placeholderImage:UIImage(named: "placeholder.png"))
         
         

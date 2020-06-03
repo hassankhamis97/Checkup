@@ -17,6 +17,8 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
     var reviewPresenterInView : IReviewsPresenter!
     var reviewObjInView : [Review]!
     
+    var branchId : String!
+    
     let imageViewMaxHeight : CGFloat = 250
     let imageViewMinHeight : CGFloat = 100
     
@@ -30,7 +32,7 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
     @IBOutlet weak var viewOutlet: UIView!
     @IBOutlet weak var btnViewOutlet: UIView!
     
-    
+   
   
       
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +46,7 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
         self.branchDescriptionTableView.dataSource = self
         myLabel.alpha = 0
         branchDescPresenter = BranchDescPresenter(view: self)
-        branchDescPresenter.getDataFromModel()
+        branchDescPresenter.getDataFromModel(id: branchId)
                
         //reviewPresenterInView = ReviewsPresenter(view: self)
         //reviewPresenterInView.getReviewsDataFromModel()
