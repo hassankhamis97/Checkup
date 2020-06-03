@@ -1,0 +1,61 @@
+
+/* Class = "UILabel"; text = "Fasting Blood Sugar "; ObjectID = "2Vs-oR-Er0"; */
+"2Vs-oR-Er0.text" = "سكر الدم (صائم) ";
+
+/* Class = "UILabel"; text = "Postprandial Blood Glucose "; ObjectID = "49m-Rc-uVq"; */
+"49m-Rc-uVq.text" = "سكر الدم (فاطر)";
+
+/* Class = "UILabel"; text = "G6PD"; ObjectID = "663-JB-qYh"; */
+"663-JB-qYh.text" = "G6PD";
+
+/* Class = "UILabel"; text = "Hdroxyproiene"; ObjectID = "9uL-ni-IoI"; */
+"9uL-ni-IoI.text" = "Hdroxyproiene";
+
+/* Class = "UILabel"; text = " It is preferable to fast from 6-8 hours and to attend in the morning and before treatment with iron or blood transfusion"; ObjectID = "A9K-Xd-ZaC"; */
+"A9K-Xd-ZaC.text" = " يفضل الصيام من ٦-٨ ساعات و الحضور صباحا وقبل العلاج بالحديد او نقل الدم";
+
+/* Class = "UILabel"; text = "Warfarin (Marfan) must be stopped for a week before the analysis, as well as heparin for two days before the analysis"; ObjectID = "Afh-og-Fw1"; */
+"Afh-og-Fw1.text" = "يجب ايقاف عقار الوارفرين ( الماريفان) لمدة اسبوع قبل التحليل كذلك ايقاف الهيبارين لمدة يومين قبل التحليل";
+
+/* Class = "UILabel"; text = "It is stipulated that the analysis should not be performed after a blood transfusion or a recurrence has occurred until at least 3-4 weeks have passed"; ObjectID = "B4A-Vc-xHx"; */
+"B4A-Vc-xHx.text" = "يشترط عدم إجراء التحليل بعد نقل دم او حدوث انتكاسه إلا بعد مرور اسبوع ٣-٤ اسابيع على الاقل ";
+
+/* Class = "UILabel"; text = "Fasting 8-10 hours is preferred Fasting 8-10 hours "; ObjectID = "Fcf-UP-rM4"; */
+"Fcf-UP-rM4.text" = " يفضل  الصيام ٨ -١٠ ساعات";
+
+/* Class = "UILabel"; text = "Abstaining from antibiotics and antacids for 5 days and fasting 8 hours"; ObjectID = "Koz-dI-m92"; */
+"Koz-dI-m92.text" = "الإمتناع عن المضادات الحيوية و مضادات الحموضة مدة ٥ ايام و الصيام ٨ ساعات
+";
+
+/* Class = "UILabel"; text = "It is required to count the two hours from the beginning of eating and after taking the treatment if it is found and it is not allowed to eat or smoke during the two hours, as well please finish eating within 10 minutes and attend to the laboratory at least a quarter of an hour before the appointment"; ObjectID = "LGR-NG-khM"; */
+"LGR-NG-khM.text" = "يشترط إحتساب الساعتين من ابتداء الأكل و بعد أخذ العلاج إذا وجد ولا يسمح بالأكل او التدخين أثناء الساعتين ,كما يرجى الإنتهاء من الأكل خلال ١٠ دقائق و الحضور للمعمل قبل الميعاد بربع ساعه على الأقل ";
+
+/* Class = "UILabel"; text = "the number of fasting hours is 12-14 hours"; ObjectID = "MX8-VJ-zql"; */
+"MX8-VJ-zql.text" ="عدد ساعات الصيام من ١٢-١٤ ساعة";
+
+/* Class = "UILabel"; text = "Glucose Tolerance Test(GTT)"; ObjectID = "ZEL-c5-yZq"; */
+"ZEL-c5-yZq.text" = "منحنى سكر الدم (GTT)";
+
+/* Class = "UILabel"; text = " Eat carbohydrates for 3 consecutive days so that the daily amount is not less than 500 grams\nThe curve is made in the morning after fasting from 10-14 hours (Pregnant woman after fasting from 8-12 hours)"; ObjectID = "ZTm-lm-D9q"; */
+"ZTm-lm-D9q.text" = "تناول النشويات لمدة ٣ ايام متتالية بحيث لا تقل الكمية اليومية عن ٥٠٠ جرام يتم عمل المنحنى في الصباح بعد الصيام من ١٠-١٤ ساعه (المرأة الحامل بعد صيام من ٨-١٢ ساعه)";
+
+/* Class = "UILabel"; text = "Serum iron"; ObjectID = "cuq-EM-PnF"; */
+"cuq-EM-PnF.text" = "نسبة الحديد";
+
+/* Class = "UILabel"; text = "PRA"; ObjectID = "hal-wr-3vw"; */
+"hal-wr-3vw.text" = "PRA";
+
+/* Class = "UILabel"; text = "Blood lipids"; ObjectID = "j85-gD-yHo"; */
+"j85-gD-yHo.text" = "دهون الدم";
+
+/* Class = "UILabel"; text = "Helicobacter"; ObjectID = "tzm-yb-kgd"; */
+"tzm-yb-kgd.text" = "جرثومة المعده";
+
+/* Class = "UILabel"; text = "Protein C"; ObjectID = "wPi-gU-YHl"; */
+"wPi-gU-YHl.text" = "Protein C";
+
+/* Class = "UILabel"; text = "Refrain from meat and gelatin for 48 hours"; ObjectID = "yHZ-Xa-KPg"; */
+"yHZ-Xa-KPg.text" = "الإمتناع عن اللحوم و الجيلاتين  لمدة ٤٨ ساعه ";
+
+/* Class = "UILabel"; text = "stop taking the following for 4 weeks: licorice, tobacco, and diuretics. And withdrawal is done in the early morning before 10 o'clock."; ObjectID = "yna-qz-OHm"; */
+"yna-qz-OHm.text" = "يجب التوقف عن اخذ الاتي لمدة ٤ اسابيع: عرق سوس- التبغ- الادوية المدرة للبول. و يتم السحب في الصباح الباكر قبل الساعة ال١٠..";
