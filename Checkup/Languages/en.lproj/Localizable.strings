@@ -69,3 +69,8 @@
 "No Internet Connection" = "No Internet Connection";
 
 "There is no data" = "There is no data";
+
+
+
+"STATUS_IS_NOT_FROM_HOME_TEXT"="Lab Details :";
+"STATUS_SHOW_LAB_DETALS" = "Show Lab Details";

@@ -85,6 +85,7 @@
 		4E32D2992485117A003B6408 /* LabDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32D2982485117A003B6408 /* LabDescViewController.swift */; };
 		4E32D29D2485297A003B6408 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32D29C2485297A003B6408 /* StyleViewController.swift */; };
 		4E32D29F24858E9A003B6408 /* NewRequestResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32D29E24858E9A003B6408 /* NewRequestResponseExtension.swift */; };
+		4E32D2A32485F3FD003B6408 /* AuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32D2A22485F3FD003B6408 /* AuthenticationType.swift */; };
 		4E3C1F3E2476919800D9761D /* MainBranch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C1F3D2476919800D9761D /* MainBranch.swift */; };
 		4E3C1F40247693A700D9761D /* GetLabsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C1F3F247693A700D9761D /* GetLabsModel.swift */; };
 		4E3C1F432476941A00D9761D /* GetLabsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C1F422476941A00D9761D /* GetLabsPresenter.swift */; };
@@ -381,6 +382,7 @@
 		4E32D29C2485297A003B6408 /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
 		4E32D29E24858E9A003B6408 /* NewRequestResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRequestResponseExtension.swift; sourceTree = "<group>"; };
 		4E32D2A12485910A003B6408 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/NewRequestScreen.strings; sourceTree = "<group>"; };
+		4E32D2A22485F3FD003B6408 /* AuthenticationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationType.swift; sourceTree = "<group>"; };
 		4E3C1F3D2476919800D9761D /* MainBranch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBranch.swift; sourceTree = "<group>"; };
 		4E3C1F3F247693A700D9761D /* GetLabsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLabsModel.swift; sourceTree = "<group>"; };
 		4E3C1F422476941A00D9761D /* GetLabsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLabsPresenter.swift; sourceTree = "<group>"; };
@@ -1695,6 +1697,7 @@
 			children = (
 				4EF2BA6624733C9F00602123 /* FilterStatus.swift */,
 				4EFA6ECE2473D58100D83F32 /* TestType.swift */,
+				4E32D2A22485F3FD003B6408 /* AuthenticationType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -2517,6 +2520,7 @@
 				4E0E3502246BA11B00814696 /* ConvertTimeStampToDate.swift in Sources */,
 				CC79E5AC2455B46A00C8A166 /* LoginTableViewController.swift in Sources */,
 				CC5DFD0C2468C22F003B9F18 /* PopUpTableViewController.swift in Sources */,
+				4E32D2A32485F3FD003B6408 /* AuthenticationType.swift in Sources */,
 				A33E799C246DC2D5000897A6 /* MapViewTableViewCell.swift in Sources */,
 				CC298B1424740A04001DEAE5 /* ExtesnionMoreView.swift in Sources */,
 				A39BF97B246DA47E003500A8 /* DataTableViewCell.swift in Sources */,
