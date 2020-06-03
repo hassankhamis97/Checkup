@@ -21,12 +21,20 @@ extension MainChatViewController : UITableViewDataSource,UITableViewDelegate {
        cell.pearedUserName.text = viewPearedArr[indexPath.row].name!
         
         
+        
         cell.pearedUserImg.sd_setImage(with: URL(string: viewPearedArr[indexPath.row].imgUrl!), placeholderImage:UIImage(named: "placeholder.png"))
         
-        cell.lastMessage.text = viewPearedArr[indexPath.row].lastMessage!
+        
+        
+        if(viewPearedArr[indexPath.row].lastMessage!.contains("https://firebasestorage.googleapis.com/"))
+        {
+             cell.lastMessage.text = "Image"
+     //       cell.lastMessage
+        }else{
+             cell.lastMessage.text = viewPearedArr[indexPath.row].lastMessage!
+        }
      
-//        if viewPearedArr[indexPath.row].lastMessageTime! != "" {
-//            viewPearedArr[indexPath.row].lastMessageTime! != "" ? cell.lastMessageTime.text = Date().getDateFromTimeStamp(timeStamp: Int64(viewPearedArr[indexPath.row].lastMessageTime!) as! Int64) : ""
+        
         cell.lastMessageTime.text = viewPearedArr[indexPath.row].lastMessageTime!.isEmpty ?  "" : Date().getDateFromTimeStamp(timeStamp: Int64(viewPearedArr[indexPath.row].lastMessageTime!) as! Int64) 
 //        }
         

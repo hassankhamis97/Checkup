@@ -19,7 +19,7 @@ class StyleViewController: UINavigationController {
         gradient.frame = bounds
 //        gradientLayer.colors = [#colorLiteral(red: 0, green: 0.5725490196, blue: 0.2705882353, alpha: 1).cgColor, UIColor(red: 131/255, green: 234/255, blue: 241/255, alpha: 1).cgColor]
 //        gradient.colors = [UIColor(red: 131/255, green: 234/255, blue: 241/255, alpha: 1).cgColor, #colorLiteral(red: 0.3882352941, green: 0.6431372549, blue: 1, alpha: 1).cgColor]
-        gradient.colors = [#colorLiteral(red: 0.01568627451, green: 0.3647058824, blue: 0.9137254902, alpha: 1).cgColor, #colorLiteral(red: 0.03529411765, green: 0.7413678485, blue: 0.9764705882, alpha: 1).cgColor]
+        gradient.colors = [#colorLiteral(red: 0.01568627451, green: 0.3647058824, blue: 0.9137254902, alpha: 1).cgColor, #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1).cgColor]
 //        gradient.colors = [#colorLiteral(red: 0.2705882353, green: 0.3607843137, blue: 0.9921568627, alpha: 1).cgColor, #colorLiteral(red: 0.1607843137, green: 0.5921568627, blue: 0.9529411765, alpha: 1).cgColor]
 //        gradient.colors = [UIColor.init(red: 131, green: 234, blue: 241, alpha: 1), UIColor.init(red: 99, green: 164, blue: 255, alpha: 1)]
 //        gradient.colors = [UIColor.blue.cgColor, UIColor.systemTeal.cgColor]

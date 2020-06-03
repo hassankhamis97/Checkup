@@ -17,6 +17,8 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
     var reviewPresenterInView : IReviewsPresenter!
     var reviewObjInView : [Review]!
     
+    var branchId : String!
+    
     let imageViewMaxHeight : CGFloat = 250
     let imageViewMinHeight : CGFloat = 100
     
@@ -30,7 +32,7 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
     @IBOutlet weak var viewOutlet: UIView!
     @IBOutlet weak var btnViewOutlet: UIView!
     
-    
+   
   
       
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +46,7 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
         self.branchDescriptionTableView.dataSource = self
         myLabel.alpha = 0
         branchDescPresenter = BranchDescPresenter(view: self)
-        branchDescPresenter.getDataFromModel()
+        branchDescPresenter.getDataFromModel(id: branchId)
                
         //reviewPresenterInView = ReviewsPresenter(view: self)
         //reviewPresenterInView.getReviewsDataFromModel()
@@ -52,10 +54,9 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
         
         viewOutlet.clipsToBounds = true
         viewOutlet.layer.cornerRadius = 25
-       // viewOutlet.layer.maskedCorners = [.layerMinXMinYCorner , .layerMaxXMinYCorner]
         viewOutlet.layer.maskedCorners = [.layerMaxXMaxYCorner , .layerMinXMaxYCorner]
         btnViewOutlet.backgroundColor = .clear
-        let blurEffect = UIBlurEffect(style: .extraLight)
+        let blurEffect = UIBlurEffect(style: .regular)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.translatesAutoresizingMaskIntoConstraints = false
         btnViewOutlet.insertSubview(blurView, at: 0)
