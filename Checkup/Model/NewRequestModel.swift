@@ -80,8 +80,8 @@ class NewRequestModel: INewRequestModel {
             
             testFinObj.generatedCode = String(code)
             let testFinDic = try! DictionaryEncoder.encode(testFinObj)
-//            let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewAnalysis"
-            let urlString = "http://192.168.1.9:3000/api/AnalysisService/AddNewAnalysis"
+            let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewAnalysis"
+//            let urlString = "http://192.168.1.9:3000/api/AnalysisService/AddNewAnalysis"
             Alamofire.request(urlString, method: .post, parameters: testFinDic,encoding: JSONEncoding.default, headers: nil).responseString {
                 response in
                 switch response.result {

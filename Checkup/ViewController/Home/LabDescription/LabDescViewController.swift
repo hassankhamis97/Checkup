@@ -64,6 +64,8 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
         var filter : FilterLabTableView!
         var myId : Int!
         var labId : String!
+        var idFb : String!
+    
     var lattitude : Double!
     var longitude : Double!
     var isLoading = false
@@ -137,6 +139,7 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
             else if labDescriptionObj.branches == nil ||  labDescriptionObj.branches!.count == 0{
                 errorMessage(msg: "There is no data")
             }
+
     //        myId = id
     //        print("my id\(id)")
                                                    // if there is data

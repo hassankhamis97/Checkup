@@ -9,8 +9,6 @@
 import UIKit
 
 class ReviewsTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var readMoreOutlet: UIButton!
  
  //       let reviews = storyboard?.instantiateViewController(withIdentifier: "reviews") as! //ReviewsTableViewController
        // navigationController?.pushViewController(reviews, animated: true)
