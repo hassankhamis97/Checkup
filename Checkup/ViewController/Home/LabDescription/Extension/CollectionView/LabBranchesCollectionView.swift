@@ -111,6 +111,8 @@ extension LabDescViewController : UICollectionViewDataSource , UICollectionViewD
         
         let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
         branchDesc.modalPresentationStyle = .fullScreen
+        branchDesc.branchId = labDescriptionObj.branches![indexPath.row].idFB
+        
         self.present(branchDesc , animated: true , completion: nil)
         }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

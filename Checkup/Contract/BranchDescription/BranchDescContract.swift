@@ -15,12 +15,12 @@ protocol IBranchDescView{
 
 
 protocol IBranchDescPresenter{
-    func getDataFromModel()
+    func getDataFromModel(id : String)
     func onSuccess(branchDescObj : BranchDescription)
     func onFail()
 }
 
 
 protocol IBranchDescModel{
-    func fetchBranchDesc()
+    func fetchBranchDesc(id : String)
 }
