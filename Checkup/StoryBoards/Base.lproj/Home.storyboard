@@ -1336,7 +1336,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reviewsCell" rowHeight="119" id="njX-9Y-DMH" customClass="mainReviewsTableViewCell" customModule="Checkup" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="reviewsCell" rowHeight="119" id="njX-9Y-DMH" customClass="mainReviewsTableViewCell" customModule="Checkup" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="119"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="njX-9Y-DMH" id="3em-mw-z9f">
@@ -1389,6 +1389,7 @@
                                             <constraints>
                                                 <constraint firstItem="jSY-XG-MV8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3ib-QW-0Kj" secondAttribute="trailing" constant="11" id="23I-mc-ANR"/>
                                                 <constraint firstAttribute="trailing" secondItem="XYz-Gk-BPR" secondAttribute="trailing" constant="11" id="4q6-vH-W0E"/>
+                                                <constraint firstAttribute="bottom" secondItem="XYz-Gk-BPR" secondAttribute="bottom" constant="9.5" id="5AQ-AG-DQH"/>
                                                 <constraint firstItem="3ib-QW-0Kj" firstAttribute="top" secondItem="CXZ-7j-xZC" secondAttribute="top" constant="19" id="6c0-w3-ARo"/>
                                                 <constraint firstItem="jSY-XG-MV8" firstAttribute="top" secondItem="CXZ-7j-xZC" secondAttribute="top" constant="19" id="AU1-nH-Mzr"/>
                                                 <constraint firstItem="XYz-Gk-BPR" firstAttribute="leading" secondItem="0Wu-Zk-3lN" secondAttribute="trailing" constant="12" id="CqX-EL-vFD"/>
@@ -1399,6 +1400,7 @@
                                                 <constraint firstItem="NrI-Ko-Jdy" firstAttribute="top" secondItem="3ib-QW-0Kj" secondAttribute="bottom" constant="5" id="jwk-p0-8OC"/>
                                                 <constraint firstItem="0Wu-Zk-3lN" firstAttribute="leading" secondItem="CXZ-7j-xZC" secondAttribute="leading" constant="11" id="krr-Qn-0zd"/>
                                                 <constraint firstItem="3ib-QW-0Kj" firstAttribute="leading" secondItem="0Wu-Zk-3lN" secondAttribute="trailing" constant="12" id="qKH-fF-U0C"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="yeL-hp-Lf2"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -1430,24 +1432,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bt5-QM-F2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6614" y="824"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="UL2-Wb-suE">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aV6-fi-2im" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hOs-k3-zA9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="voY-Tu-5Yq" kind="relationship" relationship="rootViewController" id="y4L-Rf-Tyd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6RQ-6b-JBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4744.927536231884" y="823.66071428571422"/>
         </scene>
     </scenes>
     <resources>
