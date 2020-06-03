@@ -52,10 +52,9 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
         
         viewOutlet.clipsToBounds = true
         viewOutlet.layer.cornerRadius = 25
-       // viewOutlet.layer.maskedCorners = [.layerMinXMinYCorner , .layerMaxXMinYCorner]
         viewOutlet.layer.maskedCorners = [.layerMaxXMaxYCorner , .layerMinXMaxYCorner]
         btnViewOutlet.backgroundColor = .clear
-        let blurEffect = UIBlurEffect(style: .extraLight)
+        let blurEffect = UIBlurEffect(style: .regular)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.translatesAutoresizingMaskIntoConstraints = false
         btnViewOutlet.insertSubview(blurView, at: 0)

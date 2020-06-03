@@ -112,7 +112,7 @@ class HomeViewController: UIViewController ,UICollectionViewDelegateFlowLayout ,
         
         showIndicator()
         let homeLabPresenter = HomeLabPresenter(getLabsViewRef: self)
-        homeLabPresenter.getLabs(take: 2, skip: homeLabArr.count)
+        homeLabPresenter.getLabs(take: 6, skip: homeLabArr.count)
         
         
         tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")

@@ -181,7 +181,7 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
 //        if newHeaderHeight !=  headerViewHeight.constant{
 //            newHeaderHeightFixed = newHeaderHeight
 //        }
-                  if newHeaderHeight >= (imageViewMaxHeight - 50){ //200 >= 276
+                  if newHeaderHeight >= imageViewMaxHeight{ //200 >= 276
                           headerViewHeight.constant = imageViewMaxHeight
                             topViewConstraint.constant = topViewConstrainsMaxHeight
                       }else if newHeaderHeight < imageViewMinHeight{ //200 < 0

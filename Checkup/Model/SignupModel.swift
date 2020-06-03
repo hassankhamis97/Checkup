@@ -77,8 +77,8 @@ class SignupModel: ISignupModel {
         }
     }
     
-   class func addNameToFireStore(username: String, id: String) {
+    class func addNameToFireStore(username: String, id: String) {
         // Update one field, creating the document if it does not exist.
-        Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": "https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/users.png?alt=media&token=8fba9f3d-0739-4b7f-afab-8ae7b6e1c442" ], merge: true)
+        Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": "https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/users.png?alt=media&token=8fba9f3d-0739-4b7f-afab-8ae7b6e1c442", "type": AuthenticationType.user.rawValue ], merge: true)
     }
 }

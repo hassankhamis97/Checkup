@@ -20,6 +20,9 @@ class GetRequestsPresenter: IGetRequestsPresenter , ICheckConnection{
 
     func getRequests(testFilter: TestFilter) {
         self.testFilter = testFilter
+        getRequestsViewRef.showIndicator()
+        var newRequestModel = GetRequestsModel(getRequestsPresenterRef: self)
+        newRequestModel.getRequests(testFilter: testFilter)
         InternetConnection.checkInternetConnection(iCheckConnection: self)
         
         
@@ -36,9 +39,9 @@ class GetRequestsPresenter: IGetRequestsPresenter , ICheckConnection{
         getRequestsViewRef.errorMessage(msg: message)
     }
     func onSucessfullyConnected() {
-        getRequestsViewRef.showIndicator()
-        var newRequestModel = GetRequestsModel(getRequestsPresenterRef: self)
-        newRequestModel.getRequests(testFilter: testFilter)
+//        getRequestsViewRef.showIndicator()
+//        var newRequestModel = GetRequestsModel(getRequestsPresenterRef: self)
+//        newRequestModel.getRequests(testFilter: testFilter)
     }
     
     func onFailConnected() {

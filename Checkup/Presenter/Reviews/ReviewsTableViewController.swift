@@ -19,7 +19,8 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
 
         reviewPresenterInView = ReviewsPresenter(view: self)
         reviewPresenterInView.getReviewsDataFromModel()
-        
+//        tableView.estimatedRowHeight = 100.0
+//        tableView.rowHeight = UITableView.automaticDimension
         
     }
 
@@ -76,7 +77,10 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 115
+//        var cell = tableView.cellForRow(at: indexPath)
+//        var cellHeight = cell?.layer.frame.height
+//        return cellHeight!
+        return UITableView.automaticDimension
     }
     
 
