@@ -101,12 +101,19 @@ class MoreTableViewController: UITableViewController {
                 
             }
        print("logout")
-            
+            // precautionsSVC
         }
-        
+        if indexPath.row==4{
+                   
+                 let vc = storyboard?.instantiateViewController(withIdentifier: "precautionsSVC") as!PrecautionsTableViewController
+                           
+                           navigationController?.pushViewController(vc, animated: true)
+                   
+               }
         
     }
  
-    
+  
+         
 
 }

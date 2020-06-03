@@ -235,6 +235,8 @@
 		CC1E7C322481656A00039693 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1E7C342481656A00039693 /* More.storyboard */; };
 		CC298B1424740A04001DEAE5 /* ExtesnionMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */; };
 		CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */; };
+		CC36EA792487CD460067568A /* Precautions .storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC36EA7B2487CD460067568A /* Precautions .storyboard */; };
+		CC3E40B824870A9100E3B481 /* PrecautionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E40B724870A9100E3B481 /* PrecautionsTableViewController.swift */; };
 		CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */; };
 		CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65C92479ACED00BA1062 /* InternetConnection.swift */; };
 		CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */; };
@@ -541,6 +543,9 @@
 		CC1E7C362481658100039693 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/More.strings; sourceTree = "<group>"; };
 		CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtesnionMoreView.swift; sourceTree = "<group>"; };
 		CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
+		CC36EA7A2487CD460067568A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Precautions .storyboard"; sourceTree = "<group>"; };
+		CC36EA7D2487CD4E0067568A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = "ar.lproj/Precautions .strings"; sourceTree = "<group>"; };
+		CC3E40B724870A9100E3B481 /* PrecautionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecautionsTableViewController.swift; sourceTree = "<group>"; };
 		CC49FBCD247D37EE00A00D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
 		CC49FBD0247D37F200A00D97 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Statistics.strings; sourceTree = "<group>"; };
 		CC4B65C92479ACED00BA1062 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
@@ -998,6 +1003,7 @@
 				CC1E7C342481656A00039693 /* More.storyboard */,
 				CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */,
 				03358419248443FE0030F01C /* ReviewsStoryboard.storyboard */,
+				CC36EA7B2487CD460067568A /* Precautions .storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -1005,6 +1011,7 @@
 		4E22F932243E73A90090693C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CC3E40B924870A9C00E3B481 /* Precautions */,
 				4E32D29B248528FB003B6408 /* Navigation */,
 				032AB5CB2482023B0021DE4F /* Reviews */,
 				CC80B9D724771F1C00521508 /* Statistics */,
@@ -1911,6 +1918,14 @@
 			path = MoreView;
 			sourceTree = "<group>";
 		};
+		CC3E40B924870A9C00E3B481 /* Precautions */ = {
+			isa = PBXGroup;
+			children = (
+				CC3E40B724870A9100E3B481 /* PrecautionsTableViewController.swift */,
+			);
+			path = Precautions;
+			sourceTree = "<group>";
+		};
 		CC53A8AF248280A50087CFC7 /* Privacy */ = {
 			isa = PBXGroup;
 			children = (
@@ -2205,6 +2220,7 @@
 				4E432F152464F6EF00D1CACA /* pdf.pdf in Resources */,
 				A39BF97C246DA47E003500A8 /* DataTableViewCell.xib in Resources */,
 				0335841A248443FF0030F01C /* ReviewsStoryboard.storyboard in Resources */,
+				CC36EA792487CD460067568A /* Precautions .storyboard in Resources */,
 				4E22F904243E6E6C0090693C /* Main.storyboard in Resources */,
 				A33CA62C246D3F610014CF6B /* UserCustomTableViewCell.xib in Resources */,
 				4E432F092464F6E100D1CACA /* History.storyboard in Resources */,
@@ -2494,6 +2510,7 @@
 				A3C5F0382472C7850069413F /* SignupResponseExtension.swift in Sources */,
 				4E4542202479CEC800955FD8 /* LocalizedString.swift in Sources */,
 				4E15ACEE24718EDF004418B1 /* GetRequestResponseExtension.swift in Sources */,
+				CC3E40B824870A9100E3B481 /* PrecautionsTableViewController.swift in Sources */,
 				4EF1A1ED2476F00100597A15 /* Branches.swift in Sources */,
 				03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */,
 				4EA8751B248048F600E95B30 /* ImageMessage.swift in Sources */,
@@ -2660,6 +2677,15 @@
 				CC1E7C362481658100039693 /* ar */,
 			);
 			name = More.storyboard;
+			sourceTree = "<group>";
+		};
+		CC36EA7B2487CD460067568A /* Precautions .storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC36EA7A2487CD460067568A /* Base */,
+				CC36EA7D2487CD4E0067568A /* ar */,
+			);
+			name = "Precautions .storyboard";
 			sourceTree = "<group>";
 		};
 		CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */ = {
