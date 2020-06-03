@@ -136,6 +136,7 @@
 		4EA87525248068D300E95B30 /* ImageIndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */; };
 		4EAA2AD8246CABC70050B0AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */; };
 		4EB022E2248825A600965345 /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB022E1248825A600965345 /* DispatchQueueExtension.swift */; };
+		4EB022E524882AFC00965345 /* CompressImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB022E424882AFC00965345 /* CompressImage.swift */; };
 		4EB18BD924844EE3007D35AE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB18BDB24844EE3007D35AE /* Home.storyboard */; };
 		4EB18BDF24847B45007D35AE /* AccessLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB18BDE24847B45007D35AE /* AccessLocation.swift */; };
 		4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */; };
@@ -441,6 +442,7 @@
 		4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIndicatorTableViewCell.xib; sourceTree = "<group>"; };
 		4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EB022E1248825A600965345 /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
+		4EB022E424882AFC00965345 /* CompressImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressImage.swift; sourceTree = "<group>"; };
 		4EB18BDA24844EE3007D35AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		4EB18BDE24847B45007D35AE /* AccessLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLocation.swift; sourceTree = "<group>"; };
 		4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -1295,6 +1297,14 @@
 			path = DispatchQueue;
 			sourceTree = "<group>";
 		};
+		4EB022E324882AE100965345 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				4EB022E424882AFC00965345 /* CompressImage.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		4EBBC939246B476F00C7978D /* MainChatCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1619,6 +1629,7 @@
 		4EE9F93724699B7700BB4A39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4EB022E324882AE100965345 /* UIImage */,
 				4EB022E02488251600965345 /* DispatchQueue */,
 				4E4542212479FAD300955FD8 /* TableView */,
 				4E45421E2479CEA700955FD8 /* String */,
@@ -2376,6 +2387,7 @@
 				4EBED80D24816415009A43FB /* NotificationContract.swift in Sources */,
 				4E87AF59247F000700002E66 /* ResultPDFCollectionViewCell.swift in Sources */,
 				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
+				4EB022E524882AFC00965345 /* CompressImage.swift in Sources */,
 				CC157CA624700F6C001AE122 /* ProfilePresenter.swift in Sources */,
 				4E4EA63A2470117F00309CAF /* NewRequestContract.swift in Sources */,
 				032AB5CF24820F110021DE4F /* ReviewsTableViewCell.swift in Sources */,

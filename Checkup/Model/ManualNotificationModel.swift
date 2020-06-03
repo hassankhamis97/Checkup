@@ -21,6 +21,8 @@ class ManualNotificationModel: IManualNotificationModel {
         ref = Database.database().reference()
     }
     func getNotificationNumbers() {
+        if Auth.auth().currentUser!.uid != nil
+        {
        if let manualNotificationPresenterRef = notificationPresenterRef as? IManualNotificationPresenter { ref.child("Notification").child(Auth.auth().currentUser!.uid).setValue(["getNotified": self.ref.childByAutoId().key!])
         ref.child("Notification").child(Auth.auth().currentUser!.uid).observe(.value, with: { (snapshot) in
             let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetNotificationNumbers?userId=\(Auth.auth().currentUser!.uid)"
@@ -46,6 +48,7 @@ class ManualNotificationModel: IManualNotificationModel {
             }
             }
         })
+        }
         }
     }
     func updateNotificationFlag(testId: Int64) {
