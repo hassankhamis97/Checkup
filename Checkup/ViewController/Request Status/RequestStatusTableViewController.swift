@@ -833,11 +833,12 @@ extension RequestStatusTableViewController : IRequestStatusView
 extension RequestStatusTableViewController : ICancelRequestView
 {
     func onCancelDone() {
-        self.navigationController?.popViewController(animated: true)
+      
+         Alert.simpleOkAlert(title: "STATUS_CONFIRMATION", message: "STATUS_CANCEL_SUCCESS", viewRef: self)
         
-        Alert.showSimpleAlert(title: "STATUS_CONFIRMATION",message: "STATUS_CANCEL_SUCCESS", viewRef: self)
+//        Alert.showSimpleAlert(title: "STATUS_CONFIRMATION",message: "STATUS_CANCEL_SUCCESS", viewRef: self)
         //************ back **************/
-        
+       //   self.navigationController?.popViewController(animated: true)
         
         //        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: .alert)
         //
@@ -882,9 +883,10 @@ extension RequestStatusTableViewController : ICancelRequestView
 extension RequestStatusTableViewController : IDeleteRequestView
 {  
     func onRequetDeleted() {
-        Alert.showSimpleAlert(title: "INFORMATION",message: "STATUS_DELETION_SUCCESS", viewRef: self)
-        //************ back **************/
-        self.navigationController?.popViewController(animated: true)
+//        Alert.showSimpleAlert(title: "INFORMATION",message: "STATUS_DELETION_SUCCESS", viewRef: self)
+        Alert.simpleOkAlert(title: "INFORMATION", message: "STATUS_DELETION_SUCCESS", viewRef: self)
+//        //************ back **************/
+//        self.navigationController?.popViewController(animated: true)
         
         
         
@@ -909,7 +911,13 @@ extension RequestStatusTableViewController : IDeleteRequestView
 
 
 
-extension RequestStatusTableViewController : IViewAdvancedAlert,IView{
+extension RequestStatusTableViewController : IViewAdvancedAlert ,IView , IOkAlert{
+    // IOkAlert
+    func onOkClicked() {
+        //************ back **************/
+            self.navigationController?.popViewController(animated: true)
+    }
+    
     /// ***********   Cancel Request Btn ********* //
     func pressOk() {
         

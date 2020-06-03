@@ -40,4 +40,23 @@ struct Alert {
                     }))
         }
     
+    
+    
+    
+        static func simpleOkAlert(title: String,message: String, viewRef: IOkAlert){
+            let alert = UIAlertController(title: title.localized, message: message.localized, preferredStyle: UIAlertController.Style.alert)
+    //        alert.setValue(NSAttributedString(string: alert.title!, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 23, weight: UIFont.Weight.medium), NSAttributedString.Key.foregroundColor : UIColor.red]), forKey: "attributedTitle")
+
+//            alert.addAction(UIAlertAction(title: "Ok".localized, style: UIAlertAction.Style.cancel, handler: nil))
+            viewRef.present(alert, animated: true, completion: nil)
+            
+            alert.addAction(UIAlertAction(title: "Yes".localized, style: .default, handler: { action in
+                            print("You choosed Yes !")
+                          viewRef.onOkClicked()
+
+                        }))
+    //        alert.view.tintColor = UIColor.red
+        }
+    
+    
 }
