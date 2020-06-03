@@ -1638,6 +1638,7 @@
                         <outlet property="collectionView" destination="98B-yR-Mtb" id="vgR-Wf-eTV"/>
                         <outlet property="costText" destination="9p4-LM-zMR" id="I0a-EJ-LwK"/>
                         <outlet property="dateTextArea" destination="vUr-d1-N9e" id="hCs-xj-h6b"/>
+                        <outlet property="employeeTitleText" destination="Hwn-kv-7x0" id="a2o-ge-eVY"/>
                         <outlet property="locationTextArea" destination="Zhc-ts-gi0" id="koz-Hu-4IQ"/>
                         <outlet property="precautionsText" destination="7vn-pj-nWb" id="cDP-uH-dZq"/>
                         <outlet property="precautionsTextArea" destination="7vn-pj-nWb" id="KbZ-zr-fYs"/>
@@ -1646,13 +1647,14 @@
                         <outlet property="refuseReasonText" destination="fvg-Fm-3PZ" id="3fX-sY-gnb"/>
                         <outlet property="sampleDate" destination="Oug-r6-HkG" id="u0J-ru-p1z"/>
                         <outlet property="sampleTime" destination="v4W-Ma-Wee" id="6q6-RV-bqs"/>
+                        <outlet property="showRequestOutlet" destination="K0a-8k-1VD" id="XHA-am-V5v"/>
                         <outlet property="slideShow" destination="AKr-UD-NfY" id="bKJ-SR-7zo"/>
                         <outlet property="timeTextArea" destination="p2P-9h-Zul" id="mYI-0o-0LM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rz-FV-jlf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5944.9275362318849" y="54.619565217391312"/>
+            <point key="canvasLocation" x="6009" y="44"/>
         </scene>
     </scenes>
     <resources>

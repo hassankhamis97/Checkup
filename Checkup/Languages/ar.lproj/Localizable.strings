@@ -69,3 +69,5 @@
 "Email is already exist" = "هذا البريد الإلكتروني موجود بالفعل";
 "No Internet Connection" = "لا يوجد إتصال بالانترنت";
 "There is no data" = "لا يوجد بيانات";
+"STATUS_IS_NOT_FROM_HOME_TEXT"="بيانات المعمل";
+"STATUS_SHOW_LAB_DETALS" = "عرض تفاصيل المعمل";

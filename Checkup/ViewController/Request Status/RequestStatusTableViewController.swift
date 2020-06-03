@@ -23,21 +23,39 @@ class RequestStatusTableViewController: UITableViewController  {
     var showCancel : CGFloat = 0
     var showDetailsPage = false ;
     var alertStatus : Int8 = 0 ;
+    var isFromHomeCheck : Bool = true ;
     static var page: Int?
     @IBOutlet weak var costText: UILabel!
     
+    @IBOutlet weak var employeeTitleText: UILabel!
     
+    @IBOutlet weak var showRequestOutlet: UIButton!
     
     @IBAction func showEmpDetailsBtn(_ sender: Any) {
         
-        let empDetails =  self.storyboard?.instantiateViewController(withIdentifier: "EMPDETAILS") as! PopUpTableViewController
-        guard let empID = self.testStatusObj.employeeId , let branchId = self.testStatusObj.branchId else {
-             Alert.showAdvancedAlert(title: "STATUS_EMP_NOT_FOUND".localized, message: "STATUS_DELETE_CONFIRMATION".localized, viewAdvancedAlertRef: self)
-            return
+        
+        if self.isFromHomeCheck == true{
+            
+            let empDetails =  self.storyboard?.instantiateViewController(withIdentifier: "EMPDETAILS") as! PopUpTableViewController
+            guard let empID = self.testStatusObj.employeeId , let branchId = self.testStatusObj.branchId else {
+                Alert.showAdvancedAlert(title: "STATUS_EMP_NOT_FOUND".localized, message: "STATUS_DELETE_CONFIRMATION".localized, viewAdvancedAlertRef: self)
+                return
+            }
+            
+            empDetails.employeeID = empID
+            empDetails.branchID = branchId
+            self.present(empDetails, animated: true, completion: nil)
+            
+            
+        } else if isFromHomeCheck == false {
+            // show lab description Page
+              
+            let labDescriptionVC = self.storyboard?.instantiateViewController(withIdentifier: "branchDesc")as! BranchDescriptionViewController
+            guard let labID = testStatusObj.labId else{
+                return
+            }
+             navigationController?.pushViewController(labDescriptionVC, animated: true)
         }
-        empDetails.employeeID = empID
-        empDetails.branchID = branchId
-        self.present(empDetails, animated: true, completion: nil)
         
     }
     
@@ -169,10 +187,10 @@ class RequestStatusTableViewController: UITableViewController  {
         self.dateTextArea.text = self.testStatusObj.dateRequest
         self.timeTextArea.text = self.testStatusObj.timeRequest
         guard let locAddress = self.testStatusObj?.address else{
-              tableView.reloadData()
+            tableView.reloadData()
             return
         }
-        let location = "\( locAddress.address1) \( locAddress.buildingNo!)  \(locAddress.apartmentNo!)     \(locAddress.floorNo!)"
+        let location = "\( locAddress.address1) \( locAddress.buildingNo!)  \(locAddress.apartmentNo!)\(locAddress.floorNo!)"
         
         self.locationTextArea.text = location
         
@@ -256,13 +274,17 @@ class RequestStatusTableViewController: UITableViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         
-       if(Auth.auth().currentUser?.uid == nil)
-       {
-           let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
-           loginVC.modalPresentationStyle = .fullScreen
-           self.present(loginVC, animated: true, completion: nil)
-           
-       }
+        if(Auth.auth().currentUser?.uid == nil)
+        {
+            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true, completion: nil)
+            
+        }
+        
+        
+        
+        
         
         ///*********************////
         //              testStatusObj = Test();
@@ -281,12 +303,12 @@ class RequestStatusTableViewController: UITableViewController  {
         
         if showDetailsPage == true {
             stepIndecatorShow = 100
-           // x = 7
+            // x = 7
             x = RequestStatusTableViewController.page!
             tableView.reloadData()
             showDetailsPage = false
         }else{
-    self.navigationController?.popViewController(animated: true)
+            self.navigationController?.popViewController(animated: true)
         }
         showDetailsPage=false
         
@@ -306,9 +328,9 @@ class RequestStatusTableViewController: UITableViewController  {
         
         let backBtn = UIBarButtonItem(title: "〈 "+"STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
         
-    self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
+        self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
         
-         self.progressBarView.circleColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
+        self.progressBarView.circleColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
         self.progressBarView.circleTintColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
         //UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
         
@@ -332,7 +354,7 @@ class RequestStatusTableViewController: UITableViewController  {
         locationTextArea.title = "STATUS_LOCATION".localized
         timeTextArea.title = "STATUS_TIME".localized
         dateTextArea.title = "STATUS_DATE".localized
-         precautionsTextArea.layer.borderWidth=2
+        precautionsTextArea.layer.borderWidth=2
         precautionsTextArea.layer.cornerRadius=10
         precautionsTextArea.layer.borderColor=UIColor.darkGray.cgColor
         
@@ -360,8 +382,10 @@ class RequestStatusTableViewController: UITableViewController  {
         
         progressBarView.currentStep=0
         
+        
+        
+        
     }
-    
     
     
     @objc func didTap() {
@@ -652,10 +676,18 @@ extension RequestStatusTableViewController : IRequestStatusView
         print("*************************")
         
         
+        self.testStatusObj = myObj
+        
+        if myObj.isFromHome == false
+        {
+            self.isFromHomeCheck = false ;
+            employeeTitleText.text = "STATUS_IS_NOT_FROM_HOME_TEXT".localized
+            showRequestOutlet.titleLabel?.text = "STATUS_SHOW_LAB_DETALS".localized
+            
+        }
         
         
         if let roushetas = myObj.roushettaPaths , myObj.roushettaPaths!.count>0 {
-            
             
             loadImage(imageArray: roushetas)
             imgSlider = 220
@@ -675,7 +707,6 @@ extension RequestStatusTableViewController : IRequestStatusView
         
         
         
-        self.testStatusObj = myObj
         
         print("*************************")
         if myObj.status == "PendingForLabConfirmation"
@@ -692,7 +723,7 @@ extension RequestStatusTableViewController : IRequestStatusView
             self.dateTextArea.text = myObj.dateRequest!
             self.timeTextArea.text = myObj.timeRequest!
             if let location = myObj.address {
-                let myAdress = "\( location.buildingNo!)  \(location.apartmentNo!)     \(location.floorNo!)"
+                let myAdress = "\( location.address1!) \( location.buildingNo!)  \(location.apartmentNo!)     \(location.floorNo!)"
                 
                 self.locationTextArea.text = myAdress
             }
@@ -789,7 +820,7 @@ extension RequestStatusTableViewController : ICancelRequestView
 {
     func onCancelDone() {
         self.navigationController?.popViewController(animated: true)
-
+        
         Alert.showSimpleAlert(title: "STATUS_CONFIRMATION",message: "STATUS_CANCEL_SUCCESS", viewRef: self)
         //************ back **************/
         
@@ -840,8 +871,8 @@ extension RequestStatusTableViewController : IDeleteRequestView
         Alert.showSimpleAlert(title: "INFORMATION",message: "STATUS_DELETION_SUCCESS", viewRef: self)
         //************ back **************/
         self.navigationController?.popViewController(animated: true)
-
-       
+        
+        
         
         //     let alert = UIAlertController(title: "Confirmation", message: "Your Request has been Deleted Successfully", preferredStyle: UIAlertController.Style.alert)
         //                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
@@ -891,7 +922,7 @@ extension RequestStatusTableViewController : IViewAdvancedAlert,IView{
                 
                 Alert.showSimpleAlert(title: "sorry",message: "STATUS_SORRY_CANCEL", viewRef: self)
                 
-               //  Alert.showAdvancedAlert(title: "STATUS_CONFIRMATION".localized, message: "STATUS_DELETE_CONFIRMATION".localized, viewAdvancedAlertRef: self)
+                //  Alert.showAdvancedAlert(title: "STATUS_CONFIRMATION".localized, message: "STATUS_DELETE_CONFIRMATION".localized, viewAdvancedAlertRef: self)
                 
                 //                     let alert = UIAlertController(title: "Confirmation Message", message: "Sorry You can't cancel this request we are about to take your sample now if you insest please call the laboratory ?", preferredStyle: .alert)
                 //
