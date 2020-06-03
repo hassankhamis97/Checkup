@@ -24,6 +24,7 @@ class RequestStatusTableViewController: UITableViewController  {
     var showDetailsPage = false ;
     var alertStatus : Int8 = 0 ;
     var isFromHomeCheck : Bool = true ;
+    var locationCell:CGFloat = 0
     static var page: Int?
     @IBOutlet weak var costText: UILabel!
     
@@ -50,11 +51,15 @@ class RequestStatusTableViewController: UITableViewController  {
         } else if isFromHomeCheck == false {
             // show lab description Page
               
-            let labDescriptionVC = self.storyboard?.instantiateViewController(withIdentifier: "branchDesc")as! BranchDescriptionViewController
+            let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
+            branchDesc.modalPresentationStyle = .fullScreen
+           
             guard let labID = testStatusObj.labId else{
                 return
             }
-             navigationController?.pushViewController(labDescriptionVC, animated: true)
+//             navigationController?.pushViewController(labDescriptionVC, animated: true)
+         //   branchDesc.labId = labID ;
+             self.present(branchDesc , animated: true , completion: nil)
         }
         
     }
@@ -471,6 +476,12 @@ class RequestStatusTableViewController: UITableViewController  {
             if (indexPath.row==9 || indexPath.row==10 || indexPath.row==11){
                 return 70
             }
+            if indexPath.row==11{
+                return  locationCell
+            }
+             
+            
+            
             if indexPath.row==12{
                 return showCancel
             }
@@ -679,13 +690,14 @@ extension RequestStatusTableViewController : IRequestStatusView
         self.testStatusObj = myObj
         
         if myObj.isFromHome == false
-        {
+        { //  change text of employee details , show emp details button and hide locationCell  if isFormHome == false
             self.isFromHomeCheck = false ;
             employeeTitleText.text = "STATUS_IS_NOT_FROM_HOME_TEXT".localized
             showRequestOutlet.titleLabel?.text = "STATUS_SHOW_LAB_DETALS".localized
-            
+            locationCell = 0
         }
         
+         locationCell = 70  // if isFromHome == true  show location cell
         
         if let roushetas = myObj.roushettaPaths , myObj.roushettaPaths!.count>0 {
             
