@@ -24,19 +24,24 @@ class NewRequestModel: INewRequestModel {
         var imgPathsArr = [String]()
         var count = 0
         var id = ref.childByAutoId()
+        DispatchQueue.background(background: {
+            // do something in background
+            for i in 0..<roushettaImages.count {
+            //            let imgData1 = NSData(data: roushettaImages[i].jpegData(compressionQuality: 1)!)
+            //            var imageSize: Int = imgData1.count
+            //            print("actual size of image in KB: %f ", Double(imageSize) / 1000.0)
+            //            print(roushettaImages[i].count)
+                        if let imageData = roushettaImages[i].jpeg(.low) {
+                            print(imageData.count)
+                            print("actual size of image in KB: %f ", Double(imageData.count) / 1000.0)
+                            roushettaImagesCompressed.append(imageData)
+                        }
+            //            roushettaImagesCompressed.append(roushettaImages[i].compressTo(1)!)
+                    }
+        }, completion:{
+            // when background job finished, do something in main thread
         
-        for i in 0..<roushettaImages.count {
-            let imgData1 = NSData(data: roushettaImages[i].jpegData(compressionQuality: 1)!)
-            var imageSize: Int = imgData1.count
-            print("actual size of image in KB: %f ", Double(imageSize) / 1000.0)
-//            print(roushettaImages[i].count)
-            if let imageData = roushettaImages[i].jpeg(.low) {
-                print(imageData.count)
-                print("actual size of image in KB: %f ", Double(imageData.count) / 1000.0)
-                roushettaImagesCompressed.append(imageData)
-            }
-//            roushettaImagesCompressed.append(roushettaImages[i].compressTo(1)!)
-        }
+        
 //        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
 
         
@@ -76,8 +81,9 @@ class NewRequestModel: INewRequestModel {
 
         }
         else{
-            saveCompleteObj(testObj: testObj, imgPathsArr: nil)
+            self.saveCompleteObj(testObj: testObj, imgPathsArr: nil)
         }
+            })
     }
     func saveCompleteObj(testObj: Test, imgPathsArr: [String]?) {
         var testFinObj = testObj
