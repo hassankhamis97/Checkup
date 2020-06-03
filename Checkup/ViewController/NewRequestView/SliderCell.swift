@@ -22,6 +22,19 @@ class SliderCell: UICollectionViewCell {
     }
   
     
+    override func awakeFromNib() {
+        setUp()
+    }
+    
+    
+    
+    func setUp(){
+        
+        
+        layer.cornerRadius=8
+        layer.borderColor=UIColor.white.cgColor
+        
+    }
     
 //    override init(frame: CGRect){
 //        super.init(frame: frame)

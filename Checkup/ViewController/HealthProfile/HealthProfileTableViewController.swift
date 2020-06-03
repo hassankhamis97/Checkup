@@ -7,74 +7,219 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
 
-class HealthProfileTableViewController: UITableViewController {
+class HealthProfileTableViewController: UITableViewController,IView ,UITextFieldDelegate{
 
+    @IBOutlet weak var yesSufferDiabetesBtn: RadioButtonOutlet!
+    
+    @IBOutlet weak var noSufferDiabetesBtn: RadioButtonOutlet!
+    
+    @IBOutlet weak var yesSufferPressureBtn: RadioButtonOutlet!
+    
+    @IBOutlet weak var noSufferPressuresBtn: RadioButtonOutlet!
+    
+    @IBOutlet weak var yesTakeAntiBtn: RadioButtonOutlet!
+    
+    @IBOutlet weak var noTakeAntiBtn: RadioButtonOutlet!
+    
+    @IBOutlet weak var yesTakeHaemophiliaBtn: RadioButtonOutlet!
+    
+    @IBOutlet weak var noTakeHaemophiliaBtn: RadioButtonOutlet!
+    
+    
+    @IBOutlet weak var diseaseNameTextField: SkyFloatingLabelTextField!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var diabiabetesArray=[UIButton]()
+    var pressurArray=[UIButton]()
+    var antiBioticArray=[UIButton]()
+    var haemophiliaArray=[UIButton]()
+    var dieaseNamesArray=[String]()
+    var healthProfie=HealthProfile()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        diabiabetesArray=[yesSufferDiabetesBtn,noSufferDiabetesBtn]
+        pressurArray=[yesSufferPressureBtn,noSufferPressuresBtn]
+        antiBioticArray=[yesTakeAntiBtn,noTakeAntiBtn]
+        haemophiliaArray=[yesTakeHaemophiliaBtn,noTakeHaemophiliaBtn]
+        
+      setFuncAndTagToBtn(btnArray:diabiabetesArray,tag:0)
+      setFuncAndTagToBtn(btnArray:pressurArray, tag: 1)
+      setFuncAndTagToBtn(btnArray:antiBioticArray, tag: 2)
+      setFuncAndTagToBtn(btnArray:  haemophiliaArray, tag: 3)
+        
+        diseaseNameTextField.delegate=self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+              
+              view.addGestureRecognizer(tap)
+        
+   
     }
 
-    // MARK: - Table view data source
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+             self.view.endEditing(true)
+             return true
+         }
+    
+    @objc func dismissKeyboard() {
+             view.endEditing(true)
+         }
+    
+    @IBAction func addDiseaseNameBtn(_ sender: Any) {
+        
+        if let  diseaseName=diseaseNameTextField.text
+        {
+            if diseaseName.count<=0{
+                Alert.showSimpleAlert(title: "sorry", message: "Enter disease name please", viewRef: self)
+            }
+            else{
+                  dieaseNamesArray.append(diseaseName)
+                
+            }
+          
+            collectionView.reloadData()
+            tableView.reloadData()
+            diseaseNameTextField.text=""
+            dismissKeyboard()
+        }
+        
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+
+    func setFuncAndTagToBtn(btnArray:[UIButton],tag:Int)
+    {
+        
+        for btn in btnArray{
+            
+            btn.tag=tag
+            btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+          
+            
+            
+        }
+        
+        
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    
+    
+        @objc func buttonAction(sender: UIButton!){
+            
+            
+            if sender.tag==0{ // sufferFromDiabtes
+                
+                
+                            for button in diabiabetesArray{
+                                button.isSelected = false
+                                button.backgroundColor = .clear
+                            }
+                
+                     sender.isSelected = true
+                     sender.pulsate()
+                    sender.backgroundColor = UIColor.systemTeal
+                if sender==diabiabetesArray[0]{
+                    print ("yes diabtes")
+                    healthProfie.isSuffreDiabetes=true
+                 
+                    }
+                
+                else{
+                    print ("No diabtes")
+                      healthProfie.isSuffreDiabetes=false
+                 
+                }
+            }
+            
+            
+        
+          else if sender.tag==1{ // suffer From Pressure
+                      
+                      
+                                  for button in pressurArray{
+                                      button.isSelected = false
+                                      button.backgroundColor = .clear
+                                  }
+                      
+                           sender.isSelected = true
+                           sender.pulsate()
+                          sender.backgroundColor = UIColor.systemTeal
+                      if sender==pressurArray[0]{
+                          print ("yes pressure")
+                        healthProfie.isSuffrePressure=true
+                          }
+                      
+                      else{
+                          print ("No pressure")
+                        healthProfie.isSuffrePressure=false
+                       
+                      }
+                  }
+           
+            
+           else if sender.tag==2{ // Take antiBiotics
+                                 
+                                 
+                                             for button in antiBioticArray{
+                                                 button.isSelected = false
+                                                 button.backgroundColor = .clear
+                                             }
+                                 
+                                      sender.isSelected = true
+                                      sender.pulsate()
+                                     sender.backgroundColor = UIColor.systemTeal
+                                 if sender==antiBioticArray[0]{
+                                     print ("yes antibiotic")
+                                       healthProfie.isSTakeantiBiotic=true
+                                  
+                                     }
+                                 
+                                 else{
+                                     print ("No antibiotic")
+                                   healthProfie.isSTakeantiBiotic=false
+                                 }
+                             }
+            
+            
+            else if sender.tag==3{ // Take hemophilia
+                                 
+                                 
+                                             for button in haemophiliaArray{
+                                                 button.isSelected = false
+                                                 button.backgroundColor = .clear
+                                             }
+                                 
+                                      sender.isSelected = true
+                                      sender.pulsate()
+                                     sender.backgroundColor = UIColor.systemTeal
+                                 if sender==haemophiliaArray[0]{
+                                     print ("yes hemophilia")
+                                  
+                                    healthProfie.isTakehaemophilia=true
+                                     }
+                                 
+                                 else{
+                                     print ("No hemophilia")
+                                  healthProfie.isTakehaemophilia=false
+                                 }
+                             }
+            
+            
+}
+    
+    
+    
+    
+    @IBAction func saveBtn(_ sender: Any) {
+        
+        healthProfie.dieaseNamesArray=self.dieaseNamesArray
+        
+        print(healthProfie)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

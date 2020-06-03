@@ -233,6 +233,8 @@
 		CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A8772246D61020020C403 /* MoreTableViewController.swift */; };
 		CC1E1B6924881C2700618026 /* HealthProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E1B6824881C2700618026 /* HealthProfileTableViewController.swift */; };
 		CC1E1B6B2488229D00618026 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E1B6A2488229D00618026 /* ShadowView.swift */; };
+		CC1E1B6E24884B9800618026 /* HealthProfileExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E1B6D24884B9800618026 /* HealthProfileExtension.swift */; };
+		CC1E1B71248852C300618026 /* HealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E1B70248852C300618026 /* HealthProfile.swift */; };
 		CC1E7C2F24812E8000039693 /* UserChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C2E24812E8000039693 /* UserChat.swift */; };
 		CC1E7C3124814C6D00039693 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C3024814C6D00039693 /* UserRealm.swift */; };
 		CC1E7C322481656A00039693 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1E7C342481656A00039693 /* More.storyboard */; };
@@ -545,6 +547,8 @@
 		CC1A8772246D61020020C403 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		CC1E1B6824881C2700618026 /* HealthProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProfileTableViewController.swift; sourceTree = "<group>"; };
 		CC1E1B6A2488229D00618026 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		CC1E1B6D24884B9800618026 /* HealthProfileExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProfileExtension.swift; sourceTree = "<group>"; };
+		CC1E1B70248852C300618026 /* HealthProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProfile.swift; sourceTree = "<group>"; };
 		CC1E7C2E24812E8000039693 /* UserChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChat.swift; sourceTree = "<group>"; };
 		CC1E7C3024814C6D00039693 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
 		CC1E7C332481656A00039693 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/More.storyboard; sourceTree = "<group>"; };
@@ -1335,6 +1339,7 @@
 		4EBBC944246B5C9500C7978D /* POJOs */ = {
 			isa = PBXGroup;
 			children = (
+				CC1E1B6F248852A300618026 /* HealthProfile */,
 				4E87AF49247EC38B00002E66 /* Notification */,
 				4EC1626B246F5BEC0053F581 /* User */,
 				CC80B9DF2477354D00521508 /* Statistic */,
@@ -1939,12 +1944,29 @@
 			path = MoreView;
 			sourceTree = "<group>";
 		};
+		CC1E1B6C24884B5900618026 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CC1E1B6D24884B9800618026 /* HealthProfileExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CC1E1B6F248852A300618026 /* HealthProfile */ = {
+			isa = PBXGroup;
+			children = (
+				CC1E1B70248852C300618026 /* HealthProfile.swift */,
+			);
+			path = HealthProfile;
+			sourceTree = "<group>";
+		};
 		CC36EAB224880F650067568A /* HealthProfile */ = {
 			isa = PBXGroup;
 			children = (
 				CC36EAB324880F9D0067568A /* RadioButtonOutlet.swift */,
 				CC1E1B6824881C2700618026 /* HealthProfileTableViewController.swift */,
 				CC1E1B6A2488229D00618026 /* ShadowView.swift */,
+				CC1E1B6C24884B5900618026 /* Extension */,
 			);
 			path = HealthProfile;
 			sourceTree = "<group>";
@@ -2375,6 +2397,7 @@
 				CC80B9DB247727E800521508 /* ExtensionStatisticsPicker.swift in Sources */,
 				4E4542232479FAF700955FD8 /* AddViewIndicator.swift in Sources */,
 				4EBED80B24816235009A43FB /* UpdateNotificationFlagContract.swift in Sources */,
+				CC1E1B6E24884B9800618026 /* HealthProfileExtension.swift in Sources */,
 				4EB18BDF24847B45007D35AE /* AccessLocation.swift in Sources */,
 				4EA87517248004B100E95B30 /* SendMessageContract.swift in Sources */,
 				032AB5C72481E0770021DE4F /* ReviewsContract.swift in Sources */,
@@ -2392,6 +2415,7 @@
 				4E432F162464F6EF00D1CACA /* PdfResultViewController.swift in Sources */,
 				0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */,
 				CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */,
+				CC1E1B71248852C300618026 /* HealthProfile.swift in Sources */,
 				4E1FBE36247E1CFB00C463D5 /* ChatStatus.swift in Sources */,
 				4EB022E2248825A600965345 /* DispatchQueueExtension.swift in Sources */,
 				4EBED80D24816415009A43FB /* NotificationContract.swift in Sources */,
