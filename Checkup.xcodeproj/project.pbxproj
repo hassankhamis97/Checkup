@@ -136,6 +136,7 @@
 		4EA87525248068D300E95B30 /* ImageIndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */; };
 		4EAA2AD8246CABC70050B0AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */; };
 		4EB022E2248825A600965345 /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB022E1248825A600965345 /* DispatchQueueExtension.swift */; };
+		4EB022E524882AFC00965345 /* CompressImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB022E424882AFC00965345 /* CompressImage.swift */; };
 		4EB18BD924844EE3007D35AE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB18BDB24844EE3007D35AE /* Home.storyboard */; };
 		4EB18BDF24847B45007D35AE /* AccessLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB18BDE24847B45007D35AE /* AccessLocation.swift */; };
 		4EBBC93C246B47F200C7978D /* MainChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */; };
@@ -217,6 +218,7 @@
 		A3C5F0382472C7850069413F /* SignupResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0372472C7850069413F /* SignupResponseExtension.swift */; };
 		A3DA5537247D5CD80038AF1B /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DA5539247D5CD80038AF1B /* signUp.storyboard */; };
 		BB13259B247BC43000997EF3 /* RequestTStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB13259D247BC43000997EF3 /* RequestTStatus.storyboard */; };
+		BB1C099A24883A55000F24A6 /* IOkAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C099924883A55000F24A6 /* IOkAlert.swift */; };
 		BBBB1B502477C9B30013D06F /* CancelRquestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */; };
 		BBBB1B522477CA1A0013D06F /* ICancelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B512477CA1A0013D06F /* ICancelRequest.swift */; };
 		BBBB1B562477CAB90013D06F /* CancelRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB1B552477CAB90013D06F /* CancelRequestPresenter.swift */; };
@@ -447,6 +449,7 @@
 		4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIndicatorTableViewCell.xib; sourceTree = "<group>"; };
 		4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EB022E1248825A600965345 /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
+		4EB022E424882AFC00965345 /* CompressImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressImage.swift; sourceTree = "<group>"; };
 		4EB18BDA24844EE3007D35AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		4EB18BDE24847B45007D35AE /* AccessLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLocation.swift; sourceTree = "<group>"; };
 		4EBBC93A246B47F200C7978D /* MainChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -529,6 +532,7 @@
 		A3C5F0372472C7850069413F /* SignupResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseExtension.swift; sourceTree = "<group>"; };
 		A3DA553A247D5CE00038AF1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/signUp.storyboard; sourceTree = "<group>"; };
 		BB13259C247BC43000997EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RequestTStatus.storyboard; sourceTree = "<group>"; };
+		BB1C099924883A55000F24A6 /* IOkAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOkAlert.swift; sourceTree = "<group>"; };
 		BBBB1B4F2477C9B30013D06F /* CancelRquestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelRquestModel.swift; sourceTree = "<group>"; };
 		BBBB1B512477CA1A0013D06F /* ICancelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICancelRequest.swift; sourceTree = "<group>"; };
 		BBBB1B552477CAB90013D06F /* CancelRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelRequestPresenter.swift; sourceTree = "<group>"; };
@@ -1309,6 +1313,14 @@
 			path = DispatchQueue;
 			sourceTree = "<group>";
 		};
+		4EB022E324882AE100965345 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				4EB022E424882AFC00965345 /* CompressImage.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		4EBBC939246B476F00C7978D /* MainChatCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1539,6 +1551,7 @@
 				4E2C9DFE24706E3E007C6109 /* IView.swift */,
 				4EF1A1EA2476CF5400597A15 /* IViewAdvancedAlert.swift */,
 				CC4B65CC2479B9B400BA1062 /* ICheckConnection.swift */,
+				BB1C099924883A55000F24A6 /* IOkAlert.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1634,6 +1647,7 @@
 		4EE9F93724699B7700BB4A39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4EB022E324882AE100965345 /* UIImage */,
 				4EB022E02488251600965345 /* DispatchQueue */,
 				4E4542212479FAD300955FD8 /* TableView */,
 				4E45421E2479CEA700955FD8 /* String */,
@@ -2422,6 +2436,7 @@
 				CC36EAB424880F9D0067568A /* RadioButtonOutlet.swift in Sources */,
 				4E87AF59247F000700002E66 /* ResultPDFCollectionViewCell.swift in Sources */,
 				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
+				4EB022E524882AFC00965345 /* CompressImage.swift in Sources */,
 				CC157CA624700F6C001AE122 /* ProfilePresenter.swift in Sources */,
 				4E4EA63A2470117F00309CAF /* NewRequestContract.swift in Sources */,
 				032AB5CF24820F110021DE4F /* ReviewsTableViewCell.swift in Sources */,
@@ -2439,6 +2454,7 @@
 				4E87AF4D247EC52700002E66 /* ManualNotificationPresenter.swift in Sources */,
 				CC8A1043245DC450007856BF /* TestNamingGroupViewController.swift in Sources */,
 				4E206DFC246F076F007C401D /* Comment.swift in Sources */,
+				BB1C099A24883A55000F24A6 /* IOkAlert.swift in Sources */,
 				4EC1626F246F5EEA0053F581 /* Address.swift in Sources */,
 				4E206DEE246EE702007C401D /* Laboratory.swift in Sources */,
 				4EF2BA6D247357AE00602123 /* RequestConfigration.swift in Sources */,
@@ -2891,14 +2907,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TRNKZ229R6;
+				DEVELOPMENT_TEAM = AAVNA8529R;
 				INFOPLIST_FILE = Checkup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup;
+				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup.a;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2911,14 +2927,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TRNKZ229R6;
+				DEVELOPMENT_TEAM = AAVNA8529R;
 				INFOPLIST_FILE = Checkup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup;
+				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup.a;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

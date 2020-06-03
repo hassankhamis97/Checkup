@@ -54,11 +54,11 @@ class RequestStatusTableViewController: UITableViewController  {
             let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
             branchDesc.modalPresentationStyle = .fullScreen
            
-            guard let labID = testStatusObj.labId else{
+            guard let branchId = testStatusObj.branchId else{
                 return
             }
 //             navigationController?.pushViewController(labDescriptionVC, animated: true)
-         //   branchDesc.labId = labID ;
+        branchDesc.branchId = branchId ;
              self.present(branchDesc , animated: true , completion: nil)
         }
         
@@ -473,7 +473,7 @@ class RequestStatusTableViewController: UITableViewController  {
                 return testArrContent
             }
             
-            if (indexPath.row==9 || indexPath.row==10 || indexPath.row==11){
+            if (indexPath.row==9 || indexPath.row==10 ){
                 return 70
             }
             if indexPath.row==11{
@@ -695,9 +695,11 @@ extension RequestStatusTableViewController : IRequestStatusView
             employeeTitleText.text = "STATUS_IS_NOT_FROM_HOME_TEXT".localized
             showRequestOutlet.titleLabel?.text = "STATUS_SHOW_LAB_DETALS".localized
             locationCell = 0
+        }else{
+            locationCell = 70  // if isFromHome == true  show location cell
+
         }
         
-         locationCell = 70  // if isFromHome == true  show location cell
         
         if let roushetas = myObj.roushettaPaths , myObj.roushettaPaths!.count>0 {
             
@@ -831,11 +833,12 @@ extension RequestStatusTableViewController : IRequestStatusView
 extension RequestStatusTableViewController : ICancelRequestView
 {
     func onCancelDone() {
-        self.navigationController?.popViewController(animated: true)
+      
+         Alert.simpleOkAlert(title: "STATUS_CONFIRMATION", message: "STATUS_CANCEL_SUCCESS", viewRef: self)
         
-        Alert.showSimpleAlert(title: "STATUS_CONFIRMATION",message: "STATUS_CANCEL_SUCCESS", viewRef: self)
+//        Alert.showSimpleAlert(title: "STATUS_CONFIRMATION",message: "STATUS_CANCEL_SUCCESS", viewRef: self)
         //************ back **************/
-        
+       //   self.navigationController?.popViewController(animated: true)
         
         //        let alert = UIAlertController(title: "Confirmation", message: "Your Request has been canceled Successfully", preferredStyle: .alert)
         //
@@ -880,9 +883,10 @@ extension RequestStatusTableViewController : ICancelRequestView
 extension RequestStatusTableViewController : IDeleteRequestView
 {  
     func onRequetDeleted() {
-        Alert.showSimpleAlert(title: "INFORMATION",message: "STATUS_DELETION_SUCCESS", viewRef: self)
-        //************ back **************/
-        self.navigationController?.popViewController(animated: true)
+//        Alert.showSimpleAlert(title: "INFORMATION",message: "STATUS_DELETION_SUCCESS", viewRef: self)
+        Alert.simpleOkAlert(title: "INFORMATION", message: "STATUS_DELETION_SUCCESS", viewRef: self)
+//        //************ back **************/
+//        self.navigationController?.popViewController(animated: true)
         
         
         
@@ -907,7 +911,13 @@ extension RequestStatusTableViewController : IDeleteRequestView
 
 
 
-extension RequestStatusTableViewController : IViewAdvancedAlert,IView{
+extension RequestStatusTableViewController : IViewAdvancedAlert ,IView , IOkAlert{
+    // IOkAlert
+    func onOkClicked() {
+        //************ back **************/
+            self.navigationController?.popViewController(animated: true)
+    }
+    
     /// ***********   Cancel Request Btn ********* //
     func pressOk() {
         

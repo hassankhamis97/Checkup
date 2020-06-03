@@ -37,8 +37,6 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
       
     override func viewWillAppear(_ animated: Bool) {
         self.headerViewHeight.constant = self.imageViewMaxHeight
-      
-            
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +44,7 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
         self.branchDescriptionTableView.dataSource = self
         myLabel.alpha = 0
         branchDescPresenter = BranchDescPresenter(view: self)
-        branchDescPresenter.getDataFromModel(id: branchId)
+        branchDescPresenter.getDataFromModel(id: branchId!)
                
         //reviewPresenterInView = ReviewsPresenter(view: self)
         //reviewPresenterInView.getReviewsDataFromModel()
