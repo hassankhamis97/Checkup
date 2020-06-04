@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import StoreKit
 class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate , IBranchDescView , IReviewsView{
    
  
@@ -37,6 +38,8 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
       
     override func viewWillAppear(_ animated: Bool) {
         self.headerViewHeight.constant = self.imageViewMaxHeight
+        
+       // SKStoreReviewController.requestReview()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +57,8 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
         viewOutlet.layer.cornerRadius = 25
         viewOutlet.layer.maskedCorners = [.layerMaxXMaxYCorner , .layerMinXMaxYCorner]
         btnViewOutlet.backgroundColor = .clear
+      
+        
         let blurEffect = UIBlurEffect(style: .regular)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.translatesAutoresizingMaskIntoConstraints = false

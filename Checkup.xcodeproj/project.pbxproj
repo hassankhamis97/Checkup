@@ -29,6 +29,7 @@
 		03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD2246CC39700C0BF33 /* BranchesCollectionViewCell.swift */; };
 		03789BD5246CC39700C0BF33 /* BranchesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */; };
 		03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */; };
+		037D346D24884A3C002DB046 /* ReviewsParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D346C24884A3C002DB046 /* ReviewsParams.swift */; };
 		03C1DD2A2478581900D2A008 /* BranchDescModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DD292478581900D2A008 /* BranchDescModel.swift */; };
 		03C1DD2C247858B800D2A008 /* BranchDescContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DD2B247858B800D2A008 /* BranchDescContract.swift */; };
 		03C1DD2F24789E4500D2A008 /* BranchDescPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DD2E24789E4500D2A008 /* BranchDescPresenter.swift */; };
@@ -322,6 +323,7 @@
 		03789BD2246CC39700C0BF33 /* BranchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesCollectionViewCell.swift; sourceTree = "<group>"; };
 		03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BranchesCollectionViewCell.xib; sourceTree = "<group>"; };
 		03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabBranchesCollectionView.swift; sourceTree = "<group>"; };
+		037D346C24884A3C002DB046 /* ReviewsParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsParams.swift; sourceTree = "<group>"; };
 		03C1DD292478581900D2A008 /* BranchDescModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescModel.swift; sourceTree = "<group>"; };
 		03C1DD2B247858B800D2A008 /* BranchDescContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescContract.swift; sourceTree = "<group>"; };
 		03C1DD2E24789E4500D2A008 /* BranchDescPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescPresenter.swift; sourceTree = "<group>"; };
@@ -707,6 +709,14 @@
 				03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		037D346B24884A04002DB046 /* ReviewsTable */ = {
+			isa = PBXGroup;
+			children = (
+				037D346C24884A3C002DB046 /* ReviewsParams.swift */,
+			);
+			path = ReviewsTable;
 			sourceTree = "<group>";
 		};
 		03C1DD282478579B00D2A008 /* BranchDescription */ = {
@@ -1325,6 +1335,7 @@
 		4EBBC944246B5C9500C7978D /* POJOs */ = {
 			isa = PBXGroup;
 			children = (
+				037D346B24884A04002DB046 /* ReviewsTable */,
 				4E87AF49247EC38B00002E66 /* Notification */,
 				4EC1626B246F5BEC0053F581 /* User */,
 				CC80B9DF2477354D00521508 /* Statistic */,
@@ -2522,6 +2533,7 @@
 				A3C5F0382472C7850069413F /* SignupResponseExtension.swift in Sources */,
 				4E4542202479CEC800955FD8 /* LocalizedString.swift in Sources */,
 				4E15ACEE24718EDF004418B1 /* GetRequestResponseExtension.swift in Sources */,
+				037D346D24884A3C002DB046 /* ReviewsParams.swift in Sources */,
 				CC3E40B824870A9100E3B481 /* PrecautionsTableViewController.swift in Sources */,
 				4EF1A1ED2476F00100597A15 /* Branches.swift in Sources */,
 				03F6C7F6246B00A700E89178 /* LabsCollectionViewCell.swift in Sources */,
