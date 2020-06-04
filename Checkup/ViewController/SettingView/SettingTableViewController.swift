@@ -22,16 +22,6 @@ class SettingTableViewController: UITableViewController {
         super.viewDidLoad()
 
     
-        
-        
-//        let attachment = NSTextAttachment()
-//        attachment.image = UIImage(named: "Settings_50px")
-//        let attachmentString = NSAttributedString(attachment: attachment)
-//        let myString = NSMutableAttributedString(string: "price")
-//        myString.append(attachmentString)
-//        privacyLabel.attributedText = myString
- 
-    
     }
 
     // MARK: - Table view data source
@@ -50,7 +40,9 @@ class SettingTableViewController: UITableViewController {
         
         if indexPath.row==1
               {
-                  print ("1")
+                  let vc = storyboard!.instantiateViewController(withIdentifier: "helpSVC ") as!HelpTableViewController
+                  navigationController?.pushViewController(vc, animated: true)
+
               }
         if indexPath.row==2
               {

@@ -71,3 +71,7 @@
 "There is no data" = "لا يوجد بيانات";
 "STATUS_IS_NOT_FROM_HOME_TEXT"="بيانات المعمل";
 "STATUS_SHOW_LAB_DETALS" = "عرض تفاصيل المعمل";
+"Enter your problem details here..."="ادخل تفاصيل الشكوى هنا...";
+"Enter your problem please"="من فضلك ادخل الشكوى الخاصة بك ";
+"Couldn't send email"="لا يمكن إرسال بريد إلكتروني";
+"Your device couldn't send email"="لا يستطيع جهازك ان يرسل بريد إلكتروني";

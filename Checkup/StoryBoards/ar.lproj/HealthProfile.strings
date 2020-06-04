@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "No"; ObjectID = "6cp-vD-RDq"; */
+"6cp-vD-RDq.text" = "لا";
+
+/* Class = "UILabel"; text = "Do you take any antibiotics?"; ObjectID = "8qO-9o-cBq"; */
+"8qO-9o-cBq.text" = "هل تتناول مضادات حيوية ؟";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "BB7-5r-eJV"; */
+"BB7-5r-eJV.text" = "نعم";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "CRm-da-8F2"; */
+"CRm-da-8F2.text" = "نعم";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "Dne-X9-3LM"; */
+"Dne-X9-3LM.text" = "نعم";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "EkZ-2H-mvR"; */
+"EkZ-2H-mvR.text" = "لا";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "GNe-Pp-qEX"; */
+"GNe-Pp-qEX.text" = "نعم";
+
+/* Class = "UILabel"; text = "Are you taking any treatment for Haemophilia?"; ObjectID = "LJF-YL-Z3y"; */
+"LJF-YL-Z3y.text" = "هل تتناول اي دواء لسيولة الدم ؟";
+
+/* Class = "UILabel"; text = "Please Answer Following Questions To Get More Information About Your Health Status"; ObjectID = "P6h-Nv-hee"; */
+"P6h-Nv-hee.text" = "من فضلك أجب على الأسئلة التاليه للحصول على مزيد من المعلومات عن الحاله الصحية الخاصة بك ";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "PmK-VO-Xia"; */
+"PmK-VO-Xia.text" = "لا";
+
+/* Class = "UILabel"; text = "If you suffer from any chronic disease ,please insert its name "; ObjectID = "T60-Sy-hWc"; */
+"T60-Sy-hWc.text" = "إذا كنت تعاني من اي امراض مزمنه ,من فضلك أدخل الأسم الخاص بكل مرض";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Ulb-Pk-N5D"; */
+"Ulb-Pk-N5D.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "brX-nJ-gDT"; */
+"brX-nJ-gDT.text" = "لا";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "e9T-ED-rb5"; */
+"e9T-ED-rb5.placeholder" = "أسم المرض";
+
+/* Class = "UILabel"; text = "Do you suffer from pressure disease?"; ObjectID = "lEY-r7-qAl"; */
+"lEY-r7-qAl.text" = "هل تعاني من امراض الضغط ؟";
+
+/* Class = "UILabel"; text = "Do you suffer from diabetes?"; ObjectID = "nYP-Bc-kEJ"; */
+"nYP-Bc-kEJ.text" = "هل تعاني من مرض السكري ؟";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "u3E-ba-8b7"; */
+"u3E-ba-8b7.text" = "";
