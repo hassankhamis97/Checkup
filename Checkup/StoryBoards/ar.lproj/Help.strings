@@ -1,0 +1,6 @@
+
+/* Class = "UILabel"; text = " if you face any problem, please feel free to contact us via e-mail, please enter the content of the complaint "; ObjectID = "fEx-Tq-60v"; */
+"fEx-Tq-60v.text" = " إذا كنت تواجه أي مشكله لا تتردد في التواصل معنا عبر البريد الإلكتروني , من فضلك أدخل تفاصيل الشكوى :";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "w43-Su-ZZb"; */
+"w43-Su-ZZb.normalTitle" = "إرسال";

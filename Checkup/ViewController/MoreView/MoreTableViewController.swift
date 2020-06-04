@@ -80,8 +80,25 @@ class MoreTableViewController: UITableViewController {
             print("statistics")
         }
         
-        
         if indexPath.row==2{
+                         
+                       let vc = storyboard?.instantiateViewController(withIdentifier: "precautionsSVC") as!PrecautionsTableViewController
+                                 
+                                 navigationController?.pushViewController(vc, animated: true)
+                         
+                     }
+        
+        
+        if indexPath.row==3{
+            
+          let vc = storyboard?.instantiateViewController(withIdentifier: "healthSVC") as!HealthProfileTableViewController
+                    
+                    navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
+        
+        if indexPath.row==4{
             
           let vc = storyboard?.instantiateViewController(withIdentifier: "settingSVCRef") as! SettingTableViewController
                     
@@ -92,9 +109,12 @@ class MoreTableViewController: UITableViewController {
         
         
         
-        if indexPath.row==3{
+        if indexPath.row==5{
             do{
                try Auth.auth().signOut()
+                let vc = storyboard?.instantiateViewController(withIdentifier: "homeSVC") as! HomeViewController
+                                  
+                                  navigationController?.pushViewController(vc, animated: true)
 
             }
             catch{
@@ -103,24 +123,10 @@ class MoreTableViewController: UITableViewController {
        print("logout")
             // precautionsSVC
         }
-        if indexPath.row==4{
-                   
-                 let vc = storyboard?.instantiateViewController(withIdentifier: "precautionsSVC") as!PrecautionsTableViewController
-                           
-                           navigationController?.pushViewController(vc, animated: true)
-                   
-               }
+      
         
         
         
-        
-        if indexPath.row==5{
-            
-          let vc = storyboard?.instantiateViewController(withIdentifier: "healthSVC") as!HealthProfileTableViewController
-                    
-                    navigationController?.pushViewController(vc, animated: true)
-            
-        }
         
     }
  

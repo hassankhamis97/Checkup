@@ -238,6 +238,10 @@
 		CC157CAB247010B6001AE122 /* ProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC157CAA247010B6001AE122 /* ProfileContract.swift */; };
 		CC157CAD24701160001AE122 /* EditProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC157CAC24701160001AE122 /* EditProfileContract.swift */; };
 		CC1A8773246D61020020C403 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A8772246D61020020C403 /* MoreTableViewController.swift */; };
+		CC1AD61624892754007BCEB8 /* HelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1AD61524892754007BCEB8 /* HelpTableViewController.swift */; };
+		CC1AD61A2489279F007BCEB8 /* ExtensionHelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1AD6192489279F007BCEB8 /* ExtensionHelpTableViewController.swift */; };
+		CC1AD61C24894FF3007BCEB8 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1AD61E24894FF3007BCEB8 /* Help.storyboard */; };
+		CC1AD6212489505D007BCEB8 /* HealthProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1AD6232489505D007BCEB8 /* HealthProfile.storyboard */; };
 		CC1E1B6924881C2700618026 /* HealthProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E1B6824881C2700618026 /* HealthProfileTableViewController.swift */; };
 		CC1E1B6B2488229D00618026 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E1B6A2488229D00618026 /* ShadowView.swift */; };
 		CC1E1B6E24884B9800618026 /* HealthProfileExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E1B6D24884B9800618026 /* HealthProfileExtension.swift */; };
@@ -249,7 +253,6 @@
 		CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */; };
 		CC36EA792487CD460067568A /* Precautions .storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC36EA7B2487CD460067568A /* Precautions .storyboard */; };
 		CC36EAB424880F9D0067568A /* RadioButtonOutlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36EAB324880F9D0067568A /* RadioButtonOutlet.swift */; };
-		CC36EAB6248812800067568A /* HealthProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC36EAB52488127F0067568A /* HealthProfile.storyboard */; };
 		CC3E40B824870A9100E3B481 /* PrecautionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E40B724870A9100E3B481 /* PrecautionsTableViewController.swift */; };
 		CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */; };
 		CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B65C92479ACED00BA1062 /* InternetConnection.swift */; };
@@ -559,6 +562,12 @@
 		CC157CAA247010B6001AE122 /* ProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContract.swift; sourceTree = "<group>"; };
 		CC157CAC24701160001AE122 /* EditProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileContract.swift; sourceTree = "<group>"; };
 		CC1A8772246D61020020C403 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		CC1AD61524892754007BCEB8 /* HelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewController.swift; sourceTree = "<group>"; };
+		CC1AD6192489279F007BCEB8 /* ExtensionHelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpTableViewController.swift; sourceTree = "<group>"; };
+		CC1AD61D24894FF3007BCEB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Help.storyboard; sourceTree = "<group>"; };
+		CC1AD62024894FF6007BCEB8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Help.strings; sourceTree = "<group>"; };
+		CC1AD6222489505D007BCEB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HealthProfile.storyboard; sourceTree = "<group>"; };
+		CC1AD625248950A1007BCEB8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HealthProfile.strings; sourceTree = "<group>"; };
 		CC1E1B6824881C2700618026 /* HealthProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProfileTableViewController.swift; sourceTree = "<group>"; };
 		CC1E1B6A2488229D00618026 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		CC1E1B6D24884B9800618026 /* HealthProfileExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProfileExtension.swift; sourceTree = "<group>"; };
@@ -572,7 +581,6 @@
 		CC36EA7A2487CD460067568A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Precautions .storyboard"; sourceTree = "<group>"; };
 		CC36EA7D2487CD4E0067568A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = "ar.lproj/Precautions .strings"; sourceTree = "<group>"; };
 		CC36EAB324880F9D0067568A /* RadioButtonOutlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonOutlet.swift; sourceTree = "<group>"; };
-		CC36EAB52488127F0067568A /* HealthProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HealthProfile.storyboard; sourceTree = "<group>"; };
 		CC3E40B724870A9100E3B481 /* PrecautionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecautionsTableViewController.swift; sourceTree = "<group>"; };
 		CC49FBCD247D37EE00A00D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
 		CC49FBD0247D37F200A00D97 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Statistics.strings; sourceTree = "<group>"; };
@@ -1044,7 +1052,8 @@
 				CC49FBCE247D37EE00A00D97 /* Statistics.storyboard */,
 				03358419248443FE0030F01C /* ReviewsStoryboard.storyboard */,
 				CC36EA7B2487CD460067568A /* Precautions .storyboard */,
-				CC36EAB52488127F0067568A /* HealthProfile.storyboard */,
+				CC1AD6232489505D007BCEB8 /* HealthProfile.storyboard */,
+				CC1AD61E24894FF3007BCEB8 /* Help.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -2013,6 +2022,23 @@
 			path = MoreView;
 			sourceTree = "<group>";
 		};
+		CC1AD6142489273A007BCEB8 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				CC1AD61B248927A7007BCEB8 /* Extension */,
+				CC1AD61524892754007BCEB8 /* HelpTableViewController.swift */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		CC1AD61B248927A7007BCEB8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CC1AD6192489279F007BCEB8 /* ExtensionHelpTableViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		CC1E1B6C24884B5900618026 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -2168,6 +2194,7 @@
 			isa = PBXGroup;
 			children = (
 				CC53A8AF248280A50087CFC7 /* Privacy */,
+				CC1AD6142489273A007BCEB8 /* Help */,
 				CCCDA04D246AD130005549EA /* SettingTableViewController.swift */,
 			);
 			path = SettingView;
@@ -2326,7 +2353,7 @@
 				A33CA624246D3AEE0014CF6B /* Employee.storyboard in Resources */,
 				4EA87525248068D300E95B30 /* ImageIndicatorTableViewCell.xib in Resources */,
 				4EE7EA30246AF2B800BF434F /* DateTableViewCell.xib in Resources */,
-				CC36EAB6248812800067568A /* HealthProfile.storyboard in Resources */,
+				CC1AD6212489505D007BCEB8 /* HealthProfile.storyboard in Resources */,
 				4E11EE2B247C56C800B3BDBA /* NewRequestScreen.storyboard in Resources */,
 				CC799DEB247BC1D200F6BAAD /* Profile.storyboard in Resources */,
 				4EB18BD924844EE3007D35AE /* Home.storyboard in Resources */,
@@ -2336,6 +2363,7 @@
 				4EE9F9462469A47F00BB4A39 /* RecieverCellTableViewCell.xib in Resources */,
 				A3BC0855247D91D500D98A09 /* Login.storyboard in Resources */,
 				4E45420F2479C7F000955FD8 /* Setting.storyboard in Resources */,
+				CC1AD61C24894FF3007BCEB8 /* Help.storyboard in Resources */,
 				CC49FBCC247D37EE00A00D97 /* Statistics.storyboard in Resources */,
 				4EE9F94124699E3200BB4A39 /* SenderCellTableViewCell.xib in Resources */,
 				CC1E7C322481656A00039693 /* More.storyboard in Resources */,
@@ -2455,6 +2483,7 @@
 				4EF1A1E02476B07000597A15 /* RequestStatusModel.swift in Sources */,
 				03067A232477724F000F1424 /* LabDescriptionModel.swift in Sources */,
 				03FDA1932470BC8F0084C4AA /* FirstStaticTableViewCell.swift in Sources */,
+				CC1AD61624892754007BCEB8 /* HelpTableViewController.swift in Sources */,
 				4EF1A1E72476B0E800597A15 /* IRequestStatus.swift in Sources */,
 				4E22F8FF243E6E6C0090693C /* SceneDelegate.swift in Sources */,
 				A372090D24770574009ADC95 /* HomeLabPresenter.swift in Sources */,
@@ -2651,6 +2680,7 @@
 				4EA8751B248048F600E95B30 /* ImageMessage.swift in Sources */,
 				031046AE246C8F77000372BD /* FilterLabTableView.swift in Sources */,
 				BBBB1B562477CAB90013D06F /* CancelRequestPresenter.swift in Sources */,
+				CC1AD61A2489279F007BCEB8 /* ExtensionHelpTableViewController.swift in Sources */,
 				BBBB1B6024782D3B0013D06F /* DeleteRequestModel.swift in Sources */,
 				03C1DD2F24789E4500D2A008 /* BranchDescPresenter.swift in Sources */,
 				035A0491247DB1490017A885 /* FilterLabContract.swift in Sources */,
@@ -2804,6 +2834,24 @@
 				BBFDEEFF247E852A003E2464 /* en */,
 			);
 			name = RequestTStatus.storyboard;
+			sourceTree = "<group>";
+		};
+		CC1AD61E24894FF3007BCEB8 /* Help.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC1AD61D24894FF3007BCEB8 /* Base */,
+				CC1AD62024894FF6007BCEB8 /* ar */,
+			);
+			name = Help.storyboard;
+			sourceTree = "<group>";
+		};
+		CC1AD6232489505D007BCEB8 /* HealthProfile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC1AD6222489505D007BCEB8 /* Base */,
+				CC1AD625248950A1007BCEB8 /* ar */,
+			);
+			name = HealthProfile.storyboard;
 			sourceTree = "<group>";
 		};
 		CC1E7C342481656A00039693 /* More.storyboard */ = {
@@ -2967,14 +3015,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AAVNA8529R;
+				DEVELOPMENT_TEAM = TRNKZ229R6;
 				INFOPLIST_FILE = Checkup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup.a;
+				PRODUCT_BUNDLE_IDENTIFIER = HK.Checkup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

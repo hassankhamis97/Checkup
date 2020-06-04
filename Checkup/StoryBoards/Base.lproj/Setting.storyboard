@@ -7,6 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--helpSVC -->
+        <scene sceneID="TwT-Mw-Adi">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="helpSVC " storyboardName="Help" referencedIdentifier="helpSVC " id="l2X-0a-1av" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6iS-a3-sgm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="-367"/>
+        </scene>
         <!--Setting Table View Controller-->
         <scene sceneID="lMv-H2-SEw">
             <objects>
