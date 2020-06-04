@@ -84,7 +84,14 @@ extension EditProfileTableViewController : ImagePickerDelegate,UITextFieldDelega
     // for image picker delegate : 
     
     func didSelect(image: UIImage?) {
-        self.profileImg.image = image
+        if (image==nil){
+           self.profileImg.image = self.profileImg.image
+        }
+        else{
+            self.profileImg.image = image
+           
+        }
+         self.isChoose=true
     }
     
     

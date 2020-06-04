@@ -7,75 +7,94 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
+import FirebaseAuth
 
-class EmailDetailTableViewController: UITableViewController {
-
+class EmailDetailTableViewController: UITableViewController, IView, IBase, UITextFieldDelegate {
+    
+    @IBOutlet weak var oldEmailTxtField: SkyFloatingLabelTextField!
+    
+    
+    @IBOutlet weak var newEmailTxtField: SkyFloatingLabelTextField!
+    
+    
+    @IBAction func UpdateEmailBtn(_ sender: Any) {
+        
+        
+        if newEmailTxtField.text?.isEmpty ?? true {
+            self.errorMessage(msg: "Enter your new Email")
+        } else {
+            showIndicator()
+            let currentUser = Auth.auth().currentUser
+            currentUser?.updateEmail(to: newEmailTxtField.text!) { error in
+                if let error = error {
+                    self.errorMessage(msg: error.localizedDescription)
+                } else {
+                    self.showToast(message: "Updated successfully ")
+                }
+                self.hideIndicator()
+            }
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
+        
+        oldEmailTxtField.text = Auth.auth().currentUser?.email
+        
+        // to enable return key
+        newEmailTxtField.delegate=self
+        
+        // to enable hide key board when touching any where
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
+        
     }
-
-    // MARK: - Table view data source
-
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    // function to enable dimiss key board(touch any where )
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+    
+    //  function to enable dimiss key board(Return key)
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        self.view.endEditing(true)
         return true
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func showIndicator() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func hideIndicator() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    func errorMessage(msg: String) {
+        Alert.showSimpleAlert(title: "sorry", message: msg, viewRef: self)
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func showToast(message : String) {
+        
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 200, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 8.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
     }
-    */
-
+    
 }

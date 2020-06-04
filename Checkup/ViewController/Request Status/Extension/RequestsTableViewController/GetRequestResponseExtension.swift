@@ -11,7 +11,7 @@ import UIKit
 extension RequestsTableViewController : IGetRequestsView , IUpdateNotificationFlagView{
     func showIndicator() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        if(requests!.count == 0 || !isBottom)
+        if(requests!.count == 0)
         {
 //            isBottom = false
         isWaitingData = true
