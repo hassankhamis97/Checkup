@@ -109,8 +109,6 @@ extension RequestStatusTableViewController : IRequestStatusView
             
            //
             
-            testArrContent = 80
-            
             
             showCancel = 50
             
