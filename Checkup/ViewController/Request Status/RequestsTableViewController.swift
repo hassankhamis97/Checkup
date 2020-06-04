@@ -170,11 +170,21 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
         
         
-        cell.layer.cornerRadius = 12
+        /*cell.layer.cornerRadius = 12
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.white.cgColor
         cell.translatesAutoresizingMaskIntoConstraints = false
-        
+    
+      */
+     
+         cell.viewOutlet.layer.shadowPath =  UIBezierPath(rect: cell.bounds).cgPath
+              cell.viewOutlet.layer.shadowRadius = 4
+              cell.viewOutlet.layer.shadowOffset = .zero
+              cell.viewOutlet.layer.shadowOpacity = 0.05
+              cell.viewOutlet.layer.cornerRadius = 5
+              cell.viewOutlet.layer.borderWidth = 5
+              cell.viewOutlet.layer.borderColor = UIColor.white.cgColor
+         
         
         
         cell.labImageOutlet.sd_setImage(with: URL(string: requests![indexPath.row].labPhoto ?? "users"), placeholderImage: UIImage(named: "users"))
@@ -213,7 +223,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 115
         
     }
     func formatDate(myArr : [String]) -> [HistoryObject] {
