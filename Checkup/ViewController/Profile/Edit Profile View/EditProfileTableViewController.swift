@@ -38,11 +38,12 @@ class EditProfileTableViewController: UITableViewController, UIPickerViewDelegat
     var user=User()
     var presenterFlag=true
     var email:String!
+    var isChoose = false
     
     override func viewWillAppear(_ animated: Bool) {
 
         
-        if(presenterFlag==true)
+        if(presenterFlag==true && isChoose==false)
         {
             let profilePresenterRef = ProfilePresenter(profileView: self)
                   let userId = Auth.auth().currentUser?.uid

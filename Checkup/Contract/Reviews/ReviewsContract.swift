@@ -16,14 +16,14 @@ import Foundation
 
 
  protocol IReviewsPresenter{
-    func getReviewsDataFromModel()
+    func getReviewsDataFromModel(reviewParam : ReviewsParams)
     func onSuccess(reviewsObj : [Review])
     func onFail()
  }
 
 
  protocol IReviewsModel{
-    func fetchReviews()
+    func fetchReviews(reviewParam : ReviewsParams)
  }
 
 

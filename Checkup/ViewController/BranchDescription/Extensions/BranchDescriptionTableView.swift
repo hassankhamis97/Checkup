@@ -131,9 +131,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             
              let reviews = storyboard!.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
 
+            reviews.reviewBranchId = branchId
         present(reviews, animated: true, completion: nil)
-       //      let reviews = self.storyboard?.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
-         //    self.navigationController?.pushViewController(reviews, animated: true)
+     
         }
         
     }

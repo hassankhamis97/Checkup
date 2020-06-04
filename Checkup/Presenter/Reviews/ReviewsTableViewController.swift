@@ -13,14 +13,21 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
     var reviewPresenterInView : IReviewsPresenter!
     var reviewObjInView : [Review]!
 
-    
+    var reviewParam : ReviewsParams!
+    var reviewBranchId : String!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        reviewParam = ReviewsParams()
         reviewPresenterInView = ReviewsPresenter(view: self)
-        reviewPresenterInView.getReviewsDataFromModel()
-//        tableView.estimatedRowHeight = 100.0
-//        tableView.rowHeight = UITableView.automaticDimension
+        
+        reviewParam.take = 5
+        reviewParam.skip = 0
+    //    reviewParam.branchId = reviewBranchId
+        print("review BranchID \(reviewBranchId)")
+          reviewParam.branchId = "2"
+        reviewPresenterInView.getReviewsDataFromModel(reviewParam: reviewParam)
+
         
     }
 
@@ -77,64 +84,38 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        var cell = tableView.cellForRow(at: indexPath)
-//        var cellHeight = cell?.layer.frame.height
-//        return cellHeight!
+
         return UITableView.automaticDimension
     }
     
 
     
     func returnDataToView(reviewsObj: [Review]) {
-        reviewObjInView = reviewsObj
-            print("reviews in view \(reviewObjInView)")
-        tableView.reloadData()
         
+        print("reviews in view \(reviewObjInView)")
+        if(reviewParam.skip == 0){
+            reviewObjInView = reviewsObj
+            print(reviewsObj.count)
+        }else{
+            for index in 1..<reviewsObj.count{
+                reviewObjInView.append(reviewsObj[index])
+            }
+            
+        }
+        
+        tableView.reloadData()
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if(indexPath.row == (reviewObjInView!.count-1)){
+            print("last cell is here")
+            reviewParam.take = 5
+            reviewParam.skip = reviewObjInView.count-1
+            reviewPresenterInView.getReviewsDataFromModel(reviewParam: reviewParam)
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }

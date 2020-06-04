@@ -106,12 +106,7 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
             paginatingParams.skip =  0
             
             
-    //        labParamsInView.governId = 1
-    //        labParamsInView.labId = "-M7O-IStoBsiYrQFpwo_"
-    //        labParamsInView.take = 5
-    //        labParamsInView.skip = 0
-    //        labParamsInView.longitude = 29.9137701
-    //        labParamsInView.latitude = 31.1803167
+
             labsActicity.transform = CGAffineTransform.init(scaleX: 2, y: 2)
 
             

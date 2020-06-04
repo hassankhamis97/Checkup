@@ -8,7 +8,7 @@
 
 import Foundation
 class ReviewsPresenter : IReviewsPresenter {
- 
+  
     
   
     var reviewsView : IReviewsView!
@@ -18,11 +18,12 @@ class ReviewsPresenter : IReviewsPresenter {
         reviewsView = view
     }
     
-    func getReviewsDataFromModel() {
-        reviewsModel = ReviewsModel(presenter:self)
-        reviewsModel.fetchReviews()
-        
-    }
+ 
+     func getReviewsDataFromModel(reviewParam: ReviewsParams) {
+           reviewsModel = ReviewsModel(presenter:self)
+        reviewsModel.fetchReviews(reviewParam: reviewParam)
+       }
+       
     
    
       func onSuccess(reviewsObj: [Review]) {

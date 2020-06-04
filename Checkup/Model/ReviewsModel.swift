@@ -11,7 +11,6 @@ import Alamofire
 import FirebaseFirestore
 class ReviewsModel : IReviewsModel{
     
-    
     let db = Firestore.firestore()
      var counter  = 0
     var reviewsObj : [Review]!
@@ -19,9 +18,11 @@ class ReviewsModel : IReviewsModel{
     init(presenter : IReviewsPresenter) {
         reviewsPresenter = presenter
     }
-    func fetchReviews() {
-        
-        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetBranchReviews?branchId=2&take=50&skip=0").responseJSON { (response) in
+    
+    
+    func fetchReviews(reviewParam: ReviewsParams) {
+     
+        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetBranchReviews?branchId=\(reviewParam.branchId!)&take=\(reviewParam.take!)&skip=\(reviewParam.skip!)").responseJSON{ (response) in
             if let json = response.result.value{
                       print("reviews: \(json)")
                 

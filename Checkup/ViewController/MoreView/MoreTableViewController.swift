@@ -111,6 +111,17 @@ class MoreTableViewController: UITableViewController {
                    
                }
         
+        
+        
+        
+        if indexPath.row==5{
+            
+          let vc = storyboard?.instantiateViewController(withIdentifier: "healthSVC") as!HealthProfileTableViewController
+                    
+                    navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
     }
  
   
