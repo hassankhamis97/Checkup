@@ -75,3 +75,6 @@
 "Enter your problem please"="من فضلك ادخل الشكوى الخاصة بك ";
 "Couldn't send email"="لا يمكن إرسال بريد إلكتروني";
 "Your device couldn't send email"="لا يستطيع جهازك ان يرسل بريد إلكتروني";
+"Language"="اللغه";
+"To changing language you need to restart application, do you want to restart?"="لتغيير اللغه يجب عليك إعادة تشغيل التطبيق مرة أخرى ,هل تريد إعادة التشغيل ؟";
+"Choose Language"="اختر لغة ";

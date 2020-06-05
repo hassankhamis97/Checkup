@@ -218,7 +218,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
                 return 0
             }
             if indexPath.row==7{
-                return 90
+                return 50
             }
             
         }
@@ -245,7 +245,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         
         
         if indexPath.row == 7{
-            return 90
+            return 50
         }
         if indexPath.row == 5{// FILLED ADRESS
             if(addressObj==nil)
@@ -261,7 +261,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         if indexPath.row==6{// FILLED ADRESS
             if(isFromHome! && addressObj==nil)
             {
-                return 70
+                return 50
             }
             else{
                 return 0
@@ -513,6 +513,28 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         
                       navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
+    
+    
+    
+    @IBAction func updateHelthSheetBtn(_ sender: Any) {
+        
+        
+        
+        
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "healthSVC") as! HealthProfileTableViewController
+            
+            
+                          navigationController?.pushViewController(vc, animated: true)
+        
+        
+        
+        
+    }
+    
+    
     
 }
 

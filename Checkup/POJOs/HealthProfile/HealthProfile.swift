@@ -9,13 +9,11 @@
 import Foundation
 
 struct HealthProfile:Codable  {
-    
+    var userId:String?
     var  isSuffreDiabetes:Bool?
     var  isSuffrePressure:Bool?
     var  isSTakeantiBiotic:Bool?
     var  isTakehaemophilia:Bool?
     var  dieaseNamesArray:[String]?
-    
-    
     
 }

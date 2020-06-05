@@ -21,7 +21,9 @@ class SettingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
+   var x =  LocalizationSystem.sharedInstance.getLanguage()
+        print(x)
+        
     }
 
     // MARK: - Table view data source
@@ -50,8 +52,16 @@ class SettingTableViewController: UITableViewController {
               }
         if indexPath.row==3
               {
-                  print ("log")
+                  let vc = storyboard!.instantiateViewController(withIdentifier: "languageSVC") as!LanguageTableViewController
+                                         navigationController?.pushViewController(vc, animated: true)
               }
+        
+        
+        if indexPath.row==4
+                     {
+                       
+
+                     }
         
 }
 }
