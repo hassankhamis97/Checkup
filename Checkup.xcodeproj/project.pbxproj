@@ -63,6 +63,12 @@
 		4E15ACEA24718279004418B1 /* GetRequestsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACE924718279004418B1 /* GetRequestsContract.swift */; };
 		4E15ACEC247187E3004418B1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACEB247187E3004418B1 /* Request.swift */; };
 		4E15ACEE24718EDF004418B1 /* GetRequestResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACED24718EDF004418B1 /* GetRequestResponseExtension.swift */; };
+		4E1C3FA42489CF9F0016A555 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C3F9D2489CF9F0016A555 /* AboutTableViewController.swift */; };
+		4E1C3FA52489CF9F0016A555 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C3F9E2489CF9F0016A555 /* AboutViewController.swift */; };
+		4E1C3FA62489CF9F0016A555 /* TeamImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C3FA02489CF9F0016A555 /* TeamImagesCollectionViewCell.swift */; };
+		4E1C3FA72489CF9F0016A555 /* StaticTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C3FA22489CF9F0016A555 /* StaticTableView.swift */; };
+		4E1C3FA82489CF9F0016A555 /* TeamCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C3FA32489CF9F0016A555 /* TeamCollectionView.swift */; };
+		4E1C3FAA2489CFEA0016A555 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1C3FA92489CFEA0016A555 /* About.storyboard */; };
 		4E1FBE36247E1CFB00C463D5 /* ChatStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FBE35247E1CFB00C463D5 /* ChatStatus.swift */; };
 		4E206DE8246EE3E3007C401D /* TestCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E206DE7246EE3E3007C401D /* TestCollectionTests.swift */; };
 		4E206DEB246EE3FE007C401D /* LabCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E206DEA246EE3FE007C401D /* LabCollectionTests.swift */; };
@@ -372,6 +378,12 @@
 		4E15ACE924718279004418B1 /* GetRequestsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestsContract.swift; sourceTree = "<group>"; };
 		4E15ACEB247187E3004418B1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		4E15ACED24718EDF004418B1 /* GetRequestResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestResponseExtension.swift; sourceTree = "<group>"; };
+		4E1C3F9D2489CF9F0016A555 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		4E1C3F9E2489CF9F0016A555 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		4E1C3FA02489CF9F0016A555 /* TeamImagesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E1C3FA22489CF9F0016A555 /* StaticTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableView.swift; sourceTree = "<group>"; };
+		4E1C3FA32489CF9F0016A555 /* TeamCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionView.swift; sourceTree = "<group>"; };
+		4E1C3FA92489CFEA0016A555 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		4E1FBE35247E1CFB00C463D5 /* ChatStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStatus.swift; sourceTree = "<group>"; };
 		4E206DE7246EE3E3007C401D /* TestCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionTests.swift; sourceTree = "<group>"; };
 		4E206DEA246EE3FE007C401D /* LabCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabCollectionTests.swift; sourceTree = "<group>"; };
@@ -899,6 +911,35 @@
 			path = GetRequests;
 			sourceTree = "<group>";
 		};
+		4E1C3F9C2489CF9F0016A555 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				4E1C3F9D2489CF9F0016A555 /* AboutTableViewController.swift */,
+				4E1C3F9E2489CF9F0016A555 /* AboutViewController.swift */,
+				4E1C3F9F2489CF9F0016A555 /* Cell */,
+				4E1C3FA12489CF9F0016A555 /* Extension */,
+			);
+			name = About;
+			path = ../../../../../../../WDMiddle/ITIContinue/FinalProject/IOS/IOS/BK/Checkup/Checkup/ViewController/About;
+			sourceTree = "<group>";
+		};
+		4E1C3F9F2489CF9F0016A555 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4E1C3FA02489CF9F0016A555 /* TeamImagesCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4E1C3FA12489CF9F0016A555 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4E1C3FA22489CF9F0016A555 /* StaticTableView.swift */,
+				4E1C3FA32489CF9F0016A555 /* TeamCollectionView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4E206DE5246EE31F007C401D /* CustomObjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -1036,6 +1077,7 @@
 		4E22F92F243E6E780090693C /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				4E1C3FA92489CFEA0016A555 /* About.storyboard */,
 				A3BC0857247D91D500D98A09 /* Login.storyboard */,
 				4E432F082464F6E000D1CACA /* History.storyboard */,
 				4E22F902243E6E6C0090693C /* Main.storyboard */,
@@ -1061,6 +1103,7 @@
 		4E22F932243E73A90090693C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4E1C3F9C2489CF9F0016A555 /* About */,
 				CC36EAB224880F650067568A /* HealthProfile */,
 				CC3E40B924870A9C00E3B481 /* Precautions */,
 				4E32D29B248528FB003B6408 /* Navigation */,
@@ -2343,6 +2386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EE7EA2B246AD3B900BF434F /* SenderImageTableViewCell.xib in Resources */,
+				4E1C3FAA2489CFEA0016A555 /* About.storyboard in Resources */,
 				4EDADECA246A1FF20069B0E5 /* RecievedImageTableViewCell.xib in Resources */,
 				4E22F90C243E6E6D0090693C /* LaunchScreen.storyboard in Resources */,
 				4E45420A2479C54800955FD8 /* Chat.storyboard in Resources */,
@@ -2496,6 +2540,7 @@
 				4E4542232479FAF700955FD8 /* AddViewIndicator.swift in Sources */,
 				4EBED80B24816235009A43FB /* UpdateNotificationFlagContract.swift in Sources */,
 				CC1E1B6E24884B9800618026 /* HealthProfileExtension.swift in Sources */,
+				4E1C3FA62489CF9F0016A555 /* TeamImagesCollectionViewCell.swift in Sources */,
 				4EB18BDF24847B45007D35AE /* AccessLocation.swift in Sources */,
 				4EA87517248004B100E95B30 /* SendMessageContract.swift in Sources */,
 				032AB5C72481E0770021DE4F /* ReviewsContract.swift in Sources */,
@@ -2567,6 +2612,7 @@
 				4E2C9E0224708D77007C6109 /* BranchDescriptionViewController.swift in Sources */,
 				4EA875192480055E00E95B30 /* ChatContract.swift in Sources */,
 				03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */,
+				4E1C3FA52489CF9F0016A555 /* AboutViewController.swift in Sources */,
 				4EA87524248068D300E95B30 /* ImageIndicatorTableViewCell.swift in Sources */,
 				4E87AF4F247EC5D000002E66 /* ManualNotificationModel.swift in Sources */,
 				4E77B4C42477597F000B3118 /* GetFilteredLabsResponse.swift in Sources */,
@@ -2613,6 +2659,7 @@
 				4EC1FD302472DDD70029C499 /* FilterTestViewController.swift in Sources */,
 				CC80B9E4247737FA00521508 /* StatisticPresenter.swift in Sources */,
 				CCCDA050246AE5D5005549EA /* PassWordDetailsTableViewController.swift in Sources */,
+				4E1C3FA72489CF9F0016A555 /* StaticTableView.swift in Sources */,
 				CC8A1046245E087C007856BF /* IFillDataCells.swift in Sources */,
 				CC80B9E12477360000521508 /* HbA1cSample.swift in Sources */,
 				CC79E5B02455CE8300C8A166 /* SplashViewController.swift in Sources */,
@@ -2629,6 +2676,7 @@
 				03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */,
 				4E87AF48247EC2FD00002E66 /* ManualNotificationContract.swift in Sources */,
 				03380CDC247F5C590055717E /* FilterProtocol.swift in Sources */,
+				4E1C3FA82489CF9F0016A555 /* TeamCollectionView.swift in Sources */,
 				4E77B4C2247757E3000B3118 /* GetFilteredLabsPresenter.swift in Sources */,
 				CC1E7C3124814C6D00039693 /* UserRealm.swift in Sources */,
 				A33CA62B246D3F610014CF6B /* UserCustomTableViewCell.swift in Sources */,
@@ -2670,6 +2718,7 @@
 				4ECE5C51246E89F200932947 /* LoginContract.swift in Sources */,
 				4E4EA638247010DE00309CAF /* NewRequestModel.swift in Sources */,
 				03F6C7F9246B891800E89178 /* LabDescTableViewController.swift in Sources */,
+				4E1C3FA42489CF9F0016A555 /* AboutTableViewController.swift in Sources */,
 				A3C5F0382472C7850069413F /* SignupResponseExtension.swift in Sources */,
 				4E4542202479CEC800955FD8 /* LocalizedString.swift in Sources */,
 				4E15ACEE24718EDF004418B1 /* GetRequestResponseExtension.swift in Sources */,
