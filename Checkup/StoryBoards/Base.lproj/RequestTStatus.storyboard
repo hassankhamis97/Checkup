@@ -546,8 +546,8 @@
                                                             </connections>
                                                         </button>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zFI-q9-awk">
-                                                            <rect key="frame" x="77" y="192" width="239" height="131"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <rect key="frame" x="77" y="192" width="157" height="131"/>
+                                                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uAV-sb-5MC">
                                                                 <size key="itemSize" width="137" height="37"/>
                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -556,26 +556,26 @@
                                                             </collectionViewFlowLayout>
                                                             <cells>
                                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cell" id="zI4-hx-mVc" customClass="PopUpCollectionViewCell" customModule="Checkup" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                                    <rect key="frame" x="10" y="0.0" width="137" height="37"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
-                                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yuv-fS-MZx">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="137" height="37"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xeq-6y-HRM">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xeq-6y-HRM">
                                                                                 <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="bottom" secondItem="Xeq-6y-HRM" secondAttribute="bottom" constant="8" id="CZh-aP-wY0"/>
-                                                                            <constraint firstItem="Xeq-6y-HRM" firstAttribute="top" secondItem="yuv-fS-MZx" secondAttribute="top" constant="8" id="O8L-jA-Hhx"/>
-                                                                            <constraint firstItem="Xeq-6y-HRM" firstAttribute="leading" secondItem="yuv-fS-MZx" secondAttribute="leading" constant="8" id="VoU-5G-YqK"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="Xeq-6y-HRM" secondAttribute="trailing" constant="8" id="b7X-lP-IzT"/>
-                                                                        </constraints>
-                                                                    </collectionViewCellContentView>
+                                                                    </view>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="Xeq-6y-HRM" secondAttribute="bottom" constant="8" id="CZh-aP-wY0"/>
+                                                                        <constraint firstItem="Xeq-6y-HRM" firstAttribute="top" secondItem="zI4-hx-mVc" secondAttribute="top" constant="8" id="O8L-jA-Hhx"/>
+                                                                        <constraint firstItem="Xeq-6y-HRM" firstAttribute="leading" secondItem="zI4-hx-mVc" secondAttribute="leading" constant="8" id="VoU-5G-YqK"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="Xeq-6y-HRM" secondAttribute="trailing" constant="8" id="b7X-lP-IzT"/>
+                                                                    </constraints>
                                                                     <connections>
                                                                         <outlet property="phoneLabel" destination="Xeq-6y-HRM" id="ovj-B3-V1a"/>
                                                                     </connections>
@@ -603,12 +603,12 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="YFM-bv-Oxo" firstAttribute="top" secondItem="mZy-rK-1dO" secondAttribute="top" constant="8" id="36y-mW-sG6"/>
                                                         <constraint firstItem="YFM-bv-Oxo" firstAttribute="centerX" secondItem="mZy-rK-1dO" secondAttribute="centerX" id="4Nq-Cp-7Fw"/>
                                                         <constraint firstItem="e0H-en-zRZ" firstAttribute="centerX" secondItem="mZy-rK-1dO" secondAttribute="centerX" id="4j2-qj-ADY"/>
-                                                        <constraint firstAttribute="trailing" secondItem="zFI-q9-awk" secondAttribute="trailing" constant="8" id="6jb-vL-JHt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zFI-q9-awk" secondAttribute="trailing" constant="90" id="6jb-vL-JHt"/>
                                                         <constraint firstItem="zFI-q9-awk" firstAttribute="leading" secondItem="FnF-D7-yXI" secondAttribute="trailing" constant="8" id="DEA-Ob-Hdc"/>
                                                         <constraint firstItem="zFI-q9-awk" firstAttribute="top" secondItem="e0H-en-zRZ" secondAttribute="bottom" constant="30" id="Kax-Rd-4Jq"/>
                                                         <constraint firstItem="09R-mG-bij" firstAttribute="top" secondItem="zFI-q9-awk" secondAttribute="bottom" constant="8" id="VtO-Od-BFT"/>
@@ -618,11 +618,6 @@
                                                         <constraint firstAttribute="bottom" secondItem="09R-mG-bij" secondAttribute="bottom" constant="26" id="hWA-pB-dHU"/>
                                                         <constraint firstItem="09R-mG-bij" firstAttribute="centerX" secondItem="mZy-rK-1dO" secondAttribute="centerX" id="yhz-DG-qML"/>
                                                     </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                            <integer key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.1366384846" colorSpace="custom" customColorSpace="sRGB"/>
