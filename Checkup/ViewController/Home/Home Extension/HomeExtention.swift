@@ -107,6 +107,22 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
             cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = searchedHomeLabsArr[indexPath.row].hotline
             
+            
+//            cell.backgroundColor = .clear
+            
+//              cell.isHidden = true
+//            let regularBlur = UIBlurEffect(style: .dark)
+//              let blurView = UIVisualEffectView(effect: regularBlur)
+//              blurView.frame = cell.bounds
+//              blurView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//              cell.addSubview(blurView)
+//              cell.isHidden = false
+//              let blurEffect = UIBlurEffect(style: .extraLight)
+//              let blurView = UIVisualEffectView(effect: blurEffect)
+//              blurView.translatesAutoresizingMaskIntoConstraints = false
+//              cell.insertSubview(blurView, at: 0)
+//              NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: cell.heightAnchor) , blurView.widthAnchor.constraint(equalTo:cell.widthAnchor)])
+            
         } else if searchedHomeLabsArr.count <= 0 &&  searchBar.text?.count ?? 0 > 0{
             print("NoData")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "noDataCell", for: indexPath)
@@ -128,7 +144,8 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
         
         cell.contentView.layer.cornerRadius = 15
         cell.contentView.layer.borderWidth = 5.0
-        cell.contentView.layer.borderColor = UIColor.white.cgColor
+//        cell.contentView.layer.borderColor = UIColor.white.cgColor
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
         
         return cell
     }

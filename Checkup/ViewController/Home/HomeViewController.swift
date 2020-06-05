@@ -217,7 +217,7 @@ class HomeViewController: UIViewController ,UICollectionViewDelegateFlowLayout ,
             return CGSize(width: width * 0.25, height: 240)
         }
         else {
-            return CGSize(width: width * 0.5, height: 240)
+            return CGSize(width: (width * 0.5 - 5), height: 240)
         }
     }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

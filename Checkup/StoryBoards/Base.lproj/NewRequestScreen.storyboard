@@ -9,6 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--aboutSVC-->
+        <scene sceneID="fGm-XU-GtD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="aboutSVC" storyboardName="About" referencedIdentifier="aboutSVC" id="l4V-Hg-TP4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bZs-F8-hYb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frA-n9-Svd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="-393"/>
+        </scene>
         <!--New Request-->
         <scene sceneID="eci-gt-32W">
             <objects>
@@ -548,7 +558,13 @@
                             <outlet property="delegate" destination="26o-WZ-09i" id="mcV-T0-g8d"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Request" id="BnS-6m-rmy"/>
+                    <navigationItem key="navigationItem" title="New Request" id="BnS-6m-rmy">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="4NR-b4-bbK">
+                            <connections>
+                                <segue destination="l4V-Hg-TP4" kind="push" id="hX7-kk-Nxi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="ldJ-Qp-CB5" id="9q1-Fu-woh"/>
                         <outlet property="addressTextField" destination="6pK-Ma-HUc" id="SgH-AW-4WP"/>

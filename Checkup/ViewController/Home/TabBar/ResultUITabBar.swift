@@ -15,12 +15,14 @@ class ResultUITabBar: UITabBarController , IManualNotificationView{
 
         reloadInputViews()
     }
-    
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         if Auth.auth().currentUser?.uid != nil {
         var manualNotificationPresenter = ManualNotificationPresenter(manualNotificationViewRef: self)
         manualNotificationPresenter.getNotificationNumbers()
         }
+    }
+    override func viewDidLoad() {
+        
     }
 //    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
 //        if item == (self.tabBar.items as! [UITabBarItem])[1]{
