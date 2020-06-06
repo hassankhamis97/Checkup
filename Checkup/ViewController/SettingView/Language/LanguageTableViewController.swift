@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LanguageTableViewController: UITableViewController {
+class LanguageTableViewController: UITableViewController ,IView{
     
     @IBOutlet weak var chooseLanguageLabel: UILabel!
     var btnArray=[UIButton]()
@@ -29,7 +29,25 @@ class LanguageTableViewController: UITableViewController {
     }
 
  
-
+    override func viewWillAppear(_ animated: Bool) {
+         var x =  LocalizationSystem.sharedInstance.getLanguage()
+                    print(x)
+        
+       if x=="ar"
+       {
+        
+        arabicLangBtn.isSelected=true
+        arabicLangBtn.backgroundColor = .systemTeal
+        }
+       
+        else if x=="en"
+       {
+        
+        englishLangBtn.isSelected=true
+        englishLangBtn.backgroundColor = .systemTeal
+        }
+        
+    }
     
     
     func setFuncAndTagToBtn(btnArray:[UIButton],tag:Int)
@@ -64,44 +82,63 @@ class LanguageTableViewController: UITableViewController {
             if sender.tag==1{
                     print ("arabic")
                 
-                  LocalizationSystem.sharedInstance.setLanguage(languageCode: "ar")
-
+                 
+                          
+                let alertController = UIAlertController(title: "Language".localized, message: "To changing language you need to restart application, do you want to restart?".localized
+                                              , preferredStyle: .alert)
+                                          
+                                          
+                                          
+                           alertController.addAction(UIAlertAction(title: "Yes".localized, style: UIAlertAction.Style.default) {
+                                                       UIAlertAction in
+                            LocalizationSystem.sharedInstance.setLanguage(languageCode: "ar")
+                                        
+                                                      exit(EXIT_SUCCESS)
+                                         })
+                                          
+                           alertController.addAction(UIAlertAction(title: "No".localized, style: UIAlertAction.Style.default) {
+                                                                     UIAlertAction in
+                                              self.dismiss(animated: true, completion: nil)
+                                                        })
+                                          
+                                         self.present(alertController, animated: true)
             
                
             }
                 else if sender.tag==2{
                     print ("english")
 
-
-                  LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
-
+                
+                let alertController = UIAlertController(title: "Language".localized, message: "To changing language you need to restart application, do you want to restart?".localized
+                                                  , preferredStyle: .alert)
+                                              
+                                              
+                                              
+                               alertController.addAction(UIAlertAction(title: "Yes".localized, style: UIAlertAction.Style.default) {
+                                                           UIAlertAction in
+                                 LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
+                                            
+                                                          exit(EXIT_SUCCESS)
+                                             })
+                                              
+                               alertController.addAction(UIAlertAction(title: "No".localized, style: UIAlertAction.Style.default) {
+                                                                         UIAlertAction in
+                                                  self.dismiss(animated: true, completion: nil)
+                                                            })
+                                              
+                                             self.present(alertController, animated: true)
+          
               
                 }
      
             
             
             
-                           let alertController = UIAlertController(title: "Language".localized, message: "To changing language you need to restart application, do you want to restart?".localized
-                               , preferredStyle: .alert)
-                           
-                           
-                           
-            alertController.addAction(UIAlertAction(title: "Yes".localized, style: UIAlertAction.Style.default) {
-                                        UIAlertAction in
-                                        NSLog("OK Pressed")
-                                        exit(0)
-                          })
-                           
-            alertController.addAction(UIAlertAction(title: "No".localized, style: UIAlertAction.Style.default) {
-                                                      UIAlertAction in
-                               self.dismiss(animated: true, completion: nil)
-                                         })
-                           
-                          self.present(alertController, animated: true)
+                          
             
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "settingSVC") as! SettingTableViewController
-            let appDlg = UIApplication.shared.delegate as? AppDelegate
-            appDlg?.window?.rootViewController = vc
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "settingSVC") as! SettingTableViewController
+//            let appDlg = UIApplication.shared.delegate as? AppDelegate
+//            appDlg?.window?.rootViewController = vc
 
 }
 }
