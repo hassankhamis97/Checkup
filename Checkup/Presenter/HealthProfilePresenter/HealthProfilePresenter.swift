@@ -40,7 +40,9 @@ class HealthProfilePresenter:IHealthProfilePresenter{
     
     
     func updateUserData(userId: String, healthProfileObj: HealthProfile) {
-         
+         let healthProfileModel=HealthProfileModel(healthProfilePresenterRef: self)
+                
+                healthProfileModel.updateUserData(userId: userId,healthProfileObj: healthProfileObj)
      }
      
      func onSucessUpdate() {
