@@ -15,5 +15,6 @@ struct HealthProfile:Codable  {
     var  isSTakeantiBiotic:Bool?
     var  isTakehaemophilia:Bool?
     var  dieaseNamesArray:[String]?
+    var Id:Int?
     
 }

@@ -57,11 +57,7 @@ class SettingTableViewController: UITableViewController {
               }
         
         
-        if indexPath.row==4
-                     {
-                       
-
-                     }
+    
         
 }
 }

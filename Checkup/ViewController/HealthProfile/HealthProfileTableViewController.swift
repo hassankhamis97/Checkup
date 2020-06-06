@@ -8,6 +8,7 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import Firebase
 
 class HealthProfileTableViewController: UITableViewController,IView ,UITextFieldDelegate{
 
@@ -38,9 +39,12 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
     var haemophiliaArray=[UIButton]()
     var dieaseNamesArray=[String]()
     var healthProfie=HealthProfile()
+    var healthProfilePresenterRef:HealthProfilePresenter!
+    var userId=Auth.auth().currentUser!.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         diabiabetesArray=[yesSufferDiabetesBtn,noSufferDiabetesBtn]
         pressurArray=[yesSufferPressureBtn,noSufferPressuresBtn]
         antiBioticArray=[yesTakeAntiBtn,noTakeAntiBtn]
@@ -55,16 +59,20 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
               
               view.addGestureRecognizer(tap)
-        
-        
-        
-        
-        let healthProfilePresenterRef=HealthProfilePresenter(healthProfileView: self)
-        
-   
-        healthProfilePresenterRef.getHealthProfileData(userId: "")
+  
     }
 
+    
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+         healthProfilePresenterRef=HealthProfilePresenter(healthProfileView: self)
+               
+          
+               healthProfilePresenterRef.getHealthProfileData(userId: userId)
+    }
+    
     
     
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
@@ -137,7 +145,7 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
                 
                 else{
                     print ("No diabtes")
-                      healthProfie.isSuffreDiabetes=false
+                    healthProfie.isSuffreDiabetes=false
                  
                 }
             }
@@ -181,13 +189,13 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
                                      sender.backgroundColor = UIColor.systemTeal
                                  if sender==antiBioticArray[0]{
                                      print ("yes antibiotic")
-                                       healthProfie.isSTakeantiBiotic=true
+                                    healthProfie.isSTakeantiBiotic=true
                                   
                                      }
                                  
                                  else{
                                      print ("No antibiotic")
-                                   healthProfie.isSTakeantiBiotic=false
+                                    healthProfie.isSTakeantiBiotic=false
                                  }
                              }
             
@@ -211,7 +219,7 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
                                  
                                  else{
                                      print ("No hemophilia")
-                                  healthProfie.isTakehaemophilia=false
+                                    healthProfie.isTakehaemophilia=false
                                  }
                              }
             
@@ -223,10 +231,11 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
     
     @IBAction func saveBtn(_ sender: Any) {
         
-        healthProfie.dieaseNamesArray=self.dieaseNamesArray
-        
+        healthProfie.dieaseNamesArray
+            = self.dieaseNamesArray
+        healthProfie.userId=userId
         print(healthProfie)
-        navigationController?.popViewController(animated: true)
+        healthProfilePresenterRef.updateUserData(userId: userId, healthProfileObj: healthProfie)
     }
     
 }
