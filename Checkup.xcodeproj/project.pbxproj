@@ -17,6 +17,10 @@
 		032AB5CA2481E9310021DE4F /* ReviewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032AB5C92481E9310021DE4F /* ReviewsPresenter.swift */; };
 		032AB5CD248202730021DE4F /* ReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032AB5CC248202730021DE4F /* ReviewsTableViewController.swift */; };
 		032AB5CF24820F110021DE4F /* ReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032AB5CE24820F110021DE4F /* ReviewsTableViewCell.swift */; };
+		033568D0248B06EB00D4B9D3 /* RatingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033568CF248B06E800D4B9D3 /* RatingTableViewController.swift */; };
+		033568D3248B0BE400D4B9D3 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033568D2248B0BE400D4B9D3 /* RatingTableViewCell.swift */; };
+		033568D5248B14D900D4B9D3 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033568D4248B14D900D4B9D3 /* NoteTableViewCell.swift */; };
+		033568D9248B152C00D4B9D3 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033568D8248B152C00D4B9D3 /* ButtonTableViewCell.swift */; };
 		0335841A248443FF0030F01C /* ReviewsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03358419248443FE0030F01C /* ReviewsStoryboard.storyboard */; };
 		0335FAFB246A0B4800CE0863 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */; };
 		03380CDA247F245C0055717E /* FilterGovern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03380CD9247F245C0055717E /* FilterGovern.swift */; };
@@ -338,6 +342,10 @@
 		032AB5C92481E9310021DE4F /* ReviewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsPresenter.swift; sourceTree = "<group>"; };
 		032AB5CC248202730021DE4F /* ReviewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewsTableViewController.swift; path = Checkup/Presenter/Reviews/ReviewsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		032AB5CE24820F110021DE4F /* ReviewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewCell.swift; sourceTree = "<group>"; };
+		033568CF248B06E800D4B9D3 /* RatingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewController.swift; sourceTree = "<group>"; };
+		033568D2248B0BE400D4B9D3 /* RatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
+		033568D4248B14D900D4B9D3 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		033568D8248B152C00D4B9D3 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		03358419248443FE0030F01C /* ReviewsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReviewsStoryboard.storyboard; sourceTree = "<group>"; };
 		0335FAFA246A0B4800CE0863 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		03380CD9247F245C0055717E /* FilterGovern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterGovern.swift; sourceTree = "<group>"; };
@@ -730,6 +738,25 @@
 			path = Reviews;
 			sourceTree = "<group>";
 		};
+		033568CE248B056200D4B9D3 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				033568D1248B0B9500D4B9D3 /* cells */,
+				033568CF248B06E800D4B9D3 /* RatingTableViewController.swift */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		033568D1248B0B9500D4B9D3 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				033568D2248B0BE400D4B9D3 /* RatingTableViewCell.swift */,
+				033568D4248B14D900D4B9D3 /* NoteTableViewCell.swift */,
+				033568D8248B152C00D4B9D3 /* ButtonTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		0335FAF9246A0B1A00CE0863 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1086,6 +1113,7 @@
 		4E22F932243E73A90090693C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				033568CE248B056200D4B9D3 /* Rating */,
 				4E2D6CC5248ADEC000FADA05 /* About */,
 				CC36EAB224880F650067568A /* HealthProfile */,
 				CC3E40B924870A9C00E3B481 /* Precautions */,
@@ -2602,6 +2630,7 @@
 				CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */,
 				CC1E1B71248852C300618026 /* HealthProfile.swift in Sources */,
 				4E1FBE36247E1CFB00C463D5 /* ChatStatus.swift in Sources */,
+				033568D0248B06EB00D4B9D3 /* RatingTableViewController.swift in Sources */,
 				4EB022E2248825A600965345 /* DispatchQueueExtension.swift in Sources */,
 				4EBED80D24816415009A43FB /* NotificationContract.swift in Sources */,
 				CC36EAB424880F9D0067568A /* RadioButtonOutlet.swift in Sources */,
@@ -2680,6 +2709,7 @@
 				4EDADEC9246A1FF20069B0E5 /* RecievedImageTableViewCell.swift in Sources */,
 				4EC8240C246FDD0A0075C894 /* ReqPopUpFromHomeViewController.swift in Sources */,
 				4EA8750F247FCCEA00E95B30 /* Message.swift in Sources */,
+				033568D5248B14D900D4B9D3 /* NoteTableViewCell.swift in Sources */,
 				CCD0BAD7246A035C007CF3EE /* LocationTableViewController.swift in Sources */,
 				CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */,
 				4EE7EA2F246AF2B800BF434F /* DateTableViewCell.swift in Sources */,
@@ -2761,6 +2791,7 @@
 				CCDEF4742462DE9200ECBBEB /* RequestStatusTableViewController.swift in Sources */,
 				4ECE5C59246EA5C200932947 /* IBase.swift in Sources */,
 				4E32D29F24858E9A003B6408 /* NewRequestResponseExtension.swift in Sources */,
+				033568D9248B152C00D4B9D3 /* ButtonTableViewCell.swift in Sources */,
 				4ECE5C51246E89F200932947 /* LoginContract.swift in Sources */,
 				4E4EA638247010DE00309CAF /* NewRequestModel.swift in Sources */,
 				03F6C7F9246B891800E89178 /* LabDescTableViewController.swift in Sources */,
@@ -2768,6 +2799,7 @@
 				A3C5F0382472C7850069413F /* SignupResponseExtension.swift in Sources */,
 				4E4542202479CEC800955FD8 /* LocalizedString.swift in Sources */,
 				4E15ACEE24718EDF004418B1 /* GetRequestResponseExtension.swift in Sources */,
+				033568D3248B0BE400D4B9D3 /* RatingTableViewCell.swift in Sources */,
 				037D346D24884A3C002DB046 /* ReviewsParams.swift in Sources */,
 				CC3E40B824870A9100E3B481 /* PrecautionsTableViewController.swift in Sources */,
 				4EF1A1ED2476F00100597A15 /* Branches.swift in Sources */,
