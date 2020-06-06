@@ -56,7 +56,13 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
               
               view.addGestureRecognizer(tap)
         
+        
+        
+        
+        let healthProfilePresenterRef=HealthProfilePresenter(healthProfileView: self)
+        
    
+        healthProfilePresenterRef.getHealthProfileData(userId: "")
     }
 
     
@@ -220,6 +226,7 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
         healthProfie.dieaseNamesArray=self.dieaseNamesArray
         
         print(healthProfie)
+        navigationController?.popViewController(animated: true)
     }
     
 }
