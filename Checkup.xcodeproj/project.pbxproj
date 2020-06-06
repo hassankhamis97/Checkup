@@ -93,6 +93,7 @@
 		4E2D6CCF248ADEC200FADA05 /* TeamImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2D6CC9248ADEC000FADA05 /* TeamImagesCollectionViewCell.swift */; };
 		4E2D6CD0248ADEC200FADA05 /* StaticTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2D6CCB248ADEC000FADA05 /* StaticTableView.swift */; };
 		4E2D6CD1248ADEC200FADA05 /* TeamCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2D6CCC248ADEC100FADA05 /* TeamCollectionView.swift */; };
+		4E2D6CD3248B4F4D00FADA05 /* RateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2D6CD2248B4F4D00FADA05 /* RateTableViewCell.swift */; };
 		4E32D2992485117A003B6408 /* LabDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32D2982485117A003B6408 /* LabDescViewController.swift */; };
 		4E32D29D2485297A003B6408 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32D29C2485297A003B6408 /* StyleViewController.swift */; };
 		4E32D29F24858E9A003B6408 /* NewRequestResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E32D29E24858E9A003B6408 /* NewRequestResponseExtension.swift */; };
@@ -424,6 +425,7 @@
 		4E2D6CC9248ADEC000FADA05 /* TeamImagesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E2D6CCB248ADEC000FADA05 /* StaticTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTableView.swift; sourceTree = "<group>"; };
 		4E2D6CCC248ADEC100FADA05 /* TeamCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCollectionView.swift; sourceTree = "<group>"; };
+		4E2D6CD2248B4F4D00FADA05 /* RateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTableViewCell.swift; sourceTree = "<group>"; };
 		4E32D2982485117A003B6408 /* LabDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescViewController.swift; sourceTree = "<group>"; };
 		4E32D29C2485297A003B6408 /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
 		4E32D29E24858E9A003B6408 /* NewRequestResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRequestResponseExtension.swift; sourceTree = "<group>"; };
@@ -753,6 +755,7 @@
 				033568D2248B0BE400D4B9D3 /* RatingTableViewCell.swift */,
 				033568D4248B14D900D4B9D3 /* NoteTableViewCell.swift */,
 				033568D8248B152C00D4B9D3 /* ButtonTableViewCell.swift */,
+				4E2D6CD2248B4F4D00FADA05 /* RateTableViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -2610,6 +2613,7 @@
 				4EBED80B24816235009A43FB /* UpdateNotificationFlagContract.swift in Sources */,
 				CC1E1B6E24884B9800618026 /* HealthProfileExtension.swift in Sources */,
 				4E2D6CCF248ADEC200FADA05 /* TeamImagesCollectionViewCell.swift in Sources */,
+				4E2D6CD3248B4F4D00FADA05 /* RateTableViewCell.swift in Sources */,
 				4EB18BDF24847B45007D35AE /* AccessLocation.swift in Sources */,
 				4EA87517248004B100E95B30 /* SendMessageContract.swift in Sources */,
 				032AB5C72481E0770021DE4F /* ReviewsContract.swift in Sources */,
