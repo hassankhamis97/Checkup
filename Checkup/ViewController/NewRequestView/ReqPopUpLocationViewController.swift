@@ -28,11 +28,12 @@ class ReqPopUpLocationViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var autoLocateOutlet: UIButton!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        autoLocateOutlet.layer.cornerRadius=10
        
     }
     

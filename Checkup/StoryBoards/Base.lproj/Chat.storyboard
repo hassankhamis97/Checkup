@@ -87,14 +87,14 @@
                                 <rect key="frame" x="0.0" y="799" width="414" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHx-pf-dTR">
-                                        <rect key="frame" x="8" y="15.5" width="40" height="30"/>
+                                        <rect key="frame" x="8" y="15" width="40" height="32"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="LgA-cZ-kDb"/>
                                             <constraint firstAttribute="width" constant="40" id="YpY-kc-aMU"/>
                                         </constraints>
                                         <color key="tintColor" red="0.1960784314" green="0.28235294119999998" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" backgroundImage="camera.fill" catalog="system">
+                                        <state key="normal" backgroundImage="Compact Camera_20px">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -269,7 +269,7 @@
     </scenes>
     <resources>
         <image name="Chat1_50px" width="50" height="50"/>
-        <image name="camera.fill" catalog="system" width="64" height="48"/>
+        <image name="Compact Camera_20px" width="20" height="20"/>
         <image name="chatSend" width="64" height="64"/>
         <image name="newmicroscope (1)" width="800" height="600"/>
     </resources>
