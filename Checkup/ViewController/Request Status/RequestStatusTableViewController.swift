@@ -145,6 +145,8 @@ class RequestStatusTableViewController: UITableViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         
+      
+        
         if(Auth.auth().currentUser?.uid == nil)
         {
             let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
@@ -194,7 +196,7 @@ class RequestStatusTableViewController: UITableViewController  {
         } else {
             // Fallback on earlier versions
         }
-        let backBtn = UIBarButtonItem(title: "〈  "+"STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
+        let backBtn = UIBarButtonItem(title:"STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
         
         self.navigationItem.setLeftBarButtonItems([backBtnImage,backBtn], animated: true)
         

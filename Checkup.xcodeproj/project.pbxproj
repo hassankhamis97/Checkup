@@ -231,6 +231,7 @@
 		A3C5F0382472C7850069413F /* SignupResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F0372472C7850069413F /* SignupResponseExtension.swift */; };
 		A3DA5537247D5CD80038AF1B /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DA5539247D5CD80038AF1B /* signUp.storyboard */; };
 		BB13259B247BC43000997EF3 /* RequestTStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB13259D247BC43000997EF3 /* RequestTStatus.storyboard */; };
+		BB136EB4248D02E80003A9B7 /* UserAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB136EB3248D02E80003A9B7 /* UserAuthorization.swift */; };
 		BB1C099A24883A55000F24A6 /* IOkAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C099924883A55000F24A6 /* IOkAlert.swift */; };
 		BB1C09A52488B8CA000F24A6 /* GenaricAlertExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C09A42488B8CA000F24A6 /* GenaricAlertExtention.swift */; };
 		BB1C09A82488B9BF000F24A6 /* DeleteRequest+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C09A72488B9BF000F24A6 /* DeleteRequest+Extention.swift */; };
@@ -571,6 +572,7 @@
 		A3C5F0372472C7850069413F /* SignupResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseExtension.swift; sourceTree = "<group>"; };
 		A3DA553A247D5CE00038AF1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/signUp.storyboard; sourceTree = "<group>"; };
 		BB13259C247BC43000997EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RequestTStatus.storyboard; sourceTree = "<group>"; };
+		BB136EB3248D02E80003A9B7 /* UserAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthorization.swift; sourceTree = "<group>"; };
 		BB1C099924883A55000F24A6 /* IOkAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOkAlert.swift; sourceTree = "<group>"; };
 		BB1C09A42488B8CA000F24A6 /* GenaricAlertExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenaricAlertExtention.swift; sourceTree = "<group>"; };
 		BB1C09A72488B9BF000F24A6 /* DeleteRequest+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeleteRequest+Extention.swift"; sourceTree = "<group>"; };
@@ -1573,6 +1575,7 @@
 				4E2C9DFC24706B6D007C6109 /* Alert.swift */,
 				4E15ACDF2471571D004418B1 /* Toast.swift */,
 				CC4B65C92479ACED00BA1062 /* InternetConnection.swift */,
+				BB136EB3248D02E80003A9B7 /* UserAuthorization.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -2651,6 +2654,7 @@
 				032AB5CF24820F110021DE4F /* ReviewsTableViewCell.swift in Sources */,
 				A39BF975246DA047003500A8 /* ImgTableViewCell.swift in Sources */,
 				4EDCBA60247D611800DE1AB5 /* GetUserData.swift in Sources */,
+				BB136EB4248D02E80003A9B7 /* UserAuthorization.swift in Sources */,
 				4EE9F93424697CF300BB4A39 /* MessagingChatViewController.swift in Sources */,
 				A3C5F0352472C2D60069413F /* SignupPresenter.swift in Sources */,
 				4E0E3505246BB88400814696 /* MessageNotificationLabel.swift in Sources */,
