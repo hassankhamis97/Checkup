@@ -11,6 +11,10 @@ import UIKit
 class ReqPopUpFromHomeViewController: UIViewController  {
 //    var branchId: String?
 //    var labId: String?
+    @IBAction func closePopupAction(_ sender: UIButton) {
+        sender.pulsate()
+        dismiss(animated: true, completion: nil)
+    }
     var showNewRequestRef : IShowNewRequest?
     var elementIndex : Int!
     @IBAction func fromHomeBtn(_ sender: UIButton) {

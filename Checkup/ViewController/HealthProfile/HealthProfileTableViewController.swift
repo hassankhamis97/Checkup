@@ -230,12 +230,39 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
     
     
     @IBAction func saveBtn(_ sender: Any) {
-        
+        if(checkValidation()){
         healthProfie.dieaseNamesArray
             = self.dieaseNamesArray
         healthProfie.userId=userId
         print(healthProfie)
         healthProfilePresenterRef.updateUserData(userId: userId, healthProfileObj: healthProfie)
+        }
     }
-    
+    func checkValidation() -> Bool {
+    //        var hasPhone = false
+    //        if user.phone != nil {
+    //
+    //        }
+            var message: String = ""
+        if healthProfie.isSTakeantiBiotic == nil || healthProfie.isSuffreDiabetes == nil || healthProfie.isSuffrePressure == nil || healthProfie.isTakehaemophilia == nil{
+                message = "Answer all the questions, please"
+            }
+            
+//        else if healthProfie.isSuffreDiabetes == nil {
+//    //            message = NSLocalizedString("alertDateMessageError", comment: "")
+//                message = "Email is Required"
+//            }
+//            else if healthProfie.isSuffrePressure == nil {
+//                message = "Password is Required"
+//            }
+//            else if healthProfie.isTakehaemophilia == nil {
+//                message = "Password must be more than 6 characters"
+//            }
+            
+            if !message.isEmpty {
+                Alert.showSimpleAlert(title: "sorry", message: message, viewRef: self)
+                return false
+            }
+            return true
+        }
 }

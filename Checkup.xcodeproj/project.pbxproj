@@ -147,6 +147,7 @@
 		4EA87524248068D300E95B30 /* ImageIndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA87522248068D300E95B30 /* ImageIndicatorTableViewCell.swift */; };
 		4EA87525248068D300E95B30 /* ImageIndicatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */; };
 		4EAA2AD8246CABC70050B0AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */; };
+		4EADDA69248C487800C3FBCE /* GetUserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EADDA68248C487800C3FBCE /* GetUserHealthProfile.swift */; };
 		4EB022E2248825A600965345 /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB022E1248825A600965345 /* DispatchQueueExtension.swift */; };
 		4EB022E524882AFC00965345 /* CompressImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB022E424882AFC00965345 /* CompressImage.swift */; };
 		4EB18BD924844EE3007D35AE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB18BDB24844EE3007D35AE /* Home.storyboard */; };
@@ -485,6 +486,7 @@
 		4EA87522248068D300E95B30 /* ImageIndicatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIndicatorTableViewCell.swift; sourceTree = "<group>"; };
 		4EA87523248068D300E95B30 /* ImageIndicatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageIndicatorTableViewCell.xib; sourceTree = "<group>"; };
 		4EAA2AD7246CABC70050B0AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4EADDA68248C487800C3FBCE /* GetUserHealthProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserHealthProfile.swift; sourceTree = "<group>"; };
 		4EB022E1248825A600965345 /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
 		4EB022E424882AFC00965345 /* CompressImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressImage.swift; sourceTree = "<group>"; };
 		4EB18BDA24844EE3007D35AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -1530,6 +1532,7 @@
 				4E32D29E24858E9A003B6408 /* NewRequestResponseExtension.swift */,
 				4EC1FD2C2472AA2A0029C499 /* AddressLocationView.swift */,
 				4EDCBA5F247D611800DE1AB5 /* GetUserData.swift */,
+				4EADDA68248C487800C3FBCE /* GetUserHealthProfile.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -2634,6 +2637,7 @@
 				CC4B65CA2479ACED00BA1062 /* InternetConnection.swift in Sources */,
 				CC1E1B71248852C300618026 /* HealthProfile.swift in Sources */,
 				4E1FBE36247E1CFB00C463D5 /* ChatStatus.swift in Sources */,
+				4EADDA69248C487800C3FBCE /* GetUserHealthProfile.swift in Sources */,
 				033568D0248B06EB00D4B9D3 /* RatingTableViewController.swift in Sources */,
 				4EB022E2248825A600965345 /* DispatchQueueExtension.swift in Sources */,
 				4EBED80D24816415009A43FB /* NotificationContract.swift in Sources */,

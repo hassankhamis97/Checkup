@@ -39,12 +39,14 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     let timePicker=UIDatePicker()
     var ind:Int!
     var x=1
-//    var hasAddress = false
+    //    var hasAddress = false
     var branchId : String?
     var labId: String?
     var isFromHome: Bool?
     var addressObj : Address!
     var user : User!
+    var healthProfile : HealthProfile!
+   
     @IBOutlet var saveRequestBtn: UIButton!
     @IBAction func saveNewRequestBtn(_ sender: UIButton) {
         if(checkValidation()){
@@ -54,7 +56,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             let currentDate = dateFormatter.string(from: date)
             dateFormatter.dateFormat = "h:mm a"
             let currentTime = dateFormatter.string(from: date)
-
+            
             
             var testObj = Test()
             testObj.roushettaPaths = [String]()
@@ -69,8 +71,8 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             testObj.status = "PendingForLabConfirmation"
             testObj.dateRequest = currentDate
             testObj.timeRequest = currentTime
-//            testObj.timeStampRequest = Date().toMillis()
-//            testObj.dateRequestFormat = Date()
+            //            testObj.timeStampRequest = Date().toMillis()
+            //            testObj.dateRequestFormat = Date()
             testObj.isFromHome = isFromHome
             var newRequestPresenter = NewRequestPresenter(newRequestViewRef: self)
             newRequestPresenter.saveRequest(testObj: testObj, roushettaImages: DatabaseImageArray)
@@ -78,7 +80,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-//        hashString(str: "Vgo15V8FFZX9b9bRtFT3kkAdJ9D2")
+        //        hashString(str: "Vgo15V8FFZX9b9bRtFT3kkAdJ9D2")
         enterTestTextField.delegate=self
         addressTextField.delegate=self
         dateTextField.delegate=self
@@ -93,7 +95,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         
         createDatePicker()
-//        createTimePicker()
+        //        createTimePicker()
         timeTextField.isEnabled = false
         activityIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         activityIndicator.hide()
@@ -127,21 +129,25 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         view.endEditing(true)
     }
     override func viewWillAppear(_ animated: Bool) {
-         
-//        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests").validate().responseJSON { response in
-//        print(response)
-//
-//        }
+       
+        //        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests").validate().responseJSON { response in
+        //        print(response)
+        //
+        //        }
         if(Auth.auth().currentUser?.uid == nil)
         {
             let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
             loginVC.modalPresentationStyle = .fullScreen
             self.present(loginVC, animated: true, completion: nil)
-
+            
         }
         else {
+            
             var profilePresenter = ProfilePresenter(profileView: self)
             profilePresenter.getUser(userId: Auth.auth().currentUser!.uid)
+            
+            var healthProfilePresenterRef=HealthProfilePresenter(healthProfileView: self)
+            healthProfilePresenterRef.getHealthProfileData(userId: Auth.auth().currentUser!.uid)
         }
         tableView.rowHeight = UITableView.automaticDimension
         slideShow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
@@ -178,7 +184,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         for i in testsNames{
             testTexts.append(i as! String)
         }
-//        testTexts.append(dataObj)
+        //        testTexts.append(dataObj)
         collectionView.reloadData()
     }
     
@@ -308,14 +314,14 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     @IBAction func deleteImageBtn(_ sender: Any) {
         
         
-//        if(inputImageArray.isEmpty){
-//            print("no data")
-//            slideShow.setImageInputs(defaultImage)
-//            tableView.reloadData()
-//        }
-//        else{
-            inputImageArray.remove(at: ind)//remove from slideshoe
-            DatabaseImageArray.remove(at: ind)//remove from database
+        //        if(inputImageArray.isEmpty){
+        //            print("no data")
+        //            slideShow.setImageInputs(defaultImage)
+        //            tableView.reloadData()
+        //        }
+        //        else{
+        inputImageArray.remove(at: ind)//remove from slideshoe
+        DatabaseImageArray.remove(at: ind)//remove from database
         if inputImageArray.count == 0 {
             slideShow.setImageInputs(defaultImage)
             noImageLabel.alpha = 1
@@ -323,10 +329,10 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         }
         else{
             slideShow.setImageInputs(inputImageArray)
-//            noImageLabel.alpha = 0
+            //            noImageLabel.alpha = 0
         }
-            tableView.reloadData()
-//        }
+        tableView.reloadData()
+        //        }
         
         
     }
@@ -370,7 +376,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             var x=ImageSource(image: img)
             inputImageArray.append(x) // to save in slidshow
             ind=0
-             deleteImageBtn.alpha=1
+            deleteImageBtn.alpha=1
             noImageLabel.alpha = 0
             
         }
@@ -408,10 +414,10 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         let formatter=DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
-//        formatter.times
+        //        formatter.times
         var x = datePicker
         var order = Calendar.current.compare(Date(), to: datePicker.date, toGranularity: .day)
-
+        
         if order == .orderedSame{
             timePicker.minimumDate = Date()
         }
@@ -433,7 +439,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         toolbar.sizeToFit()
         let doneBtn=UIBarButtonItem(barButtonSystemItem: .done, target: nil, action:#selector(doneTimePressed))
         toolbar.setItems(([doneBtn]), animated: true)
-//        if
+        //        if
         timeTextField.inputAccessoryView=toolbar
         timeTextField.inputView=timePicker
         timePicker.datePickerMode = .time
@@ -464,17 +470,17 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             Alert.showSimpleAlert(title: "Alert", message: "please wait for loading data", viewRef: self)
         }
         else{
-        if user.address!.address1! != "" {
-            alert.addAction(UIAlertAction(title: "Use your saved location", style: .default , handler:{ (UIAlertAction)in
-                        print("User click Approve button")
-                        
-            //            self.y=2
-                self.addressObj = self.user.address!
-                        
-                        self.tableView.reloadData()
-                        
-                    }))
-        }
+            if user.address!.address1! != "" {
+                alert.addAction(UIAlertAction(title: "Use your saved location", style: .default , handler:{ (UIAlertAction)in
+                    print("User click Approve button")
+                    
+                    //            self.y=2
+                    self.addressObj = self.user.address!
+                    
+                    self.tableView.reloadData()
+                    
+                }))
+            }
         }
         
         alert.addAction(UIAlertAction(title: "Add new location  ", style: .default , handler:{ (UIAlertAction)in
@@ -503,15 +509,15 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         
     }
     @IBAction func previewAddressBtn(_ sender: UIButton) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ReqlocationSVC") as! ReqLocationTableViewController
+        let vc = storyboard!.instantiateViewController(withIdentifier: "ReqlocationSVC") as! ReqLocationTableViewController
         
-                vc.isEditable=false;
-        if user.address?.address1! != "" {
-                           vc.addressObj = user.address
-                      }
+        vc.isEditable=false;
+        if self.addressObj.address1! != "" {
+            vc.addressObj = self.addressObj
+        }
         
         
-                      navigationController?.pushViewController(vc, animated: true)
+        navigationController!.pushViewController(vc, animated: true)
     }
     
     
@@ -525,9 +531,9 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "healthSVC") as! HealthProfileTableViewController
-            
-            
-                          navigationController?.pushViewController(vc, animated: true)
+        
+        
+        navigationController?.pushViewController(vc, animated: true)
         
         
         
@@ -562,7 +568,7 @@ extension NewRequestTableViewController: ImagePickerDelegate {
         inputImageArray.append(x)
         ind=0
         slideShow.setImageInputs(inputImageArray)
-         deleteImageBtn.alpha=1
+        deleteImageBtn.alpha=1
         noImageLabel.alpha = 0
         
     }
@@ -614,19 +620,19 @@ extension NewRequestTableViewController:UICollectionViewDelegate,UICollectionVie
     func getAddress(addressObj: Address) {
         self.addressObj = addressObj
     }
-//    func hashString(str: String) -> Int {
-//            var hash : Double = 0
-//            for i in 0..<str.count {
-//    //            var yy = Character("a").asciiValue
-//    //            var x = Character(str[i]).asciiValue
-//                var x = Double(Character(str[i]).asciiValue * 31)
-//                var y = Double(str.count - i)
-//                hash += pow(x,y)
-//    //            pow(Decimal(Character(str[i]).asciiValue * 31), 5)
-//                var newhash = Int64(hash) & Int64(hash)
-//            }
-//        return hash.toInt()!
-//        }
+    //    func hashString(str: String) -> Int {
+    //            var hash : Double = 0
+    //            for i in 0..<str.count {
+    //    //            var yy = Character("a").asciiValue
+    //    //            var x = Character(str[i]).asciiValue
+    //                var x = Double(Character(str[i]).asciiValue * 31)
+    //                var y = Double(str.count - i)
+    //                hash += pow(x,y)
+    //    //            pow(Decimal(Character(str[i]).asciiValue * 31), 5)
+    //                var newhash = Int64(hash) & Int64(hash)
+    //            }
+    //        return hash.toInt()!
+    //        }
 }
 
 

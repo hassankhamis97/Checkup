@@ -70,6 +70,7 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
     var longitude : Double!
     var isLoading = false
     var isError = false
+//    var isFilter = false
     override func viewWillAppear(_ animated: Bool) {
         self.headerViewHeight.constant = self.imageViewMaxHeight
         self.topViewConstraint.constant =  topViewConstrainsMaxHeight
@@ -77,7 +78,7 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
         override func viewDidLoad() {
             super.viewDidLoad()
             let defaultsLocation = UserDefaults.standard
-
+//            isFilter = false
             lattitude = defaultsLocation.object(forKey: "Lattitude") as? Double ?? 0
             longitude = defaultsLocation.object(forKey: "Longitude") as? Double ?? 0
             errorLabelOutlet.alpha = 0
@@ -183,6 +184,8 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
                 paginatingParams.governId = governId
                 paginatingParams.skip = 0
                 paginatingParams.take = 1000
+//                isFilter = true
+                labDescriptionObj.branches?.removeAll()
                 labDescPresenter.getDataFromLabDescModel(params: paginatingParams)
             }
             

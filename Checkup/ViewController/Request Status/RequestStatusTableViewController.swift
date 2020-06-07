@@ -105,15 +105,15 @@ class RequestStatusTableViewController: UITableViewController  {
         showCancel = 0 
         stepIndecatorShow = 0
         
-        self.dateTextArea.text = self.testStatusObj.dateRequest
-        self.timeTextArea.text = self.testStatusObj.timeRequest
+        self.dateTextArea.text = self.testStatusObj.dateForTakingSample
+        self.timeTextArea.text = self.testStatusObj.timeForTakingSample
         guard let locAddress = self.testStatusObj?.address else{
             tableView.reloadData()
             return
         }
-        let location = "\( locAddress.address1) \( locAddress.buildingNo!)  \(locAddress.apartmentNo!)\(locAddress.floorNo!)"
+//        let location = locAddress.address1
         
-        self.locationTextArea.text = location
+        self.locationTextArea.text = locAddress.address1
         
         tableView.reloadData()
     }
@@ -183,10 +183,20 @@ class RequestStatusTableViewController: UITableViewController  {
         
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
+//        if #available(iOS 13.0, *) {
+//            var img = UIImage(systemName: "teletype.answer")
+//        } else {
+//            // Fallback on earlier versions
+//        }
+        var backBtnImage = UIBarButtonItem()
+        if #available(iOS 13.0, *) {
+            backBtnImage = UIBarButtonItem(image: UIImage(systemName: "teletype.answer"), style: .plain, target: self, action: #selector(backTapped))
+        } else {
+            // Fallback on earlier versions
+        }
+        let backBtn = UIBarButtonItem(title: "〈  "+"STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
         
-        let backBtn = UIBarButtonItem(title: "〈 "+"STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
-        
-        self.navigationItem.setLeftBarButtonItems([backBtn], animated: true)
+        self.navigationItem.setLeftBarButtonItems([backBtnImage,backBtn], animated: true)
         
         self.progressBarView.circleColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
         self.progressBarView.circleTintColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)

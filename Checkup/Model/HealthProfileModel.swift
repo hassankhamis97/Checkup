@@ -31,10 +31,17 @@ class HealthProfileModel:IHealthProfileModel{
                 print(JSON)
 
                 do{
-                    let obj = try JSONDecoder().decode(HealthProfile.self , from: response.data!)
+                    var obj : HealthProfile = HealthProfile()
+                    if JSON is NSNull {
+                   
+                    }
+                    else {
+                        obj = try JSONDecoder().decode(HealthProfile.self , from: response.data!)
 
-                    print(obj)
+                                           print(obj)
+                        
 
+                    }
                     self.healthProfilePresenterRef.onSuccess(healthProfile: obj)
                 }catch let error{
                     self.healthProfilePresenterRef.onFail(message: error.localizedDescription)
