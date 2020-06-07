@@ -198,16 +198,16 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
             cell.requestStatus.text = "🔵 Wait Response"
             break
         case TestType.PendingForTakingTheSample.rawValue:
-            cell.requestStatus.text = "💉 Wait Sample"
+            cell.requestStatus.text = "🟡 Wait Sample"
             break
         case TestType.PendingForResult.rawValue:
-            cell.requestStatus.text = "🔸 Wait Result"
+            cell.requestStatus.text = "🟠 Wait Result"
             break
             case TestType.Refused.rawValue:
             cell.requestStatus.text = "🔴 Refused"
             break
         case TestType.Done.rawValue:
-            cell.requestStatus.text = "✅ Done"
+            cell.requestStatus.text = "🟢 Done"
             break
         default:
             break

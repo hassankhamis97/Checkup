@@ -455,9 +455,7 @@
         <scene sceneID="P8r-Q0-61d">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LwG-Rt-58h" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Home_50px" selectedImage="Home_50px" id="dWN-Dl-lKZ">
-                        <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home_30px" id="dWN-Dl-lKZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FHn-LR-Vlw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -693,7 +691,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.2274509804" green="0.23921568630000001" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.1078975573" green="0.61845129730000004" blue="0.89283031229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.10980392156862745" green="0.61960784313725492" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="LwG-Rt-58h" kind="relationship" relationship="viewControllers" id="Ovx-i3-y1D"/>
@@ -721,9 +719,7 @@
         <scene sceneID="jqE-ne-h0e">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NcF-gP-ShD" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Request" image="Request_usselect_50px" selectedImage="Request_usselect_50px" id="qnv-JE-1gv">
-                        <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Request" image="Science Application_30px" selectedImage="Science Application_30px" id="qnv-JE-1gv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2hd-ek-Kny">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -757,9 +753,7 @@
         <scene sceneID="8Wu-HC-PKL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LHd-HO-x4Y" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" image="Chat1_50px" selectedImage="Chat1_50px" id="sJf-Af-Wps">
-                        <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Chat" image="Chat Bubble_30px" selectedImage="Chat Bubble_30px" id="sJf-Af-Wps"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xZi-1Q-ebr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -915,7 +909,7 @@
                                                             <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfn-d9-4vb" customClass="CosmosView" customModule="Cosmos">
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfn-d9-4vb" customClass="CosmosView" customModule="Cosmos">
                                                             <rect key="frame" x="84.5" y="58.5" width="165" height="29"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <userDefinedRuntimeAttributes>
@@ -1399,9 +1393,7 @@
         <scene sceneID="rTC-7D-WQj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hOE-Pc-j3u" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Result" image="result_usselect_50px" selectedImage="result_usselect_50px" id="OLn-00-SMx" customClass="ResultUITabBarItem" customModule="Checkup" customModuleProvider="target">
-                        <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Result" image="Test Passed_30px" id="OLn-00-SMx" customClass="ResultUITabBarItem" customModule="Checkup" customModuleProvider="target"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="94w-bW-oZ4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1425,9 +1417,7 @@
         <scene sceneID="j4V-Ff-nIJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xDJ-wa-HQ2" customClass="StyleViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="More_50px" selectedImage="More_50px" id="I1z-0u-44f">
-                        <inset key="imageInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="More" image="More_30px" selectedImage="More_30px" id="I1z-0u-44f"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kgd-rY-Gw0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1734,13 +1724,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Chat1_50px" width="50" height="50"/>
-        <image name="Home_50px" width="50" height="50"/>
-        <image name="More_50px" width="50" height="50"/>
-        <image name="Request_usselect_50px" width="50" height="50"/>
+        <image name="Chat Bubble_30px" width="30" height="30"/>
+        <image name="Home_30px" width="30" height="30"/>
+        <image name="More_30px" width="30" height="30"/>
+        <image name="Science Application_30px" width="30" height="30"/>
+        <image name="Test Passed_30px" width="30" height="30"/>
         <image name="borg" width="960" height="960"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="handsome-young-businessman-shirt-eyeglasses_85574-6228" width="626" height="583"/>
-        <image name="result_usselect_50px" width="50" height="50"/>
     </resources>
 </document>
