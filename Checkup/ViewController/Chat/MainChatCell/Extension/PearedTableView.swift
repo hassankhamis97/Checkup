@@ -43,6 +43,7 @@ extension MainChatViewController : UITableViewDataSource,UITableViewDelegate {
             cell.noOfUnReadMessages.alpha = 0
         }else
         {
+            cell.noOfUnReadMessages.alpha = 1
             cell.noOfUnReadMessages.text = viewPearedArr[indexPath.row].noOfUnReadMessages!
 
         }

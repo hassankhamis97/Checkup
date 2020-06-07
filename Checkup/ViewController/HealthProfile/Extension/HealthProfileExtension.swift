@@ -17,7 +17,7 @@ func numberOfSections(in collectionView: UICollectionView) -> Int {
 
 func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     // 2
-    if(dieaseNamesArray.isEmpty)
+    if(dieaseNamesArray.isEmpty || dieaseNamesArray==nil)
     {
         return 0
     }

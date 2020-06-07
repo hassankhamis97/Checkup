@@ -15,17 +15,21 @@ class SettingTableViewController: UITableViewController {
     @IBOutlet weak var privacyLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
-      
+      var x =  LocalizationSystem.sharedInstance.getLanguage()
+             print(x)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-   var x =  LocalizationSystem.sharedInstance.getLanguage()
-        print(x)
+  
         
     }
 
+    
+    
+   
+    
     // MARK: - Table view data source
 
   
@@ -57,11 +61,7 @@ class SettingTableViewController: UITableViewController {
               }
         
         
-        if indexPath.row==4
-                     {
-                       
-
-                     }
+    
         
 }
 }

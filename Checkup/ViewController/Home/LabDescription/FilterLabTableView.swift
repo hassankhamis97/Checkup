@@ -12,8 +12,8 @@ class FilterLabTableView: UITableViewController , IFilterLabView {
   
     
 
-        var sectionTitle : [String] = ["Governerates"]
-        var sectionGovernerates : [String] = ["Alex" , "Cairo" , "Mansoura","Portsaid" , "Sharm"]
+//        var sectionTitle : [String] = ["Governerates"]
+//        var sectionGovernerates : [String] = ["Alex" , "Cairo" , "Mansoura","Portsaid" , "Sharm"]
 
         var filterLabPresenter : IFilterLabPresenter!
         var filteredArr : [FilterGovern]!

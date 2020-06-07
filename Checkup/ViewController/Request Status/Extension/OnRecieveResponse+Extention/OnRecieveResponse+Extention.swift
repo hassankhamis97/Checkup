@@ -113,12 +113,12 @@ extension RequestStatusTableViewController : IRequestStatusView
             showCancel = 50
             
             self.codeText.text = myObj.generatedCode!
-            self.dateTextArea.text = myObj.dateRequest!
-            self.timeTextArea.text = myObj.timeRequest!
+            self.dateTextArea.text = myObj.dateForTakingSample!
+            self.timeTextArea.text = myObj.timeForTakingSample!
             if let location = myObj.address {
-                let myAdress = "\( location.address1!) \( location.buildingNo!)  \(location.apartmentNo!)     \(location.floorNo!)"
+//                let myAdress = "\( location.address1!) \( location.buildingNo!)  \(location.apartmentNo!)     \(location.floorNo!)"
                 
-                self.locationTextArea.text = myAdress
+                self.locationTextArea.text = location.address1!
             }
             
             
@@ -151,8 +151,8 @@ extension RequestStatusTableViewController : IRequestStatusView
             else if myObj.status == "Refused"
             {
                 self.codeText.text = myObj.generatedCode
-                self.refuseReasonText.text = myObj.refuseReason
-                self.refuseDescriptionText.text = myObj.description
+                self.refuseReasonText.text = myObj.radioReason
+                self.refuseDescriptionText.text = myObj.refuseReason
                 
                 x=5
                 progressBarView.currentStep=1

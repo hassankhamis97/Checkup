@@ -73,6 +73,10 @@ extension NewRequestTableViewController : INewRequestView ,IView , IViewAdvanced
                     return false
         //            message = "address is required"
                 }
+        else if self.healthProfile.isSuffreDiabetes == nil {
+            message = "please complete your health profile"
+//            Alert.showAdvancedAlert(title: "Complete your profile", message: "make sure that you entered your phone, birthdate and gender", viewAdvancedAlertRef: self)
+        }
         if !message.isEmpty {
             Alert.showSimpleAlert(title: "sorry", message: message, viewRef: self)
             return false

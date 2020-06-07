@@ -22,22 +22,37 @@ class MoreTableViewController: UITableViewController {
     var profilePresenterRef:ProfilePresenter!
       
     override func viewWillAppear(_ animated: Bool) {
-        if(Auth.auth().currentUser?.uid == nil)
-        {
-            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
-            loginVC.modalPresentationStyle = .fullScreen
-            self.present(loginVC, animated: true, completion: nil)
-
-            
-        }
-        else{
-            
-            
+        
+        if  UserAuthorization.check() == true {
+          
             profilePresenterRef = ProfilePresenter(profileView: self)
                                let userId = Auth.auth().currentUser?.uid
 
                                profilePresenterRef.getUser(userId: userId!)
+
+        }else{
+            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true, completion: nil)
+
         }
+        
+//        if(Auth.auth().currentUser?.uid == nil)
+//        {
+//            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginSVC") as! LoginTableViewController
+//            loginVC.modalPresentationStyle = .fullScreen
+//            self.present(loginVC, animated: true, completion: nil)
+//
+//            
+//        }
+//        else{
+//            
+//            
+//            profilePresenterRef = ProfilePresenter(profileView: self)
+//                               let userId = Auth.auth().currentUser?.uid
+//
+//                               profilePresenterRef.getUser(userId: userId!)
+//        }
     }
     
     

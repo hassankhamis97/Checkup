@@ -78,3 +78,5 @@
 "Language"="اللغه";
 "To changing language you need to restart application, do you want to restart?"="لتغيير اللغه يجب عليك إعادة تشغيل التطبيق مرة أخرى ,هل تريد إعادة التشغيل ؟";
 "Choose Language"="اختر لغة ";
+"please complete your health profile" = "من فضلك املأ البيانات الطبية الخاصة بك";
+"Answer all the questions, please" = "من فضلك ، اجب على جميع الاسئلة";

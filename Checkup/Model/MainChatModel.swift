@@ -35,9 +35,13 @@ class MainChatModel : IMainChatModel{
                     self.pearedObj.lastMessage = doc.data()["lastMessage"] as? String
                     self.pearedObj.noOfUnReadMessages = String(doc.data()["noOfUnReadMessage"] as! Int)
                     self.pearedObj.lastMessageTime = doc.data()["lastMsgTimeStamp"] as? String
+                    
                     self.pearedObj.idPearedUser = doc.data()["senderId"] as? String
-                
-                    self.readRestOfDataFromFirestore(id: doc.data()["senderId"] as! String , count: self.queryArr)
+                    if ( self.pearedObj.idPearedUser == Auth.auth().currentUser!.uid)
+                    {
+                        self.pearedObj.idPearedUser = doc.documentID
+                    }
+                    self.readRestOfDataFromFirestore(id: self.pearedObj.idPearedUser as! String , count: self.queryArr)
 
                     
                     

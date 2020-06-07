@@ -8,6 +8,7 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import Firebase
 
 class HealthProfileTableViewController: UITableViewController,IView ,UITextFieldDelegate{
 
@@ -38,9 +39,12 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
     var haemophiliaArray=[UIButton]()
     var dieaseNamesArray=[String]()
     var healthProfie=HealthProfile()
+    var healthProfilePresenterRef:HealthProfilePresenter!
+    var userId=Auth.auth().currentUser!.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         diabiabetesArray=[yesSufferDiabetesBtn,noSufferDiabetesBtn]
         pressurArray=[yesSufferPressureBtn,noSufferPressuresBtn]
         antiBioticArray=[yesTakeAntiBtn,noTakeAntiBtn]
@@ -55,16 +59,20 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
               
               view.addGestureRecognizer(tap)
-        
-        
-        
-        
-        let healthProfilePresenterRef=HealthProfilePresenter(healthProfileView: self)
-        
-   
-        healthProfilePresenterRef.getHealthProfileData(userId: "")
+  
     }
 
+    
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+         healthProfilePresenterRef=HealthProfilePresenter(healthProfileView: self)
+               
+          
+               healthProfilePresenterRef.getHealthProfileData(userId: userId)
+    }
+    
     
     
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
@@ -137,7 +145,7 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
                 
                 else{
                     print ("No diabtes")
-                      healthProfie.isSuffreDiabetes=false
+                    healthProfie.isSuffreDiabetes=false
                  
                 }
             }
@@ -181,13 +189,13 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
                                      sender.backgroundColor = UIColor.systemTeal
                                  if sender==antiBioticArray[0]{
                                      print ("yes antibiotic")
-                                       healthProfie.isSTakeantiBiotic=true
+                                    healthProfie.isSTakeantiBiotic=true
                                   
                                      }
                                  
                                  else{
                                      print ("No antibiotic")
-                                   healthProfie.isSTakeantiBiotic=false
+                                    healthProfie.isSTakeantiBiotic=false
                                  }
                              }
             
@@ -211,7 +219,7 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
                                  
                                  else{
                                      print ("No hemophilia")
-                                  healthProfie.isTakehaemophilia=false
+                                    healthProfie.isTakehaemophilia=false
                                  }
                              }
             
@@ -222,11 +230,39 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
     
     
     @IBAction func saveBtn(_ sender: Any) {
-        
-        healthProfie.dieaseNamesArray=self.dieaseNamesArray
-        
+        if(checkValidation()){
+        healthProfie.dieaseNamesArray
+            = self.dieaseNamesArray
+        healthProfie.userId=userId
         print(healthProfie)
-        navigationController?.popViewController(animated: true)
+        healthProfilePresenterRef.updateUserData(userId: userId, healthProfileObj: healthProfie)
+        }
     }
-    
+    func checkValidation() -> Bool {
+    //        var hasPhone = false
+    //        if user.phone != nil {
+    //
+    //        }
+            var message: String = ""
+        if healthProfie.isSTakeantiBiotic == nil || healthProfie.isSuffreDiabetes == nil || healthProfie.isSuffrePressure == nil || healthProfie.isTakehaemophilia == nil{
+                message = "Answer all the questions, please"
+            }
+            
+//        else if healthProfie.isSuffreDiabetes == nil {
+//    //            message = NSLocalizedString("alertDateMessageError", comment: "")
+//                message = "Email is Required"
+//            }
+//            else if healthProfie.isSuffrePressure == nil {
+//                message = "Password is Required"
+//            }
+//            else if healthProfie.isTakehaemophilia == nil {
+//                message = "Password must be more than 6 characters"
+//            }
+            
+            if !message.isEmpty {
+                Alert.showSimpleAlert(title: "sorry", message: message, viewRef: self)
+                return false
+            }
+            return true
+        }
 }

@@ -50,7 +50,7 @@ struct Alert {
 //            alert.addAction(UIAlertAction(title: "Ok".localized, style: UIAlertAction.Style.cancel, handler: nil))
             viewRef.present(alert, animated: true, completion: nil)
             
-            alert.addAction(UIAlertAction(title: "Yes".localized, style: .default, handler: { action in
+            alert.addAction(UIAlertAction(title: "Ok".localized, style: .default, handler: { action in
                             print("You choosed Yes !")
                           viewRef.onOkClicked()
 

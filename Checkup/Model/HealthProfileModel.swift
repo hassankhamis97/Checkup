@@ -25,44 +25,61 @@ class HealthProfileModel:IHealthProfileModel{
         
         
         
-        let obj=HealthProfile(userId: "", isSuffreDiabetes: true, isSuffrePressure: false, isSTakeantiBiotic: true, isTakehaemophilia: false, dieaseNamesArray: ["cbc","tsh"])
+//        let obj=HealthProfile(userId: "", isSuffreDiabetes: true, isSuffrePressure: false, isSTakeantiBiotic: true, isTakehaemophilia: false, dieaseNamesArray: ["cbc","tsh"])
+        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/RetrieveHealthProfile?userId="+userId).responseJSON { (response) in
+            if let JSON = response.result.value{
+                print(JSON)
+
+                do{
+                    var obj : HealthProfile = HealthProfile()
+                    if JSON is NSNull {
+                   
+                    }
+                    else {
+                        obj = try JSONDecoder().decode(HealthProfile.self , from: response.data!)
+
+                                           print(obj)
+                        
+
+                    }
+                    self.healthProfilePresenterRef.onSuccess(healthProfile: obj)
+                }catch let error{
+                    self.healthProfilePresenterRef.onFail(message: error.localizedDescription)
+
+                    print(error)
+                }
+            }
+
+
+        }
         
         
-        
-        
-//        Alamofire.request("http://checkup.somee.com/api/AnalysisService/GetHbA1cSampleStatistics?userId="+userId).responseJSON { (response) in
-//            if let JSON = response.result.value{
-//                print(JSON)
-//
-//                do{
-//                    let Obj = try JSONDecoder().decode(HealthProfile.self , from: response.data!)
-//
-//                    print(Obj)
-//
-//                    self.healthProfilePresenterRef.onSuccess(healthProfile: obj)
-//                }catch let error{
-//                    self.healthProfilePresenterRef.onFail(message: error.localizedDescription)
-//
-//                    print(error)
-//                }
-//            }
-//
-//
-//        }
-        
-        
-        
-        healthProfilePresenterRef.onSuccess(healthProfile: obj)
+        //  http://www.checkup.somee.com/api/AnalysisService/RetrieveHealthProfile?userId="
+  
         
     }
     
     
     
     func updateUserData(userId: String, healthProfileObj: HealthProfile) {
-        
+        let healthProfileDic = try! DictionaryEncoder.encode(healthProfileObj)
+                  let urlString = "http://www.checkup.somee.com/api/AnalysisService/SaveAndUpdateHealthProfile"
+        Alamofire.request(urlString, method: .post, parameters: healthProfileDic,encoding: JSONEncoding.default, headers: nil).responseString {
+                       response in
+                       switch response.result {
+                       case .success:
+                           print(response)
+                           self.healthProfilePresenterRef.onSucessUpdate()
+                        
+                         case .failure(let error):
+                        print(error)
+                        self.healthProfilePresenterRef.onFail(message: error.localizedDescription)
+                        break
+            }
            
        }
     
     
     
+}
 }

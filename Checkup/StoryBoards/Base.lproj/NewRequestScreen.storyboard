@@ -914,15 +914,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="295" id="iRj-H5-1nB">
-                                        <rect key="frame" x="0.0" y="318" width="414" height="295"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="338" id="iRj-H5-1nB">
+                                        <rect key="frame" x="0.0" y="318" width="414" height="338"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iRj-H5-1nB" id="qIr-2o-72i">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="295"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="338"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-e4-gBS">
-                                                    <rect key="frame" x="20" y="11" width="374" height="264"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="307"/>
                                                     <gestureRecognizers/>
                                                     <connections>
                                                         <outlet property="delegate" destination="8bz-sq-D9y" id="NAK-p6-X9I"/>
@@ -1134,9 +1134,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A8N-3z-eDH">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8N-3z-eDH">
                                 <rect key="frame" x="20" y="234" width="374" height="268"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="this lab support to take sample from home do you need it?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvb-cG-Djw">
                                         <rect key="frame" x="37" y="83" width="300" height="47"/>
@@ -1177,11 +1176,37 @@
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkz-MC-0yJ">
+                                        <rect key="frame" x="20" y="20" width="35" height="35"/>
+                                        <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="Xoc-5l-c0t"/>
+                                            <constraint firstAttribute="height" constant="35" id="yIr-ox-EEr"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.2097651549" green="0.2223840896" blue="0.39813792240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="multiply" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closePopupAction:" destination="vOJ-Xu-fdY" eventType="touchUpInside" id="Qf9-tI-zcb"/>
+                                            <action selector="deleteImageBtn:" destination="26o-WZ-09i" eventType="touchUpInside" id="y94-ji-3IZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kkz-MC-0yJ" firstAttribute="top" secondItem="A8N-3z-eDH" secondAttribute="top" constant="20" id="GTm-GS-2i8"/>
+                                    <constraint firstAttribute="height" constant="268" id="IPc-c5-VEC"/>
+                                    <constraint firstAttribute="width" constant="374" id="P4l-HH-416"/>
+                                    <constraint firstItem="kkz-MC-0yJ" firstAttribute="leading" secondItem="A8N-3z-eDH" secondAttribute="leading" constant="20" id="wed-9g-Edb"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.77647058823529413" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A8N-3z-eDH" firstAttribute="centerY" secondItem="2N8-rE-X8e" secondAttribute="centerY" id="Oi7-gV-4IQ"/>
+                            <constraint firstItem="RgA-3t-Nve" firstAttribute="trailing" secondItem="A8N-3z-eDH" secondAttribute="trailing" constant="20" id="asM-oD-Kyu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RgA-3t-Nve"/>
                     </view>
                 </viewController>

@@ -9,13 +9,13 @@
 "6YE-ta-AgI.text" = "Your Requset Is Refused";
 
 /* Class = "UILabel"; text = "Done"; ObjectID = "6ZS-6O-viu"; */
-"6ZS-6O-viu.text" = "Done";
+"6ZS-6O-viu.text" = "Result";
 
 /* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit x ea commodo consequat"; ObjectID = "7vn-pj-nWb"; */
 "7vn-pj-nWb.text" = "Lorem ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit x ea commodo consequat";
 
 /* Class = "UILabel"; text = "Cost : 250 L.E"; ObjectID = "9p4-LM-zMR"; */
-"9p4-LM-zMR.text" = "Cost : 250 L.E";
+"9p4-LM-zMR.text" = "Cost : 0 L.E";
 
 /* Class = "UILabel"; text = "Phone :"; ObjectID = "FnF-D7-yXI"; */
 "FnF-D7-yXI.text" = "Phone :";
@@ -24,10 +24,10 @@
 "G6Y-RW-ERx.normalTitle" = "Show Request Details";
 
 /* Class = "UILabel"; text = "Empolyee Details :"; ObjectID = "Hwn-kv-7x0"; */
-"Hwn-kv-7x0.text" = "Empolyee Details :";
+"Hwn-kv-7x0.text" = "Technicial Details :";
 
 /* Class = "UILabel"; text = "Pending"; ObjectID = "IJX-L7-Myh"; */
-"IJX-L7-Myh.text" = "Pending";
+"IJX-L7-Myh.text" = "Response";
 
 /* Class = "UILabel"; text = "Code"; ObjectID = "Iee-V1-9HC"; */
 "Iee-V1-9HC.text" = "Code";

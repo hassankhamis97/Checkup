@@ -9,13 +9,13 @@
 "6YE-ta-AgI.text" = "نأسف لقد تم رفض الطلب";
 
 /* Class = "UILabel"; text = "Done"; ObjectID = "6ZS-6O-viu"; */
-"6ZS-6O-viu.text" = "تم";
+"6ZS-6O-viu.text" = "النتيجة";
 
 /* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit x ea commodo consequatLorem ipsum dolor sit er elit x ea commodo consequat"; ObjectID = "7vn-pj-nWb"; */
 "7vn-pj-nWb.text" = "لا يوجد وصف";
 
 /* Class = "UILabel"; text = "Cost : 250 L.E"; ObjectID = "9p4-LM-zMR"; */
-"9p4-LM-zMR.text" = "المبلغ: ٢٠٠ جنية";
+"9p4-LM-zMR.text" = "المبلغ: ٠ جنية";
 
 /* Class = "UILabel"; text = "Phone :"; ObjectID = "FnF-D7-yXI"; */
 "FnF-D7-yXI.text" = "الهاتف : ";
@@ -24,10 +24,10 @@
 "G6Y-RW-ERx.normalTitle" = "عرض تفاصيل الطلب";
 
 /* Class = "UILabel"; text = "Empolyee Details :"; ObjectID = "Hwn-kv-7x0"; */
-"Hwn-kv-7x0.text" = "بيانات الموظف:";
+"Hwn-kv-7x0.text" = "فني المعمل:";
 
 /* Class = "UILabel"; text = "Pending"; ObjectID = "IJX-L7-Myh"; */
-"IJX-L7-Myh.text" = "إنتظار";
+"IJX-L7-Myh.text" = "رد المعمل";
 
 /* Class = "UILabel"; text = "Code"; ObjectID = "Iee-V1-9HC"; */
 "Iee-V1-9HC.text" = "الكود";

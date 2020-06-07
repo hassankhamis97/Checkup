@@ -61,6 +61,7 @@ class ReqLocationTableViewController: UITableViewController , ICheckLocation , U
             buildingNoTxt.isEnabled=false
             floorNoTxt.isEnabled=false
             ApartmentNoTxt.isEnabled=false
+            navigationItem.rightBarButtonItems = nil
         }
         if addressObj == nil {
             addressObj = Address()
