@@ -260,7 +260,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
             }
             else{
                 addressTextField.text = addressObj.address1
-                return 70
+                return 80
             }
         }
         

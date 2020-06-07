@@ -83,7 +83,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Statistics_100px" translatesAutoresizingMaskIntoConstraints="NO" id="9jc-li-NiS">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Combo Chart_100px" translatesAutoresizingMaskIntoConstraints="NO" id="9jc-li-NiS">
                                                     <rect key="frame" x="28" y="17" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="Ytz-sc-Trk"/>
@@ -117,12 +117,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precautions " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LA-uP-mFY">
-                                                    <rect key="frame" x="66" y="27" width="95" height="21"/>
+                                                    <rect key="frame" x="66" y="22.666666666666671" width="95" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Statistics_100px" translatesAutoresizingMaskIntoConstraints="NO" id="V2P-Fx-vbu">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User Manual_100px" translatesAutoresizingMaskIntoConstraints="NO" id="V2P-Fx-vbu">
                                                     <rect key="frame" x="28" y="18" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="E9b-5j-8hF"/>
@@ -131,10 +131,9 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="6LA-uP-mFY" firstAttribute="top" secondItem="4TN-hC-gAT" secondAttribute="topMargin" constant="16" id="Pfc-kt-sqS"/>
+                                                <constraint firstItem="6LA-uP-mFY" firstAttribute="centerY" secondItem="4TN-hC-gAT" secondAttribute="centerY" id="Buq-ji-1nG"/>
                                                 <constraint firstItem="V2P-Fx-vbu" firstAttribute="leading" secondItem="4TN-hC-gAT" secondAttribute="leadingMargin" constant="8" id="TGs-mD-M2i"/>
                                                 <constraint firstItem="6LA-uP-mFY" firstAttribute="leading" secondItem="V2P-Fx-vbu" secondAttribute="trailing" constant="8" id="XM7-MU-JGO"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="6LA-uP-mFY" secondAttribute="bottom" constant="7" id="tgp-4u-72t"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="6LA-uP-mFY" secondAttribute="trailing" constant="210" id="trL-CO-YwB"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="V2P-Fx-vbu" secondAttribute="bottom" constant="7" id="urO-Lq-Nx3"/>
                                                 <constraint firstItem="V2P-Fx-vbu" firstAttribute="top" secondItem="4TN-hC-gAT" secondAttribute="topMargin" constant="7" id="zFr-op-tbt"/>
@@ -148,25 +147,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chk-7f-eU8">
-                                                    <rect key="frame" x="66" y="27" width="99" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Statistics_100px" translatesAutoresizingMaskIntoConstraints="NO" id="V41-7z-3GD">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart Health_100px" translatesAutoresizingMaskIntoConstraints="NO" id="V41-7z-3GD">
                                                     <rect key="frame" x="28" y="18" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Fhl-EY-TwS"/>
                                                         <constraint firstAttribute="width" constant="30" id="p1Z-Ok-toU"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Sheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chk-7f-eU8">
+                                                    <rect key="frame" x="66" y="22.666666666666671" width="99" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Chk-7f-eU8" secondAttribute="trailing" constant="210" id="5ck-um-FSl"/>
-                                                <constraint firstItem="Chk-7f-eU8" firstAttribute="top" secondItem="i1y-Ux-a07" secondAttribute="topMargin" constant="16" id="A9Q-Sa-kRS"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="V41-7z-3GD" secondAttribute="bottom" constant="7" id="Dii-Ls-Dqb"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Chk-7f-eU8" secondAttribute="bottom" constant="7" id="hBF-v7-NGN"/>
+                                                <constraint firstItem="Chk-7f-eU8" firstAttribute="centerY" secondItem="i1y-Ux-a07" secondAttribute="centerY" id="UxS-af-jjd"/>
                                                 <constraint firstItem="V41-7z-3GD" firstAttribute="leading" secondItem="i1y-Ux-a07" secondAttribute="leadingMargin" constant="8" id="hPG-0g-60z"/>
                                                 <constraint firstItem="V41-7z-3GD" firstAttribute="top" secondItem="i1y-Ux-a07" secondAttribute="topMargin" constant="7" id="oow-aT-XJN"/>
                                                 <constraint firstItem="Chk-7f-eU8" firstAttribute="leading" secondItem="V41-7z-3GD" secondAttribute="trailing" constant="8" id="vB6-Au-Skt"/>
@@ -180,7 +178,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Settings_100px" translatesAutoresizingMaskIntoConstraints="NO" id="4Tx-7V-mjw">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Settings_100px-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Tx-7V-mjw">
                                                     <rect key="frame" x="28" y="17" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="0MF-qV-9Ce"/>
@@ -313,7 +311,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Settings_100px" width="100" height="100"/>
-        <image name="Statistics_100px" width="100" height="100"/>
+        <image name="Combo Chart_100px" width="100" height="100"/>
+        <image name="Heart Health_100px" width="100" height="100"/>
+        <image name="Settings_100px-1" width="100" height="100"/>
+        <image name="User Manual_100px" width="100" height="100"/>
     </resources>
 </document>

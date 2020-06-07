@@ -39,8 +39,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shield" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dtb-eI-Vds">
-                                                    <rect key="frame" x="28" y="23" width="20" height="18.666666666666671"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shield_50px" translatesAutoresizingMaskIntoConstraints="NO" id="dtb-eI-Vds">
+                                                    <rect key="frame" x="28" y="22" width="20" height="20"/>
                                                     <color key="tintColor" red="0.021980820450000001" green="0.7331293257" blue="0.98534948239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="Awb-aL-ejw"/>
@@ -67,8 +67,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sYe-3w-s2c">
-                                                    <rect key="frame" x="28" y="22" width="20" height="18.666666666666671"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Help_50px" translatesAutoresizingMaskIntoConstraints="NO" id="sYe-3w-s2c">
+                                                    <rect key="frame" x="28" y="21" width="20" height="20"/>
                                                     <color key="tintColor" red="0.021980820450000001" green="0.7331293257" blue="0.98534948239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="79W-e6-P2j"/>
@@ -101,8 +101,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="74d-X0-3OI">
-                                                    <rect key="frame" x="28" y="22" width="20" height="18.666666666666671"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Info_50px" translatesAutoresizingMaskIntoConstraints="NO" id="74d-X0-3OI">
+                                                    <rect key="frame" x="28" y="21" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" red="0.021980820450000001" green="0.7331293257" blue="0.98534948239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -137,8 +137,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-0T-4FH">
-                                                    <rect key="frame" x="28" y="22" width="20" height="18.666666666666671"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Geography_50px" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-0T-4FH">
+                                                    <rect key="frame" x="28" y="21" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" red="0.021980820450000001" green="0.7331293257" blue="0.98534948239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -313,8 +313,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7Ht-OS-wRc">
-                                                    <rect key="frame" x="28" y="24.333333333333336" width="20" height="16.000000000000007"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Secured Letter_50px" translatesAutoresizingMaskIntoConstraints="NO" id="7Ht-OS-wRc">
+                                                    <rect key="frame" x="28" y="22" width="20" height="20"/>
                                                     <color key="tintColor" red="0.021980820450000001" green="0.7331293257" blue="0.98534948239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="Kqs-Vp-V1O"/>
@@ -347,8 +347,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tps-Ef-oQI">
-                                                    <rect key="frame" x="28" y="23" width="20" height="18"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password_50px-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tps-Ef-oQI">
+                                                    <rect key="frame" x="28" y="22" width="20" height="20"/>
                                                     <color key="tintColor" red="0.021980820450000001" green="0.7331293257" blue="0.98534948239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="j41-XU-dDd"/>
@@ -709,10 +709,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="envelope" catalog="system" width="64" height="46"/>
-        <image name="exclamationmark.circle" catalog="system" width="64" height="60"/>
-        <image name="lock" catalog="system" width="64" height="64"/>
-        <image name="questionmark.circle" catalog="system" width="64" height="60"/>
-        <image name="shield" catalog="system" width="64" height="60"/>
+        <image name="Geography_50px" width="50" height="50"/>
+        <image name="Help_50px" width="50" height="50"/>
+        <image name="Info_50px" width="50" height="50"/>
+        <image name="Password_50px-1" width="50" height="50"/>
+        <image name="Secured Letter_50px" width="50" height="50"/>
+        <image name="Shield_50px" width="50" height="50"/>
     </resources>
 </document>

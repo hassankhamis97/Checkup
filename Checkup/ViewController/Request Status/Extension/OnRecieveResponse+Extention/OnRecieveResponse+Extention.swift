@@ -157,8 +157,8 @@ extension RequestStatusTableViewController : IRequestStatusView
                 x=5
                 progressBarView.currentStep=1
                 progressBarView.lineTintColor=UIColor.red
-                self.progressBarView.circleColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
-                self.progressBarView.circleTintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+                self.progressBarView.circleColor = #colorLiteral(red: 0.9294117647, green: 0.02352941176, blue: 0.02352941176, alpha: 1)
+                self.progressBarView.circleTintColor = #colorLiteral(red: 0.9294117647, green: 0.02352941176, blue: 0.02352941176, alpha: 1)
                 // self.tableView.reloadData()
                 
         }
