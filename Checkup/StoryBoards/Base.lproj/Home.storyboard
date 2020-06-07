@@ -915,7 +915,7 @@
                                                             <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfn-d9-4vb" customClass="CosmosView" customModule="Cosmos">
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfn-d9-4vb" customClass="CosmosView" customModule="Cosmos">
                                                             <rect key="frame" x="84.5" y="58.5" width="165" height="29"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <userDefinedRuntimeAttributes>
@@ -980,6 +980,9 @@
                                                     <state key="normal" title="Submit">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="submitAction:" destination="j6G-9A-rq2" eventType="touchUpInside" id="hdj-Eb-aGk"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1002,6 +1005,7 @@
                     <navigationItem key="navigationItem" id="mek-07-1Ak"/>
                     <connections>
                         <outlet property="commentOutlet" destination="vF0-uc-RfH" id="QDP-qd-MqB"/>
+                        <outlet property="ratingOutlet" destination="yfn-d9-4vb" id="YSf-As-bA0"/>
                         <outlet property="ratingView" destination="P3Z-7T-3yg" id="Qf5-Qa-nwH"/>
                     </connections>
                 </tableViewController>

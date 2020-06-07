@@ -17,7 +17,7 @@ import Foundation
     
     protocol IRatingPresenter {
         
-        func getDataFromRatingModel(labReview : Review)
+        func passDataToModel(labReview : Review)
         func onSuccess()
         func onFail()
         

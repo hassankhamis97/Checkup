@@ -36,6 +36,7 @@
 		03789BD5246CC39700C0BF33 /* BranchesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */; };
 		03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */; };
 		037D346D24884A3C002DB046 /* ReviewsParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D346C24884A3C002DB046 /* ReviewsParams.swift */; };
+		038B285C248D6E2300C5B6EC /* RatingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B285B248D6E2300C5B6EC /* RatingPresenter.swift */; };
 		03C1DD2A2478581900D2A008 /* BranchDescModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DD292478581900D2A008 /* BranchDescModel.swift */; };
 		03C1DD2C247858B800D2A008 /* BranchDescContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DD2B247858B800D2A008 /* BranchDescContract.swift */; };
 		03C1DD2F24789E4500D2A008 /* BranchDescPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DD2E24789E4500D2A008 /* BranchDescPresenter.swift */; };
@@ -366,6 +367,7 @@
 		03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BranchesCollectionViewCell.xib; sourceTree = "<group>"; };
 		03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabBranchesCollectionView.swift; sourceTree = "<group>"; };
 		037D346C24884A3C002DB046 /* ReviewsParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsParams.swift; sourceTree = "<group>"; };
+		038B285B248D6E2300C5B6EC /* RatingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPresenter.swift; sourceTree = "<group>"; };
 		03C1DD292478581900D2A008 /* BranchDescModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescModel.swift; sourceTree = "<group>"; };
 		03C1DD2B247858B800D2A008 /* BranchDescContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescContract.swift; sourceTree = "<group>"; };
 		03C1DD2E24789E4500D2A008 /* BranchDescPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescPresenter.swift; sourceTree = "<group>"; };
@@ -819,6 +821,14 @@
 				037D346C24884A3C002DB046 /* ReviewsParams.swift */,
 			);
 			path = ReviewsTable;
+			sourceTree = "<group>";
+		};
+		038B285A248D6BF900C5B6EC /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				038B285B248D6E2300C5B6EC /* RatingPresenter.swift */,
+			);
+			path = Rating;
 			sourceTree = "<group>";
 		};
 		03C1DD282478579B00D2A008 /* BranchDescription */ = {
@@ -1605,6 +1615,7 @@
 		4ECE5C48246E893D00932947 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				038B285A248D6BF900C5B6EC /* Rating */,
 				CC82F36D248AFBF40052C075 /* HealthProfilePresenter */,
 				032AB5C82481E9110021DE4F /* Reviews */,
 				4EA87503247FC15F00E95B30 /* Chat */,
@@ -2628,6 +2639,7 @@
 				4EF1A1E62476B0E800597A15 /* IEmployeeDetails.swift in Sources */,
 				4EE7EA34246B023000BF434F /* KeyboardLayoutConstraint.swift in Sources */,
 				4E15ACDB24712F6E004418B1 /* ShowNewRequest.swift in Sources */,
+				038B285C248D6E2300C5B6EC /* RatingPresenter.swift in Sources */,
 				CC80B9DB247727E800521508 /* ExtensionStatisticsPicker.swift in Sources */,
 				4E4542232479FAF700955FD8 /* AddViewIndicator.swift in Sources */,
 				4EBED80B24816235009A43FB /* UpdateNotificationFlagContract.swift in Sources */,

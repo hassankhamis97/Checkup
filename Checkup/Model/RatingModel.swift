@@ -11,10 +11,13 @@ import Alamofire
 
 class RatingModel : IRatingModel{
    
+    
+    
 func saveData(labReview : Review){
 
-    let urlString = ""
-    var reviewDictionary : Parameters = ["date" : labReview.date , "description" : labReview.description , "id" : labReview.id , "nickname" : labReview.nickname , "photoUrl" : labReview.photoUrl , "" : labReview.rateNumber , "userId" : labReview.userId ]
+    let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddReview"
+    
+     let reviewDictionary = try! DictionaryEncoder.encode(labReview)
     
     Alamofire.request(urlString , method: .post , parameters: reviewDictionary , encoding: JSONEncoding.default ,headers: nil).responseJSON {
         response in
