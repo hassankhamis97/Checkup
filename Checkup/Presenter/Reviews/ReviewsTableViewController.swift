@@ -71,7 +71,7 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
         cell.descriptionOutlet.sizeToFit()
         
     
-        cell.ratingOutlet.rating = Double(reviewObjInView[indexPath.row].rateNumber!)
+        cell.ratingOutlet.rating = reviewObjInView[indexPath.row].rateNumber!
         cell.reviewsDateOutlet?.text =  reviewObjInView[indexPath.row].date!
         cell.descriptionOutlet.text = reviewObjInView[indexPath.row].description ?? "no review"
         cell.userNameOutlet.text = reviewObjInView[indexPath.row].nickname!

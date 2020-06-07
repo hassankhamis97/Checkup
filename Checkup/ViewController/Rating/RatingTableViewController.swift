@@ -21,11 +21,11 @@ class RatingTableViewController: UITableViewController , IRatingView{
      //   ratingOutlet.didFinishTouchingCosmos{ rating in
         //  userReview.rateNumber = rating
        // }
-     /*   ratingOutlet.didFinishTouchingCosmos = { rating in
-                userReview.rateNumber = Int(rating)
-        }*/
+        ratingOutlet.didFinishTouchingCosmos = { rating in
+            self.userReview.rateNumber = rating
+        }
         userReview.userId =  Auth.auth().currentUser?.uid
-        
+//        userReview.branchId =
         ratingPresenter = RatingPresenter(view: self)
         ratingPresenter.passDataToModel(labReview: userReview)
         
