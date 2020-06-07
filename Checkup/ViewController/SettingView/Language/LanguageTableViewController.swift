@@ -93,7 +93,8 @@ class LanguageTableViewController: UITableViewController ,IView{
                                                        UIAlertAction in
                             LocalizationSystem.sharedInstance.setLanguage(languageCode: "ar")
                                         
-                                                      exit(EXIT_SUCCESS)
+//                                                      exit(EXIT_SUCCESS)
+                            self.restartApplication()
                                          })
                                           
                            alertController.addAction(UIAlertAction(title: "No".localized, style: UIAlertAction.Style.default) {
@@ -118,7 +119,9 @@ class LanguageTableViewController: UITableViewController ,IView{
                                                            UIAlertAction in
                                  LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
                                             
-                                                          exit(EXIT_SUCCESS)
+//                                                          exit(EXIT_SUCCESS)
+                                
+                                self.restartApplication()
                                              })
                                               
                                alertController.addAction(UIAlertAction(title: "No".localized, style: UIAlertAction.Style.default) {
@@ -141,5 +144,33 @@ class LanguageTableViewController: UITableViewController ,IView{
 //            appDlg?.window?.rootViewController = vc
 
 }
+    
+    
+    
+    func restartApplication () {
+        let viewController = EmailDetailTableViewController()
+        
+        let launchScreen = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()
+      
+        
+        
+        let navCtrl = UINavigationController(rootViewController: launchScreen!)
+
+        guard
+                let window = UIApplication.shared.keyWindow,
+                let rootViewController = window.rootViewController
+                else {
+            return
+        }
+
+        navCtrl.view.frame = rootViewController.view.frame
+        navCtrl.view.layoutIfNeeded()
+
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            window.rootViewController = navCtrl
+        })
+
+    }
+    
 }
 
