@@ -807,13 +807,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date  :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPG-El-H58">
-                                                            <rect key="frame" x="8" y="59.999999999999993" width="56" height="21.666666666666664"/>
+                                                            <rect key="frame" x="8" y="57.999999999999993" width="56" height="21.666666666666664"/>
                                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time  :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kss-BV-vhZ">
-                                                            <rect key="frame" x="8" y="96.666666666666671" width="59" height="22"/>
+                                                            <rect key="frame" x="8" y="94.666666666666671" width="59" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -855,12 +855,16 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBL-6c-9ND">
-                                                            <rect key="frame" x="40" y="23" width="19.666666666666671" height="22"/>
+                                                            <rect key="frame" x="39.666666666666664" y="23" width="20" height="20"/>
                                                             <accessibility key="accessibilityConfiguration">
                                                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                             </accessibility>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="20" id="5Ub-VZ-oWv"/>
+                                                                <constraint firstAttribute="height" constant="20" id="nOj-h2-Sod"/>
+                                                            </constraints>
                                                             <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <state key="normal" image="checkmark.circle.fill" catalog="system"/>
+                                                            <state key="normal" image="Ok_100px"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precautions :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o65-df-FrW">
                                                             <rect key="frame" x="7.9999999999999929" y="167.66666666666666" width="118.33333333333331" height="22"/>
@@ -1068,7 +1072,7 @@
                                                                 <constraint firstAttribute="height" constant="20" id="fVb-31-FQ0"/>
                                                             </constraints>
                                                             <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <state key="normal" image="Combo Chart_100px"/>
+                                                            <state key="normal" image="Error_100px"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test is not avilable" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-Fm-3PZ">
                                                             <rect key="frame" x="86.666666666666671" y="57.000000000000007" width="146.66666666666663" height="20.333333333333336"/>
@@ -1679,12 +1683,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Combo Chart_100px" width="100" height="100"/>
+        <image name="Error_100px" width="100" height="100"/>
+        <image name="Ok_100px" width="100" height="100"/>
         <image name="Ok_20px" width="20" height="20"/>
         <image name="alarm" catalog="system" width="62" height="64"/>
         <image name="alarm.fill" catalog="system" width="62" height="64"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
-        <image name="checkmark.circle.fill" catalog="system" width="64" height="60"/>
         <image name="filter_30px" width="30" height="30"/>
         <image name="mappin.and.ellipse" catalog="system" width="58" height="64"/>
         <image name="newmicroscope (1)" width="800" height="600"/>
