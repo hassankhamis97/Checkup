@@ -960,7 +960,7 @@
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXs-9w-gU4">
                                                             <rect key="frame" x="0.0" y="1.6666666666666679" width="170" height="45"/>
-                                                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.92941176470588238" green="0.023529411764705882" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="45" id="dcv-zE-UkV"/>
                                                             </constraints>
@@ -1059,12 +1059,16 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBA-lb-eby">
-                                                            <rect key="frame" x="56.999999999999993" y="16" width="20.666666666666664" height="22"/>
+                                                            <rect key="frame" x="57.666666666666657" y="16" width="20" height="20"/>
                                                             <accessibility key="accessibilityConfiguration">
                                                                 <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                             </accessibility>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="20" id="T1s-cK-YwM"/>
+                                                                <constraint firstAttribute="height" constant="20" id="fVb-31-FQ0"/>
+                                                            </constraints>
                                                             <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <state key="normal" image="exclamationmark.triangle.fill" catalog="system"/>
+                                                            <state key="normal" image="Combo Chart_100px"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test is not avilable" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-Fm-3PZ">
                                                             <rect key="frame" x="86.666666666666671" y="57.000000000000007" width="146.66666666666663" height="20.333333333333336"/>
@@ -1131,7 +1135,7 @@
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy3-6V-CZN">
                                                             <rect key="frame" x="0.0" y="1.6666666666666679" width="190" height="45"/>
-                                                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.92941176470588238" green="0.023529411764705882" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="45" id="P4S-2e-Rpj"/>
                                                             </constraints>
@@ -1507,7 +1511,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4R-EY-6mj">
                                                     <rect key="frame" x="107" y="4" width="200" height="45"/>
-                                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.92941176470588238" green="0.023529411764705882" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="nFs-pN-EPc"/>
                                                     </constraints>
@@ -1548,12 +1552,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVI-xm-bpw">
-                                                    <rect key="frame" x="47.333333333333336" y="28" width="19.666666666666664" height="22"/>
+                                                    <rect key="frame" x="47" y="28" width="20" height="22"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                     </accessibility>
                                                     <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" image="checkmark.circle.fill" catalog="system"/>
+                                                    <state key="normal" image="Ok_20px"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Are Wating For Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqd-ps-Hg6">
                                                     <rect key="frame" x="82" y="26" width="250" height="24"/>
@@ -1675,11 +1679,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Combo Chart_100px" width="100" height="100"/>
+        <image name="Ok_20px" width="20" height="20"/>
         <image name="alarm" catalog="system" width="62" height="64"/>
         <image name="alarm.fill" catalog="system" width="62" height="64"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="checkmark.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="exclamationmark.triangle.fill" catalog="system" width="64" height="56"/>
         <image name="filter_30px" width="30" height="30"/>
         <image name="mappin.and.ellipse" catalog="system" width="58" height="64"/>
         <image name="newmicroscope (1)" width="800" height="600"/>

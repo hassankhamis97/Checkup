@@ -85,7 +85,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="person.fill" catalog="system"/>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Account1_50px"/>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                                     <integer key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
@@ -176,7 +176,7 @@
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                                     <color key="value" red="0.019607843137254902" green="0.60392156862745094" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="envelope" catalog="system"/>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Secured Letter_50px"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </textField>
                                                     </subviews>
@@ -221,7 +221,7 @@
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                                     <integer key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="lock" catalog="system"/>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Password_50px-1"/>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                                     <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </userDefinedRuntimeAttribute>
@@ -287,7 +287,7 @@
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                                     <integer key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="lock" catalog="system"/>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Password_50px-1"/>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                                     <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </userDefinedRuntimeAttribute>
@@ -429,10 +429,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Account1_50px" width="50" height="50"/>
         <image name="Home_usSelect_100px" width="100" height="100"/>
-        <image name="envelope" catalog="system" width="64" height="46"/>
-        <image name="lock" catalog="system" width="64" height="64"/>
+        <image name="Password_50px-1" width="50" height="50"/>
+        <image name="Secured Letter_50px" width="50" height="50"/>
         <image name="micrscopBackGround" width="800" height="600"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>
