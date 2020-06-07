@@ -190,16 +190,50 @@ class RequestStatusTableViewController: UITableViewController  {
 //        } else {
 //            // Fallback on earlier versions
 //        }
-        var backBtnImage = UIBarButtonItem()
-        if #available(iOS 13.0, *) {
-            backBtnImage = UIBarButtonItem(image: UIImage(systemName: "teletype.answer"), style: .plain, target: self, action: #selector(backTapped))
-        } else {
-            // Fallback on earlier versions
-        }
-        let backBtn = UIBarButtonItem(title:"STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
         
-        self.navigationItem.setLeftBarButtonItems([backBtnImage,backBtn], animated: true)
+//        let button =  UIButton(type: .custom)
+//        button.setImage(UIImage(named: "Back_50px"), for: .normal)
+//       // button.alignmentRectInsets
+//        button.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
+//        button.frame = CGRect(x: 0, y: 0, width: 33, height: 15)
+//        button.imageEdgeInsets = UIEdgeInsets(top: -1, left: 32, bottom: 1, right: -32)//move image to the right CGRectMake(3, 5, 50, 20)
+//        let label = UILabel(frame:CGRect(x: 3, y: 5, width: 50, height: 20))
+//        label.font = UIFont(name: "Arial-BoldMT", size: 16)
+//        label.text = "Back"
+//        label.textAlignment = .center
+//        label.textColor = UIColor.white
+//        label.backgroundColor =   UIColor.clear
+//        button.addSubview(label)
+//        let barButton = UIBarButtonItem(customView: button)
+//        self.navigationItem.leftBarButtonItem = barButton
+//
+//
+        let leftButtonView = UIView.init(frame: CGRect(x: -40, y:0, width: 110, height: 50))
+
+        let leftButton = UIButton.init(type: .system)
+        leftButton.backgroundColor = .clear
+        leftButton.frame = leftButtonView.frame
+        leftButton.setImage(UIImage(named: "icons8-back-20"), for: .normal)
+        leftButton.setTitle("Back", for: .normal)
+        leftButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)    //Your desired color.
+        leftButton.autoresizesSubviews = true
+        leftButton.autoresizingMask = [.flexibleWidth , .flexibleHeight]
+        leftButton.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
+        leftButtonView.addSubview(leftButton)
+
+        let leftBarButton = UIBarButtonItem.init(customView: leftButtonView)
+        navigationItem.leftBarButtonItem = leftBarButton
         
+//        var backBtnImage = UIBarButtonItem()
+//        if #available(iOS 13.0, *) {
+//            backBtnImage = UIBarButtonItem(image: UIImage(systemName: "teletype.answer"), style: .plain, target: self, action: #selector(backTapped))
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//        let backBtn = UIBarButtonItem(title:"STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
+//
+//        self.navigationItem.setLeftBarButtonItems([backBtnImage,backBtn], animated: true)
+//
         self.progressBarView.circleColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
         self.progressBarView.circleTintColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
         //UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
