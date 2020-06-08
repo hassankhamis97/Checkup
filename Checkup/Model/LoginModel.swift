@@ -42,7 +42,7 @@ class LoginModel: ILoginModel {
                        
                      let type = document?.data()?["type"] as! Int
                 
-                if  type == 3 {
+                if  type == 1 {
                       
                         self.myClosureEmpIsFound?()
                         
