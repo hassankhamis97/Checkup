@@ -51,7 +51,7 @@ class MessagingChatViewController: UIViewController {
         messageParams.pearedId = currentPearedUser.idPearedUser
                 
         
-                messageParams.take = 4
+                messageParams.take = 20
         //        messagingChatPresenter.getData(messageParams: messageParams, skip: &(messageParams.skip)!)
                 messagingChatPresenter.getData(messageParams: messageParams)
     }

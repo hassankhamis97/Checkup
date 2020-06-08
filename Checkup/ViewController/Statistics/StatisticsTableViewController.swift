@@ -48,26 +48,26 @@ class StatisticsTableViewController: UITableViewController ,IView{
     
     @IBAction func doneBtn(_ sender: Any) {
         
-        
-        if yearTextField.text == ""{
-            
-            Alert.showSimpleAlert(title: "sorry",message: "Enter Year First", viewRef: self)
-            
-            
-            
-        }
-        else{
-            
-            let selectedYear = yearTextField.text
-            
-            let statisticsPresenterRef=StatisticPresenter(statisticsViewRef: self)
-            
-            statisticsPresenterRef.getSample(userId: Auth.auth().currentUser!.uid, year: selectedYear!)
-            
-//            setChart(dataPoints: sampleObj.year!, values: sampleObj.sample!)
-            
-            
-        }
+//        
+//        if yearTextField.text == ""{
+//            
+//            Alert.showSimpleAlert(title: "sorry",message: "Enter Year First", viewRef: self)
+//            
+//            
+//            
+//        }
+//        else{
+//            
+//            let selectedYear = yearTextField.text
+//            
+//            let statisticsPresenterRef=StatisticPresenter(statisticsViewRef: self)
+//            
+//            statisticsPresenterRef.getSample(userId: Auth.auth().currentUser!.uid, year: selectedYear!)
+//            
+////            setChart(dataPoints: sampleObj.year!, values: sampleObj.sample!)
+//            
+//            
+//        }
         
     }
     func setChart(dataPoints:[String],values: [Double]) {

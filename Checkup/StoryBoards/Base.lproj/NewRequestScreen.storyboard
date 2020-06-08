@@ -558,13 +558,7 @@
                             <outlet property="delegate" destination="26o-WZ-09i" id="mcV-T0-g8d"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Request" id="BnS-6m-rmy">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="4NR-b4-bbK">
-                            <connections>
-                                <segue destination="l4V-Hg-TP4" kind="push" id="hX7-kk-Nxi"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="New Request" id="BnS-6m-rmy"/>
                     <connections>
                         <outlet property="activityIndicator" destination="ldJ-Qp-CB5" id="9q1-Fu-woh"/>
                         <outlet property="addressTextField" destination="6pK-Ma-HUc" id="SgH-AW-4WP"/>

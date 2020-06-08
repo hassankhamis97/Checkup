@@ -87,14 +87,14 @@
                                 <rect key="frame" x="0.0" y="799" width="414" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHx-pf-dTR">
-                                        <rect key="frame" x="8" y="15" width="40" height="32"/>
+                                        <rect key="frame" x="20" y="15" width="35" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="LgA-cZ-kDb"/>
-                                            <constraint firstAttribute="width" constant="40" id="YpY-kc-aMU"/>
+                                            <constraint firstAttribute="height" constant="35" id="LgA-cZ-kDb"/>
+                                            <constraint firstAttribute="width" constant="35" id="YpY-kc-aMU"/>
                                         </constraints>
                                         <color key="tintColor" red="0.1960784314" green="0.28235294119999998" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" backgroundImage="Compact Camera_20px">
+                                        <state key="normal" backgroundImage="Compact Camera_50px">
                                             <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -113,7 +113,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qsw-4a-fNF">
-                                        <rect key="frame" x="78" y="10" width="266" height="44"/>
+                                        <rect key="frame" x="70" y="10" width="274" height="44"/>
                                         <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="ifj-5G-Eut"/>
@@ -125,9 +125,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="MHx-pf-dTR" firstAttribute="leading" secondItem="ExB-QF-acT" secondAttribute="leading" constant="8" id="5VS-m1-5PC"/>
+                                    <constraint firstItem="MHx-pf-dTR" firstAttribute="leading" secondItem="ExB-QF-acT" secondAttribute="leading" constant="20" id="5VS-m1-5PC"/>
                                     <constraint firstItem="FGb-Cb-miO" firstAttribute="leading" secondItem="Qsw-4a-fNF" secondAttribute="trailing" constant="20" id="JfR-Wi-sml"/>
-                                    <constraint firstItem="Qsw-4a-fNF" firstAttribute="leading" secondItem="MHx-pf-dTR" secondAttribute="trailing" constant="30" id="LOU-zO-m7h"/>
+                                    <constraint firstItem="Qsw-4a-fNF" firstAttribute="leading" secondItem="MHx-pf-dTR" secondAttribute="trailing" constant="15" id="LOU-zO-m7h"/>
                                     <constraint firstItem="FGb-Cb-miO" firstAttribute="top" secondItem="ExB-QF-acT" secondAttribute="top" constant="15" id="OgY-GW-eI7"/>
                                     <constraint firstItem="MHx-pf-dTR" firstAttribute="top" secondItem="ExB-QF-acT" secondAttribute="top" constant="15" id="TOc-5C-wCl"/>
                                     <constraint firstAttribute="height" constant="62" id="WAw-NI-xwD"/>
@@ -269,7 +269,7 @@
     </scenes>
     <resources>
         <image name="Chat1_50px" width="50" height="50"/>
-        <image name="Compact Camera_20px" width="20" height="20"/>
+        <image name="Compact Camera_50px" width="50" height="50"/>
         <image name="chatSend" width="64" height="64"/>
         <image name="newmicroscope (1)" width="800" height="600"/>
     </resources>
