@@ -195,19 +195,25 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
         
         switch requests![indexPath.row].status! {
         case TestType.PendingForLabConfirmation.rawValue:
-            cell.requestStatus.text = "🔵 Wait Response"
+            cell.requestStatus.text = "Wait Response"
+            cell.colorViewOutlet.backgroundColor = #colorLiteral(red: 0.1394393436, green: 0.2107147147, blue: 1, alpha: 1)
             break
         case TestType.PendingForTakingTheSample.rawValue:
-            cell.requestStatus.text = "🟡 Wait Sample"
+            cell.requestStatus.text = "Wait Sample"
+            cell.colorViewOutlet.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
             break
         case TestType.PendingForResult.rawValue:
-            cell.requestStatus.text = "🟠 Wait Result"
+            cell.requestStatus.text = "Wait Result"
+            cell.colorViewOutlet.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.9764705882, blue: 0.937254902, alpha: 1)
             break
             case TestType.Refused.rawValue:
-            cell.requestStatus.text = "🔴 Refused"
+            cell.requestStatus.text = "Refused"
+            cell.colorViewOutlet.backgroundColor = #colorLiteral(red: 0.9294117647, green: 0.02352941176, blue: 0.02352941176, alpha: 1)
             break
         case TestType.Done.rawValue:
-            cell.requestStatus.text = "🟢 Done"
+            cell.requestStatus.text = "Done"
+//            cell.colorViewOutlet.backgroundColor = #colorLiteral(red: 0.9294117647, green: 0.02352941176, blue: 0.02352941176, alpha: 1)
+            cell.colorViewOutlet.backgroundColor = #colorLiteral(red: 0.2039215686, green: 0.7803921569, blue: 0.3490196078, alpha: 1)
             break
         default:
             break
