@@ -20,7 +20,7 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
     
     var branchId : String!
     
-    let imageViewMaxHeight : CGFloat = 250
+    let imageViewMaxHeight : CGFloat = 350
     let imageViewMinHeight : CGFloat = 100
     
     @IBOutlet weak var myLabel: UILabel!
@@ -54,7 +54,7 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
        
         
         viewOutlet.clipsToBounds = true
-        viewOutlet.layer.cornerRadius = 25
+        viewOutlet.layer.cornerRadius = 15
         viewOutlet.layer.maskedCorners = [.layerMaxXMaxYCorner , .layerMinXMaxYCorner]
         btnViewOutlet.backgroundColor = .clear
       

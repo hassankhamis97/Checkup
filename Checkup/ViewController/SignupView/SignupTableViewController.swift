@@ -35,7 +35,7 @@ class SignupTableViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         signupActivity.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-        signUpBtn.layer.cornerRadius=30
+        signUpBtn.layer.cornerRadius=10
         signUpBtn.layer.borderColor=UIColor.white.cgColor
         signUpBtn.layer.borderWidth=2
         

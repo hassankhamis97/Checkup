@@ -159,7 +159,7 @@
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                                     <integer key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Password_50px"/>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Password_50px-1"/>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                                                     <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </userDefinedRuntimeAttribute>
@@ -563,7 +563,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Password_50px" width="50" height="50"/>
+        <image name="Password_50px-1" width="50" height="50"/>
         <image name="Secured Letter_50px" width="50" height="50"/>
         <image name="micrscopBackGround" width="800" height="600"/>
     </resources>

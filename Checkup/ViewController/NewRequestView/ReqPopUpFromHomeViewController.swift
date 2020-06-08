@@ -25,13 +25,17 @@ class ReqPopUpFromHomeViewController: UIViewController  {
         dismiss(animated: true, completion: nil)
         showNewRequestRef!.transferToNewReq(isFromHome: false, index: elementIndex)
     }
+    
+    
+     @IBOutlet weak var IsFromHomeBtnOutlet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        IsFromHomeBtnOutlet.layer.cornerRadius=10
     }
     
     
 
+   
     /*
     // MARK: - Navigation
 

@@ -11,10 +11,11 @@ class Review : Codable{
     var id: Int64?
 //    var comments: [Comment]?
     var description: String?
-    var rateNumber: Int?
+    var rateNumber: Double?
     var userId: String?
     var date: String?
     var nickname : String?
     var photoUrl : String?
+    var branchId : String?
 //    func toDictionary() -> Any {     return ["id": id, "rateNumber": rateNumber, "comments": comments.toDictionary()] as Any }
 }
