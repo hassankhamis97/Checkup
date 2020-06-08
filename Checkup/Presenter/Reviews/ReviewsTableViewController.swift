@@ -71,11 +71,11 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
         cell.descriptionOutlet.sizeToFit()
         
     
-        cell.ratingOutlet.rating = reviewObjInView[indexPath.row].rateNumber!
-        cell.reviewsDateOutlet?.text =  reviewObjInView[indexPath.row].date!
+        cell.ratingOutlet.rating = reviewObjInView[indexPath.row].rateNumber ?? 0.00
+        cell.reviewsDateOutlet?.text =  reviewObjInView[indexPath.row].date ?? ""
         cell.descriptionOutlet.text = reviewObjInView[indexPath.row].description ?? "no review"
-        cell.userNameOutlet.text = reviewObjInView[indexPath.row].nickname!
-        cell.userImageOutlet.sd_setImage(with: URL(string: reviewObjInView[indexPath.row].photoUrl!), placeholderImage:UIImage(named: "placeholder.png"))
+        cell.userNameOutlet.text = reviewObjInView[indexPath.row].nickname ?? ""
+        cell.userImageOutlet.sd_setImage(with: URL(string: reviewObjInView[indexPath.row].photoUrl!), placeholderImage:UIImage(named: "lab1"))
         
            
 

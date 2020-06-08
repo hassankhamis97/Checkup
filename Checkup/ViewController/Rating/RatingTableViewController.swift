@@ -18,12 +18,7 @@ class RatingTableViewController: UITableViewController , IRatingView{
     
     @IBAction func submitAction(_ sender: Any) {
         userReview.description = commentOutlet.text
-     //   ratingOutlet.didFinishTouchingCosmos{ rating in
-        //  userReview.rateNumber = rating
-       // }
-        ratingOutlet.didFinishTouchingCosmos = { rating in
-            self.userReview.rateNumber = rating
-        }
+       
         userReview.userId =  Auth.auth().currentUser?.uid
 //        userReview.branchId =
         ratingPresenter = RatingPresenter(view: self)
@@ -36,13 +31,15 @@ class RatingTableViewController: UITableViewController , IRatingView{
     @IBOutlet weak var ratingView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ratingOutlet.didFinishTouchingCosmos = { rating in
+                   self.userReview.rateNumber = rating
+               }
      
         commentOutlet.layer.borderWidth = 0.5
         commentOutlet.layer.borderColor = UIColor.gray.cgColor
-        let imageView = UIImageView(image: UIImage(named:  "newmicroscope (1)"))//
-        imageView.alpha = 0.4
-        self.tableView.backgroundView = imageView
+  //      let imageView = UIImageView(image: UIImage(named:  "newmicroscope (1)"))//
+    //    imageView.alpha = 0.4
+      //  self.tableView.backgroundView = imageView
         ratingView.layer.shadowPath =  UIBezierPath(rect:ratingView.bounds).cgPath
                           
                            ratingView.layer.shadowRadius = 10

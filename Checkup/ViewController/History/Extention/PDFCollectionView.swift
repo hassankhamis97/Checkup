@@ -24,7 +24,21 @@ extension ResultDetailsTableViewController : UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let pdfHistory = storyboard?.instantiateViewController(withIdentifier: "pdfHistory") as! PdfResultViewController
         pdfHistory.pdfUrl = testObj!.resultFilespaths![indexPath.row]
+        
+        
+        pdfCounter = pdfCounter + 1
+        saveDataInUserDefault(counter: pdfCounter)
+        var myCounter = retrieveDataFromUserDefault()
+        print(pdfCounter)
+        print(myCounter)
+        pdfHistory.pdfCounter = pdfCounter
+        pdfHistory.noOfPdfObjInArr = testObj!.resultFilespaths!.count
+        
+      
         navigationController?.pushViewController(pdfHistory, animated: true)
+        
     }
+
+    
     
 }

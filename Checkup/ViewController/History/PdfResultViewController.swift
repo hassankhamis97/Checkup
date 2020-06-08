@@ -12,6 +12,8 @@ class PdfResultViewController: UIViewController {
 
     @IBOutlet weak var pdfView: PDFView!
     var pdfUrl: String!
+    var pdfCounter : Int!
+    var noOfPdfObjInArr : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,21 +27,35 @@ class PdfResultViewController: UIViewController {
                 pdfView.displayMode = .singlePageContinuous
                 pdfView.displayDirection = .vertical
                 pdfView.document = pdfDocument
-                
+                 
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(backToPrevious))
             }
 
 //        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func backToPrevious()  {
+        print("ayooya")
+        print(pdfCounter)
+        print(noOfPdfObjInArr!)
+       
+        
+        if(pdfCounter == noOfPdfObjInArr!){
+        
+            let popoverContent = self.storyboard?.instantiateViewController(withIdentifier: "ratingPopup")  as! RatingTableViewController
+            let nav = UINavigationController(rootViewController: popoverContent)
+            nav.modalPresentationStyle = UIModalPresentationStyle.popover
+            let popover = nav.popoverPresentationController
+            popoverContent.preferredContentSize = CGSize(width: 500,height: 600)
+            popover!.delegate = (self as! UIPopoverPresentationControllerDelegate)
+            popover!.sourceView = self.view
+            popover!.sourceRect = CGRect(x: 100,y: 100,width: 0,height: 0)
+            self.present(nav, animated: true, completion: nil)
+        
+         }
+               
+               
+        self.navigationController?.popViewController(animated: true)
     }
-    */
-
+   
 }
