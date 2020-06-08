@@ -25,6 +25,8 @@ class RequestStatusTableViewController: UITableViewController  {
     var alertStatus : Int8 = 0 ;
     var isFromHomeCheck : Bool = true ;
     var locationCell:CGFloat = 0
+    var xAxis : Int = -40
+    var backImageName : String = "icons8-back-20"
     static var page: Int?
     @IBOutlet weak var costText: UILabel!
     
@@ -50,16 +52,16 @@ class RequestStatusTableViewController: UITableViewController  {
             
         } else if isFromHomeCheck == false {
             // show lab description Page
-              
+            
             let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
             branchDesc.modalPresentationStyle = .fullScreen
-           
+            
             guard let branchId = testStatusObj.branchId else{
                 return
             }
-//             navigationController?.pushViewController(labDescriptionVC, animated: true)
-        branchDesc.branchId = branchId ;
-             self.present(branchDesc , animated: true , completion: nil)
+            //             navigationController?.pushViewController(labDescriptionVC, animated: true)
+            branchDesc.branchId = branchId ;
+            self.present(branchDesc , animated: true , completion: nil)
         }
         
     }
@@ -75,7 +77,7 @@ class RequestStatusTableViewController: UITableViewController  {
     @IBOutlet weak var dateTextArea: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var precautionsTextArea: UITextView!
     @IBOutlet weak var slideShow: ImageSlideshow!
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBAction func cancelRequestBtn(_ sender: Any) {
@@ -95,9 +97,9 @@ class RequestStatusTableViewController: UITableViewController  {
     
     
     @IBOutlet weak var progressBarView: StepIndicatorView!
-   
+    
     @IBAction func showRequestDetailsBtn(_ sender: Any) {
-
+        
         RequestStatusTableViewController.page = x;
         showDetailsPage = true
         
@@ -111,13 +113,13 @@ class RequestStatusTableViewController: UITableViewController  {
             tableView.reloadData()
             return
         }
-//        let location = locAddress.address1
+        //        let location = locAddress.address1
         
         self.locationTextArea.text = locAddress.address1
         
         tableView.reloadData()
     }
-
+    
     ////////// refused ///////////////////
     
     @IBOutlet weak var refuseReasonText: UILabel!
@@ -135,7 +137,7 @@ class RequestStatusTableViewController: UITableViewController  {
         
         alertStatus = 1
         Alert.showAdvancedAlert(title: "STATUS_CONFIRMATION".localized, message: "STATUS_DELETE_CONFIRMATION".localized, viewAdvancedAlertRef: self)
-      
+        
         
     }
     
@@ -145,7 +147,7 @@ class RequestStatusTableViewController: UITableViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         
-      
+        
         
         if(Auth.auth().currentUser?.uid == nil)
         {
@@ -154,7 +156,7 @@ class RequestStatusTableViewController: UITableViewController  {
             self.present(loginVC, animated: true, completion: nil)
             
         }
-    
+        
     }
     
     //************** Back Buttom *****************//
@@ -185,63 +187,35 @@ class RequestStatusTableViewController: UITableViewController  {
         
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-//progressBarView.direction = StepIndicatorViewDirection(rawValue: 1)!
-//
-//
-//let rightButtonView = UIView.init(frame: CGRect(x: 40, y:0, width: 110, height: 50))
-//
-//let rightButton = UIButton.init(type: .system)
-//rightButton.backgroundColor = .clear
-//rightButton.frame = rightButtonView.frame
-//rightButton.setImage(UIImage(named: "icons8-back-20"), for: .normal)
-//rightButton.setTitle("STATUS_BACK".localized, for: .normal)
-//rightButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)    //Your desired color.
-//rightButton.autoresizesSubviews = true
-//rightButton.autoresizingMask = [.flexibleWidth , .flexibleHeight]
-//rightButton.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-//rightButtonView.addSubview(rightButton)
-//
-//let rightBarButton = UIBarButtonItem.init(customView: rightButtonView)
-//navigationItem.rightBarButtonItem = rightBarButton
-//
-//
-        let leftButtonView = UIView.init(frame: CGRect(x: -40, y:0, width: 110, height: 50))
-
+        //****************** Languages check ****************///
+        if Locale.current.languageCode == "ar"
+        {
+            progressBarView.direction = StepIndicatorViewDirection(rawValue: 1)!
+            backImageName = "Forward1_20px"
+            xAxis = 40
+        }
+        
+        let leftButtonView = UIView.init(frame: CGRect(x: xAxis, y:0, width: 110, height: 50))
+        
         let leftButton = UIButton.init(type: .system)
         leftButton.backgroundColor = .clear
         leftButton.frame = leftButtonView.frame
-        leftButton.setImage(UIImage(named: "icons8-back-20"), for: .normal)
+        leftButton.setImage(UIImage(named: backImageName), for: .normal)
         leftButton.setTitle("STATUS_BACK".localized, for: .normal)
         leftButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)    //Your desired color.
         leftButton.autoresizesSubviews = true
         leftButton.autoresizingMask = [.flexibleWidth , .flexibleHeight]
         leftButton.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
         leftButtonView.addSubview(leftButton)
-
+        
         let leftBarButton = UIBarButtonItem.init(customView: leftButtonView)
         navigationItem.leftBarButtonItem = leftBarButton
-        
-//        var backBtnImage = UIBarButtonItem()
-//        if #available(iOS 13.0, *) {
-//            backBtnImage = UIBarButtonItem(image: UIImage(systemName: "teletype.answer"), style: .plain, target: self, action: #selector(backTapped))
-//        } else {
-//            // Fallback on earlier versions
-//        }
-//        let backBtn = UIBarButtonItem(title:"STATUS_BACK".localized, style: .plain, target: self, action: #selector(backTapped))
-//
-//        self.navigationItem.setLeftBarButtonItems([backBtnImage,backBtn], animated: true)
-//
+      
         self.progressBarView.circleColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
         self.progressBarView.circleTintColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
         //UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
         
-        //****************** Languages check ****************///
-        if Locale.current.languageCode == "ar"
-        {
-            progressBarView.direction = StepIndicatorViewDirection(rawValue: 1)!
-        }
         
-        ///*********************////
         testStatusObj = Test();
         
         print( testID!)
@@ -330,7 +304,7 @@ class RequestStatusTableViewController: UITableViewController  {
             if indexPath.row==14{
                 return 200
             }
-           
+            
         }
         
         
@@ -358,7 +332,7 @@ class RequestStatusTableViewController: UITableViewController  {
             if indexPath.row==11{
                 return  locationCell
             }
-             
+            
             
             
             if indexPath.row==12{
@@ -370,7 +344,7 @@ class RequestStatusTableViewController: UITableViewController  {
             
         }
         
-       
+        
         if (x==3){ //in case of confirmed
             
             if (indexPath.row==4 || indexPath.row==5 || indexPath.row==6 || indexPath.row==7 || indexPath.row==8 || indexPath.row==9 || indexPath.row==10 || indexPath.row==11 || indexPath.row==12 || indexPath.row==13 ){
@@ -425,7 +399,7 @@ class RequestStatusTableViewController: UITableViewController  {
         return tableView.rowHeight
     }
     
-
+    
 }
 
 extension RequestStatusTableViewController: ImageSlideshowDelegate {
