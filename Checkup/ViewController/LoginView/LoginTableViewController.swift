@@ -58,7 +58,7 @@ class LoginTableViewController: UITableViewController,UITextFieldDelegate, IView
         //            GIDSignIn.sharedInstance()?.presentingViewController = self
         //        }
         //*******************//
-        loginBtnOutlet.layer.cornerRadius=30
+        loginBtnOutlet.layer.cornerRadius=10
         loginBtnOutlet.layer.borderColor=UIColor.white.cgColor
         loginBtnOutlet.layer.borderWidth=2
         

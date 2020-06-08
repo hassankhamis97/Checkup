@@ -80,3 +80,6 @@
 "Choose Language"="اختر لغة ";
 "please complete your health profile" = "من فضلك املأ البيانات الطبية الخاصة بك";
 "Answer all the questions, please" = "من فضلك ، اجب على جميع الاسئلة";
+"RESULT_NO_DESCRIPTION" = " لا يوجد وصف";
+"RESULT_NO_Date" =  "التاريخ لم يحدد";
+"RESULT_NO_TIME" = "الوقت لم يحدد";

@@ -10,12 +10,12 @@ import Foundation
 extension ResultDetailsTableViewController : IRequestStatusView {
     func onReceiveRequestStatus(myObj: Test) {
         testObj = myObj
-        descriptionTextView.text = testObj.description!
-        resultDateTextView.text = testObj.dateResult!
-        resultTimeTextView.text = testObj.timeResult!
+        descriptionTextView.text = testObj.description ?? "RESULT_NO_DESCRIPTION".localized
+        resultDateTextView.text = testObj.dateResult ?? "RESULT_NO_Date".localized
+        resultTimeTextView.text = testObj.timeResult ?? "RESULT_NO_TIME".localized
         pdfCollectionView.reloadData()
     }
-    
+   
     func onConnectionFaile() {
         
     }

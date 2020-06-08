@@ -101,7 +101,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         activityIndicator.hide()
         activityIndicator.alpha = 0
         dateTextField.addTarget(self, action: #selector(NewRequestTableViewController.textFieldDidChange(_:)), for: .editingChanged)
-        saveRequestBtn.layer.cornerRadius=30
+        saveRequestBtn.layer.cornerRadius=10
         saveRequestBtn.layer.borderColor=UIColor.white.cgColor
         saveRequestBtn.layer.borderWidth=2
     }
