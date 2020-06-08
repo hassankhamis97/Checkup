@@ -23,16 +23,16 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="207" id="HaU-Yk-rsh">
                                         <rect key="frame" x="0.0" y="28" width="414" height="207"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HaU-Yk-rsh" id="zxI-v8-xqR">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HaU-Yk-rsh" id="zxI-v8-xqR">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="micrscopBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="cDZ-H7-5zN">
-                                                    <rect key="frame" x="20" y="-34" width="374" height="239"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoCheckupnew3" translatesAutoresizingMaskIntoConstraints="NO" id="cDZ-H7-5zN">
+                                                    <rect key="frame" x="84" y="20" width="288" height="186"/>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="239" id="b5a-jm-xDI"/>
-                                                        <constraint firstAttribute="width" constant="374" id="cyW-gS-kBt"/>
+                                                        <constraint firstAttribute="height" constant="186" id="b5a-jm-xDI"/>
+                                                        <constraint firstAttribute="width" constant="288" id="cyW-gS-kBt"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -40,21 +40,14 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtn-UK-aZN">
-                                                    <rect key="frame" x="150.5" y="155" width="113" height="29"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
-                                                    <color key="textColor" red="0.2261599302" green="0.23856621980000001" blue="0.4210598767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="cDZ-H7-5zN" firstAttribute="top" secondItem="zxI-v8-xqR" secondAttribute="top" constant="-34" id="FTQ-nx-P1h"/>
-                                                <constraint firstAttribute="trailing" secondItem="cDZ-H7-5zN" secondAttribute="trailing" constant="20" id="Qc0-Jk-zvv"/>
-                                                <constraint firstItem="Mtn-UK-aZN" firstAttribute="centerX" secondItem="zxI-v8-xqR" secondAttribute="centerX" id="bDp-IR-a4Q"/>
-                                                <constraint firstAttribute="bottom" secondItem="cDZ-H7-5zN" secondAttribute="bottom" constant="2" id="fOt-V3-Hn1"/>
-                                                <constraint firstItem="Mtn-UK-aZN" firstAttribute="top" secondItem="zxI-v8-xqR" secondAttribute="topMargin" constant="144" id="gqm-Hc-b9V"/>
-                                                <constraint firstItem="cDZ-H7-5zN" firstAttribute="leading" secondItem="zxI-v8-xqR" secondAttribute="leading" constant="20" id="sjb-LO-VFY"/>
+                                                <constraint firstItem="cDZ-H7-5zN" firstAttribute="top" secondItem="zxI-v8-xqR" secondAttribute="top" constant="20" id="FTQ-nx-P1h"/>
+                                                <constraint firstAttribute="trailing" secondItem="cDZ-H7-5zN" secondAttribute="trailing" constant="42" id="Qc0-Jk-zvv"/>
+                                                <constraint firstItem="cDZ-H7-5zN" firstAttribute="centerY" secondItem="zxI-v8-xqR" secondAttribute="centerY" constant="0.5" id="bM9-z6-wAs"/>
+                                                <constraint firstAttribute="bottom" secondItem="cDZ-H7-5zN" secondAttribute="bottom" constant="10" id="fOt-V3-Hn1"/>
+                                                <constraint firstItem="cDZ-H7-5zN" firstAttribute="leading" secondItem="zxI-v8-xqR" secondAttribute="leading" constant="84" id="sjb-LO-VFY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -565,6 +558,6 @@
     <resources>
         <image name="Password_50px-1" width="50" height="50"/>
         <image name="Secured Letter_50px" width="50" height="50"/>
-        <image name="micrscopBackGround" width="800" height="600"/>
+        <image name="logoCheckupnew3" width="1406" height="1412"/>
     </resources>
 </document>
