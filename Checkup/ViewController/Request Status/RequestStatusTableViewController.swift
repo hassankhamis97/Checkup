@@ -185,27 +185,24 @@ class RequestStatusTableViewController: UITableViewController  {
         
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-//        if #available(iOS 13.0, *) {
-//            var img = UIImage(systemName: "teletype.answer")
-//        } else {
-//            // Fallback on earlier versions
-//        }
-        
-//        let button =  UIButton(type: .custom)
-//        button.setImage(UIImage(named: "Back_50px"), for: .normal)
-//       // button.alignmentRectInsets
-//        button.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-//        button.frame = CGRect(x: 0, y: 0, width: 33, height: 15)
-//        button.imageEdgeInsets = UIEdgeInsets(top: -1, left: 32, bottom: 1, right: -32)//move image to the right CGRectMake(3, 5, 50, 20)
-//        let label = UILabel(frame:CGRect(x: 3, y: 5, width: 50, height: 20))
-//        label.font = UIFont(name: "Arial-BoldMT", size: 16)
-//        label.text = "Back"
-//        label.textAlignment = .center
-//        label.textColor = UIColor.white
-//        label.backgroundColor =   UIColor.clear
-//        button.addSubview(label)
-//        let barButton = UIBarButtonItem(customView: button)
-//        self.navigationItem.leftBarButtonItem = barButton
+//progressBarView.direction = StepIndicatorViewDirection(rawValue: 1)!
+//
+//
+//let rightButtonView = UIView.init(frame: CGRect(x: 40, y:0, width: 110, height: 50))
+//
+//let rightButton = UIButton.init(type: .system)
+//rightButton.backgroundColor = .clear
+//rightButton.frame = rightButtonView.frame
+//rightButton.setImage(UIImage(named: "icons8-back-20"), for: .normal)
+//rightButton.setTitle("STATUS_BACK".localized, for: .normal)
+//rightButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)    //Your desired color.
+//rightButton.autoresizesSubviews = true
+//rightButton.autoresizingMask = [.flexibleWidth , .flexibleHeight]
+//rightButton.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
+//rightButtonView.addSubview(rightButton)
+//
+//let rightBarButton = UIBarButtonItem.init(customView: rightButtonView)
+//navigationItem.rightBarButtonItem = rightBarButton
 //
 //
         let leftButtonView = UIView.init(frame: CGRect(x: -40, y:0, width: 110, height: 50))
@@ -214,7 +211,7 @@ class RequestStatusTableViewController: UITableViewController  {
         leftButton.backgroundColor = .clear
         leftButton.frame = leftButtonView.frame
         leftButton.setImage(UIImage(named: "icons8-back-20"), for: .normal)
-        leftButton.setTitle("Back", for: .normal)
+        leftButton.setTitle("STATUS_BACK".localized, for: .normal)
         leftButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)    //Your desired color.
         leftButton.autoresizesSubviews = true
         leftButton.autoresizingMask = [.flexibleWidth , .flexibleHeight]
