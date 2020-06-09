@@ -410,8 +410,29 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     
     @objc func donePressed(){
         
+//        // input date in given format (as string)
+//        let inputDateAsString = "2016-03-09 10:33:59"
+//
+//        // initialize formatter and set input date format
+//        var formatter = DateFormatter()
+//        formatter.dateFormat = "MMM d, yyyy h:mm a"
+//
+//        // read input date string as NSDate instance
+//        if let date = formatter.dateFromString(inputDateAsString) {
+//
+//            // set locale to "ar_DZ" and format as per your specifications
+//            formatter.locale = NSLocale(localeIdentifier: "ar_DZ")
+//            formatter.dateFormat = "EEEE, d, MMMM, yyyy HH:mm a"
+//            let outputDate = formatter.stringFromDate(date)
+//
+//            print(outputDate) // الأربعاء, 9 مارس, 2016 10:33 ص
+//        }
         
-        let formatter=DateFormatter()
+        
+        
+//        let formatter=DateFormatter()
+        var formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy h:mm a"
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
         //        formatter.times

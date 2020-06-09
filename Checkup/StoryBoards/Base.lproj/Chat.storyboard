@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newmicroscope (1)" translatesAutoresizingMaskIntoConstraints="NO" id="WPg-Hg-UL8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="600"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1200"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yY2-Sj-ck6">
                                 <rect key="frame" x="0.0" y="44" width="414" height="755"/>
