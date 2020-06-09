@@ -226,7 +226,6 @@
 		A39BF976246DA047003500A8 /* ImgTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39BF974246DA047003500A8 /* ImgTableViewCell.xib */; };
 		A39BF97B246DA47E003500A8 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BF979246DA47E003500A8 /* DataTableViewCell.swift */; };
 		A39BF97C246DA47E003500A8 /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39BF97A246DA47E003500A8 /* DataTableViewCell.xib */; };
-		A3B75D5624786EC900C95139 /* HomeLabRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B75D5524786EC900C95139 /* HomeLabRealm.swift */; };
 		A3BC0855247D91D500D98A09 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BC0857247D91D500D98A09 /* Login.storyboard */; };
 		A3C421D92481FA1600CCF8B6 /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */; };
 		A3C5F02F2472BDA80069413F /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F02E2472BDA80069413F /* SignupModel.swift */; };
@@ -573,7 +572,6 @@
 		A39BF974246DA047003500A8 /* ImgTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImgTableViewCell.xib; sourceTree = "<group>"; };
 		A39BF979246DA47E003500A8 /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 		A39BF97A246DA47E003500A8 /* DataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataTableViewCell.xib; sourceTree = "<group>"; };
-		A3B75D5524786EC900C95139 /* HomeLabRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLabRealm.swift; sourceTree = "<group>"; };
 		A3BC0858247D91D800D98A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
 		A3C5F02E2472BDA80069413F /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
@@ -1025,7 +1023,6 @@
 				4E206DED246EE702007C401D /* Laboratory.swift */,
 				4E3C1F472476A65E00D9761D /* HomeLab.swift */,
 				4EC1FD3B2472E6D90029C499 /* FilterLab.swift */,
-				A3B75D5524786EC900C95139 /* HomeLabRealm.swift */,
 				03380CD9247F245C0055717E /* FilterGovern.swift */,
 			);
 			path = Laboratory;
@@ -2815,7 +2812,6 @@
 				A33CA62B246D3F610014CF6B /* UserCustomTableViewCell.swift in Sources */,
 				4EC1FD3A2472E2530029C499 /* SmallDescLabTableViewCell.swift in Sources */,
 				CC76172D24732A050084CC6E /* ImageModel.swift in Sources */,
-				A3B75D5624786EC900C95139 /* HomeLabRealm.swift in Sources */,
 				4EA87513247FEE2000E95B30 /* AllMessages.swift in Sources */,
 				033C186B248BF4F2009D8038 /* RatingModel.swift in Sources */,
 				4E432F132464F6EF00D1CACA /* HistoryTableViewCell.swift in Sources */,
