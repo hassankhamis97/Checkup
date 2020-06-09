@@ -640,7 +640,7 @@
                         <viewLayoutGuide key="safeArea" id="hvM-Hm-dtf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="jp5-tf-ft7">
-                        <barButtonItem key="rightBarButtonItem" title="rating" id="MLA-Ga-U4Z">
+                        <barButtonItem key="rightBarButtonItem" id="MLA-Ga-U4Z">
                             <connections>
                                 <segue destination="00A-zd-6Mb" kind="popoverPresentation" popoverAnchorBarButtonItem="MLA-Ga-U4Z" id="HVX-8W-4Kl">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -1223,7 +1223,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ao-6w-bFb" customClass="CosmosView" customModule="Cosmos">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ao-6w-bFb" customClass="CosmosView" customModule="Cosmos">
                                                     <rect key="frame" x="152" y="37" width="170" height="30"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <userDefinedRuntimeAttributes>
