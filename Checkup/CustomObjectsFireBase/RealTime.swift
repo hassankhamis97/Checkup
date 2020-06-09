@@ -47,7 +47,7 @@ class RealTime {
             if authResult != nil {
                 
                 // add lab to user firestore
-                self.addLabToFireStore(username: name, id: authResult?.user.uid ?? "0x", photo: image)
+                self.addLabBranchToFireStore(username: name, id: authResult?.user.uid ?? "0x", photo: image)
                 
                 // add lab to user Auth
                 let labBranchObj = Branch(email: email, password: "123456789Iti", image: image, phone: phone, isAvailableFromHome: isFromHome, timeFrom: timeFrom, timeTo: timeTo, holidays: holidays, FireBaseId: authResult?.user.uid ?? "0x", LabId: labId, address: address, rating: rating, governId: governId)
@@ -74,6 +74,10 @@ class RealTime {
     func addLabToFireStore(username: String, id: String, photo: String){
         Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": photo , "type": 4 ], merge: true)
     }
+    
+    func addLabBranchToFireStore(username: String, id: String, photo: String){
+          Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": photo , "type": 3 ], merge: true)
+      }
     
     func saveLabToDB(labObj: Laboratory) {
         
