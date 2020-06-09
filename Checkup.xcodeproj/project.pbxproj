@@ -71,7 +71,6 @@
 		4E15ACEA24718279004418B1 /* GetRequestsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACE924718279004418B1 /* GetRequestsContract.swift */; };
 		4E15ACEC247187E3004418B1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACEB247187E3004418B1 /* Request.swift */; };
 		4E15ACEE24718EDF004418B1 /* GetRequestResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACED24718EDF004418B1 /* GetRequestResponseExtension.swift */; };
-		4E1C3FAA2489CFEA0016A555 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1C3FA92489CFEA0016A555 /* About.storyboard */; };
 		4E1FBE36247E1CFB00C463D5 /* ChatStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FBE35247E1CFB00C463D5 /* ChatStatus.swift */; };
 		4E206DE8246EE3E3007C401D /* TestCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E206DE7246EE3E3007C401D /* TestCollectionTests.swift */; };
 		4E206DEB246EE3FE007C401D /* LabCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E206DEA246EE3FE007C401D /* LabCollectionTests.swift */; };
@@ -266,6 +265,7 @@
 		CC1E7C2F24812E8000039693 /* UserChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C2E24812E8000039693 /* UserChat.swift */; };
 		CC1E7C3124814C6D00039693 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C3024814C6D00039693 /* UserRealm.swift */; };
 		CC1E7C322481656A00039693 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1E7C342481656A00039693 /* More.storyboard */; };
+		CC212ECF248FC5FE00639365 /* MainAboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC212ECE248FC5FE00639365 /* MainAboutTableViewController.swift */; };
 		CC298B1424740A04001DEAE5 /* ExtesnionMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */; };
 		CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */; };
 		CC36EA792487CD460067568A /* Precautions .storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC36EA7B2487CD460067568A /* Precautions .storyboard */; };
@@ -320,6 +320,8 @@
 		CCDF8BBF24713DF900F56B2D /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF8BBE24713DF900F56B2D /* Annotation.swift */; };
 		CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */; };
 		CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */; };
+		CCF82E3D248FE0AD0019A72C /* TermsOfUseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF82E3C248FE0AD0019A72C /* TermsOfUseTableViewController.swift */; };
+		CCF82E3E248FE8000019A72C /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF82E40248FE8000019A72C /* About.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -404,7 +406,6 @@
 		4E15ACE924718279004418B1 /* GetRequestsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestsContract.swift; sourceTree = "<group>"; };
 		4E15ACEB247187E3004418B1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		4E15ACED24718EDF004418B1 /* GetRequestResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestResponseExtension.swift; sourceTree = "<group>"; };
-		4E1C3FA92489CFEA0016A555 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		4E1FBE35247E1CFB00C463D5 /* ChatStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStatus.swift; sourceTree = "<group>"; };
 		4E206DE7246EE3E3007C401D /* TestCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionTests.swift; sourceTree = "<group>"; };
 		4E206DEA246EE3FE007C401D /* LabCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabCollectionTests.swift; sourceTree = "<group>"; };
@@ -616,6 +617,7 @@
 		CC1E7C2E24812E8000039693 /* UserChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChat.swift; sourceTree = "<group>"; };
 		CC1E7C3024814C6D00039693 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
 		CC1E7C332481656A00039693 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/More.storyboard; sourceTree = "<group>"; };
+		CC212ECE248FC5FE00639365 /* MainAboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAboutTableViewController.swift; sourceTree = "<group>"; };
 		CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtesnionMoreView.swift; sourceTree = "<group>"; };
 		CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
 		CC36EA7A2487CD460067568A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Precautions .storyboard"; sourceTree = "<group>"; };
@@ -675,6 +677,9 @@
 		CCDF8BBE24713DF900F56B2D /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		CCF82E3C248FE0AD0019A72C /* TermsOfUseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseTableViewController.swift; sourceTree = "<group>"; };
+		CCF82E3F248FE8000019A72C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/About.storyboard; sourceTree = "<group>"; };
+		CCF82E42248FE8070019A72C /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/About.strings; sourceTree = "<group>"; };
 		DBCCD7FDD5A7B2E6D89A74DD /* Pods-Checkup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.release.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.release.xcconfig"; sourceTree = "<group>"; };
 		DD8207D23F35EF388509225D /* Pods-Checkup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.debug.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1128,7 +1133,7 @@
 		4E22F92F243E6E780090693C /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				4E1C3FA92489CFEA0016A555 /* About.storyboard */,
+				CCF82E40248FE8000019A72C /* About.storyboard */,
 				A3BC0857247D91D500D98A09 /* Login.storyboard */,
 				4E432F082464F6E000D1CACA /* History.storyboard */,
 				4E22F902243E6E6C0090693C /* Main.storyboard */,
@@ -1202,6 +1207,8 @@
 			children = (
 				4E2D6CC6248ADEC000FADA05 /* AboutTableViewController.swift */,
 				4E2D6CC7248ADEC000FADA05 /* AboutViewController.swift */,
+				CCF82E3C248FE0AD0019A72C /* TermsOfUseTableViewController.swift */,
+				CC212ECE248FC5FE00639365 /* MainAboutTableViewController.swift */,
 				4E2D6CC8248ADEC000FADA05 /* Cell */,
 				4E2D6CCA248ADEC000FADA05 /* Extension */,
 			);
@@ -2503,7 +2510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EE7EA2B246AD3B900BF434F /* SenderImageTableViewCell.xib in Resources */,
-				4E1C3FAA2489CFEA0016A555 /* About.storyboard in Resources */,
+				CCF82E3E248FE8000019A72C /* About.storyboard in Resources */,
 				4EDADECA246A1FF20069B0E5 /* RecievedImageTableViewCell.xib in Resources */,
 				4E22F90C243E6E6D0090693C /* LaunchScreen.storyboard in Resources */,
 				4E45420A2479C54800955FD8 /* Chat.storyboard in Resources */,
@@ -2638,6 +2645,7 @@
 				4E15ACE72471818B004418B1 /* GetRequestsPresenter.swift in Sources */,
 				4EA875152480044B00E95B30 /* SendMessagePresenter.swift in Sources */,
 				03C1DD2C247858B800D2A008 /* BranchDescContract.swift in Sources */,
+				CC212ECF248FC5FE00639365 /* MainAboutTableViewController.swift in Sources */,
 				03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */,
 				CC80B9DE2477350C00521508 /* StatisticsContract.swift in Sources */,
 				4E3C1F462476A41900D9761D /* GetLabsContract.swift in Sources */,
@@ -2690,6 +2698,7 @@
 				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
 				4EB022E524882AFC00965345 /* CompressImage.swift in Sources */,
 				CC157CA624700F6C001AE122 /* ProfilePresenter.swift in Sources */,
+				CCF82E3D248FE0AD0019A72C /* TermsOfUseTableViewController.swift in Sources */,
 				4E4EA63A2470117F00309CAF /* NewRequestContract.swift in Sources */,
 				032AB5CF24820F110021DE4F /* ReviewsTableViewCell.swift in Sources */,
 				A39BF975246DA047003500A8 /* ImgTableViewCell.swift in Sources */,
@@ -3072,6 +3081,15 @@
 				CC799DEF247BC1DA00F6BAAD /* ar */,
 			);
 			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		CCF82E40248FE8000019A72C /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCF82E3F248FE8000019A72C /* Base */,
+				CCF82E42248FE8070019A72C /* ar */,
+			);
+			name = About.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -124,7 +124,7 @@ class MoreTableViewController: UITableViewController {
         
         
         
-        if indexPath.row==5{
+        if indexPath.row==7{
             do{
                try Auth.auth().signOut()
                 let vc = storyboard?.instantiateViewController(withIdentifier: "homeSVC") as! HomeViewController
