@@ -41,17 +41,17 @@ class RealTime {
     
     // Auth - fireStore type 3 - API
     //(email, image, phone, isFromHome: Bool, time to&from, holiday, labId, address, rating, GovernId)
-    func addBranch(email: String, phone: String, isFromHome: Bool, timeFrom: String, timeTo: String, holidays : String, address: Address, rating: String, governId: String){
+    func addBranch(name: String, email: String, labId: Int64, image: String, phone: String, isFromHome: Bool, timeFrom: String, timeTo: String, holidays : String, address: Address, rating: Double, governId: Int64){
         
         Auth.auth().createUser(withEmail: email, password: "123456789Iti"){ authResult, error in
             if authResult != nil {
                 
                 // add lab to user firestore
-//                self.addLabToFireStore(username: name, id: authResult?.user.uid ?? "0x", photo: image)
+                self.addLabToFireStore(username: name, id: authResult?.user.uid ?? "0x", photo: image)
                 
                 // add lab to user Auth
-//                let labObj = Laboratory(id: authResult?.user.uid ?? "0x", name: name, formalReferencePathId: "", specialTests: "", image: image, branches: ["",""])
-//                self.saveLabToDB(labObj: labObj)
+                let labBranchObj = Branch(email: email, password: "123456789Iti", image: image, phone: phone, isAvailableFromHome: isFromHome, timeFrom: timeFrom, timeTo: timeTo, holidays: holidays, FireBaseId: authResult?.user.uid ?? "0x", LabId: labId, address: address, rating: rating, governId: governId)
+                self.saveLabBranchToDB(labBranchObj: labBranchObj)
             }
         }
         
@@ -79,6 +79,20 @@ class RealTime {
         
         let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewLaboratory"
         let labDic = try! DictionaryEncoder.encode(labObj)
+        //            let urlString = "http://192.168.1.9:3000/api/AnalysisService/AddNewAnalysis"
+        Alamofire.request(urlString, method: .post, parameters: labDic,encoding: JSONEncoding.default, headers: nil).responseString {
+            response in
+            switch response.result {
+            case .success:break
+            case .failure(_): break
+            }
+        }
+    }
+    
+    func saveLabBranchToDB(labBranchObj: Branch) {
+        
+        let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewLaboratory"
+        let labDic = try! DictionaryEncoder.encode(labBranchObj)
         //            let urlString = "http://192.168.1.9:3000/api/AnalysisService/AddNewAnalysis"
         Alamofire.request(urlString, method: .post, parameters: labDic,encoding: JSONEncoding.default, headers: nil).responseString {
             response in

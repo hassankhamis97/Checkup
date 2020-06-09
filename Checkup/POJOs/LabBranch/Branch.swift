@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Branch {
+struct Branch : Codable{
     var email : String
     var password : String
     var image : String
