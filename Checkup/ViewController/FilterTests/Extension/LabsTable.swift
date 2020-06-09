@@ -50,7 +50,7 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return labsList.count + 1
+        return labsList.count 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,19 +99,45 @@ extension FilterTestViewController : UITableViewDataSource,UITableViewDelegate {
     func changeSelectedLab(index: Int, sender: UIButton) {
         sender.pulsate()
         labsList[index].isChecked = !labsList[index].isChecked!
+        if index == 0 {
+            if labsList[index].isChecked == true {
+            for i in 1..<labsList.count {
+                testFilter?.labIds?.append(labsList[i].id!)
+                labsList[i].isChecked = true
+            }
+            }
+            else {
+                for i in 1..<labsList.count {
+                    testFilter?.labIds?.removeAll()
+                    labsList[i].isChecked = false
+                }
+            }
+            tableViewOutlet.reloadData()
+        }
+        else {
         if labsList[index].isChecked! {
             testFilter?.labIds?.append(labsList[index].id!)
             sender.setImage(UIImage(named: "checked"), for: .normal)
+            if testFilter!.labIds!.count == labsList.count - 1 {
+                labsList[0].isChecked = true
+                tableViewOutlet.reloadData()
+            }
         }
         else {
             for i in 0..<testFilter!.labIds!.count {
+                
                 if labsList[index].id! == testFilter!.labIds![i]{
                     testFilter?.labIds?.remove(at: i)
                     sender.setImage(UIImage(named: "unchecked"), for: .normal)
+                    if testFilter!.labIds!.count == labsList.count - 2 {
+                        labsList[0].isChecked = false
+                        tableViewOutlet.reloadData()
+                    }
                     break
                 }
                 //                testFilter?.labIds?.remove(i)
             }
+        }
         }
 //        tableViewOutlet.reloadData()
     }

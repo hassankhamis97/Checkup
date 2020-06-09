@@ -71,6 +71,7 @@
 		4E15ACEA24718279004418B1 /* GetRequestsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACE924718279004418B1 /* GetRequestsContract.swift */; };
 		4E15ACEC247187E3004418B1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACEB247187E3004418B1 /* Request.swift */; };
 		4E15ACEE24718EDF004418B1 /* GetRequestResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACED24718EDF004418B1 /* GetRequestResponseExtension.swift */; };
+		4E177215248FF73B0051CB81 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E177214248FF73B0051CB81 /* Branch.swift */; };
 		4E1C3FAA2489CFEA0016A555 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1C3FA92489CFEA0016A555 /* About.storyboard */; };
 		4E1FBE36247E1CFB00C463D5 /* ChatStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FBE35247E1CFB00C463D5 /* ChatStatus.swift */; };
 		4E206DE8246EE3E3007C401D /* TestCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E206DE7246EE3E3007C401D /* TestCollectionTests.swift */; };
@@ -405,6 +406,7 @@
 		4E15ACE924718279004418B1 /* GetRequestsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestsContract.swift; sourceTree = "<group>"; };
 		4E15ACEB247187E3004418B1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		4E15ACED24718EDF004418B1 /* GetRequestResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestResponseExtension.swift; sourceTree = "<group>"; };
+		4E177214248FF73B0051CB81 /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		4E1C3FA92489CFEA0016A555 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		4E1FBE35247E1CFB00C463D5 /* ChatStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStatus.swift; sourceTree = "<group>"; };
 		4E206DE7246EE3E3007C401D /* TestCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionTests.swift; sourceTree = "<group>"; };
@@ -1046,6 +1048,7 @@
 				4E3C1F3D2476919800D9761D /* MainBranch.swift */,
 				4EF1A1EC2476F00100597A15 /* Branches.swift */,
 				035A0492247DFBA90017A885 /* LabDescriptionParams.swift */,
+				4E177214248FF73B0051CB81 /* Branch.swift */,
 			);
 			path = LabBranch;
 			sourceTree = "<group>";
@@ -2764,6 +2767,7 @@
 				4EC1626A246F36930053F581 /* ConvertToDictionary.swift in Sources */,
 				03FDA1A12470CAB10084C4AA /* EighthStaticTableViewCell.swift in Sources */,
 				4EDADEC9246A1FF20069B0E5 /* RecievedImageTableViewCell.swift in Sources */,
+				4E177215248FF73B0051CB81 /* Branch.swift in Sources */,
 				4EC8240C246FDD0A0075C894 /* ReqPopUpFromHomeViewController.swift in Sources */,
 				4EA8750F247FCCEA00E95B30 /* Message.swift in Sources */,
 				033568D5248B14D900D4B9D3 /* NoteTableViewCell.swift in Sources */,
