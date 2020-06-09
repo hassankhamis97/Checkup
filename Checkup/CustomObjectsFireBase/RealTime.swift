@@ -50,7 +50,7 @@ class RealTime {
                 self.addLabBranchToFireStore(username: name, id: authResult?.user.uid ?? "0x", photo: image)
                 
                 // add lab to user Auth
-                let labBranchObj = Branch(email: email, password: "123456789Iti", image: image, phone: phone, isAvailableFromHome: isFromHome, timeFrom: timeFrom, timeTo: timeTo, holidays: holidays, FireBaseId: authResult?.user.uid ?? "0x", LabId: labId, address: address, rating: rating, governId: governId)
+                let labBranchObj = Branch(name: name, email: email, password: "123456789Iti", image: image, phone: phone, isAvailableFromHome: isFromHome, timeFrom: timeFrom, timeTo: timeTo, holidays: holidays, FireBaseId: authResult?.user.uid ?? "0x", LabId: labId, address: address, rating: rating, governId: governId)
                 self.saveLabBranchToDB(labBranchObj: labBranchObj)
             }
         }

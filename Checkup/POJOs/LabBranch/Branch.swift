@@ -8,6 +8,7 @@
 
 import Foundation
 struct Branch : Codable{
+    var name: String
     var email : String
     var password : String
     var image : String
