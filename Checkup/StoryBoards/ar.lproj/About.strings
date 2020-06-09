@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "Meet our Team"; ObjectID = "4Kx-nZ-cAr"; */
-"4Kx-nZ-cAr.text" = "تعرف على فرق العمل ";
+"4Kx-nZ-cAr.text" = "تعرف على فريق العمل ";
 
 /* Class = "UILabel"; text = "Checkup application allows you to send requests to laboratories to visit home and take a sample from home, but you must follow to the following instructions:"; ObjectID = "CbU-h0-3Zm"; */
 "CbU-h0-3Zm.text" = "تطبيق (Checkup)يسمح لك بإرسال طلبات زيارة منزليه للمعامل لأخذ العينة من المنزل, و لكن من فضلك اتبع التعليمات التاليه :";
@@ -12,16 +12,16 @@
 "Le1-Yb-oAZ.text" = "Checkup - للخدمات الطبيه";
 
 /* Class = "UILabel"; text = "Description"; ObjectID = "Pbb-sU-GtS"; */
-"Pbb-sU-GtS.text" = "الوصف";
+"Pbb-sU-GtS.text" = "نبذة عن checkup";
 
 /* Class = "UILabel"; text = "About Us"; ObjectID = "R7e-EA-YPY"; */
 "R7e-EA-YPY.text" = "من نحن";
 
 /* Class = "UILabel"; text = "Description"; ObjectID = "VNl-c1-VaC"; */
-"VNl-c1-VaC.text" = "الوصف";
+"VNl-c1-VaC.text" = "نبذة عن checkup";
 
 /* Class = "UILabel"; text = "Meet our Team"; ObjectID = "Y6r-IV-0tg"; */
-"Y6r-IV-0tg.text" = "تعرف على فرق العمل";
+"Y6r-IV-0tg.text" = "تعرف على فريق العمل";
 
 /* Class = "UILabel"; text = "1-You must complete your data on the profile page"; ObjectID = "ZEx-WL-d3V"; */
 "ZEx-WL-d3V.text" = "١-يجب إكمال البيانات الخاصة بك في الصفحة الشخصيه ";
