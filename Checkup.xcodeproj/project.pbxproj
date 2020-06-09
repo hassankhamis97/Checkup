@@ -227,7 +227,6 @@
 		A39BF976246DA047003500A8 /* ImgTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39BF974246DA047003500A8 /* ImgTableViewCell.xib */; };
 		A39BF97B246DA47E003500A8 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BF979246DA47E003500A8 /* DataTableViewCell.swift */; };
 		A39BF97C246DA47E003500A8 /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39BF97A246DA47E003500A8 /* DataTableViewCell.xib */; };
-		A3B75D5624786EC900C95139 /* HomeLabRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B75D5524786EC900C95139 /* HomeLabRealm.swift */; };
 		A3BC0855247D91D500D98A09 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BC0857247D91D500D98A09 /* Login.storyboard */; };
 		A3C421D92481FA1600CCF8B6 /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */; };
 		A3C5F02F2472BDA80069413F /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5F02E2472BDA80069413F /* SignupModel.swift */; };
@@ -268,6 +267,7 @@
 		CC1E7C2F24812E8000039693 /* UserChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C2E24812E8000039693 /* UserChat.swift */; };
 		CC1E7C3124814C6D00039693 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E7C3024814C6D00039693 /* UserRealm.swift */; };
 		CC1E7C322481656A00039693 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1E7C342481656A00039693 /* More.storyboard */; };
+		CC212ECF248FC5FE00639365 /* MainAboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC212ECE248FC5FE00639365 /* MainAboutTableViewController.swift */; };
 		CC298B1424740A04001DEAE5 /* ExtesnionMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */; };
 		CC2A2D82245C4DAB00C311B7 /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */; };
 		CC36EA792487CD460067568A /* Precautions .storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC36EA7B2487CD460067568A /* Precautions .storyboard */; };
@@ -322,6 +322,8 @@
 		CCDF8BBF24713DF900F56B2D /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF8BBE24713DF900F56B2D /* Annotation.swift */; };
 		CCE4D2B52457069100EB8ADC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */; };
 		CCE4D2BF24572EA600EB8ADC /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */; };
+		CCF82E3D248FE0AD0019A72C /* TermsOfUseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF82E3C248FE0AD0019A72C /* TermsOfUseTableViewController.swift */; };
+		CCF82E3E248FE8000019A72C /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF82E40248FE8000019A72C /* About.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -575,7 +577,6 @@
 		A39BF974246DA047003500A8 /* ImgTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImgTableViewCell.xib; sourceTree = "<group>"; };
 		A39BF979246DA47E003500A8 /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 		A39BF97A246DA47E003500A8 /* DataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataTableViewCell.xib; sourceTree = "<group>"; };
-		A3B75D5524786EC900C95139 /* HomeLabRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLabRealm.swift; sourceTree = "<group>"; };
 		A3BC0858247D91D800D98A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		A3C421D82481FA1600CCF8B6 /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
 		A3C5F02E2472BDA80069413F /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
@@ -620,6 +621,7 @@
 		CC1E7C2E24812E8000039693 /* UserChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChat.swift; sourceTree = "<group>"; };
 		CC1E7C3024814C6D00039693 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
 		CC1E7C332481656A00039693 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/More.storyboard; sourceTree = "<group>"; };
+		CC212ECE248FC5FE00639365 /* MainAboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAboutTableViewController.swift; sourceTree = "<group>"; };
 		CC298B1324740A04001DEAE5 /* ExtesnionMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtesnionMoreView.swift; sourceTree = "<group>"; };
 		CC2A2D81245C4DAB00C311B7 /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
 		CC36EA7A2487CD460067568A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Precautions .storyboard"; sourceTree = "<group>"; };
@@ -679,6 +681,9 @@
 		CCDF8BBE24713DF900F56B2D /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		CCE4D2B42457069100EB8ADC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		CCE4D2BE24572EA600EB8ADC /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		CCF82E3C248FE0AD0019A72C /* TermsOfUseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseTableViewController.swift; sourceTree = "<group>"; };
+		CCF82E3F248FE8000019A72C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/About.storyboard; sourceTree = "<group>"; };
+		CCF82E42248FE8070019A72C /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/About.strings; sourceTree = "<group>"; };
 		DBCCD7FDD5A7B2E6D89A74DD /* Pods-Checkup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.release.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.release.xcconfig"; sourceTree = "<group>"; };
 		DD8207D23F35EF388509225D /* Pods-Checkup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkup.debug.xcconfig"; path = "Target Support Files/Pods-Checkup/Pods-Checkup.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1027,7 +1032,6 @@
 				4E206DED246EE702007C401D /* Laboratory.swift */,
 				4E3C1F472476A65E00D9761D /* HomeLab.swift */,
 				4EC1FD3B2472E6D90029C499 /* FilterLab.swift */,
-				A3B75D5524786EC900C95139 /* HomeLabRealm.swift */,
 				03380CD9247F245C0055717E /* FilterGovern.swift */,
 			);
 			path = Laboratory;
@@ -1134,7 +1138,7 @@
 		4E22F92F243E6E780090693C /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				4E1C3FA92489CFEA0016A555 /* About.storyboard */,
+				CCF82E40248FE8000019A72C /* About.storyboard */,
 				A3BC0857247D91D500D98A09 /* Login.storyboard */,
 				4E432F082464F6E000D1CACA /* History.storyboard */,
 				4E22F902243E6E6C0090693C /* Main.storyboard */,
@@ -1208,6 +1212,8 @@
 			children = (
 				4E2D6CC6248ADEC000FADA05 /* AboutTableViewController.swift */,
 				4E2D6CC7248ADEC000FADA05 /* AboutViewController.swift */,
+				CCF82E3C248FE0AD0019A72C /* TermsOfUseTableViewController.swift */,
+				CC212ECE248FC5FE00639365 /* MainAboutTableViewController.swift */,
 				4E2D6CC8248ADEC000FADA05 /* Cell */,
 				4E2D6CCA248ADEC000FADA05 /* Extension */,
 			);
@@ -2509,7 +2515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EE7EA2B246AD3B900BF434F /* SenderImageTableViewCell.xib in Resources */,
-				4E1C3FAA2489CFEA0016A555 /* About.storyboard in Resources */,
+				CCF82E3E248FE8000019A72C /* About.storyboard in Resources */,
 				4EDADECA246A1FF20069B0E5 /* RecievedImageTableViewCell.xib in Resources */,
 				4E22F90C243E6E6D0090693C /* LaunchScreen.storyboard in Resources */,
 				4E45420A2479C54800955FD8 /* Chat.storyboard in Resources */,
@@ -2644,6 +2650,7 @@
 				4E15ACE72471818B004418B1 /* GetRequestsPresenter.swift in Sources */,
 				4EA875152480044B00E95B30 /* SendMessagePresenter.swift in Sources */,
 				03C1DD2C247858B800D2A008 /* BranchDescContract.swift in Sources */,
+				CC212ECF248FC5FE00639365 /* MainAboutTableViewController.swift in Sources */,
 				03FDA18B247035F20084C4AA /* PdfDescViewController.swift in Sources */,
 				CC80B9DE2477350C00521508 /* StatisticsContract.swift in Sources */,
 				4E3C1F462476A41900D9761D /* GetLabsContract.swift in Sources */,
@@ -2696,6 +2703,7 @@
 				CCCDA052246AF81F005549EA /* RequestsTableViewController.swift in Sources */,
 				4EB022E524882AFC00965345 /* CompressImage.swift in Sources */,
 				CC157CA624700F6C001AE122 /* ProfilePresenter.swift in Sources */,
+				CCF82E3D248FE0AD0019A72C /* TermsOfUseTableViewController.swift in Sources */,
 				4E4EA63A2470117F00309CAF /* NewRequestContract.swift in Sources */,
 				032AB5CF24820F110021DE4F /* ReviewsTableViewCell.swift in Sources */,
 				A39BF975246DA047003500A8 /* ImgTableViewCell.swift in Sources */,
@@ -2819,7 +2827,6 @@
 				A33CA62B246D3F610014CF6B /* UserCustomTableViewCell.swift in Sources */,
 				4EC1FD3A2472E2530029C499 /* SmallDescLabTableViewCell.swift in Sources */,
 				CC76172D24732A050084CC6E /* ImageModel.swift in Sources */,
-				A3B75D5624786EC900C95139 /* HomeLabRealm.swift in Sources */,
 				4EA87513247FEE2000E95B30 /* AllMessages.swift in Sources */,
 				033C186B248BF4F2009D8038 /* RatingModel.swift in Sources */,
 				4E432F132464F6EF00D1CACA /* HistoryTableViewCell.swift in Sources */,
@@ -3080,6 +3087,15 @@
 				CC799DEF247BC1DA00F6BAAD /* ar */,
 			);
 			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		CCF82E40248FE8000019A72C /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCF82E3F248FE8000019A72C /* Base */,
+				CCF82E42248FE8070019A72C /* ar */,
+			);
+			name = About.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Meet our Team"; ObjectID = "4Kx-nZ-cAr"; */
+"4Kx-nZ-cAr.text" = "تعرف على فريق العمل ";
+
+/* Class = "UILabel"; text = "Checkup application allows you to send requests to laboratories to visit home and take a sample from home, but you must follow to the following instructions:"; ObjectID = "CbU-h0-3Zm"; */
+"CbU-h0-3Zm.text" = "تطبيق (Checkup)يسمح لك بإرسال طلبات زيارة منزليه للمعامل لأخذ العينة من المنزل, و لكن من فضلك اتبع التعليمات التاليه :";
+
+/* Class = "UILabel"; text = "Checkup project is about establishing connection between user and medical\nlaboratories across Egypt's governorates. Throughout the application users have the\nability to make request to communicate with their desirable laboratory. Moreover,\nthey have the ability to choose whether they want a home visit request or an ordinary\nrequest.\nIn case of home visit request, users have to upload an image or the name of the\nrequired test, all they have to do is to insert their home location, date and time for\ntaking sample. After that, request will be sent to the laboratory then a response will\nbe received whether by confirmation or rejection.\nIn case of confirmation, the laboratory will send the required precautions and the\nprice of the test through the application then will send an employee to take the\nsample from home. lastly the result will be sent via the application and will be saved\naccordingly so that users can access their results effortlessly.\nIn case of ordinary request, the same process of home visit request will occur apart\nfrom inserting the location. Afterwards, the lab will reply with price and some\nprecautions, later on results will be sent.\nOne of the Advantages is that the application provides a special service, users can\nchat with the lab whenever they want another advantage is that HbA1-c can be\ndetected from results and statistics will be made to calculate diabetes percentage.\nA significant feature is provided by the application is that users can navigate through\nit and filter the labs according to the nearest location or governorates."; ObjectID = "GbG-ow-U3i"; */
+"GbG-ow-U3i.text" = "Checkup project is about establishing connection between user and medical\nlaboratories across Egypt's governorates. Throughout the application users have the\nability to make request to communicate with their desirable laboratory. Moreover,\nthey have the ability to choose whether they want a home visit request or an ordinary\nrequest.\nIn case of home visit request, users have to upload an image or the name of the\nrequired test, all they have to do is to insert their home location, date and time for\ntaking sample. After that, request will be sent to the laboratory then a response will\nbe received whether by confirmation or rejection.\nIn case of confirmation, the laboratory will send the required precautions and the\nprice of the test through the application then will send an employee to take the\nsample from home. lastly the result will be sent via the application and will be saved\naccordingly so that users can access their results effortlessly.\nIn case of ordinary request, the same process of home visit request will occur apart\nfrom inserting the location. Afterwards, the lab will reply with price and some\nprecautions, later on results will be sent.\nOne of the Advantages is that the application provides a special service, users can\nchat with the lab whenever they want another advantage is that HbA1-c can be\ndetected from results and statistics will be made to calculate diabetes percentage.\nA significant feature is provided by the application is that users can navigate through\nit and filter the labs according to the nearest location or governorates.";
+
+/* Class = "UILabel"; text = "Checkup - Medical Services"; ObjectID = "Le1-Yb-oAZ"; */
+"Le1-Yb-oAZ.text" = "Checkup - للخدمات الطبيه";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "Pbb-sU-GtS"; */
+"Pbb-sU-GtS.text" = "نبذة عن checkup";
+
+/* Class = "UILabel"; text = "About Us"; ObjectID = "R7e-EA-YPY"; */
+"R7e-EA-YPY.text" = "من نحن";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "VNl-c1-VaC"; */
+"VNl-c1-VaC.text" = "نبذة عن checkup";
+
+/* Class = "UILabel"; text = "Meet our Team"; ObjectID = "Y6r-IV-0tg"; */
+"Y6r-IV-0tg.text" = "تعرف على فريق العمل";
+
+/* Class = "UILabel"; text = "1-You must complete your data on the profile page"; ObjectID = "ZEx-WL-d3V"; */
+"ZEx-WL-d3V.text" = "١-يجب إكمال البيانات الخاصة بك في الصفحة الشخصيه ";
+
+/* Class = "UILabel"; text = "2-All of medical questions must be answered on a health sheet page"; ObjectID = "cIk-6a-rc6"; */
+"cIk-6a-rc6.text" = "٢-يجب الإجابة على جميع الأسئلة الخاصة بالبيانات الشخصية الطبيه ";
+
+/* Class = "UILabel"; text = "Checkup project is about establishing connection between user and medical\nlaboratories across Egypt's governorates. Throughout the application users have the\nability to make request to communicate with their desirable laboratory. Moreover,\nthey have the ability to choose whether they want a home visit request or an ordinary\nrequest.\nIn case of home visit request, users have to upload an image or the name of the\nrequired test, all they have to do is to insert their home location, date and time for\ntaking sample. After that, request will be sent to the laboratory then a response will\nbe received whether by confirmation or rejection.\nIn case of confirmation, the laboratory will send the required precautions and the\nprice of the test through the application then will send an employee to take the\nsample from home. lastly the result will be sent via the application and will be saved\naccordingly so that users can access their results effortlessly.\nIn case of ordinary request, the same process of home visit request will occur apart\nfrom inserting the location. Afterwards, the lab will reply with price and some\nprecautions, later on results will be sent.\nOne of the Advantages is that the application provides a special service, users can\nchat with the lab whenever they want another advantage is that HbA1-c can be\ndetected from results and statistics will be made to calculate diabetes percentage.\nA significant feature is provided by the application is that users can navigate through\nit and filter the labs according to the nearest location or governorates."; ObjectID = "dWl-nU-qAZ"; */
+"dWl-nU-qAZ.text" = "Checkup project is about establishing connection between user and medical\nlaboratories across Egypt's governorates. Throughout the application users have the\nability to make request to communicate with their desirable laboratory. Moreover,\nthey have the ability to choose whether they want a home visit request or an ordinary\nrequest.\nIn case of home visit request, users have to upload an image or the name of the\nrequired test, all they have to do is to insert their home location, date and time for\ntaking sample. After that, request will be sent to the laboratory then a response will\nbe received whether by confirmation or rejection.\nIn case of confirmation, the laboratory will send the required precautions and the\nprice of the test through the application then will send an employee to take the\nsample from home. lastly the result will be sent via the application and will be saved\naccordingly so that users can access their results effortlessly.\nIn case of ordinary request, the same process of home visit request will occur apart\nfrom inserting the location. Afterwards, the lab will reply with price and some\nprecautions, later on results will be sent.\nOne of the Advantages is that the application provides a special service, users can\nchat with the lab whenever they want another advantage is that HbA1-c can be\ndetected from results and statistics will be made to calculate diabetes percentage.\nA significant feature is provided by the application is that users can navigate through\nit and filter the labs according to the nearest location or governorates.";
+
+/* Class = "UINavigationItem"; title = "About Us"; ObjectID = "gUW-Iv-rKa"; */
+"gUW-Iv-rKa.title" = "من نحن";
+
+/* Class = "UILabel"; text = "Terms Of Use"; ObjectID = "jpf-O7-l4x"; */
+"jpf-O7-l4x.text" = "سياسة الإستخدام";
+
+/* Class = "UILabel"; text = "3-Checkup application allows you to cancel the home visit request three hours before the time agreed with the laboratory only ,If the request is canceled less than 3 hours before the agreed time, you must contact personally with the laboratory"; ObjectID = "py0-aJ-3dE"; */
+"py0-aJ-3dE.text" = "٣-يسمح لك تطبيق (Checkup) بإلغاء طلب الزيارة المنزليه و لكن ذلك يكون قبل ثلاث ساعات من الموعد المتفق عليه مع المعمل , في حالة إلغاء الطلب قبل الموعد المتفق عليه بـ اقل من ثلاث ساعات ,يجب عليك التواصل مع المعمل مباشرة و بشكل شخصي";
+
+/* Class = "UINavigationItem"; title = "Terms Of Use"; ObjectID = "tlL-bK-dpf"; */
+"tlL-bK-dpf.title" = "سياسة الإستخدام";
+
+/* Class = "UILabel"; text = "Checkup - Medical Services"; ObjectID = "vgN-9u-t6Q"; */
+"vgN-9u-t6Q.text" = "Checkup - Medical Services";
