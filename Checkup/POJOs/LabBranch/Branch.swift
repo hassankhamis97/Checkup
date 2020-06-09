@@ -18,7 +18,7 @@ struct Branch {
     var holidays : String
     var FireBaseId : String
     var LabId : Int64
-    var addressId : Int64
+    var address : Address
     var rating : Double
     var governId : Int64
 }
