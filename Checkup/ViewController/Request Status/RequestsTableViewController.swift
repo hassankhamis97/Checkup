@@ -229,7 +229,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 115
+        return 100
         
     }
     func formatDate(myArr : [String]) -> [HistoryObject] {
