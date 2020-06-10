@@ -9,7 +9,8 @@
 import UIKit
 import StepIndicator
 import FirebaseAuth
-class ResultDetailsTableViewController: UITableViewController {
+class ResultDetailsTableViewController: UITableViewController{
+    
 
     @IBOutlet var progressBarView: StepIndicatorView!
     
@@ -19,6 +20,11 @@ class ResultDetailsTableViewController: UITableViewController {
     @IBOutlet var descriptionTextView: UITextView!
     var testID :String!
     var testObj : Test!
+    
+    var pdfCounter : Int!
+    var pdfAndOpenDict =  [String : Bool]()
+    var dict = [Int64 : Dictionary<String, Any>]()
+    var idAndDict = [Int64:Dictionary<String, Any>]()
     override func viewWillAppear(_ animated: Bool) {
         if(Auth.auth().currentUser?.uid == nil)
         {
@@ -30,17 +36,16 @@ class ResultDetailsTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        pdfCounter = 0
         if Locale.current.languageCode == "ar"
         {
             progressBarView.direction = StepIndicatorViewDirection(rawValue: 1)!
         }
         let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
         requesStatusPresenter.getRequest(testId: testID)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       
+        
+        
     }
     @IBAction func showDetailsAction(_ sender: UIButton) {
     }
@@ -71,59 +76,66 @@ class ResultDetailsTableViewController: UITableViewController {
         return tableView.rowHeight
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    func saveDataInUserDefault(counter : Int) {
+        UserDefaults.standard.set(counter, forKey: "pdfCounter")
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func retrieveDataFromUserDefault() -> Int {
+      return  UserDefaults.standard.integer(forKey: "pdfCounter")
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+ /*
+    func saveDic(dictionary : Dictionary<Int64, Any>) {
+        UserDefaults.standard.set(dictionary , forKey: "dictionary")
+     }
+     
+  func retrieveDic() -> Dictionary<Int64,Any>{
+    
+    return ((UserDefaults.standard.object(forKey: "dictionary") as? Dictionary<Int64, Any>)!)
     }
+    
     */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
+//(UserDefaults.standard.value(forKey: "dictionary") as? [Int64:Any])!
+//(UserDefaults.standard.dictionary(forKey: "dictionary") as! [Int64:Any]?)!
+
+/*
+ func saveDictionary(dict: Dictionary<Int64 , Any>, key: String){
+    
+    do {
+        let encodedData: Data = try NSKeyedArchiver.archivedData(withRootObject: dict, requiringSecureCoding: false)
+        UserDefaults.standard.set(encodedData, forKey: key)
+        
+       }catch{print(error)}
+ }
+    
+ func getDictionary(key: String) -> Dictionary<Int64,Any> {
+      let preferences = UserDefaults.standard
+      if UserDefaults.standard.object(forKey: key) != nil{
+      let decoded = UserDefaults.standard.object(forKey: key)  as! Data
+        let decodedDict = NSKeyedUnarchiver.unarchivedObject(ofClasses: Dictionary<Int64,Any>, from: <#T##Data#>)
+        //(with: decoded) as! Dictionary<Int64,Any>
+             
+      return decodedDict
+    } else {
+       let emptyDict = Dictionary<Int64,Any>()
+       return emptyDict
+    }
+ }*/
+ 
+/*
+ let contactDictionary = ["A":[Contact(name: "Annabel",phone: "000")]]
+
+ let encodedData = NSKeyedArchiver.archivedData(withRootObject: contactDictionary)
+ UserDefaults.standard.set(encodedData, forKey: "contactDictionary")
+
+ if let data = UserDefaults.standard.data(forKey: "contactDictionary") {
+     print("yep")
+     let contactDictionary2 = NSKeyedUnarchiver.unarchiveObject(with: data) as! [String : [Contact]]
+ }
+ else{
+     print("nope")
+ }
+ */
