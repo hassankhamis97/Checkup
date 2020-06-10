@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 extension StatisticsTableViewController:UIPickerViewDelegate,UIPickerViewDataSource {
      func numberOfComponents(in pickerView: UIPickerView) -> Int {
            return 1
@@ -55,6 +56,11 @@ extension StatisticsTableViewController:UIPickerViewDelegate,UIPickerViewDataSou
             }
             else{
                   yearTextField.text=yearArray[index]
+                let selectedYear = yearTextField.text
+                
+                let statisticsPresenterRef=StatisticPresenter(statisticsViewRef: self)
+                
+                statisticsPresenterRef.getSample(userId: Auth.auth().currentUser!.uid, year: selectedYear!)
             }
         }
         else{

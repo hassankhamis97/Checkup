@@ -12,5 +12,5 @@ struct UserChat:Codable {
     var id:String?
     var nickname:String?
     var photoUrl:String?
-    
+    var type: Int?
 }

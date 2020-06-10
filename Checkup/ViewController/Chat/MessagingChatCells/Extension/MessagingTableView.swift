@@ -55,6 +55,7 @@ extension MessagingChatViewController : UITableViewDelegate,UITableViewDataSourc
                             //        cell.textLabel?.text = "ay 7agaaa"
                                     // Configure the cell...
                 cell.recieverLabel.text = messages![indexPath.row].content
+            cell.recievedPersonImage.sd_setImage(with: URL(string: currentPearedUser.imgUrl!), placeholderImage: UIImage(named: "placeholder.png"))
             cell.timeLabel.text = Date().getFullDateFromTimeStamp(timeStamp: Int64(messages![indexPath.row].timestamp!) as! Int64)
                                     return cell
             }

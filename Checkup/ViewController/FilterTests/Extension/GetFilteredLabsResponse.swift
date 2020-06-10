@@ -11,6 +11,7 @@ import UIKit
 extension FilterTestViewController : IGetFilteredLabsView{
     func updateView(filterLabs: [FilterLab]) {
         self.labsList = filterLabs
+        self.labsList.insert(FilterLab(id: "0", name: "All", isChecked: false), at: 0)
         self.tableViewOutlet.reloadData()
     }
     

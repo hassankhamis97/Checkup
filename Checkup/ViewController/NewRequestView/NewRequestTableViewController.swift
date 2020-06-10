@@ -46,12 +46,13 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     var addressObj : Address!
     var user : User!
     var healthProfile : HealthProfile!
-   
+    var locale : Locale!
     @IBOutlet var saveRequestBtn: UIButton!
     @IBAction func saveNewRequestBtn(_ sender: UIButton) {
         if(checkValidation()){
             let date = Date()
             let dateFormatter = DateFormatter()
+            dateFormatter.locale = locale
             dateFormatter.dateFormat = "MMM dd, yyyy"
             let currentDate = dateFormatter.string(from: date)
             dateFormatter.dateFormat = "h:mm a"
@@ -104,6 +105,8 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         saveRequestBtn.layer.cornerRadius=10
         saveRequestBtn.layer.borderColor=UIColor.white.cgColor
         saveRequestBtn.layer.borderWidth=2
+        
+        locale = Locale(identifier: "en_US_POSIX")
     }
     
     @objc func textFieldDidChange(_ textField: SkyFloatingLabelTextFieldWithIcon) {
@@ -399,7 +402,8 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         dateTextField.inputAccessoryView=toolbar
         dateTextField.inputView=datePicker
         datePicker.datePickerMode = .date
-        
+//        let loc = Locale(identifier: "en_US_POSIX")
+//        datePicker.locale = loc
     }
     
     @objc func didTap() {
@@ -409,9 +413,11 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     }
     
     @objc func donePressed(){
-        
-        
-        let formatter=DateFormatter()
+
+        var formatter = DateFormatter()
+//        formatter.dateFormat = "MMM d, yyyy h:mm a"
+//        let loc = Locale(identifier: "en_US_POSIX")
+        formatter.locale = locale
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
         //        formatter.times
@@ -450,6 +456,8 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
         
         
         let formatter=DateFormatter()
+        
+        formatter.locale = locale
         formatter.dateStyle = .none
         formatter.timeStyle = .short
         timeTextField.text=formatter.string(from: timePicker.date)

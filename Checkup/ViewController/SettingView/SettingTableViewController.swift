@@ -46,19 +46,11 @@ class SettingTableViewController: UITableViewController {
         
         if indexPath.row==1
               {
-                  let vc = storyboard!.instantiateViewController(withIdentifier: "helpSVC ") as!HelpTableViewController
-                  navigationController?.pushViewController(vc, animated: true)
+                 let vc = storyboard!.instantiateViewController(withIdentifier: "languageSVC") as!LanguageTableViewController
+                                                          navigationController?.pushViewController(vc, animated: true)
 
               }
-        if indexPath.row==2
-              {
-                  print ("2")
-              }
-        if indexPath.row==3
-              {
-                  let vc = storyboard!.instantiateViewController(withIdentifier: "languageSVC") as!LanguageTableViewController
-                                         navigationController?.pushViewController(vc, animated: true)
-              }
+        
         
         
     

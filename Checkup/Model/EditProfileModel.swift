@@ -73,7 +73,7 @@ class EditProfileModel:IEditProfileModel{
                     
                     userObj.imagePath = url?.absoluteString
                     userChat.photoUrl=url?.absoluteString
-                    
+                    userChat.type = AuthenticationType.user.rawValue
                     let userDic = try! DictionaryEncoder.encode(userObj)
                     let userChatDic = try! DictionaryEncoder.encode(userChat)
                     self.ref.child("Users").child(userObj.id!).setValue(userDic)
