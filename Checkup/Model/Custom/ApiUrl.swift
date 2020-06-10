@@ -8,6 +8,6 @@
 
 import Foundation
 class ApiUrl {
-//    static let API_URL = "\(ApiUrl.API_URL)"
-    static let API_URL = "http://192.168.1.5:3000"
+    static let API_URL = "http://www.checkup.somee.com"
+//    static let API_URL = "http://192.168.1.5:3000"
 }
