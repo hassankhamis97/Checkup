@@ -32,6 +32,7 @@
 		035A048E247DB1010017A885 /* FilterLabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035A048D247DB1010017A885 /* FilterLabPresenter.swift */; };
 		035A0491247DB1490017A885 /* FilterLabContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035A0490247DB1490017A885 /* FilterLabContract.swift */; };
 		035A0493247DFBA90017A885 /* LabDescriptionParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035A0492247DFBA90017A885 /* LabDescriptionParams.swift */; };
+		0367BD652490506600556C31 /* PdfDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0367BD642490506600556C31 /* PdfDelegate.swift */; };
 		03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD2246CC39700C0BF33 /* BranchesCollectionViewCell.swift */; };
 		03789BD5246CC39700C0BF33 /* BranchesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */; };
 		03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */; };
@@ -366,6 +367,7 @@
 		035A048D247DB1010017A885 /* FilterLabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLabPresenter.swift; sourceTree = "<group>"; };
 		035A0490247DB1490017A885 /* FilterLabContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLabContract.swift; sourceTree = "<group>"; };
 		035A0492247DFBA90017A885 /* LabDescriptionParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescriptionParams.swift; sourceTree = "<group>"; };
+		0367BD642490506600556C31 /* PdfDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfDelegate.swift; sourceTree = "<group>"; };
 		03789BD2246CC39700C0BF33 /* BranchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesCollectionViewCell.swift; sourceTree = "<group>"; };
 		03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BranchesCollectionViewCell.xib; sourceTree = "<group>"; };
 		03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabBranchesCollectionView.swift; sourceTree = "<group>"; };
@@ -1276,6 +1278,7 @@
 				0358339D246953FD008DD8C2 /* UIButtonExtension.swift */,
 				03FDA18A247035F20084C4AA /* PdfDescViewController.swift */,
 				4E87AF50247EDC5C00002E66 /* ResultDetailsTableViewController.swift */,
+				0367BD642490506600556C31 /* PdfDelegate.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -2738,6 +2741,7 @@
 				4EC1FD3C2472E6D90029C499 /* FilterLab.swift in Sources */,
 				4EE9F9452469A47F00BB4A39 /* RecieverCellTableViewCell.swift in Sources */,
 				4E2C9E0224708D77007C6109 /* BranchDescriptionViewController.swift in Sources */,
+				0367BD652490506600556C31 /* PdfDelegate.swift in Sources */,
 				4EA875192480055E00E95B30 /* ChatContract.swift in Sources */,
 				03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */,
 				4E2D6CCE248ADEC200FADA05 /* AboutViewController.swift in Sources */,
