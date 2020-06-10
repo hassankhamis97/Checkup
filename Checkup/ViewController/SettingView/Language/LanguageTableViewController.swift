@@ -142,9 +142,10 @@ class LanguageTableViewController: UITableViewController ,IView{
     
     
     func restartApplication () {
-        let launchScreen = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()
+        let launchScreen = UIStoryboard(name: "SplashScreen", bundle: nil)
+        var tableViewController = launchScreen.instantiateViewController(withIdentifier: "splashSVC") as! SplashScreenViewController
 
-        let navCtrl = UINavigationController(rootViewController: launchScreen!)
+        let navCtrl = UINavigationController(rootViewController: tableViewController)
         //
         guard
             let window = UIApplication.shared.keyWindow,

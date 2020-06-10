@@ -19,8 +19,11 @@ class SplashScreenViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.3) {
                    // your code here For Pushing to Another Screen
-                   let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "homeSVC") as! HomeViewController
-                   self.navigationController?.pushViewController(secondVC, animated: true)
+//                   let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "homeSVC") as! HomeViewController
+//                   self.navigationController?.pushViewController(secondVC, animated: true)
+            let story = UIStoryboard(name: "Home", bundle: nil)
+            let vc = story.instantiateViewController(withIdentifier: "tabBarSvc")
+            self.navigationController?.pushViewController(vc, animated: true)
                }
 //            
             let animated_image =   UIImage.gif(asset: "checkupLogoGif")
