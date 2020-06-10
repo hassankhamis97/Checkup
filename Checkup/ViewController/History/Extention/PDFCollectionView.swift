@@ -39,9 +39,9 @@ extension ResultDetailsTableViewController : UICollectionViewDelegate, UICollect
         pdfHistory.pdfCounter = pdfCounter
     
         //check if it's nill then update as its first time else retrieve from usser default
-        if(retrieveDic().count == 0){
+  /*      if(retrieveDic().count == 0){
             print("iam empty")
-        }
+        }*/
         
         pdfHistory.noOfPdfObjInArr = testObj!.resultFilespaths!.count
         pdfHistory.dict = pdfAndOpenDict
@@ -70,7 +70,7 @@ extension ResultDetailsTableViewController : UICollectionViewDelegate, UICollect
         print(pdfAndOpenDict)
         print(idAndDict)
         print(idAndDict.values)
-        saveDic(dictionary: idAndDict)
+    //    saveDic(dictionary: idAndDict)
         
 
     }
