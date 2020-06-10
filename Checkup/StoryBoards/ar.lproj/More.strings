@@ -8,14 +8,20 @@
 /* Class = "UILabel"; text = "Log out"; ObjectID = "Ccl-WQ-YXr"; */
 "Ccl-WQ-YXr.text" = "تسجيل الخروج";
 
-/* Class = "UILabel"; text = "Health"; ObjectID = "Chk-7f-eU8"; */
+/* Class = "UILabel"; text = "Health Sheet"; ObjectID = "Chk-7f-eU8"; */
 "Chk-7f-eU8.text" = "البيانات الشخصية الطبيه";
 
 /* Class = "UINavigationItem"; title = "More"; ObjectID = "VpU-6N-bK7"; */
 "VpU-6N-bK7.title" = "المزيد";
 
 /* Class = "UIButton"; normalTitle = "View Profile"; ObjectID = "Yn0-gC-iOt"; */
-"Yn0-gC-iOt.normalTitle" = "عرض الصفحة الشخصية";
+"Yn0-gC-iOt.normalTitle" = "عرض الصفحة الشخصيه";
+
+/* Class = "UILabel"; text = "Help"; ObjectID = "jdX-MC-w4u"; */
+"jdX-MC-w4u.text" = "المساعده";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "pMj-dk-fRD"; */
+"pMj-dk-fRD.text" = "من نحن";
 
 /* Class = "UILabel"; text = "Settings"; ObjectID = "uRr-mI-sex"; */
 "uRr-mI-sex.text" = "الإعدادات";
