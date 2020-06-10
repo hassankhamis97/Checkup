@@ -225,6 +225,14 @@
             </objects>
             <point key="canvasLocation" x="1089.8550724637682" y="697.01086956521749"/>
         </scene>
+        <!--splashSVC-->
+        <scene sceneID="SMc-3H-u2v">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="splashSVC" storyboardName="SplashScreen" referencedIdentifier="splashSVC" id="tEN-lZ-NDv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4z-us-cLO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666" y="597"/>
+        </scene>
         <!--Privacy Table View Controller-->
         <scene sceneID="V3e-jm-bAZ">
             <objects>

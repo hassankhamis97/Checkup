@@ -373,6 +373,7 @@ PODS:
     - ImageSlideshow/Core
     - SDWebImage (>= 3.7)
   - leveldb-library (1.22)
+  - MOLH (1.4.1)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -391,6 +392,7 @@ PODS:
   - SDWebImage/Core (4.4.8)
   - SkyFloatingLabelTextField (3.8.0)
   - StepIndicator (1.0.8)
+  - SwiftGifOrigin (1.7.0)
   - SwiftyJSON (5.0.0)
   - TransitionButton (0.5.2)
   - UIColor_Hex_Swift (5.1.0)
@@ -408,12 +410,14 @@ DEPENDENCIES:
   - GoogleSignIn
   - ImageSlideshow
   - ImageSlideshow/SDWebImage
+  - MOLH
   - OpalImagePicker
   - ReachabilitySwift
   - RealmSwift
   - SDWebImage (~> 4.0)
   - SkyFloatingLabelTextField (~> 3.0)
   - StepIndicator (~> 1.0.8)
+  - SwiftGifOrigin
   - SwiftyJSON
   - TransitionButton
   - UIColor_Hex_Swift
@@ -448,6 +452,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - ImageSlideshow
     - leveldb-library
+    - MOLH
     - nanopb
     - OpalImagePicker
     - PromisesObjC
@@ -457,6 +462,7 @@ SPEC REPOS:
     - SDWebImage
     - SkyFloatingLabelTextField
     - StepIndicator
+    - SwiftGifOrigin
     - SwiftyJSON
     - TransitionButton
     - UIColor_Hex_Swift
@@ -490,6 +496,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   ImageSlideshow: 4694d7d699a1549582e7cc631fb392d8f91630f3
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MOLH: 9ea6c0390f5963b2df9827ae64035fbc8598b092
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   OpalImagePicker: 51cbf714f337a93c2631219f1a90389ba936077f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
@@ -499,10 +506,11 @@ SPEC CHECKSUMS:
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   StepIndicator: 748b293f671355b021253f82031ac002f153dc81
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: 3c9393bba94ae718e50ca29a73dd88185f053ee1
+PODFILE CHECKSUM: b1c8b73f3e7d76d9214d466550380b48f01e4206
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

@@ -11,8 +11,10 @@ import CoreData
 import Firebase
 import GoogleSignIn
 import RealmSwift
+import MOLH
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate ,MOLHResetable{
+ 
  
     
    
@@ -29,9 +31,29 @@ var window: UIWindow?
 //        navigationBar.gradient.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
 //        navigationBar.gradient.startPoint = CGPoint(x: 0, y: 0)
 //        navigationBar.gradient.endPoint = CGPoint(x: 1, y: 0)
+        
+        MOLH.shared.activate(true)
+         reset()
         return true
     }
  
+    
+    func reset() {
+                    if let rootViewController: UIWindow = ((UIApplication.shared.delegate?.window)!)
+                    {
+                        let story = UIStoryboard(name: "Home", bundle: nil)
+                                           rootViewController.rootViewController = story.instantiateViewController(withIdentifier: "tabBarSvc")
+        }
+                   
+     }
+     
+    
+//    func reset() {
+//           let rootViewController: UIWindow = ((UIApplication.shared.delegate?.window)!)!
+//           let story = UIStoryboard(name: "Home", bundle: nil)
+//           rootViewController.rootViewController = story.instantiateViewController(withIdentifier: "tabBarSvc")
+//       }
+
     
                       ////  My Custom Function Mahmoud ///////
     //////**************** Siign In With Google **************** //
