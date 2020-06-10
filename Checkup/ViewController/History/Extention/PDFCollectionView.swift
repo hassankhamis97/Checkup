@@ -32,7 +32,7 @@ extension ResultDetailsTableViewController : UICollectionViewDelegate, UICollect
         
         pdfAndOpenDict.updateValue(false, forKey: testObj!.testName![indexPath.row])
         print("dicyionray \(pdfAndOpenDict)")
-        idAndDict.updateValue(pdfAndOpenDict,forKey: testObj!.id!)
+        idAndDict.updateValue(pdfAndOpenDict,forKey: String(testObj!.id!))
 
   
         pdfCounter = pdfCounter + 1
@@ -70,6 +70,10 @@ extension ResultDetailsTableViewController : UICollectionViewDelegate, UICollect
         print(pdfAndOpenDict)
         print(idAndDict)
         print(idAndDict.values)
+            saveDictionary(dict: idAndDict, key: "testttt")
+            
+            
+            getDictionary(key: "testttt")
     //    saveDic(dictionary: idAndDict)
         
 
