@@ -18,10 +18,10 @@ class StatisticsModel:IStatisticModel{
         self.statisticPresenterRef=statisticPresenterRef
     }
     
-    // http://checkup.somee.com/api/AnalysisService/GetHbA1cSampleStatistics?userId=7F2wFNET6RO2eCLv091Lfn1RCJ73&year=2020
+    // \(ApiUrl.API_URL)/api/AnalysisService/GetHbA1cSampleStatistics?userId=7F2wFNET6RO2eCLv091Lfn1RCJ73&year=2020
     func getSample(userId: String, year: String) {
         
-  Alamofire.request("http://checkup.somee.com/api/AnalysisService/GetHbA1cSampleStatistics?userId="+userId+"&year="+year).responseJSON { (response) in
+  Alamofire.request("\(ApiUrl.API_URL)/api/AnalysisService/GetHbA1cSampleStatistics?userId="+userId+"&year="+year).responseJSON { (response) in
                   if let JSON = response.result.value{
                       print("ha1bc")
                       print(JSON)

@@ -25,7 +25,7 @@ class ManualNotificationModel: IManualNotificationModel {
         {
        if let manualNotificationPresenterRef = notificationPresenterRef as? IManualNotificationPresenter { ref.child("Notification").child(Auth.auth().currentUser!.uid).setValue(["getNotified": self.ref.childByAutoId().key!])
         ref.child("Notification").child(Auth.auth().currentUser!.uid).observe(.value, with: { (snapshot) in
-            let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetNotificationNumbers?userId=\(Auth.auth().currentUser!.uid)"
+            let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/GetNotificationNumbers?userId=\(Auth.auth().currentUser!.uid)"
             Alamofire.request(urlString).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -53,7 +53,7 @@ class ManualNotificationModel: IManualNotificationModel {
     }
     func updateNotificationFlag(testId: Int64) {
         if let updateNotificationFlagPresenterRef = notificationPresenterRef as? IUpdateNotificationFlagPresenter {
-        let urlString = "http://www.checkup.somee.com/api/AnalysisService/UpdateNotifiedFalse?testId=\(testId)"
+        let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/UpdateNotifiedFalse?testId=\(testId)"
         Alamofire.request(urlString).validate().responseJSON { response in
         switch response.result {
                             case .success(let value):

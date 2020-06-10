@@ -32,12 +32,12 @@ class GetRequestsModel: IGetRequestsModel {
         let urlString : String
         if(testFilter.isFilter!)
         {
-            urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisFilterRequests"
+            urlString = "\(ApiUrl.API_URL)/api/AnalysisService/ClientAnalysisFilterRequests"
 //            urlString = "http://192.168.1.2:3000/api/AnalysisService/ClientAnalysisFilterRequests"
         }else{
             
-            urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests"
-//            let urlString = "http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests"
+            urlString = "\(ApiUrl.API_URL)/api/AnalysisService/ClientAnalysisRequests"
+//            let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/ClientAnalysisRequests"
         }
 
         
@@ -86,7 +86,7 @@ class GetRequestsModel: IGetRequestsModel {
 //        //        var x = RequestConfigration(userId: Auth.auth().currentUser?.uid, status: ["PendingForLabConfirmation" , "Done"], take: 3, skip: 0)
 //        var requests = [Request]()
 //        let testFilterDic = try! DictionaryEncoder.encode(testFilter)
-//        let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetLaboratories"
+//        let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/GetLaboratories"
 //
 //        Alamofire.request(urlString, method: .post, parameters: testFilterDic,encoding: JSONEncoding.default, headers: nil).responseString {
 //            response in

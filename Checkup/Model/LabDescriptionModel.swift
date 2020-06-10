@@ -23,7 +23,7 @@ class LabaDescriptionModel: ILabDescModel {
         var latitude = modelParams.latitude!
         var governId = modelParams.governId!
 //        var governId = 15
-        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetLabBranchMenus?take=\(take)&skip=\(skip)&latitude=\(latitude)&longitude=\(longitude)&labId=\(labId)&governId=\(governId)").responseJSON { (response) in
+        Alamofire.request("\(ApiUrl.API_URL)/api/AnalysisService/GetLabBranchMenus?take=\(take)&skip=\(skip)&latitude=\(latitude)&longitude=\(longitude)&labId=\(labId)&governId=\(governId)").responseJSON { (response) in
             switch response.result {
             case .success(_):
             if let JSON = response.result.value{

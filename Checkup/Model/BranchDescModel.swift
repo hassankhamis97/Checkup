@@ -22,7 +22,7 @@ class BranchDescModel : IBranchDescModel {
     
     func fetchBranchDesc(id: String) {
          print(id)
-        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetFullInfoLabBranches?fireBaseLabId=\(id)").responseJSON { (response) in
+        Alamofire.request("\(ApiUrl.API_URL)/api/AnalysisService/GetFullInfoLabBranches?fireBaseLabId=\(id)").responseJSON { (response) in
             if let JSON = response.result.value{
                 print("lab Description")
                 print(JSON)

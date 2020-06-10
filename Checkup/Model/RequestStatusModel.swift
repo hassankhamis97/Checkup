@@ -17,7 +17,7 @@ class RequestStatusModel : IRequestStatusModel {
     }
 
     func onRequestStatusRevieved(testId:String ) {
-                           let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetSpecificTest?testId=\(testId)"
+                           let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/GetSpecificTest?testId=\(testId)"
                 //   let params: [String: String] = ["Id": testId]
              
                Alamofire.request(urlString, method: .get,encoding: JSONEncoding.default, headers: nil).responseString {

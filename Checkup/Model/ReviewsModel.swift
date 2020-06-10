@@ -22,7 +22,7 @@ class ReviewsModel : IReviewsModel{
     
     func fetchReviews(reviewParam: ReviewsParams) {
      
-        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetBranchReviews?branchId=\(reviewParam.branchId!)&take=\(reviewParam.take!)&skip=\(reviewParam.skip!)").responseJSON{ (response) in
+        Alamofire.request("\(ApiUrl.API_URL)/api/AnalysisService/GetBranchReviews?branchId=\(reviewParam.branchId!)&take=\(reviewParam.take!)&skip=\(reviewParam.skip!)").responseJSON{ (response) in
             if let json = response.result.value{
                       print("reviews: \(json)")
                 

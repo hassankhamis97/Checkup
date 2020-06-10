@@ -14,7 +14,7 @@ import RealmSwift
 
 class GetLabsModel: IGetLabsModel {
     func getSearchedLabs(name: String) {
-        let homeLabsURL = "http://www.checkup.somee.com/api/AnalysisService/GetLabMenus"
+        let homeLabsURL = "\(ApiUrl.API_URL)/api/AnalysisService/GetLabMenus"
         let url = URL(string: homeLabsURL)
         // for Azab
         var labs = [HomeLab]()
@@ -62,7 +62,7 @@ class GetLabsModel: IGetLabsModel {
     func getLabs(take: Int, skip: Int) {
         
         //URL for Labs
-        let homeLabsURL = "http://www.checkup.somee.com/api/AnalysisService/GetLabMenus?take="+String(take)+"&skip="+String(skip)
+        let homeLabsURL = "\(ApiUrl.API_URL)/api/AnalysisService/GetLabMenus?take="+String(take)+"&skip="+String(skip)
         
         // for Azab
         var labs = [HomeLab]()
@@ -93,7 +93,7 @@ class GetLabsModel: IGetLabsModel {
     
     //    func getFilteredLabs() {
     //        var filterLabList = [FilterLab]()
-    //        let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetLaboratories"
+    //        let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/GetLaboratories"
     //        Alamofire.request(urlString).validate().responseJSON { response in
     //            debugPrint(response)
     //            //                switch response.result {
@@ -138,7 +138,7 @@ class GetLabsModel: IGetLabsModel {
     
     func getFilteredLabs() {
         var filterLabList = [FilterLab]()
-        let urlString = "http://www.checkup.somee.com/api/AnalysisService/GetLaboratories"
+        let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/GetLaboratories"
         Alamofire.request(urlString).validate().responseJSON { response in
             switch response.result {
             case .success(let value):

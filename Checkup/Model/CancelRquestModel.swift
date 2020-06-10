@@ -26,7 +26,7 @@ class CancelRequestModel: ICancelRequestModel{
 
      // let params : [String : Any] = [ "Id" : testObj.id , "status" : "Canceled" ]
         
-        let urlString = "http://checkup.somee.com/api/AnalysisService/UpdateAnalysis"
+        let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/UpdateAnalysis"
           
         
         Alamofire.request(urlString, method: .post , parameters: testDic , encoding: JSONEncoding.default, headers: nil).responseJSON {

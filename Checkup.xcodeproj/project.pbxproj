@@ -72,7 +72,6 @@
 		4E15ACEC247187E3004418B1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACEB247187E3004418B1 /* Request.swift */; };
 		4E15ACEE24718EDF004418B1 /* GetRequestResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACED24718EDF004418B1 /* GetRequestResponseExtension.swift */; };
 		4E177215248FF73B0051CB81 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E177214248FF73B0051CB81 /* Branch.swift */; };
-		4E1C3FAA2489CFEA0016A555 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1C3FA92489CFEA0016A555 /* About.storyboard */; };
 		4E1FBE36247E1CFB00C463D5 /* ChatStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FBE35247E1CFB00C463D5 /* ChatStatus.swift */; };
 		4E206DE8246EE3E3007C401D /* TestCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E206DE7246EE3E3007C401D /* TestCollectionTests.swift */; };
 		4E206DEB246EE3FE007C401D /* LabCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E206DEA246EE3FE007C401D /* LabCollectionTests.swift */; };
@@ -108,6 +107,7 @@
 		4E3C1F432476941A00D9761D /* GetLabsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C1F422476941A00D9761D /* GetLabsPresenter.swift */; };
 		4E3C1F462476A41900D9761D /* GetLabsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C1F452476A41900D9761D /* GetLabsContract.swift */; };
 		4E3C1F482476A65E00D9761D /* HomeLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C1F472476A65E00D9761D /* HomeLab.swift */; };
+		4E408CF22491297D00766722 /* ApiUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E408CF12491297D00766722 /* ApiUrl.swift */; };
 		4E432F092464F6E100D1CACA /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E432F082464F6E000D1CACA /* History.storyboard */; };
 		4E432F132464F6EF00D1CACA /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E432F0C2464F6EF00D1CACA /* HistoryTableViewCell.swift */; };
 		4E432F142464F6EF00D1CACA /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E432F0D2464F6EF00D1CACA /* HistoryTableViewController.swift */; };
@@ -409,7 +409,6 @@
 		4E15ACEB247187E3004418B1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		4E15ACED24718EDF004418B1 /* GetRequestResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequestResponseExtension.swift; sourceTree = "<group>"; };
 		4E177214248FF73B0051CB81 /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
-		4E1C3FA92489CFEA0016A555 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		4E1FBE35247E1CFB00C463D5 /* ChatStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStatus.swift; sourceTree = "<group>"; };
 		4E206DE7246EE3E3007C401D /* TestCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionTests.swift; sourceTree = "<group>"; };
 		4E206DEA246EE3FE007C401D /* LabCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabCollectionTests.swift; sourceTree = "<group>"; };
@@ -452,6 +451,7 @@
 		4E3C1F422476941A00D9761D /* GetLabsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLabsPresenter.swift; sourceTree = "<group>"; };
 		4E3C1F452476A41900D9761D /* GetLabsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLabsContract.swift; sourceTree = "<group>"; };
 		4E3C1F472476A65E00D9761D /* HomeLab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLab.swift; sourceTree = "<group>"; };
+		4E408CF12491297D00766722 /* ApiUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrl.swift; sourceTree = "<group>"; };
 		4E432F082464F6E000D1CACA /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		4E432F0C2464F6EF00D1CACA /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		4E432F0D2464F6EF00D1CACA /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
@@ -1623,6 +1623,7 @@
 				CC4B65C92479ACED00BA1062 /* InternetConnection.swift */,
 				BB136EB3248D02E80003A9B7 /* UserAuthorization.swift */,
 				BB136EB8248D35A80003A9B7 /* CustomBack.swift */,
+				4E408CF12491297D00766722 /* ApiUrl.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -2796,6 +2797,7 @@
 				4EA87502247FC09900E95B30 /* MessagingChat.swift in Sources */,
 				035A048E247DB1010017A885 /* FilterLabPresenter.swift in Sources */,
 				03FDA19B2470CA650084C4AA /* FifthStaticTableViewCell.swift in Sources */,
+				4E408CF22491297D00766722 /* ApiUrl.swift in Sources */,
 				4EA87506247FC19700E95B30 /* MainChatPresenter.swift in Sources */,
 				4E87AF54247EFB8400002E66 /* PDFCollectionView.swift in Sources */,
 				4E2C9DFF24706E3E007C6109 /* IView.swift in Sources */,

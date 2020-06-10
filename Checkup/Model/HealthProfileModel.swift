@@ -26,7 +26,7 @@ class HealthProfileModel:IHealthProfileModel{
         
         
 //        let obj=HealthProfile(userId: "", isSuffreDiabetes: true, isSuffrePressure: false, isSTakeantiBiotic: true, isTakehaemophilia: false, dieaseNamesArray: ["cbc","tsh"])
-        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/RetrieveHealthProfile?userId="+userId).responseJSON { (response) in
+        Alamofire.request("\(ApiUrl.API_URL)/api/AnalysisService/RetrieveHealthProfile?userId="+userId).responseJSON { (response) in
             if let JSON = response.result.value{
                 print(JSON)
 
@@ -54,7 +54,7 @@ class HealthProfileModel:IHealthProfileModel{
         }
         
         
-        //  http://www.checkup.somee.com/api/AnalysisService/RetrieveHealthProfile?userId="
+        //  \(ApiUrl.API_URL)/api/AnalysisService/RetrieveHealthProfile?userId="
   
         
     }
@@ -63,7 +63,7 @@ class HealthProfileModel:IHealthProfileModel{
     
     func updateUserData(userId: String, healthProfileObj: HealthProfile) {
         let healthProfileDic = try! DictionaryEncoder.encode(healthProfileObj)
-                  let urlString = "http://www.checkup.somee.com/api/AnalysisService/SaveAndUpdateHealthProfile"
+                  let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/SaveAndUpdateHealthProfile"
         Alamofire.request(urlString, method: .post, parameters: healthProfileDic,encoding: JSONEncoding.default, headers: nil).responseString {
                        response in
                        switch response.result {

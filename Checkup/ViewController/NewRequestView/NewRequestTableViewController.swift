@@ -133,7 +133,7 @@ class NewRequestTableViewController: UITableViewController,OpalImagePickerContro
     }
     override func viewWillAppear(_ animated: Bool) {
        
-        //        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/ClientAnalysisRequests").validate().responseJSON { response in
+        //        Alamofire.request("\(ApiUrl.API_URL)/api/AnalysisService/ClientAnalysisRequests").validate().responseJSON { response in
         //        print(response)
         //
         //        }

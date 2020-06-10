@@ -15,7 +15,7 @@ class RatingModel : IRatingModel{
     
 func saveData(labReview : Review){
 
-    let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddReview"
+    let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/AddReview"
     
      let reviewDictionary = try! DictionaryEncoder.encode(labReview)
     

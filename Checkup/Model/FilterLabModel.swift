@@ -19,7 +19,7 @@ class FilterLabModel : IFilterLabModel{
     
     func fetchFilteredLab(){
 
-        Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetGoverns").responseJSON { (response) in
+        Alamofire.request("\(ApiUrl.API_URL)/api/AnalysisService/GetGoverns").responseJSON { (response) in
             if let json = response.result.value{
                       print(json)
                 

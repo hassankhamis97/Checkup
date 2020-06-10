@@ -21,7 +21,7 @@ func  deleteTestRequest(reqId : Int64)
      
 //    let params : [ "id" : reqId ]
            
-           let urlString = "http://checkup.somee.com/api/AnalysisService/DeleteClientAnalysisRequest?testId=\(reqId)"
+           let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/DeleteClientAnalysisRequest?testId=\(reqId)"
            // , parameters: params
            Alamofire.request(urlString, method: .get , encoding: JSONEncoding.default, headers: nil).responseJSON {
                              response in

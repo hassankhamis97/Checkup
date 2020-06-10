@@ -103,7 +103,7 @@ class NewRequestModel: INewRequestModel {
             
             testFinObj.generatedCode = String(code)
             let testFinDic = try! DictionaryEncoder.encode(testFinObj)
-            let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewAnalysis"
+            let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/AddNewAnalysis"
             //            let urlString = "http://192.168.1.9:3000/api/AnalysisService/AddNewAnalysis"
             Alamofire.request(urlString, method: .post, parameters: testFinDic,encoding: JSONEncoding.default, headers: nil).responseString {
                 response in
@@ -111,7 +111,7 @@ class NewRequestModel: INewRequestModel {
                 case .success:
                     print(response)
                     self.newRequestPresenterRef.onSuccess()
-                    Alamofire.request("http://www.checkup.somee.com/api/AnalysisService/GetIsFirstDealWithBranch?userId=\(Auth.auth().currentUser!.uid)&branchId=\(testFinObj.branchId!)").validate().responseJSON { response in
+                    Alamofire.request("\(ApiUrl.API_URL)/api/AnalysisService/GetIsFirstDealWithBranch?userId=\(Auth.auth().currentUser!.uid)&branchId=\(testFinObj.branchId!)").validate().responseJSON { response in
                         switch response.result {
                         case .success(let value):
                             if value as! Int == 0 {
