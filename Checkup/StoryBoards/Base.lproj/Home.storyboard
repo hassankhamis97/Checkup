@@ -639,15 +639,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hvM-Hm-dtf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="jp5-tf-ft7">
-                        <barButtonItem key="rightBarButtonItem" id="MLA-Ga-U4Z">
-                            <connections>
-                                <segue destination="00A-zd-6Mb" kind="popoverPresentation" popoverAnchorBarButtonItem="MLA-Ga-U4Z" id="HVX-8W-4Kl">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Home" id="jp5-tf-ft7"/>
                     <connections>
                         <outlet property="headerViewHeight" destination="ygM-Cw-5qe" id="otk-k8-4jY"/>
                         <outlet property="labCollection" destination="LNC-L9-kiL" id="d6L-1U-j22"/>
@@ -684,7 +676,7 @@
         <!--ResultUI Tab Bar-->
         <scene sceneID="Fgl-UN-hSU">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a7m-TO-BCx" customClass="ResultUITabBar" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarSvc" automaticallyAdjustsScrollViewInsets="NO" id="a7m-TO-BCx" customClass="ResultUITabBar" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bAa-Ju-IV3">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1671,11 +1663,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="00A-zd-6Mb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sWo-XG-FOh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scA-nQ-LED">
-                                <rect key="frame" x="20" y="221" width="374" height="400"/>
+                                <rect key="frame" x="20" y="248" width="374" height="400"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svn-0B-uj5">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="400"/>

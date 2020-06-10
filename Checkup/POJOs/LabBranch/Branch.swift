@@ -7,7 +7,8 @@
 //
 
 import Foundation
-struct Branch {
+struct Branch : Codable{
+    var name: String
     var email : String
     var password : String
     var image : String
@@ -18,7 +19,7 @@ struct Branch {
     var holidays : String
     var FireBaseId : String
     var LabId : Int64
-    var addressId : Int64
+    var address : Address
     var rating : Double
     var governId : Int64
 }

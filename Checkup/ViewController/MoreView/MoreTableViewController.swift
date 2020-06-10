@@ -127,9 +127,14 @@ class MoreTableViewController: UITableViewController {
         if indexPath.row==7{
             do{
                try Auth.auth().signOut()
-                let vc = storyboard?.instantiateViewController(withIdentifier: "homeSVC") as! HomeViewController
-                                  
-                                  navigationController?.pushViewController(vc, animated: true)
+//
+                
+                
+                
+                let dViewController = self.storyboard?.instantiateViewController(withIdentifier: "homeSVC") as! HomeViewController
+                let firstTabNavController = self.tabBarController?.viewControllers?[0] as! UINavigationController
+                firstTabNavController.pushViewController(dViewController, animated: false)
+                self.tabBarController?.selectedIndex = 0
 
             }
             catch{

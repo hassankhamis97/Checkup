@@ -18,13 +18,18 @@ class RealTime {
     //(email, image , name )
     func addLab(name: String, image: String, email: String) {
         
-        // add lab to user firestore
-        addLabToFireStore(username: name, id: Auth.auth().currentUser?.uid ?? "0x", photo: image)
-        // add lab to user Auth
-        Auth.auth().createUser(withEmail: email, password: "123456789Iti", completion: nil)
+        Auth.auth().createUser(withEmail: email, password: "123456789Iti"){ authResult, error in
+            if authResult != nil {
+                
+                // add lab to user firestore
+                self.addLabToFireStore(username: name, id: authResult?.user.uid ?? "0x", photo: image)
+                
+                // add lab to user Auth
+                let labObj = Laboratory(id: authResult?.user.uid ?? "0x", name: name, formalReferencePathId: "", specialTests: "", image: image, branches: ["",""])
+                self.saveLabToDB(labObj: labObj)
+            }
+        }
         
-        let labObj = Laboratory(id: Auth.auth().currentUser?.uid ?? "0x", name: name, formalReferencePathId: "", specialTests: "", image: image, branches: ["",""])
-        saveLabToDB(labObj: labObj)
         //        let id = ref.childByAutoId()
         //        labObj.id = id.key! as! String
         //        //            let res = try! JSONEncoder().encode(labObj)
@@ -32,6 +37,26 @@ class RealTime {
         //        //            print(res.prettyPrintedJSONString!)
         //        ref.child("Lab").child(labObj.id!).setValue(labDic)
     }
+    
+    
+    // Auth - fireStore type 3 - API
+    //(email, image, phone, isFromHome: Bool, time to&from, holiday, labId, address, rating, GovernId)
+    func addBranch(name: String, email: String, labId: Int64, image: String, phone: String, isFromHome: Bool, timeFrom: String, timeTo: String, holidays : String, address: Address, rating: Double, governId: Int64){
+        
+        Auth.auth().createUser(withEmail: email, password: "123456789Iti"){ authResult, error in
+            if authResult != nil {
+                
+                // add lab to user firestore
+                self.addLabBranchToFireStore(username: name, id: authResult?.user.uid ?? "0x", photo: image)
+                
+                // add lab to user Auth
+                let labBranchObj = Branch(name: name, email: email, password: "123456789Iti", image: image, phone: phone, isAvailableFromHome: isFromHome, timeFrom: timeFrom, timeTo: timeTo, holidays: holidays, FireBaseId: authResult?.user.uid ?? "0x", LabId: labId, address: address, rating: rating, governId: governId)
+                self.saveLabBranchToDB(labBranchObj: labBranchObj)
+            }
+        }
+        
+    }
+    
     func addUser(id: String, email: String,birthdate: String, gender: String,phone: [Phone],insurance: String, address: Address,imagePath: String, name:String) {
         let userObj = User(id: id, name:name, email: email,  birthdate: birthdate, gender: gender, phone: phone, insurance: insurance, address: address, imagePath: imagePath)
         
@@ -50,6 +75,10 @@ class RealTime {
         Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": photo , "type": 4 ], merge: true)
     }
     
+    func addLabBranchToFireStore(username: String, id: String, photo: String){
+          Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": photo , "type": 3 ], merge: true)
+      }
+    
     func saveLabToDB(labObj: Laboratory) {
         
         let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/AddNewLaboratory"
@@ -62,7 +91,20 @@ class RealTime {
             case .failure(_): break
             }
         }
+    }
+    
+    func saveLabBranchToDB(labBranchObj: Branch) {
         
+        let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewLaboratory"
+        let labDic = try! DictionaryEncoder.encode(labBranchObj)
+        //            let urlString = "http://192.168.1.9:3000/api/AnalysisService/AddNewAnalysis"
+        Alamofire.request(urlString, method: .post, parameters: labDic,encoding: JSONEncoding.default, headers: nil).responseString {
+            response in
+            switch response.result {
+            case .success:break
+            case .failure(_): break
+            }
+        }
     }
 }
 

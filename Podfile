@@ -27,4 +27,6 @@ target 'Checkup' do
   pod 'RealmSwift'
   pod 'ImageSlideshow/SDWebImage'
   pod 'GoogleSignIn'
+  pod 'SwiftGifOrigin'
+  pod 'MOLH'
 end
