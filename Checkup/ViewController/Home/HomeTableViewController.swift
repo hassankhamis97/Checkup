@@ -74,6 +74,9 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
         //        tabBarItem.badgeValue = "1"
         labSlideShow.layer.cornerRadius = 10
         let manager = CLLocationManager()
@@ -83,6 +86,8 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
         manager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
             manager.startUpdatingLocation()
+        
+            
         }
         
         labsActicity.transform = CGAffineTransform.init(scaleX: 2, y: 2)

@@ -16,7 +16,7 @@ class RealTime {
         ref = Database.database().reference()
     }
     //(email, image , name )
-    func addLab(name: String, image: String, email: String) {
+    func addLab(name: String, image: String, email: String,hotLine:String,rating:Double) {
         
         Auth.auth().createUser(withEmail: email, password: "123456789Iti"){ authResult, error in
             if authResult != nil {
@@ -25,7 +25,8 @@ class RealTime {
                 self.addLabToFireStore(username: name, id: authResult?.user.uid ?? "0x", photo: image)
                 
                 // add lab to user Auth
-                let labObj = Laboratory(id: authResult?.user.uid ?? "0x", name: name, formalReferencePathId: "", specialTests: "", image: image, branches: ["",""])
+//                let labObj = Laboratory(id: authResult?.user.uid ?? "0x", name: name, formalReferencePathId: "", specialTests: "", image: image, branches: ["",""])
+                let labObj = Laboratory(id: "", name: name, formalReferencePathId: "", specialTests: "", image: image, branches: [""], FireBaseId: authResult?.user.uid ?? "0x", hotline: hotLine, rating: rating)
                 self.saveLabToDB(labObj: labObj)
             }
         }
@@ -81,7 +82,7 @@ class RealTime {
     
     func saveLabToDB(labObj: Laboratory) {
         
-        let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/AddNewLaboratory"
+        let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/addLab"
         let labDic = try! DictionaryEncoder.encode(labObj)
         //            let urlString = "http://192.168.1.9:3000/api/AnalysisService/AddNewAnalysis"
         Alamofire.request(urlString, method: .post, parameters: labDic,encoding: JSONEncoding.default, headers: nil).responseString {
@@ -95,7 +96,7 @@ class RealTime {
     
     func saveLabBranchToDB(labBranchObj: Branch) {
         
-        let urlString = "http://www.checkup.somee.com/api/AnalysisService/AddNewLaboratory"
+        let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/addLabBranch"
         let labDic = try! DictionaryEncoder.encode(labBranchObj)
         //            let urlString = "http://192.168.1.9:3000/api/AnalysisService/AddNewAnalysis"
         Alamofire.request(urlString, method: .post, parameters: labDic,encoding: JSONEncoding.default, headers: nil).responseString {

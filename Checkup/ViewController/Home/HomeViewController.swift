@@ -103,6 +103,15 @@ class HomeViewController: UIViewController ,UICollectionViewDelegateFlowLayout ,
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url="https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/users.png?alt=media&token=8fba9f3d-0739-4b7f-afab-8ae7b6e1c442"
+        
+        var realTime=RealTime()
+               
+//        realTime.addLab(name: "NewLab", image: url, email: "newLab@gmail.com", hotLine: "23456", rating: 4.5)
+        
+        var address=Address(address1: "new alexxx", buildingNo: "3", floorNo: "2", apartmentNo: "1", longitude: 0.0, latitude: 0.0)
+        realTime.addBranch(name: "any name", email: "anynameE@gmail.com", labId: 12, image: url, phone: "070999", isFromHome: true, timeFrom: "10", timeTo: "10", holidays: "friday", address: address, rating: 4.7, governId: 1)
         //        tabBarItem.badgeValue = "1"
         labSlideShow.layer.cornerRadius = 10
         let manager = CLLocationManager()
