@@ -279,6 +279,7 @@ class RequestsTableViewController: UITableViewController , IFilterTest {
         else{
         let resultDetailsTVC = storyboard?.instantiateViewController(withIdentifier: "resultDetailsSVC") as! ResultDetailsTableViewController
             resultDetailsTVC.testID = String(requests![indexPath.row].id!)
+            resultDetailsTVC.isNotified = requests![indexPath.row].isNotified!
             navigationController?.pushViewController(resultDetailsTVC, animated: true)
         }
         if requests![indexPath.row].isNotified! == true {

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-extension ResultDetailsTableViewController : UICollectionViewDelegate, UICollectionViewDataSource , PdfProtocol {
+extension ResultDetailsTableViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -29,57 +29,56 @@ extension ResultDetailsTableViewController : UICollectionViewDelegate, UICollect
       
         
         // set condiotion here if value not true
-        
-        pdfAndOpenDict.updateValue(false, forKey: testObj!.testName![indexPath.row])
-        print("dicyionray \(pdfAndOpenDict)")
-        idAndDict.updateValue(pdfAndOpenDict,forKey: String(testObj!.id!))
+        if idAndDict.count > 0 {
+       pdfAndOpenDict.updateValue(true, forKey: testObj.resultFilespaths![indexPath.row])
+          idAndDict.updateValue(pdfAndOpenDict, forKey: String(testObj!.id!))
 
-  
-        pdfCounter = pdfCounter + 1
-        pdfHistory.pdfCounter = pdfCounter
+        }
+//        pdfCounter = pdfCounter + 1
+//        pdfHistory.pdfCounter = pdfCounter
     
-        //check if it's nill then update as its first time else retrieve from usser default
-  /*      if(retrieveDic().count == 0){
-            print("iam empty")
-        }*/
+        
         
         pdfHistory.noOfPdfObjInArr = testObj!.resultFilespaths!.count
         pdfHistory.dict = pdfAndOpenDict
-        pdfHistory.pdfProtocol = self
-       // print("retrieved Dictionary\(retrieveDic())")
+//        pdfHistory.pdfProtocol = self
+        pdfHistory.testId = String(testObj!.id!)
+     //   pdfAndOpenDict.values[indexPath.row] = true
+   
+        // print("retrieved Dictionary\(retrieveDic())")
         
         navigationController?.pushViewController(pdfHistory, animated: true)
         
     }
-    func removeDict(newDict: Dictionary<String, Any>) {
-        //pdfAndOpenDict.remov
-        print("new Dict \(newDict)")
-        for dic in newDict{
-            print("dic \(dic)")
-      
-            
-            //update old values with new value first
-            pdfAndOpenDict.updateValue(dic.value as! Bool , forKey: dic.key)
-            print("dictionary after replacinf \(pdfAndOpenDict)")
-     
-            for pdf in idAndDict{
-                print("pdf \(pdf)")
-                idAndDict.updateValue(pdfAndOpenDict, forKey: pdf.key)
-            
-        }
-        print(pdfAndOpenDict)
-        print(idAndDict)
-        print(idAndDict.values)
-            saveDictionary(dict: idAndDict, key: "testttt")
-            
-            
-            getDictionary(key: "testttt")
-    //    saveDic(dictionary: idAndDict)
-        
+//    func removeDict(newDict: Dictionary<String, Any>) {
+//        //pdfAndOpenDict.remov
+//        print("new Dict \(newDict)")
+//        for dic in newDict{
+//            print("dic \(dic)")
+//
+//
+//            //update old values with new value first
+//            pdfAndOpenDict.updateValue(dic.value as! Bool , forKey: dic.key)
+//            print("dictionary after replacinf \(pdfAndOpenDict)")
+//
+//            for pdf in idAndDict{
+//                print("pdf \(pdf)")
+//                idAndDict.updateValue(pdfAndOpenDict, forKey: pdf.key)
+//
+//        }
+//        print(pdfAndOpenDict)
+//        print(idAndDict)
+//        print(idAndDict.values)
+////            saveDictionary(dict: idAndDict, key: "testttt")
+////
+////
+////            getDictionary(key: "testttt")
+//    //    saveDic(dictionary: idAndDict)
+//
+//
+//    }
 
-    }
-
-    }
+//    }
     
 
     
