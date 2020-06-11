@@ -20,7 +20,7 @@ class ResultDetailsTableViewController: UITableViewController{
     @IBOutlet var descriptionTextView: UITextView!
     var testID :String!
     var testObj : Test!
-    
+    var isNotified: Bool!
     var pdfCounter : Int!
     var pdfAndOpenDict =  [String : Bool]()
     var dict = [String : Dictionary<String, Any>]()
@@ -37,6 +37,7 @@ class ResultDetailsTableViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         pdfCounter = 0
+        
         if Locale.current.languageCode == "ar"
         {
             progressBarView.direction = StepIndicatorViewDirection(rawValue: 1)!
@@ -102,52 +103,23 @@ class ResultDetailsTableViewController: UITableViewController{
 //(UserDefaults.standard.dictionary(forKey: "dictionary") as! [Int64:Any]?)!
 
 
- func saveDictionary(dict: Dictionary<String , Any>, key: String){
+    func saveDictionary(dict:[String : Dictionary<String , Any>], key: String){
 
-//    do {
-//        let encodedData: Data = try NSKeyedArchiver.archivedData(withRootObject: dict, requiringSecureCoding: false)
-//        UserDefaults.standard.set(encodedData, forKey: key)
-//
-//       }catch{print(error)}
-//    let userDefaults = UserDefaults.standard
-//    userDefaults.setValue(dict, forKey: key)
-//    userDefaults.synchronize()
-    
-    
     let userDefaults = UserDefaults.standard
-
-    // Create and Write Dictionary
-//    let dictionary = [
-//        "1234":  true,
-//        "2545": true,
-//        "1547": false,
-//    ]
-
     userDefaults.set(dict, forKey: key)
 
     // Read/Get Dictionary
  }
+    func getDictionary(key: String) ->  [String : Dictionary<String , Any>]?{
 
-// func getDictionary(key: String) -> Dictionary<Int64,Any> {
-    func getDictionary(key: String) {
-//      let preferences = UserDefaults.standard
-//      if UserDefaults.standard.object(forKey: key) != nil{
-//      let decoded = UserDefaults.standard.object(forKey: key)  as! Data
-//        let decodedDict = NSKeyedUnarchiver.unarchivedObject(ofClasses: Dictionary<Int64,Any>, from: <#T##Data#>)
-//        //(with: decoded) as! Dictionary<Int64,Any>
-//
-//      return decodedDict
-//    } else {
-//       let emptyDict = Dictionary<Int64,Any>()
-//       return emptyDict
-//    }
-//    let loadedCart = UserDefaults.standard.dictionary(forKey: key) as! Dictionary<Int64,Any>
+
     let userDefaults = UserDefaults.standard
     let strings = userDefaults.object(forKey: key)
 
-    let x = 5
-//    return loadedCart
- }
+    
+    return strings as? [String : Dictionary<String , Any>]
+        
+    }
  
 /*
  let contactDictionary = ["A":[Contact(name: "Annabel",phone: "000")]]
