@@ -24,7 +24,7 @@ class RatingTableViewController: UITableViewController , IRatingView{
         ratingPresenter = RatingPresenter(view: self)
         ratingPresenter.passDataToModel(labReview: userReview)
         
-        
+        dismiss(animated: true, completion: nil)
     }
     @IBOutlet weak var ratingOutlet: CosmosView!
     @IBOutlet weak var commentOutlet: UITextView!
