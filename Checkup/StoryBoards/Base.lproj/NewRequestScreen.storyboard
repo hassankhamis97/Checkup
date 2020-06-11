@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -24,7 +24,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="newReqSVC" id="26o-WZ-09i" customClass="NewRequestTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TnQ-YE-YvZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -592,11 +592,11 @@
             <objects>
                 <viewController storyboardIdentifier="testNameGroupSVC" id="svR-c2-8P6" customClass="TestNamingGroupViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fcd-yQ-1Dt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LKr-UP-Pa5">
-                                <rect key="frame" x="0.0" y="100" width="414" height="636"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="fBf-5Z-ytj">
@@ -615,7 +615,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" barStyle="black" placeholder="Enter Test Name " showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2HA-IP-4aR">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <color key="backgroundColor" red="0.1918589138" green="0.20340065490000001" blue="0.36415156450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.28235294119999998" green="0.29411764709999999" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -667,7 +667,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ReqlocationSVC" id="8bz-sq-D9y" customClass="ReqLocationTableViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wAg-nf-r3f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
@@ -908,15 +908,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="338" id="iRj-H5-1nB">
-                                        <rect key="frame" x="0.0" y="318" width="414" height="338"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="400" id="iRj-H5-1nB">
+                                        <rect key="frame" x="0.0" y="318" width="414" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iRj-H5-1nB" id="qIr-2o-72i">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="338"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-e4-gBS">
-                                                    <rect key="frame" x="20" y="11" width="374" height="307"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="379"/>
                                                     <gestureRecognizers/>
                                                     <connections>
                                                         <outlet property="delegate" destination="8bz-sq-D9y" id="NAK-p6-X9I"/>
@@ -926,7 +926,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="LGK-e4-gBS" firstAttribute="top" secondItem="qIr-2o-72i" secondAttribute="top" constant="11" id="8kF-go-aVq"/>
-                                                <constraint firstAttribute="bottom" secondItem="LGK-e4-gBS" secondAttribute="bottom" constant="20" id="iqT-Vj-k8M"/>
+                                                <constraint firstAttribute="bottom" secondItem="LGK-e4-gBS" secondAttribute="bottom" constant="10" id="iqT-Vj-k8M"/>
                                                 <constraint firstItem="LGK-e4-gBS" firstAttribute="leading" secondItem="qIr-2o-72i" secondAttribute="leading" constant="20" id="pRk-hr-LMk"/>
                                                 <constraint firstAttribute="trailing" secondItem="LGK-e4-gBS" secondAttribute="trailing" constant="20" id="zgc-cC-3Vl"/>
                                             </constraints>
@@ -971,11 +971,11 @@
             <objects>
                 <viewController storyboardIdentifier="ReqLocPopUpSVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="joC-Du-HLR" customClass="ReqPopUpLocationViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lng-nF-iAH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38r-Bx-901">
-                                <rect key="frame" x="20" y="234" width="374" height="268"/>
+                                <rect key="frame" x="20" y="314" width="374" height="268"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Place Marker1_50px" translatesAutoresizingMaskIntoConstraints="NO" id="vUc-Ur-aSE">
                                         <rect key="frame" x="151" y="0.0" width="72" height="56"/>
@@ -1082,7 +1082,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iIU-Ne-vnM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iTg-zh-udx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1100,7 +1100,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vEn-Ax-4LE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nHI-pT-bDE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1133,11 +1133,11 @@
             <objects>
                 <viewController storyboardIdentifier="ReqPopUpFromHomeSVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="vOJ-Xu-fdY" customClass="ReqPopUpFromHomeViewController" customModule="Checkup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2N8-rE-X8e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8N-3z-eDH">
-                                <rect key="frame" x="20" y="234" width="374" height="268"/>
+                                <rect key="frame" x="20" y="314" width="374" height="268"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="this lab support to take sample from home do you need it?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvb-cG-Djw">
                                         <rect key="frame" x="37" y="83" width="300" height="47"/>
@@ -1225,7 +1225,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="54o-K7-aPt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KTF-XY-HF2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

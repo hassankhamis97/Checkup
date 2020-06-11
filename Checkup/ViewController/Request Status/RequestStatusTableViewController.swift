@@ -188,7 +188,10 @@ class RequestStatusTableViewController: UITableViewController  {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         //****************** Languages check ****************///
-        if Locale.current.languageCode == "ar"
+        
+        var lang =  LocalizationSystem.sharedInstance.getLanguage()
+        
+        if lang == "ar"
         {
             progressBarView.direction = StepIndicatorViewDirection(rawValue: 1)!
             backImageName = "Forward1_20px"
