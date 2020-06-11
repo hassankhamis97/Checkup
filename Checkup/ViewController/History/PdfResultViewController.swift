@@ -15,8 +15,10 @@ class PdfResultViewController: UIViewController , UIPopoverPresentationControlle
     var pdfCounter : Int!
     var noOfPdfObjInArr : Int!
     var  popupCounter = 0
+    var testId : String!
     var dict : Dictionary<String, Any>!
     var pdfProtocol : PdfProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -42,19 +44,24 @@ class PdfResultViewController: UIViewController , UIPopoverPresentationControlle
     
     
     @objc func backToPrevious()  {
-        var myPdf : Bool!
+//        var myPdf : Bool!
+//        if dict.count > 0 {
+        pdfCounter = 0
         for pdf in dict{
             print("pdf value\(pdf.value)")
-            myPdf = pdf.value as? Bool
-            myPdf  = true
-            print(myPdf!)
-            dict.updateValue(true, forKey: pdf.key)
+//            myPdf = pdf.value as? Bool
+//            myPdf  = true
+//            print(myPdf!)
+            if pdf.value as! Bool == true {
+                pdfCounter += 1
+            }
+//            dict.updateValue(true, forKey: pdf.key)
             
             }
         print("new pdf value \(dict.values)")
-            if(pdfCounter == noOfPdfObjInArr! && myPdf == true){
+            if(pdfCounter == noOfPdfObjInArr!){
             print("dict inside condition \(dict)")
-                pdfProtocol.removeDict(newDict: dict)
+//                pdfProtocol.removeDict(newDict: dict)
                 let popoverContent = self.storyboard?.instantiateViewController(withIdentifier: "ratingPopup")  as! RatingTableViewController
                 let nav = UINavigationController(rootViewController: popoverContent)
                 nav.modalPresentationStyle = UIModalPresentationStyle.popover
@@ -63,6 +70,7 @@ class PdfResultViewController: UIViewController , UIPopoverPresentationControlle
                 popover!.delegate = self
                 popover!.sourceView = self.view
                 popover!.sourceRect = CGRect(x: 100,y: 100,width: 0,height: 0)
+                deleteFromUserdefaults(key: testId)
                 self.present(nav, animated: true, completion: nil)
          }
      //   }
@@ -71,6 +79,10 @@ class PdfResultViewController: UIViewController , UIPopoverPresentationControlle
     }
     
   
+    
+    func deleteFromUserdefaults(key : String)  {
+        UserDefaults.standard.removeObject(forKey: key)
+    }
     
    
 }
