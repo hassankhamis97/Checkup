@@ -108,10 +108,10 @@ class HomeViewController: UIViewController ,UICollectionViewDelegateFlowLayout ,
         
         var realTime=RealTime()
                
-//        realTime.addLab(name: "NewLab", image: url, email: "newLab@gmail.com", hotLine: "23456", rating: 4.5)
+//        realTime.addLab(name: "NewLab", image: url, email: "newLab1525@gmail.com", hotLine: "23456", rating: 4.5)
         
         var address=Address(address1: "new alexxx", buildingNo: "3", floorNo: "2", apartmentNo: "1", longitude: 0.0, latitude: 0.0)
-        realTime.addBranch(name: "any name", email: "anynameE@gmail.com", labId: 12, image: url, phone: "070999", isFromHome: true, timeFrom: "10", timeTo: "10", holidays: "friday", address: address, rating: 4.7, governId: 1)
+        realTime.addBranch(name: "any name", email: "agfg@gmail.com", labId: 12, image: url, phone: "070999", isFromHome: true, timeFrom: "10", timeTo: "10", holidays: "friday", address: address, rating: 4.7, governId: 1)
         //        tabBarItem.badgeValue = "1"
         labSlideShow.layer.cornerRadius = 10
         let manager = CLLocationManager()
