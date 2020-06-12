@@ -64,8 +64,8 @@ class MainChatModel : IMainChatModel{
             print(document!)
             print(document?.data()?["nickname"] as? String?)
             
-            self.pearedArr[self.counter].name = (document?.data()?["nickname"] as? String?)!
-            self.pearedArr[self.counter].imgUrl = (document?.data()?["photoUrl"] as? String?)!
+            pearedObj.name = (document?.data()?["nickname"] as? String?)!
+            pearedObj.imgUrl = (document?.data()?["photoUrl"] as? String?)!
 //            print(pearedObj.imgUrl!)
 //            print(pearedObj.name!)
             print("document \(document!)")
