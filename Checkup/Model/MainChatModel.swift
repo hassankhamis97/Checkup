@@ -12,7 +12,7 @@ import FirebaseFirestore
 class MainChatModel : IMainChatModel{
     let db = Firestore.firestore()
     var pearedArr : [PearedUserData] = [PearedUserData]()
-    var pearedObj : PearedUserData = PearedUserData()
+//    var pearedObj : PearedUserData = PearedUserData()
     var newPresenter : IMainChatPresenenter!
     var counter  = 0
     var queryArr : Int!
@@ -28,20 +28,22 @@ class MainChatModel : IMainChatModel{
                 print("Error getting docments : \(err)")
             }else{
                 for doc in QuerySnapshot!.documents{
+                    var pearedObj : PearedUserData = PearedUserData()
                     self.queryArr = QuerySnapshot?.documents.count
                     print(doc.documentID)
                         print(doc.data())
                     print(doc.data()["lastMessage"]!)
-                    self.pearedObj.lastMessage = doc.data()["lastMessage"] as? String
-                    self.pearedObj.noOfUnReadMessages = String(doc.data()["noOfUnReadMessage"] as! Int)
-                    self.pearedObj.lastMessageTime = doc.data()["lastMsgTimeStamp"] as? String
+                    pearedObj.lastMessage = doc.data()["lastMessage"] as? String
+                    pearedObj.noOfUnReadMessages = String(doc.data()["noOfUnReadMessage"] as! Int)
+                    pearedObj.lastMessageTime = doc.data()["lastMsgTimeStamp"] as? String
                     
-                    self.pearedObj.idPearedUser = doc.data()["senderId"] as? String
-                    if ( self.pearedObj.idPearedUser == Auth.auth().currentUser!.uid)
+                    pearedObj.idPearedUser = doc.data()["senderId"] as? String
+                    if (pearedObj.idPearedUser == Auth.auth().currentUser!.uid)
                     {
-                        self.pearedObj.idPearedUser = doc.documentID
+                        pearedObj.idPearedUser = doc.documentID
                     }
-                    self.readRestOfDataFromFirestore(id: self.pearedObj.idPearedUser as! String , count: self.queryArr)
+                     self.pearedArr.append(pearedObj)
+                    self.readRestOfDataFromFirestore(pearedObj: pearedObj  , count: self.queryArr)
 
                     
                     
@@ -55,21 +57,21 @@ class MainChatModel : IMainChatModel{
         
     }
     
-    func readRestOfDataFromFirestore(id : String , count : Int){
+    func readRestOfDataFromFirestore(pearedObj : PearedUserData , count : Int){
     
-        db.collection("users").document(id).getDocument {(document  ,error) in
+        db.collection("users").document(pearedObj.idPearedUser as! String).getDocument {(document  ,error) in
            
             print(document!)
             print(document?.data()?["nickname"] as? String?)
             
-            self.pearedObj.name = (document?.data()?["nickname"] as? String?)!
-            self.pearedObj.imgUrl = (document?.data()?["photoUrl"] as? String?)!
-            print(self.pearedObj.imgUrl!)
-            print(self.pearedObj.name!)
+            self.pearedArr[self.counter].name = (document?.data()?["nickname"] as? String?)!
+            self.pearedArr[self.counter].imgUrl = (document?.data()?["photoUrl"] as? String?)!
+//            print(pearedObj.imgUrl!)
+//            print(pearedObj.name!)
             print("document \(document!)")
             self.counter = self.counter+1
             
-            self.pearedArr.append(self.pearedObj)
+           
             if (self.counter == count ){
                 self.newPresenter.onSuccess(pearedArr: self.pearedArr)
                 print("counter :  \(self.counter)")

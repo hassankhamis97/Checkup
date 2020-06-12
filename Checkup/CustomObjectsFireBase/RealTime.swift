@@ -94,7 +94,7 @@ class RealTime {
     
     func saveLabToDB(labObj: Laboratory) {
         
-        let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/addLab"
+        let urlString = "\(ApiUrl.API_URL)/api/Lab/addLab"
         let labDic = try! DictionaryEncoder.encode(labObj)
         //            let urlString = "http://192.168.1.9:3000/api/AnalysisService/AddNewAnalysis"
         Alamofire.request(urlString, method: .post, parameters: labDic,encoding: JSONEncoding.default, headers: nil).responseString {
@@ -108,7 +108,7 @@ class RealTime {
     
     func saveLabBranchToDB(labBranchObj: Branch) {
         
-        let urlString = "\(ApiUrl.API_URL)/api/AnalysisService/addLabBranch"
+        let urlString = "\(ApiUrl.API_URL)/api/Lab/addLabBranch"
         let labDic = try! DictionaryEncoder.encode(labBranchObj)
         //            let urlString = "http://192.168.1.9:3000/api/AnalysisService/AddNewAnalysis"
         Alamofire.request(urlString, method: .post, parameters: labDic,encoding: JSONEncoding.default, headers: nil).responseString {
