@@ -135,9 +135,11 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
 //                cell.bounds.size = cellWidth
 //            }
             cell.labImageVIew.sd_setImage(with: URL(string: homeLabArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
-            cell.labRating.rating =  (homeLabArr[indexPath.row].rating as! NSString).doubleValue
+            cell.labRating.settings.fillMode = .precise
+            cell.labRating.rating =  homeLabArr[indexPath.row].rating!
             cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = homeLabArr[indexPath.row].hotline
+            
         }
         cell.labImageVIew.layer.cornerRadius = 10
         //        cell.labRating.rating = 3

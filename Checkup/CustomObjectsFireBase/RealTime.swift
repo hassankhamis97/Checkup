@@ -73,11 +73,23 @@ class RealTime {
     }
     
     func addLabToFireStore(username: String, id: String, photo: String){
-        Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": photo , "type": 4 ], merge: true)
+        Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": photo , "type": 4 ]){ err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
     }
     
     func addLabBranchToFireStore(username: String, id: String, photo: String){
-          Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": photo , "type": 3 ], merge: true)
+          Firestore.firestore().collection("users").document(id).setData([ "nickname": username, "id": id, "photoUrl": photo , "type": 3 ]) { err in
+              if let err = err {
+                  print("Error writing document: \(err)")
+              } else {
+                  print("Document successfully written!")
+              }
+          }
       }
     
     func saveLabToDB(labObj: Laboratory) {

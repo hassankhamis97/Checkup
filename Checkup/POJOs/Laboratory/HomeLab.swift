@@ -12,5 +12,5 @@ struct HomeLab : Encodable {
     var hotline : String?
     var labPhoto : String?
     var labName : String?
-    var rating : String?
+    var rating : Double?
 }

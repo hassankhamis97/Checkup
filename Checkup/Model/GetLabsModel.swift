@@ -32,7 +32,7 @@ class GetLabsModel: IGetLabsModel {
                     homeLab.labPhoto = item["labPhoto"].stringValue
                     homeLab.labName = item["labName"].stringValue
                     homeLab.hotline = item["hotline"].stringValue
-                    homeLab.rating = item["rating"].stringValue
+                    homeLab.rating = item["rating"].doubleValue
                     labs.append(homeLab)
                 }
                 self.getLabsPresenterRef?.onSuccess(homeLabs: labs, str:"search")
@@ -79,7 +79,7 @@ class GetLabsModel: IGetLabsModel {
                     homeLab.labPhoto = item["labPhoto"].stringValue
                     homeLab.labName = item["labName"].stringValue
                     homeLab.hotline = item["hotline"].stringValue
-                    homeLab.rating = item["rating"].stringValue
+                    homeLab.rating = item["rating"].doubleValue
                     labs.append(homeLab)
                 }
                 self.getLabsPresenterRef?.onSuccess(homeLabs: labs, str:"filtered")

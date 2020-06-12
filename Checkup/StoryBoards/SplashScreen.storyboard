@@ -17,15 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bek-JK-EcZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="NEM-sE-DMV"/>
+                                    <constraint firstAttribute="height" constant="300" id="ja9-aj-N5w"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Bek-JK-EcZ" firstAttribute="top" secondItem="Drk-Ry-KAL" secondAttribute="top" id="OB9-Yj-cAy"/>
-                            <constraint firstItem="Bek-JK-EcZ" firstAttribute="leading" secondItem="Drk-Ry-KAL" secondAttribute="leading" id="VdO-m9-1xf"/>
-                            <constraint firstItem="Drk-Ry-KAL" firstAttribute="trailing" secondItem="Bek-JK-EcZ" secondAttribute="trailing" id="i1W-Wa-sjp"/>
-                            <constraint firstItem="Drk-Ry-KAL" firstAttribute="bottom" secondItem="Bek-JK-EcZ" secondAttribute="bottom" id="tMj-XJ-3Mt"/>
+                            <constraint firstItem="Bek-JK-EcZ" firstAttribute="centerY" secondItem="37n-hd-bMN" secondAttribute="centerY" id="5YV-wS-CCc"/>
+                            <constraint firstItem="Bek-JK-EcZ" firstAttribute="centerX" secondItem="37n-hd-bMN" secondAttribute="centerX" id="UXi-yM-th7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Drk-Ry-KAL"/>
                     </view>
@@ -49,7 +51,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Ptu-4Z-BPu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nH1-av-U9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8Fc-MU-pGf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -61,6 +62,7 @@
                         <segue destination="znH-PV-3aF" kind="relationship" relationship="rootViewController" id="Ddh-3r-Eq7"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nH1-av-U9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.623188405797109" y="97.767857142857139"/>
         </scene>
