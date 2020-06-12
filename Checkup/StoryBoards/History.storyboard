@@ -710,6 +710,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="showDetailsAction:" destination="qom-gT-oOL" eventType="touchUpInside" id="QoH-PX-moq"/>
+                                                        <action selector="showRequestDetailBtn:" destination="qom-gT-oOL" eventType="touchUpInside" id="7To-pf-WJg"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -809,6 +810,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8z-kg-oGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4431.884057971015" y="675"/>
+        </scene>
+        <!--reqStatus-->
+        <scene sceneID="w8F-W5-QuD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="reqStatus" storyboardName="RequestTStatus" referencedIdentifier="reqStatus" id="WhV-XD-klo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qzk-vx-0cq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4433" y="1049"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="J8o-IF-Sfp">

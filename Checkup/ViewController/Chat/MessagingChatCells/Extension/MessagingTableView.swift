@@ -148,7 +148,7 @@ extension MessagingChatViewController : UITableViewDelegate,UITableViewDataSourc
         
         if (isTop == false && msgTableView.contentOffset.y >= (msgTableView.contentSize.height - msgTableView.frame.size.height)) {
             isTop = true
-            messagingChatPresenter.getData(messageParams: messageParams)
+            messagingChatPresenter.getData(messageParams: messageParams, hasNoOfNotification: hasNoOfNotification)
             print(" you reached end of the table")
         }
         else if isTop==true && msgTableView.contentOffset.y < (msgTableView.contentSize.height - msgTableView.frame.size.height){

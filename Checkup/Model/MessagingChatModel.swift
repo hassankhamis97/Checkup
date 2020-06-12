@@ -34,7 +34,27 @@ class MessagingChatModel: IMessagingChatModel {
         }
         return instance
     }
-    func getData(chatPresenterRef : IChat,messageParams: MessageParams) {
+    func getData(chatPresenterRef : IChat,messageParams: MessageParams, hasNoOfNotification : Bool) {
+        if (hasNoOfNotification) {
+//            var currentViewedPerson = document.get("currentViewedPerson") as! String
+//            senderChatStatus = ChatStatus(lastMsgTimeStamp: self.timestamp, noOfUnReadMessage: 0, lastMessage: message.content!, senderId: Auth.auth().currentUser!.uid)
+            db?.collection("userChat").document(Auth.auth().currentUser!.uid).collection(Auth.auth().currentUser!.uid).document(messageParams.pearedId!).updateData(["noOfUnReadMessage": 0]) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+            //            if let sendMessagePresenter = chatPresenterRef as? ISendMessagePresenter {
+            //                sendMessagePresenter.onSuccess()
+            //            }
+            //            if let imageMessagePresenter = chatPresenterRef as? IImageMessagePresenter {
+            //                imageMessagePresenter.onSuccess()
+            //            }
+            //
+                        
+                        print("Document successfully written!")
+                    }
+                    }
+        }
+        
         var isFirebaseCalled : Bool? = nil
         var dbRef : Query!
         if messageParams.pearedId! < Auth.auth().currentUser!.uid {

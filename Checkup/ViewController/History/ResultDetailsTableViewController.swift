@@ -14,6 +14,16 @@ class ResultDetailsTableViewController: UITableViewController{
 
     @IBOutlet var progressBarView: StepIndicatorView!
     
+    @IBAction func showRequestDetailBtn(_ sender: UIButton) {
+        
+        var reqStatusVC = storyboard?.instantiateViewController(withIdentifier: "reqStatus") as! RequestStatusTableViewController
+        reqStatusVC.isFromResult = true
+       reqStatusVC.showDetailsPage = true
+        reqStatusVC.testID = String(testObj.id!)
+        reqStatusVC.x = 1
+        reqStatusVC.testStatusObj = testObj
+        self.navigationController?.pushViewController(reqStatusVC, animated: true)
+    }
     @IBOutlet var pdfCollectionView: UICollectionView!
     @IBOutlet var resultTimeTextView: UILabel!
     @IBOutlet var resultDateTextView: UILabel!

@@ -24,6 +24,7 @@ class MessagingChatViewController: UIViewController {
     var imagePicker: ImagePicker!
     var isSendImage = false
     var databaseImageArray=[UIImage]()
+    var hasNoOfNotification : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         title = currentPearedUser.name
@@ -53,7 +54,11 @@ class MessagingChatViewController: UIViewController {
         
                 messageParams.take = 20
         //        messagingChatPresenter.getData(messageParams: messageParams, skip: &(messageParams.skip)!)
-                messagingChatPresenter.getData(messageParams: messageParams)
+        if ((currentPearedUser.noOfUnReadMessages! as NSString).integerValue > 0){
+            hasNoOfNotification = true
+        }
+        messagingChatPresenter.getData(messageParams: messageParams,hasNoOfNotification: hasNoOfNotification)
+        hasNoOfNotification = false
     }
     override func viewWillAppear(_ animated: Bool) {
         

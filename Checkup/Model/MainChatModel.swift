@@ -22,7 +22,7 @@ class MainChatModel : IMainChatModel{
    
     
     func readDataFromFirestore(){
-  db.collection("userChat").document(Auth.auth().currentUser!.uid).collection(Auth.auth().currentUser!.uid).getDocuments(completion: {
+        db.collection("userChat").document(Auth.auth().currentUser!.uid).collection(Auth.auth().currentUser!.uid).order(by: "lastMsgTimeStamp", descending: true).addSnapshotListener {
             QuerySnapshot , Error in
             if let err = Error {
                 print("Error getting docments : \(err)")
@@ -53,7 +53,7 @@ class MainChatModel : IMainChatModel{
                //self.newPresenter.onSuccess(pearedArr: self.pearedArr)
             }
 
-    })
+    }
         
     }
     
@@ -73,7 +73,9 @@ class MainChatModel : IMainChatModel{
             
            
             if (self.counter == count ){
+                self.counter = 0
                 self.newPresenter.onSuccess(pearedArr: self.pearedArr)
+                self.pearedArr.removeAll()
                 print("counter :  \(self.counter)")
 
             }
