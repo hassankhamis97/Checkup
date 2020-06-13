@@ -104,38 +104,56 @@ class HomeViewController: UIViewController ,UICollectionViewDelegateFlowLayout ,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url="https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/Labs%2FWhatsApp%20Image%202020-06-06%20at%204.55.14%20PM%20(2).jpeg?alt=media&token=991de809-36cd-4071-a937-6e090c836b3e"
+        let url="https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/Labs%2FWhatsApp%20Image%202020-06-13%20at%201.45.32%20AM.jpeg?alt=media&token=3bd9869f-674f-4df7-9451-814a035e9158"
         
         
-        var urlLab="https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/Labs%2FWhatsApp%20Image%202020-06-01%20at%2012.07.53%20PM.jpeg?alt=media&token=2c842d02-34a0-4958-85a5-78d51a966327"
+        
+       // sror: https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/Labs%2FWhatsApp%20Image%202020-06-06%20at%204.55.14%20PM%20(2).jpeg?alt=media&token=991de809-36cd-4071-a937-6e090c836b3e
+        
+        //kaws:https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/Labs%2FWhatsApp%20Image%202020-06-06%20at%204.55.14%20PM.jpeg?alt=media&token=8c8f9192-2435-4c5d-9745-efababd288c8
+        
+        
+        // manar :https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/Labs%2FWhatsApp%20Image%202020-06-13%20at%201.45.32%20AM.jpeg?alt=media&token=3bd9869f-674f-4df7-9451-814a035e9158
+
         
         
         var realTime=RealTime()
 //
-//        realTime.addLab(name: "Zewil Lab", image: urlLab, email: "zewil@gmail.com", hotLine: "988110", rating: 5)
+//       realTime.addLab(name: "Zewil Lab", image: url, email: "zewil@gmail.com", hotLine: "988110", rating: 5)
         
-//       var address=Address(address1: "Abdul Salam Aref Street, San Stefano, Qesm El raml, Alexandria", buildingNo: "50", floorNo: "3", apartmentNo: "2", longitude: 29.967400
-//         , latitude: 31.244552)
+////       var address=Address(address1: "Tahta Road -Sohag", buildingNo: "18", floorNo: "4", apartmentNo: "3", longitude:31.1768104
+////        , latitude: 26.8844932 )
+////
+////
+//        realTime.addBranch(name: "Zewil(Tahta Road)", email: "zewil_tahta_road@gmail.com", labId:24, image: url, phone: "    093369010", isFromHome: true, timeFrom: "10:00 AM", timeTo: "10:00 PM", holidays: "Friday", address: address, rating: 2.5, governId: 9)
+//
         
+     /*
+      
+       var address2=Address(address1: "Samia el gamal street,Mansoura", buildingNo: "9", floorNo: "4", apartmentNo: "7", longitude: 31.367131, latitude:   31.031015)
         
-        //        realTime.addBranch(name: "Soror(San-Stefano)", email: "Soror_sanstefano@gmail.com", labId:21, image: url, phone: "036359008", isFromHome: true, timeFrom: "10:00 AM", timeTo: "10:00 PM", holidays: "Friday", address: address, rating: 3, governId: 2)
+   
+           realTime.addBranch(name: "Al-kaws(Samia el gamal)", email: "Al-kaws_Samia_el_gamal@gmail.com", labId:20, image: url, phone: "0502354290", isFromHome: true, timeFrom: "10:00 AM", timeTo: "10:00 PM", holidays: "Friday", address: address2, rating: 3, governId: 7)
         
-      /*
-       var address2=Address(address1: "El Gumhoria street, Qism Thani,Mansoura", buildingNo: "8", floorNo: "4", apartmentNo: "7", longitude: 31.378716
-                , latitude: 31.047388)
-        
-        
-        
-        
-           realTime.addBranch(name: "Soror(El Gumhoria)", email: "soror_Elgumhoria_street@gmail.com", labId:21, image: url, phone: "0502389002 - 0502340786", isFromHome: true, timeFrom: "11:00 AM", timeTo: "11:00 PM", holidays: "Friday", address: address2, rating: 3.5, governId: 7)
         */
         
        
-        var address3=Address(address1: "Alnahda Street- Alhamra eltanya-Qism Than Assuit", buildingNo: "18", floorNo: "4", apartmentNo: "3", longitude: 31.182082
-                      , latitude: 27.181037)
-   
+//        var address3=Address(address1: "Alshahid atef elsadat Street", buildingNo: "10", floorNo: "4", apartmentNo: "3", longitude:32.2997523
+//                      , latitude:31.2710749)
+//
+//            realTime.addBranch(name: "Al-Manar(Alshahid atef elsadat)", email: "al_manar_alshahid_atef_elsadat@gmail.com", labId:25, image: url, phone: "066245687-066234576", isFromHome: true, timeFrom: "10:00 AM", timeTo: "10:00 PM", holidays: "Friday", address: address3, rating: 2.5, governId: 4)
+//        
         
-            realTime.addBranch(name: "Soror(Alnahda Street)", email: "soror_alnahda_street@gmail.com", labId:21, image: url, phone: "0887698050-0884310987", isFromHome: true, timeFrom: "10:00 AM", timeTo: "10:00 PM", holidays: "Friday", address: address3, rating: 2.5, governId: 5)
+        /*
+        var address3=Address(address1: "AlGish Street", buildingNo: "6", floorNo: "2", apartmentNo: "1", longitude:31.2426718
+                             , latitude: 30.7148723)
+
+          
+           
+        realTime.addBranch(name: "Al-Manar(AlGish Street)", email: "al_manar_algish_street@gmail.com", labId:25, image: url, phone: "0402567985-0402567987", isFromHome: true, timeFrom: "10:00 AM", timeTo: "10:00 PM", holidays: "Friday", address: address3, rating: 3.5, governId: 10)
+        
+        */
+
         
         
         //        tabBarItem.badgeValue = "1"

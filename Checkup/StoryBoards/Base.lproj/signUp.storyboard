@@ -83,7 +83,7 @@
                                                             </constraints>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Account1_50px"/>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -150,7 +150,7 @@
                                                             </constraints>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                                     <integer key="value" value="1"/>
@@ -216,7 +216,7 @@
                                                                 <constraint firstAttribute="height" constant="55" id="uBv-GP-FrU"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                                     <integer key="value" value="1"/>
@@ -282,7 +282,7 @@
                                                                 <constraint firstAttribute="height" constant="55" id="m9Q-MX-iJB"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                                     <integer key="value" value="1"/>

@@ -103,7 +103,7 @@ extension HomeViewController : UICollectionViewDelegate , UICollectionViewDataSo
 
             cell.labImageVIew.sd_setImage(with: URL(string: searchedHomeLabsArr[indexPath.row].labPhoto ?? ""), placeholderImage:UIImage(named: "placeholder.png"))
             
-            cell.labRating.rating =  (searchedHomeLabsArr[indexPath.row].rating as! NSString).doubleValue
+            cell.labRating.rating =  (searchedHomeLabsArr[indexPath.row].rating!)
             cell.labRating.settings.updateOnTouch = false
             cell.labHotLine.text = searchedHomeLabsArr[indexPath.row].hotline
             

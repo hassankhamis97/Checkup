@@ -26,7 +26,9 @@ class SplashScreenViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
                }
 //            
-            let animated_image =   UIImage.gif(asset: "checkupLogoGif")
+//            let animated_image =   UIImage.gif(asset: "checkupLogoGif")
+        
+        let animated_image =   UIImage.gif(asset: "Gif-newWithBG")
 //        var  imageView=UIImageView()
             imageView.animationImages = animated_image?.images
             imageView.animationDuration=4

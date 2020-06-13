@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newmicroscope (1)" translatesAutoresizingMaskIntoConstraints="NO" id="WPg-Hg-UL8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="600"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoCheckupnew3WithoutWord" translatesAutoresizingMaskIntoConstraints="NO" id="WPg-Hg-UL8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1412"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yY2-Sj-ck6">
                                 <rect key="frame" x="0.0" y="44" width="414" height="755"/>
@@ -107,7 +107,7 @@
                                             <constraint firstAttribute="height" constant="30" id="LHW-ZB-fY8"/>
                                             <constraint firstAttribute="width" constant="40" id="TDh-mz-djK"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="chatSend"/>
+                                        <state key="normal" backgroundImage="Email Send_50px"/>
                                         <connections>
                                             <action selector="sendMsgBtn:" destination="qYj-uN-8OE" eventType="touchUpInside" id="i5e-Rn-yiW"/>
                                         </connections>
@@ -260,7 +260,7 @@
     <resources>
         <image name="Chat1_50px" width="50" height="50"/>
         <image name="Compact Camera_50px" width="50" height="50"/>
-        <image name="chatSend" width="64" height="64"/>
-        <image name="newmicroscope (1)" width="800" height="600"/>
+        <image name="Email Send_50px" width="50" height="50"/>
+        <image name="logoCheckupnew3WithoutWord" width="1136" height="1412"/>
     </resources>
 </document>
