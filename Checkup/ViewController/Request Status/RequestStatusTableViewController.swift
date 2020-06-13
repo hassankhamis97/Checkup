@@ -117,7 +117,7 @@ class RequestStatusTableViewController: UITableViewController  {
             tableView.reloadData()
             return
         }
-        //        let location = locAddress.address1
+                let location = locAddress.address1
         
         self.locationTextArea.text = locAddress.address1
         
@@ -221,16 +221,7 @@ class RequestStatusTableViewController: UITableViewController  {
         self.progressBarView.circleTintColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
         //UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
         
-        if isFromResult == false {
-        testStatusObj = Test();
-        
-        print( testID!)
-        let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
-        requesStatusPresenter.getRequest(testId: testID)
-        }
-        else {
-            showTestDetails()
-        }
+       
         //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
         // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
         progressBarView.currentStep=0
@@ -267,7 +258,16 @@ class RequestStatusTableViewController: UITableViewController  {
         
         progressBarView.currentStep=0
         
-        
+        if isFromResult == false {
+               testStatusObj = Test();
+               
+               print( testID!)
+               let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
+               requesStatusPresenter.getRequest(testId: testID)
+               }
+               else {
+                   showTestDetails()
+               }
         
         
     }
