@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03020C242482C8D200799086 /* mainReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03020C232482C8D000799086 /* mainReviewsTableViewCell.swift */; };
+		0305960F24952DDB002CDF83 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0305960E24952DDA002CDF83 /* ContactsTableViewCell.swift */; };
 		03067A232477724F000F1424 /* LabDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03067A222477724F000F1424 /* LabDescriptionModel.swift */; };
 		03067A26247772B2000F1424 /* LabDescPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03067A25247772B2000F1424 /* LabDescPresenter.swift */; };
 		03067A292477733D000F1424 /* LabDescContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03067A282477733D000F1424 /* LabDescContract.swift */; };
@@ -37,6 +38,10 @@
 		03789BD5246CC39700C0BF33 /* BranchesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */; };
 		03789BDA246CC72C00C0BF33 /* LabBranchesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */; };
 		037D346D24884A3C002DB046 /* ReviewsParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D346C24884A3C002DB046 /* ReviewsParams.swift */; };
+		0385DCF72492446C005A123B /* BranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385DCF62492446C005A123B /* BranchViewController.swift */; };
+		0385DCF9249244A4005A123B /* BranchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385DCF8249244A4005A123B /* BranchTableViewController.swift */; };
+		0385DCFB249244C9005A123B /* ContactsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385DCFA249244C9005A123B /* ContactsTableView.swift */; };
+		0385DCFD249244F6005A123B /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385DCFC249244F6005A123B /* TableDataSource.swift */; };
 		038B285C248D6E2300C5B6EC /* RatingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B285B248D6E2300C5B6EC /* RatingPresenter.swift */; };
 		03C1DD2A2478581900D2A008 /* BranchDescModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DD292478581900D2A008 /* BranchDescModel.swift */; };
 		03C1DD2C247858B800D2A008 /* BranchDescContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DD2B247858B800D2A008 /* BranchDescContract.swift */; };
@@ -348,6 +353,7 @@
 
 /* Begin PBXFileReference section */
 		03020C232482C8D000799086 /* mainReviewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainReviewsTableViewCell.swift; sourceTree = "<group>"; };
+		0305960E24952DDA002CDF83 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		03067A222477724F000F1424 /* LabDescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescriptionModel.swift; sourceTree = "<group>"; };
 		03067A25247772B2000F1424 /* LabDescPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescPresenter.swift; sourceTree = "<group>"; };
 		03067A282477733D000F1424 /* LabDescContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDescContract.swift; sourceTree = "<group>"; };
@@ -377,6 +383,10 @@
 		03789BD3246CC39700C0BF33 /* BranchesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BranchesCollectionViewCell.xib; sourceTree = "<group>"; };
 		03789BD9246CC72C00C0BF33 /* LabBranchesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabBranchesCollectionView.swift; sourceTree = "<group>"; };
 		037D346C24884A3C002DB046 /* ReviewsParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsParams.swift; sourceTree = "<group>"; };
+		0385DCF62492446C005A123B /* BranchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchViewController.swift; sourceTree = "<group>"; };
+		0385DCF8249244A4005A123B /* BranchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchTableViewController.swift; sourceTree = "<group>"; };
+		0385DCFA249244C9005A123B /* ContactsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableView.swift; sourceTree = "<group>"; };
+		0385DCFC249244F6005A123B /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		038B285B248D6E2300C5B6EC /* RatingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPresenter.swift; sourceTree = "<group>"; };
 		03C1DD292478581900D2A008 /* BranchDescModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescModel.swift; sourceTree = "<group>"; };
 		03C1DD2B247858B800D2A008 /* BranchDescContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDescContract.swift; sourceTree = "<group>"; };
@@ -728,6 +738,14 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		0305960D24952D62002CDF83 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				0305960E24952DDA002CDF83 /* ContactsTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		03067A242477725D000F1424 /* LabDescription */ = {
 			isa = PBXGroup;
 			children = (
@@ -840,6 +858,18 @@
 				037D346C24884A3C002DB046 /* ReviewsParams.swift */,
 			);
 			path = ReviewsTable;
+			sourceTree = "<group>";
+		};
+		0385DCF524924413005A123B /* New  */ = {
+			isa = PBXGroup;
+			children = (
+				0305960D24952D62002CDF83 /* cells */,
+				0385DCF62492446C005A123B /* BranchViewController.swift */,
+				0385DCF8249244A4005A123B /* BranchTableViewController.swift */,
+				0385DCFA249244C9005A123B /* ContactsTableView.swift */,
+				0385DCFC249244F6005A123B /* TableDataSource.swift */,
+			);
+			path = "New ";
 			sourceTree = "<group>";
 		};
 		038B285A248D6BF900C5B6EC /* Rating */ = {
@@ -1201,6 +1231,7 @@
 		4E2C9E0024708CB1007C6109 /* BranchDescription */ = {
 			isa = PBXGroup;
 			children = (
+				0385DCF524924413005A123B /* New  */,
 				03FDA1912470BC570084C4AA /* StaticCells */,
 				03FDA18E2470B38F0084C4AA /* Extensions */,
 				4E2C9E0124708D77007C6109 /* BranchDescriptionViewController.swift */,
@@ -2698,8 +2729,10 @@
 				032AB5C72481E0770021DE4F /* ReviewsContract.swift in Sources */,
 				CC4B65CD2479B9B400BA1062 /* ICheckConnection.swift in Sources */,
 				CCCDA045246A94F5005549EA /* ReqLocationTableViewController.swift in Sources */,
+				0385DCF9249244A4005A123B /* BranchTableViewController.swift in Sources */,
 				4E3C1F40247693A700D9761D /* GetLabsModel.swift in Sources */,
 				4E15ACDE2471302C004418B1 /* ShowNewRequestFromPopup.swift in Sources */,
+				0305960F24952DDB002CDF83 /* ContactsTableViewCell.swift in Sources */,
 				4E15ACEC247187E3004418B1 /* Request.swift in Sources */,
 				4E22F936243E743C0090693C /* SignupViewController.swift in Sources */,
 				A33CA627246D3E0D0014CF6B /* UsersTableViewController.swift in Sources */,
@@ -2776,6 +2809,7 @@
 				4EA87524248068D300E95B30 /* ImageIndicatorTableViewCell.swift in Sources */,
 				4E87AF4F247EC5D000002E66 /* ManualNotificationModel.swift in Sources */,
 				4E77B4C42477597F000B3118 /* GetFilteredLabsResponse.swift in Sources */,
+				0385DCF72492446C005A123B /* BranchViewController.swift in Sources */,
 				CCDF8BBD24713DE200F56B2D /* ExtensionLocationView.swift in Sources */,
 				CC1E7C2F24812E8000039693 /* UserChat.swift in Sources */,
 				BB1C09A82488B9BF000F24A6 /* DeleteRequest+Extention.swift in Sources */,
@@ -2842,7 +2876,9 @@
 				03F4449A246F149D00036549 /* DetailsViewController.swift in Sources */,
 				4E87AF48247EC2FD00002E66 /* ManualNotificationContract.swift in Sources */,
 				03380CDC247F5C590055717E /* FilterProtocol.swift in Sources */,
+				0385DCFD249244F6005A123B /* TableDataSource.swift in Sources */,
 				4E2D6CD1248ADEC200FADA05 /* TeamCollectionView.swift in Sources */,
+				0385DCFB249244C9005A123B /* ContactsTableView.swift in Sources */,
 				4E77B4C2247757E3000B3118 /* GetFilteredLabsPresenter.swift in Sources */,
 				CC82F371248B021B0052C075 /* HealthProfileMvp.swift in Sources */,
 				CC1E7C3124814C6D00039693 /* UserRealm.swift in Sources */,

@@ -85,8 +85,8 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     }
     else if(myTag==4){
     let fifthCell = tableView.dequeueReusableCell(withIdentifier: "fifthCell", for: indexPath) as! FifthStaticTableViewCell
-      //  fifthCell.labHolidayOutlet.text = branchDescriptionView.holidays!      NOT IN API
-    return fifthCell
+
+        return fifthCell
     }else if(myTag==5){
     let sixthCell = tableView.dequeueReusableCell(withIdentifier: "sixthCell", for: indexPath) as! SisxthStaticTableViewCell
         var workTime = branchDescriptionView.timeFrom! + branchDescriptionView.timeTo!
@@ -102,7 +102,6 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         let eighthCell = tableView.dequeueReusableCell(withIdentifier: "eighthCell", for: indexPath) as! EighthStaticTableViewCell
             let annotation = MKPointAnnotation()
             annotation.title = branchDescriptionView.labName!
-//        annotation.coordinate = CLLocationCoordinate2D(latitude: (branchDescriptionView.address?.latitude)!, longitude: (branchDescriptionView.address?.longitude)!)
         annotation.coordinate = CLLocationCoordinate2D(latitude: branchDescriptionView.address!.latitude!, longitude: branchDescriptionView.address!.longitude!)
         eighthCell.LabMapOutlet.addAnnotation(annotation)
        return eighthCell

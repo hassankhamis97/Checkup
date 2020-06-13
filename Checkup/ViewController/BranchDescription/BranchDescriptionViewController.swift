@@ -49,9 +49,6 @@ class BranchDescriptionViewController: UIViewController , UIScrollViewDelegate ,
         branchDescPresenter = BranchDescPresenter(view: self)
         branchDescPresenter.getDataFromModel(id: branchId!)
                
-        //reviewPresenterInView = ReviewsPresenter(view: self)
-        //reviewPresenterInView.getReviewsDataFromModel()
-       
         
         viewOutlet.clipsToBounds = true
         viewOutlet.layer.cornerRadius = 15

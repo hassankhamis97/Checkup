@@ -41,5 +41,5 @@ class BranchDescModel : IBranchDescModel {
             
         }
     }
-    
+    ///
 }

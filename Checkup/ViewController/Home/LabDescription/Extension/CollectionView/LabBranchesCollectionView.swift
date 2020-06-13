@@ -109,8 +109,9 @@ extension LabDescViewController : UICollectionViewDataSource , UICollectionViewD
     
        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branchDesc") as! BranchDescriptionViewController
+        let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branch") as! BranchViewController
         branchDesc.modalPresentationStyle = .fullScreen
+      
         branchDesc.branchId = labDescriptionObj.branches![indexPath.row].idFB
         
         self.present(branchDesc , animated: true , completion: nil)
