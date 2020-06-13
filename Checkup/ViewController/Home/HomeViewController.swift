@@ -103,6 +103,59 @@ class HomeViewController: UIViewController ,UICollectionViewDelegateFlowLayout ,
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url="https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/Labs%2FWhatsApp%20Image%202020-06-13%20at%201.45.32%20AM.jpeg?alt=media&token=3bd9869f-674f-4df7-9451-814a035e9158"
+        
+        
+        
+       // sror: https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/Labs%2FWhatsApp%20Image%202020-06-06%20at%204.55.14%20PM%20(2).jpeg?alt=media&token=991de809-36cd-4071-a937-6e090c836b3e
+        
+        //kaws:https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/Labs%2FWhatsApp%20Image%202020-06-06%20at%204.55.14%20PM.jpeg?alt=media&token=8c8f9192-2435-4c5d-9745-efababd288c8
+        
+        
+        // manar :https://firebasestorage.googleapis.com/v0/b/checkup-23ffe.appspot.com/o/Labs%2FWhatsApp%20Image%202020-06-13%20at%201.45.32%20AM.jpeg?alt=media&token=3bd9869f-674f-4df7-9451-814a035e9158
+
+        
+        
+        var realTime=RealTime()
+//
+//       realTime.addLab(name: "Zewil Lab", image: url, email: "zewil@gmail.com", hotLine: "988110", rating: 5)
+        
+////       var address=Address(address1: "Tahta Road -Sohag", buildingNo: "18", floorNo: "4", apartmentNo: "3", longitude:31.1768104
+////        , latitude: 26.8844932 )
+////
+////
+//        realTime.addBranch(name: "Zewil(Tahta Road)", email: "zewil_tahta_road@gmail.com", labId:24, image: url, phone: "    093369010", isFromHome: true, timeFrom: "10:00 AM", timeTo: "10:00 PM", holidays: "Friday", address: address, rating: 2.5, governId: 9)
+//
+        
+     /*
+      
+       var address2=Address(address1: "Samia el gamal street,Mansoura", buildingNo: "9", floorNo: "4", apartmentNo: "7", longitude: 31.367131, latitude:   31.031015)
+        
+   
+           realTime.addBranch(name: "Al-kaws(Samia el gamal)", email: "Al-kaws_Samia_el_gamal@gmail.com", labId:20, image: url, phone: "0502354290", isFromHome: true, timeFrom: "10:00 AM", timeTo: "10:00 PM", holidays: "Friday", address: address2, rating: 3, governId: 7)
+        
+        */
+        
+       
+//        var address3=Address(address1: "Alshahid atef elsadat Street", buildingNo: "10", floorNo: "4", apartmentNo: "3", longitude:32.2997523
+//                      , latitude:31.2710749)
+//
+//            realTime.addBranch(name: "Al-Manar(Alshahid atef elsadat)", email: "al_manar_alshahid_atef_elsadat@gmail.com", labId:25, image: url, phone: "066245687-066234576", isFromHome: true, timeFrom: "10:00 AM", timeTo: "10:00 PM", holidays: "Friday", address: address3, rating: 2.5, governId: 4)
+//        
+        
+        /*
+        var address3=Address(address1: "AlGish Street", buildingNo: "6", floorNo: "2", apartmentNo: "1", longitude:31.2426718
+                             , latitude: 30.7148723)
+
+          
+           
+        realTime.addBranch(name: "Al-Manar(AlGish Street)", email: "al_manar_algish_street@gmail.com", labId:25, image: url, phone: "0402567985-0402567987", isFromHome: true, timeFrom: "10:00 AM", timeTo: "10:00 PM", holidays: "Friday", address: address3, rating: 3.5, governId: 10)
+        
+        */
+
+        
+        
         //        tabBarItem.badgeValue = "1"
         labSlideShow.layer.cornerRadius = 10
         let manager = CLLocationManager()

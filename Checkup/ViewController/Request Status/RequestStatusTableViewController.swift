@@ -27,6 +27,7 @@ class RequestStatusTableViewController: UITableViewController  {
     var locationCell:CGFloat = 0
     var xAxis : Int = -40
     var backImageName : String = "icons8-back-20"
+    var isFromResult = false
     static var page: Int?
     @IBOutlet weak var costText: UILabel!
     
@@ -99,12 +100,15 @@ class RequestStatusTableViewController: UITableViewController  {
     @IBOutlet weak var progressBarView: StepIndicatorView!
     
     @IBAction func showRequestDetailsBtn(_ sender: Any) {
+        showTestDetails()
         
+    }
+    func showTestDetails() {
         RequestStatusTableViewController.page = x;
         showDetailsPage = true
         
         x = 1
-        showCancel = 0 
+        showCancel = 0
         stepIndecatorShow = 0
         
         self.dateTextArea.text = self.testStatusObj.dateForTakingSample
@@ -113,13 +117,12 @@ class RequestStatusTableViewController: UITableViewController  {
             tableView.reloadData()
             return
         }
-        //        let location = locAddress.address1
+                let location = locAddress.address1
         
         self.locationTextArea.text = locAddress.address1
         
         tableView.reloadData()
     }
-    
     ////////// refused ///////////////////
     
     @IBOutlet weak var refuseReasonText: UILabel!
@@ -163,7 +166,7 @@ class RequestStatusTableViewController: UITableViewController  {
     @objc func backTapped() {
         print("Button tapped")
         
-        if showDetailsPage == true {
+        if showDetailsPage == true && isFromResult == false {
             stepIndecatorShow = 100
             // x = 7
             x = RequestStatusTableViewController.page!
@@ -188,7 +191,10 @@ class RequestStatusTableViewController: UITableViewController  {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         //****************** Languages check ****************///
-        if Locale.current.languageCode == "ar"
+        
+        var lang =  LocalizationSystem.sharedInstance.getLanguage()
+        
+        if lang == "ar"
         {
             progressBarView.direction = StepIndicatorViewDirection(rawValue: 1)!
             backImageName = "Forward1_20px"
@@ -215,12 +221,7 @@ class RequestStatusTableViewController: UITableViewController  {
         self.progressBarView.circleTintColor = #colorLiteral(red: 0.03529411765, green: 0.7411764706, blue: 0.9764705882, alpha: 1)
         //UIColor(red: 179.0/255.0, green: 189.0/255.0, blue: 194.0/255.0, alpha: 1.0)
         
-        
-        testStatusObj = Test();
-        
-        print( testID!)
-        let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
-        requesStatusPresenter.getRequest(testId: testID)
+       
         //-M7T-mc9zrSii2vWJ9zE *****  -M7T0G0OLT8h5zPdV0AN   ---- -M7T1XRN8LiaLBI9D2XS
         // refused -M7T1XRN8LiaLBI9D2XS  -- result -M7T0YuvqO4XbT-iAkOZ
         progressBarView.currentStep=0
@@ -257,7 +258,17 @@ class RequestStatusTableViewController: UITableViewController  {
         
         progressBarView.currentStep=0
         
-        
+        if isFromResult == false {
+               testStatusObj = Test();
+               
+               print( testID!)
+               let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
+               requesStatusPresenter.getRequest(testId: testID)
+               }
+               else {
+                      onReceiveRequestStatus(myObj: testStatusObj)
+                      showTestDetails()
+               }
         
         
     }

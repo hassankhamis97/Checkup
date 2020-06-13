@@ -14,6 +14,17 @@ class ResultDetailsTableViewController: UITableViewController{
 
     @IBOutlet var progressBarView: StepIndicatorView!
     
+    @IBAction func showRequestDetailBtn(_ sender: UIButton) {
+        
+        var reqStatusVC = storyboard?.instantiateViewController(withIdentifier: "reqStatus") as! RequestStatusTableViewController
+        reqStatusVC.isFromResult = true
+       reqStatusVC.showDetailsPage = true
+        reqStatusVC.testID = String(testObj.id!)
+        reqStatusVC.x = 1
+        reqStatusVC.testStatusObj = testObj
+        print(reqStatusVC.testStatusObj)
+        self.navigationController?.pushViewController(reqStatusVC, animated: true)
+    }
     @IBOutlet var pdfCollectionView: UICollectionView!
     @IBOutlet var resultTimeTextView: UILabel!
     @IBOutlet var resultDateTextView: UILabel!
@@ -44,9 +55,7 @@ class ResultDetailsTableViewController: UITableViewController{
         }
         let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
         requesStatusPresenter.getRequest(testId: testID)
-       
-        
-        
+    
     }
     @IBAction func showDetailsAction(_ sender: UIButton) {
     }

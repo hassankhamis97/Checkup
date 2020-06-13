@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PearedUserData {
+class PearedUserData {
     var idPearedUser : String?
     var name : String?
     var imgUrl : String?

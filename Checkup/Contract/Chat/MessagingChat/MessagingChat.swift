@@ -13,7 +13,7 @@ protocol IMessagingChatView {
 }
 
 protocol IMessagingChatPresenter : IChat {
-    func getData(messageParams: MessageParams)
+    func getData(messageParams: MessageParams, hasNoOfNotification : Bool)
 //    func getData(messageParams: MessageParams, skip : inout QueryDocumentSnapshot)
     func onSuccess(allMessages : AllMessages, isFirebaseCall: Bool)
     func onFail(message: String)

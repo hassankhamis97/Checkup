@@ -13,9 +13,9 @@ class MessagingChatPresenter: IMessagingChatPresenter {
     init(messagingChatViewRef: IMessagingChatView) {
         self.messagingChatViewRef = messagingChatViewRef
     }
-    func getData(messageParams: MessageParams) {
+    func getData(messageParams: MessageParams, hasNoOfNotification : Bool) {
         let messagingChatModel = MessagingChatModel.getInstance()
-        messagingChatModel.getData(chatPresenterRef : self,messageParams: messageParams)
+        messagingChatModel.getData(chatPresenterRef : self,messageParams: messageParams, hasNoOfNotification : hasNoOfNotification)
     }
 //    func saveMessage(message : Message) {
 //        let messagingChatModel = MessagingChatModel(chatPresenterRef: self)

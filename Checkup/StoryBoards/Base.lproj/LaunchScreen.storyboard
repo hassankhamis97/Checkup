@@ -15,7 +15,18 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jj-ying-7JX0-bfiuxQ-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="E5D-EF-KMk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E5D-EF-KMk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Is-Gv-IOP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E5D-EF-KMk" secondAttribute="trailing" id="TPk-sD-5gS"/>
+                            <constraint firstItem="E5D-EF-KMk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cde-ul-ylJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E5D-EF-KMk" secondAttribute="bottom" id="wYv-GB-e5G"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -24,4 +35,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jj-ying-7JX0-bfiuxQ-unsplash" width="3905" height="2929"/>
+    </resources>
 </document>

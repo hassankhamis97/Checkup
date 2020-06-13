@@ -59,6 +59,10 @@ class HealthProfileTableViewController: UITableViewController,IView ,UITextField
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
               
               view.addGestureRecognizer(tap)
+        
+        diseaseNameTextField.placeholder="Disease Name".localized
+        
+    
   
     }
 
