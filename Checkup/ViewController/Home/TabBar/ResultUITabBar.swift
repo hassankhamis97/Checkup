@@ -8,7 +8,11 @@
 
 import UIKit
 import FirebaseAuth
-class ResultUITabBar: UITabBarController , IManualNotificationView{
+class ResultUITabBar: UITabBarController , IManualNotificationView, IMessageNotificationView{
+    func renderMessageValue(count: Int) {
+        tabBar.items?[2].badgeValue = count > 0 ? String(count) : nil
+    }
+    
     func renderView(manualNotification: ManualNotification) {
         tabBar.items?[1].badgeValue = manualNotification.requestBadge > 0 ? String(manualNotification.requestBadge) : nil
         tabBar.items?[3].badgeValue =  manualNotification.resultBadge > 0 ? String(manualNotification.resultBadge) : nil
@@ -19,6 +23,8 @@ class ResultUITabBar: UITabBarController , IManualNotificationView{
         if Auth.auth().currentUser?.uid != nil {
         var manualNotificationPresenter = ManualNotificationPresenter(manualNotificationViewRef: self)
         manualNotificationPresenter.getNotificationNumbers()
+            var mainChatModel = MainChatModel()
+            mainChatModel.getUnReadMessages(callerRef: self)
         }
     }
     override func viewDidLoad() {

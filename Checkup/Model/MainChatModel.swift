@@ -16,11 +16,31 @@ class MainChatModel : IMainChatModel{
     var newPresenter : IMainChatPresenenter!
     var counter  = 0
     var queryArr : Int!
+    init() {
+        
+    }
     init(presenter : IMainChatPresenenter) {
         newPresenter = presenter
     }
    
-    
+    func getUnReadMessages(callerRef: IMessageNotificationView) {
+    db.collection("userChat").document(Auth.auth().currentUser!.uid).collection(Auth.auth().currentUser!.uid).order(by: "lastMsgTimeStamp", descending: true).addSnapshotListener { QuerySnapshot , Error in
+            var count = 0
+            if let err = Error {
+                print("Error getting docments : \(err)")
+            }else{
+                for doc in QuerySnapshot!.documents{
+                    count += doc.data()["noOfUnReadMessage"] as! Int
+                    
+//                    self.readRestOfDataFromFirestore(pearedObj: pearedObj  , count: self.queryArr)
+                    //self.pearedArr.append(self.pearedObj)
+                    
+                }
+                callerRef.renderMessageValue(count: count)
+                
+        }
+        }
+    }
     func readDataFromFirestore(){
         db.collection("userChat").document(Auth.auth().currentUser!.uid).collection(Auth.auth().currentUser!.uid).order(by: "lastMsgTimeStamp", descending: true).addSnapshotListener {
             QuerySnapshot , Error in
@@ -42,7 +62,7 @@ class MainChatModel : IMainChatModel{
                     {
                         pearedObj.idPearedUser = doc.documentID
                     }
-                     self.pearedArr.append(pearedObj)
+                    self.pearedArr.append(pearedObj)
                     self.readRestOfDataFromFirestore(pearedObj: pearedObj  , count: self.queryArr)
 
                     
