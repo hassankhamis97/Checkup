@@ -22,6 +22,7 @@ class ResultDetailsTableViewController: UITableViewController{
         reqStatusVC.testID = String(testObj.id!)
         reqStatusVC.x = 1
         reqStatusVC.testStatusObj = testObj
+        print(reqStatusVC.testStatusObj)
         self.navigationController?.pushViewController(reqStatusVC, animated: true)
     }
     @IBOutlet var pdfCollectionView: UICollectionView!
@@ -54,9 +55,7 @@ class ResultDetailsTableViewController: UITableViewController{
         }
         let requesStatusPresenter : RequestStatusPresenter = RequestStatusPresenter(requestViewRef : self)
         requesStatusPresenter.getRequest(testId: testID)
-       
-        
-        
+    
     }
     @IBAction func showDetailsAction(_ sender: UIButton) {
     }

@@ -23,7 +23,6 @@ class GetRequestsModel: IGetRequestsModel {
         self.getRequestsPresenterRef = getRequestsPresenterRef
         ref = Database.database().reference()
         db = Firestore.firestore()
-        
     }
     func getRequests(testFilter: TestFilter) {
         //        var x = RequestConfigration(userId: Auth.auth().currentUser?.uid, status: ["PendingForLabConfirmation" , "Done"], take: 3, skip: 0)
@@ -77,8 +76,7 @@ class GetRequestsModel: IGetRequestsModel {
                 print("JSON: \(json)")
                 
                 break
-            case .failure(let error):
-                self.getRequestsPresenterRef.onFail(message: error.localizedDescription)
+            case .failure(let error): self.getRequestsPresenterRef.onFail(message: error.localizedDescription)
                 print(error)
             }
         }
