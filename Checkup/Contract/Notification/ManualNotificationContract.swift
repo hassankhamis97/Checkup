@@ -10,7 +10,9 @@ import Foundation
 protocol IManualNotificationView{
     func renderView(manualNotification: ManualNotification)
 }
-
+protocol IMessageNotificationView{
+    func renderMessageValue(count: Int)
+}
 
 protocol IManualNotificationPresenter : INotificationPresenter{
     func getNotificationNumbers()
