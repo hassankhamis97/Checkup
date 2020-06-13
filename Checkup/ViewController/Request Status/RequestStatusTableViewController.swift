@@ -266,7 +266,8 @@ class RequestStatusTableViewController: UITableViewController  {
                requesStatusPresenter.getRequest(testId: testID)
                }
                else {
-                   showTestDetails()
+                      onReceiveRequestStatus(myObj: testStatusObj)
+                      showTestDetails()
                }
         
         

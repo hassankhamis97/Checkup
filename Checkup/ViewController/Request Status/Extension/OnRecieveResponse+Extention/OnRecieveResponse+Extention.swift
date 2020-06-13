@@ -112,7 +112,7 @@ extension RequestStatusTableViewController : IRequestStatusView
             
             showCancel = 50
             
-            self.codeText.text = myObj.generatedCode!
+          //  self.codeText.text = myObj.generatedCode!
             self.dateTextArea.text = myObj.dateForTakingSample!
             self.timeTextArea.text = myObj.timeForTakingSample!
             if let location = myObj.address {
@@ -131,7 +131,7 @@ extension RequestStatusTableViewController : IRequestStatusView
                 
                 
                 progressBarView.currentStep=1
-                self.codeText.text = myObj.generatedCode
+               // self.codeText.text = myObj.generatedCode
                 self.sampleDate.text = myObj.dateForTakingSample
                 self.sampleTime.text = myObj.timeForTakingSample
                 self.precautionsText.text = myObj.precautions
@@ -142,7 +142,7 @@ extension RequestStatusTableViewController : IRequestStatusView
             {
                 self.x=7
                 progressBarView.currentStep=2
-                self.codeText.text = myObj.generatedCode
+            //    self.codeText.text = myObj.generatedCode
                 showCancel = 50
                 
                 // self.costText.text = myObj.totalCost
@@ -150,7 +150,7 @@ extension RequestStatusTableViewController : IRequestStatusView
             }
             else if myObj.status == "Refused"
             {
-                self.codeText.text = myObj.generatedCode
+          //      self.codeText.text = myObj.generatedCode
                 self.refuseReasonText.text = myObj.radioReason
                 self.refuseDescriptionText.text = myObj.refuseReason
                 
@@ -162,7 +162,7 @@ extension RequestStatusTableViewController : IRequestStatusView
                 // self.tableView.reloadData()
                 
         }
-        
+         self.codeText.text = myObj.generatedCode!
         self.tableView.reloadData()
         self.collectionView.reloadData()
     }
