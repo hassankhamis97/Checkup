@@ -29,6 +29,7 @@ extension LabDescViewController : UICollectionViewDataSource , UICollectionViewD
         
         cell.governNameOutlet.text = labDescriptionObj.branches![indexPath.item].govern
         cell.ratingOutlet.rating = labDescriptionObj.branches![indexPath.item].rating!
+        cell.ratingOutlet.settings.fillMode = .precise
         cell.distanceOutlet.text = convertedDiestance
         cell.addressOutlet.text = String(labDescriptionObj.branches![indexPath.item].address!.buildingNo!) + labDescriptionObj.branches![indexPath.item].address!.address1!
        // cell.branchDescOutlet.text = labDescriptionObj.branches![indexPath.item].address?.address as! String
@@ -110,11 +111,13 @@ extension LabDescViewController : UICollectionViewDataSource , UICollectionViewD
        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let branchDesc = self.storyboard!.instantiateViewController(withIdentifier: "branch") as! BranchViewController
-        branchDesc.modalPresentationStyle = .fullScreen
-      
+       // branchDesc.modalPresentationStyle = .fullScreen
+      branchDesc.isAvailableFromHome = labDescriptionObj.branches![indexPath.row].isAvailableFromHome
         branchDesc.branchId = labDescriptionObj.branches![indexPath.row].idFB
-        
-        self.present(branchDesc , animated: true , completion: nil)
+        branchDesc.elementIndex = indexPath.row
+        branchDesc.labDescRef = self
+        navigationController?.pushViewController(branchDesc, animated: true)
+        //self.present(branchDesc , animated: true , completion: nil)
         }
     
     

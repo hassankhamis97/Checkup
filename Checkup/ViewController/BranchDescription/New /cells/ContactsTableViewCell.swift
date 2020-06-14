@@ -9,7 +9,9 @@
 import UIKit
 
 class ContactsTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var phoneTypeImage: UIImageView!
+    @IBOutlet weak var phoneNumberTxt: UILabel!
+    @IBOutlet weak var callBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -9,18 +9,18 @@
 import UIKit
 import Cosmos
 import Firebase
-class RatingTableViewController: UITableViewController , IRatingView{
+class RatingTableViewController: UITableViewController , IRatingView, UITextViewDelegate {
 
     var userReview : Review = Review()
     var ratingPresenter : IRatingPresenter!
-    
+    var branchId : String!
     
     
     @IBAction func submitAction(_ sender: Any) {
         userReview.description = commentOutlet.text
        
         userReview.userId =  Auth.auth().currentUser?.uid
-//        userReview.branchId =
+        userReview.branchId = branchId
         ratingPresenter = RatingPresenter(view: self)
         ratingPresenter.passDataToModel(labReview: userReview)
         
@@ -34,7 +34,7 @@ class RatingTableViewController: UITableViewController , IRatingView{
         ratingOutlet.didFinishTouchingCosmos = { rating in
                    self.userReview.rateNumber = rating
                }
-     
+        commentOutlet.delegate = self
         commentOutlet.layer.borderWidth = 0.5
         commentOutlet.layer.borderColor = UIColor.gray.cgColor
   //      let imageView = UIImageView(image: UIImage(named:  "newmicroscope (1)"))//
@@ -66,5 +66,34 @@ class RatingTableViewController: UITableViewController , IRatingView{
         cell.backgroundColor = UIColor(white : 1 , alpha: 0.5)
     }
 
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if (commentOutlet.text=="Add a comment..."){
+            
+        commentOutlet.text=""
+        commentOutlet.textColor=UIColor.black
+        commentOutlet.font=UIFont(name: "verdana", size: 18.0)
+            
+        }
+        
+        
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text=="\n"{
+            commentOutlet.resignFirstResponder()
+               }
+        return true
+        }
+    
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if commentOutlet.text==""
+        {
+            commentOutlet.text="Add a comment..."
+            commentOutlet.textColor=UIColor.lightGray
+            commentOutlet.font=UIFont(name: "verdana", size: 15.0)
+        }
+    }
     
 }

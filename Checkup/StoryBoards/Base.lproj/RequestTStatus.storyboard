@@ -417,7 +417,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Requests" id="jcs-eR-8Lb">
-                        <barButtonItem key="rightBarButtonItem" image="filter_30px" id="w99-uY-lXi">
+                        <barButtonItem key="rightBarButtonItem" image="Filter_20px" id="w99-uY-lXi">
                             <inset key="largeContentSizeImageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                             <connections>
                                 <action selector="filterDataBtn:" destination="8cp-jf-iIo" id="6be-re-Ljf"/>
@@ -1571,7 +1571,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVI-xm-bpw">
-                                                    <rect key="frame" x="47" y="28" width="20" height="22"/>
+                                                    <rect key="frame" x="27" y="28" width="40" height="40"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                     </accessibility>
@@ -1699,12 +1699,12 @@
     </scenes>
     <resources>
         <image name="Error_100px" width="100" height="100"/>
+        <image name="Filter_20px" width="20" height="20"/>
         <image name="Ok_100px" width="100" height="100"/>
         <image name="Ok_20px" width="20" height="20"/>
         <image name="alarm" catalog="system" width="62" height="64"/>
         <image name="alarm.fill" catalog="system" width="62" height="64"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
-        <image name="filter_30px" width="30" height="30"/>
         <image name="logoCheckupnew3WithoutWord" width="1136" height="1412"/>
         <image name="mappin.and.ellipse" catalog="system" width="58" height="64"/>
         <image name="person.crop.square.fill" catalog="system" width="64" height="56"/>

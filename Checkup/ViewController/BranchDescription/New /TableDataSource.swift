@@ -19,12 +19,12 @@ class TableDataSource: NSObject,UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactsTableViewCell
         
-    //    cell.phoneNumberTxt.text = phoneList[indexPath.row].number!
+       cell.phoneNumberTxt.text = phoneList[indexPath.row].number!
 
-      //  cell.callBtn.tag = indexPath.row
-        //cell.callBtn.addTarget(self, action: #selector(callNumber), for: .touchUpInside)
+        cell.callBtn.tag = indexPath.row
+        cell.callBtn.addTarget(self, action: #selector(callNumber), for: .touchUpInside)
      
 
         return cell

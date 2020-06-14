@@ -70,6 +70,7 @@ class BranchTableViewController: UITableViewController, IBranchDescView  {
             buildingNoOutlet.text = branchObj.address?.buildingNo!
             addressOutlet.text = branchObj.address?.address1!
             ratingOultet.rating = branchObj.ratingReviewNo!
+            ratingOultet.settings.fillMode = .precise
             nameOutlet.text = branchObj.labName!
             workTimeOutlet.text = branchObj.timeFrom! + "to" + branchObj.timeTo!
             workDaysOutlet.text =  ("Everday except \(branchObj.holidays!)")
@@ -105,6 +106,17 @@ class BranchTableViewController: UITableViewController, IBranchDescView  {
         }
      }
      
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            if(indexPath.row == 1){
+                
+                 let reviews = storyboard!.instantiateViewController(withIdentifier: "reviews") as! ReviewsTableViewController
+
+                reviews.reviewBranchId = branchId
+            present(reviews, animated: true, completion: nil)
+         
+            }
+            
+        }
 
 }
 

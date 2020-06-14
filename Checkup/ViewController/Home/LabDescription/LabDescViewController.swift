@@ -86,8 +86,9 @@ class LabDescViewController: UIViewController , ILabDescView , FilterProtocol , 
             labBrachCollection.register(UINib(nibName: "BranchesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "branchCell")
             
             labBrachCollection.delegate = self
-            
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(navigateToFilter))
+            var filterImage = UIImage(named: "Filter_20px")
+            navigationItem.rightBarButtonItem = UIBarButtonItem(image: filterImage, style: .plain, target: self, action: #selector(navigateToFilter))
+//            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(navigateToFilter))
             
 //
 //            let layout = UICollectionViewFlowLayout()

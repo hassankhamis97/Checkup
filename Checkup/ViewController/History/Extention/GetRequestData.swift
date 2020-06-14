@@ -30,7 +30,6 @@ extension ResultDetailsTableViewController : IRequestStatusView {
             
         }
               else {
-                  // first time fish
             for index in 0..<testObj.resultFilespaths!.count{
                       pdfAndOpenDict.updateValue(false, forKey: testObj!.resultFilespaths![index])
                       print("dicyionray \(pdfAndOpenDict)")

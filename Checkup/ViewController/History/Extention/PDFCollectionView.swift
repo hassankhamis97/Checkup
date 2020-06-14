@@ -26,6 +26,7 @@ extension ResultDetailsTableViewController : UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let pdfHistory = storyboard?.instantiateViewController(withIdentifier: "pdfHistory") as! PdfResultViewController
         pdfHistory.pdfUrl = testObj!.resultFilespaths![indexPath.row]
+         pdfHistory.branchId = testObj!.branchId!
       
         
         // set condiotion here if value not true

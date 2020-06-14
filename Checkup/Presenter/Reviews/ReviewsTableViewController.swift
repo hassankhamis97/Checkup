@@ -23,9 +23,9 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
         
         reviewParam.take = 5
         reviewParam.skip = 0
-    //    reviewParam.branchId = reviewBranchId
+        reviewParam.branchId = reviewBranchId
         print("review BranchID \(reviewBranchId)")
-          reviewParam.branchId = "2"
+         // reviewParam.branchId = "2"
         reviewPresenterInView.getReviewsDataFromModel(reviewParam: reviewParam)
 
         
