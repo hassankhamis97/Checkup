@@ -24,7 +24,7 @@
 "G6Y-RW-ERx.normalTitle" = "Show Request Details";
 
 /* Class = "UILabel"; text = "Empolyee Details :"; ObjectID = "Hwn-kv-7x0"; */
-"Hwn-kv-7x0.text" = "Technicial Details :";
+"Hwn-kv-7x0.text" = "Technician Details :";
 
 /* Class = "UILabel"; text = "Pending"; ObjectID = "IJX-L7-Myh"; */
 "IJX-L7-Myh.text" = "Response";

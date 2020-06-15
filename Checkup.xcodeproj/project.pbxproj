@@ -542,6 +542,7 @@
 		4EC1FD322472DDFF0029C499 /* LabsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabsTable.swift; sourceTree = "<group>"; };
 		4EC1FD392472E2530029C499 /* SmallDescLabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallDescLabTableViewCell.swift; sourceTree = "<group>"; };
 		4EC1FD3B2472E6D90029C499 /* FilterLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLab.swift; sourceTree = "<group>"; };
+		4EC493442497300E000E7C8C /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Home.strings; sourceTree = "<group>"; };
 		4EC52D802482BC5D005FE9D2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Login.strings; sourceTree = "<group>"; };
 		4EC82409246FDADA0075C894 /* DictionaryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoder.swift; sourceTree = "<group>"; };
 		4EC8240B246FDD0A0075C894 /* ReqPopUpFromHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqPopUpFromHomeViewController.swift; sourceTree = "<group>"; };
@@ -3073,6 +3074,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4EB18BDA24844EE3007D35AE /* Base */,
+				4EC493442497300E000E7C8C /* ar */,
 			);
 			name = Home.storyboard;
 			sourceTree = "<group>";

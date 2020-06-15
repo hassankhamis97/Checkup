@@ -2,140 +2,221 @@
 /* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "03W-uR-ADJ"; */
 "03W-uR-ADJ.title" = "Item";
 
+/* Class = "UIBarButtonItem"; title = "Filter"; ObjectID = "1ki-3D-tCk"; */
+"1ki-3D-tCk.title" = "Filter";
+
 /* Class = "UILabel"; text = "Governerate : "; ObjectID = "3ag-VQ-Q0C"; */
-"3ag-VQ-Q0C.text" = "Governerate : ";
+"3ag-VQ-Q0C.text" = "المحافظة :";
 
 /* Class = "UILabel"; text = "Aya"; ObjectID = "3ib-QW-0Kj"; */
 "3ib-QW-0Kj.text" = "Aya";
 
 /* Class = "UILabel"; text = "No Data Available "; ObjectID = "5Cr-GY-iBc"; */
-"5Cr-GY-iBc.text" = "No Data Available ";
+"5Cr-GY-iBc.text" = "لا يوجد بيانات ";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "5F4-QJ-CmE"; */
+"5F4-QJ-CmE.normalTitle" = "ارسال";
+
+/* Class = "UILabel"; text = "Building No. :"; ObjectID = "6io-Je-b5k"; */
+"6io-Je-b5k.text" = "رقم المنزل :";
 
 /* Class = "UILabel"; text = "Address : "; ObjectID = "7Jd-Hi-kbM"; */
-"7Jd-Hi-kbM.text" = "Address : ";
+"7Jd-Hi-kbM.text" = "العنوان :";
+
+/* Class = "UILabel"; text = "Apartment No. :"; ObjectID = "82E-G3-Bhi"; */
+"82E-G3-Bhi.text" = "رقم الشقة :";
 
 /* Class = "UILabel"; text = "There's no data in this branch"; ObjectID = "83s-re-pua"; */
-"83s-re-pua.text" = "There's no data in this branch";
+"83s-re-pua.text" = "لا توجد بيانات لهذا الفرع";
 
 /* Class = "UILabel"; text = "Lab Name : "; ObjectID = "9Mz-z0-B1R"; */
-"9Mz-z0-B1R.text" = "Lab Name : ";
+"9Mz-z0-B1R.text" = "اسم المعمل :";
 
 /* Class = "UISearchBar"; placeholder = "search ..."; ObjectID = "9dj-L2-wKW"; */
-"9dj-L2-wKW.placeholder" = "search ...";
+"9dj-L2-wKW.placeholder" = "بحث ٫٫٫";
 
 /* Class = "UISearchBar"; 9dj-L2-wKW.scopeButtonTitles[0] = "All"; ObjectID = "9dj-L2-wKW"; */
-"9dj-L2-wKW.scopeButtonTitles[0]" = "All";
+"9dj-L2-wKW.scopeButtonTitles[0]" = "الجميع";
 
 /* Class = "UISearchBar"; 9dj-L2-wKW.scopeButtonTitles[1] = "All-All"; ObjectID = "9dj-L2-wKW"; */
-"9dj-L2-wKW.scopeButtonTitles[1]" = "All-All";
+"9dj-L2-wKW.scopeButtonTitles[1]" = "الجميع";
 
 /* Class = "UILabel"; text = "Available From Home : "; ObjectID = "AgD-b0-EzN"; */
-"AgD-b0-EzN.text" = "Available From Home : ";
+"AgD-b0-EzN.text" = "متاح من المنزل : ";
+
+/* Class = "UIButton"; normalTitle = "Request"; ObjectID = "BPG-Rw-778"; */
+"BPG-Rw-778.normalTitle" = "طلب";
 
 /* Class = "UILabel"; text = "Mehatet EL-Raml Besides ayebd ok"; ObjectID = "BwE-wr-LFF"; */
-"BwE-wr-LFF.text" = "Mehatet EL-Raml Besides ayebd ok";
+"BwE-wr-LFF.text" = "";
 
 /* Class = "UILabel"; text = "Phone : "; ObjectID = "CpE-Tz-zme"; */
-"CpE-Tz-zme.text" = "Phone : ";
+"CpE-Tz-zme.text" = "رقم الهاتف :";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Ehj-DN-nzJ"; */
-"Ehj-DN-nzJ.text" = "Label";
+"Ehj-DN-nzJ.text" = "";
 
 /* Class = "UILabel"; text = "Alexandria"; ObjectID = "Fd2-ch-P1T"; */
-"Fd2-ch-P1T.text" = "Alexandria";
+"Fd2-ch-P1T.text" = "";
 
 /* Class = "UILabel"; text = "5987132"; ObjectID = "GRe-wA-45U"; */
-"GRe-wA-45U.text" = "5987132";
+"GRe-wA-45U.text" = "";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Gld-Ik-dHd"; */
+"Gld-Ik-dHd.normalTitle" = "ارسال";
 
 /* Class = "UITabBarItem"; title = "More"; ObjectID = "I1z-0u-44f"; */
-"I1z-0u-44f.title" = "More";
+"I1z-0u-44f.title" = "المزيد";
 
-/* Class = "UILabel"; text = "this lab is the best out there "; ObjectID = "JxY-MN-T3a"; */
-"JxY-MN-T3a.text" = "this lab is the best out there ";
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ilk-LM-Ll9"; */
+"Ilk-LM-Ll9.text" = "";
 
-/* Class = "UIButton"; normalTitle = "read more"; ObjectID = "M1S-MT-CLv"; */
-"M1S-MT-CLv.normalTitle" = "read more";
+/* Class = "UILabel"; text = "Work days"; ObjectID = "J2o-26-chM"; */
+"J2o-26-chM.text" = "ايام العمل";
+
+/* Class = "UILabel"; text = "Floor No. :"; ObjectID = "M9a-Gq-VQX"; */
+"M9a-Gq-VQX.text" = "رقم الطابق :";
+
+/* Class = "UITextField"; placeholder = "optional"; ObjectID = "NYn-7g-nN6"; */
+"NYn-7g-nN6.placeholder" = "اختياري";
 
 /* Class = "UILabel"; text = "Address : "; ObjectID = "NrD-Qy-fFR"; */
-"NrD-Qy-fFR.text" = "Address : ";
+"NrD-Qy-fFR.text" = "العنوان : ";
 
 /* Class = "UITabBarItem"; title = "Result"; ObjectID = "OLn-00-SMx"; */
-"OLn-00-SMx.title" = "Result";
+"OLn-00-SMx.title" = "النتائج";
+
+/* Class = "UILabel"; text = "Work time"; ObjectID = "OLu-Rv-L6S"; */
+"OLu-Rv-L6S.text" = "مواعيد العمل";
 
 /* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Oyl-1j-QVe"; */
-"Oyl-1j-QVe.title" = "Item";
+"Oyl-1j-QVe.title" = "";
+
+/* Class = "UILabel"; text = "There's no data in this branch"; ObjectID = "PY1-Uw-xYS"; */
+"PY1-Uw-xYS.text" = "لا يوجد بيانات لهذا الفرع";
+
+/* Class = "UILabel"; text = "Address :"; ObjectID = "RSU-B4-kXA"; */
+"RSU-B4-kXA.text" = "العنوان :";
 
 /* Class = "UILabel"; text = "586932015"; ObjectID = "SVF-5T-V4V"; */
-"SVF-5T-V4V.text" = "586932015";
+"SVF-5T-V4V.text" = "";
 
 /* Class = "UILabel"; text = "Work Time : "; ObjectID = "TB2-Mh-fli"; */
-"TB2-Mh-fli.text" = "Work Time : ";
+"TB2-Mh-fli.text" = "مواعيد العمل :";
+
+/* Class = "UILabel"; text = "General Information"; ObjectID = "TNt-BL-jtM"; */
+"TNt-BL-jtM.text" = "معلومات عامة";
+
+/* Class = "UILabel"; text = "Contacts Information"; ObjectID = "Tbu-qc-kJj"; */
+"Tbu-qc-kJj.text" = "جهات الاتصال";
 
 /* Class = "UILabel"; text = "El-Borg"; ObjectID = "V7X-58-dFY"; */
-"V7X-58-dFY.text" = "El-Borg";
+"V7X-58-dFY.text" = "";
 
 /* Class = "UILabel"; text = "10 Am to 9 Pm"; ObjectID = "VOg-h8-v21"; */
-"VOg-h8-v21.text" = "10 Am to 9 Pm";
+"VOg-h8-v21.text" = "";
+
+/* Class = "UIButton"; normalTitle = "Request"; ObjectID = "WHk-Z6-YFF"; */
+"WHk-Z6-YFF.normalTitle" = "طلب";
+
+/* Class = "UILabel"; text = "Tell us about your experience"; ObjectID = "XCf-mb-5xQ"; */
+"XCf-mb-5xQ.text" = "اخبرنا عن تجربتك ";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "XYz-Gk-BPR"; */
-"XYz-Gk-BPR.text" = "Label";
+"XYz-Gk-BPR.text" = "";
 
 /* Class = "UILabel"; text = "5987132"; ObjectID = "Yx7-8b-lMK"; */
-"Yx7-8b-lMK.text" = "5987132";
+"Yx7-8b-lMK.text" = "";
+
+/* Class = "UILabel"; text = "Address Information"; ObjectID = "a8d-di-QB0"; */
+"a8d-di-QB0.text" = "بيانات العنوان";
 
 /* Class = "UILabel"; text = "Alexandria"; ObjectID = "azk-yY-6ae"; */
-"azk-yY-6ae.text" = "Alexandria";
+"azk-yY-6ae.text" = "";
 
 /* Class = "UILabel"; text = "Friday"; ObjectID = "c7Y-4Z-49O"; */
-"c7Y-4Z-49O.text" = "Friday";
+"c7Y-4Z-49O.text" = "";
 
-/* Class = "UITabBarItem"; title = "Item"; ObjectID = "dWN-Dl-lKZ"; */
-"dWN-Dl-lKZ.title" = "Item";
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "dWN-Dl-lKZ"; */
+"dWN-Dl-lKZ.title" = "الرئيسية";
 
 /* Class = "UISearchBar"; placeholder = "search ..."; ObjectID = "dZO-wP-BTk"; */
-"dZO-wP-BTk.placeholder" = "search ...";
+"dZO-wP-BTk.placeholder" = "بحث ٫٫٫";
 
 /* Class = "UISearchBar"; dZO-wP-BTk.scopeButtonTitles[0] = "All"; ObjectID = "dZO-wP-BTk"; */
-"dZO-wP-BTk.scopeButtonTitles[0]" = "All";
+"dZO-wP-BTk.scopeButtonTitles[0]" = "الجميع";
 
 /* Class = "UISearchBar"; dZO-wP-BTk.scopeButtonTitles[1] = "All-All"; ObjectID = "dZO-wP-BTk"; */
-"dZO-wP-BTk.scopeButtonTitles[1]" = "All-All";
+"dZO-wP-BTk.scopeButtonTitles[1]" = "الجميع";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dfI-a9-FuB"; */
+"dfI-a9-FuB.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Lab Direction"; ObjectID = "fMH-IB-DnQ"; */
+"fMH-IB-DnQ.normalTitle" = "اتجاه المعمل";
 
 /* Class = "UIButton"; normalTitle = "Lab Direction"; ObjectID = "hpr-1Q-gJX"; */
-"hpr-1Q-gJX.normalTitle" = "Lab Direction";
+"hpr-1Q-gJX.normalTitle" = "اتجاه المعمل";
 
 /* Class = "UILabel"; text = "Holidays : "; ObjectID = "huv-V4-NQd"; */
-"huv-V4-NQd.text" = "Holidays : ";
+"huv-V4-NQd.text" = "";
 
 /* Class = "UILabel"; text = "El-Borg"; ObjectID = "iBL-Rc-uGl"; */
-"iBL-Rc-uGl.text" = "El-Borg";
+"iBL-Rc-uGl.text" = "";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "j7A-Oi-pJB"; */
+"j7A-Oi-pJB.text" = "";
 
 /* Class = "UILabel"; text = "27/8/2020"; ObjectID = "jSY-XG-MV8"; */
-"jSY-XG-MV8.text" = "27/8/2020";
+"jSY-XG-MV8.text" = "";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "jp5-tf-ft7"; */
+"jp5-tf-ft7.title" = "الرئيسية";
 
 /* Class = "UILabel"; text = "Governerate : "; ObjectID = "knr-gv-Gr0"; */
-"knr-gv-Gr0.text" = "Governerate : ";
+"knr-gv-Gr0.text" = "المحافظة : ";
 
 /* Class = "UILabel"; text = "Lab Name : "; ObjectID = "mHv-wC-vGL"; */
-"mHv-wC-vGL.text" = "Lab Name : ";
+"mHv-wC-vGL.text" = "اسم المعمل : ";
+
+/* Class = "UILabel"; text = "Tell us about your experience"; ObjectID = "nF1-yU-t5h"; */
+"nF1-yU-t5h.text" = "اخبرنا عن تجربتك ";
 
 /* Class = "UIBarButtonItem"; title = "Filter"; ObjectID = "nqf-dX-RIZ"; */
-"nqf-dX-RIZ.title" = "Filter";
+"nqf-dX-RIZ.title" = "";
 
 /* Class = "UILabel"; text = "Reviews :"; ObjectID = "oEK-K0-5od"; */
-"oEK-K0-5od.text" = "Reviews :";
+"oEK-K0-5od.text" = "التقييمات :";
 
 /* Class = "UITabBarItem"; title = "Request"; ObjectID = "qnv-JE-1gv"; */
-"qnv-JE-1gv.title" = "Request";
+"qnv-JE-1gv.title" = "الطلبات";
 
 /* Class = "UITabBarItem"; title = "Chat"; ObjectID = "sJf-Af-Wps"; */
-"sJf-Af-Wps.title" = "Chat";
+"sJf-Af-Wps.title" = "الدردشة";
 
 /* Class = "UILabel"; text = "Yes"; ObjectID = "tDN-YT-Vqd"; */
-"tDN-YT-Vqd.text" = "Yes";
+"tDN-YT-Vqd.text" = "";
 
 /* Class = "UILabel"; text = "No Data Available "; ObjectID = "tfE-Rb-czm"; */
-"tfE-Rb-czm.text" = "No Data Available ";
+"tfE-Rb-czm.text" = "لا يوجد بيانات";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uai-nt-qfP"; */
+"uai-nt-qfP.text" = "";
+
+/* Class = "UITextView"; text = "Add a comment..."; ObjectID = "vF0-uc-RfH"; */
+"vF0-uc-RfH.text" = "اكتب تعليق ٫٫٫";
+
+/* Class = "UILabel"; text = "Add note"; ObjectID = "w8F-e1-Z6l"; */
+"w8F-e1-Z6l.text" = "اضف ملاحظة";
 
 /* Class = "UILabel"; text = "Mahatet El-Raml"; ObjectID = "waR-Jr-SMo"; */
-"waR-Jr-SMo.text" = "Mahatet El-Raml";
+"waR-Jr-SMo.text" = "";
+
+/* Class = "UILabel"; text = "Contacts Information"; ObjectID = "yoX-cE-eGG"; */
+"yoX-cE-eGG.text" = "جهات الاتصال";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zKj-5i-0DO"; */
+"zKj-5i-0DO.text" = "Label";
+
+/* Class = "UILabel"; text = "Available from home "; ObjectID = "zVA-6J-iIN"; */
+"zVA-6J-iIN.text" = "متاح من المنزل ";
