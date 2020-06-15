@@ -124,7 +124,6 @@
 		4E4542192479C9FE00955FD8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E45421B2479C9FE00955FD8 /* Localizable.strings */; };
 		4E4542202479CEC800955FD8 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45421F2479CEC800955FD8 /* LocalizedString.swift */; };
 		4E4542232479FAF700955FD8 /* AddViewIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4542222479FAF700955FD8 /* AddViewIndicator.swift */; };
-		4E45F8292497AC5D006336BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E45F8282497AC5A006336BD /* Assets.xcassets */; };
 		4E4EA638247010DE00309CAF /* NewRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA637247010DE00309CAF /* NewRequestModel.swift */; };
 		4E4EA63A2470117F00309CAF /* NewRequestContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA6392470117F00309CAF /* NewRequestContract.swift */; };
 		4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA63C247011F000309CAF /* NewRequestPresenter.swift */; };
@@ -483,7 +482,6 @@
 		4E45421D2479CA1400955FD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E45421F2479CEC800955FD8 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		4E4542222479FAF700955FD8 /* AddViewIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewIndicator.swift; sourceTree = "<group>"; };
-		4E45F8282497AC5A006336BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../../WDMiddle/ITIContinue/FinalProject/IOS/Icons/Logo/untitled folder/AppIcons/Assets.xcassets"; sourceTree = "<group>"; };
 		4E4EA637247010DE00309CAF /* NewRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestModel.swift; sourceTree = "<group>"; };
 		4E4EA6392470117F00309CAF /* NewRequestContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestContract.swift; sourceTree = "<group>"; };
 		4E4EA63C247011F000309CAF /* NewRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestPresenter.swift; sourceTree = "<group>"; };
@@ -1153,7 +1151,6 @@
 				4E22F8FC243E6E6C0090693C /* AppDelegate.swift */,
 				4E22F8FE243E6E6C0090693C /* SceneDelegate.swift */,
 				4E22F908243E6E6D0090693C /* Assets.xcassets */,
-				4E45F8282497AC5A006336BD /* Assets.xcassets */,
 				4E22F90D243E6E6D0090693C /* Info.plist */,
 				4E22F905243E6E6C0090693C /* Checkup.xcdatamodeld */,
 			);
@@ -2603,7 +2600,6 @@
 				4E4542192479C9FE00955FD8 /* Localizable.strings in Resources */,
 				4E432F152464F6EF00D1CACA /* pdf.pdf in Resources */,
 				A39BF97C246DA47E003500A8 /* DataTableViewCell.xib in Resources */,
-				4E45F8292497AC5D006336BD /* Assets.xcassets in Resources */,
 				0335841A248443FF0030F01C /* ReviewsStoryboard.storyboard in Resources */,
 				CC36EA792487CD460067568A /* Precautions .storyboard in Resources */,
 				4E22F904243E6E6C0090693C /* Main.storyboard in Resources */,
