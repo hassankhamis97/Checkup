@@ -25,6 +25,7 @@ class MessagingChatViewController: UIViewController {
     var isSendImage = false
     var databaseImageArray=[UIImage]()
     var hasNoOfNotification : Bool = false
+    var updateCurrentViewMessagePresenter : UpdateCurrentViewMessagePresenter!
     override func viewDidLoad() {
         super.viewDidLoad()
         title = currentPearedUser.name
@@ -57,13 +58,19 @@ class MessagingChatViewController: UIViewController {
         if ((currentPearedUser.noOfUnReadMessages! as NSString).integerValue > 0){
             hasNoOfNotification = true
         }
-        messagingChatPresenter.getData(messageParams: messageParams,hasNoOfNotification: hasNoOfNotification)
-        hasNoOfNotification = false
+        updateCurrentViewMessagePresenter = UpdateCurrentViewMessagePresenter()
+        updateCurrentViewMessagePresenter.updateCurrentView(pearedId: currentPearedUser.idPearedUser!, isEntered: true)
+//        messagingChatPresenter.getData(messageParams: messageParams,hasNoOfNotification: hasNoOfNotification)
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         
     }
-
+    override func willMove(toParent parent: UIViewController?) {
+        if parent == nil {
+            updateCurrentViewMessagePresenter.updateCurrentView(pearedId: "", isEntered: false)
+        }
+    }
     /*
     // MARK: - Navigation
 

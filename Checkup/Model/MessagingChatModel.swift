@@ -128,7 +128,7 @@ class MessagingChatModel: IMessagingChatModel {
         var pearedChatStatus : ChatStatus!
         var senderChatStatus : ChatStatus!
         let messageDic = try! DictionaryEncoder.encode(message)
-        db?.collection("messages").document(groupId).collection(groupId).document(message.timestamp!).setData(messageDic) { err in
+        db?.collection("messages").document(groupId).collection(groupId).document(timestamp).setData(messageDic) { err in
             if let err = err {
                 print("Error writing document: \(err)")
             } else {
@@ -271,6 +271,25 @@ func saveCompleteObj(imgPathsArr: [String]?, idTo: String?,chatPresenterRef: ICh
             print("Document successfully written!")
         }
         }
+    }
+    func updateCurrentView(pearedId: String , isEntered: Bool) {
+       
+        db?.collection("userChat").document(Auth.auth().currentUser!.uid).updateData(["currentViewedPerson": isEntered == false ? "" : pearedId]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+        //            if let sendMessagePresenter = chatPresenterRef as? ISendMessagePresenter {
+        //                sendMessagePresenter.onSuccess()
+        //            }
+        //            if let imageMessagePresenter = chatPresenterRef as? IImageMessagePresenter {
+        //                imageMessagePresenter.onSuccess()
+        //            }
+        //
+                    
+                    print("Document successfully written!")
+                }
+                }
+        
     }
 }
 

@@ -63,8 +63,8 @@ class ReviewsTableViewController: UITableViewController , IReviewsView{
         cell.viewOutlet.layer.borderColor = UIColor.white.cgColor
         
         
+//        cell.userImageOutlet.layer.cornerRadius = cell.userImageOutlet.frame.width / 2
         cell.userImageOutlet.layer.cornerRadius = 10
-        
         
         
         cell.reviewsDateOutlet.sizeToFit()

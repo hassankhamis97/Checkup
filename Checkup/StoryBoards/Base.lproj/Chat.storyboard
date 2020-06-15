@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoCheckupnew3WithoutWord" translatesAutoresizingMaskIntoConstraints="NO" id="WPg-Hg-UL8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1412"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yY2-Sj-ck6">
                                 <rect key="frame" x="0.0" y="44" width="414" height="755"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -145,15 +142,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="WPg-Hg-UL8" firstAttribute="top" secondItem="87V-Mk-p7z" secondAttribute="top" id="118-YF-8yB"/>
                             <constraint firstItem="ExB-QF-acT" firstAttribute="top" secondItem="yY2-Sj-ck6" secondAttribute="bottom" id="Fb3-C5-3GT"/>
                             <constraint firstItem="yY2-Sj-ck6" firstAttribute="leading" secondItem="87V-Mk-p7z" secondAttribute="leading" id="JUW-oY-iGW"/>
                             <constraint firstItem="yY2-Sj-ck6" firstAttribute="trailing" secondItem="87V-Mk-p7z" secondAttribute="trailing" id="OFX-Ca-SW9"/>
-                            <constraint firstItem="87V-Mk-p7z" firstAttribute="trailing" secondItem="WPg-Hg-UL8" secondAttribute="trailing" id="WTb-sa-6ck"/>
                             <constraint firstItem="ExB-QF-acT" firstAttribute="leading" secondItem="87V-Mk-p7z" secondAttribute="leading" id="gRi-j5-9P7"/>
                             <constraint firstItem="yY2-Sj-ck6" firstAttribute="top" secondItem="87V-Mk-p7z" secondAttribute="top" id="hhk-YC-k9p"/>
                             <constraint firstItem="87V-Mk-p7z" firstAttribute="bottom" secondItem="3R2-Sc-1Ny" secondAttribute="bottom" id="hu8-hs-4F2"/>
-                            <constraint firstItem="WPg-Hg-UL8" firstAttribute="leading" secondItem="87V-Mk-p7z" secondAttribute="leading" id="klO-ml-Auq"/>
                             <constraint firstItem="3R2-Sc-1Ny" firstAttribute="leading" secondItem="87V-Mk-p7z" secondAttribute="leading" id="ldi-TZ-nyb"/>
                             <constraint firstItem="87V-Mk-p7z" firstAttribute="trailing" secondItem="3R2-Sc-1Ny" secondAttribute="trailing" id="mfW-Oz-rJ1"/>
                             <constraint firstItem="3R2-Sc-1Ny" firstAttribute="top" secondItem="ExB-QF-acT" secondAttribute="bottom" id="pXr-EF-J5q" customClass="KeyboardLayoutConstraint" customModule="Checkup" customModuleProvider="target"/>
@@ -261,6 +255,5 @@
         <image name="Chat1_50px" width="50" height="50"/>
         <image name="Compact Camera_50px" width="50" height="50"/>
         <image name="Email Send_50px" width="50" height="50"/>
-        <image name="logoCheckupnew3WithoutWord" width="1136" height="1412"/>
     </resources>
 </document>

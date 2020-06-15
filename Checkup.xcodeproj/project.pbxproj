@@ -127,6 +127,8 @@
 		4E4EA638247010DE00309CAF /* NewRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA637247010DE00309CAF /* NewRequestModel.swift */; };
 		4E4EA63A2470117F00309CAF /* NewRequestContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA6392470117F00309CAF /* NewRequestContract.swift */; };
 		4E4EA63D247011F000309CAF /* NewRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EA63C247011F000309CAF /* NewRequestPresenter.swift */; };
+		4E4FAFE52497148F00507BFF /* UpdateCurrentViewMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FAFE42497148E00507BFF /* UpdateCurrentViewMessagePresenter.swift */; };
+		4E4FAFE72497151A00507BFF /* UpdateCurrentViewMessageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FAFE62497151A00507BFF /* UpdateCurrentViewMessageContract.swift */; };
 		4E6223F42483F966003BA836 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6223F32483F966003BA836 /* HomeViewController.swift */; };
 		4E77B4C2247757E3000B3118 /* GetFilteredLabsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77B4C1247757E3000B3118 /* GetFilteredLabsPresenter.swift */; };
 		4E77B4C42477597F000B3118 /* GetFilteredLabsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77B4C32477597F000B3118 /* GetFilteredLabsResponse.swift */; };
@@ -188,6 +190,7 @@
 		4ECE5C56246E93B800932947 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE5C55246E93B800932947 /* LoginTests.swift */; };
 		4ECE5C59246EA5C200932947 /* IBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE5C58246EA5C200932947 /* IBase.swift */; };
 		4ECE5C5C246EA85300932947 /* LoginResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE5C5B246EA85300932947 /* LoginResponseExtension.swift */; };
+		4ED421AB249709EE007CA8F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED421AA249709ED007CA8F3 /* Assets.xcassets */; };
 		4EDADEC9246A1FF20069B0E5 /* RecievedImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDADEC7246A1FF20069B0E5 /* RecievedImageTableViewCell.swift */; };
 		4EDADECA246A1FF20069B0E5 /* RecievedImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EDADEC8246A1FF20069B0E5 /* RecievedImageTableViewCell.xib */; };
 		4EDCBA60247D611800DE1AB5 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCBA5F247D611800DE1AB5 /* GetUserData.swift */; };
@@ -483,6 +486,8 @@
 		4E4EA637247010DE00309CAF /* NewRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestModel.swift; sourceTree = "<group>"; };
 		4E4EA6392470117F00309CAF /* NewRequestContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestContract.swift; sourceTree = "<group>"; };
 		4E4EA63C247011F000309CAF /* NewRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestPresenter.swift; sourceTree = "<group>"; };
+		4E4FAFE42497148E00507BFF /* UpdateCurrentViewMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCurrentViewMessagePresenter.swift; sourceTree = "<group>"; };
+		4E4FAFE62497151A00507BFF /* UpdateCurrentViewMessageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCurrentViewMessageContract.swift; sourceTree = "<group>"; };
 		4E5ED58D2482E54D008A34CE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/signUp.strings; sourceTree = "<group>"; };
 		4E6223F32483F966003BA836 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4E77B4C1247757E3000B3118 /* GetFilteredLabsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilteredLabsPresenter.swift; sourceTree = "<group>"; };
@@ -546,6 +551,7 @@
 		4ECE5C55246E93B800932947 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		4ECE5C58246EA5C200932947 /* IBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBase.swift; sourceTree = "<group>"; };
 		4ECE5C5B246EA85300932947 /* LoginResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseExtension.swift; sourceTree = "<group>"; };
+		4ED421AA249709ED007CA8F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../../WDMiddle/ITIContinue/FinalProject/IOS/Icons/Logo/untitled folder/AppIcons/Assets.xcassets"; sourceTree = "<group>"; };
 		4EDADEC7246A1FF20069B0E5 /* RecievedImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedImageTableViewCell.swift; sourceTree = "<group>"; };
 		4EDADEC8246A1FF20069B0E5 /* RecievedImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecievedImageTableViewCell.xib; sourceTree = "<group>"; };
 		4EDCBA5F247D611800DE1AB5 /* GetUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserData.swift; sourceTree = "<group>"; };
@@ -1146,6 +1152,7 @@
 				4E22F8FC243E6E6C0090693C /* AppDelegate.swift */,
 				4E22F8FE243E6E6C0090693C /* SceneDelegate.swift */,
 				4E22F908243E6E6D0090693C /* Assets.xcassets */,
+				4ED421AA249709ED007CA8F3 /* Assets.xcassets */,
 				4E22F90D243E6E6D0090693C /* Info.plist */,
 				4E22F905243E6E6C0090693C /* Checkup.xcdatamodeld */,
 			);
@@ -1463,6 +1470,7 @@
 				4EA87501247FC09900E95B30 /* MessagingChat.swift */,
 				4EA87516248004B100E95B30 /* SendMessageContract.swift */,
 				4EA8751E24804ACA00E95B30 /* ImageMessageContract.swift */,
+				4E4FAFE62497151A00507BFF /* UpdateCurrentViewMessageContract.swift */,
 			);
 			path = MessagingChat;
 			sourceTree = "<group>";
@@ -1498,6 +1506,7 @@
 				4EA87508247FC1CC00E95B30 /* MessagingChatPresenter.swift */,
 				4EA875142480044B00E95B30 /* SendMessagePresenter.swift */,
 				4EA8751C248049CB00E95B30 /* ImageMessagePresenter.swift */,
+				4E4FAFE42497148E00507BFF /* UpdateCurrentViewMessagePresenter.swift */,
 			);
 			path = MessagingChat;
 			sourceTree = "<group>";
@@ -2593,6 +2602,7 @@
 				4E4542192479C9FE00955FD8 /* Localizable.strings in Resources */,
 				4E432F152464F6EF00D1CACA /* pdf.pdf in Resources */,
 				A39BF97C246DA47E003500A8 /* DataTableViewCell.xib in Resources */,
+				4ED421AB249709EE007CA8F3 /* Assets.xcassets in Resources */,
 				0335841A248443FF0030F01C /* ReviewsStoryboard.storyboard in Resources */,
 				CC36EA792487CD460067568A /* Precautions .storyboard in Resources */,
 				4E22F904243E6E6C0090693C /* Main.storyboard in Resources */,
@@ -2786,6 +2796,7 @@
 				BB136EB9248D35A80003A9B7 /* CustomBack.swift in Sources */,
 				CC82F363248ACB400052C075 /* LanguageTableViewController.swift in Sources */,
 				4E15ACEA24718279004418B1 /* GetRequestsContract.swift in Sources */,
+				4E4FAFE52497148F00507BFF /* UpdateCurrentViewMessagePresenter.swift in Sources */,
 				4E22F907243E6E6C0090693C /* Checkup.xcdatamodeld in Sources */,
 				CC761723247305B40084CC6E /* EditProfileModel.swift in Sources */,
 				4EBBC940246B595000C7978D /* MainChatViewController.swift in Sources */,
@@ -2807,6 +2818,7 @@
 				03789BD4246CC39700C0BF33 /* BranchesCollectionViewCell.swift in Sources */,
 				4E2D6CCE248ADEC200FADA05 /* AboutViewController.swift in Sources */,
 				4EA87524248068D300E95B30 /* ImageIndicatorTableViewCell.swift in Sources */,
+				4E4FAFE72497151A00507BFF /* UpdateCurrentViewMessageContract.swift in Sources */,
 				4E87AF4F247EC5D000002E66 /* ManualNotificationModel.swift in Sources */,
 				4E77B4C42477597F000B3118 /* GetFilteredLabsResponse.swift in Sources */,
 				0385DCF72492446C005A123B /* BranchViewController.swift in Sources */,
