@@ -121,10 +121,16 @@ class MoreTableViewController: UITableViewController {
             
         }
         
-        
-        
-        
         if indexPath.row==7{
+                   
+                 let vc = storyboard?.instantiateViewController(withIdentifier: "termsSVC") as! TermsOfUseTableViewController
+
+                           navigationController?.pushViewController(vc, animated: true)
+                   print("terms")
+               }
+        
+        
+        if indexPath.row==8{
             do{
                try Auth.auth().signOut()
 //

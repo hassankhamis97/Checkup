@@ -15,6 +15,14 @@
             </objects>
             <point key="canvasLocation" x="3630" y="-445"/>
         </scene>
+        <!--termsSVC-->
+        <scene sceneID="CG5-GN-Yc7">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="termsSVC" storyboardName="About" referencedIdentifier="termsSVC" id="fx9-g7-PMP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQo-nK-ucc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3489" y="371"/>
+        </scene>
         <!--More-->
         <scene sceneID="ROD-hY-fsk">
             <objects>
@@ -25,7 +33,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="4BF-Ua-Gaw">
-                            <rect key="frame" x="0.0" y="631" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="696" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
@@ -241,7 +249,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="TvA-ER-iMY" kind="push" id="bys-DD-W9H"/>
+                                            <segue destination="6Tg-Oo-RSp" kind="push" id="w4o-wZ-zf8"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="eoS-gx-1Zk">
@@ -279,8 +287,40 @@
                                             <segue destination="IhU-zo-761" kind="push" id="Rbb-e8-CAw"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="65" id="c9S-3k-Tps">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="XT2-EC-PEJ">
                                         <rect key="frame" x="0.0" y="538" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XT2-EC-PEJ" id="7X1-nh-5cg">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Terms and Conditions_50px" translatesAutoresizingMaskIntoConstraints="NO" id="06a-ch-PGl">
+                                                    <rect key="frame" x="28" y="17" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="mal-EJ-22d"/>
+                                                        <constraint firstAttribute="width" constant="30" id="oJu-rm-YpF"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEG-8o-MWn">
+                                                    <rect key="frame" x="66.000000000000014" y="22" width="164.33333333333337" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="06a-ch-PGl" secondAttribute="bottom" constant="7" id="H5S-LG-jql"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="CEG-8o-MWn" secondAttribute="trailing" constant="113" id="PTa-XP-ZAa"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CEG-8o-MWn" secondAttribute="bottom" constant="12" id="dFW-Tf-LDA"/>
+                                                <constraint firstItem="06a-ch-PGl" firstAttribute="leading" secondItem="7X1-nh-5cg" secondAttribute="leadingMargin" constant="8" id="hTf-Sr-VPA"/>
+                                                <constraint firstItem="CEG-8o-MWn" firstAttribute="leading" secondItem="06a-ch-PGl" secondAttribute="trailing" constant="8" id="mgw-91-4j7"/>
+                                                <constraint firstItem="06a-ch-PGl" firstAttribute="top" secondItem="7X1-nh-5cg" secondAttribute="topMargin" constant="6" id="wpW-ep-8aE"/>
+                                                <constraint firstItem="CEG-8o-MWn" firstAttribute="top" secondItem="7X1-nh-5cg" secondAttribute="topMargin" constant="11" id="xuw-tH-zlY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="65" id="c9S-3k-Tps">
+                                        <rect key="frame" x="0.0" y="603" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c9S-3k-Tps" id="7dF-it-WVA">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
@@ -326,6 +366,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3g-1T-A1A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3286" y="118"/>
+        </scene>
+        <!--aboutSVC-->
+        <scene sceneID="XkX-JH-ozh">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="aboutSVC" storyboardName="About" referencedIdentifier="aboutSVC" id="6Tg-Oo-RSp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cbc-b3-c1T"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Al7-Dk-Z6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4170" y="-194"/>
         </scene>
         <!--profileSVC-->
         <scene sceneID="aOH-U6-oNu">
@@ -460,6 +510,7 @@
         <image name="Help_100px" width="100" height="100"/>
         <image name="Info_100px" width="100" height="100"/>
         <image name="Settings_100px" width="100" height="100"/>
+        <image name="Terms and Conditions_50px" width="50" height="50"/>
         <image name="User Manual_100px-1" width="100" height="100"/>
     </resources>
 </document>

@@ -5,6 +5,9 @@
 /* Class = "UILabel"; text = "Precautions "; ObjectID = "6LA-uP-mFY"; */
 "6LA-uP-mFY.text" = "الإحتياطات";
 
+/* Class = "UILabel"; text = "Terms and conditions"; ObjectID = "CEG-8o-MWn"; */
+"CEG-8o-MWn.text" ="الشروط و الأحكام";
+
 /* Class = "UILabel"; text = "Log out"; ObjectID = "Ccl-WQ-YXr"; */
 "Ccl-WQ-YXr.text" = "تسجيل الخروج";
 
@@ -15,10 +18,10 @@
 "VpU-6N-bK7.title" = "المزيد";
 
 /* Class = "UIButton"; normalTitle = "View Profile"; ObjectID = "Yn0-gC-iOt"; */
-"Yn0-gC-iOt.normalTitle" = "عرض الصفحة الشخصيه";
+"Yn0-gC-iOt.normalTitle" = "عرض الصفحة الشخصية";
 
 /* Class = "UILabel"; text = "Help"; ObjectID = "jdX-MC-w4u"; */
-"jdX-MC-w4u.text" = "المساعده";
+"jdX-MC-w4u.text" = "المساعدة";
 
 /* Class = "UILabel"; text = "About"; ObjectID = "pMj-dk-fRD"; */
 "pMj-dk-fRD.text" = "من نحن";
