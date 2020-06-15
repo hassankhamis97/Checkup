@@ -64,7 +64,14 @@ class BranchTableViewController: UITableViewController, IBranchDescView  {
          branchObj = barnchDescObjInView
         if(branchObj != nil){
             print(branchObj!)
-            availableOutlet.text = String(branchObj.isAvailableFromHome)
+            if(branchObj.isAvailableFromHome == true){
+                 availableOutlet.text = "Yes"
+                
+            }else{
+                 availableOutlet.text = "No"
+                
+            }
+           // availableOutlet.text = String(branchObj.isAvailableFromHome)
             apartmentOutlet.text = branchObj.address!.apartmentNo!
             floorNoOutlet.text = branchObj.address?.floorNo!
             buildingNoOutlet.text = branchObj.address?.buildingNo!
